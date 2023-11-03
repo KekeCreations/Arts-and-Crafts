@@ -1,7 +1,7 @@
-package net.examplemod.forge;
+package com.kekecreations.artsandcrafts.forge;
 
 import dev.architectury.platform.forge.EventBuses;
-import net.examplemod.ExampleMod;
+import com.kekecreations.artsandcrafts.ExampleMod;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 

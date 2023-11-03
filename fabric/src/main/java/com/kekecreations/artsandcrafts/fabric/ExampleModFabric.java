@@ -1,6 +1,6 @@
-package net.examplemod.fabric;
+package com.kekecreations.artsandcrafts.fabric;
 
-import net.examplemod.ExampleMod;
+import com.kekecreations.artsandcrafts.ExampleMod;
 import net.fabricmc.api.ModInitializer;
 
 public class ExampleModFabric implements ModInitializer {
