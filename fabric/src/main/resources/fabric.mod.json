@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.kekecreations.artsandcrafts.fabric.ExampleModFabric"
+      "com.kekecreations.artsandcrafts.fabric.ArtsAndCraftsFabric"
     ]
   },
   "mixins": [
