@@ -1,6 +1,7 @@
 package com.kekecreations.artsandcrafts;
 
 import com.google.common.base.Suppliers;
+import com.kekecreations.artsandcrafts.core.registry.KekeBlocks;
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrarManager;
@@ -31,6 +32,7 @@ public class ExampleMod {
     public static void init() {
         TABS.register();
         ITEMS.register();
+        KekeBlocks.register();
         
         System.out.println(ExampleExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
