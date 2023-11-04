@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/artsandcrafts.accesswidener")
+    accessWidenerPath = file("src/main/resources/arts_and_crafts.accesswidener")
 }
 
 dependencies {

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "arts_and_crafts:block/chalk/blue_chalk"
+  }
+}

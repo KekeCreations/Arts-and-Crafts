@@ -4,7 +4,7 @@ loaderVersion = "[47,)"
 license = "All rights reserved"
 
 [[mods]]
-modId = "artsandcrafts"
+modId = "arts_and_crafts"
 version = "${version}"
 displayName = "Arts & Crafts"
 authors = "KekeCreations and Ari"
@@ -13,21 +13,21 @@ A fabric & forge mod that adds all new decoration features into the game!
 '''
 #logoFile = ""
 
-[[dependencies.artsandcrafts]]
+[[dependencies.arts_and_crafts]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.artsandcrafts]]
+[[dependencies.arts_and_crafts]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.artsandcrafts]]
+[[dependencies.arts_and_crafts]]
 modId = "architectury"
 mandatory = true
 versionRange = "[9.1.12,)"

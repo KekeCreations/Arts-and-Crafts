@@ -17,11 +17,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.kekecreations.artsandcrafts.fabric.ArtsAndCraftsFabric"
+      "com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric"
     ]
   },
   "mixins": [
-    "artsandcrafts.mixins.json"
+    "arts_and_crafts.mixins.json"
   ],
   "depends": {
     "fabric": "*",
