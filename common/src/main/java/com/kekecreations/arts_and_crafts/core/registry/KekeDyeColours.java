@@ -13,12 +13,12 @@ import java.util.stream.Collectors;
 
 public enum KekeDyeColours implements StringRepresentable
 {
-    TAN(0, "tan", 16351261, MapColor.TERRACOTTA_BROWN, 16759929, 16759904),
+    TAN(0, "tan", 16351261, MapColor.RAW_IRON, 16759929, 16759904),
     TURQUOISE(1, "turquoise", 16351262, MapColor.WARPED_WART_BLOCK, 31688, 36040),
     CRIMSON(2, "crimson", 16351263, MapColor.CRIMSON_NYLIUM, 16711746, 16711754),
     CREAM(3, "cream", 16351264, MapColor.TERRACOTTA_YELLOW, 16777089, 16777118),
     OLIVE(4, "olive", 16351265, MapColor.EMERALD, 53798, 7787046),
-    PINE(5, "pine", 16351266, MapColor.TERRACOTTA_GREEN, 32256, 38656);
+    PINE(5, "pine", 16351266, MapColor.COLOR_LIGHT_GREEN, 32256, 38656);
 
     private static final IntFunction<KekeDyeColours> BY_ID;
     private static final Int2ObjectOpenHashMap<KekeDyeColours> BY_FIREWORK_COLOR;
