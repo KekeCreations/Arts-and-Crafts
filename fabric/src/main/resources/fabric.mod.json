@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "artsandcrafts",
+  "id": "arts_and_crafts",
   "version": "${version}",
   "name": "Arts & Crafts",
   "description": "A fabric & forge mod that adds all new decoration features into the game!",
@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric"
+    ],
+    "fabric-datagen": [
+      "com.kekecreations.arts_and_crafts.fabric.core.datagen.ArtsAndCraftsDataGenerator"
     ]
   },
   "mixins": [

@@ -9,6 +9,18 @@ architectury {
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+    runs {
+        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=arts_and_crafts"
+
+            runDir "build/datagen"
+        }
+    }
 }
 
 configurations {
@@ -49,6 +61,12 @@ remapJar {
     input.set shadowJar.archiveFile
     dependsOn shadowJar
 }
+java {
+    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+    // if it is present.
+    // If you remove this line, sources will not be generated.
+    withSourcesJar()
+}
 
 sourcesJar {
     def commonSources = project(":common").sourcesJar
@@ -65,7 +83,8 @@ components.java {
 publishing {
     publications {
         mavenFabric(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+            artifactId = rootProject.archives_base_name + "-fabric"
+            //artifactId = rootProject.archives_base_name + "-" + project.name
             from components.java
         }
     }
