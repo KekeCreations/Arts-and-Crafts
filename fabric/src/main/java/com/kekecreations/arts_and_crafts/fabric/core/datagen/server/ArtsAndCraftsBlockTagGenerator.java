@@ -34,6 +34,15 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.LIGHT_GRAY_CHALK.get())
                 .add(KekeBlocks.GREEN_CHALK.get())
                 .add(KekeBlocks.LIME_CHALK.get())
-                .add(KekeBlocks.MAGENTA_CHALK.get());
+                .add(KekeBlocks.MAGENTA_CHALK.get())
+                .add(KekeBlocks.OLIVE_CHALK.get())
+                .add(KekeBlocks.ORANGE_CHALK.get())
+                .add(KekeBlocks.PINE_CHALK.get())
+                .add(KekeBlocks.PINK_CHALK.get())
+                .add(KekeBlocks.PURPLE_CHALK.get())
+                .add(KekeBlocks.RED_CHALK.get())
+                .add(KekeBlocks.TAN_CHALK.get())
+                .add(KekeBlocks.TURQUOISE_CHALK.get())
+                .add(KekeBlocks.YELLOW_CHALK.get());
     }
 }
