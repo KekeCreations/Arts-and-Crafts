@@ -9,6 +9,8 @@ public class KekeItems {
 
     public static final RegistrySupplier<CustomDyeItem> CRIMSON_DYE = RegistryHelper.ITEMS.register("crimson_dye", () -> new CustomDyeItem(KekeDyeColours.CRIMSON, new Item.Properties()));
 
+    public static final RegistrySupplier<CustomDyeItem> CREAM_DYE = RegistryHelper.ITEMS.register("cream_dye", () -> new CustomDyeItem(KekeDyeColours.CREAM, new Item.Properties()));
+
 
     public static void register() {
     }

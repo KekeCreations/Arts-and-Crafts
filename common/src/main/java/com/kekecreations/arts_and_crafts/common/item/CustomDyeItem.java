@@ -1,11 +1,14 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
 import com.google.common.collect.Maps;
+import com.kekecreations.arts_and_crafts.common.entity.CustomDyeSheep;
 import com.kekecreations.arts_and_crafts.core.registry.KekeDyeColours;
+import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
@@ -30,14 +33,40 @@ public class CustomDyeItem extends Item implements SignApplicator {
 
 
 
+
     @Override
     public InteractionResult interactLivingEntity(ItemStack itemStack, Player player, LivingEntity livingEntity, InteractionHand interactionHand) {
-        Sheep sheep;
         if (getDyeColor() == KekeDyeColours.CRIMSON) {
-            if (livingEntity instanceof Sheep && (sheep = (Sheep)livingEntity).isAlive() && !sheep.isSheared() && sheep.getColor() != DyeColor.RED) {
+            if (livingEntity instanceof Sheep sheep && livingEntity.isAlive() && !sheep.isSheared() && sheep.getColor() != DyeColor.RED) {
                 sheep.level().playSound(player, sheep, SoundEvents.DYE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
                 if (!player.level().isClientSide) {
-                    sheep.setColor(DyeColor.RED);
+                    CustomDyeSheep customDyeSheep = new CustomDyeSheep(KekeEntityTypes.CUSTOM_DYE_SHEEP.get(), livingEntity.level());
+                    customDyeSheep.setXRot(sheep.getXRot());
+                    customDyeSheep.setYRot(sheep.getYRot());
+                    customDyeSheep.setYBodyRot(sheep.yBodyRot);
+                    customDyeSheep.setYHeadRot(sheep.getYHeadRot());
+                    customDyeSheep.setPos(sheep.getX(), sheep.getY(), sheep.getZ());
+                    customDyeSheep.setColor(KekeDyeColours.CRIMSON);
+                    player.level().addFreshEntity(customDyeSheep);
+                    sheep.remove(Entity.RemovalReason.DISCARDED);
+                    itemStack.shrink(1);
+                }
+                return InteractionResult.sidedSuccess(player.level().isClientSide);
+            }
+        }
+        if (getDyeColor() == KekeDyeColours.CREAM) {
+            if (livingEntity instanceof Sheep sheep && livingEntity.isAlive() && !sheep.isSheared() && sheep.getColor() != DyeColor.RED) {
+                sheep.level().playSound(player, sheep, SoundEvents.DYE_USE, SoundSource.PLAYERS, 1.0f, 1.0f);
+                if (!player.level().isClientSide) {
+                    CustomDyeSheep customDyeSheep = new CustomDyeSheep(KekeEntityTypes.CUSTOM_DYE_SHEEP.get(), livingEntity.level());
+                    customDyeSheep.setXRot(sheep.getXRot());
+                    customDyeSheep.setYRot(sheep.getYRot());
+                    customDyeSheep.setYBodyRot(sheep.yBodyRot);
+                    customDyeSheep.setYHeadRot(sheep.getYHeadRot());
+                    customDyeSheep.setPos(sheep.getX(), sheep.getY(), sheep.getZ());
+                    customDyeSheep.setColor(KekeDyeColours.CREAM);
+                    player.level().addFreshEntity(customDyeSheep);
+                    sheep.remove(Entity.RemovalReason.DISCARDED);
                     itemStack.shrink(1);
                 }
                 return InteractionResult.sidedSuccess(player.level().isClientSide);
@@ -45,6 +74,7 @@ public class CustomDyeItem extends Item implements SignApplicator {
         }
         return InteractionResult.PASS;
     }
+
 
     public KekeDyeColours getDyeColor() {
         return this.dyeColor;

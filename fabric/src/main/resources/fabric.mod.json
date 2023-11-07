@@ -19,6 +19,9 @@
     "main": [
       "com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric"
     ],
+    "client": [
+      "com.kekecreations.arts_and_crafts.client.ArtsAndCraftsClient"
+    ],
     "fabric-datagen": [
       "com.kekecreations.arts_and_crafts.fabric.core.datagen.ArtsAndCraftsDataGenerator"
     ]

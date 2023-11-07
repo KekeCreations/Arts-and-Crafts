@@ -46,5 +46,6 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
         itemModelGenerator.generateFlatItem(KekeItems.CRIMSON_DYE.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(KekeItems.CREAM_DYE.get(), ModelTemplates.FLAT_ITEM);
     }
 }
