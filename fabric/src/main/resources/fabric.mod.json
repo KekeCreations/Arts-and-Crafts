@@ -24,7 +24,8 @@
     ]
   },
   "mixins": [
-    "arts_and_crafts.mixins.json"
+    "arts_and_crafts.mixins.json",
+    "arts_and_crafts-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",

@@ -14,7 +14,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        //mixinConfig "arts_and_crafts-common.mixins.json"
+
+        mixinConfig "arts_and_crafts-common.mixins.json"
         mixinConfig "arts_and_crafts.mixins.json"
     }
 }

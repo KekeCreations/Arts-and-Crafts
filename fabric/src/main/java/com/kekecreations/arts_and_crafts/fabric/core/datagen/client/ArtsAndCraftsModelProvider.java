@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.fabric.core.datagen.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
@@ -44,6 +45,6 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-
+        itemModelGenerator.generateFlatItem(KekeItems.CRIMSON_DYE.get(), ModelTemplates.FLAT_ITEM);
     }
 }

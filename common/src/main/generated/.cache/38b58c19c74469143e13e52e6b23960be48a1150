@@ -1,4 +1,5 @@
-// 1.20.1	2023-11-05T14:31:20.5291001	Arts & Crafts/Model Definitions
+// 1.20.1	2023-11-05T17:11:17.6989044	Arts & Crafts/Model Definitions
+12200a6df073c966f32d427a0dbc48f56fbc58e1 assets\arts_and_crafts\models\item\crimson_dye.json
 6ed9b507fffa289edbb7a6f62f5047f283074498 assets\arts_and_crafts\models\item\black_chalk.json
 73c042194c771874679e5f971da3a022e88298ce assets\arts_and_crafts\models\block\gray_chalk.json
 350f49faef6eb7a6e0cf63f59857f281c4434213 assets\arts_and_crafts\models\block\light_gray_chalk.json
@@ -8,8 +9,8 @@
 4d58a654307c9a13a651dc0b65e86296220c0605 assets\arts_and_crafts\models\item\white_chalk.json
 6028e2641ba3d7ffc04c4b27eac3a59e8ec0f514 assets\arts_and_crafts\models\item\magenta_chalk.json
 fc6fc71639cdeeef9d813f9f35d6bb603d6b6886 assets\arts_and_crafts\models\block\lime_chalk.json
-7bb2c450821b2a61feba368cf9600cc555412e6c assets\arts_and_crafts\blockstates\gray_chalk.json
 7d871658a9d54ce64b2269cd442e609fff6a0dc9 assets\arts_and_crafts\blockstates\turquoise_chalk.json
+7bb2c450821b2a61feba368cf9600cc555412e6c assets\arts_and_crafts\blockstates\gray_chalk.json
 800514558c18026d514e3c2bc10f691128da1923 assets\arts_and_crafts\models\block\brown_chalk.json
 e538ebe70056057d740f32a846e1baf6123c4a04 assets\arts_and_crafts\models\item\light_gray_chalk.json
 42192ca31149a026cf6f3e595a343f64ee55fe7c assets\arts_and_crafts\blockstates\red_chalk.json
@@ -24,8 +25,8 @@ bebc4fde96a5d0780866db92dadae294e8b7070b assets\arts_and_crafts\models\block\yel
 02c97b1ce59ebdc86985bc8db46fce4770772fc4 assets\arts_and_crafts\models\block\tan_chalk.json
 5fd9f499488c5f21aa2d47c23f2ed88a6be62fa3 assets\arts_and_crafts\models\block\pine_chalk.json
 c03f8b14f8fe09ff5d01d7dc4021fbc42de525cf assets\arts_and_crafts\models\block\light_blue_chalk.json
-4ee775a16bd94268d3c25eddb771e47fe30fa5b0 assets\arts_and_crafts\models\item\pine_chalk.json
 ecd73f99e3132232a48c3e1ebc8f5ae948eb43c5 assets\arts_and_crafts\models\block\pink_chalk.json
+4ee775a16bd94268d3c25eddb771e47fe30fa5b0 assets\arts_and_crafts\models\item\pine_chalk.json
 b2adec9a79f03c8d10c32a564c6227f9af3fa4e4 assets\arts_and_crafts\blockstates\magenta_chalk.json
 c88e838b32eae62e4f0b57bf9055a3fc0baeb205 assets\arts_and_crafts\models\block\purple_chalk.json
 7dc84caab05c6afc079de2359cc4e3745acdd7d2 assets\arts_and_crafts\models\item\gray_chalk.json
@@ -48,8 +49,8 @@ f7f1cde16cedde120d3b881adf855164b4279c07 assets\arts_and_crafts\blockstates\yell
 91d0fc111c9c895bc289778f5952c1b8b5b38308 assets\arts_and_crafts\blockstates\brown_chalk.json
 353e6d8d80123b32f5a13a08672dd33117116698 assets\arts_and_crafts\blockstates\cyan_chalk.json
 e341041982379f358475386db14b3063083c20d9 assets\arts_and_crafts\blockstates\purple_chalk.json
-049297d6589e08590b16c43ba27861a972e3e131 assets\arts_and_crafts\models\block\red_chalk.json
 9ee25b263b36eb942c8232e49afe02b341a6398a assets\arts_and_crafts\models\block\black_chalk.json
+049297d6589e08590b16c43ba27861a972e3e131 assets\arts_and_crafts\models\block\red_chalk.json
 019e539574ff7a07071c73210761df6b8a893b38 assets\arts_and_crafts\blockstates\green_chalk.json
 ce2de3f72f34ad9f8821ce3913965b601e83b1d9 assets\arts_and_crafts\blockstates\pine_chalk.json
 034ed5917607a743515db2451e064bb167f07700 assets\arts_and_crafts\models\item\pink_chalk.json

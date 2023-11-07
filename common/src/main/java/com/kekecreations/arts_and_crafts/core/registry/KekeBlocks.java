@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class KekeBlocks {
 
-    //BLOCKS ARE IN ORDER WITH TEXTURE FILE NAMES
+    //CHALK BLOCKS - BLOCKS ARE IN ORDER WITH TEXTURE FILE NAMES
     public static final RegistrySupplier<Block> BLACK_CHALK = RegistryHelper.BLOCKS.register("black_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8f)));
     public static final RegistrySupplier<BlockItem> BLACK_CHALK_ITEM = RegistryHelper.ITEMS.register("black_chalk", () -> new BlockItem(BLACK_CHALK.get(), new Item.Properties().arch$tab(CreativeModeTabs.COLORED_BLOCKS)));
     public static final RegistrySupplier<Block> BLUE_CHALK = RegistryHelper.BLOCKS.register("blue_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8f)));
@@ -58,7 +58,5 @@ public class KekeBlocks {
 
 
     public static void register() {
-        RegistryHelper.BLOCKS.register();
-        RegistryHelper.ITEMS.register();
     }
 }
