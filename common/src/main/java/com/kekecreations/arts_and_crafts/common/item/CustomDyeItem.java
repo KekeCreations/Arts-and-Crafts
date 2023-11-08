@@ -47,6 +47,9 @@ public class CustomDyeItem extends Item implements SignApplicator {
                     customDyeSheep.setYHeadRot(sheep.getYHeadRot());
                     customDyeSheep.setPos(sheep.getX(), sheep.getY(), sheep.getZ());
                     customDyeSheep.setColor(KekeDyeColours.CRIMSON);
+                    if (sheep.isBaby()) {
+                        customDyeSheep.setBaby(true);
+                    }
                     player.level().addFreshEntity(customDyeSheep);
                     sheep.remove(Entity.RemovalReason.DISCARDED);
                     itemStack.shrink(1);
@@ -65,6 +68,9 @@ public class CustomDyeItem extends Item implements SignApplicator {
                     customDyeSheep.setYHeadRot(sheep.getYHeadRot());
                     customDyeSheep.setPos(sheep.getX(), sheep.getY(), sheep.getZ());
                     customDyeSheep.setColor(KekeDyeColours.CREAM);
+                    if (sheep.isBaby()) {
+                        customDyeSheep.setBaby(true);
+                    }
                     player.level().addFreshEntity(customDyeSheep);
                     sheep.remove(Entity.RemovalReason.DISCARDED);
                     itemStack.shrink(1);
