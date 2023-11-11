@@ -22,21 +22,15 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
         dropSelf(KekeBlocks.LIGHT_BLUE_CHALK.get());
         dropSelf(KekeBlocks.GRAY_CHALK.get());
         dropSelf(KekeBlocks.WHITE_CHALK.get());
-        dropSelf(KekeBlocks.CREAM_CHALK.get());
         dropSelf(KekeBlocks.CYAN_CHALK.get());
-        dropSelf(KekeBlocks.CRIMSON_CHALK.get());
         dropSelf(KekeBlocks.GREEN_CHALK.get());
         dropSelf(KekeBlocks.LIGHT_GRAY_CHALK.get());
         dropSelf(KekeBlocks.LIME_CHALK.get());
         dropSelf(KekeBlocks.MAGENTA_CHALK.get());
-        dropSelf(KekeBlocks.OLIVE_CHALK.get());
         dropSelf(KekeBlocks.ORANGE_CHALK.get());
-        dropSelf(KekeBlocks.PINE_CHALK.get());
         dropSelf(KekeBlocks.PINK_CHALK.get());
         dropSelf(KekeBlocks.PURPLE_CHALK.get());
         dropSelf(KekeBlocks.RED_CHALK.get());
-        dropSelf(KekeBlocks.TAN_CHALK.get());
-        dropSelf(KekeBlocks.TURQUOISE_CHALK.get());
         dropSelf(KekeBlocks.YELLOW_CHALK.get());
     }
 }

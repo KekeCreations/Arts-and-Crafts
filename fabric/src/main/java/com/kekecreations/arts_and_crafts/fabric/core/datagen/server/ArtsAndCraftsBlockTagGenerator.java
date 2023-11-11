@@ -26,8 +26,6 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.BLUE_CHALK.get())
                 .add(KekeBlocks.BROWN_CHALK.get())
                 .add(KekeBlocks.WHITE_CHALK.get())
-                .add(KekeBlocks.CREAM_CHALK.get())
-                .add(KekeBlocks.CRIMSON_CHALK.get())
                 .add(KekeBlocks.LIGHT_BLUE_CHALK.get())
                 .add(KekeBlocks.GRAY_CHALK.get())
                 .add(KekeBlocks.CYAN_CHALK.get())
@@ -35,14 +33,10 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.GREEN_CHALK.get())
                 .add(KekeBlocks.LIME_CHALK.get())
                 .add(KekeBlocks.MAGENTA_CHALK.get())
-                .add(KekeBlocks.OLIVE_CHALK.get())
                 .add(KekeBlocks.ORANGE_CHALK.get())
-                .add(KekeBlocks.PINE_CHALK.get())
                 .add(KekeBlocks.PINK_CHALK.get())
                 .add(KekeBlocks.PURPLE_CHALK.get())
                 .add(KekeBlocks.RED_CHALK.get())
-                .add(KekeBlocks.TAN_CHALK.get())
-                .add(KekeBlocks.TURQUOISE_CHALK.get())
                 .add(KekeBlocks.YELLOW_CHALK.get());
     }
 }
