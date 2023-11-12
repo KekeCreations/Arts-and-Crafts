@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "arts_and_crafts:block/chalk/lime_chalk"
+    "all": "arts_and_crafts:block/lime_chalk"
   }
 }

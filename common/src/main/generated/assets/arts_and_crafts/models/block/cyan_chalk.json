@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "arts_and_crafts:block/chalk/cyan_chalk"
+    "all": "arts_and_crafts:block/cyan_chalk"
   }
 }
