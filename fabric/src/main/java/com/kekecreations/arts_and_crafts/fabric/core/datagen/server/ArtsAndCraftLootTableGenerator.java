@@ -12,8 +12,79 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
 
     @Override
     public void generate() {
+        terracottaShingles();
         chalk();
 
+    }
+    private void terracottaShingles() {
+        dropSelf(KekeBlocks.TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.BLACK_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.BLUE_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.BROWN_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.LIGHT_BLUE_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.GRAY_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.WHITE_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.CYAN_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.GREEN_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.LIGHT_GRAY_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.LIME_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.MAGENTA_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.ORANGE_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.PINK_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.PURPLE_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.RED_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.YELLOW_TERRACOTTA_SHINGLES.get());
+        dropSelf(KekeBlocks.BLACK_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.BLUE_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.BROWN_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.LIGHT_BLUE_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.GRAY_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.WHITE_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.CYAN_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.GREEN_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.LIGHT_GRAY_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.LIME_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.MAGENTA_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.ORANGE_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.PINK_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.PURPLE_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.RED_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.YELLOW_TERRACOTTA_SHINGLE_SLAB.get());
+        dropSelf(KekeBlocks.BLACK_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.BLUE_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.BROWN_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.LIGHT_BLUE_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.GRAY_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.WHITE_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.CYAN_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.GREEN_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.LIGHT_GRAY_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.LIME_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.MAGENTA_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.ORANGE_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.PINK_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.PURPLE_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.RED_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.YELLOW_TERRACOTTA_SHINGLE_WALL.get());
+        dropSelf(KekeBlocks.BLACK_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.BLUE_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.BROWN_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.LIGHT_BLUE_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.GRAY_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.WHITE_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.CYAN_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.GREEN_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.LIGHT_GRAY_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.LIME_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.MAGENTA_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.ORANGE_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.PINK_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.PURPLE_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.RED_TERRACOTTA_SHINGLE_STAIRS.get());
+        dropSelf(KekeBlocks.YELLOW_TERRACOTTA_SHINGLE_STAIRS.get());
     }
     private void chalk() {
         dropSelf(KekeBlocks.BLACK_CHALK.get());

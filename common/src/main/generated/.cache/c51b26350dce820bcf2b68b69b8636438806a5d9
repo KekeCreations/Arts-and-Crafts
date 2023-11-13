@@ -1,5 +1,5 @@
-// 1.20.1	2023-11-12T00:52:01.6886381	Arts & Crafts/Tags for minecraft:block
-f7e68769f83165c16d99e92389e3714bea056f12 data\minecraft\tags\blocks\stairs.json
-209f55fd2c5a3e23acb0e0852584534dfb543c88 data\minecraft\tags\blocks\mineable\pickaxe.json
-0b593d088e031589068cf698109e404f595c53f5 data\minecraft\tags\blocks\slabs.json
-61b6b579cc37e6309aef7445567ab9d8ea21d29d data\minecraft\tags\blocks\walls.json
+// 1.20.1	2023-11-13T00:32:23.0229048	Arts & Crafts/Tags for minecraft:block
+ec549918dd1e74bb0a1c7867c0b7940c9b0b61e6 data\minecraft\tags\blocks\stairs.json
+a306424098edaf2dbefbbf971fb25788c8dee25c data\minecraft\tags\blocks\mineable\pickaxe.json
+7b35a6ae1710537dacbdd7a17a2d6ccffa808f78 data\minecraft\tags\blocks\walls.json
+bf41a8e4e63f00d4dd41728c4dd3a0e0f3e2ef6d data\minecraft\tags\blocks\slabs.json
