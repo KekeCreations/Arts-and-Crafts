@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
+import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.core.misc.RegistryHelper;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.world.item.*;
@@ -11,6 +12,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class KekeBlocks {
+
+    public static final RegistrySupplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.BLOCKS.register("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().instabreak()));
+
+
+
+
+
 
     //TERRACOTTA SHINGLES
     public static final RegistrySupplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.BLOCKS.register("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8f)));

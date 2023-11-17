@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-13T00:32:23.0289091	Arts & Crafts/Block Loot Tables
+// 1.20.1	2023-11-14T18:41:57.1660398	Arts & Crafts/Block Loot Tables
 6e3ea7a83738a698612649f63adc4415d98b92b9 data\arts_and_crafts\loot_tables\blocks\purple_chalk.json
 ac41b28ef35289f8f70f1af4c76f52a39cac3448 data\arts_and_crafts\loot_tables\blocks\gray_chalk.json
 e8d2e2fd2e72930da54c8cc77679d0a45a1a3997 data\arts_and_crafts\loot_tables\blocks\brown_terracotta_shingle_wall.json
@@ -78,8 +78,8 @@ db2c92b116798fcb661595b54ab03f93c3d199a1 data\arts_and_crafts\loot_tables\blocks
 87ae51c7586f01c0cd27bdcaa2f7061a19d61f88 data\arts_and_crafts\loot_tables\blocks\blue_terracotta_shingle_stairs.json
 e4c047a68add033cefa934645290b02a7cc800f5 data\arts_and_crafts\loot_tables\blocks\cyan_terracotta_shingle_wall.json
 869f6a9c5c3a74d92f23ba0e09b4f73a01a773c9 data\arts_and_crafts\loot_tables\blocks\black_chalk_stairs.json
-c51742090cbb9111ca65de1e6df25dd9757dba3e data\arts_and_crafts\loot_tables\blocks\green_chalk_wall.json
 a7691ed9d03c9583074e7935b759f42baf0a9a3c data\arts_and_crafts\loot_tables\blocks\terracotta_shingle_slab.json
+c51742090cbb9111ca65de1e6df25dd9757dba3e data\arts_and_crafts\loot_tables\blocks\green_chalk_wall.json
 f20c0439eb8a537c09fd99150f1f82116415fb04 data\arts_and_crafts\loot_tables\blocks\lime_chalk.json
 92cb196d5ebdeed74ea6d5a46f87f1d8adf9615d data\arts_and_crafts\loot_tables\blocks\pink_chalk_wall.json
 238e22ac5d2b92f5325b1557e3536d32810edf6e data\arts_and_crafts\loot_tables\blocks\purple_terracotta_shingles.json
