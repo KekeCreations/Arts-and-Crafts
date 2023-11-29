@@ -2,12 +2,18 @@ package com.kekecreations.arts_and_crafts.forge.client;
 
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -29,9 +35,13 @@ public class ClientEvents {
     }
 
     @SubscribeEvent
+    public static void registerParticleProviders(RegisterParticleProvidersEvent registerParticleProvidersEvent) {
+        //registerParticleProvidersEvent.registerSpriteSet(KekeParticles.CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
+    }
+
+    @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.WHITE_CHALK_DUST.get(), RenderType.cutout());
     }
-
 
 }

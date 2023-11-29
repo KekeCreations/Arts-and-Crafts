@@ -26,10 +26,3 @@ mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
-
-[[dependencies.arts_and_crafts]]
-modId = "architectury"
-mandatory = true
-versionRange = "[9.1.12,)"
-ordering = "AFTER"
-side = "BOTH"

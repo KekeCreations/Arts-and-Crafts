@@ -1,23 +1,88 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.core.misc.RegistryHelper;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import com.kekecreations.arts_and_crafts.common.block.CustomStairBlock;
+import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
+import java.util.HashMap;
+import java.util.function.Supplier;
+
 public class KekeBlocks {
 
-    public static final RegistrySupplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.BLOCKS.register("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().instabreak()));
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLES = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_WALL = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_STAIRS = new HashMap<>();
+
+    public static final HashMap<DyeColor, Supplier<Block>> CHALK = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> CHALK_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> CHALK_WALL = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> CHALK_STAIRS = new HashMap<>();
+
+    public static final Supplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.registerBlock("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().instabreak()));
 
 
+    //NORMAL TERRACOTTA SHINGLES
+    public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
+    public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = RegistryHelper.registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
+    public static final Supplier<WallBlock> TERRACOTTA_SHINGLE_WALL = RegistryHelper.registerBlockWithItem("terracotta_shingle_wall", () -> new WallBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
+    public static final Supplier<CustomStairBlock> TERRACOTTA_SHINGLE_STAIRS = RegistryHelper.registerBlockWithItem("terracotta_shingle_stairs", () -> new CustomStairBlock(TERRACOTTA_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
 
 
+    static {
+        for (DyeColor colours : DyeColor.values()) {
+            //DYED TERRACOTTA SHINGLES
+            DYED_TERRACOTTA_SHINGLES.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
+
+            DYED_TERRACOTTA_SHINGLE_SLAB.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
+
+            DYED_TERRACOTTA_SHINGLE_WALL.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingle_wall", () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
+
+            DYED_TERRACOTTA_SHINGLE_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingle_stairs", () -> new CustomStairBlock(getDyedTerracottaShingles(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
+
+            //CHALK
+            CHALK.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+
+            CHALK_SLAB.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+
+            CHALK_WALL.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_wall", () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+
+            CHALK_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_stairs", () -> new CustomStairBlock(getChalk(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+
+        }
+    }
+    public static Block getDyedTerracottaShingles(DyeColor colours){
+        return DYED_TERRACOTTA_SHINGLES.get(colours).get();
+    }
+    public static Block getDyedTerracottaShingleSlab(DyeColor colours){
+        return DYED_TERRACOTTA_SHINGLE_SLAB.get(colours).get();
+    }
+    public static Block getDyedTerracottaShingleWall(DyeColor colours){
+        return DYED_TERRACOTTA_SHINGLE_WALL.get(colours).get();
+    }
+    public static Block getDyedTerracottaShingleStairs(DyeColor colours){
+        return DYED_TERRACOTTA_SHINGLE_STAIRS.get(colours).get();
+    }
+
+    public static Block getChalk(DyeColor colours){
+        return CHALK.get(colours).get();
+    }
+    public static Block getChalkSlab(DyeColor colours){
+        return CHALK_SLAB.get(colours).get();
+    }
+    public static Block getChalkWall(DyeColor colours){
+        return CHALK_WALL.get(colours).get();
+    }
+    public static Block getChalkStairs(DyeColor colours){
+        return CHALK_STAIRS.get(colours).get();
+    }
+
+
+    /*
 
 
     //TERRACOTTA SHINGLES
@@ -184,38 +249,6 @@ public class KekeBlocks {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //CHALK BLOCKS - BLOCKS ARE IN ORDER WITH TEXTURE FILE NAMES
     public static final RegistrySupplier<Block> BLACK_CHALK = RegistryHelper.BLOCKS.register("black_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(0.8f)));
     public static final RegistrySupplier<BlockItem> BLACK_CHALK_ITEM = RegistryHelper.ITEMS.register("black_chalk", () -> new BlockItem(BLACK_CHALK.get(), new Item.Properties().arch$tab(CreativeModeTabs.COLORED_BLOCKS)));
@@ -353,6 +386,9 @@ public class KekeBlocks {
     public static final RegistrySupplier<BlockItem> YELLOW_CHALK_STAIRS_ITEM = RegistryHelper.ITEMS.register("yellow_chalk_stairs", () -> new BlockItem(YELLOW_CHALK_STAIRS.get(), new Item.Properties().arch$tab(CreativeModeTabs.COLORED_BLOCKS)));
 
 
+
+     */
     public static void register() {
     }
+
 }
