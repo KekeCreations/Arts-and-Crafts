@@ -25,6 +25,8 @@ public class KekeItemGroupEvents {
                 event.accept(KekeBlocks.getChalkSlab(colours));
                 event.accept(KekeBlocks.getChalkStairs(colours));
                 event.accept(KekeBlocks.getChalkWall(colours));
+
+                event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
@@ -35,9 +37,11 @@ public class KekeItemGroupEvents {
                 event.accept(KekeItems.getChalkStick(colours));
             }
         });
-
-
-
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
+            for (DyeColor colours : DyeColor.values()) {
+                event.accept(KekeBlocks.getDyedFlowerPot(colours));
+            }
+        });
 
     }
 }

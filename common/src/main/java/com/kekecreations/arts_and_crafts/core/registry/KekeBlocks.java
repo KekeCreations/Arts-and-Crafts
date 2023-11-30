@@ -1,12 +1,15 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
+import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.common.block.CustomStairBlock;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
+import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
@@ -26,6 +29,8 @@ public class KekeBlocks {
 
     //public static final Supplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.registerBlock("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_OAK_SAPLING = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -54,8 +59,11 @@ public class KekeBlocks {
 
             CHALK_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_stairs", () -> new CustomStairBlock(getChalk(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
 
-
             CHALK_DUST.put(colours, RegistryHelper.registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
+
+
+            DYED_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_flower_pot", () -> KekeBlocks.flowerPot(colours, Blocks.AIR, new FeatureFlag[0])));
+            DYED_POTTED_OAK_SAPLING.put(colours, RegistryHelper.registerBlock(colours + "_potted_oak_sapling", () -> KekeBlocks.flowerPot(colours, Blocks.AMETHYST_CLUSTER, new FeatureFlag[0])));
         }
     }
     public static Block getDyedTerracottaShingles(DyeColor colours){
@@ -85,6 +93,22 @@ public class KekeBlocks {
     }
     public static Block getChalkDust(DyeColor colours){
         return CHALK_DUST.get(colours).get();
+    }
+    public static Block getDyedFlowerPot(DyeColor colours){
+        return DYED_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedOakSapling(DyeColor colours){
+        return DYED_POTTED_OAK_SAPLING.get(colours).get();
+    }
+
+
+
+    private static CustomFlowerPotBlock flowerPot(DyeColor dyeColor, Block block, FeatureFlag... featureFlags) {
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(dyeColor).instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+        if (featureFlags.length > 0) {
+            properties = properties.requiredFeatures(featureFlags);
+        }
+        return new CustomFlowerPotBlock(dyeColor, block, properties);
     }
 
 

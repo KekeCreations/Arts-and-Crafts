@@ -46,6 +46,8 @@ public class ArtsAndCraftsForge {
                 event.accept(KekeBlocks.getChalkSlab(colours));
                 event.accept(KekeBlocks.getChalkStairs(colours));
                 event.accept(KekeBlocks.getChalkWall(colours));
+
+                event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
@@ -54,6 +56,11 @@ public class ArtsAndCraftsForge {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : DyeColor.values()) {
                 event.accept(KekeItems.getChalkStick(colours));
+            }
+        }
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            for (DyeColor colours : DyeColor.values()) {
+                event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         }
     }

@@ -22,6 +22,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeItems.getChalkStick(colours), stringColour + " Chalk Stick");
 
             //BLOCKS
+            translationBuilder.add(KekeBlocks.getDyedFlowerPot(colours), stringColour + " Flower Pot");
             translationBuilder.add(KekeBlocks.getChalkDust(colours), stringColour + " Chalk Dust");
             translationBuilder.add(KekeBlocks.getChalk(colours), stringColour + " Chalk");
             translationBuilder.add(KekeBlocks.getChalkSlab(colours), stringColour + " Chalk Slab");

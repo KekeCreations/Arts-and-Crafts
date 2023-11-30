@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot",
+  "textures": {
+    "flowerpot": "arts_and_crafts:block/dyed_flower_pot/brown_flower_pot"
+  }
+}
