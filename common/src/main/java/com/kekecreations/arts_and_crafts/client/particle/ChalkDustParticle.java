@@ -11,7 +11,6 @@ import net.minecraft.core.particles.SimpleParticleType;
 
 @Environment(EnvType.CLIENT)
 public class ChalkDustParticle extends SimpleAnimatedParticle {
-
     double velX;
     double velY;
     double velZ;
@@ -24,24 +23,21 @@ public class ChalkDustParticle extends SimpleAnimatedParticle {
         this.xd = velX;
         this.yd = velY;
         this.zd = velZ;
-        this.quadSize = 0.1F;
-        this.hasPhysics = false;
-        this.gravity = 0.0F;
-        this.lifetime = 2500;
+        this.quadSize = 0.16F;
+        this.hasPhysics = true;
+        this.gravity = 0.1F;
+        this.lifetime = 40;
         this.setSpriteFromAge(spriteProvider);
     }
 
     public void tick() {
         super.tick();
-
         xd = velX;
-        yd = velY;
         zd = velZ;
-        int magnitude = 1;
+        int magnitude = 2;
         int smoothness = 300;
 
         velX += (float) random.nextIntBetweenInclusive(-magnitude, magnitude) / smoothness;
-        velY += (float) random.nextIntBetweenInclusive(-magnitude, magnitude) / smoothness;
         velZ += (float) random.nextIntBetweenInclusive(-magnitude, magnitude) / smoothness;
     }
 

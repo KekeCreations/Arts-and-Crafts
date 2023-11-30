@@ -1,18 +1,20 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
+import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.core.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -21,11 +23,35 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec3;
+
+import java.util.Map;
 
 public class ChalkStickItem extends Item {
-    public ChalkStickItem(Properties properties) {
+
+    private static final Map<DyeColor, ChalkStickItem> ITEM_BY_COLOR = Maps.newEnumMap(DyeColor.class);
+    private final DyeColor dyeColor;
+    public ChalkStickItem(DyeColor dyeColor, Properties properties) {
         super(properties);
+        this.dyeColor = dyeColor;
+        ITEM_BY_COLOR.put(dyeColor, this);
     }
+
+    public DyeColor getDyeColor() {
+        return this.dyeColor;
+    }
+
+    public static ChalkStickItem byColour(DyeColor dyeColor) {
+        return ITEM_BY_COLOR.get(dyeColor);
+    }
+
+    public void spawnParticle(Player player, double x, double y, double z, DyeColor colours) {
+        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+    }
+
 
     @Override
     public InteractionResult useOn(UseOnContext useOnContext) {
@@ -35,6 +61,8 @@ public class ChalkStickItem extends Item {
         BlockState blockState = level.getBlockState(blockPos);
         Block block = blockState.getBlock();
         RandomSource random = level.getRandom();
+        Direction clickedFace = useOnContext.getClickedFace();
+        Vec3 clickLocation = useOnContext.getClickLocation();
 
         InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
 
@@ -46,9 +74,16 @@ public class ChalkStickItem extends Item {
             } else {
                 state = 1;
             }
-            level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-            if (block == KekeBlocks.WHITE_CHALK_DUST.get() && this == KekeItems.WHITE_CHALK_STICK.get()) {
-                level.setBlockAndUpdate(blockPos, chalkDustBlock.changeState(blockState, player, state));
+
+
+            for (DyeColor colours : DyeColor.values()) {
+                if (block == KekeBlocks.getChalkDust(colours) && this == KekeItems.getChalkStick(colours)) {
+
+                    spawnParticle(player, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), colours);
+                    level.setBlockAndUpdate(blockPos, chalkDustBlock.changeState(blockState, player, state));
+                    level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
+
+                }
             }
             return InteractionResult.SUCCESS;
         }
@@ -65,10 +100,10 @@ public class ChalkStickItem extends Item {
         Player player = blockPlaceContext.getPlayer();
         ItemStack itemStack = blockPlaceContext.getItemInHand();
 
-        BlockState state = KekeBlocks.WHITE_CHALK_DUST.get().getStateForPlacement(blockPlaceContext);
+        BlockState state = KekeBlocks.getChalkDust(this.getDyeColor()).getStateForPlacement(blockPlaceContext);
         BlockState clickedState = level.getBlockState(pos);
 
-        if (state != null) {
+        if (state != null && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
             RandomSource randomSource = level.getRandom();
             level.setBlockAndUpdate(pos, state);
             level.playSound(player, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);

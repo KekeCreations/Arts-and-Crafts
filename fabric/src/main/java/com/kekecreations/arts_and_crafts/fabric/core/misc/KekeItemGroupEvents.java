@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.fabric.core.misc;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
@@ -28,6 +29,11 @@ public class KekeItemGroupEvents {
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE));
+        });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
+            for (DyeColor colours : DyeColor.values()) {
+                event.accept(KekeItems.getChalkStick(colours));
+            }
         });
 
 

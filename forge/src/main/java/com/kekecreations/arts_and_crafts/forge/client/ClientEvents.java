@@ -36,12 +36,18 @@ public class ClientEvents {
 
     @SubscribeEvent
     public static void registerParticleProviders(RegisterParticleProvidersEvent registerParticleProvidersEvent) {
+        for (DyeColor colours : DyeColor.values()) {
+            registerParticleProvidersEvent.registerSpriteSet(KekeParticles.getChalkDrawParticle(colours), ChalkDustParticle.Factory::new);
+        }
         //registerParticleProvidersEvent.registerSpriteSet(KekeParticles.CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
     }
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(KekeBlocks.WHITE_CHALK_DUST.get(), RenderType.cutout());
+        for (DyeColor colours : DyeColor.values()) {
+            ItemBlockRenderTypes.setRenderLayer(KekeBlocks.getChalkDust(colours), RenderType.cutout());
+        }
     }
+
 
 }

@@ -22,8 +22,9 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> CHALK_SLAB = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> CHALK_WALL = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> CHALK_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> CHALK_DUST = new HashMap<>();
 
-    public static final Supplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.registerBlock("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().instabreak()));
+    //public static final Supplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.registerBlock("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
 
 
     //NORMAL TERRACOTTA SHINGLES
@@ -53,6 +54,8 @@ public class KekeBlocks {
 
             CHALK_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_stairs", () -> new CustomStairBlock(getChalk(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
 
+
+            CHALK_DUST.put(colours, RegistryHelper.registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
         }
     }
     public static Block getDyedTerracottaShingles(DyeColor colours){
@@ -79,6 +82,9 @@ public class KekeBlocks {
     }
     public static Block getChalkStairs(DyeColor colours){
         return CHALK_STAIRS.get(colours).get();
+    }
+    public static Block getChalkDust(DyeColor colours){
+        return CHALK_DUST.get(colours).get();
     }
 
 

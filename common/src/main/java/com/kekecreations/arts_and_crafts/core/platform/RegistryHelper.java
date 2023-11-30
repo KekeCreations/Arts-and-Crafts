@@ -1,8 +1,11 @@
 package com.kekecreations.arts_and_crafts.core.platform;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+
+import java.util.function.Supplier;
 
 public class RegistryHelper {
 
@@ -22,13 +25,11 @@ public class RegistryHelper {
         throw new AssertionError();
     }
 
-
-    /*
-    @ExpectPlatform/public static Supplier<SimpleParticleType> registerParticle(String id) {
+    @ExpectPlatform
+    public static Supplier<SimpleParticleType> registerParticle(String id) {
         throw new AssertionError();
     }
 
-     */
 
 
 }

@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.forge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.forge.RegistryHelperImpl;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,6 +19,7 @@ public class ArtsAndCraftsForge {
 
         ArtsAndCrafts.init();
 
+        RegistryHelperImpl.PARTICLE_TYPES.register(modEventBus);
         RegistryHelperImpl.ITEMS.register(modEventBus);
         RegistryHelperImpl.BLOCKS.register(modEventBus);
 
@@ -48,6 +50,11 @@ public class ArtsAndCraftsForge {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE));
+        }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            for (DyeColor colours : DyeColor.values()) {
+                event.accept(KekeItems.getChalkStick(colours));
+            }
         }
     }
 }

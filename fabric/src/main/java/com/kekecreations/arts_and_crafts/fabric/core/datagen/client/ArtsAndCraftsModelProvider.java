@@ -13,6 +13,7 @@ import net.minecraft.data.models.model.ModelTemplate;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 
 public class ArtsAndCraftsModelProvider extends FabricModelProvider {
     public ArtsAndCraftsModelProvider(FabricDataOutput output) {
@@ -29,6 +30,9 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
-        itemModelGenerator.generateFlatItem(KekeItems.WHITE_CHALK_STICK.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        for(DyeColor colours : DyeColor.values()) {
+            itemModelGenerator.generateFlatItem(KekeItems.getChalkStick(colours), ModelTemplates.FLAT_HANDHELD_ITEM);
+        }
+        //itemModelGenerator.generateFlatItem(KekeItems.WHITE_CHALK_STICK.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }
