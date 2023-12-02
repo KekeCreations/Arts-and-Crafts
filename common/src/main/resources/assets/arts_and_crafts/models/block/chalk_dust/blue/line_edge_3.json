@@ -1,0 +1,16 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "arts_and_crafts:block/chalk_dust/blue/line_edge_3",
+    "dust": "arts_and_crafts:block/chalk_dust/blue/line_edge_3"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0.1 ],
+      "to": [ 16, 16, 0.1 ],
+      "faces": {
+        "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#dust" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#dust" }
+      }
+    }
+  ]
+}

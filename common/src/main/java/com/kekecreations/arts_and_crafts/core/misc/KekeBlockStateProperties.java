@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.misc;
 
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class KekeBlockStateProperties {
@@ -11,4 +12,8 @@ public class KekeBlockStateProperties {
     public static final IntegerProperty CHALK_DUST_5 = IntegerProperty.create("chalk_dust", 0, 5);
     public static final IntegerProperty CHALK_DUST_7 = IntegerProperty.create("chalk_dust", 0, 7);
     public static final IntegerProperty CHALK_DUST_23 = IntegerProperty.create("chalk_dust", 0, 23);
+
+
+
+    public static final BooleanProperty HAS_PLANT = BooleanProperty.create("has_plant");
 }

@@ -1,8 +1,13 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
+import com.kekecreations.arts_and_crafts.core.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,30 +17,49 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Map;
+import java.util.Optional;
 
-public class CustomFlowerPotBlock extends FlowerPotBlock {
-    private static final Map<Block, Block> POTTED_BY_CONTENT = Maps.newHashMap();
+public class CustomFlowerPotBlock extends Block {
 
-    private final Block content;
+    public static final BooleanProperty HAS_PLANT = KekeBlockStateProperties.HAS_PLANT;
+
+    protected static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
+
+    @Override
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+        return SHAPE;
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState blockState) {
+        return RenderShape.MODEL;
+    }
+
 
     private static final Map<DyeColor, CustomFlowerPotBlock> ITEM_BY_COLOR = Maps.newEnumMap(DyeColor.class);
     private final DyeColor dyeColor;
 
-    public CustomFlowerPotBlock(DyeColor dyeColor, Block block, Properties properties) {
-        super(block, properties);
+    public CustomFlowerPotBlock(DyeColor dyeColor, Properties properties) {
+        super(properties);
+        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(this.getHasPlantProperty(), false));
         this.dyeColor = dyeColor;
-        this.content = block;
         ITEM_BY_COLOR.put(dyeColor, this);
-        POTTED_BY_CONTENT.put(block, this);
 
     }
 
@@ -47,40 +71,63 @@ public class CustomFlowerPotBlock extends FlowerPotBlock {
         return ITEM_BY_COLOR.get(dyeColor);
     }
 
-    private boolean isEmpty() {
-        return this.content == Blocks.AIR;
+
+    protected BooleanProperty getHasPlantProperty() {
+        return HAS_PLANT;
+    }
+
+    public boolean getHasPlant(BlockState blockState) {
+        return blockState.getValue(this.getHasPlantProperty());
     }
 
 
 
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        boolean bl2;
         ItemStack itemStack = player.getItemInHand(interactionHand);
         Item item = itemStack.getItem();
-        BlockState blockState2 = (item instanceof BlockItem ? POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
-        boolean bl = blockState2.is(Blocks.AIR);
-        if (bl != (bl2 = this.isEmpty())) {
-            if (bl2) {
-                level.setBlock(blockPos, blockState2, 3);
-                //level.setBlock(blockPos, KekeBlocks.getDyedFlowerPot(DyeColor.BLUE).defaultBlockState(), 3);
-                player.awardStat(Stats.POT_FLOWER);
-                if (!player.getAbilities().instabuild) {
-                    itemStack.shrink(1);
+
+        if (!this.getHasPlant(blockState)) {
+            if (item instanceof BlockItem blockItem) {
+                Block block = blockItem.getBlock();
+                if (block instanceof SaplingBlock saplingBlock) {
+
+                    //JUST IN CASE
+                    ResourceLocation resourceKey = BuiltInRegistries.BLOCK.getKey(saplingBlock);
+                    Block blockKey = BuiltInRegistries.BLOCK.get(resourceKey);
+
+                    //TEST
+                    Optional<ResourceKey<Block>> blockResourceKey = BuiltInRegistries.BLOCK.getResourceKey(saplingBlock);
+                    String blockNamespace = BuiltInRegistries.BLOCK.getKey(saplingBlock).getNamespace();
+
+
+
+
+                    System.out.println(blockKey);
+                    System.out.println(blockNamespace);
                 }
-            } else {
-                ItemStack itemStack2 = new ItemStack(this.content);
-                if (itemStack.isEmpty()) {
-                    player.setItemInHand(interactionHand, itemStack2);
-                } else if (!player.addItem(itemStack2)) {
-                    player.drop(itemStack2, false);
-                }
-                level.setBlock(blockPos, KekeBlocks.getDyedFlowerPot(this.getDyeColor()).defaultBlockState(), 3);
             }
-            level.gameEvent((Entity)player, GameEvent.BLOCK_CHANGE, blockPos);
-            return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.SUCCESS;
+    }
+
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
+        builder.add(HAS_PLANT);
+    }
+
+
+    @Override
+    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
+        if (direction == Direction.DOWN && !blockState.canSurvive(levelAccessor, blockPos)) {
+            return Blocks.AIR.defaultBlockState();
+        }
+        return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
+    }
+
+    @Override
+    public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
+        return false;
     }
 
 }

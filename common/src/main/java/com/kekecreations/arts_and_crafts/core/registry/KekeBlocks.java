@@ -59,11 +59,10 @@ public class KekeBlocks {
 
             CHALK_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk_stairs", () -> new CustomStairBlock(getChalk(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
 
-            CHALK_DUST.put(colours, RegistryHelper.registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
+            CHALK_DUST.put(colours, RegistryHelper.registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(colours, BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
 
 
-            DYED_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_flower_pot", () -> KekeBlocks.flowerPot(colours, Blocks.AIR, new FeatureFlag[0])));
-            DYED_POTTED_OAK_SAPLING.put(colours, RegistryHelper.registerBlock(colours + "_potted_oak_sapling", () -> KekeBlocks.flowerPot(colours, Blocks.AMETHYST_CLUSTER, new FeatureFlag[0])));
+            DYED_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_flower_pot", () -> new CustomFlowerPotBlock(colours, BlockBehaviour.Properties.of().mapColor(colours).instabreak().noOcclusion().pushReaction(PushReaction.DESTROY))));
         }
     }
     public static Block getDyedTerracottaShingles(DyeColor colours){
@@ -102,14 +101,6 @@ public class KekeBlocks {
     }
 
 
-
-    private static CustomFlowerPotBlock flowerPot(DyeColor dyeColor, Block block, FeatureFlag... featureFlags) {
-        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().mapColor(dyeColor).instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        if (featureFlags.length > 0) {
-            properties = properties.requiredFeatures(featureFlags);
-        }
-        return new CustomFlowerPotBlock(dyeColor, block, properties);
-    }
 
 
     /*
