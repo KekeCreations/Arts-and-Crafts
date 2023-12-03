@@ -30,7 +30,6 @@ public class KekeBlocks {
     //public static final Supplier<ChalkDustBlock> WHITE_CHALK_DUST = RegistryHelper.registerBlock("white_chalk_dust", () -> new ChalkDustBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_OAK_SAPLING = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -95,9 +94,6 @@ public class KekeBlocks {
     }
     public static Block getDyedFlowerPot(DyeColor colours){
         return DYED_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedOakSapling(DyeColor colours){
-        return DYED_POTTED_OAK_SAPLING.get(colours).get();
     }
 
 

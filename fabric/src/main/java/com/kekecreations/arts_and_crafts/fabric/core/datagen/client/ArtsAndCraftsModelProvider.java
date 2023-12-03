@@ -28,7 +28,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
             //this.createEmptyFlowerPot(KekeBlocks.getFlowerPots(colours), BlockModelGenerators.TintState.NOT_TINTED, blockStateModelGenerator);
             blockStateModelGenerator.createTrivialBlock(KekeBlocks.getDyedFlowerPot(colours), KekeTextureMapping.flower_pot(KekeBlocks.getDyedFlowerPot(colours)), KekeModelTemplates.FLOWER_POT);
 
-            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedOakSapling(colours), "oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            //this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedOakSapling(colours), "oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
         }
 
 
@@ -45,10 +45,4 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         //itemModelGenerator.generateFlatItem(KekeItems.WHITE_CHALK_STICK.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
-    public final void createCustomPottedFlowerPot(DyeColor dyeColor, Block block, String string, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {
-        //blockModelGenerators.createCrossBlockWithDefaultItem(block, tintState);
-        TextureMapping textureMapping = KekeTextureMapping.customPottedPlant(dyeColor, block, string);
-        ResourceLocation resourceLocation = tintState.getCrossPot().create(block, textureMapping, blockModelGenerators.modelOutput);
-        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
-    }
 }

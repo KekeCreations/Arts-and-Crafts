@@ -14,9 +14,6 @@ public class KekeTextureMapping {
         return TextureMapping.singleSlot(KekeTextureSlots.FLOWERPOT, getFlowerPotTexture(block));
     }
 
-    public static TextureMapping customPottedPlant(DyeColor dyeColor, Block block, String string) {
-        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor));
-    }
 
     public static ResourceLocation getBlockTextureWithoutKey(String string) {
         return new ResourceLocation("block/" + string);
@@ -24,11 +21,11 @@ public class KekeTextureMapping {
 
     public static ResourceLocation getFlowerPotTexture(Block block) {
         ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(block);
-        return resourceLocation.withPrefix("block/dyed_flower_pot/");
+        return resourceLocation.withPrefix("block/");
     }
     public static ResourceLocation getFlowerPottedTexture(DyeColor colours) {
         ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(KekeBlocks.getDyedFlowerPot(colours));
-        return resourceLocation.withPrefix("block/dyed_flower_pot/");
+        return resourceLocation.withPrefix("block/");
     }
 
 }
