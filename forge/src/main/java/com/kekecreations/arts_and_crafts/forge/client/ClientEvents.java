@@ -3,6 +3,8 @@ package com.kekecreations.arts_and_crafts.forge.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.block.CustomFlowerPotRenderer;
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlockEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -31,6 +33,7 @@ public class ClientEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Entity Renderers
         //event.registerEntityRenderer(KekeEntityTypes.CUSTOM_DYE_SHEEP.get(), CustomDyeSheepRenderer::new);
+        event.registerBlockEntityRenderer(KekeBlockEntityTypes.CUSTOM_FLOWER_POT.get(), CustomFlowerPotRenderer::new);
 
     }
 

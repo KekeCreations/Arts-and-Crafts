@@ -20,6 +20,7 @@ public class ArtsAndCraftsForge {
         ArtsAndCrafts.init();
 
         RegistryHelperImpl.PARTICLE_TYPES.register(modEventBus);
+        RegistryHelperImpl.BLOCK_ENTITY_TYPES.register(modEventBus);
         RegistryHelperImpl.ITEMS.register(modEventBus);
         RegistryHelperImpl.BLOCKS.register(modEventBus);
 

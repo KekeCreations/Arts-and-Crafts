@@ -1,17 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
-import com.kekecreations.arts_and_crafts.core.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.common.block.entity.CustomFlowerPotBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -21,23 +15,17 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
-import java.util.Optional;
 
-public class CustomFlowerPotBlock extends Block {
-
-    public static final BooleanProperty HAS_PLANT = KekeBlockStateProperties.HAS_PLANT;
+public class CustomFlowerPotBlock extends Block implements EntityBlock {
 
     protected static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
 
@@ -57,7 +45,6 @@ public class CustomFlowerPotBlock extends Block {
 
     public CustomFlowerPotBlock(DyeColor dyeColor, Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(this.getHasPlantProperty(), false));
         this.dyeColor = dyeColor;
         ITEM_BY_COLOR.put(dyeColor, this);
 
@@ -72,13 +59,6 @@ public class CustomFlowerPotBlock extends Block {
     }
 
 
-    protected BooleanProperty getHasPlantProperty() {
-        return HAS_PLANT;
-    }
-
-    public boolean getHasPlant(BlockState blockState) {
-        return blockState.getValue(this.getHasPlantProperty());
-    }
 
 
 
@@ -87,34 +67,31 @@ public class CustomFlowerPotBlock extends Block {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         Item item = itemStack.getItem();
 
-        if (!this.getHasPlant(blockState)) {
+
+        BlockEntity blockEntity = level.getBlockEntity(blockPos);
+        if (blockEntity instanceof CustomFlowerPotBlockEntity customFlowerPotBlockEntity) {
             if (item instanceof BlockItem blockItem) {
                 Block block = blockItem.getBlock();
-                if (block instanceof SaplingBlock saplingBlock) {
-
-                    //JUST IN CASE
-                    ResourceLocation resourceKey = BuiltInRegistries.BLOCK.getKey(saplingBlock);
-                    Block blockKey = BuiltInRegistries.BLOCK.get(resourceKey);
-
-                    //TEST
-                    Optional<ResourceKey<Block>> blockResourceKey = BuiltInRegistries.BLOCK.getResourceKey(saplingBlock);
-                    String blockNamespace = BuiltInRegistries.BLOCK.getKey(saplingBlock).getNamespace();
-
-
-
-
-                    System.out.println(blockKey);
-                    System.out.println(blockNamespace);
+                if (block instanceof SaplingBlock saplingBlock && customFlowerPotBlockEntity.getPlant() == Blocks.AIR.defaultBlockState()) {
+                    customFlowerPotBlockEntity.setPlant(saplingBlock.defaultBlockState());
+                    if (!player.isCreative()) {
+                        player.setItemInHand(interactionHand, ItemStack.EMPTY);
+                    }
+                } else {
+                    return InteractionResult.FAIL;
                 }
             }
+            if (itemStack.isEmpty() && customFlowerPotBlockEntity.getPlant() != Blocks.AIR.defaultBlockState()) {
+                ItemStack plantItemStack = customFlowerPotBlockEntity.getPlant().getBlock().asItem().getDefaultInstance();
+                player.addItem(plantItemStack);
+                customFlowerPotBlockEntity.setPlant(Blocks.AIR.defaultBlockState());
+            }
+
+            System.out.println(customFlowerPotBlockEntity.getPlant());
         }
         return InteractionResult.SUCCESS;
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder);
-        builder.add(HAS_PLANT);
-    }
 
 
     @Override
@@ -130,4 +107,8 @@ public class CustomFlowerPotBlock extends Block {
         return false;
     }
 
+    @Nullable
+    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+        return new CustomFlowerPotBlockEntity(blockPos, blockState);
+    }
 }

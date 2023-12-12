@@ -6,6 +6,8 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -16,6 +18,7 @@ public class RegistryHelperImpl {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ArtsAndCrafts.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ArtsAndCrafts.MOD_ID);
 
 
 
@@ -37,8 +40,8 @@ public class RegistryHelperImpl {
         return PARTICLE_TYPES.register(id, () -> new SimpleParticleType(false));
     }
 
-
-
-
+    public static <T extends BlockEntity>Supplier<BlockEntityType<T>> registerBlockEntityType(String id, Supplier<BlockEntityType<T>> blockEntityTypeSupplier) {
+        return BLOCK_ENTITY_TYPES.register(id, blockEntityTypeSupplier);
+    }
 
 }
