@@ -36,6 +36,5 @@ public class CustomFlowerPotRenderer implements BlockEntityRenderer<CustomFlower
 
         poseStack.popPose();
         ModelBlockRenderer.clearCache();
-        System.out.println(blockEntity.getPlant());
     }
 }

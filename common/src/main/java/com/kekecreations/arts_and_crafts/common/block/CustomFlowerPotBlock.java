@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.block.entity.CustomFlowerPotBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -70,26 +71,30 @@ public class CustomFlowerPotBlock extends Block implements EntityBlock {
 
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
         if (blockEntity instanceof CustomFlowerPotBlockEntity customFlowerPotBlockEntity) {
-            if (item instanceof BlockItem blockItem) {
-                Block block = blockItem.getBlock();
-                if (block instanceof SaplingBlock saplingBlock && customFlowerPotBlockEntity.getPlant() == Blocks.AIR.defaultBlockState()) {
-                    customFlowerPotBlockEntity.setPlant(saplingBlock.defaultBlockState());
-                    if (!player.isCreative()) {
-                        player.setItemInHand(interactionHand, ItemStack.EMPTY);
-                    }
-                } else {
-                    return InteractionResult.FAIL;
+            if (customFlowerPotBlockEntity.getPlant() != Blocks.AIR.defaultBlockState() && !(item instanceof BlockItem)) {
+                ItemStack plantItemStack = new ItemStack(customFlowerPotBlockEntity.getPlant().getBlock());
+                if (itemStack.isEmpty()) {
+                    player.setItemInHand(interactionHand, plantItemStack);
+                } else if (!player.addItem(plantItemStack)) {
+                    player.drop(plantItemStack, false);
                 }
-            }
-            if (itemStack.isEmpty() && customFlowerPotBlockEntity.getPlant() != Blocks.AIR.defaultBlockState()) {
-                ItemStack plantItemStack = customFlowerPotBlockEntity.getPlant().getBlock().asItem().getDefaultInstance();
-                player.addItem(plantItemStack);
                 customFlowerPotBlockEntity.setPlant(Blocks.AIR.defaultBlockState());
+                return InteractionResult.SUCCESS;
             }
 
-            System.out.println(customFlowerPotBlockEntity.getPlant());
+            if (item instanceof BlockItem blockItem) {
+                Block block = blockItem.getBlock();
+                if ((block instanceof SaplingBlock || block instanceof FlowerBlock || block instanceof RootsBlock) && customFlowerPotBlockEntity.getPlant() == Blocks.AIR.defaultBlockState()) {
+                    player.awardStat(Stats.POT_FLOWER);
+                    customFlowerPotBlockEntity.setPlant(block.defaultBlockState());
+                    if (!player.isCreative()) {
+                        itemStack.shrink(1);
+                    }
+                    return InteractionResult.SUCCESS;
+                }
+            }
         }
-        return InteractionResult.SUCCESS;
+        return InteractionResult.FAIL;
     }
 
 
