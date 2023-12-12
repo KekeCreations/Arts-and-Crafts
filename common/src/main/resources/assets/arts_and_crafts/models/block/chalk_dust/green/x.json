@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "arts_and_crafts:block/chalk_dust/green/x",
-    "dust": "arts_and_crafts:block/chalk_dust/green/x"
+    "particle": "arts_and_crafts:block/green_x",
+    "dust": "arts_and_crafts:block/green_x"
   },
   "elements": [
     {   "from": [ 0, 0, 0.1 ],

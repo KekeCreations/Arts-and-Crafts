@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "arts_and_crafts:block/chalk_dust/magenta/circle",
-    "dust": "arts_and_crafts:block/chalk_dust/magenta/circle"
+    "particle": "arts_and_crafts:block/magenta_circle",
+    "dust": "arts_and_crafts:block/magenta_circle"
   },
   "elements": [
     {   "from": [ 0, 0, 0.1 ],
