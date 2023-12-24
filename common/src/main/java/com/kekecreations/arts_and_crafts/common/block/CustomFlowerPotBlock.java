@@ -1,12 +1,13 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
-import com.kekecreations.arts_and_crafts.common.block.entity.CustomFlowerPotBlockEntity;
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -15,20 +16,121 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
-public class CustomFlowerPotBlock extends Block implements EntityBlock {
+public class CustomFlowerPotBlock extends Block {
 
+    private static final Map<Block, Block> WHITE_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> ORANGE_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> MAGENTA_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> LIGHT_BLUE_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> YELLOW_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> LIME_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> PINK_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> GRAY_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> LIGHT_GRAY_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> CYAN_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> PURPLE_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> BLUE_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> BROWN_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> GREEN_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> RED_POTTED_BY_CONTENT = Maps.newHashMap();
+    private static final Map<Block, Block> BLACK_POTTED_BY_CONTENT = Maps.newHashMap();
+    private final Block content;
+    private final DyeColor colour;
+
+    public static final float AABB_SIZE = 3.0f;
     protected static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
+
+
+    public CustomFlowerPotBlock(Block block, DyeColor dyeColor, Properties properties) {
+        super(properties);
+        this.content = block;
+        this.colour = dyeColor;
+        switch (this.colour) {
+            case WHITE -> WHITE_POTTED_BY_CONTENT.put(block, this);
+            case ORANGE -> ORANGE_POTTED_BY_CONTENT.put(block, this);
+            case MAGENTA -> MAGENTA_POTTED_BY_CONTENT.put(block, this);
+            case LIGHT_BLUE -> LIGHT_BLUE_POTTED_BY_CONTENT.put(block, this);
+            case YELLOW -> YELLOW_POTTED_BY_CONTENT.put(block, this);
+            case LIME -> LIME_POTTED_BY_CONTENT.put(block, this);
+            case PINK -> PINK_POTTED_BY_CONTENT.put(block, this);
+            case GRAY -> GRAY_POTTED_BY_CONTENT.put(block, this);
+            case LIGHT_GRAY -> LIGHT_GRAY_POTTED_BY_CONTENT.put(block, this);
+            case CYAN -> CYAN_POTTED_BY_CONTENT.put(block, this);
+            case PURPLE -> PURPLE_POTTED_BY_CONTENT.put(block, this);
+            case BLUE -> BLUE_POTTED_BY_CONTENT.put(block, this);
+            case BROWN -> BROWN_POTTED_BY_CONTENT.put(block, this);
+            case GREEN -> GREEN_POTTED_BY_CONTENT.put(block, this);
+            case RED -> RED_POTTED_BY_CONTENT.put(block, this);
+            case BLACK -> BLACK_POTTED_BY_CONTENT.put(block, this);
+        }
+    }
+
+    private boolean isEmpty() {
+        return this.content == Blocks.AIR;
+    }
+
+
+    @Override
+    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        boolean bl2;
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        Item item = itemStack.getItem();
+        BlockState blockState2 = Blocks.AIR.defaultBlockState();
+
+        switch (this.colour) {
+            case WHITE -> blockState2 = (item instanceof BlockItem ? WHITE_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case ORANGE -> blockState2 = (item instanceof BlockItem ? ORANGE_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case MAGENTA -> blockState2 = (item instanceof BlockItem ? MAGENTA_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case LIGHT_BLUE -> blockState2 = (item instanceof BlockItem ? LIGHT_BLUE_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case YELLOW -> blockState2 = (item instanceof BlockItem ? YELLOW_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case LIME -> blockState2 = (item instanceof BlockItem ? LIME_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case PINK -> blockState2 = (item instanceof BlockItem ? PINK_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case GRAY -> blockState2 = (item instanceof BlockItem ? GRAY_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case LIGHT_GRAY -> blockState2 = (item instanceof BlockItem ? LIGHT_GRAY_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case CYAN -> blockState2 = (item instanceof BlockItem ? CYAN_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case PURPLE -> blockState2 = (item instanceof BlockItem ? PURPLE_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case BLUE -> blockState2 = (item instanceof BlockItem ? BLUE_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case BROWN -> blockState2 = (item instanceof BlockItem ? BROWN_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case GREEN -> blockState2 = (item instanceof BlockItem ? GREEN_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case RED -> blockState2 = (item instanceof BlockItem ? RED_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+            case BLACK -> blockState2 = (item instanceof BlockItem ? BLACK_POTTED_BY_CONTENT.getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+        }
+        boolean bl = blockState2.is(Blocks.AIR);
+        if (bl != (bl2 = this.isEmpty())) {
+            if (bl2) {
+                level.setBlock(blockPos, blockState2, 3);
+                player.awardStat(Stats.POT_FLOWER);
+                if (!player.getAbilities().instabuild) {
+                    itemStack.shrink(1);
+                }
+            } else {
+                ItemStack itemStack2 = new ItemStack(this.content);
+                if (itemStack.isEmpty()) {
+                    player.setItemInHand(interactionHand, itemStack2);
+                } else if (!player.addItem(itemStack2)) {
+                    player.drop(itemStack2, false);
+                }
+                level.setBlock(blockPos, KekeBlocks.getDyedFlowerPot(this.colour).defaultBlockState(), 3);
+            }
+            level.gameEvent((Entity)player, GameEvent.BLOCK_CHANGE, blockPos);
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        return InteractionResult.CONSUME;
+    }
+
 
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
@@ -40,64 +142,13 @@ public class CustomFlowerPotBlock extends Block implements EntityBlock {
         return RenderShape.MODEL;
     }
 
-
-    private static final Map<DyeColor, CustomFlowerPotBlock> ITEM_BY_COLOR = Maps.newEnumMap(DyeColor.class);
-    private final DyeColor dyeColor;
-
-    public CustomFlowerPotBlock(DyeColor dyeColor, Properties properties) {
-        super(properties);
-        this.dyeColor = dyeColor;
-        ITEM_BY_COLOR.put(dyeColor, this);
-
-    }
-
-    public DyeColor getDyeColor() {
-        return this.dyeColor;
-    }
-
-    public static CustomFlowerPotBlock byColour(DyeColor dyeColor) {
-        return ITEM_BY_COLOR.get(dyeColor);
-    }
-
-
-
-
-
     @Override
-    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
-        Item item = itemStack.getItem();
-
-
-        BlockEntity blockEntity = level.getBlockEntity(blockPos);
-        if (blockEntity instanceof CustomFlowerPotBlockEntity customFlowerPotBlockEntity) {
-            if (customFlowerPotBlockEntity.getPlant() != Blocks.AIR.defaultBlockState() && !(item instanceof BlockItem)) {
-                ItemStack plantItemStack = new ItemStack(customFlowerPotBlockEntity.getPlant().getBlock());
-                if (itemStack.isEmpty()) {
-                    player.setItemInHand(interactionHand, plantItemStack);
-                } else if (!player.addItem(plantItemStack)) {
-                    player.drop(plantItemStack, false);
-                }
-                customFlowerPotBlockEntity.setPlant(Blocks.AIR.defaultBlockState());
-                return InteractionResult.SUCCESS;
-            }
-
-            if (item instanceof BlockItem blockItem) {
-                Block block = blockItem.getBlock();
-                if ((block instanceof SaplingBlock || block instanceof FlowerBlock || block instanceof RootsBlock) && customFlowerPotBlockEntity.getPlant() == Blocks.AIR.defaultBlockState()) {
-                    player.awardStat(Stats.POT_FLOWER);
-                    customFlowerPotBlockEntity.setPlant(block.defaultBlockState());
-                    if (!player.isCreative()) {
-                        itemStack.shrink(1);
-                    }
-                    return InteractionResult.SUCCESS;
-                }
-            }
+    public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos blockPos, BlockState blockState) {
+        if (this.isEmpty()) {
+            return super.getCloneItemStack(blockGetter, blockPos, blockState);
         }
-        return InteractionResult.FAIL;
+        return new ItemStack(this.content);
     }
-
-
 
     @Override
     public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
@@ -107,13 +158,14 @@ public class CustomFlowerPotBlock extends Block implements EntityBlock {
         return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
     }
 
+    public Block getContent() {
+        return this.content;
+    }
+
     @Override
     public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
         return false;
     }
 
-    @Nullable
-    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new CustomFlowerPotBlockEntity(blockPos, blockState);
-    }
+
 }

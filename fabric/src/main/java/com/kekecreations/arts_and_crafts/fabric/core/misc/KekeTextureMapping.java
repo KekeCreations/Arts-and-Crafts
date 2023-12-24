@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts.fabric.core.misc;
 
-import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
@@ -28,4 +28,7 @@ public class KekeTextureMapping {
         return resourceLocation.withPrefix("block/");
     }
 
+    public static TextureMapping customPottedPlant(DyeColor dyeColor, Block block, String string) {
+        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor));
+    }
 }
