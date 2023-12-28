@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.common.block.CustomStairBlock;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
+import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -41,6 +42,16 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CHERRY_SAPLING_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DARK_OAK_SAPLING_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MANGROVE_PROPAGULE_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_FERN_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_DANDELION_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POPPY_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_BLUE_ORCHID_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALLIUM_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_AZURE_BLUET_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_RED_TULIP_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ORANGE_TULIP_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_WHITE_TULIP_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_PINK_TULIP_FLOWER_POTS = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -91,6 +102,18 @@ public class KekeBlocks {
             //DYED ROOTS POTS
             DYED_CRIMSON_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_crimson_roots", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_ROOTS, colours)));
             DYED_WARPED_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_warped_roots", () -> KekeBlocks.flowerPot(Blocks.WARPED_ROOTS, colours)));
+
+            //DYED FLOWER POTS
+            DYED_FERN_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_fern", () -> KekeBlocks.flowerPot(Blocks.FERN, colours)));
+            DYED_DANDELION_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_dandelion", () -> KekeBlocks.flowerPot(Blocks.DANDELION, colours)));
+            DYED_POPPY_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_poppy", () -> KekeBlocks.flowerPot(Blocks.POPPY, colours)));
+            DYED_BLUE_ORCHID_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_blue_orchid", () -> KekeBlocks.flowerPot(Blocks.BLUE_ORCHID, colours)));
+            DYED_ALLIUM_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_allium", () -> KekeBlocks.flowerPot(Blocks.ALLIUM, colours)));
+            DYED_AZURE_BLUET_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_azure_bluet", () -> KekeBlocks.flowerPot(Blocks.AZURE_BLUET, colours)));
+            DYED_RED_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_red_tulip", () -> KekeBlocks.flowerPot(Blocks.RED_TULIP, colours)));
+            DYED_ORANGE_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_orange_tulip", () -> KekeBlocks.flowerPot(Blocks.ORANGE_TULIP, colours)));
+            DYED_WHITE_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_white_tulip", () -> KekeBlocks.flowerPot(Blocks.WHITE_TULIP, colours)));
+            DYED_PINK_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_pink_tulip", () -> KekeBlocks.flowerPot(Blocks.PINK_TULIP, colours)));
         }
     }
 
@@ -165,6 +188,36 @@ public class KekeBlocks {
     }
     public static Block getDyedPottedMangrovePropagule(DyeColor colours){
         return DYED_MANGROVE_PROPAGULE_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedFern(DyeColor colours){
+        return DYED_FERN_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedDandelion(DyeColor colours){
+        return DYED_DANDELION_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedPoppy(DyeColor colours){
+        return DYED_POPPY_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedBlueOrchid(DyeColor colours){
+        return DYED_BLUE_ORCHID_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedAllium(DyeColor colours){
+        return DYED_ALLIUM_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedAzureBluet(DyeColor colours){
+        return DYED_AZURE_BLUET_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedRedTulip(DyeColor colours){
+        return DYED_RED_TULIP_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedOrangeTulip(DyeColor colours){
+        return DYED_ORANGE_TULIP_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedWhiteTulip(DyeColor colours){
+        return DYED_WHITE_TULIP_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedPinkTulip(DyeColor colours){
+        return DYED_PINK_TULIP_FLOWER_POTS.get(colours).get();
     }
 
 

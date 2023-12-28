@@ -5,10 +5,15 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.GrassColor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +32,17 @@ public class ClientEvents {
     public static void registerParticleProviders(RegisterParticleProvidersEvent registerParticleProvidersEvent) {
         for (DyeColor colours : DyeColor.values()) {
             registerParticleProvidersEvent.registerSpriteSet(KekeParticles.getChalkDrawParticle(colours), ChalkDustParticle.Factory::new);
+        }
+    }
+    @SubscribeEvent
+    public static void registerBlockColours(RegisterColorHandlersEvent.Block registerColorHandlersEvent) {
+        for (DyeColor colours : DyeColor.values()) {
+            registerColorHandlersEvent.register((blockState, blockAndTintGetter, blockPos, i) -> {
+                if (blockAndTintGetter == null || blockPos == null) {
+                    return GrassColor.getDefaultColor();
+                }
+                return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
+            }, KekeBlocks.getDyedPottedFern(colours));
         }
     }
 

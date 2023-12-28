@@ -44,6 +44,17 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedWarpedFungus(colours), "warped_fungus", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedWarpedRoots(colours), "warped_roots_pot", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
 
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedFern(colours), "fern", KekeModelTemplates.TintState.TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedDandelion(colours), "dandelion", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedPoppy(colours), "poppy", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedBlueOrchid(colours), "blue_orchid", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedAllium(colours), "allium", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedAzureBluet(colours), "azure_bluet", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedRedTulip(colours), "red_tulip", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedOrangeTulip(colours), "orange_tulip", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedWhiteTulip(colours), "white_tulip", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedPinkTulip(colours), "pink_tulip", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+
         }
 
 

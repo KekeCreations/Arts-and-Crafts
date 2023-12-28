@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.fabric.core.misc;
 
 import net.minecraft.data.models.model.ModelTemplate;
-import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 
@@ -13,6 +12,8 @@ public class KekeModelTemplates {
     public static final ModelTemplate FLOWER_POT = createFlowerPot("flower_pot", KekeTextureSlots.FLOWERPOT, TextureSlot.PARTICLE);
 
     public static final ModelTemplate FLOWER_POT_CROSS = createFlowerPot("flower_pot_cross", TextureSlot.PLANT, KekeTextureSlots.FLOWERPOT, TextureSlot.PARTICLE);
+
+    public static final ModelTemplate TINTED_FLOWER_POT_CROSS = createFlowerPot("tinted_flower_pot_cross", TextureSlot.PLANT, KekeTextureSlots.FLOWERPOT, TextureSlot.PARTICLE);
 
     public static final ModelTemplate POTTED_MANGROVE_PROPAGULE = createFlowerPot("potted_mangrove_propagule", KekeTextureSlots.SAPLING, KekeTextureSlots.FLOWERPOT, TextureSlot.PARTICLE);
 
@@ -30,7 +31,7 @@ public class KekeModelTemplates {
     NOT_TINTED;
 
     public ModelTemplate getCrossPot() {
-        return this == TINTED ? ModelTemplates.TINTED_FLOWER_POT_CROSS : KekeModelTemplates.FLOWER_POT_CROSS;
+        return this == TINTED ? KekeModelTemplates.TINTED_FLOWER_POT_CROSS : KekeModelTemplates.FLOWER_POT_CROSS;
     }
     }
 }

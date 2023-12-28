@@ -8,8 +8,11 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.GrassColor;
 
 @Environment(EnvType.CLIENT)
 public class ArtsAndCraftsClientFabric implements ClientModInitializer {
@@ -18,6 +21,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
     public void onInitializeClient() {
         registerBlockLayers();
         registerParticleFactories();
+        registerBlockColours();
     }
 
 
@@ -36,14 +40,35 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedCherrySapling(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedDarkOakSapling(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedMangrovePropagule(colours), RenderType.cutout());
+
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedFern(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedDandelion(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedPoppy(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedBlueOrchid(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedAllium(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedAzureBluet(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedRedTulip(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedOrangeTulip(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedWhiteTulip(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedPinkTulip(colours), RenderType.cutout());
         }
-        //BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.POTTED_CACTUS.get(), RenderType.cutout());
     }
 
 
     public static void registerParticleFactories() {
         for (DyeColor colours : DyeColor.values()) {
             ParticleFactoryRegistry.getInstance().register(KekeParticles.getChalkDrawParticle(colours), ChalkDustParticle.Factory::new);
+        }
+    }
+
+    public static void registerBlockColours() {
+        for (DyeColor colours : DyeColor.values()) {
+            ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, i) -> {
+                if (blockAndTintGetter == null || blockPos == null) {
+                    return GrassColor.getDefaultColor();
+                }
+                return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
+            }, KekeBlocks.getDyedPottedFern(colours));
         }
     }
 
