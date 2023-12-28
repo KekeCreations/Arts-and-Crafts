@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 public class KekeTextureMapping {
 
     public static TextureMapping flower_pot(Block block) {
-        return TextureMapping.singleSlot(KekeTextureSlots.FLOWERPOT, getFlowerPotTexture(block));
+        return (new TextureMapping()).put(KekeTextureSlots.FLOWERPOT, getFlowerPotTexture(block)).put(TextureSlot.PARTICLE, getFlowerPotTexture(block));
     }
 
 
@@ -28,7 +28,11 @@ public class KekeTextureMapping {
         return resourceLocation.withPrefix("block/");
     }
 
-    public static TextureMapping customPottedPlant(DyeColor dyeColor, Block block, String string) {
-        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor));
+    public static TextureMapping customPottedPlant(DyeColor dyeColor, String string) {
+        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
+    }
+
+    public static TextureMapping customMangrovePropagulePottedPlant(DyeColor dyeColor, String string) {
+        return (new TextureMapping()).put(KekeTextureSlots.SAPLING, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
     }
 }

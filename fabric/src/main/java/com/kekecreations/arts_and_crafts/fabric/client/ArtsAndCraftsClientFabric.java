@@ -28,9 +28,18 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
     public static void registerBlockLayers() {
         for (DyeColor colours : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getChalkDust(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedOakSapling(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedCrimsonFungus(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedCrimsonRoots(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedWarpedFungus(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedWarpedRoots(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedOakSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedSpruceSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedBirchSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedAcaciaSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedJungleSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedCherrySapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedDarkOakSapling(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedMangrovePropagule(colours), RenderType.cutout());
         }
         //BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.POTTED_CACTUS.get(), RenderType.cutout());
     }

@@ -25,14 +25,24 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
 
         for (DyeColor colours : DyeColor.values()) {
+            KekeModelTemplates kekeModelTemplates = new KekeModelTemplates();
             //this.createEmptyFlowerPot(KekeBlocks.getFlowerPots(colours), BlockModelGenerators.TintState.NOT_TINTED, blockStateModelGenerator);
             blockStateModelGenerator.createTrivialBlock(KekeBlocks.getDyedFlowerPot(colours), KekeTextureMapping.flower_pot(KekeBlocks.getDyedFlowerPot(colours)), KekeModelTemplates.FLOWER_POT);
 
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedOakSapling(colours), "oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedSpruceSapling(colours), "spruce_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedBirchSapling(colours), "birch_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedJungleSapling(colours), "jungle_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedAcaciaSapling(colours), "acacia_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedCherrySapling(colours), "cherry_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedDarkOakSapling(colours), "dark_oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedMangrovePropagule(colours, KekeBlocks.getDyedPottedMangrovePropagule(colours), "mangrove_propagule", kekeModelTemplates, blockStateModelGenerator);
 
 
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedCrimsonFungus(colours), "crimson_fungus", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedCrimsonRoots(colours), "crimson_roots_pot", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedWarpedFungus(colours), "warped_fungus", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedWarpedRoots(colours), "warped_roots_pot", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
 
         }
 
@@ -52,9 +62,15 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
     public final void createCustomPottedFlowerPot(DyeColor dyeColor, Block block, String string, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {
         //blockModelGenerators.createCrossBlockWithDefaultItem(block, tintState);
-        TextureMapping textureMapping = KekeTextureMapping.customPottedPlant(dyeColor, block, string);
+        TextureMapping textureMapping = KekeTextureMapping.customPottedPlant(dyeColor, string);
         ResourceLocation resourceLocation = tintState.getCrossPot().create(block, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
 
+    public final void createCustomPottedMangrovePropagule(DyeColor dyeColor, Block block, String string, KekeModelTemplates tintState, BlockModelGenerators blockModelGenerators) {
+        //blockModelGenerators.createCrossBlockWithDefaultItem(block, tintState);
+        TextureMapping textureMapping = KekeTextureMapping.customMangrovePropagulePottedPlant(dyeColor, string);
+        ResourceLocation resourceLocation = tintState.getPottedMangrovePropagule().create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
 }

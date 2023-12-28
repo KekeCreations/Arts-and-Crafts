@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/potted_mangrove_propagule",
+  "textures": {
+    "flowerpot": "arts_and_crafts:block/orange_flower_pot",
+    "particle": "arts_and_crafts:block/orange_flower_pot",
+    "sapling": "minecraft:block/mangrove_propagule"
+  }
+}
