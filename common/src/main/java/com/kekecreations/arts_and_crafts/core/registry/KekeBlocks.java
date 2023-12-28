@@ -75,22 +75,22 @@ public class KekeBlocks {
             DYED_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_flower_pot", () -> KekeBlocks.flowerPot(Blocks.AIR, colours)));
 
             //DYED SAPLING POTS
-            DYED_OAK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_oak_sapling", () -> KekeBlocks.flowerPot(Blocks.OAK_SAPLING, colours)));
-            DYED_SPRUCE_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_spruce_sapling", () -> KekeBlocks.flowerPot(Blocks.SPRUCE_SAPLING, colours)));
-            DYED_BIRCH_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_birch_sapling", () -> KekeBlocks.flowerPot(Blocks.BIRCH_SAPLING, colours)));
-            DYED_JUNGLE_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_jungle_sapling", () -> KekeBlocks.flowerPot(Blocks.JUNGLE_SAPLING, colours)));
-            DYED_ACACIA_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_acacia_sapling", () -> KekeBlocks.flowerPot(Blocks.ACACIA_SAPLING, colours)));
-            DYED_CHERRY_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_cherry_sapling", () -> KekeBlocks.flowerPot(Blocks.CHERRY_SAPLING, colours)));
-            DYED_DARK_OAK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_dark_oak_sapling", () -> KekeBlocks.flowerPot(Blocks.DARK_OAK_SAPLING, colours)));
-            DYED_MANGROVE_PROPAGULE_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_mangrove_propagule", () -> KekeBlocks.flowerPot(Blocks.MANGROVE_PROPAGULE, colours)));
+            DYED_OAK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_oak_sapling", () -> KekeBlocks.flowerPot(Blocks.OAK_SAPLING, colours)));
+            DYED_SPRUCE_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_spruce_sapling", () -> KekeBlocks.flowerPot(Blocks.SPRUCE_SAPLING, colours)));
+            DYED_BIRCH_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_birch_sapling", () -> KekeBlocks.flowerPot(Blocks.BIRCH_SAPLING, colours)));
+            DYED_JUNGLE_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_jungle_sapling", () -> KekeBlocks.flowerPot(Blocks.JUNGLE_SAPLING, colours)));
+            DYED_ACACIA_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_acacia_sapling", () -> KekeBlocks.flowerPot(Blocks.ACACIA_SAPLING, colours)));
+            DYED_CHERRY_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_cherry_sapling", () -> KekeBlocks.flowerPot(Blocks.CHERRY_SAPLING, colours)));
+            DYED_DARK_OAK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_dark_oak_sapling", () -> KekeBlocks.flowerPot(Blocks.DARK_OAK_SAPLING, colours)));
+            DYED_MANGROVE_PROPAGULE_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_mangrove_propagule", () -> KekeBlocks.flowerPot(Blocks.MANGROVE_PROPAGULE, colours)));
 
             //DYED FUNGUS POTS
-            DYED_CRIMSON_FUNGUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_crimson_fungus", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_FUNGUS, colours)));
-            DYED_WARPED_FUNGUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_warped_fungus", () -> KekeBlocks.flowerPot(Blocks.WARPED_FUNGUS, colours)));
+            DYED_CRIMSON_FUNGUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_crimson_fungus", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_FUNGUS, colours)));
+            DYED_WARPED_FUNGUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_warped_fungus", () -> KekeBlocks.flowerPot(Blocks.WARPED_FUNGUS, colours)));
 
             //DYED ROOTS POTS
-            DYED_CRIMSON_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_crimson_roots", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_ROOTS, colours)));
-            DYED_WARPED_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_potted_warped_roots", () -> KekeBlocks.flowerPot(Blocks.WARPED_ROOTS, colours)));
+            DYED_CRIMSON_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_crimson_roots", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_ROOTS, colours)));
+            DYED_WARPED_ROOTS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_warped_roots", () -> KekeBlocks.flowerPot(Blocks.WARPED_ROOTS, colours)));
         }
     }
 
