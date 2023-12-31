@@ -51,6 +51,13 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedOrangeTulip(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedWhiteTulip(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedPinkTulip(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedOxeyeDaisy(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedCornflower(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedLilyOfTheValley(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedWitherRose(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedRedMushroom(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedBrownMushroom(colours), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.getDyedPottedDeadBush(colours), RenderType.cutout());
         }
     }
 

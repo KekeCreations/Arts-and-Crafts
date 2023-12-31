@@ -52,6 +52,13 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ORANGE_TULIP_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_WHITE_TULIP_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PINK_TULIP_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_OXEYE_DAISY_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORNFLOWER_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_LILY_OF_THE_VALLEY_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_WITHER_ROSE_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_RED_MUSHROOM_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_BROWN_MUSHROOM_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_DEAD_BUSH_FLOWER_POTS = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -114,6 +121,13 @@ public class KekeBlocks {
             DYED_ORANGE_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_orange_tulip", () -> KekeBlocks.flowerPot(Blocks.ORANGE_TULIP, colours)));
             DYED_WHITE_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_white_tulip", () -> KekeBlocks.flowerPot(Blocks.WHITE_TULIP, colours)));
             DYED_PINK_TULIP_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_pink_tulip", () -> KekeBlocks.flowerPot(Blocks.PINK_TULIP, colours)));
+            DYED_OXEYE_DAISY_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_oxeye_daisy", () -> KekeBlocks.flowerPot(Blocks.OXEYE_DAISY, colours)));
+            DYED_CORNFLOWER_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_cornflower", () -> KekeBlocks.flowerPot(Blocks.CORNFLOWER, colours)));
+            DYED_LILY_OF_THE_VALLEY_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_lily_of_the_valley", () -> KekeBlocks.flowerPot(Blocks.LILY_OF_THE_VALLEY, colours)));
+            DYED_WITHER_ROSE_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_wither_rose", () -> KekeBlocks.flowerPot(Blocks.WITHER_ROSE, colours)));
+            DYED_RED_MUSHROOM_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_red_mushroom", () -> KekeBlocks.flowerPot(Blocks.RED_MUSHROOM, colours)));
+            DYED_BROWN_MUSHROOM_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_brown_mushroom", () -> KekeBlocks.flowerPot(Blocks.BROWN_MUSHROOM, colours)));
+            DYED_DEAD_BUSH_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_dead_bush", () -> KekeBlocks.flowerPot(Blocks.DEAD_BUSH, colours)));
         }
     }
 
@@ -218,6 +232,27 @@ public class KekeBlocks {
     }
     public static Block getDyedPottedPinkTulip(DyeColor colours){
         return DYED_PINK_TULIP_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedOxeyeDaisy(DyeColor colours){
+        return DYED_OXEYE_DAISY_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedCornflower(DyeColor colours){
+        return DYED_CORNFLOWER_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedLilyOfTheValley(DyeColor colours){
+        return DYED_LILY_OF_THE_VALLEY_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedWitherRose(DyeColor colours){
+        return DYED_WITHER_ROSE_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedRedMushroom(DyeColor colours){
+        return DYED_RED_MUSHROOM_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedBrownMushroom(DyeColor colours){
+        return DYED_BROWN_MUSHROOM_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedDeadBush(DyeColor colours){
+        return DYED_DEAD_BUSH_FLOWER_POTS.get(colours).get();
     }
 
 
