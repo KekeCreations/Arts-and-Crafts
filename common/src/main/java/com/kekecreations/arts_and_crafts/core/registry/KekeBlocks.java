@@ -59,6 +59,11 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_RED_MUSHROOM_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_BROWN_MUSHROOM_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DEAD_BUSH_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CACTUS_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_BAMBOO_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_AZALEA_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWERING_AZALEA_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TORCHFLOWER_FLOWER_POTS = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -128,6 +133,11 @@ public class KekeBlocks {
             DYED_RED_MUSHROOM_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_red_mushroom", () -> KekeBlocks.flowerPot(Blocks.RED_MUSHROOM, colours)));
             DYED_BROWN_MUSHROOM_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_brown_mushroom", () -> KekeBlocks.flowerPot(Blocks.BROWN_MUSHROOM, colours)));
             DYED_DEAD_BUSH_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_dead_bush", () -> KekeBlocks.flowerPot(Blocks.DEAD_BUSH, colours)));
+            DYED_CACTUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_cactus", () -> KekeBlocks.flowerPot(Blocks.CACTUS, colours)));
+            DYED_BAMBOO_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_bamboo", () -> KekeBlocks.flowerPot(Blocks.BAMBOO, colours)));
+            DYED_AZALEA_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_azalea_bush", () -> KekeBlocks.flowerPot(Blocks.AZALEA, colours)));
+            DYED_FLOWERING_AZALEA_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_flowering_azalea_bush", () -> KekeBlocks.flowerPot(Blocks.FLOWERING_AZALEA, colours)));
+            DYED_TORCHFLOWER_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_torchflower", () -> KekeBlocks.flowerPot(Blocks.TORCHFLOWER, colours)));
         }
     }
 
@@ -253,6 +263,21 @@ public class KekeBlocks {
     }
     public static Block getDyedPottedDeadBush(DyeColor colours){
         return DYED_DEAD_BUSH_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedCactus(DyeColor colours){
+        return DYED_CACTUS_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedBamboo(DyeColor colours){
+        return DYED_BAMBOO_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedAzalea(DyeColor colours){
+        return DYED_AZALEA_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedFloweringAzalea(DyeColor colours){
+        return DYED_FLOWERING_AZALEA_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedPottedTorchFlower(DyeColor colours){
+        return DYED_TORCHFLOWER_FLOWER_POTS.get(colours).get();
     }
 
 

@@ -6,4 +6,10 @@ public class KekeTextureSlots {
 
     public static final TextureSlot FLOWERPOT = TextureSlot.create("flowerpot");
     public static final TextureSlot SAPLING = TextureSlot.create("sapling");
+
+    public static final TextureSlot CACTUS = TextureSlot.create("cactus");
+    public static final TextureSlot CACTUS_TOP = TextureSlot.create("cactus_top");
+
+    public static final TextureSlot BAMBOO = TextureSlot.create("bamboo");
+    public static final TextureSlot LEAF = TextureSlot.create("leaf");
 }

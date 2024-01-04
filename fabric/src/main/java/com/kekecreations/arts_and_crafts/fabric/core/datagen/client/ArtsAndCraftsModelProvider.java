@@ -61,6 +61,11 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedRedMushroom(colours), "red_mushroom", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedBrownMushroom(colours), "brown_mushroom", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedDeadBush(colours), "dead_bush", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
+            this.createCustomPottedCactus(colours, KekeBlocks.getDyedPottedCactus(colours), "cactus", kekeModelTemplates, blockStateModelGenerator);
+            this.createCustomPottedBamboo(colours, KekeBlocks.getDyedPottedBamboo(colours), "bamboo", kekeModelTemplates, blockStateModelGenerator);
+            this.createCustomPottedAzalea(colours, KekeBlocks.getDyedPottedAzalea(colours), "potted_azalea_bush", kekeModelTemplates, blockStateModelGenerator);
+            this.createCustomPottedAzalea(colours, KekeBlocks.getDyedPottedFloweringAzalea(colours), "potted_flowering_azalea_bush", kekeModelTemplates, blockStateModelGenerator);
+            this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedTorchFlower(colours), "torchflower", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
 
         }
 
@@ -79,16 +84,30 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
     }
 
     public final void createCustomPottedFlowerPot(DyeColor dyeColor, Block block, String string, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {
-        //blockModelGenerators.createCrossBlockWithDefaultItem(block, tintState);
         TextureMapping textureMapping = KekeTextureMapping.customPottedPlant(dyeColor, string);
         ResourceLocation resourceLocation = tintState.getCrossPot().create(block, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
 
     public final void createCustomPottedMangrovePropagule(DyeColor dyeColor, Block block, String string, KekeModelTemplates tintState, BlockModelGenerators blockModelGenerators) {
-        //blockModelGenerators.createCrossBlockWithDefaultItem(block, tintState);
         TextureMapping textureMapping = KekeTextureMapping.customMangrovePropagulePottedPlant(dyeColor, string);
         ResourceLocation resourceLocation = tintState.getPottedMangrovePropagule().create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
+
+    public final void createCustomPottedCactus(DyeColor dyeColor, Block block, String string, KekeModelTemplates tintState, BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = KekeTextureMapping.customCactusPottedPlant(dyeColor, string);
+        ResourceLocation resourceLocation = tintState.getPottedCactus().create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
+    public final void createCustomPottedBamboo(DyeColor dyeColor, Block block, String string, KekeModelTemplates tintState, BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = KekeTextureMapping.customBambooPottedPlant(dyeColor, string);
+        ResourceLocation resourceLocation = tintState.getPottedBamboo().create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
+    public final void createCustomPottedAzalea(DyeColor dyeColor, Block block, String string, KekeModelTemplates tintState, BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = KekeTextureMapping.customAzaleaBushPottedPlant(dyeColor, string);
+        ResourceLocation resourceLocation = tintState.getPottedAzalea().create(block, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
 }

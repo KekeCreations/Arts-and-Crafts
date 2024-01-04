@@ -35,4 +35,16 @@ public class KekeTextureMapping {
     public static TextureMapping customMangrovePropagulePottedPlant(DyeColor dyeColor, String string) {
         return (new TextureMapping()).put(KekeTextureSlots.SAPLING, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
     }
+
+    public static TextureMapping customCactusPottedPlant(DyeColor dyeColor, String string) {
+        return (new TextureMapping()).put(KekeTextureSlots.CACTUS,  getBlockTextureWithoutKey(string + "_side")).put(KekeTextureSlots.CACTUS_TOP, getBlockTextureWithoutKey(string + "_top")).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
+    }
+
+    public static TextureMapping customBambooPottedPlant(DyeColor dyeColor, String string) {
+        return (new TextureMapping()).put(KekeTextureSlots.BAMBOO,  getBlockTextureWithoutKey(string + "_stalk")).put(KekeTextureSlots.LEAF, getBlockTextureWithoutKey(string + "_singleleaf")).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
+    }
+
+    public static TextureMapping customAzaleaBushPottedPlant(DyeColor dyeColor, String string) {
+        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string + "_plant")).put(TextureSlot.TOP, getBlockTextureWithoutKey(string + "_top")).put(TextureSlot.SIDE, getBlockTextureWithoutKey(string + "_side")).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
+    }
 }
