@@ -22,9 +22,17 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
         appendWalls();
         appendSlabs();
         appendStairs();
+        appendHoglinRepellents();
+        appendFlowerPots();
     }
 
-
+    private void appendHoglinRepellents() {
+        for (DyeColor colours : DyeColor.values()) {
+        this.getOrCreateTagBuilder(BlockTags.HOGLIN_REPELLENTS)
+                .setReplace(false)
+                .add(KekeBlocks.getDyedPottedWarpedFungus(colours));
+                }
+    }
 
     private void appendWalls() {
         this.getOrCreateTagBuilder(BlockTags.WALLS)
@@ -77,6 +85,46 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                     .add(KekeBlocks.getChalkStairs(colours))
                     .add(KekeBlocks.getChalkSlab(colours))
                     .add(KekeBlocks.getChalkWall(colours));
+        }
+    }
+    private void appendFlowerPots() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                    .add(KekeBlocks.getDyedFlowerPot(colours))
+                    .add(KekeBlocks.getDyedPottedCrimsonFungus(colours))
+                    .add(KekeBlocks.getDyedPottedCrimsonRoots(colours))
+                    .add(KekeBlocks.getDyedPottedWarpedFungus(colours))
+                    .add(KekeBlocks.getDyedPottedWarpedRoots(colours))
+                    .add(KekeBlocks.getDyedPottedOakSapling(colours))
+                    .add(KekeBlocks.getDyedPottedSpruceSapling(colours))
+                    .add(KekeBlocks.getDyedPottedBirchSapling(colours))
+                    .add(KekeBlocks.getDyedPottedJungleSapling(colours))
+                    .add(KekeBlocks.getDyedPottedAcaciaSapling(colours))
+                    .add(KekeBlocks.getDyedPottedCherrySapling(colours))
+                    .add(KekeBlocks.getDyedPottedDarkOakSapling(colours))
+                    .add(KekeBlocks.getDyedPottedMangrovePropagule(colours))
+                    .add(KekeBlocks.getDyedPottedFern(colours))
+                    .add(KekeBlocks.getDyedPottedDandelion(colours))
+                    .add(KekeBlocks.getDyedPottedPoppy(colours))
+                    .add(KekeBlocks.getDyedPottedBlueOrchid(colours))
+                    .add(KekeBlocks.getDyedPottedAllium(colours))
+                    .add(KekeBlocks.getDyedPottedAzureBluet(colours))
+                    .add(KekeBlocks.getDyedPottedRedTulip(colours))
+                    .add(KekeBlocks.getDyedPottedOrangeTulip(colours))
+                    .add(KekeBlocks.getDyedPottedWhiteTulip(colours))
+                    .add(KekeBlocks.getDyedPottedPinkTulip(colours))
+                    .add(KekeBlocks.getDyedPottedOxeyeDaisy(colours))
+                    .add(KekeBlocks.getDyedPottedCornflower(colours))
+                    .add(KekeBlocks.getDyedPottedLilyOfTheValley(colours))
+                    .add(KekeBlocks.getDyedPottedWitherRose(colours))
+                    .add(KekeBlocks.getDyedPottedRedMushroom(colours))
+                    .add(KekeBlocks.getDyedPottedBrownMushroom(colours))
+                    .add(KekeBlocks.getDyedPottedDeadBush(colours))
+                    .add(KekeBlocks.getDyedPottedCactus(colours))
+                    .add(KekeBlocks.getDyedPottedBamboo(colours))
+                    .add(KekeBlocks.getDyedPottedAzalea(colours))
+                    .add(KekeBlocks.getDyedPottedFloweringAzalea(colours))
+                    .add(KekeBlocks.getDyedPottedTorchFlower(colours));
         }
     }
 }
