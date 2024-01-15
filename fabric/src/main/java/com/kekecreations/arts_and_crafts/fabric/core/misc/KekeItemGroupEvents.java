@@ -22,9 +22,6 @@ public class KekeItemGroupEvents {
                 event.accept(KekeBlocks.getDyedTerracottaShingleWall(colours));
 
                 event.accept(KekeBlocks.getChalk(colours));
-                event.accept(KekeBlocks.getChalkSlab(colours));
-                event.accept(KekeBlocks.getChalkStairs(colours));
-                event.accept(KekeBlocks.getChalkWall(colours));
 
                 event.accept(KekeBlocks.getDyedSoapstone(colours));
                 event.accept(KekeBlocks.getDyedSoapstoneSlab(colours));

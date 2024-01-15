@@ -26,8 +26,8 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
         for (DyeColor colours : DyeColor.values()) {
             KekeModelTemplates kekeModelTemplates = new KekeModelTemplates();
-            //this.createEmptyFlowerPot(KekeBlocks.getFlowerPots(colours), BlockModelGenerators.TintState.NOT_TINTED, blockStateModelGenerator);
             blockStateModelGenerator.createTrivialBlock(KekeBlocks.getDyedFlowerPot(colours), KekeTextureMapping.flower_pot(KekeBlocks.getDyedFlowerPot(colours)), KekeModelTemplates.FLOWER_POT);
+            blockStateModelGenerator.createTrivialCube(KekeBlocks.getChalk(colours));
 
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedOakSapling(colours), "oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedSpruceSapling(colours), "spruce_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);

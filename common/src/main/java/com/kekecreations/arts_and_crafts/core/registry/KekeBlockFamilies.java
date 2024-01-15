@@ -17,8 +17,6 @@ public class KekeBlockFamilies {
         for (DyeColor colours : DyeColor.values()) {
             KekeBlockFamilies.register(KekeBlocks.getDyedTerracottaShingles(colours)).slab(KekeBlocks.getDyedTerracottaShingleSlab(colours)).stairs(KekeBlocks.getDyedTerracottaShingleStairs(colours)).wall(KekeBlocks.getDyedTerracottaShingleWall(colours)).getFamily();
 
-            KekeBlockFamilies.register(KekeBlocks.getChalk(colours)).slab(KekeBlocks.getChalkSlab(colours)).stairs(KekeBlocks.getChalkStairs(colours)).wall(KekeBlocks.getChalkWall(colours)).getFamily();
-
             KekeBlockFamilies.register(KekeBlocks.getDyedSoapstone(colours)).slab(KekeBlocks.getDyedSoapstoneSlab(colours)).stairs(KekeBlocks.getDyedSoapstoneStairs(colours)).wall(KekeBlocks.getDyedSoapstoneWall(colours)).getFamily();
         }
     }
