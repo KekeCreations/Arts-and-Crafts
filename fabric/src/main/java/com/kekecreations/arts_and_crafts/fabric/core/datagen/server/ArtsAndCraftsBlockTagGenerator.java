@@ -41,7 +41,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.WALLS)
                             .add(KekeBlocks.getDyedTerracottaShingleWall(colours))
-                            .add(KekeBlocks.getChalkWall(colours));
+                            .add(KekeBlocks.getDyedSoapstoneWall(colours));
                 }
     }
 
@@ -52,7 +52,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.SLABS)
                             .add(KekeBlocks.getDyedTerracottaShingleSlab(colours))
-                            .add(KekeBlocks.getChalkSlab(colours));
+                            .add(KekeBlocks.getDyedSoapstoneSlab(colours));
                 }
     }
     private void appendStairs() {
@@ -62,7 +62,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.STAIRS)
                             .add(KekeBlocks.getDyedTerracottaShingleStairs(colours))
-                            .add(KekeBlocks.getChalkStairs(colours));
+                            .add(KekeBlocks.getDyedSoapstoneStairs(colours));
                 }
     }
 
@@ -81,10 +81,10 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                     .add(KekeBlocks.getDyedTerracottaShingleSlab(colours))
                     .add(KekeBlocks.getDyedTerracottaShingleWall(colours))
 
-                    .add(KekeBlocks.getChalk(colours))
-                    .add(KekeBlocks.getChalkStairs(colours))
-                    .add(KekeBlocks.getChalkSlab(colours))
-                    .add(KekeBlocks.getChalkWall(colours));
+                    .add(KekeBlocks.getDyedSoapstone(colours))
+                    .add(KekeBlocks.getDyedSoapstoneStairs(colours))
+                    .add(KekeBlocks.getDyedSoapstoneSlab(colours))
+                    .add(KekeBlocks.getDyedSoapstoneWall(colours));
         }
     }
     private void appendFlowerPots() {

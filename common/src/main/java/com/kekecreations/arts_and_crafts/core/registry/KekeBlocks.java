@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.common.block.CustomStairBlock;
+import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.world.item.DyeColor;
@@ -65,6 +66,11 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWERING_AZALEA_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TORCHFLOWER_FLOWER_POTS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_WALL = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_STAIRS = new HashMap<>();
+
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
     public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = RegistryHelper.registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f)));
@@ -82,6 +88,12 @@ public class KekeBlocks {
             DYED_TERRACOTTA_SHINGLE_WALL.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingle_wall", () -> new WallBlock(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
 
             DYED_TERRACOTTA_SHINGLE_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(colours + "_terracotta_shingle_stairs", () -> new CustomStairBlock(getDyedTerracottaShingles(colours).defaultBlockState(), BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.1f, 4.2f))));
+
+            //DYED SOAPSTONE
+            DYED_SOAPSTONE.put(colours, RegistryHelper.registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
+            DYED_SOAPSTONE_SLAB.put(colours, RegistryHelper.registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours)))));
+            DYED_SOAPSTONE_WALL.put(colours, RegistryHelper.registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours)))));
+            DYED_SOAPSTONE_STAIRS.put(colours, RegistryHelper.registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours)))));
 
             //CHALK
             CHALK.put(colours, RegistryHelper.registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
@@ -278,6 +290,18 @@ public class KekeBlocks {
     }
     public static Block getDyedPottedTorchFlower(DyeColor colours){
         return DYED_TORCHFLOWER_FLOWER_POTS.get(colours).get();
+    }
+    public static Block getDyedSoapstone(DyeColor colours){
+        return DYED_SOAPSTONE.get(colours).get();
+    }
+    public static Block getDyedSoapstoneSlab(DyeColor colours){
+        return DYED_SOAPSTONE_SLAB.get(colours).get();
+    }
+    public static Block getDyedSoapstoneWall(DyeColor colours){
+        return DYED_SOAPSTONE_WALL.get(colours).get();
+    }
+    public static Block getDyedSoapstoneStairs(DyeColor colours){
+        return DYED_SOAPSTONE_STAIRS.get(colours).get();
     }
 
 

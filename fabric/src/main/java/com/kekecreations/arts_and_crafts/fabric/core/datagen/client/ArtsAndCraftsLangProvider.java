@@ -1,9 +1,11 @@
 package com.kekecreations.arts_and_crafts.fabric.core.datagen.client;
 
+import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.DyeColor;
 import org.apache.commons.lang3.StringUtils;
 
@@ -17,6 +19,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
 
         for (DyeColor colours : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colours.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
+            String stringNaturalColour = StringUtils.capitalize(NaturalDyeColor.byId(colours.getId()).getName());
 
             //ITEMS
             translationBuilder.add(KekeItems.getChalkStick(colours), stringColour + " Chalk Stick");
@@ -33,12 +36,18 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedTerracottaShingleSlab(colours), stringColour + " Terracotta Shingle Slab");
             translationBuilder.add(KekeBlocks.getDyedTerracottaShingleWall(colours), stringColour + " Terracotta Shingle Wall");
             translationBuilder.add(KekeBlocks.getDyedTerracottaShingleStairs(colours), stringColour + " Terracotta Shingle Stairs");
+
+            translationBuilder.add(KekeBlocks.getDyedSoapstone(colours), stringNaturalColour + " Soapstone");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneSlab(colours), stringNaturalColour + " Soapstone Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours), stringNaturalColour + " Soapstone Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours), stringNaturalColour + " Soapstone Stairs");
+
+
         }
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), "Terracotta Shingle Wall");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), "Terracotta Shingle Stairs");
-
     }
 }
 
