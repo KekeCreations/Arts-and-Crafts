@@ -74,6 +74,13 @@ public class KekeBlocks {
     public static final Supplier<CustomStairBlock> TERRACOTTA_SHINGLE_STAIRS = RegistryHelper.registerBlockWithItem("terracotta_shingle_stairs", () -> new CustomStairBlock(TERRACOTTA_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
 
 
+    //SOAPSTONE
+    public static final Supplier<Block> SOAPSTONE = RegistryHelper.registerBlockWithItem("soapstone", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
+    public static final Supplier<SlabBlock> SOAPSTONE_SLAB = RegistryHelper.registerBlockWithItem("soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SOAPSTONE.get())));
+    public static final Supplier<WallBlock> SOAPSTONE_WALL = RegistryHelper.registerBlockWithItem("soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE.get())));
+    public static final Supplier<CustomStairBlock> SOAPSTONE_STAIRS = RegistryHelper.registerBlockWithItem("soapstone_stairs", () -> new CustomStairBlock(SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
+
+
     static {
         for (DyeColor colours : DyeColor.values()) {
             //DYED TERRACOTTA SHINGLES

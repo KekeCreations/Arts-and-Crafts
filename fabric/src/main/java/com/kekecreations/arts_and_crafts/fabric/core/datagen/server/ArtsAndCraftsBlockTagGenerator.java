@@ -37,7 +37,8 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendWalls() {
         this.getOrCreateTagBuilder(BlockTags.WALLS)
                 .setReplace(false)
-                .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get());
+                .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get())
+                .add(KekeBlocks.SOAPSTONE_WALL.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.WALLS)
                             .add(KekeBlocks.getDyedTerracottaShingleWall(colours))
@@ -48,7 +49,8 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendSlabs() {
         this.getOrCreateTagBuilder(BlockTags.SLABS)
                 .setReplace(false)
-                .add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get());
+                .add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get())
+                .add(KekeBlocks.SOAPSTONE_SLAB.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.SLABS)
                             .add(KekeBlocks.getDyedTerracottaShingleSlab(colours))
@@ -58,7 +60,8 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendStairs() {
         this.getOrCreateTagBuilder(BlockTags.STAIRS)
                 .setReplace(false)
-                .add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
+                .add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
+                .add(KekeBlocks.SOAPSTONE_STAIRS.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.STAIRS)
                             .add(KekeBlocks.getDyedTerracottaShingleStairs(colours))
@@ -73,7 +76,11 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.TERRACOTTA_SHINGLES.get())
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get())
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
-                .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get());
+                .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get())
+                .add(KekeBlocks.SOAPSTONE.get())
+                .add(KekeBlocks.SOAPSTONE_SLAB.get())
+                .add(KekeBlocks.SOAPSTONE_STAIRS.get())
+                .add(KekeBlocks.SOAPSTONE_WALL.get());
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(KekeBlocks.getDyedTerracottaShingles(colours))

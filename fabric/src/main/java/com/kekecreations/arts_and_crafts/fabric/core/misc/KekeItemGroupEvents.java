@@ -33,6 +33,10 @@ public class KekeItemGroupEvents {
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE));
+            event.accept(KekeBlocks.SOAPSTONE.get());
+            event.accept(KekeBlocks.SOAPSTONE_SLAB.get());
+            event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
+            event.accept(KekeBlocks.SOAPSTONE_WALL.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColor colours : DyeColor.values()) {

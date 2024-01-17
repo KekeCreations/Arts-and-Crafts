@@ -55,6 +55,10 @@ public class ArtsAndCraftsForge {
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE));
+            event.accept(KekeBlocks.SOAPSTONE.get());
+            event.accept(KekeBlocks.SOAPSTONE_SLAB.get());
+            event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
+            event.accept(KekeBlocks.SOAPSTONE_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : DyeColor.values()) {
