@@ -44,6 +44,10 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
             dropSelf(KekeBlocks.getDyedSoapstoneStairs(colours));
             dropSelf(KekeBlocks.getDyedSoapstoneSlab(colours));
             dropSelf(KekeBlocks.getDyedSoapstoneWall(colours));
+            dropSelf(KekeBlocks.getDyedSoapstoneBricks(colours));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickStairs(colours));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickSlab(colours));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickWall(colours));
         }
         dropSelf(KekeBlocks.SOAPSTONE.get());
         dropSelf(KekeBlocks.SOAPSTONE_SLAB.get());

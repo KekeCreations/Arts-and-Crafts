@@ -39,6 +39,11 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours), stringNaturalColour + " Soapstone Wall");
             translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours), stringNaturalColour + " Soapstone Stairs");
 
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBricks(colours), stringNaturalColour + " Soapstone Bricks");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours), stringNaturalColour + " Soapstone Brick Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours), stringNaturalColour + " Soapstone Brick Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours), stringNaturalColour + " Soapstone Brick Stairs");
+
 
         }
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");

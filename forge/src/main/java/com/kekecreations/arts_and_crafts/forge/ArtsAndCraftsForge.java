@@ -50,6 +50,11 @@ public class ArtsAndCraftsForge {
                 event.accept(KekeBlocks.getDyedSoapstoneStairs(colours));
                 event.accept(KekeBlocks.getDyedSoapstoneWall(colours));
 
+                event.accept(KekeBlocks.getDyedSoapstoneBricks(colours));
+                event.accept(KekeBlocks.getDyedSoapstoneBrickSlab(colours));
+                event.accept(KekeBlocks.getDyedSoapstoneBrickStairs(colours));
+                event.accept(KekeBlocks.getDyedSoapstoneBrickWall(colours));
+
                 event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         }

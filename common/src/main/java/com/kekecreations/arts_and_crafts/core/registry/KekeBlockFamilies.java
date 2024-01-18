@@ -18,6 +18,8 @@ public class KekeBlockFamilies {
             KekeBlockFamilies.register(KekeBlocks.getDyedTerracottaShingles(colours)).slab(KekeBlocks.getDyedTerracottaShingleSlab(colours)).stairs(KekeBlocks.getDyedTerracottaShingleStairs(colours)).wall(KekeBlocks.getDyedTerracottaShingleWall(colours)).getFamily();
 
             KekeBlockFamilies.register(KekeBlocks.getDyedSoapstone(colours)).slab(KekeBlocks.getDyedSoapstoneSlab(colours)).stairs(KekeBlocks.getDyedSoapstoneStairs(colours)).wall(KekeBlocks.getDyedSoapstoneWall(colours)).getFamily();
+
+            KekeBlockFamilies.register(KekeBlocks.getDyedSoapstoneBricks(colours)).slab(KekeBlocks.getDyedSoapstoneBrickSlab(colours)).stairs(KekeBlocks.getDyedSoapstoneBrickStairs(colours)).wall(KekeBlocks.getDyedSoapstoneBrickWall(colours)).getFamily();
         }
     }
 
