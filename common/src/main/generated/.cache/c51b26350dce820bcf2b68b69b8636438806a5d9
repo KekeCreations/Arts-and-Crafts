@@ -1,7 +1,7 @@
-// 1.20.1	2024-01-17T22:29:21.042384	Arts & Crafts/Tags for minecraft:block
-0a9a8d8498704e0cdabd5df2345f64a2f272db94 data\minecraft\tags\blocks\stairs.json
-44d928e8ec8bb3e6db060e813171dbd3e781e7b7 data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2024-01-18T00:24:29.5842712	Arts & Crafts/Tags for minecraft:block
+7a1ac96b0dc948492f9af41b66fbec0aa8cfadbf data\minecraft\tags\blocks\stairs.json
+bb3e9a0df56eb30bc1187065c42ae5f578a32f8b data\minecraft\tags\blocks\mineable\pickaxe.json
 01b5e25afc80f9563f71ffca016b96e1abc5682b data\minecraft\tags\blocks\hoglin_repellents.json
 fba838f2e070a0eb6e64c5f86a81a0f02bfe7e20 data\minecraft\tags\blocks\flower_pots.json
-1ac96ff0cc5cc30df6d3dc23c12a25a9baa223bd data\minecraft\tags\blocks\walls.json
-7f6986f40116a4826f05de6fb5c47d88c3515704 data\minecraft\tags\blocks\slabs.json
+0359ebbcc2c813cb063303fc2e176db35f54cd05 data\minecraft\tags\blocks\walls.json
+6eb4ab91bbad806ec1c57514780be6e8079eef9c data\minecraft\tags\blocks\slabs.json

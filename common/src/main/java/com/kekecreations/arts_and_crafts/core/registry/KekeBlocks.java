@@ -80,6 +80,11 @@ public class KekeBlocks {
     public static final Supplier<WallBlock> SOAPSTONE_WALL = RegistryHelper.registerBlockWithItem("soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE.get())));
     public static final Supplier<CustomStairBlock> SOAPSTONE_STAIRS = RegistryHelper.registerBlockWithItem("soapstone_stairs", () -> new CustomStairBlock(SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
 
+    public static final Supplier<Block> SOAPSTONE_BRICKS = RegistryHelper.registerBlockWithItem("soapstone_bricks", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
+    public static final Supplier<SlabBlock> SOAPSTONE_BRICK_SLAB = RegistryHelper.registerBlockWithItem("soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
+    public static final Supplier<WallBlock> SOAPSTONE_BRICK_WALL = RegistryHelper.registerBlockWithItem("soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
+    public static final Supplier<CustomStairBlock> SOAPSTONE_BRICK_STAIRS = RegistryHelper.registerBlockWithItem("soapstone_brick_stairs", () -> new CustomStairBlock(SOAPSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
+
 
     static {
         for (DyeColor colours : DyeColor.values()) {

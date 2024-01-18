@@ -26,6 +26,8 @@ public class KekeBlockFamilies {
 
     public static final BlockFamily SOAPSTONE = KekeBlockFamilies.register(KekeBlocks.SOAPSTONE.get()).slab(KekeBlocks.SOAPSTONE_SLAB.get()).wall(KekeBlocks.SOAPSTONE_WALL.get()).stairs(KekeBlocks.SOAPSTONE_STAIRS.get()).getFamily();
 
+    public static final BlockFamily SOAPSTONE_BRICKS = KekeBlockFamilies.register(KekeBlocks.SOAPSTONE_BRICKS.get()).slab(KekeBlocks.SOAPSTONE_BRICK_SLAB.get()).wall(KekeBlocks.SOAPSTONE_BRICK_WALL.get()).stairs(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get()).getFamily();
+
 
 
     public static BlockFamily.Builder register(Block baseBlock) {

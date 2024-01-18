@@ -70,5 +70,11 @@ public class ArtsAndCraftsForge {
                 event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(KekeBlocks.SOAPSTONE_BRICKS.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+        }
     }
 }

@@ -48,6 +48,12 @@ public class KekeItemGroupEvents {
                 event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
         });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
+            event.accept(KekeBlocks.SOAPSTONE_BRICKS.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
+            event.accept(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+        });
 
     }
 }
