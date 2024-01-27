@@ -1,15 +1,23 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
-import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
-import com.kekecreations.arts_and_crafts.common.block.CustomStairBlock;
+import com.kekecreations.arts_and_crafts.common.block.*;
+import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
+import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.HashMap;
@@ -89,6 +97,25 @@ public class KekeBlocks {
     public static final Supplier<WallBlock> SOAPSTONE_BRICK_WALL = RegistryHelper.registerBlockWithItem("soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
     public static final Supplier<CustomStairBlock> SOAPSTONE_BRICK_STAIRS = RegistryHelper.registerBlockWithItem("soapstone_brick_stairs", () -> new CustomStairBlock(SOAPSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
 
+
+    //CORK
+    public static final Supplier<Block> CORK_PLANKS = RegistryHelper.registerBlockWithItem("cork_planks", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Supplier<SlabBlock> CORK_SLAB = RegistryHelper.registerBlockWithItem("cork_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(CORK_PLANKS.get())));
+    public static final Supplier<CustomStairBlock> CORK_STAIRS = RegistryHelper.registerBlockWithItem("cork_stairs", () -> new CustomStairBlock(CORK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(CORK_PLANKS.get())));
+    public static final Supplier<FenceBlock> CORK_FENCE = RegistryHelper.registerBlockWithItem("cork_fence", () -> new FenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Supplier<FenceGateBlock> CORK_FENCE_GATE = RegistryHelper.registerBlockWithItem("cork_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).ignitedByLava(), KekeWoodType.CORK));
+    public static final Supplier<CustomTrapDoorBlock> CORK_TRAPDOOR = RegistryHelper.registerBlockWithItem("cork_trapdoor", () -> new CustomTrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(KekeBlocks::never).ignitedByLava(), KekeBlockSetType.CORK));
+    public static final Supplier<CustomDoorBlock> CORK_DOOR = RegistryHelper.registerBlockWithItem("cork_door", () -> new CustomDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK));
+    public static final Supplier<StandingSignBlock> CORK_SIGN = RegistryHelper.registerBlock("cork_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), KekeWoodType.CORK));
+    public static final Supplier<WallSignBlock> CORK_WALL_SIGN = RegistryHelper.registerBlock("cork_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).dropsLike(CORK_SIGN.get()).ignitedByLava(), KekeWoodType.CORK));
+    public static final Supplier<CeilingHangingSignBlock> CORK_HANGING_SIGN = RegistryHelper.registerBlock("cork_hanging_sign", () -> new CeilingHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), KekeWoodType.CORK));
+    public static final Supplier<WallHangingSignBlock> CORK_WALL_HANGING_SIGN = RegistryHelper.registerBlock("cork_wall_hanging_sign", () -> new WallHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava().dropsLike(CORK_HANGING_SIGN.get()), KekeWoodType.CORK));
+    public static final Supplier<CustomPressurePlateBlock> CORK_PRESSURE_PLATE = RegistryHelper.registerBlockWithItem("cork_pressure_plate", () -> new CustomPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(0.5f).ignitedByLava().pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK));
+    public static final Supplier<CustomButtonBlock> CORK_BUTTON = RegistryHelper.registerBlockWithItem("cork_button", () -> new CustomButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK, 30, true));
+
+    //CORK ETC
+    public static final Supplier<RotatedPillarBlock> CORK_LOG = RegistryHelper.registerBlockWithItem("cork_log", () -> KekeBlocks.log(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
+    public static final Supplier<RotatedPillarBlock> STRIPPED_CORK_LOG = RegistryHelper.registerBlockWithItem("stripped_cork_log", () -> KekeBlocks.log(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
     static {
         for (DyeColor colours : DyeColor.values()) {
@@ -316,6 +343,13 @@ public class KekeBlocks {
         return DYED_SOAPSTONE_BRICK_STAIRS.get(colours).get();
     }
 
+    private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
+        return false;
+    }
+
+    private static RotatedPillarBlock log(MapColor mapColor, MapColor mapColor2) {
+        return new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
+    }
 
     private static CustomFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
