@@ -42,6 +42,7 @@ public class KekeItemGroupEvents {
             event.accept(KekeBlocks.SOAPSTONE_SLAB.get());
             event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
             event.accept(KekeBlocks.SOAPSTONE_WALL.get());
+            event.accept(KekeBlocks.CORK_LOG.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColor colours : DyeColor.values()) {
@@ -52,12 +53,29 @@ public class KekeItemGroupEvents {
             for (DyeColor colours : DyeColor.values()) {
                 event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
+            event.accept(KekeItems.CORK_SIGN.get());
+            event.accept(KekeItems.CORK_HANGING_SIGN.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
             event.accept(KekeBlocks.SOAPSTONE_BRICKS.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+            event.accept(KekeBlocks.CORK_BUTTON.get());
+            event.accept(KekeBlocks.CORK_FENCE.get());
+            event.accept(KekeBlocks.CORK_FENCE_GATE.get());
+            event.accept(KekeBlocks.CORK_PLANKS.get());
+            event.accept(KekeBlocks.CORK_SLAB.get());
+            event.accept(KekeBlocks.CORK_STAIRS.get());
+            event.accept(KekeBlocks.CORK_WOOD.get());
+            event.accept(KekeBlocks.STRIPPED_CORK_WOOD.get());
+            event.accept(KekeBlocks.CORK_LOG.get());
+            event.accept(KekeBlocks.STRIPPED_CORK_LOG.get());
+            event.accept(KekeBlocks.CORK_DOOR.get());
+            event.accept(KekeBlocks.CORK_TRAPDOOR.get());
+            event.accept(KekeBlocks.CORK_PRESSURE_PLATE.get());
+            event.accept(KekeBlocks.CORK.get());
+            event.accept(KekeBlocks.SMOOTH_CORK.get());
         });
 
     }

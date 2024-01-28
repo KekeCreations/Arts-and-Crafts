@@ -24,6 +24,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             //ITEMS
             translationBuilder.add(KekeItems.getChalkStick(colours), stringColour + " Chalk Stick");
 
+
             //BLOCKS
             translationBuilder.add(KekeBlocks.getDyedFlowerPot(colours), stringColour + " Flower Pot");
             translationBuilder.add(KekeBlocks.getChalkDust(colours), stringColour + " Chalk Dust");
@@ -43,8 +44,6 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours), stringNaturalColour + " Soapstone Brick Slab");
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours), stringNaturalColour + " Soapstone Brick Wall");
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours), stringNaturalColour + " Soapstone Brick Stairs");
-
-
         }
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");
@@ -58,6 +57,25 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), "Soapstone Brick Slab");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), "Soapstone Brick Wall");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
+
+
+        translationBuilder.add(KekeBlocks.CORK_PLANKS.get(), "Cork Planks");
+        translationBuilder.add(KekeBlocks.CORK_LOG.get(), "Cork Log");
+        translationBuilder.add(KekeBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
+        translationBuilder.add(KekeBlocks.CORK_DOOR.get(), "Cork Door");
+        translationBuilder.add(KekeBlocks.CORK_TRAPDOOR.get(), "Cork Trapdoor");
+        translationBuilder.add(KekeBlocks.CORK_BUTTON.get(), "Cork Button");
+        translationBuilder.add(KekeBlocks.CORK_FENCE.get(), "Cork Fence");
+        translationBuilder.add(KekeBlocks.CORK_FENCE_GATE.get(), "Cork Fence Gate");
+        translationBuilder.add(KekeBlocks.CORK_PRESSURE_PLATE.get(), "Cork Pressure Plate");
+        translationBuilder.add(KekeBlocks.CORK_SLAB.get(), "Cork Slab");
+        translationBuilder.add(KekeBlocks.CORK_STAIRS.get(), "Cork Stairs");
+        translationBuilder.add(KekeBlocks.CORK_SIGN.get(), "Cork Sign");
+        translationBuilder.add(KekeBlocks.CORK_HANGING_SIGN.get(), "Cork Hanging Sign");
+        translationBuilder.add(KekeBlocks.CORK_WOOD.get(), "Cork Wood");
+        translationBuilder.add(KekeBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
+        translationBuilder.add(KekeBlocks.CORK.get(), "Cork");
+        translationBuilder.add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
     }
 }
 

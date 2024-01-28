@@ -70,9 +70,11 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         }
 
         //DO WOOD LATER
-        blockStateModelGenerator.woodProvider(KekeBlocks.CORK_LOG.get()).logWithHorizontal(KekeBlocks.CORK_LOG.get());
-        blockStateModelGenerator.woodProvider(KekeBlocks.STRIPPED_CORK_LOG.get()).logWithHorizontal(KekeBlocks.STRIPPED_CORK_LOG.get());
+        blockStateModelGenerator.woodProvider(KekeBlocks.CORK_LOG.get()).logWithHorizontal(KekeBlocks.CORK_LOG.get()).wood(KekeBlocks.CORK_WOOD.get());
+        blockStateModelGenerator.woodProvider(KekeBlocks.STRIPPED_CORK_LOG.get()).logWithHorizontal(KekeBlocks.STRIPPED_CORK_LOG.get()).wood(KekeBlocks.STRIPPED_CORK_WOOD.get());
         blockStateModelGenerator.createHangingSign(KekeBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get());
+        blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK.get());
+        blockStateModelGenerator.createTrivialCube(KekeBlocks.SMOOTH_CORK.get());
 
         KekeBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel).forEach(family -> blockStateModelGenerator.family(family.getBaseBlock()).generateFor((BlockFamily)family));
 
