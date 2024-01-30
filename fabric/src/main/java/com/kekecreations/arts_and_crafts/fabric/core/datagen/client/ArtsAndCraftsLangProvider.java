@@ -76,6 +76,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
         translationBuilder.add(KekeBlocks.CORK.get(), "Cork");
         translationBuilder.add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
+        translationBuilder.add(KekeBlocks.CORK_LEAVES.get(), "Cork Leaves");
     }
 }
 

@@ -75,6 +75,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createHangingSign(KekeBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.SMOOTH_CORK.get());
+        blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK_LEAVES.get());
 
         KekeBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel).forEach(family -> blockStateModelGenerator.family(family.getBaseBlock()).generateFor((BlockFamily)family));
 

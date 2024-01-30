@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Blocks;
 
 public class KekeItemGroupEvents {
 
@@ -43,6 +44,7 @@ public class KekeItemGroupEvents {
             event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
             event.accept(KekeBlocks.SOAPSTONE_WALL.get());
             event.accept(KekeBlocks.CORK_LOG.get());
+            event.addAfter(Blocks.FLOWERING_AZALEA_LEAVES, KekeBlocks.CORK_LEAVES.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColor colours : DyeColor.values()) {

@@ -121,6 +121,7 @@ public class KekeBlocks {
 
     public static final Supplier<CorkBlock> CORK = RegistryHelper.registerBlockWithItem("cork", () -> new CorkBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
     public static final Supplier<CorkBlock> SMOOTH_CORK = RegistryHelper.registerBlockWithItem("smooth_cork", () -> new CorkBlock(BlockBehaviour.Properties.copy(CORK.get())));
+    public static final Supplier<LeavesBlock> CORK_LEAVES = RegistryHelper.registerBlockWithItem("cork_leaves", () -> KekeBlocks.leaves(SoundType.GRASS));
 
 
 
@@ -351,12 +352,24 @@ public class KekeBlocks {
         return DYED_SOAPSTONE_BRICK_STAIRS.get(colours).get();
     }
 
+
+
     private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
         return false;
     }
-
+    private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+        return false;
+    }
     private static RotatedPillarBlock log(MapColor mapColor, MapColor mapColor2) {
         return new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
+    }
+    private static LeavesBlock leaves(SoundType soundType) {
+        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2f).randomTicks().sound(soundType).noOcclusion().isValidSpawn(KekeBlocks::ocelotOrParrot).isSuffocating(KekeBlocks::never).isViewBlocking(KekeBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(KekeBlocks::never));
+    }
+
+
+    private static Boolean ocelotOrParrot(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
+        return entityType == EntityType.OCELOT || entityType == EntityType.PARROT;
     }
 
     private static CustomFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
