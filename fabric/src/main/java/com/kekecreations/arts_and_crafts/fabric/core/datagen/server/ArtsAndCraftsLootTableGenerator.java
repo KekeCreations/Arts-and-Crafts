@@ -4,10 +4,11 @@ import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 
-public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider {
+public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvider {
 
-    public ArtsAndCraftLootTableGenerator(FabricDataOutput dataOutput) {
+    public ArtsAndCraftsLootTableGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
 
@@ -17,6 +18,7 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
         terracottaShingles();
         chalk();
         dyedSoapstone();
+        cork();
 
     }
 
@@ -61,6 +63,24 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
 
 
     private void cork() {
-        createLeavesDrops(KekeBlocks.CORK_LEAVES.get(), KekeBlocks.CORK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES);
+        add(KekeBlocks.CORK_LEAVES.get(), (Block block) -> createLeavesDrops(KekeBlocks.CORK_LEAVES.get(), KekeBlocks.CORK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(KekeBlocks.CORK.get());
+        dropSelf(KekeBlocks.SMOOTH_CORK.get());
+        dropSelf(KekeBlocks.CORK_LOG.get());
+        dropSelf(KekeBlocks.STRIPPED_CORK_LOG.get());
+        dropSelf(KekeBlocks.CORK_WOOD.get());
+        dropSelf(KekeBlocks.STRIPPED_CORK_WOOD.get());
+        dropSelf(KekeBlocks.CORK_PLANKS.get());
+        dropSelf(KekeBlocks.CORK_STAIRS.get());
+        dropSelf(KekeBlocks.CORK_SLAB.get());
+        dropSelf(KekeBlocks.CORK_FENCE.get());
+        dropSelf(KekeBlocks.CORK_FENCE_GATE.get());
+        dropSelf(KekeBlocks.CORK_BUTTON.get());
+        dropSelf(KekeBlocks.CORK_PRESSURE_PLATE.get());
+        add(KekeBlocks.CORK_DOOR.get(), (Block block) -> createDoorTable(KekeBlocks.CORK_DOOR.get()));
+        dropSelf(KekeBlocks.CORK_TRAPDOOR.get());
+        dropSelf(KekeBlocks.CORK_SIGN.get());
+        dropSelf(KekeBlocks.CORK_HANGING_SIGN.get());
+        dropSelf(KekeBlocks.CORK_SAPLING.get());
     }
 }

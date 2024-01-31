@@ -19,11 +19,25 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     @Override
     protected void addTags(HolderLookup.Provider arg) {
         appendPickaxes();
+        appendHoes();
         appendWalls();
         appendSlabs();
         appendStairs();
         appendHoglinRepellents();
         appendFlowerPots();
+        appendWoodenDoors();
+        appendSaplings();
+        appendLogsThatBurn();
+        appendLeaves();
+        appendWoodenStairs();
+        appendWoodenSlabs();
+        appendWoodenButtons();
+        appendWoodenFences();
+        appendWoodenPressurePlates();
+        appendWoodenTrapdoors();
+        appendFenceGates();
+        appendPlanks();
+        appendAxes();
     }
 
     private void appendHoglinRepellents() {
@@ -32,6 +46,80 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .setReplace(false)
                 .add(KekeBlocks.getDyedPottedWarpedFungus(colours));
                 }
+    }
+    private void appendPlanks() {
+        this.getOrCreateTagBuilder(BlockTags.PLANKS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_PLANKS.get());
+    }
+    private void appendWoodenButtons() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_BUTTON.get());
+    }
+    private void appendWoodenFences() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_FENCE.get());
+    }
+    private void appendWoodenPressurePlates() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_PRESSURE_PLATE.get());
+    }
+    private void appendWoodenTrapdoors() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_TRAPDOOR.get());
+    }
+    private void appendFenceGates() {
+        this.getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_FENCE_GATE.get());
+    }
+    private void appendWoodenDoors() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_DOOR.get());
+    }
+    private void appendWoodenSlabs() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_SLAB.get());
+    }
+    private void appendWoodenStairs() {
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_STAIRS.get());
+    }
+    private void appendAxes() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .setReplace(false)
+                .add(KekeBlocks.CORK.get())
+                .add(KekeBlocks.SMOOTH_CORK.get());
+    }
+    private void appendHoes() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_HOE)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_LEAVES.get());
+    }
+    private void appendLeaves() {
+        this.getOrCreateTagBuilder(BlockTags.LEAVES)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_LEAVES.get());
+    }
+    private void appendLogsThatBurn() {
+        this.getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_LOG.get())
+                .add(KekeBlocks.STRIPPED_CORK_LOG.get())
+                .add(KekeBlocks.CORK_WOOD.get())
+                .add(KekeBlocks.STRIPPED_CORK_WOOD.get());
+    }
+    private void appendSaplings() {
+        this.getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .setReplace(false)
+                .add(KekeBlocks.CORK_SAPLING.get());
     }
 
     private void appendWalls() {
