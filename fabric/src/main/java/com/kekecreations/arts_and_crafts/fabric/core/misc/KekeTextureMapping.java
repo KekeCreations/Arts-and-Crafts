@@ -18,6 +18,10 @@ public class KekeTextureMapping {
     public static ResourceLocation getBlockTextureWithoutKey(String string) {
         return new ResourceLocation("block/" + string);
     }
+    public static ResourceLocation getBlockTextureWithoutKeyWithPrefix(Block block) {
+        ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(block);
+        return resourceLocation.withPrefix("block/");
+    }
 
     public static ResourceLocation getFlowerPotTexture(Block block) {
         ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(block);
@@ -30,6 +34,9 @@ public class KekeTextureMapping {
 
     public static TextureMapping customPottedPlant(DyeColor dyeColor, String string) {
         return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKey(string)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
+    }
+    public static TextureMapping customPottedPlantWithPrefix(DyeColor dyeColor, Block block) {
+        return (new TextureMapping()).put(TextureSlot.PLANT, getBlockTextureWithoutKeyWithPrefix(block)).put(KekeTextureSlots.FLOWERPOT, getFlowerPottedTexture(dyeColor)).put(TextureSlot.PARTICLE, getFlowerPottedTexture(dyeColor));
     }
 
     public static TextureMapping customMangrovePropagulePottedPlant(DyeColor dyeColor, String string) {

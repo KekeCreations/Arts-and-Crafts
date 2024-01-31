@@ -37,6 +37,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedCherrySapling(colours), "cherry_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedDarkOakSapling(colours), "dark_oak_sapling", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
             this.createCustomPottedMangrovePropagule(colours, KekeBlocks.getDyedPottedMangrovePropagule(colours), "mangrove_propagule", kekeModelTemplates, blockStateModelGenerator);
+            this.createCustomPottedFlowerPotWithPrefix(colours, KekeBlocks.getDyedPottedCorkSapling(colours), KekeBlocks.CORK_SAPLING.get(), KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
 
 
             this.createCustomPottedFlowerPot(colours, KekeBlocks.getDyedPottedCrimsonFungus(colours), "crimson_fungus", KekeModelTemplates.TintState.NOT_TINTED, blockStateModelGenerator);
@@ -76,6 +77,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.SMOOTH_CORK.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK_LEAVES.get());
+        blockStateModelGenerator.createPlant(KekeBlocks.CORK_SAPLING.get(), KekeBlocks.POTTED_CORK_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
 
         KekeBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel).forEach(family -> blockStateModelGenerator.family(family.getBaseBlock()).generateFor((BlockFamily)family));
 
@@ -92,6 +94,11 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
     public final void createCustomPottedFlowerPot(DyeColor dyeColor, Block block, String string, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {
         TextureMapping textureMapping = KekeTextureMapping.customPottedPlant(dyeColor, string);
+        ResourceLocation resourceLocation = tintState.getCrossPot().create(block, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
+    public final void createCustomPottedFlowerPotWithPrefix(DyeColor dyeColor, Block block, Block block2, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = KekeTextureMapping.customPottedPlantWithPrefix(dyeColor, block2);
         ResourceLocation resourceLocation = tintState.getCrossPot().create(block, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(blockModelGenerators.createSimpleBlock(block, resourceLocation));
     }

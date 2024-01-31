@@ -58,4 +58,9 @@ public class ArtsAndCraftLootTableGenerator extends FabricBlockLootTableProvider
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
     }
+
+
+    private void cork() {
+        createLeavesDrops(KekeBlocks.CORK_LEAVES.get(), KekeBlocks.CORK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES);
+    }
 }

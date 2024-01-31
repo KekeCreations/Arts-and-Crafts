@@ -46,6 +46,7 @@ public class KekeItemGroupEvents {
             event.accept(KekeBlocks.SOAPSTONE_WALL.get());
             event.addAfter(Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
             event.addAfter(Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
+            event.addAfter(Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColor colours : DyeColor.values()) {

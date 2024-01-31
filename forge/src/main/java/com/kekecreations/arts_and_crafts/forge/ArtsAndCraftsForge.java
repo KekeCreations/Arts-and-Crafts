@@ -4,8 +4,11 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.forge.RegistryHelperImpl;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -64,6 +67,10 @@ public class ArtsAndCraftsForge {
             event.accept(KekeBlocks.SOAPSTONE_SLAB.get());
             event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
             event.accept(KekeBlocks.SOAPSTONE_WALL.get());
+
+            event.getEntries().putAfter(Blocks.ACACIA_LOG.asItem().getDefaultInstance(), KekeBlocks.CORK_LOG.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Blocks.ACACIA_LEAVES.asItem().getDefaultInstance(), KekeBlocks.CORK_LEAVES.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(Blocks.ACACIA_SAPLING.asItem().getDefaultInstance(), KekeBlocks.CORK_SAPLING.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : DyeColor.values()) {
@@ -74,12 +81,31 @@ public class ArtsAndCraftsForge {
             for (DyeColor colours : DyeColor.values()) {
                 event.accept(KekeBlocks.getDyedFlowerPot(colours));
             }
+            event.getEntries().putAfter(Items.ACACIA_HANGING_SIGN.getDefaultInstance(), KekeItems.CORK_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeItems.CORK_SIGN.get().getDefaultInstance(), KekeItems.CORK_HANGING_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(KekeBlocks.SOAPSTONE_BRICKS.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
             event.accept(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+
+
+            event.getEntries().putAfter(Blocks.ACACIA_BUTTON.asItem().getDefaultInstance(), KekeBlocks.CORK_LOG.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_LOG.get().asItem().getDefaultInstance(), KekeBlocks.CORK_WOOD.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_WOOD.get().asItem().getDefaultInstance(), KekeBlocks.STRIPPED_CORK_LOG.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.STRIPPED_CORK_LOG.get().asItem().getDefaultInstance(), KekeBlocks.STRIPPED_CORK_WOOD.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.STRIPPED_CORK_WOOD.get().asItem().getDefaultInstance(), KekeBlocks.CORK.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK.get().asItem().getDefaultInstance(), KekeBlocks.SMOOTH_CORK.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.SMOOTH_CORK.get().asItem().getDefaultInstance(), KekeBlocks.CORK_PLANKS.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_PLANKS.get().asItem().getDefaultInstance(), KekeBlocks.CORK_STAIRS.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_STAIRS.get().asItem().getDefaultInstance(), KekeBlocks.CORK_SLAB.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_SLAB.get().asItem().getDefaultInstance(), KekeBlocks.CORK_FENCE.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_FENCE.get().asItem().getDefaultInstance(), KekeBlocks.CORK_FENCE_GATE.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_FENCE_GATE.get().asItem().getDefaultInstance(), KekeBlocks.CORK_DOOR.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_DOOR.get().asItem().getDefaultInstance(), KekeBlocks.CORK_TRAPDOOR.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_TRAPDOOR.get().asItem().getDefaultInstance(), KekeBlocks.CORK_PRESSURE_PLATE.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(KekeBlocks.CORK_PRESSURE_PLATE.get().asItem().getDefaultInstance(), KekeBlocks.CORK_BUTTON.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

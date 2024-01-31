@@ -9,9 +9,11 @@ import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -69,6 +71,7 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_AZALEA_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWERING_AZALEA_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TORCHFLOWER_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORK_SAPLING_FLOWER_POTS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_SLAB = new HashMap<>();
@@ -122,7 +125,9 @@ public class KekeBlocks {
     public static final Supplier<CorkBlock> CORK = RegistryHelper.registerBlockWithItem("cork", () -> new CorkBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
     public static final Supplier<CorkBlock> SMOOTH_CORK = RegistryHelper.registerBlockWithItem("smooth_cork", () -> new CorkBlock(BlockBehaviour.Properties.copy(CORK.get())));
     public static final Supplier<LeavesBlock> CORK_LEAVES = RegistryHelper.registerBlockWithItem("cork_leaves", () -> KekeBlocks.leaves(SoundType.GRASS));
+    public static final Supplier<SaplingBlock> CORK_SAPLING = RegistryHelper.registerBlockWithItem("cork_sapling", () -> new CorkSapling(new OakTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
+    public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = RegistryHelper.registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
 
 
@@ -162,6 +167,7 @@ public class KekeBlocks {
             DYED_CHERRY_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_cherry_sapling", () -> KekeBlocks.flowerPot(Blocks.CHERRY_SAPLING, colours)));
             DYED_DARK_OAK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_dark_oak_sapling", () -> KekeBlocks.flowerPot(Blocks.DARK_OAK_SAPLING, colours)));
             DYED_MANGROVE_PROPAGULE_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_mangrove_propagule", () -> KekeBlocks.flowerPot(Blocks.MANGROVE_PROPAGULE, colours)));
+            DYED_CORK_SAPLING_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_cork_sapling", () -> KekeBlocks.flowerPot(KekeBlocks.CORK_SAPLING.get(), colours)));
 
             //DYED FUNGUS POTS
             DYED_CRIMSON_FUNGUS_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_crimson_fungus", () -> KekeBlocks.flowerPot(Blocks.CRIMSON_FUNGUS, colours)));
@@ -351,6 +357,9 @@ public class KekeBlocks {
     public static Block getDyedSoapstoneBrickStairs(DyeColor colours){
         return DYED_SOAPSTONE_BRICK_STAIRS.get(colours).get();
     }
+    public static Block getDyedPottedCorkSapling(DyeColor colours){
+        return DYED_CORK_SAPLING_FLOWER_POTS.get(colours).get();
+    }
 
 
 
@@ -370,6 +379,14 @@ public class KekeBlocks {
 
     private static Boolean ocelotOrParrot(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
         return entityType == EntityType.OCELOT || entityType == EntityType.PARROT;
+    }
+
+    private static FlowerPotBlock vanillaFlowerPot(Block block, FeatureFlag... featureFlags) {
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+        if (featureFlags.length > 0) {
+            properties = properties.requiredFeatures(featureFlags);
+        }
+        return new FlowerPotBlock(block, properties);
     }
 
     private static CustomFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {

@@ -84,6 +84,9 @@ public class ClientEvents {
             ItemBlockRenderTypes.setRenderLayer(KekeBlocks.getDyedPottedAzalea(colours), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(KekeBlocks.getDyedPottedFloweringAzalea(colours), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(KekeBlocks.getDyedPottedTorchFlower(colours), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(KekeBlocks.CORK_SAPLING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(KekeBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(KekeBlocks.getDyedPottedCorkSapling(colours), RenderType.cutout());
         }
     }
 
