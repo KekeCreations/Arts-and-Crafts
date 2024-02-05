@@ -3,6 +3,8 @@ package com.kekecreations.arts_and_crafts.core.platform.forge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,7 +22,12 @@ public class RegistryHelperImpl {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ArtsAndCrafts.MOD_ID);
 
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, ArtsAndCrafts.MOD_ID);
 
+
+    public static <T extends Entity>Supplier<EntityType<T>> registerEntityType(String id, Supplier<EntityType<T>> entitySupplier) {
+        return ENTITY_TYPES.register(id, entitySupplier);
+    }
 
     public static <T extends Block> Supplier<T> registerBlock(String id, Supplier<T> blockSupplier) {
         return BLOCKS.register(id, blockSupplier);

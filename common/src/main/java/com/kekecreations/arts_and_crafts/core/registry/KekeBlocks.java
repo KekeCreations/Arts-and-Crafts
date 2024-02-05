@@ -5,7 +5,6 @@ import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
-import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -16,9 +15,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
@@ -122,8 +119,8 @@ public class KekeBlocks {
     public static final Supplier<RotatedPillarBlock> CORK_WOOD = RegistryHelper.registerBlockWithItem("cork_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
     public static final Supplier<RotatedPillarBlock> STRIPPED_CORK_WOOD = RegistryHelper.registerBlockWithItem("stripped_cork_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
 
-    public static final Supplier<CorkBlock> CORK = RegistryHelper.registerBlockWithItem("cork", () -> new CorkBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
-    public static final Supplier<CorkBlock> SMOOTH_CORK = RegistryHelper.registerBlockWithItem("smooth_cork", () -> new CorkBlock(BlockBehaviour.Properties.copy(CORK.get())));
+    public static final Supplier<FloatingBlock> CORK = RegistryHelper.registerBlockWithItem("cork", () -> new FloatingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final Supplier<FloatingBlock> SMOOTH_CORK = RegistryHelper.registerBlockWithItem("smooth_cork", () -> new FloatingBlock(BlockBehaviour.Properties.copy(CORK.get())));
     public static final Supplier<LeavesBlock> CORK_LEAVES = RegistryHelper.registerBlockWithItem("cork_leaves", () -> KekeBlocks.leaves(SoundType.GRASS));
     public static final Supplier<SaplingBlock> CORK_SAPLING = RegistryHelper.registerBlockWithItem("cork_sapling", () -> new CorkSapling(new OakTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 

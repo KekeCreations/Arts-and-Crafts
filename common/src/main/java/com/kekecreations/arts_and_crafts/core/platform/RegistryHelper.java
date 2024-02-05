@@ -2,6 +2,8 @@ package com.kekecreations.arts_and_crafts.core.platform;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -33,6 +35,10 @@ public class RegistryHelper {
     }
 
 
+    @ExpectPlatform
+    public static <T extends Entity>Supplier<EntityType<T>> registerEntityType(String id, Supplier<EntityType<T>> entitySupplier) {
+        throw new AssertionError();
+    }
 
     @ExpectPlatform
     public static <T extends BlockEntity>Supplier<BlockEntityType<T>> registerBlockEntityType(String id, Supplier<BlockEntityType<T>> blockEntityTypeSupplier) {

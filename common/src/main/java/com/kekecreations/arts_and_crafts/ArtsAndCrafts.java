@@ -11,9 +11,9 @@ public class ArtsAndCrafts {
     
     public static void init() {
         KekeParticles.register();
+        KekeEntityTypes.register();
         KekeBlocks.register();
         KekeItems.register();
-        KekeEntityTypes.register();
         
         System.out.println(ExampleExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

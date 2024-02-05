@@ -1,7 +1,9 @@
 package com.kekecreations.arts_and_crafts.fabric.client;
 
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -9,6 +11,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
@@ -22,6 +25,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         registerBlockLayers();
         registerParticleFactories();
         registerBlockColours();
+        registerRenderers();
     }
 
 
@@ -84,6 +88,9 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
                 return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
             }, KekeBlocks.getDyedPottedFern(colours));
         }
+    }
+    public static void registerRenderers() {
+        EntityRendererRegistry.register(KekeEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
     }
 
 }
