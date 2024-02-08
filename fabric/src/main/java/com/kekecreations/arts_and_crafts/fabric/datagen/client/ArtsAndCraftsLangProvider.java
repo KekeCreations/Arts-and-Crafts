@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.fabric.datagen.client;
 
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -79,6 +80,12 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
         translationBuilder.add(KekeFabricBlocks.CORK_LEAVES.get(), "Cork Leaves");
         translationBuilder.add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
+
+        translationBuilder.add(KekeItems.CORK_BOAT.get(), "Cork Boat");
+        translationBuilder.add(KekeItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
+        translationBuilder.add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
+        translationBuilder.add(KekeEntityTypes.BOAT.get(), "Boat");
+        translationBuilder.add(KekeEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
     }
 }
 

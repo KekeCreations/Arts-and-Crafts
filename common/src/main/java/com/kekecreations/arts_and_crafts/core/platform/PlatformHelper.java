@@ -20,4 +20,9 @@ public class PlatformHelper {
     public interface BlockEntitySupplier<T extends BlockEntity> {
         @NotNull T create(BlockPos pos, BlockState state);
     }
+
+    @ExpectPlatform
+    public static Block corkPlanks() {
+        throw new AssertionError();
+    }
 }

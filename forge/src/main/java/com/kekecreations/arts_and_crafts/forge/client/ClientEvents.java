@@ -3,11 +3,14 @@ package com.kekecreations.arts_and_crafts.forge.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -36,7 +39,13 @@ public class ClientEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Entity Renderers
         event.registerEntityRenderer(KekeEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
-
+        event.registerEntityRenderer(KekeEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
+        event.registerEntityRenderer(KekeEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
+    }
+    @SubscribeEvent
+    public static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(CustomBoatRenderer.BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(CustomBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
     }
 
     @SubscribeEvent

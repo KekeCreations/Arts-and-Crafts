@@ -53,6 +53,8 @@ public class KekeItemGroupEvents {
             for (DyeColor colours : DyeColor.values()) {
                 event.accept(KekeItems.getChalkStick(colours));
             }
+            event.addAfter(Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
+            event.addAfter(KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
             for (DyeColor colours : DyeColor.values()) {
