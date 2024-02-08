@@ -1,6 +1,7 @@
-package com.kekecreations.arts_and_crafts.fabric.core.datagen.server;
+package com.kekecreations.arts_and_crafts.fabric.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
@@ -63,18 +64,18 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
 
 
     private void cork() {
-        add(KekeBlocks.CORK_LEAVES.get(), (Block block) -> createLeavesDrops(KekeBlocks.CORK_LEAVES.get(), KekeBlocks.CORK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(KekeFabricBlocks.CORK_LEAVES.get(), (Block block) -> createLeavesDrops(KekeFabricBlocks.CORK_LEAVES.get(), KekeBlocks.CORK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         dropSelf(KekeBlocks.CORK.get());
         dropSelf(KekeBlocks.SMOOTH_CORK.get());
-        dropSelf(KekeBlocks.CORK_LOG.get());
-        dropSelf(KekeBlocks.STRIPPED_CORK_LOG.get());
-        dropSelf(KekeBlocks.CORK_WOOD.get());
-        dropSelf(KekeBlocks.STRIPPED_CORK_WOOD.get());
-        dropSelf(KekeBlocks.CORK_PLANKS.get());
-        dropSelf(KekeBlocks.CORK_STAIRS.get());
-        dropSelf(KekeBlocks.CORK_SLAB.get());
-        dropSelf(KekeBlocks.CORK_FENCE.get());
-        dropSelf(KekeBlocks.CORK_FENCE_GATE.get());
+        dropSelf(KekeFabricBlocks.CORK_LOG.get());
+        dropSelf(KekeFabricBlocks.STRIPPED_CORK_LOG.get());
+        dropSelf(KekeFabricBlocks.CORK_WOOD.get());
+        dropSelf(KekeFabricBlocks.STRIPPED_CORK_WOOD.get());
+        dropSelf(KekeFabricBlocks.CORK_PLANKS.get());
+        dropSelf(KekeFabricBlocks.CORK_STAIRS.get());
+        dropSelf(KekeFabricBlocks.CORK_SLAB.get());
+        dropSelf(KekeFabricBlocks.CORK_FENCE.get());
+        dropSelf(KekeFabricBlocks.CORK_FENCE_GATE.get());
         dropSelf(KekeBlocks.CORK_BUTTON.get());
         dropSelf(KekeBlocks.CORK_PRESSURE_PLATE.get());
         add(KekeBlocks.CORK_DOOR.get(), (Block block) -> createDoorTable(KekeBlocks.CORK_DOOR.get()));

@@ -1,8 +1,9 @@
-package com.kekecreations.arts_and_crafts.fabric.core.datagen.client;
+package com.kekecreations.arts_and_crafts.fabric.datagen.client;
 
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.util.StringRepresentable;
@@ -59,24 +60,24 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
 
 
-        translationBuilder.add(KekeBlocks.CORK_PLANKS.get(), "Cork Planks");
-        translationBuilder.add(KekeBlocks.CORK_LOG.get(), "Cork Log");
-        translationBuilder.add(KekeBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
+        translationBuilder.add(KekeFabricBlocks.CORK_PLANKS.get(), "Cork Planks");
+        translationBuilder.add(KekeFabricBlocks.CORK_LOG.get(), "Cork Log");
+        translationBuilder.add(KekeFabricBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
         translationBuilder.add(KekeBlocks.CORK_DOOR.get(), "Cork Door");
         translationBuilder.add(KekeBlocks.CORK_TRAPDOOR.get(), "Cork Trapdoor");
         translationBuilder.add(KekeBlocks.CORK_BUTTON.get(), "Cork Button");
-        translationBuilder.add(KekeBlocks.CORK_FENCE.get(), "Cork Fence");
-        translationBuilder.add(KekeBlocks.CORK_FENCE_GATE.get(), "Cork Fence Gate");
+        translationBuilder.add(KekeFabricBlocks.CORK_FENCE.get(), "Cork Fence");
+        translationBuilder.add(KekeFabricBlocks.CORK_FENCE_GATE.get(), "Cork Fence Gate");
         translationBuilder.add(KekeBlocks.CORK_PRESSURE_PLATE.get(), "Cork Pressure Plate");
-        translationBuilder.add(KekeBlocks.CORK_SLAB.get(), "Cork Slab");
-        translationBuilder.add(KekeBlocks.CORK_STAIRS.get(), "Cork Stairs");
+        translationBuilder.add(KekeFabricBlocks.CORK_SLAB.get(), "Cork Slab");
+        translationBuilder.add(KekeFabricBlocks.CORK_STAIRS.get(), "Cork Stairs");
         translationBuilder.add(KekeBlocks.CORK_SIGN.get(), "Cork Sign");
         translationBuilder.add(KekeBlocks.CORK_HANGING_SIGN.get(), "Cork Hanging Sign");
-        translationBuilder.add(KekeBlocks.CORK_WOOD.get(), "Cork Wood");
-        translationBuilder.add(KekeBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
+        translationBuilder.add(KekeFabricBlocks.CORK_WOOD.get(), "Cork Wood");
+        translationBuilder.add(KekeFabricBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
         translationBuilder.add(KekeBlocks.CORK.get(), "Cork");
         translationBuilder.add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
-        translationBuilder.add(KekeBlocks.CORK_LEAVES.get(), "Cork Leaves");
+        translationBuilder.add(KekeFabricBlocks.CORK_LEAVES.get(), "Cork Leaves");
         translationBuilder.add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
     }
 }

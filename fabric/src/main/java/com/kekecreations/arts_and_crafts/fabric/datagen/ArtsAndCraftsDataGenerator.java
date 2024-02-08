@@ -1,10 +1,10 @@
-package com.kekecreations.arts_and_crafts.fabric.core.datagen;
+package com.kekecreations.arts_and_crafts.fabric.datagen;
 
-import com.kekecreations.arts_and_crafts.fabric.core.datagen.client.ArtsAndCraftsLangProvider;
-import com.kekecreations.arts_and_crafts.fabric.core.datagen.client.ArtsAndCraftsModelProvider;
-import com.kekecreations.arts_and_crafts.fabric.core.datagen.server.ArtsAndCraftsItemTagGenerator;
-import com.kekecreations.arts_and_crafts.fabric.core.datagen.server.ArtsAndCraftsLootTableGenerator;
-import com.kekecreations.arts_and_crafts.fabric.core.datagen.server.ArtsAndCraftsBlockTagGenerator;
+import com.kekecreations.arts_and_crafts.fabric.datagen.client.ArtsAndCraftsLangProvider;
+import com.kekecreations.arts_and_crafts.fabric.datagen.client.ArtsAndCraftsModelProvider;
+import com.kekecreations.arts_and_crafts.fabric.datagen.server.ArtsAndCraftsItemTagGenerator;
+import com.kekecreations.arts_and_crafts.fabric.datagen.server.ArtsAndCraftsLootTableGenerator;
+import com.kekecreations.arts_and_crafts.fabric.datagen.server.ArtsAndCraftsBlockTagGenerator;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 

@@ -1,6 +1,7 @@
-package com.kekecreations.arts_and_crafts.fabric.core.datagen.server;
+package com.kekecreations.arts_and_crafts.fabric.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -23,7 +24,7 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
     private void appendPlanks() {
         this.getOrCreateTagBuilder(ItemTags.PLANKS)
                 .setReplace(false)
-                .add(KekeBlocks.CORK_PLANKS.get().asItem());
+                .add(KekeFabricBlocks.CORK_PLANKS.get().asItem());
     }
     private void appendWoodenButtons() {
         this.getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
@@ -33,9 +34,9 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
     private void appendLogsThatBurn() {
         this.getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .setReplace(false)
-                .add(KekeBlocks.CORK_LOG.get().asItem())
-                .add(KekeBlocks.STRIPPED_CORK_LOG.get().asItem())
-                .add(KekeBlocks.CORK_WOOD.get().asItem())
-                .add(KekeBlocks.STRIPPED_CORK_WOOD.get().asItem());
+                .add(KekeFabricBlocks.CORK_LOG.get().asItem())
+                .add(KekeFabricBlocks.STRIPPED_CORK_LOG.get().asItem())
+                .add(KekeFabricBlocks.CORK_WOOD.get().asItem())
+                .add(KekeFabricBlocks.STRIPPED_CORK_WOOD.get().asItem());
     }
 }

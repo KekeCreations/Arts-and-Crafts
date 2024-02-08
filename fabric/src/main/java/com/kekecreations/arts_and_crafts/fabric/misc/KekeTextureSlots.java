@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.fabric.core.misc;
+package com.kekecreations.arts_and_crafts.fabric.misc;
 
 import net.minecraft.data.models.model.TextureSlot;
 
