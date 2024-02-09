@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
+import com.kekecreations.arts_and_crafts.common.tree_grower.CorkTreeGrower;
 import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
@@ -112,7 +113,7 @@ public class KekeBlocks {
 
     public static final Supplier<FloatingBlock> CORK = RegistryHelper.registerBlockWithItem("cork", () -> new FloatingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
     public static final Supplier<FloatingBlock> SMOOTH_CORK = RegistryHelper.registerBlockWithItem("smooth_cork", () -> new FloatingBlock(BlockBehaviour.Properties.copy(CORK.get())));
-    public static final Supplier<SaplingBlock> CORK_SAPLING = RegistryHelper.registerBlockWithItem("cork_sapling", () -> new CorkSapling(new OakTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<SaplingBlock> CORK_SAPLING = RegistryHelper.registerBlockWithItem("cork_sapling", () -> new CorkSapling(new CorkTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = RegistryHelper.registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
