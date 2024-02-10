@@ -9,6 +9,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 public class CorkTreeGrower extends AbstractTreeGrower {
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean bl) {
-        return KekeFeatures.TreeFeatures.CORK_TREE;
+        return KekeFeatures.ConfiguredFeatures.CORK_TREE;
     }
 }
