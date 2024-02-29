@@ -57,9 +57,6 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
-            for (DyeColor colours : DyeColor.values()) {
-                event.accept(KekeBlocks.getDyedFlowerPot(colours));
-            }
             event.addAfter(Items.ACACIA_HANGING_SIGN, KekeItems.CORK_SIGN.get());
             event.addAfter(KekeItems.CORK_SIGN.get(), KekeItems.CORK_HANGING_SIGN.get());
         });

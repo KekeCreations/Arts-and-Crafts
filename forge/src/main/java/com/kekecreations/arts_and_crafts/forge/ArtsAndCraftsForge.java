@@ -83,9 +83,6 @@ public class ArtsAndCraftsForge {
             event.getEntries().putAfter(KekeItems.CORK_BOAT.get().getDefaultInstance(), KekeItems.CORK_CHEST_BOAT.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            for (DyeColor colours : DyeColor.values()) {
-                event.accept(KekeBlocks.getDyedFlowerPot(colours));
-            }
             event.getEntries().putAfter(Items.ACACIA_HANGING_SIGN.getDefaultInstance(), KekeItems.CORK_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(KekeItems.CORK_SIGN.get().getDefaultInstance(), KekeItems.CORK_HANGING_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
