@@ -195,7 +195,8 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                     .add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
-                    .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+                    .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()))
+                    .add(KekeBlocks.getChalk(colours.getId()));
         }
     }
     private void appendFlowerPots() {
