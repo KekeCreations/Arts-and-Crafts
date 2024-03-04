@@ -71,7 +71,7 @@ public class ChalkDustBlock extends MultifaceBlock {
 
     @Override
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos blockPos, BlockState blockState) {
-        return new ItemStack(KekeItems.getChalkStick(this.dyeColor));
+        return new ItemStack(KekeItems.getChalkStick(this.dyeColor.getId()));
     }
 
 

@@ -24,28 +24,28 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             String stringNaturalColour = StringUtils.capitalize(NaturalDyeColor.byId(colours.getId()).getName());
 
             //ITEMS
-            translationBuilder.add(KekeItems.getChalkStick(colours), stringColour + " Chalk Stick");
+            translationBuilder.add(KekeItems.getChalkStick(colours.getId()), stringColour + " Chalk Stick");
 
 
             //BLOCKS
-            translationBuilder.add(KekeBlocks.getDyedFlowerPot(colours), stringColour + " Flower Pot");
+            translationBuilder.add(KekeBlocks.getDyedFlowerPot(colours.getId()), stringColour + " Flower Pot");
             translationBuilder.add(KekeBlocks.getChalkDust(colours), stringColour + " Chalk Dust");
-            translationBuilder.add(KekeBlocks.getChalk(colours), stringColour + " Chalk");
+            translationBuilder.add(KekeBlocks.getChalk(colours.getId()), stringColour + " Chalk");
 
-            translationBuilder.add(KekeBlocks.getDyedTerracottaShingles(colours), stringColour + " Terracotta Shingles");
-            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleSlab(colours), stringColour + " Terracotta Shingle Slab");
-            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleWall(colours), stringColour + " Terracotta Shingle Wall");
-            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleStairs(colours), stringColour + " Terracotta Shingle Stairs");
+            translationBuilder.add(KekeBlocks.getDyedTerracottaShingles(colours.getId()), stringColour + " Terracotta Shingles");
+            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), stringColour + " Terracotta Shingle Slab");
+            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), stringColour + " Terracotta Shingle Wall");
+            translationBuilder.add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), stringColour + " Terracotta Shingle Stairs");
 
-            translationBuilder.add(KekeBlocks.getDyedSoapstone(colours), stringNaturalColour + " Soapstone");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneSlab(colours), stringNaturalColour + " Soapstone Slab");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours), stringNaturalColour + " Soapstone Wall");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours), stringNaturalColour + " Soapstone Stairs");
+            translationBuilder.add(KekeBlocks.getDyedSoapstone(colours.getId()), stringNaturalColour + " Soapstone");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), stringNaturalColour + " Soapstone Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours.getId()), stringNaturalColour + " Soapstone Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()), stringNaturalColour + " Soapstone Stairs");
 
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBricks(colours), stringNaturalColour + " Soapstone Bricks");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours), stringNaturalColour + " Soapstone Brick Slab");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours), stringNaturalColour + " Soapstone Brick Wall");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours), stringNaturalColour + " Soapstone Brick Stairs");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), stringNaturalColour + " Soapstone Bricks");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), stringNaturalColour + " Soapstone Brick Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringNaturalColour + " Soapstone Brick Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringNaturalColour + " Soapstone Brick Stairs");
         }
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");

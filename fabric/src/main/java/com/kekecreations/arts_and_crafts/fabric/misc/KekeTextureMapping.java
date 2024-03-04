@@ -28,7 +28,7 @@ public class KekeTextureMapping {
         return resourceLocation.withPrefix("block/");
     }
     public static ResourceLocation getFlowerPottedTexture(DyeColor colours) {
-        ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(KekeBlocks.getDyedFlowerPot(colours));
+        ResourceLocation resourceLocation = BuiltInRegistries.BLOCK.getKey(KekeBlocks.getDyedFlowerPot(colours.getId()));
         return resourceLocation.withPrefix("block/");
     }
 

@@ -25,10 +25,10 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
 
     private void terracottaShingles() {
         for (DyeColor colours : DyeColor.values()) {
-            dropSelf(KekeBlocks.getDyedTerracottaShingles(colours));
-            dropSelf(KekeBlocks.getDyedTerracottaShingleStairs(colours));
-            dropSelf(KekeBlocks.getDyedTerracottaShingleSlab(colours));
-            dropSelf(KekeBlocks.getDyedTerracottaShingleWall(colours));
+            dropSelf(KekeBlocks.getDyedTerracottaShingles(colours.getId()));
+            dropSelf(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()));
+            dropSelf(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()));
+            dropSelf(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()));
         }
         dropSelf(KekeBlocks.TERRACOTTA_SHINGLES.get());
         dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get());
@@ -37,20 +37,20 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
     }
     private void chalk() {
         for (DyeColor colours : DyeColor.values()) {
-            dropSelf(KekeBlocks.getChalk(colours));
+            dropSelf(KekeBlocks.getChalk(colours.getId()));
         }
     }
 
     private void dyedSoapstone() {
         for (DyeColor colours : DyeColor.values()) {
-            dropSelf(KekeBlocks.getDyedSoapstone(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneStairs(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneSlab(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneWall(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneBricks(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneBrickStairs(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneBrickSlab(colours));
-            dropSelf(KekeBlocks.getDyedSoapstoneBrickWall(colours));
+            dropSelf(KekeBlocks.getDyedSoapstone(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneStairs(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneSlab(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneWall(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
+            dropSelf(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
         }
         dropSelf(KekeBlocks.SOAPSTONE.get());
         dropSelf(KekeBlocks.SOAPSTONE_SLAB.get());

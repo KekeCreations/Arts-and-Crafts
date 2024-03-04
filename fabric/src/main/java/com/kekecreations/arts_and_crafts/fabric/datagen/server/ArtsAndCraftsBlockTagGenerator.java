@@ -131,9 +131,9 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.WALLS)
-                            .add(KekeBlocks.getDyedTerracottaShingleWall(colours))
-                            .add(KekeBlocks.getDyedSoapstoneWall(colours))
-                            .add(KekeBlocks.getDyedSoapstoneBrickWall(colours));
+                            .add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneWall(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
                 }
     }
 
@@ -145,9 +145,9 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.SLABS)
-                            .add(KekeBlocks.getDyedTerracottaShingleSlab(colours))
-                            .add(KekeBlocks.getDyedSoapstoneSlab(colours))
-                            .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours));
+                            .add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 }
     }
     private void appendStairs() {
@@ -158,9 +158,9 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.STAIRS)
-                            .add(KekeBlocks.getDyedTerracottaShingleStairs(colours))
-                            .add(KekeBlocks.getDyedSoapstoneStairs(colours))
-                            .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours));
+                            .add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()))
+                            .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
                 }
     }
 
@@ -182,26 +182,26 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(KekeBlocks.getDyedTerracottaShingles(colours))
-                    .add(KekeBlocks.getDyedTerracottaShingleStairs(colours))
-                    .add(KekeBlocks.getDyedTerracottaShingleSlab(colours))
-                    .add(KekeBlocks.getDyedTerracottaShingleWall(colours))
+                    .add(KekeBlocks.getDyedTerracottaShingles(colours.getId()))
+                    .add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()))
 
-                    .add(KekeBlocks.getDyedSoapstone(colours))
-                    .add(KekeBlocks.getDyedSoapstoneStairs(colours))
-                    .add(KekeBlocks.getDyedSoapstoneSlab(colours))
-                    .add(KekeBlocks.getDyedSoapstoneWall(colours))
+                    .add(KekeBlocks.getDyedSoapstone(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneWall(colours.getId()))
 
-                    .add(KekeBlocks.getDyedSoapstoneBricks(colours))
-                    .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours))
-                    .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours))
-                    .add(KekeBlocks.getDyedSoapstoneBrickWall(colours));
+                    .add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
         }
     }
     private void appendFlowerPots() {
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(KekeBlocks.getDyedFlowerPot(colours))
+                    .add(KekeBlocks.getDyedFlowerPot(colours.getId()))
                     .add(KekeBlocks.getDyedPottedCrimsonFungus(colours))
                     .add(KekeBlocks.getDyedPottedCrimsonRoots(colours))
                     .add(KekeBlocks.getDyedPottedWarpedFungus(colours))

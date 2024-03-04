@@ -36,8 +36,8 @@ public class KekeItems {
         }
     }
 
-    public static ChalkStickItem getChalkStick(DyeColor colours) {
-        return CHALK_STICKS.get(colours).get();
+    public static ChalkStickItem getChalkStick(int colours) {
+        return CHALK_STICKS.get(DyeColor.byId(colours)).get();
     }
 
 

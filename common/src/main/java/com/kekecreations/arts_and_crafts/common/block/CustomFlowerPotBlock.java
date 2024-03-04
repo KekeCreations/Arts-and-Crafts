@@ -123,7 +123,7 @@ public class CustomFlowerPotBlock extends Block {
                 } else if (!player.addItem(itemStack2)) {
                     player.drop(itemStack2, false);
                 }
-                level.setBlock(blockPos, KekeBlocks.getDyedFlowerPot(this.colour).defaultBlockState(), 3);
+                level.setBlock(blockPos, KekeBlocks.getDyedFlowerPot(this.colour.getId()).defaultBlockState(), 3);
             }
             level.gameEvent((Entity)player, GameEvent.BLOCK_CHANGE, blockPos);
             return InteractionResult.sidedSuccess(level.isClientSide);

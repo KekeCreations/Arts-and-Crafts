@@ -77,7 +77,7 @@ public class ChalkStickItem extends Item {
 
 
             for (DyeColor colours : DyeColor.values()) {
-                if (block == KekeBlocks.getChalkDust(colours) && this == KekeItems.getChalkStick(colours)) {
+                if (block == KekeBlocks.getChalkDust(colours) && this == KekeItems.getChalkStick(colours.getId())) {
 
                     spawnParticle(player, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), colours);
                     level.setBlockAndUpdate(blockPos, chalkDustBlock.changeState(blockState, player, state));

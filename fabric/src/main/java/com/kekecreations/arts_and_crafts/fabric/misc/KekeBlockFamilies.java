@@ -17,11 +17,11 @@ public class KekeBlockFamilies {
 
     static {
         for (DyeColor colours : DyeColor.values()) {
-            KekeBlockFamilies.register(KekeBlocks.getDyedTerracottaShingles(colours)).slab(KekeBlocks.getDyedTerracottaShingleSlab(colours)).stairs(KekeBlocks.getDyedTerracottaShingleStairs(colours)).wall(KekeBlocks.getDyedTerracottaShingleWall(colours)).getFamily();
+            KekeBlockFamilies.register(KekeBlocks.getDyedTerracottaShingles(colours.getId())).slab(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId())).stairs(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId())).wall(KekeBlocks.getDyedTerracottaShingleWall(colours.getId())).getFamily();
 
-            KekeBlockFamilies.register(KekeBlocks.getDyedSoapstone(colours)).slab(KekeBlocks.getDyedSoapstoneSlab(colours)).stairs(KekeBlocks.getDyedSoapstoneStairs(colours)).wall(KekeBlocks.getDyedSoapstoneWall(colours)).getFamily();
+            KekeBlockFamilies.register(KekeBlocks.getDyedSoapstone(colours.getId())).slab(KekeBlocks.getDyedSoapstoneSlab(colours.getId())).stairs(KekeBlocks.getDyedSoapstoneStairs(colours.getId())).wall(KekeBlocks.getDyedSoapstoneWall(colours.getId())).getFamily();
 
-            KekeBlockFamilies.register(KekeBlocks.getDyedSoapstoneBricks(colours)).slab(KekeBlocks.getDyedSoapstoneBrickSlab(colours)).stairs(KekeBlocks.getDyedSoapstoneBrickStairs(colours)).wall(KekeBlocks.getDyedSoapstoneBrickWall(colours)).getFamily();
+            KekeBlockFamilies.register(KekeBlocks.getDyedSoapstoneBricks(colours.getId())).slab(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId())).stairs(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId())).wall(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId())).getFamily();
         }
     }
 
