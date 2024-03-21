@@ -92,6 +92,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         }
         itemModelGenerator.generateFlatItem(KekeItems.CORK_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(KekeItems.CORK_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(KekeItems.ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
     }
 
     public final void createCustomPottedFlowerPot(DyeColor dyeColor, Block block, String string, KekeModelTemplates.TintState tintState, BlockModelGenerators blockModelGenerators) {

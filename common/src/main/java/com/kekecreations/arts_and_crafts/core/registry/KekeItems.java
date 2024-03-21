@@ -27,6 +27,9 @@ public class KekeItems {
     public static final Supplier<CustomBoatItem> CORK_CHEST_BOAT = RegistryHelper.registerItem("cork_chest_boat", () -> new CustomBoatItem(true, CustomBoat.WoodType.CORK, new Item.Properties().stacksTo(1)));
 
 
+    public static final Supplier<Item> ROLL_POTTERY_SHERD = RegistryHelper.registerItem("roll_pottery_sherd", () -> new Item(new Item.Properties()));
+
+
 
 
 

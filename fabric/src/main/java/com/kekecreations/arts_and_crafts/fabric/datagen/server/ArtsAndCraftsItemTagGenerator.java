@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.fabric.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -19,6 +20,12 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
         appendPlanks();
         appendLogsThatBurn();
         appendWoodenButtons();
+        appendDecoratedPotSherds();
+    }
+    private void appendDecoratedPotSherds() {
+        this.getOrCreateTagBuilder(ItemTags.DECORATED_POT_SHERDS)
+                .setReplace(false)
+                .add(KekeItems.ROLL_POTTERY_SHERD.get());
     }
 
     private void appendPlanks() {

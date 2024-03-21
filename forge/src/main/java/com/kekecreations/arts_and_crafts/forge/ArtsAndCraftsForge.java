@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.forge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradient;
-import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradientBackwards;
 import com.kekecreations.arts_and_crafts.core.platform.forge.RegistryHelperImpl;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
@@ -120,6 +119,9 @@ public class ArtsAndCraftsForge {
             event.getEntries().putAfter(KekeBlocks.CORK_DOOR.get().asItem().getDefaultInstance(), KekeBlocks.CORK_TRAPDOOR.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(KekeBlocks.CORK_TRAPDOOR.get().asItem().getDefaultInstance(), KekeBlocks.CORK_PRESSURE_PLATE.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(KekeBlocks.CORK_PRESSURE_PLATE.get().asItem().getDefaultInstance(), KekeBlocks.CORK_BUTTON.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.getEntries().putAfter(Items.SNORT_POTTERY_SHERD.asItem().getDefaultInstance(), KekeItems.ROLL_POTTERY_SHERD.get().asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

@@ -1,9 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
+import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class ArtsAndCrafts {
@@ -14,6 +11,7 @@ public class ArtsAndCrafts {
         KekeEntityTypes.register();
         KekeBlocks.register();
         KekeItems.register();
+        KekeCustomSherdPatterns.register();
         
         System.out.println(ExampleExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }

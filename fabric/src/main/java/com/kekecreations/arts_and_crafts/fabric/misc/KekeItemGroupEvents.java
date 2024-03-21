@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.fabric.misc;
 
 import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradient;
-import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradientBackwards;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
@@ -10,8 +9,6 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
-
-import java.util.Arrays;
 
 public class KekeItemGroupEvents {
 
@@ -91,6 +88,9 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeBlocks.CORK_DOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
             event.addAfter(KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_PRESSURE_PLATE.get());
             event.addAfter(KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_BUTTON.get());
+        });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(event -> {
+            event.addAfter(Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
         });
 
     }

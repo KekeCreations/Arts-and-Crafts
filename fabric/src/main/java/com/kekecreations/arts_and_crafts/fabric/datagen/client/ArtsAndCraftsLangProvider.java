@@ -47,6 +47,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringNaturalColour + " Soapstone Brick Wall");
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringNaturalColour + " Soapstone Brick Stairs");
         }
+        //BLOCKS
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), "Terracotta Shingle Wall");
@@ -59,8 +60,6 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), "Soapstone Brick Slab");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), "Soapstone Brick Wall");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
-
-
         translationBuilder.add(KekeFabricBlocks.CORK_PLANKS.get(), "Cork Planks");
         translationBuilder.add(KekeFabricBlocks.CORK_LOG.get(), "Cork Log");
         translationBuilder.add(KekeFabricBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
@@ -81,8 +80,13 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeFabricBlocks.CORK_LEAVES.get(), "Cork Leaves");
         translationBuilder.add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
 
+
+        //ITEMS
         translationBuilder.add(KekeItems.CORK_BOAT.get(), "Cork Boat");
         translationBuilder.add(KekeItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
+        translationBuilder.add(KekeItems.ROLL_POTTERY_SHERD.get(), "Roll Pottery Sherd");
+
+        //ENTITY TYPES
         translationBuilder.add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
         translationBuilder.add(KekeEntityTypes.BOAT.get(), "Boat");
         translationBuilder.add(KekeEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
