@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.forge.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.blockentity.CustomDecoratedPotRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -41,6 +42,7 @@ public class ClientEvents {
         event.registerEntityRenderer(KekeEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         event.registerEntityRenderer(KekeEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
         event.registerEntityRenderer(KekeEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
+        event.registerBlockEntityRenderer(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), CustomDecoratedPotRenderer::new);
     }
     @SubscribeEvent
     public static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {

@@ -23,6 +23,12 @@ public class KekeModelTemplates {
 
     public static final ModelTemplate POTTED_AZALEA = createFlowerPot("template_potted_azalea_bush", TextureSlot.TOP, TextureSlot.SIDE, TextureSlot.PLANT, KekeTextureSlots.FLOWERPOT, TextureSlot.PARTICLE);
 
+    public static final ModelTemplate DECORATED_POT_ITEM = createDecoratedPotItem("decorated_pot" /*TextureSlot.PARTICLE */);
+
+
+    public static ModelTemplate createDecoratedPotItem(String string, TextureSlot... textureSlots) {
+        return new ModelTemplate(Optional.of(new ResourceLocation("minecraft", "item/" + string)), Optional.empty(), textureSlots);
+    }
 
     public static ModelTemplate createFlowerPot(String string, TextureSlot... textureSlots) {
         return new ModelTemplate(Optional.of(new ResourceLocation("minecraft", "block/" + string)), Optional.empty(), textureSlots);

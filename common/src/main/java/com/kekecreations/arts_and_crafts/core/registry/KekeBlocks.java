@@ -2,18 +2,17 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.common.tree_grower.CorkTreeGrower;
+import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -80,6 +79,8 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_WALL = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_STAIRS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_DECORATED_POTS = new HashMap<>();
+
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = RegistryHelper.registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f)));
     public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = RegistryHelper.registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
@@ -116,6 +117,9 @@ public class KekeBlocks {
     public static final Supplier<SaplingBlock> CORK_SAPLING = RegistryHelper.registerBlockWithItem("cork_sapling", () -> new CorkSapling(new CorkTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = RegistryHelper.registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
+
+
+    //public static final Supplier<CustomDecoratedPotBlock> GREEN_DECORATED_POT = RegistryHelper.registerBlock("green_decorated_pot", () -> new CustomDecoratedPotBlock(BlockBehaviour.Properties.copy(Blocks.DECORATED_POT)));
 
 
 
@@ -188,6 +192,10 @@ public class KekeBlocks {
             DYED_AZALEA_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_azalea_bush", () -> KekeBlocks.flowerPot(Blocks.AZALEA, colours)));
             DYED_FLOWERING_AZALEA_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_flowering_azalea_bush", () -> KekeBlocks.flowerPot(Blocks.FLOWERING_AZALEA, colours)));
             DYED_TORCHFLOWER_FLOWER_POTS.put(colours, RegistryHelper.registerBlock(colours + "_potted_torchflower", () -> KekeBlocks.flowerPot(Blocks.TORCHFLOWER, colours)));
+
+
+            //DYED DECORATED POTS
+            DYED_DECORATED_POTS.put(colours, RegistryHelper.registerBlock(colours + "_decorated_pot", () -> new CustomDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
         }
     }
 
@@ -347,6 +355,10 @@ public class KekeBlocks {
     }
     public static Block getDyedPottedCorkSapling(DyeColor colours){
         return DYED_CORK_SAPLING_FLOWER_POTS.get(colours).get();
+    }
+
+    public static Block getDyedDecoratedPot(int colours) {
+        return DYED_DECORATED_POTS.get(DyeColor.byId(colours)).get();
     }
 
 

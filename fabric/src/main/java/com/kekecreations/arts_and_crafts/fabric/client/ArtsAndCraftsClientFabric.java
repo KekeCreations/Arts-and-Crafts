@@ -1,6 +1,8 @@
 package com.kekecreations.arts_and_crafts.fabric.client;
 
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.ArtsAndCraftsBlockEntityWithoutLevelRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.blockentity.CustomDecoratedPotRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -11,14 +13,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.*;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.BoatRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GrassColor;
 
@@ -95,10 +95,15 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
             }, KekeBlocks.getDyedPottedFern(colours));
         }
     }
+    static ArtsAndCraftsBlockEntityWithoutLevelRenderer artsAndCraftsBlockEntityWithoutLevelRenderer = new ArtsAndCraftsBlockEntityWithoutLevelRenderer();
     public static void registerRenderers() {
         EntityRendererRegistry.register(KekeEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         EntityRendererRegistry.register(KekeEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
         EntityRendererRegistry.register(KekeEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
+        BlockEntityRendererRegistry.register(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), CustomDecoratedPotRenderer::new);
+        for (DyeColor colours : DyeColor.values()) {
+            BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+        }
     }
     public static void registerModelLayers() {
         EntityModelLayerRegistry.registerModelLayer(CustomBoatRenderer.BOAT, BoatModel::createBodyModel);

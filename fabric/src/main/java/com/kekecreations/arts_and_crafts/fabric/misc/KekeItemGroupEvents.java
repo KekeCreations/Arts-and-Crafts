@@ -68,6 +68,7 @@ public class KekeItemGroupEvents {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
             for (DyeColorByGradient colours : DyeColorByGradient.values()) {
                 event.addAfter(Items.FLOWER_POT, KekeBlocks.getDyedFlowerPot(colours.getId()));
+                event.addAfter(Items.DECORATED_POT, KekeBlocks.getDyedDecoratedPot(colours.getId()));
             }
             event.addAfter(Items.ACACIA_HANGING_SIGN, KekeItems.CORK_SIGN.get());
             event.addAfter(KekeItems.CORK_SIGN.get(), KekeItems.CORK_HANGING_SIGN.get());

@@ -4,11 +4,15 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
 import com.kekecreations.arts_and_crafts.common.entity.CustomChestBoat;
+import com.kekecreations.arts_and_crafts.common.entity.CustomDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
+import com.kekecreations.arts_and_crafts.core.platform.PlatformHelper;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.vehicle.ChestBoat;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import java.util.function.Supplier;
 
@@ -36,6 +40,27 @@ public class KekeEntityTypes {
                     .clientTrackingRange(10)
                     .build(dataFixer("chest_boat")));
 
+
+    public static final Supplier<BlockEntityType<CustomDecoratedPotBlockEntity>> CUSTOM_DECORATED_POT_BLOCK_ENTITY = RegistryHelper.registerBlockEntityType("custom_decorated_pot_block_entity", () ->
+            PlatformHelper.createBlockEntity(CustomDecoratedPotBlockEntity::new,
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.WHITE.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.ORANGE.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.MAGENTA.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.LIGHT_BLUE.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.YELLOW.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.LIME.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.PINK.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.GRAY.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.LIGHT_GRAY.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.CYAN.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.PURPLE.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.BLUE.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.BROWN.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.GREEN.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.RED.getId()),
+                    KekeBlocks.getDyedDecoratedPot(DyeColor.BLACK.getId())
+            )
+    );
 
 
 

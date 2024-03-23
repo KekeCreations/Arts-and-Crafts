@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.core.platform.fabric;
 import com.kekecreations.arts_and_crafts.core.platform.PlatformHelper;
 import com.kekecreations.arts_and_crafts.fabric.registry.KekeFabricBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;

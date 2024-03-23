@@ -98,6 +98,7 @@ public class ArtsAndCraftsForge {
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             for (DyeColorByGradient colours : DyeColorByGradient.values()) {
                 event.getEntries().putAfter(Items.FLOWER_POT.getDefaultInstance(), KekeBlocks.getDyedFlowerPot(colours.getId()).asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+                event.getEntries().putAfter(Items.DECORATED_POT.getDefaultInstance(), KekeBlocks.getDyedDecoratedPot(colours.getId()).asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             }
             event.getEntries().putAfter(Items.ACACIA_HANGING_SIGN.getDefaultInstance(), KekeItems.CORK_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.getEntries().putAfter(KekeItems.CORK_SIGN.get().getDefaultInstance(), KekeItems.CORK_HANGING_SIGN.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);

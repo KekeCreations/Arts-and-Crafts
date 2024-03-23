@@ -1,11 +1,12 @@
 {
   "required": true,
-  "package": "com.kekecreations.arts_and_crafts.mixin.forge",
+  "package": "com.kekecreations.arts_and_crafts.forge.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "client": [
   ],
   "mixins": [
+    "DyedDecoratedPotBlockItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
