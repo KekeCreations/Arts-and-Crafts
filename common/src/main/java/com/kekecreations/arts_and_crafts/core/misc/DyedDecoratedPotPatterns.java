@@ -79,6 +79,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.BLACK_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.BLUE) {
             if (item == Items.BRICK) {
@@ -86,6 +89,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.BLUE_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.BROWN) {
@@ -95,6 +101,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.BROWN_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.CYAN) {
             if (item == Items.BRICK) {
@@ -102,6 +111,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.CYAN_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.GRAY) {
@@ -111,6 +123,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.GRAY_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.GREEN) {
             if (item == Items.BRICK) {
@@ -118,6 +133,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.GREEN_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.LIGHT_BLUE) {
@@ -127,6 +145,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.LIGHT_BLUE_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.LIGHT_GRAY) {
             if (item == Items.BRICK) {
@@ -134,6 +155,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.LIGHT_GRAY_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.LIME) {
@@ -143,6 +167,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.LIME_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.MAGENTA) {
             if (item == Items.BRICK) {
@@ -150,6 +177,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.MAGENTA_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.ORANGE) {
@@ -159,6 +189,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.ORANGE_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.PINK) {
             if (item == Items.BRICK) {
@@ -166,6 +199,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.PINK_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.PURPLE) {
@@ -175,6 +211,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.PURPLE_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.RED) {
             if (item == Items.BRICK) {
@@ -182,6 +221,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.RED_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_ANGLER_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.WHITE) {
@@ -191,6 +233,9 @@ public class DyedDecoratedPotPatterns {
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.WHITE_ROLL_POTTERY_PATTERN;
             }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_ANGLER_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.YELLOW) {
             if (item == Items.BRICK) {
@@ -198,6 +243,9 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
                 return KekeCustomSherdPatterns.YELLOW_ROLL_POTTERY_PATTERN;
+            }
+            else if (item == Items.ANGLER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_ANGLER_POTTERY_PATTERN;
             }
         }
         return DecoratedPotPatterns.getResourceKey(item);
