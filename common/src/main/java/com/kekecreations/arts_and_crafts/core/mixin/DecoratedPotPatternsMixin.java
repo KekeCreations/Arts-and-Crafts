@@ -45,6 +45,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.BLACK_BREWER_POTTERY_PATTERN, "black_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BLACK_BURN_POTTERY_PATTERN, "black_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BLACK_DANGER_POTTERY_PATTERN, "black_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_EXPLORER_POTTERY_PATTERN, "black_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_FRIEND_POTTERY_PATTERN, "black_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_HEART_POTTERY_PATTERN, "black_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_HEARTBREAK_POTTERY_PATTERN, "black_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_HOWL_POTTERY_PATTERN, "black_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_MINER_POTTERY_PATTERN, "black_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_MOURNER_POTTERY_PATTERN, "black_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_PLENTY_POTTERY_PATTERN, "black_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_PRIZE_POTTERY_PATTERN, "black_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_SHEAF_POTTERY_PATTERN, "black_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_SHELTER_POTTERY_PATTERN, "black_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_SKULL_POTTERY_PATTERN, "black_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLACK_SNORT_POTTERY_PATTERN, "black_snort_pottery_pattern");
         //BLUE
         Registry.register(registry, KekeCustomSherdPatterns.BLUE_DECORATED_POT_BASE, "blue_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.BLUE_DECORATED_POT_SIDE, "blue_decorated_pot_side");
@@ -56,6 +69,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.BLUE_BREWER_POTTERY_PATTERN, "blue_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BLUE_BURN_POTTERY_PATTERN, "blue_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BLUE_DANGER_POTTERY_PATTERN, "blue_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_EXPLORER_POTTERY_PATTERN, "blue_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_FRIEND_POTTERY_PATTERN, "blue_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_HEART_POTTERY_PATTERN, "blue_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_HEARTBREAK_POTTERY_PATTERN, "blue_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_HOWL_POTTERY_PATTERN, "blue_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_MINER_POTTERY_PATTERN, "blue_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_MOURNER_POTTERY_PATTERN, "blue_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_PLENTY_POTTERY_PATTERN, "blue_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_PRIZE_POTTERY_PATTERN, "blue_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_SHEAF_POTTERY_PATTERN, "blue_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_SHELTER_POTTERY_PATTERN, "blue_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_SKULL_POTTERY_PATTERN, "blue_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BLUE_SNORT_POTTERY_PATTERN, "blue_snort_pottery_pattern");
         //BROWN
         Registry.register(registry, KekeCustomSherdPatterns.BROWN_DECORATED_POT_BASE, "brown_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.BROWN_DECORATED_POT_SIDE, "brown_decorated_pot_side");
@@ -67,6 +93,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.BROWN_BREWER_POTTERY_PATTERN, "brown_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BROWN_BURN_POTTERY_PATTERN, "brown_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.BROWN_DANGER_POTTERY_PATTERN, "brown_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_EXPLORER_POTTERY_PATTERN, "brown_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_FRIEND_POTTERY_PATTERN, "brown_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_HEART_POTTERY_PATTERN, "brown_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_HEARTBREAK_POTTERY_PATTERN, "brown_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_HOWL_POTTERY_PATTERN, "brown_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_MINER_POTTERY_PATTERN, "brown_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_MOURNER_POTTERY_PATTERN, "brown_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_PLENTY_POTTERY_PATTERN, "brown_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_PRIZE_POTTERY_PATTERN, "brown_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_SHEAF_POTTERY_PATTERN, "brown_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_SHELTER_POTTERY_PATTERN, "brown_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_SKULL_POTTERY_PATTERN, "brown_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.BROWN_SNORT_POTTERY_PATTERN, "brown_snort_pottery_pattern");
         //CYAN
         Registry.register(registry, KekeCustomSherdPatterns.CYAN_DECORATED_POT_BASE, "cyan_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.CYAN_DECORATED_POT_SIDE, "cyan_decorated_pot_side");
@@ -78,6 +117,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.CYAN_BREWER_POTTERY_PATTERN, "cyan_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.CYAN_BURN_POTTERY_PATTERN, "cyan_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.CYAN_DANGER_POTTERY_PATTERN, "cyan_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_EXPLORER_POTTERY_PATTERN, "cyan_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_FRIEND_POTTERY_PATTERN, "cyan_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_HEART_POTTERY_PATTERN, "cyan_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_HEARTBREAK_POTTERY_PATTERN, "cyan_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_HOWL_POTTERY_PATTERN, "cyan_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_MINER_POTTERY_PATTERN, "cyan_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_MOURNER_POTTERY_PATTERN, "cyan_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_PLENTY_POTTERY_PATTERN, "cyan_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_PRIZE_POTTERY_PATTERN, "cyan_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_SHEAF_POTTERY_PATTERN, "cyan_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_SHELTER_POTTERY_PATTERN, "cyan_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_SKULL_POTTERY_PATTERN, "cyan_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.CYAN_SNORT_POTTERY_PATTERN, "cyan_snort_pottery_pattern");
         //GRAY
         Registry.register(registry, KekeCustomSherdPatterns.GRAY_DECORATED_POT_BASE, "gray_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.GRAY_DECORATED_POT_SIDE, "gray_decorated_pot_side");
@@ -89,6 +141,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.GRAY_BREWER_POTTERY_PATTERN, "gray_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.GRAY_BURN_POTTERY_PATTERN, "gray_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.GRAY_DANGER_POTTERY_PATTERN, "gray_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_EXPLORER_POTTERY_PATTERN, "gray_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_FRIEND_POTTERY_PATTERN, "gray_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_HEART_POTTERY_PATTERN, "gray_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_HEARTBREAK_POTTERY_PATTERN, "gray_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_HOWL_POTTERY_PATTERN, "gray_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_MINER_POTTERY_PATTERN, "gray_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_MOURNER_POTTERY_PATTERN, "gray_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_PLENTY_POTTERY_PATTERN, "gray_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_PRIZE_POTTERY_PATTERN, "gray_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_SHEAF_POTTERY_PATTERN, "gray_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_SHELTER_POTTERY_PATTERN, "gray_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_SKULL_POTTERY_PATTERN, "gray_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GRAY_SNORT_POTTERY_PATTERN, "gray_snort_pottery_pattern");
         //GREEN
         Registry.register(registry, KekeCustomSherdPatterns.GREEN_DECORATED_POT_BASE, "green_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.GREEN_DECORATED_POT_SIDE, "green_decorated_pot_side");
@@ -100,6 +165,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.GREEN_BREWER_POTTERY_PATTERN, "green_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.GREEN_BURN_POTTERY_PATTERN, "green_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.GREEN_DANGER_POTTERY_PATTERN, "green_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_EXPLORER_POTTERY_PATTERN, "green_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_FRIEND_POTTERY_PATTERN, "green_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_HEART_POTTERY_PATTERN, "green_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_HEARTBREAK_POTTERY_PATTERN, "green_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_HOWL_POTTERY_PATTERN, "green_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_MINER_POTTERY_PATTERN, "green_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_MOURNER_POTTERY_PATTERN, "green_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_PLENTY_POTTERY_PATTERN, "green_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_PRIZE_POTTERY_PATTERN, "green_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_SHEAF_POTTERY_PATTERN, "green_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_SHELTER_POTTERY_PATTERN, "green_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_SKULL_POTTERY_PATTERN, "green_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.GREEN_SNORT_POTTERY_PATTERN, "green_snort_pottery_pattern");
         //LIGHT_BLUE
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_DECORATED_POT_BASE, "light_blue_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_DECORATED_POT_SIDE, "light_blue_decorated_pot_side");
@@ -111,6 +189,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_BREWER_POTTERY_PATTERN, "light_blue_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_BURN_POTTERY_PATTERN, "light_blue_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_DANGER_POTTERY_PATTERN, "light_blue_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_EXPLORER_POTTERY_PATTERN, "light_blue_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_FRIEND_POTTERY_PATTERN, "light_blue_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_HEART_POTTERY_PATTERN, "light_blue_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_HEARTBREAK_POTTERY_PATTERN, "light_blue_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_HOWL_POTTERY_PATTERN, "light_blue_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_MINER_POTTERY_PATTERN, "light_blue_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_MOURNER_POTTERY_PATTERN, "light_blue_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_PLENTY_POTTERY_PATTERN, "light_blue_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_PRIZE_POTTERY_PATTERN, "light_blue_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_SHEAF_POTTERY_PATTERN, "light_blue_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_SHELTER_POTTERY_PATTERN, "light_blue_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_SKULL_POTTERY_PATTERN, "light_blue_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_BLUE_SNORT_POTTERY_PATTERN, "light_blue_snort_pottery_pattern");
         //LIGHT_GRAY
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_DECORATED_POT_BASE, "light_gray_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_DECORATED_POT_SIDE, "light_gray_decorated_pot_side");
@@ -122,6 +213,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_BREWER_POTTERY_PATTERN, "light_gray_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_BURN_POTTERY_PATTERN, "light_gray_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_DANGER_POTTERY_PATTERN, "light_gray_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_EXPLORER_POTTERY_PATTERN, "light_gray_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_FRIEND_POTTERY_PATTERN, "light_gray_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_HEART_POTTERY_PATTERN, "light_gray_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_HEARTBREAK_POTTERY_PATTERN, "light_gray_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_HOWL_POTTERY_PATTERN, "light_gray_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_MINER_POTTERY_PATTERN, "light_gray_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_MOURNER_POTTERY_PATTERN, "light_gray_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_PLENTY_POTTERY_PATTERN, "light_gray_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_PRIZE_POTTERY_PATTERN, "light_gray_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_SHEAF_POTTERY_PATTERN, "light_gray_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_SHELTER_POTTERY_PATTERN, "light_gray_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_SKULL_POTTERY_PATTERN, "light_gray_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIGHT_GRAY_SNORT_POTTERY_PATTERN, "light_gray_snort_pottery_pattern");
         //LIME
         Registry.register(registry, KekeCustomSherdPatterns.LIME_DECORATED_POT_BASE, "lime_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.LIME_DECORATED_POT_SIDE, "lime_decorated_pot_side");
@@ -133,6 +237,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.LIME_BREWER_POTTERY_PATTERN, "lime_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIME_BURN_POTTERY_PATTERN, "lime_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.LIME_DANGER_POTTERY_PATTERN, "lime_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_EXPLORER_POTTERY_PATTERN, "lime_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_FRIEND_POTTERY_PATTERN, "lime_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_HEART_POTTERY_PATTERN, "lime_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_HEARTBREAK_POTTERY_PATTERN, "lime_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_HOWL_POTTERY_PATTERN, "lime_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_MINER_POTTERY_PATTERN, "lime_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_MOURNER_POTTERY_PATTERN, "lime_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_PLENTY_POTTERY_PATTERN, "lime_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_PRIZE_POTTERY_PATTERN, "lime_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_SHEAF_POTTERY_PATTERN, "lime_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_SHELTER_POTTERY_PATTERN, "lime_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_SKULL_POTTERY_PATTERN, "lime_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.LIME_SNORT_POTTERY_PATTERN, "lime_snort_pottery_pattern");
         //MAGENTA
         Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_DECORATED_POT_BASE, "magenta_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_DECORATED_POT_SIDE, "magenta_decorated_pot_side");
@@ -144,6 +261,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_BREWER_POTTERY_PATTERN, "magenta_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_BURN_POTTERY_PATTERN, "magenta_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_DANGER_POTTERY_PATTERN, "magenta_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_EXPLORER_POTTERY_PATTERN, "magenta_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_FRIEND_POTTERY_PATTERN, "magenta_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_HEART_POTTERY_PATTERN, "magenta_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_HEARTBREAK_POTTERY_PATTERN, "magenta_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_HOWL_POTTERY_PATTERN, "magenta_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_MINER_POTTERY_PATTERN, "magenta_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_MOURNER_POTTERY_PATTERN, "magenta_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_PLENTY_POTTERY_PATTERN, "magenta_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_PRIZE_POTTERY_PATTERN, "magenta_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_SHEAF_POTTERY_PATTERN, "magenta_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_SHELTER_POTTERY_PATTERN, "magenta_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_SKULL_POTTERY_PATTERN, "magenta_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.MAGENTA_SNORT_POTTERY_PATTERN, "magenta_snort_pottery_pattern");
         //ORANGE
         Registry.register(registry, KekeCustomSherdPatterns.ORANGE_DECORATED_POT_BASE, "orange_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.ORANGE_DECORATED_POT_SIDE, "orange_decorated_pot_side");
@@ -155,6 +285,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.ORANGE_BREWER_POTTERY_PATTERN, "orange_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.ORANGE_BURN_POTTERY_PATTERN, "orange_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.ORANGE_DANGER_POTTERY_PATTERN, "orange_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_EXPLORER_POTTERY_PATTERN, "orange_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_FRIEND_POTTERY_PATTERN, "orange_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_HEART_POTTERY_PATTERN, "orange_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_HEARTBREAK_POTTERY_PATTERN, "orange_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_HOWL_POTTERY_PATTERN, "orange_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_MINER_POTTERY_PATTERN, "orange_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_MOURNER_POTTERY_PATTERN, "orange_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_PLENTY_POTTERY_PATTERN, "orange_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_PRIZE_POTTERY_PATTERN, "orange_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_SHEAF_POTTERY_PATTERN, "orange_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_SHELTER_POTTERY_PATTERN, "orange_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_SKULL_POTTERY_PATTERN, "orange_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.ORANGE_SNORT_POTTERY_PATTERN, "orange_snort_pottery_pattern");
         //PINK
         Registry.register(registry, KekeCustomSherdPatterns.PINK_DECORATED_POT_BASE, "pink_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.PINK_DECORATED_POT_SIDE, "pink_decorated_pot_side");
@@ -166,6 +309,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.PINK_BREWER_POTTERY_PATTERN, "pink_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.PINK_BURN_POTTERY_PATTERN, "pink_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.PINK_DANGER_POTTERY_PATTERN, "pink_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_EXPLORER_POTTERY_PATTERN, "pink_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_FRIEND_POTTERY_PATTERN, "pink_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_HEART_POTTERY_PATTERN, "pink_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_HEARTBREAK_POTTERY_PATTERN, "pink_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_HOWL_POTTERY_PATTERN, "pink_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_MINER_POTTERY_PATTERN, "pink_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_MOURNER_POTTERY_PATTERN, "pink_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_PLENTY_POTTERY_PATTERN, "pink_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_PRIZE_POTTERY_PATTERN, "pink_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_SHEAF_POTTERY_PATTERN, "pink_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_SHELTER_POTTERY_PATTERN, "pink_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_SKULL_POTTERY_PATTERN, "pink_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PINK_SNORT_POTTERY_PATTERN, "pink_snort_pottery_pattern");
         //PURPLE
         Registry.register(registry, KekeCustomSherdPatterns.PURPLE_DECORATED_POT_BASE, "purple_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.PURPLE_DECORATED_POT_SIDE, "purple_decorated_pot_side");
@@ -177,6 +333,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.PURPLE_BREWER_POTTERY_PATTERN, "purple_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.PURPLE_BURN_POTTERY_PATTERN, "purple_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.PURPLE_DANGER_POTTERY_PATTERN, "purple_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_EXPLORER_POTTERY_PATTERN, "purple_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_FRIEND_POTTERY_PATTERN, "purple_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_HEART_POTTERY_PATTERN, "purple_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_HEARTBREAK_POTTERY_PATTERN, "purple_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_HOWL_POTTERY_PATTERN, "purple_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_MINER_POTTERY_PATTERN, "purple_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_MOURNER_POTTERY_PATTERN, "purple_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_PLENTY_POTTERY_PATTERN, "purple_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_PRIZE_POTTERY_PATTERN, "purple_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_SHEAF_POTTERY_PATTERN, "purple_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_SHELTER_POTTERY_PATTERN, "purple_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_SKULL_POTTERY_PATTERN, "purple_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.PURPLE_SNORT_POTTERY_PATTERN, "purple_snort_pottery_pattern");
         //RED
         Registry.register(registry, KekeCustomSherdPatterns.RED_DECORATED_POT_BASE, "red_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.RED_DECORATED_POT_SIDE, "red_decorated_pot_side");
@@ -188,6 +357,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.RED_BREWER_POTTERY_PATTERN, "red_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.RED_BURN_POTTERY_PATTERN, "red_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.RED_DANGER_POTTERY_PATTERN, "red_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_EXPLORER_POTTERY_PATTERN, "red_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_FRIEND_POTTERY_PATTERN, "red_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_HEART_POTTERY_PATTERN, "red_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_HEARTBREAK_POTTERY_PATTERN, "red_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_HOWL_POTTERY_PATTERN, "red_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_MINER_POTTERY_PATTERN, "red_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_MOURNER_POTTERY_PATTERN, "red_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_PLENTY_POTTERY_PATTERN, "red_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_PRIZE_POTTERY_PATTERN, "red_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_SHEAF_POTTERY_PATTERN, "red_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_SHELTER_POTTERY_PATTERN, "red_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_SKULL_POTTERY_PATTERN, "red_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.RED_SNORT_POTTERY_PATTERN, "red_snort_pottery_pattern");
         //WHITE
         Registry.register(registry, KekeCustomSherdPatterns.WHITE_DECORATED_POT_BASE, "white_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.WHITE_DECORATED_POT_SIDE, "white_decorated_pot_side");
@@ -199,6 +381,19 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.WHITE_BREWER_POTTERY_PATTERN, "white_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.WHITE_BURN_POTTERY_PATTERN, "white_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.WHITE_DANGER_POTTERY_PATTERN, "white_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_EXPLORER_POTTERY_PATTERN, "white_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_FRIEND_POTTERY_PATTERN, "white_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_HEART_POTTERY_PATTERN, "white_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_HEARTBREAK_POTTERY_PATTERN, "white_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_HOWL_POTTERY_PATTERN, "white_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_MINER_POTTERY_PATTERN, "white_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_MOURNER_POTTERY_PATTERN, "white_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_PLENTY_POTTERY_PATTERN, "white_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_PRIZE_POTTERY_PATTERN, "white_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_SHEAF_POTTERY_PATTERN, "white_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_SHELTER_POTTERY_PATTERN, "white_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_SKULL_POTTERY_PATTERN, "white_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.WHITE_SNORT_POTTERY_PATTERN, "white_snort_pottery_pattern");
         //YELLOW
         Registry.register(registry, KekeCustomSherdPatterns.YELLOW_DECORATED_POT_BASE, "yellow_decorated_pot_base");
         Registry.register(registry, KekeCustomSherdPatterns.YELLOW_DECORATED_POT_SIDE, "yellow_decorated_pot_side");
@@ -210,5 +405,18 @@ public abstract class DecoratedPotPatternsMixin {
         Registry.register(registry, KekeCustomSherdPatterns.YELLOW_BREWER_POTTERY_PATTERN, "yellow_brewer_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.YELLOW_BURN_POTTERY_PATTERN, "yellow_burn_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.YELLOW_DANGER_POTTERY_PATTERN, "yellow_danger_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_EXPLORER_POTTERY_PATTERN, "yellow_explorer_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_FRIEND_POTTERY_PATTERN, "yellow_friend_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_HEART_POTTERY_PATTERN, "yellow_heart_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_HEARTBREAK_POTTERY_PATTERN, "yellow_heartbreak_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_HOWL_POTTERY_PATTERN, "yellow_howl_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_MINER_POTTERY_PATTERN, "yellow_miner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_MOURNER_POTTERY_PATTERN, "yellow_mourner_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_PLENTY_POTTERY_PATTERN, "yellow_plenty_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_PRIZE_POTTERY_PATTERN, "yellow_prize_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_SHEAF_POTTERY_PATTERN, "yellow_sheaf_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_SHELTER_POTTERY_PATTERN, "yellow_shelter_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_SKULL_POTTERY_PATTERN, "yellow_skull_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.YELLOW_SNORT_POTTERY_PATTERN, "yellow_snort_pottery_pattern");
     }
 }

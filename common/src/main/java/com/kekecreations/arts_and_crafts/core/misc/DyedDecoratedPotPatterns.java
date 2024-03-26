@@ -100,6 +100,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.BLACK_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLACK_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.BLUE) {
             if (item == Items.BRICK) {
@@ -128,6 +167,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.BLUE_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BLUE_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.BROWN) {
@@ -158,6 +236,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.BROWN_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.BROWN_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.CYAN) {
             if (item == Items.BRICK) {
@@ -186,6 +303,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.CYAN_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.CYAN_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.GRAY) {
@@ -216,6 +372,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.GRAY_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GRAY_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.GREEN) {
             if (item == Items.BRICK) {
@@ -244,6 +439,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.GREEN_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.GREEN_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.LIGHT_BLUE) {
@@ -274,6 +508,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.LIGHT_BLUE_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_BLUE_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.LIGHT_GRAY) {
             if (item == Items.BRICK) {
@@ -302,6 +575,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.LIGHT_GRAY_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIGHT_GRAY_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.LIME) {
@@ -332,6 +644,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.LIME_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.LIME_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.MAGENTA) {
             if (item == Items.BRICK) {
@@ -360,6 +711,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.MAGENTA_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.MAGENTA_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.ORANGE) {
@@ -390,6 +780,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.ORANGE_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.ORANGE_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.PINK) {
             if (item == Items.BRICK) {
@@ -418,6 +847,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.PINK_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PINK_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.PURPLE) {
@@ -448,6 +916,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.PURPLE_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.PURPLE_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.RED) {
             if (item == Items.BRICK) {
@@ -476,6 +983,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.RED_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.RED_SNORT_POTTERY_PATTERN;
             }
         }
         if (colour == DyeColor.WHITE) {
@@ -506,6 +1052,45 @@ public class DyedDecoratedPotPatterns {
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.WHITE_DANGER_POTTERY_PATTERN;
             }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.WHITE_SNORT_POTTERY_PATTERN;
+            }
         }
         if (colour == DyeColor.YELLOW) {
             if (item == Items.BRICK) {
@@ -534,6 +1119,45 @@ public class DyedDecoratedPotPatterns {
             }
             else if (item == Items.DANGER_POTTERY_SHERD) {
                 return KekeCustomSherdPatterns.YELLOW_DANGER_POTTERY_PATTERN;
+            }
+            else if (item == Items.EXPLORER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_EXPLORER_POTTERY_PATTERN;
+            }
+            else if (item == Items.FRIEND_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_FRIEND_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEART_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_HEART_POTTERY_PATTERN;
+            }
+            else if (item == Items.HEARTBREAK_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_HEARTBREAK_POTTERY_PATTERN;
+            }
+            else if (item == Items.HOWL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_HOWL_POTTERY_PATTERN;
+            }
+            else if (item == Items.MINER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_MINER_POTTERY_PATTERN;
+            }
+            else if (item == Items.MOURNER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_MOURNER_POTTERY_PATTERN;
+            }
+            else if (item == Items.PLENTY_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_PLENTY_POTTERY_PATTERN;
+            }
+            else if (item == Items.PRIZE_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_PRIZE_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHEAF_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_SHEAF_POTTERY_PATTERN;
+            }
+            else if (item == Items.SHELTER_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_SHELTER_POTTERY_PATTERN;
+            }
+            else if (item == Items.SKULL_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_SKULL_POTTERY_PATTERN;
+            }
+            else if (item == Items.SNORT_POTTERY_SHERD) {
+                return KekeCustomSherdPatterns.YELLOW_SNORT_POTTERY_PATTERN;
             }
         }
         return DecoratedPotPatterns.getResourceKey(item);
