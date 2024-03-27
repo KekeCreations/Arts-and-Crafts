@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.forge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradient;
+import com.kekecreations.arts_and_crafts.common.util.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.platform.forge.RegistryHelperImpl;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;

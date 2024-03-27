@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.common.tree_grower.CorkTreeGrower;
-import com.kekecreations.arts_and_crafts.core.misc.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
 import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
