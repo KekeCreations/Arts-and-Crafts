@@ -17,13 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric"
+      "com.kekecreations.arts_and_crafts.core.fabric.ArtsAndCraftsFabric"
     ],
     "client": [
-      "com.kekecreations.arts_and_crafts.fabric.client.ArtsAndCraftsClientFabric"
+      "com.kekecreations.arts_and_crafts.core.fabric.client.ArtsAndCraftsClientFabric"
     ],
     "fabric-datagen": [
-      "com.kekecreations.arts_and_crafts.fabric.datagen.ArtsAndCraftsDataGenerator"
+      "com.kekecreations.arts_and_crafts.core.fabric.datagen.ArtsAndCraftsDataGenerator"
     ]
   },
   "mixins": [

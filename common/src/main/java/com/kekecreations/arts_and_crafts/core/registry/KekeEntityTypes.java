@@ -4,13 +4,12 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
 import com.kekecreations.arts_and_crafts.common.entity.CustomChestBoat;
-import com.kekecreations.arts_and_crafts.common.entity.CustomDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.platform.PlatformHelper;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.vehicle.ChestBoat;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
@@ -41,8 +40,8 @@ public class KekeEntityTypes {
                     .build(dataFixer("chest_boat")));
 
 
-    public static final Supplier<BlockEntityType<CustomDecoratedPotBlockEntity>> CUSTOM_DECORATED_POT_BLOCK_ENTITY = RegistryHelper.registerBlockEntityType("custom_decorated_pot_block_entity", () ->
-            PlatformHelper.createBlockEntity(CustomDecoratedPotBlockEntity::new,
+    public static final Supplier<BlockEntityType<DyedDecoratedPotBlockEntity>> CUSTOM_DECORATED_POT_BLOCK_ENTITY = RegistryHelper.registerBlockEntityType("custom_decorated_pot_block_entity", () ->
+            PlatformHelper.createBlockEntity(DyedDecoratedPotBlockEntity::new,
                     KekeBlocks.getDyedDecoratedPot(DyeColor.WHITE.getId()),
                     KekeBlocks.getDyedDecoratedPot(DyeColor.ORANGE.getId()),
                     KekeBlocks.getDyedDecoratedPot(DyeColor.MAGENTA.getId()),

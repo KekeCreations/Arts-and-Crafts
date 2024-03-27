@@ -1,10 +1,10 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
-import com.kekecreations.arts_and_crafts.common.tree_grower.CorkTreeGrower;
-import com.kekecreations.arts_and_crafts.core.misc.KekeBlockSetType;
-import com.kekecreations.arts_and_crafts.core.misc.KekeWoodType;
-import com.kekecreations.arts_and_crafts.core.misc.NaturalDyeColor;
+import com.kekecreations.arts_and_crafts.common.block.grower.CorkTreeGrower;
+import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
+import com.kekecreations.arts_and_crafts.common.misc.KekeWoodType;
+import com.kekecreations.arts_and_crafts.common.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.RegistryHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
@@ -194,7 +194,7 @@ public class KekeBlocks {
 
 
             //DYED DECORATED POTS
-            DYED_DECORATED_POTS.put(colours, RegistryHelper.registerBlock(colours + "_decorated_pot", () -> new CustomDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
+            DYED_DECORATED_POTS.put(colours, RegistryHelper.registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
         }
     }
 

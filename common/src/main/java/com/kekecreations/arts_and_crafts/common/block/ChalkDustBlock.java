@@ -1,17 +1,14 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
-import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
-import com.kekecreations.arts_and_crafts.core.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.MultifaceSpreader;

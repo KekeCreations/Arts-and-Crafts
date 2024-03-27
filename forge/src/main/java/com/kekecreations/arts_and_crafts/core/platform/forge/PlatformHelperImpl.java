@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.platform.forge;
 
 import com.kekecreations.arts_and_crafts.core.platform.PlatformHelper;
-import com.kekecreations.arts_and_crafts.forge.registry.KekeForgeBlocks;
+import com.kekecreations.arts_and_crafts.core.forge.registry.KekeForgeBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;

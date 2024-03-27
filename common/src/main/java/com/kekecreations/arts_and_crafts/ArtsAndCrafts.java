@@ -12,8 +12,6 @@ public class ArtsAndCrafts {
         KekeBlocks.register();
         KekeItems.register();
         KekeCustomSherdPatterns.register();
-        
-        System.out.println(ExampleExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 
 
