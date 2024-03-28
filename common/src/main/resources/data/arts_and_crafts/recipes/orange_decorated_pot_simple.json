@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    "#-#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brick"
+    },
+    "-": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "result": {
+    "item": "arts_and_crafts:orange_decorated_pot"
+  }
+}
