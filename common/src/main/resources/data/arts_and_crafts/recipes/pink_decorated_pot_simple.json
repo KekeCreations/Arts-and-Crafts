@@ -1,19 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "pattern": [
-    " # ",
-    "#-#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:brick"
+  "ingredients": [
+    {
+      "tag": "arts_and_crafts:decorated_pots"
     },
-    "-": {
+    {
       "item": "minecraft:pink_dye"
     }
-  },
+  ],
   "result": {
     "item": "arts_and_crafts:pink_decorated_pot"
   }

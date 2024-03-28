@@ -12,6 +12,7 @@ public class ArtsAndCrafts {
         KekeBlocks.register();
         KekeItems.register();
         KekeCustomSherdPatterns.register();
+        KekeRecipeSerializer.register();
     }
 
 

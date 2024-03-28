@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
@@ -7,6 +8,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,6 +24,15 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
         appendLogsThatBurn();
         appendWoodenButtons();
         appendDecoratedPotSherds();
+        appendDecoratedPots();
+    }
+    private void appendDecoratedPots() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.DECORATED_POTS)
+                    .setReplace(false)
+                    .add(Items.DECORATED_POT)
+                    .add(KekeItems.getDyedDecoratedPotBlockItem(colours));
+        }
     }
     private void appendDecoratedPotSherds() {
         this.getOrCreateTagBuilder(ItemTags.DECORATED_POT_SHERDS)
