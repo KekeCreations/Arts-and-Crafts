@@ -61,6 +61,7 @@ public class KekeItemGroupEvents {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColorByGradient colours : DyeColorByGradient.values()) {
                 event.addAfter(Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
+                event.addAfter(KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
             event.addAfter(Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
             event.addAfter(KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
