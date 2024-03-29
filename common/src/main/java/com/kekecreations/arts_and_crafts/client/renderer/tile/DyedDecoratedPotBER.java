@@ -5,8 +5,6 @@ import com.kekecreations.arts_and_crafts.common.util.DyedDecoratedPotUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.geom.ModelPart;
@@ -27,7 +25,6 @@ import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 
 import java.util.Objects;
 
-@Environment(EnvType.CLIENT)
 public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPotBlockEntity> {
     private static final String NECK = "neck";
     private static final String FRONT = "front";

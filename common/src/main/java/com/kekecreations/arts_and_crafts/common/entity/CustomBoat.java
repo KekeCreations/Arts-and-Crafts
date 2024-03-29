@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.entity;
 
-import com.kekecreations.arts_and_crafts.core.platform.PlatformHelper;
+import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.nbt.CompoundTag;
@@ -72,7 +73,7 @@ public class CustomBoat extends Boat implements CustomBoatAccessor {
 
     public enum WoodType implements StringRepresentable {
         OAK(Blocks.OAK_PLANKS, "oak"),
-        CORK(PlatformHelper.corkPlanks(), "cork");
+        CORK(KekeBlocks.CORK_PLANKS.get(), "cork");
 
         private final String name;
         private final Block planks;

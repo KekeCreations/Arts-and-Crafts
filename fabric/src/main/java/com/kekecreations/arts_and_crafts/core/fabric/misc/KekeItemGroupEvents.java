@@ -3,7 +3,7 @@ package com.kekecreations.arts_and_crafts.core.fabric.misc;
 import com.kekecreations.arts_and_crafts.common.util.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
@@ -54,8 +54,8 @@ public class KekeItemGroupEvents {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
             event.accept(KekeBlocks.SOAPSTONE.get());
-            event.addAfter(Blocks.ACACIA_LOG, KekeFabricBlocks.CORK_LOG.get());
-            event.addAfter(Blocks.ACACIA_LEAVES, KekeFabricBlocks.CORK_LEAVES.get());
+            event.addAfter(Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
+            event.addAfter(Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
             event.addAfter(Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
@@ -74,18 +74,18 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeItems.CORK_SIGN.get(), KekeItems.CORK_HANGING_SIGN.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
-            event.addAfter(Blocks.ACACIA_BUTTON, KekeFabricBlocks.CORK_LOG.get());
-            event.addAfter(KekeFabricBlocks.CORK_LOG.get(), KekeFabricBlocks.CORK_WOOD.get());
-            event.addAfter(KekeFabricBlocks.CORK_WOOD.get(), KekeFabricBlocks.STRIPPED_CORK_LOG.get());
-            event.addAfter(KekeFabricBlocks.STRIPPED_CORK_LOG.get(), KekeFabricBlocks.STRIPPED_CORK_WOOD.get());
-            event.addAfter(KekeFabricBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get());
+            event.addAfter(Blocks.ACACIA_BUTTON, KekeBlocks.CORK_LOG.get());
+            event.addAfter(KekeBlocks.CORK_LOG.get(), KekeBlocks.CORK_WOOD.get());
+            event.addAfter(KekeBlocks.CORK_WOOD.get(), KekeBlocks.STRIPPED_CORK_LOG.get());
+            event.addAfter(KekeBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.STRIPPED_CORK_WOOD.get());
+            event.addAfter(KekeBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get());
             event.addAfter(KekeBlocks.CORK.get(), KekeBlocks.SMOOTH_CORK.get());
-            event.addAfter(KekeBlocks.SMOOTH_CORK.get(), KekeFabricBlocks.CORK_PLANKS.get());
-            event.addAfter(KekeFabricBlocks.CORK_PLANKS.get(), KekeFabricBlocks.CORK_STAIRS.get());
-            event.addAfter(KekeFabricBlocks.CORK_STAIRS.get(), KekeFabricBlocks.CORK_SLAB.get());
-            event.addAfter(KekeFabricBlocks.CORK_SLAB.get(), KekeFabricBlocks.CORK_FENCE.get());
-            event.addAfter(KekeFabricBlocks.CORK_FENCE.get(), KekeFabricBlocks.CORK_FENCE_GATE.get());
-            event.addAfter(KekeFabricBlocks.CORK_FENCE_GATE.get(), KekeBlocks.CORK_DOOR.get());
+            event.addAfter(KekeBlocks.SMOOTH_CORK.get(), KekeBlocks.CORK_PLANKS.get());
+            event.addAfter(KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_STAIRS.get());
+            event.addAfter(KekeBlocks.CORK_STAIRS.get(), KekeBlocks.CORK_SLAB.get());
+            event.addAfter(KekeBlocks.CORK_SLAB.get(), KekeBlocks.CORK_FENCE.get());
+            event.addAfter(KekeBlocks.CORK_FENCE.get(), KekeBlocks.CORK_FENCE_GATE.get());
+            event.addAfter(KekeBlocks.CORK_FENCE_GATE.get(), KekeBlocks.CORK_DOOR.get());
             event.addAfter(KekeBlocks.CORK_DOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
             event.addAfter(KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_PRESSURE_PLATE.get());
             event.addAfter(KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_BUTTON.get());

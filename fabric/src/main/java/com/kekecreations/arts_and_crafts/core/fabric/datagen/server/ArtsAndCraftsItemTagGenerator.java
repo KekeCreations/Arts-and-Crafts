@@ -3,12 +3,13 @@ package com.kekecreations.arts_and_crafts.core.fabric.datagen.server;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -25,6 +26,14 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
         appendWoodenButtons();
         appendDecoratedPotSherds();
         appendDecoratedPots();
+        appendDyes();
+    }
+    private void appendDyes() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.DYES)
+                    .setReplace(false)
+                    .add(DyeItem.byColor(colours));
+        }
     }
     private void appendDecoratedPots() {
         for (DyeColor colours : DyeColor.values()) {
@@ -43,7 +52,7 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
     private void appendPlanks() {
         this.getOrCreateTagBuilder(ItemTags.PLANKS)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_PLANKS.get().asItem());
+                .add(KekeBlocks.CORK_PLANKS.get().asItem());
     }
     private void appendWoodenButtons() {
         this.getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
@@ -53,9 +62,9 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
     private void appendLogsThatBurn() {
         this.getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_LOG.get().asItem())
-                .add(KekeFabricBlocks.STRIPPED_CORK_LOG.get().asItem())
-                .add(KekeFabricBlocks.CORK_WOOD.get().asItem())
-                .add(KekeFabricBlocks.STRIPPED_CORK_WOOD.get().asItem());
+                .add(KekeBlocks.CORK_LOG.get().asItem())
+                .add(KekeBlocks.STRIPPED_CORK_LOG.get().asItem())
+                .add(KekeBlocks.CORK_WOOD.get().asItem())
+                .add(KekeBlocks.STRIPPED_CORK_WOOD.get().asItem());
     }
 }

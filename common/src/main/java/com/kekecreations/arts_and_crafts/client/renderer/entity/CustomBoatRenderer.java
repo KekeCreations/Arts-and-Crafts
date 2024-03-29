@@ -8,8 +8,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Axis;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.ListModel;
@@ -30,7 +28,6 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 
-@Environment(value= EnvType.CLIENT)
 public class CustomBoatRenderer  extends EntityRenderer<Boat> {
     public static final ModelLayerLocation BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "boat"), "main");
     public static final ModelLayerLocation CHEST_BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "chest_boat"), "main");

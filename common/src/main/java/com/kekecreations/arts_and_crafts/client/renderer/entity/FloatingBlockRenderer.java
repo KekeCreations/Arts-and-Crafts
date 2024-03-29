@@ -2,8 +2,6 @@ package com.kekecreations.arts_and_crafts.client.renderer.entity;
 
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.BlockRenderDispatcher;
@@ -14,12 +12,10 @@ import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 
-@Environment(value= EnvType.CLIENT)
 public class FloatingBlockRenderer extends EntityRenderer<FloatingBlockEntity> {
     private final BlockRenderDispatcher dispatcher;
 

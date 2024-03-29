@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
@@ -20,55 +21,24 @@ import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.ShulkerBoxBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import org.jetbrains.annotations.NotNull;
 
 public class DyedDecoratedPotRecipe extends CustomRecipe {
     public DyedDecoratedPotRecipe(ResourceLocation resourceLocation, CraftingBookCategory craftingBookCategory) {
         super(resourceLocation, craftingBookCategory);
     }
 
-    public boolean matches(CraftingContainer craftingContainer, Level level) {
-        /*
-        if (!this.canCraftInDimensions(craftingContainer.getWidth(), craftingContainer.getHeight())) {
-            return false;
-        } else {
-            for(int i = 0; i < craftingContainer.getContainerSize(); ++i) {
-                ItemStack itemStack = craftingContainer.getItem(i);
-                switch (i) {
-                    case 1:
-                        if (!(itemStack.is(Items.RED_DYE))) {
-                            return false;
-                        }
-                        break;
-                    case 3:
-                    case 5:
-                    case 7:
-                        if (!itemStack.is(ItemTags.DECORATED_POT_INGREDIENTS)) {
-                            return false;
-                        }
-                        break;
-                    case 2:
-                    case 4:
-                    case 6:
-                    default:
-                        if (!itemStack.is(Items.AIR)) {
-                            return false;
-                        }
-                }
-            }
-
-            return true;
-        }
-         */
+    public boolean matches(CraftingContainer craftingContainer, @NotNull Level level) {
         int i = 0;
         int j = 0;
 
         for(int k = 0; k < craftingContainer.getContainerSize(); ++k) {
             ItemStack itemStack = craftingContainer.getItem(k);
             if (!itemStack.isEmpty()) {
-                if (((itemStack.getItem()) instanceof DyedDecoratedPotBlockItem || itemStack.is(Items.DECORATED_POT)) && itemStack.hasTag()) {
+                if (itemStack.is(ArtsAndCraftsTags.ItemTags.DECORATED_POTS)) {
                     ++i;
                 } else {
-                    if (!(itemStack.getItem() instanceof DyeItem)) {
+                    if (!(itemStack.is(ArtsAndCraftsTags.ItemTags.DYES))) {
                         return false;
                     }
 
@@ -84,7 +54,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public ItemStack assemble(CraftingContainer craftingContainer, RegistryAccess registryAccess) {
+    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull RegistryAccess registryAccess) {
         ItemStack itemStack = ItemStack.EMPTY;
         DyeItem dyeItem = (DyeItem)Items.WHITE_DYE;
 
@@ -102,6 +72,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
 
         ItemStack itemStack3 = DyedDecoratedPotBlock.getColoredItemStack(dyeItem.getDyeColor());
         if (itemStack.hasTag()) {
+            assert itemStack.getTag() != null;
             itemStack3.setTag(itemStack.getTag().copy());
         }
 
@@ -113,7 +84,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
     }
 
     public RecipeSerializer<?> getSerializer() {
-        return KekeRecipeSerializer.DYED_DECORATED_POT_RECIPE;
+        return KekeRecipeSerializer.DYED_DECORATED_POT_RECIPE.get();
     }
 
 }

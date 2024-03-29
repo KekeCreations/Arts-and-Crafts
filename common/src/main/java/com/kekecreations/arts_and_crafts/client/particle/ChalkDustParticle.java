@@ -1,7 +1,5 @@
 package com.kekecreations.arts_and_crafts.client.particle;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
@@ -9,7 +7,6 @@ import net.minecraft.client.particle.SimpleAnimatedParticle;
 import net.minecraft.client.particle.SpriteSet;
 import net.minecraft.core.particles.SimpleParticleType;
 
-@Environment(EnvType.CLIENT)
 public class ChalkDustParticle extends SimpleAnimatedParticle {
     double velX;
     double velY;
@@ -41,7 +38,6 @@ public class ChalkDustParticle extends SimpleAnimatedParticle {
         velZ += (float) random.nextIntBetweenInclusive(-magnitude, magnitude) / smoothness;
     }
 
-    @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet spriteProvider;
 

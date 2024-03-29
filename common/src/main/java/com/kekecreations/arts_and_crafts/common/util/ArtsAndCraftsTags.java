@@ -12,6 +12,9 @@ public class ArtsAndCraftsTags {
         public static final TagKey<Item> DECORATED_POTS
                 = tag("decorated_pots");
 
+        public static final TagKey<Item> DYES
+                = tag("dyes");
+
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));

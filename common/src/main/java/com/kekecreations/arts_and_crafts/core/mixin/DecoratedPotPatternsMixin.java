@@ -16,11 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(DecoratedPotPatterns.class)
 public abstract class DecoratedPotPatternsMixin {
 
-    @Shadow
-    @Nullable
-    public static ResourceKey<String> getResourceKey(Item arg) {
-        return null;
-    }
 
     @Inject(method = "getResourceKey", at = @At("RETURN"), cancellable = true)
     private static void arts_and_crafts_addedPatterns(Item item, CallbackInfoReturnable<ResourceKey<String>> cir) {

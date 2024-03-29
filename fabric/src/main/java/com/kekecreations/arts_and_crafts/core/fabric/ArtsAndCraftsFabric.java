@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts.core.fabric;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.fabric.misc.KekeItemGroupEvents;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -15,7 +15,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
     public void onInitialize() {
         ArtsAndCrafts.init();
         KekeItemGroupEvents.add();
-        KekeFabricBlocks.register();
+        KekeFabricFlammableAndStrippableBlocks.register();
         createBiomeModifications();
     }
 

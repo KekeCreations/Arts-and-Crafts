@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.kekecreations.arts_and_crafts.core.forge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "DyedDecoratedPotBlockItemSelfMixin",
+    "FlammableBlockSelfMixin",
+    "FlammableFenceBlockSelfMixin",
+    "FlammableFenceGateBlockSelfMixin",
+    "FlammableLeavesBlockSelfMixin",
+    "FlammableRotatedPillarBlockSelfMixin",
+    "FlammableSlabBlockSelfMixin",
+    "FlammableStairBlockSelfMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

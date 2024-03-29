@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen.server;
 
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -51,7 +51,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendPlanks() {
         this.getOrCreateTagBuilder(BlockTags.PLANKS)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_PLANKS.get());
+                .add(KekeBlocks.CORK_PLANKS.get());
     }
     private void appendWoodenButtons() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
@@ -61,7 +61,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendWoodenFences() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_FENCE.get());
+                .add(KekeBlocks.CORK_FENCE.get());
     }
     private void appendWoodenPressurePlates() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
@@ -76,7 +76,7 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendFenceGates() {
         this.getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_FENCE_GATE.get());
+                .add(KekeBlocks.CORK_FENCE_GATE.get());
     }
     private void appendWoodenDoors() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
@@ -86,12 +86,12 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendWoodenSlabs() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_SLAB.get());
+                .add(KekeBlocks.CORK_SLAB.get());
     }
     private void appendWoodenStairs() {
         this.getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_STAIRS.get());
+                .add(KekeBlocks.CORK_STAIRS.get());
     }
     private void appendAxes() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
@@ -102,20 +102,20 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
     private void appendHoes() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_LEAVES.get());
+                .add(KekeBlocks.CORK_LEAVES.get());
     }
     private void appendLeaves() {
         this.getOrCreateTagBuilder(BlockTags.LEAVES)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_LEAVES.get());
+                .add(KekeBlocks.CORK_LEAVES.get());
     }
     private void appendLogsThatBurn() {
         this.getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .setReplace(false)
-                .add(KekeFabricBlocks.CORK_LOG.get())
-                .add(KekeFabricBlocks.STRIPPED_CORK_LOG.get())
-                .add(KekeFabricBlocks.CORK_WOOD.get())
-                .add(KekeFabricBlocks.STRIPPED_CORK_WOOD.get());
+                .add(KekeBlocks.CORK_LOG.get())
+                .add(KekeBlocks.STRIPPED_CORK_LOG.get())
+                .add(KekeBlocks.CORK_WOOD.get())
+                .add(KekeBlocks.STRIPPED_CORK_WOOD.get());
     }
     private void appendSaplings() {
         this.getOrCreateTagBuilder(BlockTags.SAPLINGS)

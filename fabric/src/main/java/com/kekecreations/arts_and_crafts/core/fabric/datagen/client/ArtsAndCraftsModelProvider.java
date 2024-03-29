@@ -3,7 +3,7 @@ package com.kekecreations.arts_and_crafts.core.fabric.datagen.client;
 import com.kekecreations.arts_and_crafts.core.fabric.misc.KekeBlockFamilies;
 import com.kekecreations.arts_and_crafts.core.fabric.misc.KekeModelTemplates;
 import com.kekecreations.arts_and_crafts.core.fabric.misc.KekeTextureMapping;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -93,12 +93,12 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
 
 
-        blockStateModelGenerator.woodProvider(KekeFabricBlocks.CORK_LOG.get()).logWithHorizontal(KekeFabricBlocks.CORK_LOG.get()).wood(KekeFabricBlocks.CORK_WOOD.get());
-        blockStateModelGenerator.woodProvider(KekeFabricBlocks.STRIPPED_CORK_LOG.get()).logWithHorizontal(KekeFabricBlocks.STRIPPED_CORK_LOG.get()).wood(KekeFabricBlocks.STRIPPED_CORK_WOOD.get());
-        blockStateModelGenerator.createHangingSign(KekeFabricBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get());
+        blockStateModelGenerator.woodProvider(KekeBlocks.CORK_LOG.get()).logWithHorizontal(KekeBlocks.CORK_LOG.get()).wood(KekeBlocks.CORK_WOOD.get());
+        blockStateModelGenerator.woodProvider(KekeBlocks.STRIPPED_CORK_LOG.get()).logWithHorizontal(KekeBlocks.STRIPPED_CORK_LOG.get()).wood(KekeBlocks.STRIPPED_CORK_WOOD.get());
+        blockStateModelGenerator.createHangingSign(KekeBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK.get());
         blockStateModelGenerator.createTrivialCube(KekeBlocks.SMOOTH_CORK.get());
-        blockStateModelGenerator.createTrivialCube(KekeFabricBlocks.CORK_LEAVES.get());
+        blockStateModelGenerator.createTrivialCube(KekeBlocks.CORK_LEAVES.get());
         blockStateModelGenerator.createPlant(KekeBlocks.CORK_SAPLING.get(), KekeBlocks.POTTED_CORK_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
 
         KekeBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel).forEach(family -> blockStateModelGenerator.family(family.getBaseBlock()).generateFor((BlockFamily)family));
