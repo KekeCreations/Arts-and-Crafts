@@ -13,7 +13,7 @@ public class BlockEntityTypeMixin {
 
 
     @Inject(method = "isValid", at = @At("HEAD"), cancellable = true)
-    private void isValid(BlockState state, CallbackInfoReturnable<Boolean> cir) {
+    private void arts_and_crafts_isValid(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         var $this = BlockEntityType.class.cast(this);
         if ($this == BlockEntityType.SIGN) {
             if (state.is(KekeBlocks.CORK_SIGN.get())) {
