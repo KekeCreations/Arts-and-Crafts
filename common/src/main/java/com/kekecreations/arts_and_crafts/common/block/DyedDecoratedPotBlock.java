@@ -3,13 +3,22 @@ package com.kekecreations.arts_and_crafts.common.block;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.Nullable;
 
 public class DyedDecoratedPotBlock extends DecoratedPotBlock {
@@ -27,6 +36,7 @@ public class DyedDecoratedPotBlock extends DecoratedPotBlock {
         customDecoratedPotBlockEntity.setDyeColor(this.dyeColor.getId());
         return customDecoratedPotBlockEntity;
     }
+
 
 
     public static Block getBlockByColor(@Nullable DyeColor arg) {

@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.entity;
 
+import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,6 +13,8 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.jetbrains.annotations.Nullable;
@@ -20,14 +23,14 @@ import java.util.stream.Stream;
 
 public class DyedDecoratedPotBlockEntity extends BlockEntity {
     public static final String TAG_SHERDS = "sherds";
-    private DyedDecoratedPotBlockEntity.Decorations decorations;
+    private DecoratedPotBlockEntity.Decorations decorations;
 
     private int dyeColor;
 
 
     public DyedDecoratedPotBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
-        this.decorations = DyedDecoratedPotBlockEntity.Decorations.EMPTY;
+        this.decorations = DecoratedPotBlockEntity.Decorations.EMPTY;
         this.dyeColor = DyeColor.BLACK.getId();
     }
 
@@ -48,7 +51,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity {
 
     public void load(CompoundTag compoundTag) {
         super.load(compoundTag);
-        this.decorations = DyedDecoratedPotBlockEntity.Decorations.load(compoundTag);
+        this.decorations = DecoratedPotBlockEntity.Decorations.load(compoundTag);
         this.dyeColor = compoundTag.getInt("colour");
     }
 
@@ -64,73 +67,17 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity {
         return (Direction)this.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
     }
 
-    public DyedDecoratedPotBlockEntity.Decorations getDecorations() {
+    public DecoratedPotBlockEntity.Decorations getDecorations() {
         return this.decorations;
     }
 
-    public void setFromItem(ItemStack itemStack) {
-        this.decorations = DyedDecoratedPotBlockEntity.Decorations.load(BlockItem.getBlockEntityData(itemStack));
+    public void setDecoration(DecoratedPotBlockEntity.Decorations decorations) {
+        this.decorations = decorations;
     }
 
-    public static record Decorations(Item back, Item left, Item right, Item front) {
-        public static final DyedDecoratedPotBlockEntity.Decorations EMPTY;
 
-        public Decorations(Item back, Item left, Item right, Item front) {
-            this.back = back;
-            this.left = left;
-            this.right = right;
-            this.front = front;
-        }
 
-        public CompoundTag save(CompoundTag compoundTag) {
-            ListTag listTag = new ListTag();
-            this.sorted().forEach((item) -> {
-                listTag.add(StringTag.valueOf(BuiltInRegistries.ITEM.getKey(item).toString()));
-            });
-            compoundTag.put("sherds", listTag);
-            return compoundTag;
-        }
-
-        public Stream<Item> sorted() {
-            return Stream.of(this.back, this.left, this.right, this.front);
-        }
-
-        public static DyedDecoratedPotBlockEntity.Decorations load(@Nullable CompoundTag compoundTag) {
-            if (compoundTag != null && compoundTag.contains("sherds", 9)) {
-                ListTag listTag = compoundTag.getList("sherds", 8);
-                return new DyedDecoratedPotBlockEntity.Decorations(itemFromTag(listTag, 0), itemFromTag(listTag, 1), itemFromTag(listTag, 2), itemFromTag(listTag, 3));
-            } else {
-                return EMPTY;
-            }
-        }
-
-        private static Item itemFromTag(ListTag listTag, int i) {
-            if (i >= listTag.size()) {
-                return Items.BRICK;
-            } else {
-                Tag tag = listTag.get(i);
-                return (Item)BuiltInRegistries.ITEM.get(new ResourceLocation(tag.getAsString()));
-            }
-        }
-
-        public Item back() {
-            return this.back;
-        }
-
-        public Item left() {
-            return this.left;
-        }
-
-        public Item right() {
-            return this.right;
-        }
-
-        public Item front() {
-            return this.front;
-        }
-
-        static {
-            EMPTY = new DyedDecoratedPotBlockEntity.Decorations(Items.BRICK, Items.BRICK, Items.BRICK, Items.BRICK);
-        }
+    public void setFromItem(ItemStack itemStack) {
+        this.decorations = DecoratedPotBlockEntity.Decorations.load(BlockItem.getBlockEntityData(itemStack));
     }
 }

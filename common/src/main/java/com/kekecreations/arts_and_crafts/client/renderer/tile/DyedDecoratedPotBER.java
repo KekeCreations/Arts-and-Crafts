@@ -21,6 +21,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 
 import java.util.Objects;
@@ -68,7 +69,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         this.neck.render(poseStack, vertexConsumer, i, j);
         this.top.render(poseStack, vertexConsumer, i, j);
         this.bottom.render(poseStack, vertexConsumer, i, j);
-        DyedDecoratedPotBlockEntity.Decorations decorations = decoratedPotBlockEntity.getDecorations();
+        DecoratedPotBlockEntity.Decorations decorations = decoratedPotBlockEntity.getDecorations();
         this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front(), decoratedPotBlockEntity);
         this.renderSide(this.backSide, poseStack, multiBufferSource, i, j,  decorations.back(),  decoratedPotBlockEntity);
         this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j,  decorations.left(), decoratedPotBlockEntity);
