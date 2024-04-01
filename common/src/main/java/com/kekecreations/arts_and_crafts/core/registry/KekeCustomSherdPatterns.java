@@ -7,6 +7,8 @@ import net.minecraft.resources.ResourceKey;
 public class KekeCustomSherdPatterns {
 
     public static final ResourceKey<String> ROLL_POTTERY_PATTERN = create("roll_pottery_pattern");
+    public static final ResourceKey<String> IMPOSTER_POTTERY_PATTERN = create("imposter_pottery_pattern");
+    public static final ResourceKey<String> POT_POTTERY_PATTERN = create("pot_pottery_pattern");
 
 
     //DYED POT BASES

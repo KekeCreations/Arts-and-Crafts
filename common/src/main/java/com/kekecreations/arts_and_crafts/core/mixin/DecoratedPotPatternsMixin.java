@@ -21,12 +21,20 @@ public abstract class DecoratedPotPatternsMixin {
         if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
             cir.setReturnValue(KekeCustomSherdPatterns.ROLL_POTTERY_PATTERN);
         }
+        if (item == KekeItems.IMPOSTER_POTTERY_SHERD.get()) {
+            cir.setReturnValue(KekeCustomSherdPatterns.IMPOSTER_POTTERY_PATTERN);
+        }
+        if (item == KekeItems.POT_POTTERY_SHERD.get()) {
+            cir.setReturnValue(KekeCustomSherdPatterns.POT_POTTERY_PATTERN);
+        }
     }
 
     @Inject(method = "bootstrap", at = @At("TAIL"))
     private static void arts_and_crafts_bootstrap(Registry<String> registry, CallbackInfoReturnable<String> cir) {
         //NORMAL
         Registry.register(registry, KekeCustomSherdPatterns.ROLL_POTTERY_PATTERN, "roll_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.POT_POTTERY_PATTERN, "pot_pottery_pattern");
+        Registry.register(registry, KekeCustomSherdPatterns.IMPOSTER_POTTERY_PATTERN, "imposter_pottery_pattern");
         //BLACK
         Registry.register(registry, KekeCustomSherdPatterns.BLACK_DECORATED_POT_BASE, "black_decorated_pot_base");
         //BLUE

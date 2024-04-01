@@ -37,6 +37,10 @@ public class KekeItems {
 
     public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", () -> new Item(new Item.Properties()));
 
+    public static final Supplier<Item> IMPOSTER_POTTERY_SHERD = registerItem("imposter_pottery_sherd", () -> new Item(new Item.Properties()));
+
+    public static final Supplier<Item> POT_POTTERY_SHERD = registerItem("pot_pottery_sherd", () -> new Item(new Item.Properties()));
+
 
 
 

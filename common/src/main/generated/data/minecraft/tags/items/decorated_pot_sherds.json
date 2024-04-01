@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "arts_and_crafts:roll_pottery_sherd"
+    "arts_and_crafts:roll_pottery_sherd",
+    "arts_and_crafts:imposter_pottery_sherd",
+    "arts_and_crafts:pot_pottery_sherd"
   ]
 }
