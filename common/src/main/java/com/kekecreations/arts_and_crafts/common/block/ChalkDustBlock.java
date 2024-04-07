@@ -59,9 +59,6 @@ public class ChalkDustBlock extends MultifaceBlock {
     public int getChalkDustStates(BlockState blockState) {
         return blockState.getValue(this.getChalkDustProperty());
     }
-    public BlockState getStateForDust(int i) {
-        return this.defaultBlockState().setValue(this.getChalkDustProperty(), i);
-    }
     public final boolean isMaxState(BlockState blockState) {
         return this.getChalkDustStates(blockState) >= this.getMaxState();
     }

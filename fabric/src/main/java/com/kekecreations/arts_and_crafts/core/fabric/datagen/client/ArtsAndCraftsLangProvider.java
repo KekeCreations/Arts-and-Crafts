@@ -101,6 +101,11 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
         translationBuilder.add(KekeEntityTypes.BOAT.get(), "Boat");
         translationBuilder.add(KekeEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
+
+        //ETC
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_0", "Dot Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_1", "Vertical Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_2", "Horizontal Line Pattern");
     }
 }
 

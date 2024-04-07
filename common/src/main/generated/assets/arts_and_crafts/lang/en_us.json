@@ -391,5 +391,8 @@
   "item.arts_and_crafts.white_chalk_stick": "White Chalk Stick",
   "item.arts_and_crafts.white_paintbrush": "White Paintbrush",
   "item.arts_and_crafts.yellow_chalk_stick": "Yellow Chalk Stick",
-  "item.arts_and_crafts.yellow_paintbrush": "Yellow Paintbrush"
+  "item.arts_and_crafts.yellow_paintbrush": "Yellow Paintbrush",
+  "tooltip.arts_and_crafts.chalk_pattern_0": "Dot Pattern",
+  "tooltip.arts_and_crafts.chalk_pattern_1": "Vertical Line Pattern",
+  "tooltip.arts_and_crafts.chalk_pattern_2": "Horizontal Line Pattern"
 }
