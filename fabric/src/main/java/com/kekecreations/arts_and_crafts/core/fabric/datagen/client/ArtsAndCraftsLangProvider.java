@@ -47,6 +47,11 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringNaturalColour + " Soapstone Brick Wall");
             translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringNaturalColour + " Soapstone Brick Stairs");
 
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), stringNaturalColour + " Polished Soapstone");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), stringNaturalColour + " Polished Soapstone Slab");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), stringNaturalColour + " Polished Soapstone Wall");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringNaturalColour + " Polished Soapstone Stairs");
+
             translationBuilder.add(KekeBlocks.getDyedDecoratedPot(colours.getId()), stringColour + " Decorated Pot");
         }
         //BLOCKS
@@ -62,6 +67,10 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), "Soapstone Brick Slab");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), "Soapstone Brick Wall");
         translationBuilder.add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
+        translationBuilder.add(KekeBlocks.POLISHED_SOAPSTONE.get(), "Polished Soapstone");
+        translationBuilder.add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), "Polished Soapstone Slab");
+        translationBuilder.add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), "Polished Soapstone Wall");
+        translationBuilder.add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), "Polished Soapstone Stairs");
         translationBuilder.add(KekeBlocks.CORK_PLANKS.get(), "Cork Planks");
         translationBuilder.add(KekeBlocks.CORK_LOG.get(), "Cork Log");
         translationBuilder.add(KekeBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");

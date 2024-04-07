@@ -22,6 +22,8 @@ public class KekeBlockFamilies {
             KekeBlockFamilies.register(KekeBlocks.getDyedSoapstone(colours.getId())).slab(KekeBlocks.getDyedSoapstoneSlab(colours.getId())).stairs(KekeBlocks.getDyedSoapstoneStairs(colours.getId())).wall(KekeBlocks.getDyedSoapstoneWall(colours.getId())).getFamily();
 
             KekeBlockFamilies.register(KekeBlocks.getDyedSoapstoneBricks(colours.getId())).slab(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId())).stairs(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId())).wall(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId())).getFamily();
+
+            KekeBlockFamilies.register(KekeBlocks.getDyedPolishedSoapstone(colours.getId())).slab(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId())).stairs(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId())).wall(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId())).getFamily();
         }
     }
 
@@ -29,6 +31,8 @@ public class KekeBlockFamilies {
     public static final BlockFamily TERRACOTTA_SHINGLES = KekeBlockFamilies.register(KekeBlocks.TERRACOTTA_SHINGLES.get()).slab(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get()).wall(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get()).stairs(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get()).getFamily();
 
     public static final BlockFamily SOAPSTONE = KekeBlockFamilies.register(KekeBlocks.SOAPSTONE.get()).slab(KekeBlocks.SOAPSTONE_SLAB.get()).wall(KekeBlocks.SOAPSTONE_WALL.get()).stairs(KekeBlocks.SOAPSTONE_STAIRS.get()).getFamily();
+
+    public static final BlockFamily POLISHED_SOAPSTONE = KekeBlockFamilies.register(KekeBlocks.POLISHED_SOAPSTONE.get()).slab(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get()).wall(KekeBlocks.POLISHED_SOAPSTONE_WALL.get()).stairs(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get()).getFamily();
 
     public static final BlockFamily SOAPSTONE_BRICKS = KekeBlockFamilies.register(KekeBlocks.SOAPSTONE_BRICKS.get()).slab(KekeBlocks.SOAPSTONE_BRICK_SLAB.get()).wall(KekeBlocks.SOAPSTONE_BRICK_WALL.get()).stairs(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get()).getFamily();
 

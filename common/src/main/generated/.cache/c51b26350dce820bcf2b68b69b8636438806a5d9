@@ -1,21 +1,21 @@
-// 1.20.1	2024-03-29T18:26:57.1216197	Arts & Crafts/Tags for minecraft:block
+// 1.20.1	2024-04-07T09:40:48.4671487	Arts & Crafts/Tags for minecraft:block
 5169473510b68bdfc2c32838f6366fb9a79be6db data\minecraft\tags\blocks\logs_that_burn.json
 1c20832b77f1f21ae822ba88208ca81857d320fc data\minecraft\tags\blocks\leaves.json
 bb0c00ab04e5ac9d086454d19616fca4b810502b data\minecraft\tags\blocks\wooden_trapdoors.json
 02508f8339a4adcb82a122a9edfd0431a325cd82 data\minecraft\tags\blocks\wooden_stairs.json
-f282cb7139f1cda0a64a3d4ec0194a23a34d9719 data\minecraft\tags\blocks\stairs.json
+154bbc55cdcea483296aea70805d072dda861961 data\minecraft\tags\blocks\stairs.json
 4efdcce83e116e4ed88bad48452b60933eb8d99e data\minecraft\tags\blocks\wooden_slabs.json
-8c03f127dde72405502254c43d07da46d3684060 data\minecraft\tags\blocks\mineable\pickaxe.json
+83b608687a06e94ac35caa19c64d87984d46d35b data\minecraft\tags\blocks\mineable\pickaxe.json
 b78113d5ff29ff08f6baea2eb78b7de373eb80df data\minecraft\tags\blocks\wooden_buttons.json
 fba838f2e070a0eb6e64c5f86a81a0f02bfe7e20 data\minecraft\tags\blocks\flower_pots.json
 131dfcbbba67a18dd9a1fd577166c16cdabb9f62 data\minecraft\tags\blocks\wooden_fences.json
-efab09f39bd53e203fe651aed26aa2b2c45a100b data\minecraft\tags\blocks\slabs.json
+c3b55b652234c5156c279a57cc4e6768caa198cb data\minecraft\tags\blocks\slabs.json
 1c20832b77f1f21ae822ba88208ca81857d320fc data\minecraft\tags\blocks\mineable\hoe.json
 5613979059ac4f04b227c5647a18a3f4852b3f70 data\minecraft\tags\blocks\mineable\axe.json
 01b5e25afc80f9563f71ffca016b96e1abc5682b data\minecraft\tags\blocks\hoglin_repellents.json
 5b8eb4c87c1b83f78522c53cc4938dd127090c02 data\minecraft\tags\blocks\fence_gates.json
 99b245e429cf59ff96c6244cf19ce7fbf33df743 data\minecraft\tags\blocks\planks.json
 412336b3c45e233d2827387f791bd8f688b268b8 data\minecraft\tags\blocks\saplings.json
-797716740fed41a76859dacb12a46031a3ff2f9e data\minecraft\tags\blocks\walls.json
+38a4009c49146b165378f3c8a82bfbd2995ec1eb data\minecraft\tags\blocks\walls.json
 3fa189708330aa07fa812900f17f55f0ff14ba84 data\minecraft\tags\blocks\wooden_doors.json
 df15bdf8e69aa2bf0b980b023b050c1d1054ad22 data\minecraft\tags\blocks\wooden_pressure_plates.json

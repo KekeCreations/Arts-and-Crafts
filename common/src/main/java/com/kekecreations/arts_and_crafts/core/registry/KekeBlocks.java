@@ -81,6 +81,11 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_WALL = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_STAIRS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_WALL = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_STAIRS = new HashMap<>();
+
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DECORATED_POTS = new HashMap<>();
 
     //NORMAL TERRACOTTA SHINGLES
@@ -101,8 +106,12 @@ public class KekeBlocks {
     public static final Supplier<WallBlock> SOAPSTONE_BRICK_WALL = registerBlockWithItem("soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
     public static final Supplier<CustomStairBlock> SOAPSTONE_BRICK_STAIRS = registerBlockWithItem("soapstone_brick_stairs", () -> new CustomStairBlock(SOAPSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
 
+    public static final Supplier<Block> POLISHED_SOAPSTONE = registerBlockWithItem("polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
+    public static final Supplier<SlabBlock> POLISHED_SOAPSTONE_SLAB = registerBlockWithItem("polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_SOAPSTONE.get())));
+    public static final Supplier<WallBlock> POLISHED_SOAPSTONE_WALL = registerBlockWithItem("polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_SOAPSTONE.get())));
+    public static final Supplier<CustomStairBlock> POLISHED_SOAPSTONE_STAIRS = registerBlockWithItem("polished_soapstone_stairs", () -> new CustomStairBlock(POLISHED_SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
 
-    //CORK - FLAMMABLE BLOCKS & STRIPPABLE BLOCKS ARE REGISTERED DIFFERENTLY
+    //CORK
     public static final Supplier<CustomTrapDoorBlock> CORK_TRAPDOOR = registerBlockWithItem("cork_trapdoor", () -> new CustomTrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(KekeBlocks::never).ignitedByLava(), KekeBlockSetType.CORK));
     public static final Supplier<CustomDoorBlock> CORK_DOOR = registerBlockWithItem("cork_door", () -> new CustomDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK));
     public static final Supplier<StandingSignBlock> CORK_SIGN = registerBlock("cork_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), KekeWoodType.CORK));
@@ -137,8 +146,6 @@ public class KekeBlocks {
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
 
-    //public static final Supplier<CustomDecoratedPotBlock> GREEN_DECORATED_POT = RegistryHelper.registerBlock("green_decorated_pot", () -> new CustomDecoratedPotBlock(BlockBehaviour.Properties.copy(Blocks.DECORATED_POT)));
-
 
 
     static {
@@ -159,6 +166,11 @@ public class KekeBlocks {
             DYED_SOAPSTONE_BRICK_SLAB.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
             DYED_SOAPSTONE_BRICK_WALL.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
             DYED_SOAPSTONE_BRICK_STAIRS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+
+            DYED_POLISHED_SOAPSTONE.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
+            DYED_POLISHED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_stairs", () -> new CustomStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
 
             //CHALK
             CHALK.put(colours, registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
@@ -370,6 +382,19 @@ public class KekeBlocks {
     }
     public static Block getDyedSoapstoneBrickStairs(int colours){
         return DYED_SOAPSTONE_BRICK_STAIRS.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedPolishedSoapstone(int colours){
+        return DYED_POLISHED_SOAPSTONE.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedPolishedSoapstoneSlab(int colours){
+        return DYED_POLISHED_SOAPSTONE_SLAB.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedPolishedSoapstoneWall(int colours){
+        return DYED_POLISHED_SOAPSTONE_WALL.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedPolishedSoapstoneStairs(int colours){
+        return DYED_POLISHED_SOAPSTONE_STAIRS.get(DyeColor.byId(colours)).get();
     }
     public static Block getDyedPottedCorkSapling(DyeColor colours){
         return DYED_CORK_SAPLING_FLOWER_POTS.get(colours).get();

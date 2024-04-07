@@ -18,7 +18,7 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
     public void generate() {
         terracottaShingles();
         chalk();
-        dyedSoapstone();
+        soapstone();
         cork();
 
     }
@@ -41,7 +41,7 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         }
     }
 
-    private void dyedSoapstone() {
+    private void soapstone() {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(KekeBlocks.getDyedSoapstone(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneStairs(colours.getId()));
@@ -51,6 +51,10 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
             dropSelf(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+            dropSelf(KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
+            dropSelf(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
+            dropSelf(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
+            dropSelf(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
         }
         dropSelf(KekeBlocks.SOAPSTONE.get());
         dropSelf(KekeBlocks.SOAPSTONE_SLAB.get());
@@ -60,6 +64,10 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
+        dropSelf(KekeBlocks.POLISHED_SOAPSTONE.get());
+        dropSelf(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
+        dropSelf(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
+        dropSelf(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
     }
 
 

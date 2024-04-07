@@ -26,7 +26,12 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeBlocks.SOAPSTONE_STAIRS.get(), KekeBlocks.SOAPSTONE_SLAB.get());
             event.addAfter(KekeBlocks.SOAPSTONE_SLAB.get(), KekeBlocks.SOAPSTONE_WALL.get());
 
-            event.addAfter(KekeBlocks.getDyedSoapstoneWall(DyeColor.PINK.getId()), KekeBlocks.SOAPSTONE_BRICKS.get());
+            event.addAfter(KekeBlocks.SOAPSTONE_WALL.get(), KekeBlocks.POLISHED_SOAPSTONE.get());
+            event.addAfter(KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
+            event.addAfter(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
+            event.addAfter(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
+
+            event.addAfter(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), KekeBlocks.SOAPSTONE_BRICKS.get());
             event.addAfter(KekeBlocks.SOAPSTONE_BRICKS.get(), KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
@@ -40,12 +45,17 @@ public class KekeItemGroupEvents {
                 event.addAfter(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()));
 
-                event.addAfter(KekeBlocks.SOAPSTONE_WALL.get(), KekeBlocks.getDyedSoapstone(colours.getId()));
+                event.addAfter(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), KekeBlocks.getDyedSoapstone(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneStairs(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneStairs(colours.getId()), KekeBlocks.getDyedSoapstoneSlab(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), KekeBlocks.getDyedSoapstoneWall(colours.getId()));
 
-                event.addAfter(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedSoapstoneWall(colours.getId()), KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
+
+                event.addAfter(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));

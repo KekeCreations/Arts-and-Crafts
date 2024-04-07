@@ -128,12 +128,14 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .setReplace(false)
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get())
                 .add(KekeBlocks.SOAPSTONE_WALL.get())
-                .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+                .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.WALLS)
                             .add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()))
                             .add(KekeBlocks.getDyedSoapstoneWall(colours.getId()))
-                            .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+                            .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()))
+                            .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
                 }
     }
 
@@ -142,12 +144,14 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .setReplace(false)
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get())
                 .add(KekeBlocks.SOAPSTONE_SLAB.get())
-                .add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
+                .add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.SLABS)
                             .add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()))
                             .add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()))
-                            .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
+                            .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
+                            .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
                 }
     }
     private void appendStairs() {
@@ -155,12 +159,14 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .setReplace(false)
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
                 .add(KekeBlocks.SOAPSTONE_STAIRS.get())
-                .add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
+                .add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.STAIRS)
                             .add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()))
                             .add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()))
-                            .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
+                            .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
+                            .add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
                 }
     }
 
@@ -179,7 +185,11 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.SOAPSTONE_BRICKS.get())
                 .add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get())
                 .add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get())
-                .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+                .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get())
+                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(KekeBlocks.getDyedTerracottaShingles(colours.getId()))
@@ -196,6 +206,12 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                     .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()))
+
+                    .add(KekeBlocks.getDyedPolishedSoapstone(colours.getId()))
+                    .add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
+
                     .add(KekeBlocks.getChalk(colours.getId()));
         }
     }
