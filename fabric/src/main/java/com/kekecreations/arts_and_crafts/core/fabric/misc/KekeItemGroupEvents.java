@@ -39,6 +39,7 @@ public class KekeItemGroupEvents {
             for (DyeColorByGradient colours : DyeColorByGradient.values()) {
                 event.addAfter(Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 event.addAfter(Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), KekeBlocks.getDyedDecoratedPot(colours.getId()));
 
                 event.addAfter(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()));

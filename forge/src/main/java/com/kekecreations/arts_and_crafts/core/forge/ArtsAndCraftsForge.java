@@ -70,6 +70,7 @@ public class ArtsAndCraftsForge {
             for (DyeColorByGradient colours : DyeColorByGradient.values()) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 addAfter(event, Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
+                addAfter(event, KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), KekeBlocks.getDyedDecoratedPot(colours.getId()));
 
                 addAfter(event, KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
                 addAfter(event, KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()));
