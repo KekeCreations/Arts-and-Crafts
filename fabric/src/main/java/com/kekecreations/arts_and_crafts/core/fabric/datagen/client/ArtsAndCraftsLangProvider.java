@@ -106,6 +106,27 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_0", "Dot Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_1", "Vertical Line Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_2", "Horizontal Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_3", "East To South Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_4", "East To North Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_5", "West To North Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_6", "West To South Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_7", "North T Cross Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_8", "West T Cross Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_9", "South T Cross Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_10", "East T Cross Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_11", "Plus Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_12", "Right Diagonal Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_13", "Left Diagonal Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_14", "X Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_15", "North Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_16", "East Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_17", "South Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_18", "West Line Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_19", "North Triangle Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_20", "East Triangle Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_21", "South Triangle Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_22", "West Triangle Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_23", "Circle Pattern");
     }
 }
 

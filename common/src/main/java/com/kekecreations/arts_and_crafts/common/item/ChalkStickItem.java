@@ -1,31 +1,21 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtUtils;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -36,7 +26,6 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
@@ -44,7 +33,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class ChalkStickItem extends Item {
 
@@ -62,58 +50,51 @@ public class ChalkStickItem extends Item {
         return this.dyeColor;
     }
 
-    public static ChalkStickItem byColour(DyeColor dyeColor) {
-        return ITEM_BY_COLOR.get(dyeColor);
-    }
-
 
     public int getChalkPattern(ItemStack itemStack) {
         CompoundTag compoundTag = itemStack.getTag();
         if (compoundTag != null && compoundTag.contains("ChalkPattern")) {
             return compoundTag.getInt(TAG_CHALK_PATTERN);
         } else {
-            return 25;
+            return 100;
         }
     }
-    public static void setChalkPattern(ItemStack itemStack, int chalkPattern) {
+    public void setChalkPattern(ItemStack itemStack, int chalkPattern) {
         itemStack.getOrCreateTag().putInt(TAG_CHALK_PATTERN, chalkPattern);
     }
 
-    /*
-    @Override
-    public void inventoryTick(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull Entity entity, int $$3, boolean $$4) {
-        super.inventoryTick(itemStack, level, entity, $$3, $$4);
-        if (itemStack.getTag() != null && !itemStack.getTag().contains(TAG_CHALK_PATTERN)) {
-            //setChalkPattern(itemStack, 0);
-            System.out.println("inventory tick success");
-        }
-    }
-
-     */
 
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, @Nullable Level level, @NotNull List<Component> toolTipComponents, @NotNull TooltipFlag flag) {
         super.appendHoverText(itemStack, level, toolTipComponents, flag);
-        List<Component> list = Lists.newArrayList();
         if (level != null ) {
             switch (getChalkPattern(itemStack)) {
                 case 0 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_0").withStyle(ChatFormatting.GRAY));
                 case 1 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_1").withStyle(ChatFormatting.GRAY));
                 case 2 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_2").withStyle(ChatFormatting.GRAY));
-                case 25 -> {
-                }
+                case 3 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_3").withStyle(ChatFormatting.GRAY));
+                case 4 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_4").withStyle(ChatFormatting.GRAY));
+                case 5 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_5").withStyle(ChatFormatting.GRAY));
+                case 6 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_6").withStyle(ChatFormatting.GRAY));
+                case 7 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_7").withStyle(ChatFormatting.GRAY));
+                case 8 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_8").withStyle(ChatFormatting.GRAY));
+                case 9 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_9").withStyle(ChatFormatting.GRAY));
+                case 10 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_10").withStyle(ChatFormatting.GRAY));
+                case 11 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_11").withStyle(ChatFormatting.GRAY));
+                case 12 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_12").withStyle(ChatFormatting.GRAY));
+                case 13 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_13").withStyle(ChatFormatting.GRAY));
+                case 14 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_14").withStyle(ChatFormatting.GRAY));
+                case 15 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_15").withStyle(ChatFormatting.GRAY));
+                case 16 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_16").withStyle(ChatFormatting.GRAY));
+                case 17 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_17").withStyle(ChatFormatting.GRAY));
+                case 18 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_18").withStyle(ChatFormatting.GRAY));
+                case 19 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_19").withStyle(ChatFormatting.GRAY));
+                case 20 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_20").withStyle(ChatFormatting.GRAY));
+                case 21 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_21").withStyle(ChatFormatting.GRAY));
+                case 22 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_22").withStyle(ChatFormatting.GRAY));
+                case 23 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_23").withStyle(ChatFormatting.GRAY));
             }
         }
-        if (itemStack.getTag() != null && !itemStack.getTag().contains("ChalkPattern") && toolTipComponents.size() != 0) {
-            //toolTipComponents.remove(list.get(1));
-        }
-    }
-
-    public void spawnParticle(Player player, double x, double y, double z, DyeColor colours) {
-        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        player.level().addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
     }
 
 
@@ -125,7 +106,6 @@ public class ChalkStickItem extends Item {
         BlockState blockState = level.getBlockState(blockPos);
         Block block = blockState.getBlock();
         RandomSource random = level.getRandom();
-        Direction clickedFace = useOnContext.getClickedFace();
         Vec3 clickLocation = useOnContext.getClickLocation();
         ItemStack itemStack = useOnContext.getItemInHand();
 
@@ -134,21 +114,13 @@ public class ChalkStickItem extends Item {
         }
         InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
 
-
-        if (block instanceof ChalkDustBlock chalkDustBlock) {
-            if (player.isCrouching()) {
+        if (block instanceof ChalkDustBlock) {
+            if (player != null && player.isCrouching()) {
                 setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
-
             } else {
-                for (DyeColor colours : DyeColor.values()) {
-                    if (block == KekeBlocks.getChalkDust(colours) && this == KekeItems.getChalkStick(colours.getId())) {
-
-                        spawnParticle(player, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), colours);
-                        level.setBlockAndUpdate(blockPos, chalkDustBlock.changeState(blockState, player, 1));
-                        level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-
-                    }
-                }
+                ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
+                level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
             }
             return InteractionResult.SUCCESS;
         }
@@ -183,7 +155,7 @@ public class ChalkStickItem extends Item {
                     CriteriaTriggers.PLACED_BLOCK.trigger(serverPlayer, pos, itemStack);
                 clickedState.getBlock().setPlacedBy(level, pos, clickedState, player, itemStack);
 
-                if ((player == null || !player.getAbilities().instabuild) && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
+                if ((player != null && !player.getAbilities().instabuild) && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
                     itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(blockPlaceContext.getHand()));
                 }
                 return InteractionResult.SUCCESS;
