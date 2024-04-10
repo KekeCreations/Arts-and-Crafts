@@ -114,15 +114,16 @@ public class ChalkStickItem extends Item {
         }
         InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
 
-        if (block instanceof ChalkDustBlock) {
+        if (block instanceof ChalkDustBlock chalkDustBlock) {
             if (player != null && player.isCrouching()) {
                 setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
-            } else {
+                return InteractionResult.SUCCESS;
+            } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
                 ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
                 level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
                 level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
+                return InteractionResult.SUCCESS;
             }
-            return InteractionResult.SUCCESS;
         }
 
 
@@ -130,13 +131,11 @@ public class ChalkStickItem extends Item {
     }
 
     public InteractionResult place(BlockPlaceContext blockPlaceContext) {
-        if (!blockPlaceContext.canPlace()) return InteractionResult.FAIL;
-
+        if (!blockPlaceContext.canPlace() || blockPlaceContext.getClickedPos().getY() > 319) return InteractionResult.FAIL;
         Level level = blockPlaceContext.getLevel();
         BlockPos pos = blockPlaceContext.getClickedPos();
         Player player = blockPlaceContext.getPlayer();
         ItemStack itemStack = blockPlaceContext.getItemInHand();
-
         if (itemStack.getItem() instanceof ChalkStickItem chalkStick) {
             BlockState state = KekeBlocks.getChalkDust(this.getDyeColor()).getStateForPlacement(blockPlaceContext);
             BlockState clickedState = level.getBlockState(pos);
