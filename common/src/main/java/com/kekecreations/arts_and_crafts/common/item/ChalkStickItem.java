@@ -142,10 +142,10 @@ public class ChalkStickItem extends Item {
 
             if (state != null && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
                 RandomSource randomSource = level.getRandom();
-                if (chalkStick.getChalkPattern(itemStack) != 25) {
-                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_DUST_23, chalkStick.getChalkPattern(itemStack)));
+                if (chalkStick.getChalkPattern(itemStack) != 100) {
+                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkStick.getChalkPattern(itemStack)));
                 } else {
-                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_DUST_23, 0));
+                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_PATTERN, 0));
                 }
                 level.playSound(player, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));

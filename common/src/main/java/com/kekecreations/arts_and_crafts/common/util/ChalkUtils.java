@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 public class ChalkUtils {
 
     public static int getChalkPatternFromChalkDust(BlockState blockState) {
-        return blockState.getValue(KekeBlockStateProperties.CHALK_DUST_23);
+        return blockState.getValue(KekeBlockStateProperties.CHALK_PATTERN);
     }
 
     public static void spawnChalkParticle(Level level, double x, double y, double z, DyeColor colours) {
@@ -26,7 +26,7 @@ public class ChalkUtils {
         if (blockState.getBlock() instanceof ChalkDustBlock chalkDust) {
             if (!player.isCrouching()) {
                 if (chalkDust.isMaxState(blockState)) {
-                    return blockState.setValue(KekeBlockStateProperties.CHALK_DUST_23, 0)
+                    return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, 0)
                             .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
                             .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
                             .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
@@ -34,7 +34,7 @@ public class ChalkUtils {
                             .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
                             .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
                 } else {
-                    return blockState.setValue(KekeBlockStateProperties.CHALK_DUST_23, chalkDust.getChalkDustStates(blockState) + (k))
+                    return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkDust.getChalkDustStates(blockState) + (k))
                             .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
                             .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
                             .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
@@ -44,7 +44,7 @@ public class ChalkUtils {
                 }
             } else {
                 if (chalkDust.getChalkDustStates(blockState) != 0) {
-                    return blockState.setValue(KekeBlockStateProperties.CHALK_DUST_23, chalkDust.getChalkDustStates(blockState) - (k))
+                    return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkDust.getChalkDustStates(blockState) - (k))
                             .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
                             .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
                             .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
@@ -52,7 +52,7 @@ public class ChalkUtils {
                             .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
                             .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
                 } else {
-                    return blockState.setValue(KekeBlockStateProperties.CHALK_DUST_23, 23)
+                    return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, 32)
                             .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
                             .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
                             .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))

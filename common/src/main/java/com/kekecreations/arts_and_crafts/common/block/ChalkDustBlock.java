@@ -37,9 +37,9 @@ public class ChalkDustBlock extends MultifaceBlock {
     private final DyeColor dyeColor;
     private static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION;
 
-    public static final int MAX_STATE = 23;
+    public static final int MAX_STATE = 32;
 
-    public static final IntegerProperty CHALK_DUST_STATES = KekeBlockStateProperties.CHALK_DUST_23;
+    public static final IntegerProperty CHALK_DUST_STATES = KekeBlockStateProperties.CHALK_PATTERN;
 
     public DyeColor getDyeColor() {
         return this.dyeColor;

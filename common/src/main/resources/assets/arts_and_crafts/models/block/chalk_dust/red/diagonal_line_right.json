@@ -1,16 +1,7 @@
 {
-  "ambientocclusion": false,
+  "parent" : "arts_and_crafts:block/chalk_dust/chalk_dust",
   "textures": {
     "particle": "arts_and_crafts:block/red_diagonal_line_right",
     "dust": "arts_and_crafts:block/red_diagonal_line_right"
-  },
-  "elements": [
-    {   "from": [ 0, 0, 0.1 ],
-      "to": [ 16, 16, 0.1 ],
-      "faces": {
-        "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#dust" },
-        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#dust" }
-      }
-    }
-  ]
+  }
 }
