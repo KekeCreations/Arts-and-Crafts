@@ -130,17 +130,23 @@ public class ChalkStickItem extends Item {
                        ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
                        level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
                        level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-                       return InteractionResult.SUCCESS;
+                       if (!level.isClientSide()) {
+                           return InteractionResult.SUCCESS;
+                       }
                    }
                } else {
                     if (player.isCrouching()) {
                         setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
-                        return InteractionResult.SUCCESS;
+                        if (!level.isClientSide()) {
+                            return InteractionResult.SUCCESS;
+                        }
                     } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
                         ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
                         level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
                         level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-                        return InteractionResult.SUCCESS;
+                        if (!level.isClientSide()) {
+                            return InteractionResult.SUCCESS;
+                        }
                     }
                }
             }
@@ -175,7 +181,9 @@ public class ChalkStickItem extends Item {
                 if ((player != null && !player.getAbilities().instabuild) && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
                     itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(blockPlaceContext.getHand()));
                 }
-                return InteractionResult.SUCCESS;
+                if (!level.isClientSide()) {
+                    return InteractionResult.SUCCESS;
+                }
             }
         }
         return InteractionResult.FAIL;
