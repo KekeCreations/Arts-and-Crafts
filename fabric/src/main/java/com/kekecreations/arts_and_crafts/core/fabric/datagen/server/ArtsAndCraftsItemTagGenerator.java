@@ -47,7 +47,7 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
         this.getOrCreateTagBuilder(ItemTags.DECORATED_POT_SHERDS)
                 .setReplace(false)
                 .add(KekeItems.ROLL_POTTERY_SHERD.get())
-                .add(KekeItems.KINTSUGI_POTTERY_SHERD.get())
+                .add(KekeItems.RUINED_POTTERY_SHERD.get())
                 .add(KekeItems.FINALE_POTTERY_SHERD.get())
                 .add(KekeItems.GATEWAY_POTTERY_SHERD.get());
     }

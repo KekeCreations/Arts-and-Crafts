@@ -116,7 +116,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(KekeItems.CORK_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(KekeItems.CORK_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(KekeItems.ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(KekeItems.KINTSUGI_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(KekeItems.RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(KekeItems.FINALE_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(KekeItems.GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
     }

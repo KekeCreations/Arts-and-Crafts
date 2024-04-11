@@ -95,7 +95,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeItems.CORK_BOAT.get(), "Cork Boat");
         translationBuilder.add(KekeItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
         translationBuilder.add(KekeItems.ROLL_POTTERY_SHERD.get(), "Roll Pottery Sherd");
-        translationBuilder.add(KekeItems.KINTSUGI_POTTERY_SHERD.get(), "Kintsugi Pottery Sherd");
+        translationBuilder.add(KekeItems.RUINED_POTTERY_SHERD.get(), "Ruined Pottery Sherd");
         translationBuilder.add(KekeItems.FINALE_POTTERY_SHERD.get(), "Finale Pottery Sherd");
         translationBuilder.add(KekeItems.GATEWAY_POTTERY_SHERD.get(), "Gateway Pottery Sherd");
 

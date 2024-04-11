@@ -36,7 +36,7 @@ public class KekeItems {
 
 
     public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", () -> new Item(new Item.Properties()));
-    public static final Supplier<Item> KINTSUGI_POTTERY_SHERD = registerItem("kintsugi_pottery_sherd", () -> new Item(new Item.Properties()));
+    public static final Supplier<Item> RUINED_POTTERY_SHERD = registerItem("ruined_pottery_sherd", () -> new Item(new Item.Properties()));
     public static final Supplier<Item> FINALE_POTTERY_SHERD = registerItem("finale_pottery_sherd", () -> new Item(new Item.Properties()));
     public static final Supplier<Item> GATEWAY_POTTERY_SHERD = registerItem("gateway_pottery_sherd", () -> new Item(new Item.Properties()));
 

@@ -139,8 +139,8 @@ public class ArtsAndCraftsForge {
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             addAfter(event, Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
-            addAfter(event, KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.KINTSUGI_POTTERY_SHERD.get());
-            addAfter(event, KekeItems.KINTSUGI_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
+            addAfter(event, KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
+            addAfter(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
             addAfter(event, KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
         }
     }

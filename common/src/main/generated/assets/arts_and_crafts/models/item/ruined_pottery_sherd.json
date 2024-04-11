@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "arts_and_crafts:item/kintsugi_pottery_sherd"
+    "layer0": "arts_and_crafts:item/ruined_pottery_sherd"
   }
 }

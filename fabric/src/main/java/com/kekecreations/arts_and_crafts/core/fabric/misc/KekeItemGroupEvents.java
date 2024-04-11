@@ -104,8 +104,8 @@ public class KekeItemGroupEvents {
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(event -> {
             event.addAfter(Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
-            event.addAfter(KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.KINTSUGI_POTTERY_SHERD.get());
-            event.addAfter(KekeItems.KINTSUGI_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
+            event.addAfter(KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
+            event.addAfter(KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
             event.addAfter(KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
         });
 
