@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "arts_and_crafts:roll_pottery_sherd"
+    "arts_and_crafts:roll_pottery_sherd",
+    "arts_and_crafts:kintsugi_pottery_sherd",
+    "arts_and_crafts:finale_pottery_sherd",
+    "arts_and_crafts:gateway_pottery_sherd"
   ]
 }

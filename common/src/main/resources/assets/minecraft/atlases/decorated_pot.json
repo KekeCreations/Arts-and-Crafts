@@ -4,6 +4,9 @@
       "type": "paletted_permutations",
       "textures": [
         "arts_and_crafts:entity/decorated_pot/roll_pottery_pattern",
+        "arts_and_crafts:entity/decorated_pot/kintsugi_pottery_pattern",
+        "arts_and_crafts:entity/decorated_pot/finale_pottery_pattern",
+        "arts_and_crafts:entity/decorated_pot/gateway_pottery_pattern",
         "entity/decorated_pot/decorated_pot_side",
         "entity/decorated_pot/angler_pottery_pattern",
         "entity/decorated_pot/archer_pottery_pattern",
