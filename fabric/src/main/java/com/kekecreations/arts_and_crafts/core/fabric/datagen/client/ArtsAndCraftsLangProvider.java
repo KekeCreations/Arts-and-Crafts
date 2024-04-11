@@ -4,7 +4,6 @@ import com.kekecreations.arts_and_crafts.common.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.world.item.DyeColor;
@@ -127,6 +126,15 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_21", "South Triangle Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_22", "West Triangle Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_23", "Circle Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_24", "Square Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_25", "East To South Block Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_26", "East To North Block Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_27", "West To North Block Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_28", "West To South Block Corner Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_29", "East To South Arch Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_30", "East To North Arch Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_31", "West To North Arch Pattern");
+        translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_32", "West To South Arch Pattern");
     }
 }
 

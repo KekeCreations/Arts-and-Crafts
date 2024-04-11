@@ -93,6 +93,15 @@ public class ChalkStickItem extends Item {
                 case 21 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_21").withStyle(ChatFormatting.GRAY));
                 case 22 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_22").withStyle(ChatFormatting.GRAY));
                 case 23 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_23").withStyle(ChatFormatting.GRAY));
+                case 24 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_24").withStyle(ChatFormatting.GRAY));
+                case 25 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_25").withStyle(ChatFormatting.GRAY));
+                case 26 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_26").withStyle(ChatFormatting.GRAY));
+                case 27 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_27").withStyle(ChatFormatting.GRAY));
+                case 28 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_28").withStyle(ChatFormatting.GRAY));
+                case 29 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_29").withStyle(ChatFormatting.GRAY));
+                case 30 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_30").withStyle(ChatFormatting.GRAY));
+                case 31 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_31").withStyle(ChatFormatting.GRAY));
+                case 32 -> toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_32").withStyle(ChatFormatting.GRAY));
             }
         }
     }
@@ -115,18 +124,27 @@ public class ChalkStickItem extends Item {
         InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
 
         if (block instanceof ChalkDustBlock chalkDustBlock) {
-            if (player != null && player.isCrouching()) {
-                setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
-                return InteractionResult.SUCCESS;
-            } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
-                ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
-                level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
-                level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-                return InteractionResult.SUCCESS;
+            if (player != null) {
+               if (player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof ChalkStickItem && !(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ChalkStickItem)) {
+                   if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                       ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                       level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
+                       level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
+                       return InteractionResult.SUCCESS;
+                   }
+               } else {
+                    if (player.isCrouching()) {
+                        setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
+                        return InteractionResult.SUCCESS;
+                    } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                        ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                        level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
+                        level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
+                        return InteractionResult.SUCCESS;
+                    }
+               }
             }
         }
-
-
         return interactionResult;
     }
 

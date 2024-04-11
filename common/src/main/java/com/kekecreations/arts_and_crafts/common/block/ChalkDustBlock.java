@@ -3,20 +3,12 @@ package com.kekecreations.arts_and_crafts.common.block;
 import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.MultifaceSpreader;
@@ -25,7 +17,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -66,18 +57,6 @@ public class ChalkDustBlock extends MultifaceBlock {
     }
     public final boolean isMaxState(BlockState blockState) {
         return this.getChalkDustStates(blockState) >= this.getMaxState();
-    }
-
-    @Override
-    public InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
-        RandomSource random = level.getRandom();
-        if (player.isCrouching() && player.getItemInHand(interactionHand).isEmpty()) {
-            ChalkUtils.spawnChalkParticle(level, blockPos.getX() + 0.5D, blockPos.getY() + 0.2D, blockPos.getZ() + 0.5D, getDyeColor());
-            level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
-            level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-            return InteractionResult.SUCCESS;
-        }
-        return InteractionResult.FAIL;
     }
 
     @Override
