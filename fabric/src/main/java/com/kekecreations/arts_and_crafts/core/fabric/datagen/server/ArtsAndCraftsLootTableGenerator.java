@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
