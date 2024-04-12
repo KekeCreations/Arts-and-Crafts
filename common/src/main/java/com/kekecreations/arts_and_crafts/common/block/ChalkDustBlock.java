@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.DyeColor;
@@ -62,7 +63,7 @@ public class ChalkDustBlock extends MultifaceBlock {
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor.getId()));
-        if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem) {
+        if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
             chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
         }
         return itemStack;
