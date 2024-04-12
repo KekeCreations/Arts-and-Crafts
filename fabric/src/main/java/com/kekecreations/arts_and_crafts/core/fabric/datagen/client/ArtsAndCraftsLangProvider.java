@@ -104,7 +104,21 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeEntityTypes.BOAT.get(), "Boat");
         translationBuilder.add(KekeEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
 
-        //ETC
+
+
+        //ADVANCEMENTS
+        translationBuilder.add("advancements.adventure.no_you_cant_eat_it.title", "No You Can't Eat It!");
+        translationBuilder.add("advancements.adventure.no_you_cant_eat_it.description", "Craft any coloured chalk stick!");
+        translationBuilder.add("advancements.adventure.board_planning.title", "Board Planning");
+        translationBuilder.add("advancements.adventure.board_planning.description", "Have all chalk sticks in your inventory");
+        translationBuilder.add("advancements.adventure.let_the_creativity_flow_through_you.title", "Let Creativity Flow Through You");
+        translationBuilder.add("advancements.adventure.let_the_creativity_flow_through_you.description", "Cycle the chalk pattern forwards by interacting with chalk dust with a chalk stick in your main hand or off hand!!");
+        translationBuilder.add("advancements.adventure.execute_order_33.title", "Execute Order 33");
+        translationBuilder.add("advancements.adventure.execute_order_33.description", "Cycle the chalk pattern backwards by shift clicking chalk dust with a chalk stick in your offhand!");
+        translationBuilder.add("advancements.adventure.handpicked.title", "Handpicked");
+        translationBuilder.add("advancements.adventure.handpicked.description", "Save a chalk pattern by shift clicking with a chalk stick in your main hand!");
+
+        //TOOL TIPS
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_0", "Dot Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_1", "Vertical Line Pattern");
         translationBuilder.add("tooltip.arts_and_crafts.chalk_pattern_2", "Horizontal Line Pattern");

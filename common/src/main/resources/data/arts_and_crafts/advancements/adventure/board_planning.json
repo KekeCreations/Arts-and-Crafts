@@ -1,0 +1,114 @@
+{
+  "display": {
+    "icon": {
+      "item": "arts_and_crafts:cyan_chalk_stick",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.adventure.board_planning.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.board_planning.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "arts_and_crafts:adventure/no_you_cant_eat_it",
+  "criteria": {
+    "chalk_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:white_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:orange_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:magenta_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:light_blue_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:yellow_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:lime_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:pink_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:gray_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:light_gray_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:cyan_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:purple_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:blue_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:brown_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:green_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:red_chalk_stick"
+            ]
+          },
+          {
+            "items": [
+              "arts_and_crafts:black_chalk_stick"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "chalk_stick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

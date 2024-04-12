@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
 
 public class ArtsAndCraftsTags {
 
@@ -16,10 +17,23 @@ public class ArtsAndCraftsTags {
         public static final TagKey<Item> DYES
                 = tag("dyes");
 
+        public static final TagKey<Item> CHALK_STICKS
+                = tag("chalk_sticks");
+
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
         }
+    }
+
+    public static class BlockTags {
+        public static final TagKey<Block> CHALK_DUST
+                = tag("chalk_dust");
+
+        private static TagKey<Block> tag(String name) {
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
+        }
+
     }
 
     public static class BiomeTags {

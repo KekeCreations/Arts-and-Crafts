@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -39,6 +40,15 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
         appendFenceGates();
         appendPlanks();
         appendAxes();
+        appendChalkDust();
+    }
+
+    private void appendChalkDust() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
+                    .setReplace(false)
+                    .add(KekeBlocks.getChalkDust(colours));
+        }
     }
 
     private void appendHoglinRepellents() {

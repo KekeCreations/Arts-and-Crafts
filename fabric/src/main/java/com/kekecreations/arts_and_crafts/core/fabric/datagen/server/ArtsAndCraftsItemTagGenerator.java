@@ -27,12 +27,20 @@ public class ArtsAndCraftsItemTagGenerator extends FabricTagProvider.ItemTagProv
         appendDecoratedPotSherds();
         appendDecoratedPots();
         appendDyes();
+        appendChalkSticks();
     }
     private void appendDyes() {
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.DYES)
                     .setReplace(false)
                     .add(DyeItem.byColor(colours));
+        }
+    }
+    private void appendChalkSticks() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
+                    .setReplace(false)
+                    .add(KekeItems.getChalkStick(colours.getId()));
         }
     }
     private void appendDecoratedPots() {
