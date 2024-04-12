@@ -11,6 +11,8 @@ public class KekeFeatures {
     public static class ConfiguredFeatures {
         public static final ResourceKey<ConfiguredFeature<?, ?>> CORK_TREE = createKey("cork_tree");
 
+        public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE_PATCH = createKey("soapstone_patch");
+
 
 
         public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
@@ -21,6 +23,8 @@ public class KekeFeatures {
     public static class PlacedFeatures {
 
         public static final ResourceKey<PlacedFeature> CORK_TREE = createKey("cork_tree");
+
+        public static final ResourceKey<PlacedFeature> SOAPSTONE_PATCH = createKey("soapstone_patch");
 
 
         public static ResourceKey<PlacedFeature> createKey(String name) {

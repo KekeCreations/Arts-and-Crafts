@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen;
 
 import com.kekecreations.arts_and_crafts.core.fabric.datagen.client.ArtsAndCraftsLangProvider;
+import com.kekecreations.arts_and_crafts.core.fabric.datagen.server.ArtsAndCraftsBiomeTagGenerator;
 import com.kekecreations.arts_and_crafts.core.fabric.datagen.server.ArtsAndCraftsItemTagGenerator;
 import com.kekecreations.arts_and_crafts.core.fabric.datagen.server.ArtsAndCraftsLootTableGenerator;
 import com.kekecreations.arts_and_crafts.core.fabric.datagen.client.ArtsAndCraftsModelProvider;
@@ -18,5 +19,6 @@ public class ArtsAndCraftsDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ArtsAndCraftsItemTagGenerator::new);
         pack.addProvider(ArtsAndCraftsLootTableGenerator::new);
         pack.addProvider(ArtsAndCraftsLangProvider::new);
+        pack.addProvider(ArtsAndCraftsBiomeTagGenerator::new);
     }
 }

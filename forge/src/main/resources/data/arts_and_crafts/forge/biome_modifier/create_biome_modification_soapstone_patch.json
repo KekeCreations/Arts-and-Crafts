@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#arts_and_crafts:soapstone_can_generate_in",
+  "features": [
+    "arts_and_crafts:soapstone_patch"
+  ],
+  "step": "underground_ores"
+}

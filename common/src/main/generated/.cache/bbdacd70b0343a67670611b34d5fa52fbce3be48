@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-11T20:52:42.601885	Arts & Crafts/Block Loot Tables
+// 1.20.1	2024-04-12T00:30:01.1525781	Arts & Crafts/Block Loot Tables
 83302072f6bd39778256859e899865e17d8343e2 data\arts_and_crafts\loot_tables\blocks\marigold_polished_soapstone_slab.json
 c15154238a30d8148d5595fe6cf2530c96f3babe data\arts_and_crafts\loot_tables\blocks\rose_soapstone_wall.json
 e689a4e9fe82a54cb5edf8d6e44ba5731bd6113b data\arts_and_crafts\loot_tables\blocks\alkanet_soapstone.json
@@ -20,8 +20,8 @@ ec989ab597335beeac8460179b8ba57639da519b data\arts_and_crafts\loot_tables\blocks
 e8d603813ad044cad40b636d860835491b9be42b data\arts_and_crafts\loot_tables\blocks\aquamarine_soapstone_brick_wall.json
 d604442f760e91c3e1e72de69c3bad179f721c25 data\arts_and_crafts\loot_tables\blocks\quebracho_soapstone_brick_slab.json
 84c0f9c91df4a231dd9f2ed53a27eacb9347fe12 data\arts_and_crafts\loot_tables\blocks\brown_terracotta_shingle_slab.json
-6209ea64d2ab82dd53163403427eef4634cb4f23 data\arts_and_crafts\loot_tables\blocks\cerulean_polished_soapstone_stairs.json
 239391d1a57b2d7e877b7181527338ef53d7b583 data\arts_and_crafts\loot_tables\blocks\purple_terracotta_shingle_slab.json
+6209ea64d2ab82dd53163403427eef4634cb4f23 data\arts_and_crafts\loot_tables\blocks\cerulean_polished_soapstone_stairs.json
 cfbe37931b0927e5fc8713a43043ac58bfb863a5 data\arts_and_crafts\loot_tables\blocks\alkanet_soapstone_brick_stairs.json
 0a8ab43883f7fa9c11436c28e58e606d3c84eb19 data\arts_and_crafts\loot_tables\blocks\rose_soapstone_brick_slab.json
 8675f2b788d3be8feacc6a81462aac75f9c967e6 data\arts_and_crafts\loot_tables\blocks\madder_soapstone_stairs.json
