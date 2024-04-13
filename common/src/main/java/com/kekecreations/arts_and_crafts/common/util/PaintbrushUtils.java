@@ -27,6 +27,62 @@ public class PaintbrushUtils {
         }
     }
 
+    public static Block getDyedWool(DyeColor dyeColor) {
+        switch (dyeColor) {
+            case BLACK -> {
+                return Blocks.BLACK_WOOL;
+            }
+            case BLUE -> {
+                return Blocks.BLUE_WOOL;
+            }
+            case BROWN -> {
+                return Blocks.BROWN_WOOL;
+            }
+            case CYAN -> {
+                return Blocks.CYAN_WOOL;
+            }
+            case GRAY -> {
+                return Blocks.GRAY_WOOL;
+            }
+            case GREEN -> {
+                return Blocks.GREEN_WOOL;
+            }
+            case LIGHT_BLUE -> {
+                return Blocks.LIGHT_BLUE_WOOL;
+            }
+            case LIGHT_GRAY -> {
+                return Blocks.LIGHT_GRAY_WOOL;
+            }
+            case LIME -> {
+                return Blocks.LIME_WOOL;
+            }
+            case MAGENTA -> {
+                return Blocks.MAGENTA_WOOL;
+            }
+            case ORANGE -> {
+                return Blocks.ORANGE_WOOL;
+            }
+            case PINK -> {
+                return Blocks.PINK_WOOL;
+            }
+            case PURPLE -> {
+                return Blocks.PURPLE_WOOL;
+            }
+            case RED -> {
+                return Blocks.RED_WOOL;
+            }
+            case WHITE -> {
+                return Blocks.WHITE_WOOL;
+            }
+            case YELLOW -> {
+                return Blocks.YELLOW_WOOL;
+            }
+            default -> {
+                return Blocks.WHITE_WOOL;
+            }
+        }
+    }
+
     public static Block getDyedTerracotta(DyeColor dyeColor) {
         switch(dyeColor) {
             case BLACK -> {

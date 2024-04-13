@@ -51,9 +51,15 @@ public class PaintBrushItem extends Item {
 
         for (DyeColor colour : DyeColor.values()) {
             if ((blockState.is(PaintbrushUtils.getDyedTerracotta(colour)) || blockState.is(Blocks.TERRACOTTA)) && colour != paintbrushDyeColour) {
-                RandomSource randomSource = level.getRandom();
                 level.setBlockAndUpdate(pos, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState());
-                level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
+                level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
+                level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
+                interactionResult = InteractionResult.SUCCESS;
+            }
+
+            if ((blockState.is(PaintbrushUtils.getDyedWool(colour)) &&  colour != paintbrushDyeColour)) {
+                level.setBlockAndUpdate(pos, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState());
+                level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
                 interactionResult = InteractionResult.SUCCESS;
             }
