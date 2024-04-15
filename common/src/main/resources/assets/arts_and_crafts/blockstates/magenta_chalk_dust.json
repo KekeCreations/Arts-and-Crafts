@@ -6,7 +6,7 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
+        "model": "arts_and_crafts:block/magenta_dot",
         "x": 270,
         "uvlock": true
       }
@@ -22,7 +22,7 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
+        "model": "arts_and_crafts:block/magenta_dot",
         "x": 270,
         "uvlock": true
       }
@@ -33,7 +33,7 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot"
+        "model": "arts_and_crafts:block/magenta_dot"
       }
     },
     {
@@ -47,7 +47,7 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot"
+        "model": "arts_and_crafts:block/magenta_dot"
       }
     },
     {
@@ -56,35 +56,8 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
+        "model": "arts_and_crafts:block/magenta_dot",
         "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
-        "y": 180,
         "uvlock": true
       }
     },
@@ -99,46 +72,19 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
+        "model": "arts_and_crafts:block/magenta_dot",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 0
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_dot",
         "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
-        "x": 90,
         "uvlock": true
       }
     },
@@ -153,7 +99,61 @@
         "chalk_pattern": 0
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/dot",
+        "model": "arts_and_crafts:block/magenta_dot",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 0
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_dot",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 0
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_dot",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "chalk_pattern": 0
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_dot",
+        "x": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 0
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_dot",
         "x": 90,
         "uvlock": true
       }
@@ -164,85 +164,8 @@
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 180,
         "uvlock": true
       }
     },
@@ -257,20 +180,18 @@
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 180,
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "east": "true",
+        "north": "true",
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 90,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle"
       }
     },
     {
@@ -284,19 +205,17 @@
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "y": 90,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle"
       }
     },
     {
       "when": {
-        "down": "true",
+        "west": "true",
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
-        "x": 90,
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -311,7 +230,88 @@
         "chalk_pattern": 1
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/vertical_line_middle",
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "down": "true",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
+        "x": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 1
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_vertical_line_middle",
         "x": 90,
         "uvlock": true
       }
@@ -322,112 +322,8 @@
         "chalk_pattern": 2
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
-        "y": 90,
         "uvlock": true
       }
     },
@@ -442,7 +338,111 @@
         "chalk_pattern": 2
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "x": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle"
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle"
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 2
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
         "y": 90,
         "uvlock": true
       }
@@ -453,7 +453,7 @@
         "chalk_pattern": 2
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
         "x": 90,
         "uvlock": true
       }
@@ -469,7 +469,7 @@
         "chalk_pattern": 2
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/rotated_line_middle",
+        "model": "arts_and_crafts:block/magenta_rotated_line_middle",
         "x": 90,
         "uvlock": true
       }
@@ -480,58 +480,8 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
+        "model": "arts_and_crafts:block/magenta_corner_0",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -546,20 +496,18 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_0"
       }
     },
     {
@@ -573,19 +521,17 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_0"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -600,7 +546,61 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 3
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 3
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 3
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 3
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_0",
         "y": 90,
         "uvlock": true
       }
@@ -611,7 +611,7 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
+        "model": "arts_and_crafts:block/magenta_corner_0",
         "x": 90,
         "uvlock": true
       }
@@ -627,7 +627,7 @@
         "chalk_pattern": 3
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_0",
+        "model": "arts_and_crafts:block/magenta_corner_0",
         "x": 90,
         "uvlock": true
       }
@@ -638,58 +638,8 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
+        "model": "arts_and_crafts:block/magenta_corner_1",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -704,20 +654,18 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_1"
       }
     },
     {
@@ -731,19 +679,17 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_1"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -758,7 +704,61 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 4
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 4
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 4
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 4
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_1",
         "y": 90,
         "uvlock": true
       }
@@ -769,7 +769,7 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
+        "model": "arts_and_crafts:block/magenta_corner_1",
         "x": 90,
         "uvlock": true
       }
@@ -785,7 +785,7 @@
         "chalk_pattern": 4
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_1",
+        "model": "arts_and_crafts:block/magenta_corner_1",
         "x": 90,
         "uvlock": true
       }
@@ -796,58 +796,8 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
+        "model": "arts_and_crafts:block/magenta_corner_2",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -862,20 +812,18 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_2"
       }
     },
     {
@@ -889,19 +837,17 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_2"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -916,7 +862,61 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 5
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 5
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 5
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_2",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 5
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_2",
         "y": 90,
         "uvlock": true
       }
@@ -927,7 +927,7 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
+        "model": "arts_and_crafts:block/magenta_corner_2",
         "x": 90,
         "uvlock": true
       }
@@ -943,7 +943,7 @@
         "chalk_pattern": 5
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_2",
+        "model": "arts_and_crafts:block/magenta_corner_2",
         "x": 90,
         "uvlock": true
       }
@@ -954,58 +954,8 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
+        "model": "arts_and_crafts:block/magenta_corner_3",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1020,20 +970,18 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_3"
       }
     },
     {
@@ -1047,19 +995,17 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_corner_3"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1074,7 +1020,61 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 6
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 6
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 6
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_3",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 6
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_corner_3",
         "y": 90,
         "uvlock": true
       }
@@ -1085,7 +1085,7 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
+        "model": "arts_and_crafts:block/magenta_corner_3",
         "x": 90,
         "uvlock": true
       }
@@ -1101,7 +1101,7 @@
         "chalk_pattern": 6
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/corner_3",
+        "model": "arts_and_crafts:block/magenta_corner_3",
         "x": 90,
         "uvlock": true
       }
@@ -1112,58 +1112,8 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1178,20 +1128,18 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_0"
       }
     },
     {
@@ -1205,19 +1153,17 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_0"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1232,7 +1178,61 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 7
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 7
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 7
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 7
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
         "y": 90,
         "uvlock": true
       }
@@ -1243,7 +1243,7 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
         "x": 90,
         "uvlock": true
       }
@@ -1259,7 +1259,7 @@
         "chalk_pattern": 7
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_0",
+        "model": "arts_and_crafts:block/magenta_t_cross_0",
         "x": 90,
         "uvlock": true
       }
@@ -1270,58 +1270,8 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1336,20 +1286,18 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_1"
       }
     },
     {
@@ -1363,19 +1311,17 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_1"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1390,7 +1336,61 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 8
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 8
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 8
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 8
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
         "y": 90,
         "uvlock": true
       }
@@ -1401,7 +1401,7 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
         "x": 90,
         "uvlock": true
       }
@@ -1417,7 +1417,7 @@
         "chalk_pattern": 8
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_1",
+        "model": "arts_and_crafts:block/magenta_t_cross_1",
         "x": 90,
         "uvlock": true
       }
@@ -1428,58 +1428,8 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1494,20 +1444,18 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_2"
       }
     },
     {
@@ -1521,19 +1469,17 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_2"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1548,7 +1494,61 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 9
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 9
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 9
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 9
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
         "y": 90,
         "uvlock": true
       }
@@ -1559,7 +1559,7 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
         "x": 90,
         "uvlock": true
       }
@@ -1575,7 +1575,7 @@
         "chalk_pattern": 9
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_2",
+        "model": "arts_and_crafts:block/magenta_t_cross_2",
         "x": 90,
         "uvlock": true
       }
@@ -1586,58 +1586,8 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1652,20 +1602,18 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_3"
       }
     },
     {
@@ -1679,19 +1627,17 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_t_cross_3"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1706,7 +1652,61 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 10
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 10
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 10
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 10
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
         "y": 90,
         "uvlock": true
       }
@@ -1717,7 +1717,7 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
         "x": 90,
         "uvlock": true
       }
@@ -1733,7 +1733,7 @@
         "chalk_pattern": 10
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/t_cross_3",
+        "model": "arts_and_crafts:block/magenta_t_cross_3",
         "x": 90,
         "uvlock": true
       }
@@ -1744,58 +1744,8 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
+        "model": "arts_and_crafts:block/magenta_plus",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1810,20 +1760,18 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_plus",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_plus"
       }
     },
     {
@@ -1837,19 +1785,17 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_plus"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_plus",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -1864,7 +1810,61 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
+        "model": "arts_and_crafts:block/magenta_plus",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 11
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_plus",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 11
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_plus",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 11
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_plus",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 11
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_plus",
         "y": 90,
         "uvlock": true
       }
@@ -1875,7 +1875,7 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
+        "model": "arts_and_crafts:block/magenta_plus",
         "x": 90,
         "uvlock": true
       }
@@ -1891,7 +1891,7 @@
         "chalk_pattern": 11
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/plus",
+        "model": "arts_and_crafts:block/magenta_plus",
         "x": 90,
         "uvlock": true
       }
@@ -1902,58 +1902,8 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -1968,20 +1918,18 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right"
       }
     },
     {
@@ -1995,19 +1943,17 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2022,7 +1968,61 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 12
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 12
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 12
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 12
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
         "y": 90,
         "uvlock": true
       }
@@ -2033,7 +2033,7 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
         "x": 90,
         "uvlock": true
       }
@@ -2049,7 +2049,7 @@
         "chalk_pattern": 12
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_right",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_right",
         "x": 90,
         "uvlock": true
       }
@@ -2060,58 +2060,8 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2126,20 +2076,18 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left"
       }
     },
     {
@@ -2153,19 +2101,17 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2180,7 +2126,61 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 13
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 13
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 13
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 13
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
         "y": 90,
         "uvlock": true
       }
@@ -2191,7 +2191,7 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
         "x": 90,
         "uvlock": true
       }
@@ -2207,7 +2207,7 @@
         "chalk_pattern": 13
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/diagonal_line_left",
+        "model": "arts_and_crafts:block/magenta_diagonal_line_left",
         "x": 90,
         "uvlock": true
       }
@@ -2218,58 +2218,8 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
+        "model": "arts_and_crafts:block/magenta_x",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2284,20 +2234,18 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_x",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_x"
       }
     },
     {
@@ -2311,19 +2259,17 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_x"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_x",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2338,7 +2284,61 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
+        "model": "arts_and_crafts:block/magenta_x",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 14
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_x",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 14
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_x",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 14
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_x",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 14
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_x",
         "y": 90,
         "uvlock": true
       }
@@ -2349,7 +2349,7 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
+        "model": "arts_and_crafts:block/magenta_x",
         "x": 90,
         "uvlock": true
       }
@@ -2365,7 +2365,7 @@
         "chalk_pattern": 14
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/x",
+        "model": "arts_and_crafts:block/magenta_x",
         "x": 90,
         "uvlock": true
       }
@@ -2376,58 +2376,8 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2442,20 +2392,18 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_0"
       }
     },
     {
@@ -2469,19 +2417,17 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_0"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2496,7 +2442,61 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 15
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 15
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 15
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 15
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
         "y": 90,
         "uvlock": true
       }
@@ -2507,7 +2507,7 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
         "x": 90,
         "uvlock": true
       }
@@ -2523,7 +2523,7 @@
         "chalk_pattern": 15
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_0",
+        "model": "arts_and_crafts:block/magenta_line_edge_0",
         "x": 90,
         "uvlock": true
       }
@@ -2534,58 +2534,8 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2600,20 +2550,18 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_1"
       }
     },
     {
@@ -2627,19 +2575,17 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_1"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2654,7 +2600,61 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 16
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 16
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 16
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 16
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
         "y": 90,
         "uvlock": true
       }
@@ -2665,7 +2665,7 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
         "x": 90,
         "uvlock": true
       }
@@ -2681,7 +2681,7 @@
         "chalk_pattern": 16
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_1",
+        "model": "arts_and_crafts:block/magenta_line_edge_1",
         "x": 90,
         "uvlock": true
       }
@@ -2692,58 +2692,8 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2758,20 +2708,18 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_2"
       }
     },
     {
@@ -2785,19 +2733,17 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_2"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2812,7 +2758,61 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 17
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 17
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 17
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 17
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
         "y": 90,
         "uvlock": true
       }
@@ -2823,7 +2823,7 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
         "x": 90,
         "uvlock": true
       }
@@ -2839,7 +2839,7 @@
         "chalk_pattern": 17
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_2",
+        "model": "arts_and_crafts:block/magenta_line_edge_2",
         "x": 90,
         "uvlock": true
       }
@@ -2850,58 +2850,8 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -2916,20 +2866,18 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_3"
       }
     },
     {
@@ -2943,19 +2891,17 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_line_edge_3"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -2970,7 +2916,61 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 18
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 18
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 18
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 18
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
         "y": 90,
         "uvlock": true
       }
@@ -2981,7 +2981,7 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
         "x": 90,
         "uvlock": true
       }
@@ -2997,7 +2997,7 @@
         "chalk_pattern": 18
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/line_edge_3",
+        "model": "arts_and_crafts:block/magenta_line_edge_3",
         "x": 90,
         "uvlock": true
       }
@@ -3008,58 +3008,8 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
+        "model": "arts_and_crafts:block/magenta_triangle_0",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -3074,20 +3024,18 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_0"
       }
     },
     {
@@ -3101,19 +3049,17 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_0"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -3128,7 +3074,61 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 19
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 19
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 19
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 19
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_0",
         "y": 90,
         "uvlock": true
       }
@@ -3139,7 +3139,7 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
+        "model": "arts_and_crafts:block/magenta_triangle_0",
         "x": 90,
         "uvlock": true
       }
@@ -3155,7 +3155,7 @@
         "chalk_pattern": 19
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_0",
+        "model": "arts_and_crafts:block/magenta_triangle_0",
         "x": 90,
         "uvlock": true
       }
@@ -3166,58 +3166,8 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
+        "model": "arts_and_crafts:block/magenta_triangle_1",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -3232,20 +3182,18 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_1"
       }
     },
     {
@@ -3259,19 +3207,17 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_1"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -3286,7 +3232,61 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 20
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 20
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 20
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 20
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_1",
         "y": 90,
         "uvlock": true
       }
@@ -3297,7 +3297,7 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
+        "model": "arts_and_crafts:block/magenta_triangle_1",
         "x": 90,
         "uvlock": true
       }
@@ -3313,7 +3313,7 @@
         "chalk_pattern": 20
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_1",
+        "model": "arts_and_crafts:block/magenta_triangle_1",
         "x": 90,
         "uvlock": true
       }
@@ -3324,58 +3324,8 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
+        "model": "arts_and_crafts:block/magenta_triangle_2",
         "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "y": 270,
         "uvlock": true
       }
     },
@@ -3390,20 +3340,18 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "y": 270,
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "x": 270,
         "uvlock": true
       }
     },
     {
       "when": {
-        "south": "true",
+        "north": "true",
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_2"
       }
     },
     {
@@ -3417,19 +3365,17 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "y": 180,
-        "uvlock": true
+        "model": "arts_and_crafts:block/magenta_triangle_2"
       }
     },
     {
       "when": {
-        "east": "true",
+        "west": "true",
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
-        "y": 90,
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "y": 270,
         "uvlock": true
       }
     },
@@ -3444,7 +3390,61 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "chalk_pattern": 21
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 21
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "chalk_pattern": 21
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_2",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "up": "false",
+        "north": "false",
+        "west": "false",
+        "south": "false",
+        "east": "false",
+        "down": "false",
+        "chalk_pattern": 21
+      },
+      "apply": {
+        "model": "arts_and_crafts:block/magenta_triangle_2",
         "y": 90,
         "uvlock": true
       }
@@ -3455,7 +3455,7 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
+        "model": "arts_and_crafts:block/magenta_triangle_2",
         "x": 90,
         "uvlock": true
       }
@@ -3471,7 +3471,7 @@
         "chalk_pattern": 21
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_2",
+        "model": "arts_and_crafts:block/magenta_triangle_2",
         "x": 90,
         "uvlock": true
       }
@@ -3482,7 +3482,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "x": 270,
         "uvlock": true
       }
@@ -3498,7 +3498,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "x": 270,
         "uvlock": true
       }
@@ -3509,7 +3509,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3"
+        "model": "arts_and_crafts:block/magenta_triangle_3"
       }
     },
     {
@@ -3523,7 +3523,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3"
+        "model": "arts_and_crafts:block/magenta_triangle_3"
       }
     },
     {
@@ -3532,7 +3532,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 270,
         "uvlock": true
       }
@@ -3548,7 +3548,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 270,
         "uvlock": true
       }
@@ -3559,7 +3559,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 180,
         "uvlock": true
       }
@@ -3575,7 +3575,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 180,
         "uvlock": true
       }
@@ -3586,7 +3586,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 90,
         "uvlock": true
       }
@@ -3602,7 +3602,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "y": 90,
         "uvlock": true
       }
@@ -3613,7 +3613,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "x": 90,
         "uvlock": true
       }
@@ -3629,7 +3629,7 @@
         "chalk_pattern": 22
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/triangle_3",
+        "model": "arts_and_crafts:block/magenta_triangle_3",
         "x": 90,
         "uvlock": true
       }
@@ -3640,7 +3640,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "x": 270,
         "uvlock": true
       }
@@ -3656,7 +3656,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "x": 270,
         "uvlock": true
       }
@@ -3667,7 +3667,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle"
+        "model": "arts_and_crafts:block/magenta_circle"
       }
     },
     {
@@ -3681,7 +3681,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle"
+        "model": "arts_and_crafts:block/magenta_circle"
       }
     },
     {
@@ -3690,7 +3690,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 270,
         "uvlock": true
       }
@@ -3706,7 +3706,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 270,
         "uvlock": true
       }
@@ -3717,7 +3717,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 180,
         "uvlock": true
       }
@@ -3733,7 +3733,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 180,
         "uvlock": true
       }
@@ -3744,7 +3744,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 90,
         "uvlock": true
       }
@@ -3760,7 +3760,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "y": 90,
         "uvlock": true
       }
@@ -3771,7 +3771,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "x": 90,
         "uvlock": true
       }
@@ -3787,7 +3787,7 @@
         "chalk_pattern": 23
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/circle",
+        "model": "arts_and_crafts:block/magenta_circle",
         "x": 90,
         "uvlock": true
       }
@@ -3798,7 +3798,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "x": 270,
         "uvlock": true
       }
@@ -3814,7 +3814,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "x": 270,
         "uvlock": true
       }
@@ -3825,7 +3825,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square"
+        "model": "arts_and_crafts:block/magenta_square"
       }
     },
     {
@@ -3839,7 +3839,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square"
+        "model": "arts_and_crafts:block/magenta_square"
       }
     },
     {
@@ -3848,7 +3848,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 270,
         "uvlock": true
       }
@@ -3864,7 +3864,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 270,
         "uvlock": true
       }
@@ -3875,7 +3875,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 180,
         "uvlock": true
       }
@@ -3891,7 +3891,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 180,
         "uvlock": true
       }
@@ -3902,7 +3902,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 90,
         "uvlock": true
       }
@@ -3918,7 +3918,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "y": 90,
         "uvlock": true
       }
@@ -3929,7 +3929,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "x": 90,
         "uvlock": true
       }
@@ -3945,7 +3945,7 @@
         "chalk_pattern": 24
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/square",
+        "model": "arts_and_crafts:block/magenta_square",
         "x": 90,
         "uvlock": true
       }
@@ -3956,7 +3956,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "x": 270,
         "uvlock": true
       }
@@ -3972,7 +3972,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "x": 270,
         "uvlock": true
       }
@@ -3983,7 +3983,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0"
+        "model": "arts_and_crafts:block/magenta_block_corner_0"
       }
     },
     {
@@ -3997,7 +3997,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0"
+        "model": "arts_and_crafts:block/magenta_block_corner_0"
       }
     },
     {
@@ -4006,7 +4006,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 270,
         "uvlock": true
       }
@@ -4022,7 +4022,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 270,
         "uvlock": true
       }
@@ -4033,7 +4033,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 180,
         "uvlock": true
       }
@@ -4049,7 +4049,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 180,
         "uvlock": true
       }
@@ -4060,7 +4060,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 90,
         "uvlock": true
       }
@@ -4076,7 +4076,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "y": 90,
         "uvlock": true
       }
@@ -4087,7 +4087,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "x": 90,
         "uvlock": true
       }
@@ -4103,7 +4103,7 @@
         "chalk_pattern": 25
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_0",
+        "model": "arts_and_crafts:block/magenta_block_corner_0",
         "x": 90,
         "uvlock": true
       }
@@ -4114,7 +4114,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "x": 270,
         "uvlock": true
       }
@@ -4130,7 +4130,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "x": 270,
         "uvlock": true
       }
@@ -4141,7 +4141,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1"
+        "model": "arts_and_crafts:block/magenta_block_corner_1"
       }
     },
     {
@@ -4155,7 +4155,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1"
+        "model": "arts_and_crafts:block/magenta_block_corner_1"
       }
     },
     {
@@ -4164,7 +4164,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 270,
         "uvlock": true
       }
@@ -4180,7 +4180,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 270,
         "uvlock": true
       }
@@ -4191,7 +4191,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 180,
         "uvlock": true
       }
@@ -4207,7 +4207,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 180,
         "uvlock": true
       }
@@ -4218,7 +4218,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 90,
         "uvlock": true
       }
@@ -4234,7 +4234,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "y": 90,
         "uvlock": true
       }
@@ -4245,7 +4245,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "x": 90,
         "uvlock": true
       }
@@ -4261,7 +4261,7 @@
         "chalk_pattern": 26
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_1",
+        "model": "arts_and_crafts:block/magenta_block_corner_1",
         "x": 90,
         "uvlock": true
       }
@@ -4272,7 +4272,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "x": 270,
         "uvlock": true
       }
@@ -4288,7 +4288,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "x": 270,
         "uvlock": true
       }
@@ -4299,7 +4299,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2"
+        "model": "arts_and_crafts:block/magenta_block_corner_2"
       }
     },
     {
@@ -4313,7 +4313,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2"
+        "model": "arts_and_crafts:block/magenta_block_corner_2"
       }
     },
     {
@@ -4322,7 +4322,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 270,
         "uvlock": true
       }
@@ -4338,7 +4338,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 270,
         "uvlock": true
       }
@@ -4349,7 +4349,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 180,
         "uvlock": true
       }
@@ -4365,7 +4365,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 180,
         "uvlock": true
       }
@@ -4376,7 +4376,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 90,
         "uvlock": true
       }
@@ -4392,7 +4392,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "y": 90,
         "uvlock": true
       }
@@ -4403,7 +4403,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "x": 90,
         "uvlock": true
       }
@@ -4419,7 +4419,7 @@
         "chalk_pattern": 27
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_2",
+        "model": "arts_and_crafts:block/magenta_block_corner_2",
         "x": 90,
         "uvlock": true
       }
@@ -4430,7 +4430,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "x": 270,
         "uvlock": true
       }
@@ -4446,7 +4446,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "x": 270,
         "uvlock": true
       }
@@ -4457,7 +4457,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3"
+        "model": "arts_and_crafts:block/magenta_block_corner_3"
       }
     },
     {
@@ -4471,7 +4471,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3"
+        "model": "arts_and_crafts:block/magenta_block_corner_3"
       }
     },
     {
@@ -4480,7 +4480,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 270,
         "uvlock": true
       }
@@ -4496,7 +4496,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 270,
         "uvlock": true
       }
@@ -4507,7 +4507,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 180,
         "uvlock": true
       }
@@ -4523,7 +4523,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 180,
         "uvlock": true
       }
@@ -4534,7 +4534,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 90,
         "uvlock": true
       }
@@ -4550,7 +4550,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "y": 90,
         "uvlock": true
       }
@@ -4561,7 +4561,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "x": 90,
         "uvlock": true
       }
@@ -4577,7 +4577,7 @@
         "chalk_pattern": 28
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/block_corner_3",
+        "model": "arts_and_crafts:block/magenta_block_corner_3",
         "x": 90,
         "uvlock": true
       }
@@ -4588,7 +4588,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "x": 270,
         "uvlock": true
       }
@@ -4604,7 +4604,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "x": 270,
         "uvlock": true
       }
@@ -4615,7 +4615,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0"
+        "model": "arts_and_crafts:block/magenta_arch_0"
       }
     },
     {
@@ -4629,7 +4629,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0"
+        "model": "arts_and_crafts:block/magenta_arch_0"
       }
     },
     {
@@ -4638,7 +4638,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 270,
         "uvlock": true
       }
@@ -4654,7 +4654,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 270,
         "uvlock": true
       }
@@ -4665,7 +4665,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 180,
         "uvlock": true
       }
@@ -4681,7 +4681,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 180,
         "uvlock": true
       }
@@ -4692,7 +4692,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 90,
         "uvlock": true
       }
@@ -4708,7 +4708,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "y": 90,
         "uvlock": true
       }
@@ -4719,7 +4719,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "x": 90,
         "uvlock": true
       }
@@ -4735,7 +4735,7 @@
         "chalk_pattern": 29
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_0",
+        "model": "arts_and_crafts:block/magenta_arch_0",
         "x": 90,
         "uvlock": true
       }
@@ -4746,7 +4746,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "x": 270,
         "uvlock": true
       }
@@ -4762,7 +4762,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "x": 270,
         "uvlock": true
       }
@@ -4773,7 +4773,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1"
+        "model": "arts_and_crafts:block/magenta_arch_1"
       }
     },
     {
@@ -4787,7 +4787,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1"
+        "model": "arts_and_crafts:block/magenta_arch_1"
       }
     },
     {
@@ -4796,7 +4796,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 270,
         "uvlock": true
       }
@@ -4812,7 +4812,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 270,
         "uvlock": true
       }
@@ -4823,7 +4823,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 180,
         "uvlock": true
       }
@@ -4839,7 +4839,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 180,
         "uvlock": true
       }
@@ -4850,7 +4850,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 90,
         "uvlock": true
       }
@@ -4866,7 +4866,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "y": 90,
         "uvlock": true
       }
@@ -4877,7 +4877,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "x": 90,
         "uvlock": true
       }
@@ -4893,7 +4893,7 @@
         "chalk_pattern": 30
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_1",
+        "model": "arts_and_crafts:block/magenta_arch_1",
         "x": 90,
         "uvlock": true
       }
@@ -4904,7 +4904,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "x": 270,
         "uvlock": true
       }
@@ -4920,7 +4920,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "x": 270,
         "uvlock": true
       }
@@ -4931,7 +4931,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2"
+        "model": "arts_and_crafts:block/magenta_arch_2"
       }
     },
     {
@@ -4945,7 +4945,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2"
+        "model": "arts_and_crafts:block/magenta_arch_2"
       }
     },
     {
@@ -4954,7 +4954,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 270,
         "uvlock": true
       }
@@ -4970,7 +4970,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 270,
         "uvlock": true
       }
@@ -4981,7 +4981,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 180,
         "uvlock": true
       }
@@ -4997,7 +4997,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 180,
         "uvlock": true
       }
@@ -5008,7 +5008,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 90,
         "uvlock": true
       }
@@ -5024,7 +5024,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "y": 90,
         "uvlock": true
       }
@@ -5035,7 +5035,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "x": 90,
         "uvlock": true
       }
@@ -5051,7 +5051,7 @@
         "chalk_pattern": 31
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_2",
+        "model": "arts_and_crafts:block/magenta_arch_2",
         "x": 90,
         "uvlock": true
       }
@@ -5062,7 +5062,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "x": 270,
         "uvlock": true
       }
@@ -5078,7 +5078,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "x": 270,
         "uvlock": true
       }
@@ -5089,7 +5089,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3"
+        "model": "arts_and_crafts:block/magenta_arch_3"
       }
     },
     {
@@ -5103,7 +5103,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3"
+        "model": "arts_and_crafts:block/magenta_arch_3"
       }
     },
     {
@@ -5112,7 +5112,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 270,
         "uvlock": true
       }
@@ -5128,7 +5128,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 270,
         "uvlock": true
       }
@@ -5139,7 +5139,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 180,
         "uvlock": true
       }
@@ -5155,7 +5155,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 180,
         "uvlock": true
       }
@@ -5166,7 +5166,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 90,
         "uvlock": true
       }
@@ -5182,7 +5182,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "y": 90,
         "uvlock": true
       }
@@ -5193,7 +5193,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "x": 90,
         "uvlock": true
       }
@@ -5209,7 +5209,7 @@
         "chalk_pattern": 32
       },
       "apply": {
-        "model": "arts_and_crafts:block/chalk_dust/magenta/arch_3",
+        "model": "arts_and_crafts:block/magenta_arch_3",
         "x": 90,
         "uvlock": true
       }

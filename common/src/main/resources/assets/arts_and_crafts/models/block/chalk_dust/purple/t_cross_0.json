@@ -1,7 +1,0 @@
-{
-  "parent" : "arts_and_crafts:block/chalk_dust/chalk_dust",
-  "textures": {
-    "particle": "arts_and_crafts:block/purple_t_cross_0",
-    "dust": "arts_and_crafts:block/purple_t_cross_0"
-  }
-}
