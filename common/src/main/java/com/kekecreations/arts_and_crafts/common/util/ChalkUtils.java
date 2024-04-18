@@ -27,38 +27,18 @@ public class ChalkUtils {
             if (!player.isCrouching()) {
                 if (chalkDust.isMaxState(blockState)) {
                     return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, 0)
-                            .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
-                            .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
-                            .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
-                            .setValue(BlockStateProperties.EAST, blockState.getValue(BlockStateProperties.EAST))
-                            .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
-                            .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
+                            .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING));
                 } else {
                     return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkDust.getChalkDustStates(blockState) + (k))
-                            .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
-                            .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
-                            .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
-                            .setValue(BlockStateProperties.EAST, blockState.getValue(BlockStateProperties.EAST))
-                            .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
-                            .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
+                            .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING));
                 }
             } else {
                 if (chalkDust.getChalkDustStates(blockState) != 0) {
                     return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkDust.getChalkDustStates(blockState) - (k))
-                            .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
-                            .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
-                            .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
-                            .setValue(BlockStateProperties.EAST, blockState.getValue(BlockStateProperties.EAST))
-                            .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
-                            .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
+                            .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING));
                 } else {
                     return blockState.setValue(KekeBlockStateProperties.CHALK_PATTERN, 32)
-                            .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
-                            .setValue(BlockStateProperties.DOWN, blockState.getValue(BlockStateProperties.DOWN))
-                            .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
-                            .setValue(BlockStateProperties.EAST, blockState.getValue(BlockStateProperties.EAST))
-                            .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
-                            .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH));
+                            .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING));
                 }
             }
         }

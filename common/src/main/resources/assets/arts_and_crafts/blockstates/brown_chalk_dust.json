@@ -1,5218 +1,763 @@
 {
-  "multipart": [
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 0
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_dot",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 1
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_vertical_line_middle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 2
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_rotated_line_middle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 3
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 4
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 5
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 6
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_corner_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 7
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 8
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 9
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 10
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_t_cross_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 11
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_plus",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 12
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_right",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 13
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_diagonal_line_left",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 14
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_x",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 15
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 16
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 17
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 18
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_line_edge_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 19
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 20
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 21
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 22
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_triangle_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 23
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_circle",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 24
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_square",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 25
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 26
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 27
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 28
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_block_corner_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 29
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_0",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 30
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_1",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 31
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_2",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "x": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "north": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3"
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3"
-      }
-    },
-    {
-      "when": {
-        "west": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "south": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "east": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "down": "true",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "x": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "up": "false",
-        "north": "false",
-        "west": "false",
-        "south": "false",
-        "east": "false",
-        "down": "false",
-        "chalk_pattern": 32
-      },
-      "apply": {
-        "model": "arts_and_crafts:block/brown_arch_3",
-        "x": 90,
-        "uvlock": true
-      }
+  "variants": {
+    "facing=north,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot"
+    },
+    "facing=up,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=0": {
+      "model": "arts_and_crafts:block/brown_dot",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle"
+    },
+    "facing=up,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=1": {
+      "model": "arts_and_crafts:block/brown_vertical_line_middle",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle"
+    },
+    "facing=up,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=2": {
+      "model": "arts_and_crafts:block/brown_rotated_line_middle",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0"
+    },
+    "facing=up,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=3": {
+      "model": "arts_and_crafts:block/brown_corner_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1"
+    },
+    "facing=up,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=4": {
+      "model": "arts_and_crafts:block/brown_corner_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2"
+    },
+    "facing=up,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=5": {
+      "model": "arts_and_crafts:block/brown_corner_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3"
+    },
+    "facing=up,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=6": {
+      "model": "arts_and_crafts:block/brown_corner_3",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0"
+    },
+    "facing=up,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=7": {
+      "model": "arts_and_crafts:block/brown_t_cross_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1"
+    },
+    "facing=up,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=8": {
+      "model": "arts_and_crafts:block/brown_t_cross_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2"
+    },
+    "facing=up,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=9": {
+      "model": "arts_and_crafts:block/brown_t_cross_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3"
+    },
+    "facing=up,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=10": {
+      "model": "arts_and_crafts:block/brown_t_cross_3",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus"
+    },
+    "facing=up,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=11": {
+      "model": "arts_and_crafts:block/brown_plus",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right"
+    },
+    "facing=up,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=12": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_right",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left"
+    },
+    "facing=up,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=13": {
+      "model": "arts_and_crafts:block/brown_diagonal_line_left",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x"
+    },
+    "facing=up,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=14": {
+      "model": "arts_and_crafts:block/brown_x",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0"
+    },
+    "facing=up,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=15": {
+      "model": "arts_and_crafts:block/brown_line_edge_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1"
+    },
+    "facing=up,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=16": {
+      "model": "arts_and_crafts:block/brown_line_edge_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2"
+    },
+    "facing=up,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=17": {
+      "model": "arts_and_crafts:block/brown_line_edge_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3"
+    },
+    "facing=up,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=18": {
+      "model": "arts_and_crafts:block/brown_line_edge_3",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0"
+    },
+    "facing=up,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=19": {
+      "model": "arts_and_crafts:block/brown_triangle_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1"
+    },
+    "facing=up,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=20": {
+      "model": "arts_and_crafts:block/brown_triangle_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2"
+    },
+    "facing=up,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=21": {
+      "model": "arts_and_crafts:block/brown_triangle_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3"
+    },
+    "facing=up,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=22": {
+      "model": "arts_and_crafts:block/brown_triangle_3",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle"
+    },
+    "facing=up,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=23": {
+      "model": "arts_and_crafts:block/brown_circle",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square"
+    },
+    "facing=up,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=24": {
+      "model": "arts_and_crafts:block/brown_square",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0"
+    },
+    "facing=up,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=25": {
+      "model": "arts_and_crafts:block/brown_block_corner_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1"
+    },
+    "facing=up,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=26": {
+      "model": "arts_and_crafts:block/brown_block_corner_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2"
+    },
+    "facing=up,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=27": {
+      "model": "arts_and_crafts:block/brown_block_corner_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3"
+    },
+    "facing=up,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=28": {
+      "model": "arts_and_crafts:block/brown_block_corner_3",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0"
+    },
+    "facing=up,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=29": {
+      "model": "arts_and_crafts:block/brown_arch_0",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1"
+    },
+    "facing=up,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=30": {
+      "model": "arts_and_crafts:block/brown_arch_1",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2"
+    },
+    "facing=up,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=31": {
+      "model": "arts_and_crafts:block/brown_arch_2",
+      "x": 270
+    },
+    "facing=north,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3",
+      "y": 180
+    },
+    "facing=west,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3",
+      "y": 90
+    },
+    "facing=east,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3",
+      "y": 270
+    },
+    "facing=south,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3"
+    },
+    "facing=up,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3",
+      "x": 90
+    },
+    "facing=down,chalk_pattern=32": {
+      "model": "arts_and_crafts:block/brown_arch_3",
+      "x": 270
     }
-  ]
+  }
 }
