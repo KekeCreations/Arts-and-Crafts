@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.common.item;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
+import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -50,50 +51,31 @@ public class PaintBrushItem extends Item {
 
 
         for (DyeColor colour : DyeColor.values()) {
-            if ((blockState.is(PaintbrushUtils.getDyedTerracotta(colour)) || blockState.is(Blocks.TERRACOTTA)) && colour != paintbrushDyeColour) {
-                level.setBlockAndUpdate(pos, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState());
-                level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
-                level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
-                interactionResult = InteractionResult.SUCCESS;
-            }
-
-            if ((blockState.is(PaintbrushUtils.getDyedWool(colour)) &&  colour != paintbrushDyeColour)) {
-                level.setBlockAndUpdate(pos, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState());
-                level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
-                level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
-                interactionResult = InteractionResult.SUCCESS;
-            }
-
-            if ((blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT)) && colour != paintbrushDyeColour) {
-                RandomSource randomSource = level.getRandom();
-                if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
-                    DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
-                    DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
-                    level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
-                    PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
-                    level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
-                    level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
+            if (colour != paintbrushDyeColour && !level.isClientSide()) {
+                if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA.get() && (blockState.is(PaintbrushUtils.getDyedTerracotta(colour)) || blockState.is(Blocks.TERRACOTTA))) {
+                    PaintbrushUtils.paintBlock(level, pos, player, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState(), paintbrushDyeColour);
                     interactionResult = InteractionResult.SUCCESS;
-                } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
-                    DecoratedPotBlockEntity.Decorations oldDecorations = decoratedPotBlockEntity.getDecorations();
-                    DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
-                    level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
-                    PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
-                    level.playSound(player, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
-                    level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
+                }
+                else if (ArtsAndCraftsCommonConfig.CAN_PAINT_WOOL.get() && blockState.is(PaintbrushUtils.getDyedWool(colour))) {
+                    PaintbrushUtils.paintBlock(level, pos, player, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState(), paintbrushDyeColour);
                     interactionResult = InteractionResult.SUCCESS;
+                }
+                else if (ArtsAndCraftsCommonConfig.CAN_PAINT_DECORATED_POTS.get() && (blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT))) {
+                    PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, paintbrushDyeColour);
+                    interactionResult = InteractionResult.SUCCESS;
+                }
+
+
+                if (interactionResult == InteractionResult.SUCCESS) {
+                    if ((player != null && !player.getAbilities().instabuild)) {
+                        if (player instanceof ServerPlayer serverPlayer)
+                            CriteriaTriggers.PLACED_BLOCK.trigger(serverPlayer, pos, itemStack);
+                        blockState.getBlock().setPlacedBy(level, pos, blockState, player, itemStack);
+                        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(useOnContext.getHand()));
+                    }
                 }
             }
         }
-
-        if (interactionResult == InteractionResult.SUCCESS) {
-            if ((player != null && !player.getAbilities().instabuild)) {
-                if (player instanceof ServerPlayer serverPlayer) CriteriaTriggers.PLACED_BLOCK.trigger(serverPlayer, pos, itemStack);
-                blockState.getBlock().setPlacedBy(level, pos, blockState, player, itemStack);
-                itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(useOnContext.getHand()));
-            }
-        }
-
         return interactionResult;
     }
 }

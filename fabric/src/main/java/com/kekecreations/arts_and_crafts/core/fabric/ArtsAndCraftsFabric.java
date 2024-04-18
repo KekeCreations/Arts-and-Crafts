@@ -2,19 +2,25 @@ package com.kekecreations.arts_and_crafts.core.fabric;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.fabric.misc.KekeItemGroupEvents;
 import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeFeatures;
+import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraftforge.fml.config.ModConfig;
 
 public class ArtsAndCraftsFabric implements ModInitializer {
     @Override
     public void onInitialize() {
+        ForgeConfigRegistry.INSTANCE.register(ArtsAndCrafts.MOD_ID, ModConfig.Type.COMMON, ArtsAndCraftsCommonConfig.SPEC, "arts_and_crafts-common.toml");
+
+
+
         ArtsAndCrafts.init();
         KekeItemGroupEvents.add();
         KekeFabricFlammableAndStrippableBlocks.register();
