@@ -7,7 +7,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
@@ -18,8 +17,6 @@ import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
-
-import javax.annotation.Nullable;
 
 public class PaintbrushUtils {
 
@@ -37,7 +34,7 @@ public class PaintbrushUtils {
         }
     }
 
-    public static void paintBlock(Level level, BlockPos pos, Player player, BlockState blockStateToPlace, DyeColor paintbrushDyeColour) {
+    public static void paintBlock(Level level, BlockPos pos, Player player, BlockState blockStateToPlace) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace);
         level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);

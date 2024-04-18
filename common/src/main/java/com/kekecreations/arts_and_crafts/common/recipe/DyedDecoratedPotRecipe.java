@@ -1,26 +1,21 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
-import com.google.gson.JsonObject;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
-import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.util.GsonHelper;
 import net.minecraft.world.inventory.CraftingContainer;
-import net.minecraft.world.item.*;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CustomRecipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DecoratedPotBlock;
-import net.minecraft.world.level.block.ShulkerBoxBlock;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import org.jetbrains.annotations.NotNull;
 
 public class DyedDecoratedPotRecipe extends CustomRecipe {

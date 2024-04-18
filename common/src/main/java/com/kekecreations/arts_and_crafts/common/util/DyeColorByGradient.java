@@ -3,25 +3,6 @@ package com.kekecreations.arts_and_crafts.common.util;
 import net.minecraft.util.StringRepresentable;
 
 public enum DyeColorByGradient implements StringRepresentable {
-    /*
-    WHITE(0, "white"),
-    LIGHT_GRAY(8, "light_gray"),
-    GRAY(7, "gray"),
-    BLACK(15, "black"),
-    BROWN(12, "brown"),
-    RED(14, "red"),
-    ORANGE(1, "orange"),
-    YELLOW(4, "yellow"),
-    LIME(5, "lime"),
-    GREEN(13, "green"),
-    CYAN(9, "cyan"),
-    LIGHT_BLUE(3, "light_blue"),
-    BLUE(11, "blue"),
-    PURPLE(10, "purple"),
-    MAGENTA(2, "magenta"),
-    PINK(6, "pink");
-
-     */
     PINK(6, "pink"),
     MAGENTA(2, "magenta"),
     PURPLE(10, "purple"),
