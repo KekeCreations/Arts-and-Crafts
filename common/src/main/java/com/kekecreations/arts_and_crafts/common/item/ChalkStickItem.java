@@ -118,40 +118,38 @@ public class ChalkStickItem extends Item {
         Vec3 clickLocation = useOnContext.getClickLocation();
         ItemStack itemStack = useOnContext.getItemInHand();
 
-        if (itemStack.getTag() != null && !itemStack.getTag().contains(TAG_CHALK_PATTERN)) {
-            setChalkPattern(itemStack, 0);
-        }
-        InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
+        if (!level.isClientSide()) {
 
-        if (block instanceof ChalkDustBlock chalkDustBlock) {
-            if (player != null) {
-               if (player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof ChalkStickItem && !(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ChalkStickItem)) {
-                   if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
-                       ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
-                       level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
-                       level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-                       if (!level.isClientSide()) {
-                           return InteractionResult.SUCCESS;
-                       }
-                   }
-               } else {
-                    if (player.isCrouching()) {
-                        setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
-                        if (!level.isClientSide()) {
+            if (itemStack.getTag() != null && !itemStack.getTag().contains(TAG_CHALK_PATTERN)) {
+                setChalkPattern(itemStack, 0);
+            }
+            InteractionResult interactionResult = this.place(new BlockPlaceContext(useOnContext));
+
+            if (block instanceof ChalkDustBlock chalkDustBlock) {
+                if (player != null) {
+                    if (player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof ChalkStickItem && !(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ChalkStickItem)) {
+                        if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                            ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                            level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
+                            level.playSound(null, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
                             return InteractionResult.SUCCESS;
                         }
-                    } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
-                        ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
-                        level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
-                        level.playSound(player, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
-                        if (!level.isClientSide()) {
+                    } else {
+                        if (player.isCrouching()) {
+                            setChalkPattern(player.getItemInHand(InteractionHand.MAIN_HAND), ChalkUtils.getChalkPatternFromChalkDust(blockState));
+                            return InteractionResult.SUCCESS;
+                        } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                            ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                            level.setBlockAndUpdate(blockPos, ChalkUtils.changeChalkDustState(blockState, player, 1));
+                            level.playSound(null, blockPos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, random.nextFloat() * 0.2F + 0.9F);
                             return InteractionResult.SUCCESS;
                         }
                     }
-               }
+                }
             }
+            return interactionResult;
         }
-        return interactionResult;
+        return InteractionResult.FAIL;
     }
 
     public InteractionResult place(BlockPlaceContext blockPlaceContext) {
@@ -171,7 +169,7 @@ public class ChalkStickItem extends Item {
                 } else {
                     level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_PATTERN, 0));
                 }
-                level.playSound(player, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
+                level.playSound(null, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));
 
                 if (player instanceof ServerPlayer serverPlayer)
