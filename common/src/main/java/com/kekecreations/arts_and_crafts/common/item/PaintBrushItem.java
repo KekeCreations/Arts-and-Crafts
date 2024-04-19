@@ -6,6 +6,7 @@ import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
@@ -32,7 +33,6 @@ public class PaintBrushItem extends Item {
 
     @Override
     public InteractionResult useOn(UseOnContext useOnContext) {
-        InteractionResult interactionResult = InteractionResult.FAIL;
         Level level = useOnContext.getLevel();
         BlockPos pos = useOnContext.getClickedPos();
         Player player = useOnContext.getPlayer();
@@ -40,36 +40,25 @@ public class PaintBrushItem extends Item {
         DyeColor paintbrushDyeColour = this.getDyeColor();
         BlockState blockState = level.getBlockState(pos);
         BlockEntity blockEntity = level.getBlockEntity(pos);
+        InteractionHand hand = useOnContext.getHand();
 
 
         if (!level.isClientSide()) {
             for (DyeColor colour : DyeColor.values()) {
                 if (colour != paintbrushDyeColour) {
-                    //PAINTING
                     if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA.get() && (blockState.is(PaintbrushUtils.getDyedTerracotta(colour)) || blockState.is(Blocks.TERRACOTTA))) {
-                        PaintbrushUtils.paintBlock(level, pos, player, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState());
-                        interactionResult = InteractionResult.SUCCESS;
+                        PaintbrushUtils.paintBlock(level, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
                     } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_WOOL.get() && blockState.is(PaintbrushUtils.getDyedWool(colour))) {
-                        PaintbrushUtils.paintBlock(level, pos, player, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState());
-                        interactionResult = InteractionResult.SUCCESS;
+                        PaintbrushUtils.paintBlock(level, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
                     } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_DECORATED_POTS.get() && (blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT))) {
-                        PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, paintbrushDyeColour);
-                        interactionResult = InteractionResult.SUCCESS;
-                    }
-
-
-                    //DURABILITY & PLAYER STUFF
-                    if (interactionResult == InteractionResult.SUCCESS) {
-                        if ((player != null && !player.getAbilities().instabuild)) {
-                            if (player instanceof ServerPlayer serverPlayer)
-                                CriteriaTriggers.PLACED_BLOCK.trigger(serverPlayer, pos, itemStack);
-                            blockState.getBlock().setPlacedBy(level, pos, blockState, player, itemStack);
-                            itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(useOnContext.getHand()));
-                        }
+                        PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, itemStack, hand, paintbrushDyeColour);
+                        return InteractionResult.SUCCESS;
                     }
                 }
             }
         }
-        return interactionResult;
+        return InteractionResult.FAIL;
     }
 }
