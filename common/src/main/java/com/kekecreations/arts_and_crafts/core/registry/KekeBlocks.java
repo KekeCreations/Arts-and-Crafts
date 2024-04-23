@@ -4,12 +4,9 @@ import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.common.block.grower.CorkTreeGrower;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.common.misc.KekeWoodType;
-import com.kekecreations.arts_and_crafts.common.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
-import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
@@ -157,20 +154,20 @@ public class KekeBlocks {
             DYED_TERRACOTTA_SHINGLE_STAIRS.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_stairs", () -> new CustomStairBlock(getDyedTerracottaShingles(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
 
             //DYED SOAPSTONE
-            DYED_SOAPSTONE.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
-            DYED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE.put(colours, registerBlockWithItem(colours + "_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
+            DYED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(colours + "_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(colours + "_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
 
-            DYED_SOAPSTONE_BRICKS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_bricks", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
-            DYED_SOAPSTONE_BRICK_SLAB.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_BRICK_WALL.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_BRICK_STAIRS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_soapstone_brick_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_BRICKS.put(colours, registerBlockWithItem(colours + "_soapstone_bricks", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
+            DYED_SOAPSTONE_BRICK_SLAB.put(colours, registerBlockWithItem(colours + "_soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_BRICK_WALL.put(colours, registerBlockWithItem(colours + "_soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_brick_stairs", () -> new CustomStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
 
-            DYED_POLISHED_SOAPSTONE.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
-            DYED_POLISHED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
-            DYED_POLISHED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
-            DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(NaturalDyeColor.byId(colours.getId()) + "_polished_soapstone_stairs", () -> new CustomStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE.put(colours, registerBlockWithItem(colours + "_polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.BASALT).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
+            DYED_POLISHED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(colours + "_polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(colours + "_polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_polished_soapstone_stairs", () -> new CustomStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
 
             //CHALK
             CHALK.put(colours, registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));

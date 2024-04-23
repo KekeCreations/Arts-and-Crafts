@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.core.fabric.datagen.client;
 
-import com.kekecreations.arts_and_crafts.common.misc.NaturalDyeColor;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
@@ -19,7 +18,6 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
 
         for (DyeColor colours : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colours.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
-            String stringNaturalColour = StringUtils.capitalize(NaturalDyeColor.byId(colours.getId()).getName());
 
             //ITEMS
             translationBuilder.add(KekeItems.getChalkStick(colours.getId()), stringColour + " Chalk Stick");
@@ -36,20 +34,20 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), stringColour + " Terracotta Shingle Wall");
             translationBuilder.add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), stringColour + " Terracotta Shingle Stairs");
 
-            translationBuilder.add(KekeBlocks.getDyedSoapstone(colours.getId()), stringNaturalColour + " Soapstone");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), stringNaturalColour + " Soapstone Slab");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours.getId()), stringNaturalColour + " Soapstone Wall");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()), stringNaturalColour + " Soapstone Stairs");
+            translationBuilder.add(KekeBlocks.getDyedSoapstone(colours.getId()), stringColour + " Soapstone");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), stringColour + " Soapstone Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneWall(colours.getId()), stringColour + " Soapstone Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()), stringColour + " Soapstone Stairs");
 
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), stringNaturalColour + " Soapstone Bricks");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), stringNaturalColour + " Soapstone Brick Slab");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringNaturalColour + " Soapstone Brick Wall");
-            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringNaturalColour + " Soapstone Brick Stairs");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), stringColour + " Soapstone Bricks");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), stringColour + " Soapstone Brick Slab");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringColour + " Soapstone Brick Wall");
+            translationBuilder.add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringColour + " Soapstone Brick Stairs");
 
-            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), stringNaturalColour + " Polished Soapstone");
-            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), stringNaturalColour + " Polished Soapstone Slab");
-            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), stringNaturalColour + " Polished Soapstone Wall");
-            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringNaturalColour + " Polished Soapstone Stairs");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), stringColour + " Polished Soapstone");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), stringColour + " Polished Soapstone Slab");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), stringColour + " Polished Soapstone Wall");
+            translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringColour + " Polished Soapstone Stairs");
 
             translationBuilder.add(KekeBlocks.getDyedDecoratedPot(colours.getId()), stringColour + " Decorated Pot");
         }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "arts_and_crafts:block/lac_polished_soapstone"
-  }
-}

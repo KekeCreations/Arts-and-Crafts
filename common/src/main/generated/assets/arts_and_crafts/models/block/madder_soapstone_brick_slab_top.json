@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "arts_and_crafts:block/madder_soapstone_bricks",
-    "side": "arts_and_crafts:block/madder_soapstone_bricks",
-    "top": "arts_and_crafts:block/madder_soapstone_bricks"
-  }
-}

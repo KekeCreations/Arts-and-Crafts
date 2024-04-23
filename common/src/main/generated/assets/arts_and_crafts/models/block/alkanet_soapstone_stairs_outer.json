@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/alkanet_soapstone",
-    "side": "arts_and_crafts:block/alkanet_soapstone",
-    "top": "arts_and_crafts:block/alkanet_soapstone"
-  }
-}

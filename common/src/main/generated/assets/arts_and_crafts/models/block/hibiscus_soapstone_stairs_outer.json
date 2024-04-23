@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/hibiscus_soapstone",
-    "side": "arts_and_crafts:block/hibiscus_soapstone",
-    "top": "arts_and_crafts:block/hibiscus_soapstone"
-  }
-}
