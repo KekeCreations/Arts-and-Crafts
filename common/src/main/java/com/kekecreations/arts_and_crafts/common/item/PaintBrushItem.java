@@ -1,11 +1,10 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -47,15 +46,15 @@ public class PaintBrushItem extends Item {
         if (!level.isClientSide()) {
             for (DyeColor colour : DyeColor.values()) {
                 if (colour != paintbrushDyeColour) {
-                    if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA.get() && (blockState.is(PaintbrushUtils.getDyedTerracotta(colour)) || blockState.is(Blocks.TERRACOTTA))) {
-                        PaintbrushUtils.paintBlock(level, PaintbrushUtils.getDyedTerracotta(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
+                    if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colour.getId())) || blockState.is(Blocks.TERRACOTTA))) {
+                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedTerracotta(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
-                    } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_GLAZED_TERRACOTTA.get() && (blockState.is(PaintbrushUtils.getDyedGlazedTerracotta(colour)))) {
-                        BlockState paintedBlockState = PaintbrushUtils.getDyedGlazedTerracotta(paintbrushDyeColour).defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING));
+                    } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_GLAZED_TERRACOTTA.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedGlazedTerracotta(colour.getId())))) {
+                        BlockState paintedBlockState = ArtsAndCraftsDyedBlockLists.getDyedGlazedTerracotta(paintbrushDyeColour.getId()).defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING));
                         PaintbrushUtils.paintBlock(level, paintedBlockState, pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
-                    } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_WOOL.get() && blockState.is(PaintbrushUtils.getDyedWool(colour))) {
-                        PaintbrushUtils.paintBlock(level, PaintbrushUtils.getDyedWool(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
+                    } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_WOOL.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedWool(colour.getId()))) {
+                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedWool(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_DECORATED_POTS.get() && (blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT))) {
                         PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, itemStack, hand, paintbrushDyeColour);

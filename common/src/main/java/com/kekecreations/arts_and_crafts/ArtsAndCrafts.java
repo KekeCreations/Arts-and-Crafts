@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class ArtsAndCrafts {
         KekeParticles.register();
         KekeEntityTypes.register();
         KekeBlocks.register();
+        ArtsAndCraftsDyedBlockLists.registerLists();
         KekeItems.register();
         KekeCustomSherdPatterns.register();
         KekeRecipeSerializer.register();
