@@ -45,17 +45,48 @@ public class PaintbrushUtils {
         }
 
     }
+    public static void paintbrushItemEvents(Level level, BlockState state, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
+        level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
+        damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
+    }
 
     public static void paintBlock(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace);
-        level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
-        level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
-        damagePaintbrushWhenPainting(level, player, itemStack, blockState, pos, hand);
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
+    public static void paintSlab(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.SLAB_TYPE, blockState.getValue(BlockStateProperties.SLAB_TYPE))
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
+    public static void paintStairs(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED))
+                .setValue(BlockStateProperties.HALF, blockState.getValue(BlockStateProperties.HALF))
+                .setValue(BlockStateProperties.STAIRS_SHAPE, blockState.getValue(BlockStateProperties.STAIRS_SHAPE))
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
+    public static void paintWall(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED))
+                .setValue(BlockStateProperties.UP, blockState.getValue(BlockStateProperties.UP))
+                .setValue(BlockStateProperties.NORTH_WALL, blockState.getValue(BlockStateProperties.NORTH_WALL))
+                .setValue(BlockStateProperties.EAST_WALL, blockState.getValue(BlockStateProperties.EAST_WALL))
+                .setValue(BlockStateProperties.SOUTH_WALL, blockState.getValue(BlockStateProperties.SOUTH_WALL))
+                .setValue(BlockStateProperties.WEST_WALL, blockState.getValue(BlockStateProperties.WEST_WALL)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
+
+
     public static void paintDecoratedPot(Level level, BlockEntity blockEntity, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand, DyeColor paintbrushDyeColour) {
         BlockState blockState = level.getBlockState(pos);
-        RandomSource randomSource = level.getRandom();
         if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
             DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
             DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
@@ -68,8 +99,6 @@ public class PaintbrushUtils {
             level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
             PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
         }
-        level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
-        level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
-        damagePaintbrushWhenPainting(level, player, itemStack, blockState, pos, hand);
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
 }
