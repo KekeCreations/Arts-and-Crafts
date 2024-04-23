@@ -186,4 +186,60 @@ public class PaintbrushUtils {
             }
         }
     }
+
+    public static Block getDyedGlazedTerracotta(DyeColor dyeColor) {
+        switch (dyeColor) {
+            case BLACK -> {
+                return Blocks.BLACK_GLAZED_TERRACOTTA;
+            }
+            case BLUE -> {
+                return Blocks.BLUE_GLAZED_TERRACOTTA;
+            }
+            case BROWN -> {
+                return Blocks.BROWN_GLAZED_TERRACOTTA;
+            }
+            case CYAN -> {
+                return Blocks.CYAN_GLAZED_TERRACOTTA;
+            }
+            case GRAY -> {
+                return Blocks.GRAY_GLAZED_TERRACOTTA;
+            }
+            case GREEN -> {
+                return Blocks.GREEN_GLAZED_TERRACOTTA;
+            }
+            case LIGHT_BLUE -> {
+                return Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA;
+            }
+            case LIGHT_GRAY -> {
+                return Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA;
+            }
+            case LIME -> {
+                return Blocks.LIME_GLAZED_TERRACOTTA;
+            }
+            case MAGENTA -> {
+                return Blocks.MAGENTA_GLAZED_TERRACOTTA;
+            }
+            case ORANGE -> {
+                return Blocks.ORANGE_GLAZED_TERRACOTTA;
+            }
+            case PINK -> {
+                return Blocks.PINK_GLAZED_TERRACOTTA;
+            }
+            case PURPLE -> {
+                return Blocks.PURPLE_GLAZED_TERRACOTTA;
+            }
+            case RED -> {
+                return Blocks.RED_GLAZED_TERRACOTTA;
+            }
+            case WHITE -> {
+                return Blocks.WHITE_GLAZED_TERRACOTTA;
+            }
+            case YELLOW -> {
+                return Blocks.YELLOW_GLAZED_TERRACOTTA;
+            }
+            default -> {
+                return Blocks.WHITE_GLAZED_TERRACOTTA;
+            }
+        }
+    }
 }
