@@ -8,6 +8,7 @@
     "BlockEntityTypeMixin",
     "BlockSetTypeMixin",
     "DecoratedPotPatternsMixin",
+    "FlowerPotBlockMixin",
     "WoodTypeMixin"
   ],
   "client": [

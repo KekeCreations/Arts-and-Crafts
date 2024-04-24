@@ -16,10 +16,10 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_TERRACOTTA_SHINGLE_SLAB = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_TERRACOTTA_SHINGLE_STAIRS = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_TERRACOTTA_SHINGLE_WALL = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_FLOWER_POTS = new HashMap<>();
 
     public static HashMap<StringRepresentable, Block> DYED_WOOL = new HashMap<>();
 
-    //All Arts & Crafts Dyed Block lists are in KekeBlocks
 
 
     public static void registerLists() {
@@ -30,6 +30,12 @@ public class ArtsAndCraftsDyedBlockLists {
         terracottaShingleStairsList();
         terracottaShingleWallList();
         woolList();
+        flowerPotsList();
+    }
+    public static void flowerPotsList() {
+        for (DyeColor colours : DyeColor.values()) {
+            DYED_FLOWER_POTS.put(colours, KekeBlocks.DYED_FLOWER_POTS.get(colours).get());
+        }
     }
 
     public static void terracottaShinglesList() {
@@ -129,6 +135,10 @@ public class ArtsAndCraftsDyedBlockLists {
     }
     public static Block getDyedTerracottaShingleWall(int colours) {
         return DYED_TERRACOTTA_SHINGLE_WALL.get(DyeColor.byId(colours));
+    }
+
+    public static Block getDyedFlowerPot(int colours) {
+        return DYED_FLOWER_POTS.get(DyeColor.byId(colours));
     }
 
     public static Block getDyedWool(int colours) {

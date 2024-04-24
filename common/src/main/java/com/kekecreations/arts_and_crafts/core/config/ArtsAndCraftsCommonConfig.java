@@ -13,6 +13,8 @@ public class ArtsAndCraftsCommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_TERRACOTTA_SHINGLES;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_DECORATED_POTS;
 
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_FLOWER_POTS;
+
 
 
 
@@ -40,6 +42,10 @@ public class ArtsAndCraftsCommonConfig {
         CAN_PAINT_DECORATED_POTS = BUILDER
                 .comment("Do you want paintbrushes to be able to paint decorated pots?")
                 .define("Paintbrushes Can Paint Decorated Pots", true);
+
+        CAN_PAINT_FLOWER_POTS = BUILDER
+                .comment("Do you want paintbrushes to be able to paint flower pots?")
+                .define("Paintbrushes Can Paint Flower Pots", true);
 
 
 
