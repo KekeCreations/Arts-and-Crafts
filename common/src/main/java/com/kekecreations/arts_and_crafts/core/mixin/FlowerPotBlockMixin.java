@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -28,7 +28,7 @@ public class FlowerPotBlockMixin {
             ItemStack itemStack = player.getItemInHand(interactionHand);
             for (DyeColor colours : DyeColor.values()) {
                 if (itemStack.getItem() == KekeItems.getPaintBrush(colours.getId())) {
-                    PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedFlowerPot(colours.getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                    PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(colours.getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
                     player.swing(interactionHand);
                 }
             }

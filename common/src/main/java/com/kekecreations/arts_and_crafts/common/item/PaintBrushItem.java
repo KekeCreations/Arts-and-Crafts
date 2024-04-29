@@ -56,20 +56,20 @@ public class PaintBrushItem extends Item {
                         PaintbrushUtils.paintBlock(level, paintedBlockState, pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
-                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingles(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLES.get()))) {
-                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingles(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(KekeBlocks.getDyedTerracottaShingles(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLES.get()))) {
+                        PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedTerracottaShingles(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
-                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleSlab(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get()))) {
-                        PaintbrushUtils.paintSlab(level, ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(KekeBlocks.getDyedTerracottaShingleSlab(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get()))) {
+                        PaintbrushUtils.paintSlab(level, KekeBlocks.getDyedTerracottaShingleSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
-                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleStairs(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get()))) {
-                        PaintbrushUtils.paintStairs(level, ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(KekeBlocks.getDyedTerracottaShingleStairs(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get()))) {
+                        PaintbrushUtils.paintStairs(level, KekeBlocks.getDyedTerracottaShingleStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
-                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleWall(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get()))) {
-                        PaintbrushUtils.paintWall(level, ArtsAndCraftsDyedBlockLists.getDyedTerracottaShingleWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA_SHINGLES.get() && (blockState.is(KekeBlocks.getDyedTerracottaShingleWall(colour.getId())) || blockState.is(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get()))) {
+                        PaintbrushUtils.paintWall(level, KekeBlocks.getDyedTerracottaShingleWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
                     //WOOL

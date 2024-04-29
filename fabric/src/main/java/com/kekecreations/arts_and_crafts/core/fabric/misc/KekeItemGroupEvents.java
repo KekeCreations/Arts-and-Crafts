@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.fabric.misc;
 
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
-import com.kekecreations.arts_and_crafts.common.util.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

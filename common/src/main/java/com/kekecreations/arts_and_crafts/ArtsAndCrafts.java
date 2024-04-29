@@ -18,7 +18,7 @@ public class ArtsAndCrafts {
         KekeParticles.register();
         KekeEntityTypes.register();
         KekeBlocks.register();
-        //ArtsAndCraftsDyedBlockLists.registerLists();
+        ArtsAndCraftsDyedBlockLists.registerLists();
         KekeItems.register();
         KekeCustomSherdPatterns.register();
         KekeRecipeSerializer.register();
