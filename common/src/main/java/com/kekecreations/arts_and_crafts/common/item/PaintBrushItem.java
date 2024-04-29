@@ -77,6 +77,15 @@ public class PaintBrushItem extends Item {
                         PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedWool(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
+                    //CONCRETE
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CONCRETE.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedConcrete(colour.getId()))) {
+                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedConcrete(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CONCRETE_POWDER.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedConcretePowder(colour.getId()))) {
+                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedConcretePowder(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
                     //POTS
                     else if (ArtsAndCraftsCommonConfig.CAN_PAINT_DECORATED_POTS.get() && (blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT))) {
                         PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, itemStack, hand, paintbrushDyeColour);
