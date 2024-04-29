@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.util.DyeColorByGradient;
+import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -71,7 +71,7 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             addAfter(event, KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
 
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 addAfter(event, Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
                 addAfter(event, KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), KekeBlocks.getDyedDecoratedPot(colours.getId()));
@@ -109,7 +109,7 @@ public class ArtsAndCraftsForge {
             addAfter(event, Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
                 addAfter(event, KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
@@ -117,7 +117,7 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.FLOWER_POT, KekeBlocks.getDyedFlowerPot(colours.getId()));
                 addAfter(event, Items.DECORATED_POT, KekeBlocks.getDyedDecoratedPot(colours.getId()));
             }

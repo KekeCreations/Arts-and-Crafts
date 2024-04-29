@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts.core.fabric.misc;
 
+import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.common.util.DyeColorByGradient;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
@@ -36,7 +36,7 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
 
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 event.addAfter(Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), KekeBlocks.getDyedDecoratedPot(colours.getId()));
@@ -70,7 +70,7 @@ public class KekeItemGroupEvents {
             event.addAfter(Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
                 event.addAfter(KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
@@ -78,7 +78,7 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
-            for (DyeColorByGradient colours : DyeColorByGradient.values()) {
+            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.FLOWER_POT, KekeBlocks.getDyedFlowerPot(colours.getId()));
                 event.addAfter(Items.DECORATED_POT, KekeBlocks.getDyedDecoratedPot(colours.getId()));
             }
@@ -108,6 +108,5 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
             event.addAfter(KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
         });
-
     }
 }
