@@ -60,6 +60,14 @@ public class PaintbrushUtils {
         paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
 
+    public static void paintCandles(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED))
+                .setValue(BlockStateProperties.LIT, blockState.getValue(BlockStateProperties.LIT))
+                .setValue(BlockStateProperties.CANDLES, blockState.getValue(BlockStateProperties.CANDLES)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
     public static void paintBlock(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace);

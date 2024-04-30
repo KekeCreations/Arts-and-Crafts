@@ -15,6 +15,7 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_WOOL = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_CONCRETE = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_CONCRETE_POWDER = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_CANDLES = new HashMap<>();
 
 
 
@@ -24,6 +25,7 @@ public class ArtsAndCraftsDyedBlockLists {
         woolList();
         concreteList();
         concretePowderList();
+        candlesList();
     }
 
     public static void terracottaList() {
@@ -121,6 +123,25 @@ public class ArtsAndCraftsDyedBlockLists {
         DYED_CONCRETE_POWDER.put(DyeColor.BLACK, Blocks.BLACK_CONCRETE_POWDER);
     }
 
+    public static void candlesList() {
+        DYED_CANDLES.put(DyeColor.WHITE, Blocks.WHITE_CANDLE);
+        DYED_CANDLES.put(DyeColor.ORANGE, Blocks.ORANGE_CANDLE);
+        DYED_CANDLES.put(DyeColor.MAGENTA, Blocks.MAGENTA_CANDLE);
+        DYED_CANDLES.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_CANDLE);
+        DYED_CANDLES.put(DyeColor.YELLOW, Blocks.YELLOW_CANDLE);
+        DYED_CANDLES.put(DyeColor.LIME, Blocks.LIME_CANDLE);
+        DYED_CANDLES.put(DyeColor.PINK, Blocks.PINK_CANDLE);
+        DYED_CANDLES.put(DyeColor.GRAY, Blocks.GRAY_CANDLE);
+        DYED_CANDLES.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_CANDLE);
+        DYED_CANDLES.put(DyeColor.CYAN, Blocks.CYAN_CANDLE);
+        DYED_CANDLES.put(DyeColor.PURPLE, Blocks.PURPLE_CANDLE);
+        DYED_CANDLES.put(DyeColor.BLUE, Blocks.BLUE_CANDLE);
+        DYED_CANDLES.put(DyeColor.BROWN, Blocks.BROWN_CANDLE);
+        DYED_CANDLES.put(DyeColor.GREEN, Blocks.GREEN_CANDLE);
+        DYED_CANDLES.put(DyeColor.RED, Blocks.RED_CANDLE);
+        DYED_CANDLES.put(DyeColor.BLACK, Blocks.BLACK_CANDLE);
+    }
+
 
     public static Block getDyedTerracotta(int colours) {
         return DYED_TERRACOTTA.get(DyeColor.byId(colours));
@@ -138,5 +159,9 @@ public class ArtsAndCraftsDyedBlockLists {
     }
     public static Block getDyedConcretePowder(int colours) {
         return DYED_CONCRETE_POWDER.get(DyeColor.byId(colours));
+    }
+
+    public static Block getDyedCandles(int colours) {
+        return DYED_CANDLES.get(DyeColor.byId(colours));
     }
 }

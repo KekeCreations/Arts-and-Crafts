@@ -95,6 +95,11 @@ public class PaintBrushItem extends Item {
                         PaintbrushUtils.paintChalkDust(level, KekeBlocks.getChalkDust(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
+                    //CANDLES
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CANDLES.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedCandles(colour.getId()))) {
+                        PaintbrushUtils.paintCandles(level, ArtsAndCraftsDyedBlockLists.getDyedCandles(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
                     //POTS
                     else if (ArtsAndCraftsCommonConfig.CAN_PAINT_DECORATED_POTS.get() && (blockState.is(KekeBlocks.getDyedDecoratedPot(colour.getId())) || blockState.is(Blocks.DECORATED_POT))) {
                         PaintbrushUtils.paintDecoratedPot(level, blockEntity, pos, player, itemStack, hand, paintbrushDyeColour);
