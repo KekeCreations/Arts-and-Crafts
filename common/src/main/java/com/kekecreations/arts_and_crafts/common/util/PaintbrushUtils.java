@@ -60,6 +60,17 @@ public class PaintbrushUtils {
         paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
 
+    public static void paintGlassPane(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.NORTH, blockState.getValue(BlockStateProperties.NORTH))
+                .setValue(BlockStateProperties.EAST, blockState.getValue(BlockStateProperties.EAST))
+                .setValue(BlockStateProperties.SOUTH, blockState.getValue(BlockStateProperties.SOUTH))
+                .setValue(BlockStateProperties.WEST, blockState.getValue(BlockStateProperties.WEST))
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
+
     public static void paintCandles(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace

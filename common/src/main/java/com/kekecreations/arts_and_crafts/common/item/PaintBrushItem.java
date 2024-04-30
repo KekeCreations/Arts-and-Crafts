@@ -95,6 +95,15 @@ public class PaintBrushItem extends Item {
                         PaintbrushUtils.paintChalkDust(level, KekeBlocks.getChalkDust(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
+                    //GLASS
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_GLASS.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedGlass(colour.getId())) || blockState.is(Blocks.GLASS))) {
+                        PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedGlass(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_GLASS_PANES.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedGlassPanes(colour.getId())) || blockState.is(Blocks.GLASS_PANE))) {
+                        PaintbrushUtils.paintGlassPane(level, ArtsAndCraftsDyedBlockLists.getDyedGlassPanes(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
                     //CANDLES
                     else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CANDLES.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedCandles(colour.getId()))) {
                         PaintbrushUtils.paintCandles(level, ArtsAndCraftsDyedBlockLists.getDyedCandles(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);

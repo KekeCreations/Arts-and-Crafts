@@ -18,6 +18,8 @@ public class ArtsAndCraftsCommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_CHALK;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_CHALK_DUST;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_CANDLES;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_GLASS;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_GLASS_PANES;
 
 
 
@@ -70,6 +72,14 @@ public class ArtsAndCraftsCommonConfig {
         CAN_PAINT_CANDLES = BUILDER
                 .comment("Do you want paintbrushes to be able to paint candles?")
                 .define("Paintbrushes Can Paint Candles", true);
+
+        CAN_PAINT_GLASS = BUILDER
+                .comment("Do you want paintbrushes to be able to paint glass?")
+                .define("Paintbrushes Can Paint Glass", true);
+
+        CAN_PAINT_GLASS_PANES = BUILDER
+                .comment("Do you want paintbrushes to be able to paint glass panes?")
+                .define("Paintbrushes Can Paint Glass Panes", true);
 
 
 

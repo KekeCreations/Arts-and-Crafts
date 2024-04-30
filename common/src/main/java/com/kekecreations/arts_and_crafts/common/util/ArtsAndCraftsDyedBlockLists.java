@@ -16,6 +16,8 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_CONCRETE = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_CONCRETE_POWDER = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_CANDLES = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_GLASS = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_GLASS_PANES = new HashMap<>();
 
 
 
@@ -26,6 +28,8 @@ public class ArtsAndCraftsDyedBlockLists {
         concreteList();
         concretePowderList();
         candlesList();
+        glassList();
+        glassPanesList();
     }
 
     public static void terracottaList() {
@@ -142,6 +146,44 @@ public class ArtsAndCraftsDyedBlockLists {
         DYED_CANDLES.put(DyeColor.BLACK, Blocks.BLACK_CANDLE);
     }
 
+    public static void glassList() {
+        DYED_GLASS.put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.RED, Blocks.RED_STAINED_GLASS);
+        DYED_GLASS.put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS);
+    }
+
+    public static void glassPanesList() {
+        DYED_GLASS_PANES.put(DyeColor.WHITE, Blocks.WHITE_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.ORANGE, Blocks.ORANGE_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.MAGENTA, Blocks.MAGENTA_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.YELLOW, Blocks.YELLOW_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.LIME, Blocks.LIME_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.PINK, Blocks.PINK_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.GRAY, Blocks.GRAY_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.CYAN, Blocks.CYAN_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.PURPLE, Blocks.PURPLE_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.BLUE, Blocks.BLUE_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.BROWN, Blocks.BROWN_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.GREEN, Blocks.GREEN_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.RED, Blocks.RED_STAINED_GLASS_PANE);
+        DYED_GLASS_PANES.put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS_PANE);
+    }
+
 
     public static Block getDyedTerracotta(int colours) {
         return DYED_TERRACOTTA.get(DyeColor.byId(colours));
@@ -163,5 +205,11 @@ public class ArtsAndCraftsDyedBlockLists {
 
     public static Block getDyedCandles(int colours) {
         return DYED_CANDLES.get(DyeColor.byId(colours));
+    }
+    public static Block getDyedGlass(int colours) {
+        return DYED_GLASS.get(DyeColor.byId(colours));
+    }
+    public static Block getDyedGlassPanes(int colours) {
+        return DYED_GLASS_PANES.get(DyeColor.byId(colours));
     }
 }
