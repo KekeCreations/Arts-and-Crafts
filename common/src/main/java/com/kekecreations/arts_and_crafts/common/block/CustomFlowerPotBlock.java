@@ -1,10 +1,10 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
+import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.stats.Stats;
@@ -132,11 +132,9 @@ public class CustomFlowerPotBlock extends Block {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         if (ArtsAndCraftsCommonConfig.CAN_PAINT_FLOWER_POTS.get()) {
-            for (DyeColor colours : DyeColor.values()) {
-                if (colours != this.colour && itemStack.getItem() == KekeItems.getPaintBrush(colours.getId())) {
-                    PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(colours.getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
-                    player.swing(interactionHand);
-                }
+            if (itemStack.getItem() instanceof PaintBrushItem paintBrushItem && paintBrushItem.getDyeColor() != this.colour) {
+                PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                return InteractionResult.sidedSuccess(level.isClientSide);
             }
         }
         return InteractionResult.CONSUME;
