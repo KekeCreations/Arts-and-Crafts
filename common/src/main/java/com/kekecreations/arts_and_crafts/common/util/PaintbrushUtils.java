@@ -59,6 +59,12 @@ public class PaintbrushUtils {
                 .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
         paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
+    public static void paintShulkerBox(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
 
     public static void paintGlassPane(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);

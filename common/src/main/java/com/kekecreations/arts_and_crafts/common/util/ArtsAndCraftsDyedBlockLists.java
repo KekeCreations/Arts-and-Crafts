@@ -18,6 +18,7 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_CANDLES = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_GLASS = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_GLASS_PANES = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_SHULKER_BOX = new HashMap<>();
 
 
 
@@ -30,6 +31,7 @@ public class ArtsAndCraftsDyedBlockLists {
         candlesList();
         glassList();
         glassPanesList();
+        shulkerBoxList();
     }
 
     public static void terracottaList() {
@@ -184,6 +186,25 @@ public class ArtsAndCraftsDyedBlockLists {
         DYED_GLASS_PANES.put(DyeColor.BLACK, Blocks.BLACK_STAINED_GLASS_PANE);
     }
 
+    public static void shulkerBoxList() {
+        DYED_SHULKER_BOX.put(DyeColor.WHITE, Blocks.WHITE_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.ORANGE, Blocks.ORANGE_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.MAGENTA, Blocks.MAGENTA_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.YELLOW, Blocks.YELLOW_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.LIME, Blocks.LIME_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.PINK, Blocks.PINK_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.GRAY, Blocks.GRAY_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.CYAN, Blocks.CYAN_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.PURPLE, Blocks.PURPLE_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.BLUE, Blocks.BLUE_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.BROWN, Blocks.BROWN_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.GREEN, Blocks.GREEN_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.RED, Blocks.RED_SHULKER_BOX);
+        DYED_SHULKER_BOX.put(DyeColor.BLACK, Blocks.BLACK_SHULKER_BOX);
+    }
+
 
     public static Block getDyedTerracotta(int colours) {
         return DYED_TERRACOTTA.get(DyeColor.byId(colours));
@@ -211,5 +232,8 @@ public class ArtsAndCraftsDyedBlockLists {
     }
     public static Block getDyedGlassPanes(int colours) {
         return DYED_GLASS_PANES.get(DyeColor.byId(colours));
+    }
+    public static Block getDyedShulkerBox(int colours) {
+        return DYED_SHULKER_BOX.get(DyeColor.byId(colours));
     }
 }
