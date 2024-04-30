@@ -20,6 +20,9 @@ public class ArtsAndCraftsCommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_CANDLES;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_GLASS;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_GLASS_PANES;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_SOAPSTONE;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_SOAPSTONE_BRICKS;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_POLISHED_SOAPSTONE;
 
 
 
@@ -80,6 +83,20 @@ public class ArtsAndCraftsCommonConfig {
         CAN_PAINT_GLASS_PANES = BUILDER
                 .comment("Do you want paintbrushes to be able to paint glass panes?")
                 .define("Paintbrushes Can Paint Glass Panes", true);
+
+        CAN_PAINT_SOAPSTONE = BUILDER
+                .comment("Do you want paintbrushes to be able to paint soapstone?")
+                .define("Paintbrushes Can Paint Soapstone", true);
+
+        CAN_PAINT_SOAPSTONE_BRICKS = BUILDER
+                .comment("Do you want paintbrushes to be able to paint soapstone bricks?")
+                .define("Paintbrushes Can Paint Soapstone Bricks", true);
+
+        CAN_PAINT_POLISHED_SOAPSTONE = BUILDER
+                .comment("Do you want paintbrushes to be able to paint polished soapstone?")
+                .define("Paintbrushes Can Paint Polished Soapstone", true);
+
+
 
 
 

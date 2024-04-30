@@ -46,6 +46,57 @@ public class PaintBrushItem extends Item {
         if (!level.isClientSide()) {
             for (DyeColor colour : DyeColor.values()) {
                 if (colour != paintbrushDyeColour) {
+                    //SOAPSTONE
+                    if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedSoapstone(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE.get()))) {
+                        PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedSoapstone(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedSoapstoneSlab(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_SLAB.get()))) {
+                        PaintbrushUtils.paintSlab(level, KekeBlocks.getDyedSoapstoneSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedSoapstoneStairs(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_STAIRS.get()))) {
+                        PaintbrushUtils.paintStairs(level, KekeBlocks.getDyedSoapstoneStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedSoapstoneWall(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_WALL.get()))) {
+                        PaintbrushUtils.paintWall(level, KekeBlocks.getDyedSoapstoneWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    //SOAPSTONE BRICKS
+                    if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE_BRICKS.get() && (blockState.is(KekeBlocks.getDyedSoapstoneBricks(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_BRICKS.get()))) {
+                        PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedSoapstoneBricks(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE_BRICKS.get() && (blockState.is(KekeBlocks.getDyedSoapstoneBrickSlab(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_BRICK_SLAB.get()))) {
+                        PaintbrushUtils.paintSlab(level, KekeBlocks.getDyedSoapstoneBrickSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE_BRICKS.get() && (blockState.is(KekeBlocks.getDyedSoapstoneBrickStairs(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get()))) {
+                        PaintbrushUtils.paintStairs(level, KekeBlocks.getDyedSoapstoneBrickStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_SOAPSTONE_BRICKS.get() && (blockState.is(KekeBlocks.getDyedSoapstoneBrickWall(colour.getId())) || blockState.is(KekeBlocks.SOAPSTONE_BRICK_WALL.get()))) {
+                        PaintbrushUtils.paintWall(level, KekeBlocks.getDyedSoapstoneBrickWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    //POLISHED SOAPSTONE
+                    if (ArtsAndCraftsCommonConfig.CAN_PAINT_POLISHED_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedPolishedSoapstone(colour.getId())) || blockState.is(KekeBlocks.POLISHED_SOAPSTONE.get()))) {
+                        PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedPolishedSoapstone(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_POLISHED_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedPolishedSoapstoneSlab(colour.getId())) || blockState.is(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get()))) {
+                        PaintbrushUtils.paintSlab(level, KekeBlocks.getDyedPolishedSoapstoneSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_POLISHED_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedPolishedSoapstoneStairs(colour.getId())) || blockState.is(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get()))) {
+                        PaintbrushUtils.paintStairs(level, KekeBlocks.getDyedPolishedSoapstoneStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_POLISHED_SOAPSTONE.get() && (blockState.is(KekeBlocks.getDyedPolishedSoapstoneWall(colour.getId())) || blockState.is(KekeBlocks.POLISHED_SOAPSTONE_WALL.get()))) {
+                        PaintbrushUtils.paintWall(level, KekeBlocks.getDyedPolishedSoapstoneWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
                     //TERRACOTTA
                     if (ArtsAndCraftsCommonConfig.CAN_PAINT_TERRACOTTA.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colour.getId())) || blockState.is(Blocks.TERRACOTTA))) {
                         PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedTerracotta(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
