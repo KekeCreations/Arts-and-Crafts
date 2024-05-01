@@ -1,10 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.platform.Services;
-import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
-import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.DyeColor;
 
 import java.util.HashMap;
@@ -16,9 +13,6 @@ public class KekeParticles {
     public static void register() {
 
     }
-
-
-    //public static final Supplier<SimpleParticleType> CHALK_DRAW = RegistryHelper.registerParticle("chalk_draw");
 
     static {
         for (DyeColor colours : DyeColor.values()) {
