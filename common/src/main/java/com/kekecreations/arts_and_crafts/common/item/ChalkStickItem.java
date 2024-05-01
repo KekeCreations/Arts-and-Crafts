@@ -118,6 +118,19 @@ public class ChalkStickItem extends Item {
         Vec3 clickLocation = useOnContext.getClickLocation();
         ItemStack itemStack = useOnContext.getItemInHand();
 
+        if (level.isClientSide()) {
+            if (block instanceof ChalkDustBlock chalkDustBlock) {
+                if (player != null) {
+                    if (player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof ChalkStickItem && !(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() instanceof ChalkStickItem)) {
+                        if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                            ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                        }
+                    } else if (!player.isCrouching() && chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                        ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
+                    }
+                }
+            }
+        }
         if (!level.isClientSide()) {
 
             if (itemStack.getTag() != null && !itemStack.getTag().contains(TAG_CHALK_PATTERN)) {
