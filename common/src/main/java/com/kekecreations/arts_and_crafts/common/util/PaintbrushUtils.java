@@ -52,6 +52,14 @@ public class PaintbrushUtils {
         damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
     }
 
+    public static void paintPlaster(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace
+                .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED))
+                .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
+    }
+
     public static void paintChalkDust(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace

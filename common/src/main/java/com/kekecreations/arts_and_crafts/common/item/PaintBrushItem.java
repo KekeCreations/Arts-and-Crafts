@@ -146,6 +146,11 @@ public class PaintBrushItem extends Item {
                         PaintbrushUtils.paintChalkDust(level, KekeBlocks.getChalkDust(paintbrushDyeColour).defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
+                    //PLASTER
+                    else if (ArtsAndCraftsCommonConfig.CAN_PAINT_PLASTER.get() && (blockState.is(KekeBlocks.getDyedPlaster(colour.getId())) || blockState.is(KekeBlocks.PLASTER.get()))) {
+                        PaintbrushUtils.paintPlaster(level, KekeBlocks.getDyedPlaster(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
+                    }
                     //GLASS
                     else if (ArtsAndCraftsCommonConfig.CAN_PAINT_GLASS.get() && (blockState.is(ArtsAndCraftsDyedBlockLists.getDyedGlass(colour.getId())) || blockState.is(Blocks.GLASS))) {
                         PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedGlass(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
