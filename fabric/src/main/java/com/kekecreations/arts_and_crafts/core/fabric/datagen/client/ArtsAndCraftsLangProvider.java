@@ -50,6 +50,8 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
             translationBuilder.add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringColour + " Polished Soapstone Stairs");
 
             translationBuilder.add(KekeBlocks.getDyedDecoratedPot(colours.getId()), stringColour + " Decorated Pot");
+
+            translationBuilder.add(KekeBlocks.getDyedPlaster(colours.getId()), stringColour + " Plaster");
         }
         //BLOCKS
         translationBuilder.add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
@@ -87,6 +89,7 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
         translationBuilder.add(KekeBlocks.CORK_LEAVES.get(), "Cork Leaves");
         translationBuilder.add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
+        translationBuilder.add(KekeBlocks.PLASTER.get(), "Plaster");
 
 
         //ITEMS

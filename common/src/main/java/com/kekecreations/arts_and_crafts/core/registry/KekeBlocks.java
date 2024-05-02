@@ -85,6 +85,8 @@ public class KekeBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DECORATED_POTS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
+
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f)));
     public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
@@ -143,10 +145,14 @@ public class KekeBlocks {
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
 
+    public static final Supplier<PlasterBlock> PLASTER = registerBlockWithItem("plaster", () -> new PlasterBlock(null, BlockBehaviour.Properties.of().strength(1.25F, 1F).sound(SoundType.PACKED_MUD).instrument(NoteBlockInstrument.HARP)));
 
 
     static {
         for (DyeColor colours : DyeColor.values()) {
+            //DYED PLASTER
+            DYED_PLASTER.put(colours, registerBlockWithItem(colours + "_plaster", () -> new PlasterBlock(colours, BlockBehaviour.Properties.copy(PLASTER.get()))));
+
             //DYED TERRACOTTA SHINGLES
             DYED_TERRACOTTA_SHINGLES.put(colours, registerBlockWithItem(colours + "_terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f))));
             DYED_TERRACOTTA_SHINGLE_SLAB.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
@@ -227,6 +233,10 @@ public class KekeBlocks {
     }
 
     //GET METHODS
+    //PLASTER
+    public static Block getDyedPlaster(int colours){
+        return DYED_PLASTER.get(DyeColor.byId(colours)).get();
+    }
     //GET TERRACOTTA SHINGLES
     public static Block getDyedTerracottaShingles(int colours){
         return DYED_TERRACOTTA_SHINGLES.get(DyeColor.byId(colours)).get();

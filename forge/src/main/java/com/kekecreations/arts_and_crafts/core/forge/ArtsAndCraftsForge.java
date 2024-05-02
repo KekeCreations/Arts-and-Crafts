@@ -71,6 +71,8 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             addAfter(event, KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
 
+            addAfter(event, Blocks.PINK_STAINED_GLASS_PANE, KekeBlocks.PLASTER.get());
+
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 addAfter(event, Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
@@ -95,6 +97,8 @@ public class ArtsAndCraftsForge {
                 addAfter(event, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
                 addAfter(event, KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 addAfter(event, KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+
+                addAfter(event, KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

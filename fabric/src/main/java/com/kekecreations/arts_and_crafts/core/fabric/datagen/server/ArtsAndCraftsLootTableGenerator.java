@@ -19,7 +19,7 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         chalk();
         soapstone();
         cork();
-
+        plaster();
     }
 
     private void terracottaShingles() {
@@ -90,5 +90,12 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         dropSelf(KekeBlocks.CORK_SIGN.get());
         dropSelf(KekeBlocks.CORK_HANGING_SIGN.get());
         dropSelf(KekeBlocks.CORK_SAPLING.get());
+    }
+
+    private void plaster() {
+        dropSelf(KekeBlocks.PLASTER.get());
+        for (DyeColor colours : DyeColor.values()) {
+            dropSelf(KekeBlocks.getDyedPlaster(colours.getId()));
+        }
     }
 }

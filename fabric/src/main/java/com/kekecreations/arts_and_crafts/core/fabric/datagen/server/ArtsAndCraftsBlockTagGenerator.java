@@ -199,7 +199,8 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.POLISHED_SOAPSTONE.get())
                 .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get())
                 .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get())
-                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
+                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get())
+                .add(KekeBlocks.PLASTER.get());
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(KekeBlocks.getDyedTerracottaShingles(colours.getId()))
@@ -222,7 +223,9 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                     .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
                     .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
 
-                    .add(KekeBlocks.getChalk(colours.getId()));
+                    .add(KekeBlocks.getChalk(colours.getId()))
+
+                    .add(KekeBlocks.getDyedPlaster(colours.getId()));
         }
     }
     private void appendFlowerPots() {

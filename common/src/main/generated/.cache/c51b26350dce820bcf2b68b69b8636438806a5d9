@@ -1,11 +1,11 @@
-// 1.20.1	2024-04-23T12:59:13.1620042	Arts & Crafts/Tags for minecraft:block
+// 1.20.1	2024-05-02T01:16:02.9708171	Arts & Crafts/Tags for minecraft:block
 5169473510b68bdfc2c32838f6366fb9a79be6db data\minecraft\tags\blocks\logs_that_burn.json
 1c20832b77f1f21ae822ba88208ca81857d320fc data\minecraft\tags\blocks\leaves.json
 bb0c00ab04e5ac9d086454d19616fca4b810502b data\minecraft\tags\blocks\wooden_trapdoors.json
 02508f8339a4adcb82a122a9edfd0431a325cd82 data\minecraft\tags\blocks\wooden_stairs.json
 01ff65103d318f236a50fbf5131fe7a08f831b28 data\minecraft\tags\blocks\stairs.json
 4efdcce83e116e4ed88bad48452b60933eb8d99e data\minecraft\tags\blocks\wooden_slabs.json
-737f2fafd0377640d2079be7680293205a9841ec data\minecraft\tags\blocks\mineable\pickaxe.json
+5fb2bb638b324d0252b53aba7d15bafdd15278a7 data\minecraft\tags\blocks\mineable\pickaxe.json
 b78113d5ff29ff08f6baea2eb78b7de373eb80df data\minecraft\tags\blocks\wooden_buttons.json
 fba838f2e070a0eb6e64c5f86a81a0f02bfe7e20 data\minecraft\tags\blocks\flower_pots.json
 131dfcbbba67a18dd9a1fd577166c16cdabb9f62 data\minecraft\tags\blocks\wooden_fences.json

@@ -35,6 +35,8 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
             event.addAfter(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
 
+            event.addAfter(Blocks.PINK_STAINED_GLASS_PANE, KekeBlocks.PLASTER.get());
+
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
                 event.addAfter(Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
@@ -59,6 +61,8 @@ public class KekeItemGroupEvents {
                 event.addAfter(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+
+                event.addAfter(KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
