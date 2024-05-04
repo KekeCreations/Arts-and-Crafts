@@ -104,9 +104,7 @@ public class ArtsAndCraftsForge {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
             event.accept(KekeBlocks.SOAPSTONE.get());
-            event.accept(KekeBlocks.SOAPSTONE_SLAB.get());
-            event.accept(KekeBlocks.SOAPSTONE_STAIRS.get());
-            event.accept(KekeBlocks.SOAPSTONE_WALL.get());
+            event.accept(KekeBlocks.GYPSUM.get());
 
             addAfter(event, Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
             addAfter(event, Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
@@ -144,6 +142,18 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeBlocks.CORK_DOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
             addAfter(event, KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_PRESSURE_PLATE.get());
             addAfter(event, KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_BUTTON.get());
+            addAfter(event, Blocks.MUD_BRICK_WALL, KekeBlocks.GYPSUM.get());
+            addAfter(event, KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_STAIRS.get());
+            addAfter(event, KekeBlocks.GYPSUM_STAIRS.get(), KekeBlocks.GYPSUM_SLAB.get());
+            addAfter(event, KekeBlocks.GYPSUM_SLAB.get(), KekeBlocks.GYPSUM_WALL.get());
+            addAfter(event, KekeBlocks.GYPSUM_WALL.get(), KekeBlocks.POLISHED_GYPSUM.get());
+            addAfter(event, KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
+            addAfter(event, KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), KekeBlocks.POLISHED_GYPSUM_SLAB.get());
+            addAfter(event, KekeBlocks.POLISHED_GYPSUM_SLAB.get(), KekeBlocks.POLISHED_GYPSUM_WALL.get());
+            addAfter(event, KekeBlocks.POLISHED_GYPSUM_WALL.get(), KekeBlocks.GYPSUM_BRICKS.get());
+            addAfter(event, KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_STAIRS.get());
+            addAfter(event, KekeBlocks.GYPSUM_BRICK_STAIRS.get(), KekeBlocks.GYPSUM_BRICK_SLAB.get());
+            addAfter(event, KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICK_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             addAfter(event, Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());

@@ -68,6 +68,7 @@ public class KekeItemGroupEvents {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
             event.accept(KekeBlocks.SOAPSTONE.get());
+            event.accept(KekeBlocks.GYPSUM.get());
             event.addAfter(Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
             event.addAfter(Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
             event.addAfter(Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
