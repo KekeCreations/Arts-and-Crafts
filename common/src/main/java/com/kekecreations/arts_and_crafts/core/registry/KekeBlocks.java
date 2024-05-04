@@ -87,6 +87,20 @@ public class KekeBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
 
+    //GYPSUM
+    public static final Supplier<Block> GYPSUM = registerBlockWithItem("gypsum", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).requiresCorrectToolForDrops().strength(1.75F, 5F)));
+    public static final Supplier<SlabBlock> GYPSUM_SLAB = registerBlockWithItem("gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<WallBlock> GYPSUM_WALL = registerBlockWithItem("gypsum_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<CustomStairBlock> GYPSUM_STAIRS = registerBlockWithItem("gypsum_stairs", () -> new CustomStairBlock(GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<Block> GYPSUM_BRICKS = registerBlockWithItem("gypsum_bricks", () -> new Block(BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<SlabBlock> GYPSUM_BRICK_SLAB = registerBlockWithItem("gypsum_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
+    public static final Supplier<WallBlock> GYPSUM_BRICK_WALL = registerBlockWithItem("gypsum_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
+    public static final Supplier<CustomStairBlock> GYPSUM_BRICK_STAIRS = registerBlockWithItem("gypsum_brick_stairs", () -> new CustomStairBlock(GYPSUM_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
+    public static final Supplier<Block> POLISHED_GYPSUM = registerBlockWithItem("polished_gypsum", () -> new Block(BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<SlabBlock> POLISHED_GYPSUM_SLAB = registerBlockWithItem("polished_gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
+    public static final Supplier<WallBlock> POLISHED_GYPSUM_WALL = registerBlockWithItem("polished_gypsum_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
+    public static final Supplier<CustomStairBlock> POLISHED_GYPSUM_STAIRS = registerBlockWithItem("polished_gypsum_stairs", () -> new CustomStairBlock(POLISHED_GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
+
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f)));
     public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
@@ -145,7 +159,7 @@ public class KekeBlocks {
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
 
-    public static final Supplier<PlasterBlock> PLASTER = registerBlockWithItem("plaster", () -> new PlasterBlock(null, BlockBehaviour.Properties.of().strength(1.25F, 1F).sound(SoundType.PACKED_MUD).instrument(NoteBlockInstrument.HARP)));
+    public static final Supplier<PlasterBlock> PLASTER = registerBlockWithItem("plaster", () -> new PlasterBlock(null, BlockBehaviour.Properties.of().strength(1.25F, 1F).sound(SoundType.PACKED_MUD).instrument(NoteBlockInstrument.BASEDRUM)));
 
 
     static {

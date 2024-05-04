@@ -48,6 +48,13 @@ public class KekeBlockFamilies {
             .stairs(KekeBlocks.CORK_STAIRS.get()).getFamily();
 
 
+    public static final BlockFamily GYPSUM = KekeBlockFamilies.register(KekeBlocks.GYPSUM.get()).slab(KekeBlocks.GYPSUM_SLAB.get()).wall(KekeBlocks.GYPSUM_WALL.get()).stairs(KekeBlocks.GYPSUM_STAIRS.get()).getFamily();
+
+    public static final BlockFamily POLISHED_GYPSUM = KekeBlockFamilies.register(KekeBlocks.POLISHED_GYPSUM.get()).slab(KekeBlocks.POLISHED_GYPSUM_SLAB.get()).wall(KekeBlocks.POLISHED_GYPSUM_WALL.get()).stairs(KekeBlocks.POLISHED_GYPSUM_STAIRS.get()).getFamily();
+
+    public static final BlockFamily GYPSUM_BRICKS = KekeBlockFamilies.register(KekeBlocks.GYPSUM_BRICKS.get()).slab(KekeBlocks.GYPSUM_BRICK_SLAB.get()).wall(KekeBlocks.GYPSUM_BRICK_WALL.get()).stairs(KekeBlocks.GYPSUM_BRICK_STAIRS.get()).getFamily();
+
+
 
     public static BlockFamily.Builder register(Block baseBlock) {
         BlockFamily.Builder builder = new BlockFamily.Builder(baseBlock);

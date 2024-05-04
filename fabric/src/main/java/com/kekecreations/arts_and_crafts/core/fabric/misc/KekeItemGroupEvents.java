@@ -104,6 +104,19 @@ public class KekeItemGroupEvents {
             event.addAfter(KekeBlocks.CORK_DOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
             event.addAfter(KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_PRESSURE_PLATE.get());
             event.addAfter(KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_BUTTON.get());
+
+            event.addAfter(Blocks.MUD_BRICK_WALL, KekeBlocks.GYPSUM.get());
+            event.addAfter(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_STAIRS.get());
+            event.addAfter(KekeBlocks.GYPSUM_STAIRS.get(), KekeBlocks.GYPSUM_SLAB.get());
+            event.addAfter(KekeBlocks.GYPSUM_SLAB.get(), KekeBlocks.GYPSUM_WALL.get());
+            event.addAfter(KekeBlocks.GYPSUM_WALL.get(), KekeBlocks.POLISHED_GYPSUM.get());
+            event.addAfter(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
+            event.addAfter(KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), KekeBlocks.POLISHED_GYPSUM_SLAB.get());
+            event.addAfter(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), KekeBlocks.POLISHED_GYPSUM_WALL.get());
+            event.addAfter(KekeBlocks.POLISHED_GYPSUM_WALL.get(), KekeBlocks.GYPSUM_BRICKS.get());
+            event.addAfter(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_STAIRS.get());
+            event.addAfter(KekeBlocks.GYPSUM_BRICK_STAIRS.get(), KekeBlocks.GYPSUM_BRICK_SLAB.get());
+            event.addAfter(KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICK_WALL.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(event -> {
             event.addAfter(Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());

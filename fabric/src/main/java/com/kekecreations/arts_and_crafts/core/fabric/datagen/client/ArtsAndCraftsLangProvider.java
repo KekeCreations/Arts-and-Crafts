@@ -90,6 +90,18 @@ public class ArtsAndCraftsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(KekeBlocks.CORK_LEAVES.get(), "Cork Leaves");
         translationBuilder.add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
         translationBuilder.add(KekeBlocks.PLASTER.get(), "Plaster");
+        translationBuilder.add(KekeBlocks.GYPSUM.get(), "Gypsum");
+        translationBuilder.add(KekeBlocks.GYPSUM_SLAB.get(), "Gypsum Slab");
+        translationBuilder.add(KekeBlocks.GYPSUM_WALL.get(), "Gypsum Wall");
+        translationBuilder.add(KekeBlocks.GYPSUM_STAIRS.get(), "Gypsum Stairs");
+        translationBuilder.add(KekeBlocks.GYPSUM_BRICKS.get(), "Gypsum Bricks");
+        translationBuilder.add(KekeBlocks.GYPSUM_BRICK_SLAB.get(), "Gypsum Brick Slab");
+        translationBuilder.add(KekeBlocks.GYPSUM_BRICK_WALL.get(), "Gypsum Brick Wall");
+        translationBuilder.add(KekeBlocks.GYPSUM_BRICK_STAIRS.get(), "Gypsum Brick Stairs");
+        translationBuilder.add(KekeBlocks.POLISHED_GYPSUM.get(), "Polished Gypsum");
+        translationBuilder.add(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), "Polished Gypsum Slab");
+        translationBuilder.add(KekeBlocks.POLISHED_GYPSUM_WALL.get(), "Polished Gypsum Wall");
+        translationBuilder.add(KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), "Polished Gypsum Stairs");
 
 
         //ITEMS

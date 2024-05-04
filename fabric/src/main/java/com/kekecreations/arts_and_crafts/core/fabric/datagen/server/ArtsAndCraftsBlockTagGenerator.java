@@ -139,7 +139,10 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get())
                 .add(KekeBlocks.SOAPSTONE_WALL.get())
                 .add(KekeBlocks.SOAPSTONE_BRICK_WALL.get())
-                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
+                .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get())
+                .add(KekeBlocks.GYPSUM_WALL.get())
+                .add(KekeBlocks.GYPSUM_BRICK_WALL.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_WALL.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.WALLS)
                             .add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()))
@@ -155,7 +158,10 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get())
                 .add(KekeBlocks.SOAPSTONE_SLAB.get())
                 .add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get())
-                .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
+                .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get())
+                .add(KekeBlocks.GYPSUM_SLAB.get())
+                .add(KekeBlocks.GYPSUM_BRICK_SLAB.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_SLAB.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.SLABS)
                             .add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()))
@@ -170,7 +176,10 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
                 .add(KekeBlocks.SOAPSTONE_STAIRS.get())
                 .add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get())
-                .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
+                .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get())
+                .add(KekeBlocks.GYPSUM_STAIRS.get())
+                .add(KekeBlocks.GYPSUM_BRICK_STAIRS.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
                 for (DyeColor colours : DyeColor.values()) {
                     getOrCreateTagBuilder(BlockTags.STAIRS)
                             .add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()))
@@ -200,7 +209,19 @@ public class ArtsAndCraftsBlockTagGenerator extends FabricTagProvider.BlockTagPr
                 .add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get())
                 .add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get())
                 .add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get())
-                .add(KekeBlocks.PLASTER.get());
+                .add(KekeBlocks.PLASTER.get())
+                .add(KekeBlocks.GYPSUM.get())
+                .add(KekeBlocks.GYPSUM_SLAB.get())
+                .add(KekeBlocks.GYPSUM_STAIRS.get())
+                .add(KekeBlocks.GYPSUM_WALL.get())
+                .add(KekeBlocks.GYPSUM_BRICKS.get())
+                .add(KekeBlocks.GYPSUM_BRICK_SLAB.get())
+                .add(KekeBlocks.GYPSUM_BRICK_STAIRS.get())
+                .add(KekeBlocks.GYPSUM_BRICK_WALL.get())
+                .add(KekeBlocks.POLISHED_GYPSUM.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_SLAB.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_STAIRS.get())
+                .add(KekeBlocks.POLISHED_GYPSUM_WALL.get());
         for (DyeColor colours : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(KekeBlocks.getDyedTerracottaShingles(colours.getId()))

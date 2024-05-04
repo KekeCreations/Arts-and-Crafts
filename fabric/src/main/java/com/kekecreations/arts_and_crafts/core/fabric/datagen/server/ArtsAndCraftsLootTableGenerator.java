@@ -20,6 +20,7 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         soapstone();
         cork();
         plaster();
+        gypsum();
     }
 
     private void terracottaShingles() {
@@ -67,6 +68,21 @@ public class ArtsAndCraftsLootTableGenerator extends FabricBlockLootTableProvide
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
+    }
+
+    private void gypsum() {
+        dropSelf(KekeBlocks.GYPSUM.get());
+        dropSelf(KekeBlocks.GYPSUM_SLAB.get());
+        dropSelf(KekeBlocks.GYPSUM_WALL.get());
+        dropSelf(KekeBlocks.GYPSUM_STAIRS.get());
+        dropSelf(KekeBlocks.GYPSUM_BRICKS.get());
+        dropSelf(KekeBlocks.GYPSUM_BRICK_SLAB.get());
+        dropSelf(KekeBlocks.GYPSUM_BRICK_WALL.get());
+        dropSelf(KekeBlocks.GYPSUM_BRICK_STAIRS.get());
+        dropSelf(KekeBlocks.POLISHED_GYPSUM.get());
+        dropSelf(KekeBlocks.POLISHED_GYPSUM_SLAB.get());
+        dropSelf(KekeBlocks.POLISHED_GYPSUM_WALL.get());
+        dropSelf(KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
     }
 
 
