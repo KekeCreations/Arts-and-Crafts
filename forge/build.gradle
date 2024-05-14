@@ -58,12 +58,12 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', mod_id, '--all', '--output', file('../common/src/main/generated/'), '--existing', file('../common/src/main/generated/')
             taskName 'Data'
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
-                modDataRun {
+                arts_and_crafts {
                     source sourceSets.main
                     source project(":common").sourceSets.main
                 }

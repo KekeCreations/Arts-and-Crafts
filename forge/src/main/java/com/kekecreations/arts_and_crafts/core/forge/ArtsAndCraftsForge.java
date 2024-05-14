@@ -3,19 +3,29 @@ package com.kekecreations.arts_and_crafts.core.forge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsRecipeProvider;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+import java.util.concurrent.CompletableFuture;
 
 @Mod(ArtsAndCrafts.MOD_ID)
 public class ArtsAndCraftsForge {
@@ -30,8 +40,22 @@ public class ArtsAndCraftsForge {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         modEventBus.addListener(this::creativeItemGroups);
+        modEventBus.addListener(this::gatherData);
 
         MinecraftForge.EVENT_BUS.register(this);
+    }
+    @SubscribeEvent
+    public void gatherData(GatherDataEvent event) {
+        boolean includeClient = event.includeClient();
+        boolean includeServer = event.includeServer();
+        DataGenerator generator = event.getGenerator();
+        PackOutput packOutput = generator.getPackOutput();
+        ExistingFileHelper fileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+
+        generator.addProvider(includeClient, new ArtsAndCraftsLangProvider(packOutput, ArtsAndCrafts.MOD_ID));
+
+        generator.addProvider(includeServer, new ArtsAndCraftsRecipeProvider(packOutput));
     }
 
 

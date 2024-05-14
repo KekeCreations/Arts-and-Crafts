@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/potted_cactus",
-  "textures": {
-    "cactus": "minecraft:block/cactus_side",
-    "cactus_top": "minecraft:block/cactus_top",
-    "flowerpot": "arts_and_crafts:block/light_blue_flower_pot",
-    "particle": "arts_and_crafts:block/light_blue_flower_pot"
-  }
-}

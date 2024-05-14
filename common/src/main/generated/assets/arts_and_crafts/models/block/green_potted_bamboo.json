@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/potted_bamboo",
-  "textures": {
-    "bamboo": "minecraft:block/bamboo_stalk",
-    "flowerpot": "arts_and_crafts:block/green_flower_pot",
-    "leaf": "minecraft:block/bamboo_singleleaf",
-    "particle": "arts_and_crafts:block/green_flower_pot"
-  }
-}
