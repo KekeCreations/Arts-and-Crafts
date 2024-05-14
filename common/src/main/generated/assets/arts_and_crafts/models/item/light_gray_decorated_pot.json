@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/decorated_pot",
+  "textures": {
+    "particle": "arts_and_crafts:item/light_gray_decorated_pot_side"
+  }
+}

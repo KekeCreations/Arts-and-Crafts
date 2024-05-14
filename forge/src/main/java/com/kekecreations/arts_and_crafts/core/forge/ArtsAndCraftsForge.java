@@ -3,6 +3,8 @@ package com.kekecreations.arts_and_crafts.core.forge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsRecipeProvider;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
@@ -46,16 +48,18 @@ public class ArtsAndCraftsForge {
     }
     @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
-        boolean includeClient = event.includeClient();
-        boolean includeServer = event.includeServer();
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(includeClient, new ArtsAndCraftsLangProvider(packOutput, ArtsAndCrafts.MOD_ID));
+        //Client
+        generator.addProvider(event.includeClient(), new ArtsAndCraftsLangProvider(packOutput, ArtsAndCrafts.MOD_ID));
+        generator.addProvider(event.includeClient(), new ArtsAndCraftsItemModelProvider(packOutput, ArtsAndCrafts.MOD_ID, fileHelper));
+        generator.addProvider(event.includeClient(), new ArtsAndCraftsBlockStateProvider(packOutput, ArtsAndCrafts.MOD_ID, fileHelper));
 
-        generator.addProvider(includeServer, new ArtsAndCraftsRecipeProvider(packOutput));
+        //Server
+        generator.addProvider(event.includeServer(), new ArtsAndCraftsRecipeProvider(packOutput));
     }
 
 

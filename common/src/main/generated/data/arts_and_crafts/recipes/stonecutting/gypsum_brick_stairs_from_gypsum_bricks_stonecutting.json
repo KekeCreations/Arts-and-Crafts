@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "arts_and_crafts:gypsum_bricks"
+  },
+  "result": "arts_and_crafts:gypsum_brick_stairs"
+}

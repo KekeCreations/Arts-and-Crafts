@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "arts_and_crafts:block/polished_gypsum_slab"
+    },
+    "type=double": {
+      "model": "arts_and_crafts:block/polished_gypsum"
+    },
+    "type=top": {
+      "model": "arts_and_crafts:block/polished_gypsum_slab_top"
+    }
+  }
+}

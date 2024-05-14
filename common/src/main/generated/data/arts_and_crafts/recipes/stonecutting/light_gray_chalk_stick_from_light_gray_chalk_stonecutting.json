@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "arts_and_crafts:light_gray_chalk"
+  },
+  "result": "arts_and_crafts:light_gray_chalk_stick"
+}
