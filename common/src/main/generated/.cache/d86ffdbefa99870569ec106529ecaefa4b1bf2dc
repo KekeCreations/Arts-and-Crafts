@@ -1,5 +1,6 @@
-// 1.20.1	2024-05-14T22:12:12.2179257	Block States: arts_and_crafts
+// 1.20.1	2024-05-15T19:07:47.7151569	Block States: arts_and_crafts
 62c207c63e4b990f703081714e334de8798ebc98 assets/arts_and_crafts/blockstates/black_chalk.json
+46862a7f77e901d4736a662f1f042aa8addea184 assets/arts_and_crafts/blockstates/bleached_wool.json
 0c2aecfff7dd0a526c7395958bff5156bc15bd27 assets/arts_and_crafts/blockstates/blue_chalk.json
 91d0fc111c9c895bc289778f5952c1b8b5b38308 assets/arts_and_crafts/blockstates/brown_chalk.json
 353e6d8d80123b32f5a13a08672dd33117116698 assets/arts_and_crafts/blockstates/cyan_chalk.json
@@ -28,6 +29,7 @@ e341041982379f358475386db14b3063083c20d9 assets/arts_and_crafts/blockstates/purp
 3b76ea50bcbe618ab51dd2b5e8fdd9e5346ce811 assets/arts_and_crafts/blockstates/white_chalk.json
 f7f1cde16cedde120d3b881adf855164b4279c07 assets/arts_and_crafts/blockstates/yellow_chalk.json
 e2d079b160fdabb489e2cd109793936991eae923 assets/arts_and_crafts/models/block/black_chalk.json
+7ff00a1ad3609b5854fc35990c650064c320d414 assets/arts_and_crafts/models/block/bleached_wool.json
 28c5b1946a7d7bef9ab62ff2a092e5998cf07450 assets/arts_and_crafts/models/block/blue_chalk.json
 1cb4163973d0de38a5074f68bf16f731cef98413 assets/arts_and_crafts/models/block/brown_chalk.json
 52e9d505c9e5feb0cc64a5da137f8c5c77e11e6a assets/arts_and_crafts/models/block/cyan_chalk.json
@@ -74,6 +76,7 @@ a854b4f6c24a62910e541666d8bc1a2d85bc40e2 assets/arts_and_crafts/models/block/pur
 8fb32e777c756eb2f24d77a504d557378aca95ec assets/arts_and_crafts/models/block/white_chalk.json
 49b48df77df8222a098a3e8a5e8533f6ba31d9d6 assets/arts_and_crafts/models/block/yellow_chalk.json
 6ed9b507fffa289edbb7a6f62f5047f283074498 assets/arts_and_crafts/models/item/black_chalk.json
+cee1206f3a311e29e86e66b0d0e681a8f2c96605 assets/arts_and_crafts/models/item/bleached_wool.json
 7a144a64e93fe260cb0b7a99f7203ec575e65336 assets/arts_and_crafts/models/item/blue_chalk.json
 6c4a745c7f6bf2f41e7db1287d166096297f8c37 assets/arts_and_crafts/models/item/brown_chalk.json
 dcc10a7aa4dc341b5e07b1ada26d03e0db6a5f36 assets/arts_and_crafts/models/item/cyan_chalk.json

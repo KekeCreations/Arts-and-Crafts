@@ -87,6 +87,9 @@ public class KekeBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
 
+    //BLEACHED
+    public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+
     //GYPSUM
     public static final Supplier<Block> GYPSUM = registerBlockWithItem("gypsum", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).requiresCorrectToolForDrops().strength(1.75F, 5F)));
     public static final Supplier<SlabBlock> GYPSUM_SLAB = registerBlockWithItem("gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));

@@ -27,7 +27,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
             basicHandheld(KekeItems.getChalkStick(colours.getId()));
             basicItem(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem());
             decoratedPotItem(KekeItems.getDyedDecoratedPotBlockItem(colours));
-            basicItem(KekeItems.getPaintBrush(colours.getId()));
+            basicHandheld(KekeItems.getPaintBrush(colours.getId()));
         }
         basicItem(KekeItems.CORK_BOAT.get());
         basicItem(KekeItems.CORK_CHEST_BOAT.get());
@@ -35,6 +35,8 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItem(KekeItems.RUINED_POTTERY_SHERD.get());
         basicItem(KekeItems.FINALE_POTTERY_SHERD.get());
         basicItem(KekeItems.GATEWAY_POTTERY_SHERD.get());
+        basicHandheld(KekeItems.BLEACHDEW_PAINTBRUSH.get());
+        basicItem(KekeItems.BLEACHDEW.get());
     }
     private ResourceLocation key(Item item) {
         return ForgeRegistries.ITEMS.getKey(item);

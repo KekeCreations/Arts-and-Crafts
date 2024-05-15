@@ -42,6 +42,9 @@ public class KekeItems {
 
 
 
+    //BLEACHED
+    public static final Supplier<Item> BLEACHDEW = registerItem("bleachdew", () -> new Item(new Item.Properties()));
+    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintBrushItem(null, new Item.Properties().stacksTo(1).durability(24)));
 
 
     static {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "arts_and_crafts:item/light_blue_paintbrush"
+    "layer0": "arts_and_crafts:item/bleachdew_paintbrush"
   }
 }

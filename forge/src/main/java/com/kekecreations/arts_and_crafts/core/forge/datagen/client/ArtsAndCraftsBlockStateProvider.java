@@ -33,6 +33,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         wallWithItem(KekeBlocks.GYPSUM_BRICK_WALL.get(), KekeBlocks.GYPSUM_BRICKS.get());
         wallWithItem(KekeBlocks.POLISHED_GYPSUM_WALL.get(), KekeBlocks.POLISHED_GYPSUM.get());
 
+        //Bleached
+        cubeAllWithItem(KekeBlocks.BLEACHED_WOOL.get());
+
         //DYED STUFF
         for (DyeColor colours : DyeColor.values()) {
             cubeAllWithItem(KekeBlocks.getChalk(colours.getId()));
