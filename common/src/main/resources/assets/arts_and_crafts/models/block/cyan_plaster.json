@@ -1,7 +1,0 @@
-{
-  "parent" : "arts_and_crafts:block/plaster_model",
-  "textures": {
-    "particle": "arts_and_crafts:block/cyan_plaster",
-    "plaster": "arts_and_crafts:block/cyan_plaster"
-  }
-}

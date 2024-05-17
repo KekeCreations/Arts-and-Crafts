@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-15T18:30:11.6536762	Item Models: arts_and_crafts
+// 1.20.1	2024-05-17T06:14:22.1640974	Item Models: arts_and_crafts
 1b127836ff8f6d162519645d794ec3caaccafeeb assets/arts_and_crafts/models/item/black_chalk_stick.json
 b303bfb18bc31bdd837c85ec2bfb8a8cf7effdc7 assets/arts_and_crafts/models/item/black_decorated_pot.json
 d8dc925d72d8baf2a8af1ce8e5cc2c6c5d7a9ef5 assets/arts_and_crafts/models/item/black_flower_pot.json
@@ -15,6 +15,10 @@ f5b17b1f4547a0b222146226034216e0bc24e775 assets/arts_and_crafts/models/item/brow
 afced4593d8ccb2e71a27e821da023fe765c2255 assets/arts_and_crafts/models/item/brown_paintbrush.json
 2d3dd4fe9bd64b3e0cc9fa2829a7a2e22df57560 assets/arts_and_crafts/models/item/cork_boat.json
 e766a9bf6a01632886f5c01f91309ce22217edf0 assets/arts_and_crafts/models/item/cork_chest_boat.json
+1a8905daa840cddb5f30e21769603f76fe2e3748 assets/arts_and_crafts/models/item/cork_door.json
+7d78abf87bcc2ebb8de5127ff7dadfe672e5f3ef assets/arts_and_crafts/models/item/cork_hanging_sign.json
+f951175de7f880c34783f46daba10359a2a87e71 assets/arts_and_crafts/models/item/cork_sapling.json
+277b7c4628a60bf171d987e77d51527626894bc3 assets/arts_and_crafts/models/item/cork_sign.json
 e339219976339eae5129121cb333d5ae8de91284 assets/arts_and_crafts/models/item/cyan_chalk_stick.json
 b5ef837fe07a4647997c311b40694809539be398 assets/arts_and_crafts/models/item/cyan_decorated_pot.json
 c8eebb4d0d081868cc803b80e4fed0b9ad14c7ba assets/arts_and_crafts/models/item/cyan_flower_pot.json

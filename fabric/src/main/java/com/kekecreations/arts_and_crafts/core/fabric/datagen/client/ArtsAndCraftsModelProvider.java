@@ -27,6 +27,7 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
 
+        /*
         for (DyeColor colours : DyeColor.values()) {
             KekeModelTemplates kekeModelTemplates = new KekeModelTemplates();
             blockStateModelGenerator.createTrivialBlock(KekeBlocks.getDyedFlowerPot(colours.getId()), KekeTextureMapping.flower_pot(KekeBlocks.getDyedFlowerPot(colours.getId())), KekeModelTemplates.FLOWER_POT);
@@ -73,6 +74,8 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
 
         }
 
+         */
+
         //DYED DECORATED POTS
         blockStateModelGenerator.blockEntityModels(ModelLocationUtils.decorateBlockModelLocation("white_decorated_pot"), Blocks.WHITE_TERRACOTTA).createWithoutBlockItem(KekeBlocks.getDyedDecoratedPot(DyeColor.WHITE.getId()));
         blockStateModelGenerator.blockEntityModels(ModelLocationUtils.decorateBlockModelLocation("orange_decorated_pot"), Blocks.ORANGE_TERRACOTTA).createWithoutBlockItem(KekeBlocks.getDyedDecoratedPot(DyeColor.ORANGE.getId()));
@@ -102,6 +105,8 @@ public class ArtsAndCraftsModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createPlant(KekeBlocks.CORK_SAPLING.get(), KekeBlocks.POTTED_CORK_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
 
         KekeBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel).forEach(family -> blockStateModelGenerator.family(family.getBaseBlock()).generateFor((BlockFamily)family));
+
+
 
     }
 

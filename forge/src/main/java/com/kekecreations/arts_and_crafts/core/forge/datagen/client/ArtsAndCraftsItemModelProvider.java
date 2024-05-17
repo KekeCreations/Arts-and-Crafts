@@ -37,6 +37,10 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItem(KekeItems.GATEWAY_POTTERY_SHERD.get());
         basicHandheld(KekeItems.BLEACHDEW_PAINTBRUSH.get());
         basicItem(KekeItems.BLEACHDEW.get());
+        basicItem(KekeBlocks.CORK_DOOR.get().asItem());
+        basicItemWithBlockFolder(KekeBlocks.CORK_SAPLING.get().asItem());
+        basicItem(KekeItems.CORK_SIGN.get());
+        basicItem(KekeItems.CORK_HANGING_SIGN.get());
     }
     private ResourceLocation key(Item item) {
         return ForgeRegistries.ITEMS.getKey(item);
@@ -44,6 +48,11 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
 
     private String name(Item item) {
         return key(item).getPath();
+    }
+
+    private void basicItemWithBlockFolder(Item item) {
+        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/generated"))
+                .texture("layer0", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/" + name(item)));
     }
 
     private void basicHandheld(Item item) {
