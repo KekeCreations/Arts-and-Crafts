@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.fabric.misc;
+package com.kekecreations.arts_and_crafts.core.fabric;
 
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -9,7 +9,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 
-public class KekeItemGroupEvents {
+public class ArtsAndCraftsItemGroupEvents {
 
 
     public static void add() {

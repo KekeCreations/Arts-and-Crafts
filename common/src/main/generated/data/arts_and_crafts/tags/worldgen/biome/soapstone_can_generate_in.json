@@ -1,0 +1,29 @@
+{
+  "values": [
+    "minecraft:badlands",
+    "minecraft:bamboo_jungle",
+    "minecraft:beach",
+    "minecraft:birch_forest",
+    "minecraft:cherry_grove",
+    "minecraft:dark_forest",
+    "minecraft:lush_caves",
+    "minecraft:desert",
+    "minecraft:eroded_badlands",
+    "minecraft:flower_forest",
+    "minecraft:forest",
+    "minecraft:jungle",
+    "minecraft:mangrove_swamp",
+    "minecraft:meadow",
+    "minecraft:mushroom_fields",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:plains",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:sparse_jungle",
+    "minecraft:sunflower_plains",
+    "minecraft:windswept_savanna",
+    "minecraft:wooded_badlands"
+  ]
+}

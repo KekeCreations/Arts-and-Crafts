@@ -6,10 +6,7 @@ import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
-import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsBlockTagsProvider;
-import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsItemTagsProvider;
-import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsLootTableProvider;
-import com.kekecreations.arts_and_crafts.core.forge.datagen.server.ArtsAndCraftsRecipeProvider;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.server.*;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
@@ -67,6 +64,7 @@ public class ArtsAndCraftsForge {
         generator.addProvider(event.includeServer(), blockTagProvider);
         generator.addProvider(event.includeServer(), new ArtsAndCraftsItemTagsProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), ArtsAndCrafts.MOD_ID, fileHelper));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsLootTableProvider(packOutput));
+        generator.addProvider(event.includeServer(), new ArtsAndCraftsBiomeTagsProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID, fileHelper));
     }
 
 
