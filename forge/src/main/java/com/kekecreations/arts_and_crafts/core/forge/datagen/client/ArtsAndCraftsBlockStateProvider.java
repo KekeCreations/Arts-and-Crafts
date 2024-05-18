@@ -81,6 +81,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         hangingSignBlock(KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get(),"cork");
 
 
+        normalFlowerPotBlock(KekeBlocks.POTTED_CORK_SAPLING.get(), "cork_sapling", "arts_and_crafts");
 
         //DYED STUFF
         for (DyeColor colours : DyeColor.values()) {
@@ -239,6 +240,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public void flowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
+    }
+    public void normalFlowerPotBlock(Block block, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel("potted_" + flower).texture("plant", modId + ":block/" + flower)).build());
     }
     public void normalPlasterBlock(Block block) {
         getVariantBuilder(block)

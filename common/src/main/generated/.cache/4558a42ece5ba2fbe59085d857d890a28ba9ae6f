@@ -1,0 +1,22 @@
+// 1.20.1	2024-05-18T02:51:21.535715	Tags for minecraft:block mod id arts_and_crafts
+74aa0ae727679076b099c9abcd10b4edcdcc689e data/arts_and_crafts/tags/blocks/chalk_dust.json
+b9f1f197fae49f0fe3a1a2de261e1cc4c289c480 data/minecraft/tags/blocks/fence_gates.json
+a3f55f6644890843db9cc26badfb450ba86d8ba0 data/minecraft/tags/blocks/flower_pots.json
+8f6cfeec6834c527e154824c1a917c27954e2785 data/minecraft/tags/blocks/hoglin_repellents.json
+59a01ad4558f39df8f73229501b34f71721ddbe5 data/minecraft/tags/blocks/leaves.json
+7622ac7cef31bb4c0790bb637b18f66c7e8b38d3 data/minecraft/tags/blocks/logs_that_burn.json
+03a848ec734743ff255c990e88e81402670d377b data/minecraft/tags/blocks/mineable/axe.json
+59a01ad4558f39df8f73229501b34f71721ddbe5 data/minecraft/tags/blocks/mineable/hoe.json
+c2749c2685970324e8ffa98485ea19af1fb7e795 data/minecraft/tags/blocks/mineable/pickaxe.json
+c6233070cedacbe242758f9cfb3f30303909dd16 data/minecraft/tags/blocks/planks.json
+65c70690325bbb0bab7666e0be1c459ae2773cf0 data/minecraft/tags/blocks/saplings.json
+136eb990a7e453720f213f6e89c12b9560dc28d7 data/minecraft/tags/blocks/slabs.json
+940bb58d59d7ac387e2c1126b0295faac2c483c9 data/minecraft/tags/blocks/stairs.json
+ddefff52095a285c9bc63837a36697f0a6153cd5 data/minecraft/tags/blocks/walls.json
+0f33c9f6677a16f41979c5c697980628ec2edc47 data/minecraft/tags/blocks/wooden_buttons.json
+bde269277214cf95efcb7cde91ac7bdb7cec92d0 data/minecraft/tags/blocks/wooden_doors.json
+1a878bced152c1022ce4735e52f4a970c7e68b6a data/minecraft/tags/blocks/wooden_fences.json
+1dc8ea6990e517e1b9c10655ebf4a63946b9bd36 data/minecraft/tags/blocks/wooden_pressure_plates.json
+3e8322291d42c9c839f7c0afe5c4878fce19e0eb data/minecraft/tags/blocks/wooden_slabs.json
+edcccad96fea376a86d9492ef22f78ef6ba825ca data/minecraft/tags/blocks/wooden_stairs.json
+4cb1effd0ecd43581739a0d434a26a0bb875f4af data/minecraft/tags/blocks/wooden_trapdoors.json
