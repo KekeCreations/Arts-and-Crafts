@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:black_soapstone"
+    }
+  },
+  "pattern": [
+    "KK",
+    "KK"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:black_polished_soapstone"
+  },
+  "show_notification": true
+}

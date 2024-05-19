@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:light_gray_soapstone_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "light_gray_soapstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:light_gray_soapstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "light_gray_soapstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:light_gray_soapstone_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

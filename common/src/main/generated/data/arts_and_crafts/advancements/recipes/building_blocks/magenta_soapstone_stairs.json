@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:magenta_soapstone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_soapstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:magenta_soapstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "magenta_soapstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:magenta_soapstone_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

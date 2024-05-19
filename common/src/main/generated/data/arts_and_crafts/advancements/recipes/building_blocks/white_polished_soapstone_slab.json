@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:white_polished_soapstone_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "white_polished_soapstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:white_polished_soapstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "white_polished_soapstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:white_polished_soapstone_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

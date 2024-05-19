@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:red_soapstone_bricks"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "item": "arts_and_crafts:red_soapstone_brick_wall"
+  },
+  "show_notification": true
+}

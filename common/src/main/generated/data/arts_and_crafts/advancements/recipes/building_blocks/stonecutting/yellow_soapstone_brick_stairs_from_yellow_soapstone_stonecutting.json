@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:stonecutting/yellow_soapstone_brick_stairs_from_yellow_soapstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_soapstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:yellow_soapstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yellow_soapstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:stonecutting/yellow_soapstone_brick_stairs_from_yellow_soapstone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

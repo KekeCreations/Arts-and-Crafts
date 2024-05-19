@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:soapstone_bricks"
+    }
+  },
+  "pattern": [
+    "K  ",
+    "KK ",
+    "KKK"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:soapstone_brick_stairs"
+  },
+  "show_notification": true
+}

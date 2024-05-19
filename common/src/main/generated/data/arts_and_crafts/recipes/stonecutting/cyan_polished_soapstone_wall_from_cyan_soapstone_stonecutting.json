@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "arts_and_crafts:cyan_soapstone"
+  },
+  "result": "arts_and_crafts:cyan_polished_soapstone_wall"
+}
