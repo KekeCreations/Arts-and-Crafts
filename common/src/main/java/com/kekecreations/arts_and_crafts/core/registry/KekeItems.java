@@ -23,9 +23,6 @@ public class KekeItems {
     public static final HashMap<DyeColor, Supplier<PaintBrushItem>> PAINT_BRUSHES = new HashMap<>();
 
 
-
-    //public static final Supplier<ChalkStickItem> WHITE_CHALK_STICK = RegistryHelper.registerItem("white_chalk_stick", () -> new ChalkStickItem(new Item.Properties().stacksTo(1).durability(32)));
-
     public static final Supplier<SignItem> CORK_SIGN = registerItem("cork_sign", () -> new SignItem(new Item.Properties().stacksTo(16), KekeBlocks.CORK_SIGN.get(), KekeBlocks.CORK_WALL_SIGN.get()));
     public static final Supplier<HangingSignItem> CORK_HANGING_SIGN = registerItem("cork_hanging_sign", () -> new HangingSignItem(KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
@@ -44,14 +41,14 @@ public class KekeItems {
 
     //BLEACHED
     public static final Supplier<Item> BLEACHDEW = registerItem("bleachdew", () -> new Item(new Item.Properties()));
-    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintBrushItem(null, new Item.Properties().stacksTo(1).durability(24)));
+    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintBrushItem(null, new Item.Properties().stacksTo(1).durability(48)));
 
 
     static {
         for (DyeColor colours : DyeColor.values()) {
             CHALK_STICKS.put(colours, registerItem(colours + "_chalk_stick", () -> new ChalkStickItem(colours, new Item.Properties().stacksTo(1).durability(32))));
             DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(KekeBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties().stacksTo(1))));
-            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintBrushItem(colours, new Item.Properties().stacksTo(1).durability(24))));
+            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintBrushItem(colours, new Item.Properties().stacksTo(1).durability(48))));
         }
     }
 
