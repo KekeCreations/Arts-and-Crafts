@@ -25,6 +25,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
+        //GYPSUM
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_BRICKS, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.POLISHED_GYPSUM, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_STAIRS, 1, recipeConsumer);
@@ -42,6 +43,19 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
+        stairRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_STAIRS.get(), recipeConsumer);
+        slabRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_SLAB.get(), recipeConsumer);
+        wallRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_WALL.get(), recipeConsumer);
+        stairRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), recipeConsumer);
+        slabRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_SLAB.get(), recipeConsumer);
+        wallRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_WALL.get(), recipeConsumer);
+        stairRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_STAIRS.get(), recipeConsumer);
+        slabRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_SLAB.get(), recipeConsumer);
+        wallRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_WALL.get(), recipeConsumer);
+
+        //GYPSUM TO BRICK OR POLISHED RECIPES
+        typeRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM.get(), recipeConsumer);
+        typeRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.GYPSUM_BRICKS.get(), recipeConsumer);
 
         //SOAPSTONE
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
