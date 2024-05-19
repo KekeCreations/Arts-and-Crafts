@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:cyan_soapstone_bricks_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "soapstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:soapstone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "soapstone_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:cyan_soapstone_bricks_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}
