@@ -8,6 +8,7 @@
     "BlockEntityTypeMixin",
     "BlockSetTypeMixin",
     "DecoratedPotPatternsMixin",
+    "EnchantmentMixin",
     "FlowerPotBlockMixin",
     "ShulkerBoxBlockMixin",
     "WoodTypeMixin"

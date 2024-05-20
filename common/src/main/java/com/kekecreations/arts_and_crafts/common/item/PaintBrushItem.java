@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import org.jetbrains.annotations.NotNull;
 
 public class PaintBrushItem extends Item {
 
@@ -29,6 +31,10 @@ public class PaintBrushItem extends Item {
 
     public DyeColor getDyeColor() {
         return this.dyeColor;
+    }
+
+    public boolean isValidRepairItem(@NotNull ItemStack stack, ItemStack repairCandidate) {
+        return repairCandidate.is(DyeItem.byColor(this.getDyeColor()));
     }
 
     @Override
