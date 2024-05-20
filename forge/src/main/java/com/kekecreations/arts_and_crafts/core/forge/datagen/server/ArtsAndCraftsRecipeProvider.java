@@ -108,6 +108,9 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), KekeBlocks.TERRACOTTA_SHINGLE_WALL.get().asItem(),1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, Blocks.TERRACOTTA.asItem(), KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), 1, recipeConsumer);
 
+        //PLASTER
+        smeltingRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.PLASTER.get(), RecipeCategory.BUILDING_BLOCKS, 0F, recipeConsumer);
+
         for (DyeColor colours : DyeColor.values()) {
             //CHALK
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(colours.getId()).asItem(), KekeItems.getChalkStick(colours.getId()), 1, recipeConsumer);
@@ -161,7 +164,15 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()).asItem(),1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(),1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()).asItem(),1, recipeConsumer);
+
+            //PLASTER
+            dyeBlockRecipe(KekeBlocks.PLASTER.get(), colours, KekeBlocks.getDyedPlaster(colours.getId()), recipeConsumer);
         }
+    }
+    protected static void smeltingRecipe(Block craftingBlock, Block resultBlock, RecipeCategory recipeCategory, float experience, Consumer<FinishedRecipe> recipeConsumer) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(craftingBlock), recipeCategory, resultBlock , experience, 200)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
     }
     protected static void dyeBlockRecipe(Block craftingBlock, DyeColor dyeColour, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,8)
