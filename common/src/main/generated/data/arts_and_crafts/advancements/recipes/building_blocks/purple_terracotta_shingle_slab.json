@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:purple_terracotta_shingle_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purple_terracotta_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:purple_terracotta_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purple_terracotta_shingles",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:purple_terracotta_shingle_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

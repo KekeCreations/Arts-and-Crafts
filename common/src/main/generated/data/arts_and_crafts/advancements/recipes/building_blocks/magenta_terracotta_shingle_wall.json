@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:magenta_terracotta_shingle_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_terracotta_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:magenta_terracotta_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "magenta_terracotta_shingles",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:magenta_terracotta_shingle_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

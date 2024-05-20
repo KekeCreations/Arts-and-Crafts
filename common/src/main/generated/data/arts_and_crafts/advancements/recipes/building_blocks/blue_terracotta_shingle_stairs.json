@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blue_terracotta_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:blue_terracotta_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:blue_terracotta_shingle_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "blue_terracotta_shingles",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:blue_terracotta_shingle_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}
