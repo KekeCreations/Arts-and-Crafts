@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:green_dye"
+    },
+    "Q": {
+      "item": "minecraft:brush"
+    }
+  },
+  "pattern": [
+    " K ",
+    "KQK"
+  ],
+  "result": {
+    "item": "arts_and_crafts:green_paintbrush"
+  },
+  "show_notification": true
+}

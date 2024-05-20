@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.data.PackOutput;
@@ -8,6 +9,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -134,6 +136,10 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             dyeBlockRecipe(KekeBlocks.SOAPSTONE.get(), colours, KekeBlocks.getDyedSoapstone(colours.getId()), recipeConsumer);
             dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), colours, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), recipeConsumer);
             dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), colours, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), recipeConsumer);
+
+            //PAINTBRUSH
+            paintbrushRecipe(colours, KekeItems.getPaintBrush(colours.getId()), recipeConsumer);
+
         }
     }
     protected static void dyeBlockRecipe(Block craftingBlock, DyeColor dyeColour, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
@@ -179,6 +185,15 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .pattern("KK")
                 .define('K', craftingBlock)
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
+    }
+    protected static void paintbrushRecipe(DyeColor dyeColour, PaintBrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, paintbrushItem,1)
+                .pattern(" K ")
+                .pattern("KQK")
+                .define('K', DyeItem.byColor(dyeColour))
+                .define('Q', Items.BRUSH)
+                .unlockedBy(getItemName(Items.BRUSH), has(Items.BRUSH))
                 .save(recipeConsumer);
     }
 

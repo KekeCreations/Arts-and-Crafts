@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:pink_dye"
+    },
+    "Q": {
+      "item": "minecraft:brush"
+    }
+  },
+  "pattern": [
+    " K ",
+    "KQK"
+  ],
+  "result": {
+    "item": "arts_and_crafts:pink_paintbrush"
+  },
+  "show_notification": true
+}
