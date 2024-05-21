@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "chalk",
+  "ingredients": [
+    {
+      "item": "arts_and_crafts:cyan_chalk"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:blue_chalk"
+  }
+}

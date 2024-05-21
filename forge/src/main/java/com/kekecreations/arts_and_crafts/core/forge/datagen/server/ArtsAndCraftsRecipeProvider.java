@@ -148,16 +148,16 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             wallRecipe(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), recipeConsumer);
 
             //DYE SOAPSTONE RECIPES
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE.get(), colours, KekeBlocks.getDyedSoapstone(colours.getId()), recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), colours, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), colours, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE.get(), colours, KekeBlocks.getDyedSoapstone(colours.getId()), "soapstone", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), colours, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), "polished_soapstone", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), colours, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), "soapstone_brick", recipeConsumer);
 
             //PAINTBRUSH
             paintbrushRecipe(colours, KekeItems.getPaintBrush(colours.getId()), recipeConsumer);
 
             //TERRACOTTA SHINGLES
             typeRecipe(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colours.getId()), KekeBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), colours, KekeBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), colours, KekeBlocks.getDyedTerracottaShingles(colours.getId()), "terracotta_shingle", recipeConsumer);
             stairRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), recipeConsumer);
             slabRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), recipeConsumer);
             wallRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), recipeConsumer);
@@ -166,7 +166,43 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()).asItem(),1, recipeConsumer);
 
             //PLASTER
-            dyeBlockRecipe(KekeBlocks.PLASTER.get(), colours, KekeBlocks.getDyedPlaster(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.PLASTER.get(), colours, KekeBlocks.getDyedPlaster(colours.getId()), "plaster", recipeConsumer);
+
+            //CHALK
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.WHITE, KekeBlocks.getChalk(DyeColor.WHITE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.ORANGE, KekeBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.MAGENTA, KekeBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.LIGHT_BLUE, KekeBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.YELLOW, KekeBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.LIME, KekeBlocks.getChalk(DyeColor.LIME.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.PINK, KekeBlocks.getChalk(DyeColor.PINK.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.GRAY, KekeBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.LIGHT_GRAY, KekeBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.CYAN, KekeBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.PURPLE, KekeBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.BLUE, KekeBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.BROWN, KekeBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.GREEN, KekeBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.RED, KekeBlocks.getChalk(DyeColor.RED.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getChalk(colours.getId()).asItem(), colours, DyeColor.BLACK, KekeBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "chalk", recipeConsumer);
+
+            //CHALK STICKS
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.WHITE, KekeItems.getChalkStick(DyeColor.WHITE.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.ORANGE, KekeItems.getChalkStick(DyeColor.ORANGE.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.MAGENTA, KekeItems.getChalkStick(DyeColor.MAGENTA.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.LIGHT_BLUE, KekeItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.YELLOW, KekeItems.getChalkStick(DyeColor.YELLOW.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.LIME, KekeItems.getChalkStick(DyeColor.LIME.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.PINK, KekeItems.getChalkStick(DyeColor.PINK.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.GRAY, KekeItems.getChalkStick(DyeColor.GRAY.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.LIGHT_GRAY, KekeItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.CYAN, KekeItems.getChalkStick(DyeColor.CYAN.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.PURPLE, KekeItems.getChalkStick(DyeColor.PURPLE.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.BLUE, KekeItems.getChalkStick(DyeColor.BLUE.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.BROWN, KekeItems.getChalkStick(DyeColor.BROWN.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.GREEN, KekeItems.getChalkStick(DyeColor.GREEN.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.RED, KekeItems.getChalkStick(DyeColor.RED.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+            altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.BLACK, KekeItems.getChalkStick(DyeColor.BLACK.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
         }
     }
     protected static void smeltingRecipe(Block craftingBlock, Block resultBlock, RecipeCategory recipeCategory, float experience, Consumer<FinishedRecipe> recipeConsumer) {
@@ -174,13 +210,24 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer);
     }
-    protected static void dyeBlockRecipe(Block craftingBlock, DyeColor dyeColour, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
+    protected static void altDyeBlockRecipe(Item craftingBlock, DyeColor forLoopColour, DyeColor dyeColour, Item resultBlock, RecipeCategory recipeCategory, String group, Consumer<FinishedRecipe> recipeConsumer) {
+        if (forLoopColour != dyeColour) {
+            ShapelessRecipeBuilder.shapeless(recipeCategory, resultBlock, 1)
+                    .requires(craftingBlock)
+                    .requires(DyeItem.byColor(dyeColour))
+                    .group(group)
+                    .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
+                    .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_to_" + getItemName(resultBlock));
+        }
+    }
+    protected static void dyeBlockRecipe(Block craftingBlock, DyeColor dyeColour, Block resultBlock, String group, Consumer<FinishedRecipe> recipeConsumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,8)
                 .pattern("KKK")
                 .pattern("KQK")
                 .pattern("KKK")
                 .define('K', craftingBlock)
                 .define('Q', DyeItem.byColor(dyeColour))
+                .group(group)
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer, "arts_and_crafts:" + dyeColour.getName() + "_" + getItemName(craftingBlock) + "_dye_recipe");
     }
@@ -220,11 +267,12 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .save(recipeConsumer);
     }
     protected static void paintbrushRecipe(DyeColor dyeColour, PaintBrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, paintbrushItem,1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem,1)
                 .pattern(" K ")
                 .pattern("KQK")
                 .define('K', DyeItem.byColor(dyeColour))
                 .define('Q', Items.BRUSH)
+                .group("paintbrush")
                 .unlockedBy(getItemName(Items.BRUSH), has(Items.BRUSH))
                 .save(recipeConsumer);
     }

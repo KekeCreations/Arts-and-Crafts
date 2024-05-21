@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "group": "chalk_stick",
+  "ingredients": [
+    {
+      "item": "arts_and_crafts:red_chalk_stick"
+    },
+    {
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:pink_chalk_stick"
+  }
+}

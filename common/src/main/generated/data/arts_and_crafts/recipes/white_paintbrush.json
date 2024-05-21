@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "equipment",
+  "group": "paintbrush",
   "key": {
     "K": {
       "item": "minecraft:white_dye"

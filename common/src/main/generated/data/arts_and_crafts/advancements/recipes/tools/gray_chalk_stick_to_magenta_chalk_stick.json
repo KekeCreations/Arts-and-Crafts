@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:gray_chalk_stick_to_magenta_chalk_stick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magenta_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "magenta_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:gray_chalk_stick_to_magenta_chalk_stick"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "polished_soapstone",
   "key": {
     "K": {
       "item": "arts_and_crafts:polished_soapstone"

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:lime_chalk_to_light_blue_chalk"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "light_blue_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:light_blue_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "light_blue_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:lime_chalk_to_light_blue_chalk"
+    ]
+  },
+  "sends_telemetry_event": false
+}
