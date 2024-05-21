@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:black_terracotta_shingle_wall_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "terracotta_shingle_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:terracotta_shingle_wall"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "terracotta_shingle_wall",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:black_terracotta_shingle_wall_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

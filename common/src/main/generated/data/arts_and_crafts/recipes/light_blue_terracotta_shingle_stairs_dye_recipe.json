@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "terracotta_shingle_stairs",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:terracotta_shingle_stairs"
+    },
+    "Q": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:light_blue_terracotta_shingle_stairs"
+  },
+  "show_notification": true
+}

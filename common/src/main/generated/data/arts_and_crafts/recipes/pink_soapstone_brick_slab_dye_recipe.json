@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soapstone_brick_slab",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:soapstone_brick_slab"
+    },
+    "Q": {
+      "item": "minecraft:pink_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:pink_soapstone_slab"
+  },
+  "show_notification": true
+}

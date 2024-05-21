@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "terracotta_shingle_slab",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:terracotta_shingle_slab"
+    },
+    "Q": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:black_terracotta_shingle_slab"
+  },
+  "show_notification": true
+}

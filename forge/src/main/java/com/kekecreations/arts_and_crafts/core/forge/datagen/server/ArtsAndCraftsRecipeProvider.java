@@ -149,8 +149,17 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
             //DYE SOAPSTONE RECIPES
             dyeBlockRecipe(KekeBlocks.SOAPSTONE.get(), colours, KekeBlocks.getDyedSoapstone(colours.getId()), "soapstone", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_STAIRS.get(), colours, KekeBlocks.getDyedSoapstoneStairs(colours.getId()), "soapstone_stairs", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_SLAB.get(), colours, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_slab", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_WALL.get(), colours, KekeBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_wall", recipeConsumer);
             dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), colours, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), "polished_soapstone", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), colours, KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), "polished_soapstone_stairs", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), colours, KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), "polished_soapstone_slab", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), colours, KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), "polished_soapstone_wall", recipeConsumer);
             dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), colours, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), "soapstone_brick", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), colours, KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), "soapstone_brick_stairs", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), colours, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_brick_slab", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), colours, KekeBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_brick_wall", recipeConsumer);
 
             //PAINTBRUSH
             paintbrushRecipe(colours, KekeItems.getPaintBrush(colours.getId()), recipeConsumer);
@@ -158,6 +167,9 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             //TERRACOTTA SHINGLES
             typeRecipe(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colours.getId()), KekeBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
             dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), colours, KekeBlocks.getDyedTerracottaShingles(colours.getId()), "terracotta_shingle", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), colours, KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), "terracotta_shingle_stairs", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), colours, KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), "terracotta_shingle_slab", recipeConsumer);
+            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), colours, KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), "terracotta_shingle_wall", recipeConsumer);
             stairRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), recipeConsumer);
             slabRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), recipeConsumer);
             wallRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), recipeConsumer);

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_soapstone_wall",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:polished_soapstone_wall"
+    },
+    "Q": {
+      "item": "minecraft:yellow_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:yellow_polished_soapstone_wall"
+  },
+  "show_notification": true
+}

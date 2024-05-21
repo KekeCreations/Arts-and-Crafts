@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:red_soapstone_wall_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "soapstone_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:soapstone_wall"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "soapstone_wall",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:red_soapstone_wall_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

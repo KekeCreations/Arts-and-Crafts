@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soapstone_brick_wall",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:soapstone_brick_wall"
+    },
+    "Q": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:blue_soapstone_wall"
+  },
+  "show_notification": true
+}
