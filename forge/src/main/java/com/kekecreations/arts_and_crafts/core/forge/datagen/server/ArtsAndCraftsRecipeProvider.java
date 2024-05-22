@@ -111,6 +111,16 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         //PLASTER
         smeltingRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.PLASTER.get(), RecipeCategory.BUILDING_BLOCKS, 0F, recipeConsumer);
 
+        //CHALK
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(DyeColor.WHITE.getId()),2)
+                .pattern("QK")
+                .pattern("KQ")
+                .define('K', Blocks.CALCITE)
+                .define('Q', KekeBlocks.GYPSUM.get())
+                .unlockedBy(getItemName(Blocks.CALCITE), has(Blocks.CALCITE))
+                .unlockedBy(getItemName(KekeBlocks.GYPSUM.get()), has(KekeBlocks.GYPSUM.get()))
+                .save(recipeConsumer);
+
         for (DyeColor colours : DyeColor.values()) {
             //CHALK
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(colours.getId()).asItem(), KekeItems.getChalkStick(colours.getId()), 1, recipeConsumer);

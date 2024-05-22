@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:calcite"
+    },
+    "Q": {
+      "item": "arts_and_crafts:gypsum"
+    }
+  },
+  "pattern": [
+    "QK",
+    "KQ"
+  ],
+  "result": {
+    "count": 2,
+    "item": "arts_and_crafts:white_chalk"
+  },
+  "show_notification": true
+}
