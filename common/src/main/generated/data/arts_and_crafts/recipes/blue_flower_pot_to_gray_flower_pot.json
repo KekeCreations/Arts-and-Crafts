@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "dyed_flower_pot",
+  "ingredients": [
+    {
+      "item": "arts_and_crafts:blue_flower_pot"
+    },
+    {
+      "item": "minecraft:gray_dye"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:gray_flower_pot"
+  }
+}

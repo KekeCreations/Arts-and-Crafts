@@ -225,6 +225,24 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.GREEN, KekeItems.getChalkStick(DyeColor.GREEN.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
             altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.RED, KekeItems.getChalkStick(DyeColor.RED.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
             altDyeBlockRecipe(KekeItems.getChalkStick(colours.getId()), colours, DyeColor.BLACK, KekeItems.getChalkStick(DyeColor.BLACK.getId()), RecipeCategory.TOOLS, "chalk_stick", recipeConsumer);
+
+            //FLOWER POT
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.WHITE, KekeBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.ORANGE, KekeBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.MAGENTA, KekeBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.LIGHT_BLUE, KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.YELLOW, KekeBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.LIME, KekeBlocks.getDyedFlowerPot(DyeColor.LIME.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.PINK, KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.GRAY, KekeBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.LIGHT_GRAY, KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.CYAN, KekeBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.PURPLE, KekeBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.BLUE, KekeBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.BROWN, KekeBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.GREEN, KekeBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.RED, KekeBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+            altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.BLACK, KekeBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
         }
     }
     protected static void smeltingRecipe(Block craftingBlock, Block resultBlock, RecipeCategory recipeCategory, float experience, Consumer<FinishedRecipe> recipeConsumer) {
