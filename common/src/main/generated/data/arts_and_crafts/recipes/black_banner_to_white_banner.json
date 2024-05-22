@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bleach_banner",
+  "ingredients": [
+    {
+      "item": "minecraft:black_banner"
+    },
+    {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_banner"
+  }
+}

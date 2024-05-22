@@ -243,6 +243,9 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.GREEN, KekeBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
             altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.RED, KekeBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
             altDyeBlockRecipe(KekeBlocks.getDyedFlowerPot(colours.getId()).asItem(), colours, DyeColor.BLACK, KekeBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), RecipeCategory.BUILDING_BLOCKS, "dyed_flower_pot", recipeConsumer);
+
+            //BANNER
+            bleachBannerRecipe(ArtsAndCraftsDyedBlockLists.getDyedBanner(colours.getId()), colours, "bleach_banner", recipeConsumer);
         }
     }
     protected static void smeltingRecipe(Block craftingBlock, Block resultBlock, RecipeCategory recipeCategory, float experience, Consumer<FinishedRecipe> recipeConsumer) {
@@ -258,6 +261,16 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                     .group(group)
                     .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
                     .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_to_" + getItemName(resultBlock));
+        }
+    }
+    protected static void bleachBannerRecipe(Block craftingBlock, DyeColor dyeColour, String group, Consumer<FinishedRecipe> recipeConsumer) {
+        if (dyeColour != DyeColor.WHITE) {
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, Blocks.WHITE_BANNER, 1)
+                    .requires(craftingBlock)
+                    .requires(KekeItems.BLEACHDEW.get())
+                    .group(group)
+                    .unlockedBy(getItemName(KekeItems.BLEACHDEW.get()), has(KekeItems.BLEACHDEW.get()))
+                    .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_to_" + getItemName(Blocks.WHITE_BANNER));
         }
     }
     protected static void dyeBlockRecipe(Block craftingBlock, DyeColor dyeColour, Block resultBlock, String group, Consumer<FinishedRecipe> recipeConsumer) {
