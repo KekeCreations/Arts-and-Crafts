@@ -33,6 +33,11 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
             add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), stringColour + " Terracotta Shingle Wall");
             add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), stringColour + " Terracotta Shingle Stairs");
 
+            add(KekeBlocks.getDyedMudBricks(colours.getId()), stringColour + " Mud Bricks");
+            add(KekeBlocks.getDyedMudBrickSlab(colours.getId()), stringColour + " Mud Brick Slab");
+            add(KekeBlocks.getDyedMudBrickWall(colours.getId()), stringColour + " Mud Brick Wall");
+            add(KekeBlocks.getDyedMudBrickStairs(colours.getId()), stringColour + " Mud Brick Stairs");
+
             add(KekeBlocks.getDyedSoapstone(colours.getId()), stringColour + " Soapstone");
             add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), stringColour + " Soapstone Slab");
             add(KekeBlocks.getDyedSoapstoneWall(colours.getId()), stringColour + " Soapstone Wall");

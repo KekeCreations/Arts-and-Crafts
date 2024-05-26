@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_brick_slab",
+  "key": {
+    "K": {
+      "item": "minecraft:mud_brick_slab"
+    },
+    "Q": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:cyan_mud_brick_slab"
+  },
+  "show_notification": true
+}

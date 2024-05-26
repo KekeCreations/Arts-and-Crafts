@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_brick_wall",
+  "key": {
+    "K": {
+      "item": "minecraft:mud_brick_wall"
+    },
+    "Q": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:green_mud_brick_wall"
+  },
+  "show_notification": true
+}

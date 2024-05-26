@@ -31,6 +31,11 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> CHALK = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> CHALK_DUST = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICKS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_WALL = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_STAIRS = new HashMap<>();
+
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CRIMSON_FUNGUS_FLOWER_POTS = new HashMap<>();
@@ -170,6 +175,12 @@ public class KekeBlocks {
             //DYED PLASTER
             DYED_PLASTER.put(colours, registerBlockWithItem(colours + "_plaster", () -> new PlasterBlock(colours, BlockBehaviour.Properties.copy(PLASTER.get()))));
 
+            //DYED MUD BRICKS
+            DYED_MUD_BRICKS.put(colours, registerBlockWithItem(colours + "_mud_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).mapColor(colours))));
+            DYED_MUD_BRICK_SLAB.put(colours, registerBlockWithItem(colours + "_mud_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).mapColor(colours))));
+            DYED_MUD_BRICK_WALL.put(colours, registerBlockWithItem(colours + "_mud_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_WALL).mapColor(colours))));
+            DYED_MUD_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_mud_brick_stairs", () -> new CustomStairBlock(getDyedMudBricks(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).mapColor(colours))));
+
             //DYED TERRACOTTA SHINGLES
             DYED_TERRACOTTA_SHINGLES.put(colours, registerBlockWithItem(colours + "_terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f))));
             DYED_TERRACOTTA_SHINGLE_SLAB.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
@@ -250,6 +261,19 @@ public class KekeBlocks {
     }
 
     //GET METHODS
+    //DYED MUD BRICKS
+    public static Block getDyedMudBricks(int colours) {
+        return DYED_MUD_BRICKS.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedMudBrickSlab(int colours) {
+        return DYED_MUD_BRICK_SLAB.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedMudBrickWall(int colours) {
+        return DYED_MUD_BRICK_WALL.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedMudBrickStairs(int colours) {
+        return DYED_MUD_BRICK_STAIRS.get(DyeColor.byId(colours)).get();
+    }
     //PLASTER
     public static Block getDyedPlaster(int colours){
         return DYED_PLASTER.get(DyeColor.byId(colours)).get();

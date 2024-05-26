@@ -48,6 +48,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         flowerPots();
         chalkDust();
         decoratedPots();
+        mudBricks();
     }
 
     private void bleached() {
@@ -56,6 +57,15 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     private void decoratedPots() {
         for (DyeColor colours : DyeColor.values()) {
             add(KekeBlocks.getDyedDecoratedPot(colours.getId()), createDecoratedPotTable(KekeBlocks.getDyedDecoratedPot(colours.getId())));
+        }
+    }
+
+    private void mudBricks() {
+        for (DyeColor colours : DyeColor.values()) {
+            dropSelf(KekeBlocks.getDyedMudBricks(colours.getId()));
+            dropSelf(KekeBlocks.getDyedMudBrickStairs(colours.getId()));
+            dropSelf(KekeBlocks.getDyedMudBrickSlab(colours.getId()));
+            dropSelf(KekeBlocks.getDyedMudBrickWall(colours.getId()));
         }
     }
 

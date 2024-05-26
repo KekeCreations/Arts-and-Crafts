@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:light_gray_mud_brick_slab_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "mud_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:mud_brick_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "mud_brick_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:light_gray_mud_brick_slab_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

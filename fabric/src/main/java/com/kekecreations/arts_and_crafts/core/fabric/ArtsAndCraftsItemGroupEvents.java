@@ -62,6 +62,11 @@ public class ArtsAndCraftsItemGroupEvents {
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 event.addAfter(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
 
+                event.addAfter(KekeBlocks.getDyedSoapstoneBrickWall(DyeColor.PINK.getId()), KekeBlocks.getDyedMudBricks(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickStairs(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedMudBrickStairs(colours.getId()), KekeBlocks.getDyedMudBrickSlab(colours.getId()));
+                event.addAfter(KekeBlocks.getDyedMudBrickSlab(colours.getId()), KekeBlocks.getDyedMudBrickWall(colours.getId()));
+
                 event.addAfter(KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
         });

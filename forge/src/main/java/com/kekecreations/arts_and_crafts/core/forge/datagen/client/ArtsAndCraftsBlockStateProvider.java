@@ -95,6 +95,12 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
             slabWithItem(((SlabBlock)KekeBlocks.getDyedTerracottaShingleSlab(colours.getId())), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
             wallWithItem(((WallBlock)KekeBlocks.getDyedTerracottaShingleWall(colours.getId())), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
 
+            //Dyed Mud Bricks
+            cubeAllWithItem(KekeBlocks.getDyedMudBricks(colours.getId()));
+            stairsWithItem(((StairBlock)KekeBlocks.getDyedMudBrickStairs(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
+            slabWithItem(((SlabBlock)KekeBlocks.getDyedMudBrickSlab(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
+            wallWithItem(((WallBlock)KekeBlocks.getDyedMudBrickWall(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
+
             //Soapstone
             cubeAllWithItem(KekeBlocks.getDyedSoapstone(colours.getId()));
             stairsWithItem(((StairBlock)KekeBlocks.getDyedSoapstoneStairs(colours.getId())), KekeBlocks.getDyedSoapstone(colours.getId()));

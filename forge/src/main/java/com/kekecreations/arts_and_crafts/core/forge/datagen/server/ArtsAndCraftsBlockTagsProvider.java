@@ -131,7 +131,8 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneWall(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()))
-                    .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
+                    .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickWall(colours.getId()));
         }
     }
 
@@ -149,7 +150,8 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
-                    .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
+                    .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickSlab(colours.getId()));
         }
     }
     private void appendStairs() {
@@ -166,7 +168,8 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()))
                     .add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
-                    .add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
+                    .add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickStairs(colours.getId()));
         }
     }
 
@@ -223,6 +226,11 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()))
                     .add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
                     .add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
+
+                    .add(KekeBlocks.getDyedMudBricks(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickStairs(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickSlab(colours.getId()))
+                    .add(KekeBlocks.getDyedMudBrickWall(colours.getId()))
 
                     .add(KekeBlocks.getChalk(colours.getId()))
 

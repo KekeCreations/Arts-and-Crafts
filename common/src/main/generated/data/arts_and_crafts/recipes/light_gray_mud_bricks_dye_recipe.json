@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_bricks",
+  "key": {
+    "K": {
+      "item": "minecraft:mud_bricks"
+    },
+    "Q": {
+      "item": "minecraft:light_gray_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:light_gray_mud_bricks"
+  },
+  "show_notification": true
+}

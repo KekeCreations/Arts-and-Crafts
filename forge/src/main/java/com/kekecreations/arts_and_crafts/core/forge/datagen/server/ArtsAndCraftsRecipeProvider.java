@@ -171,6 +171,18 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), colours, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_brick_slab", recipeConsumer);
             dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), colours, KekeBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_brick_wall", recipeConsumer);
 
+            //MUD BRICKS
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stairRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickStairs(colours.getId()), recipeConsumer);
+            slabRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickSlab(colours.getId()), recipeConsumer);
+            wallRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickWall(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICKS, colours, KekeBlocks.getDyedMudBricks(colours.getId()), "mud_bricks", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_STAIRS, colours, KekeBlocks.getDyedMudBrickStairs(colours.getId()), "mud_brick_stairs", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_SLAB, colours, KekeBlocks.getDyedMudBrickSlab(colours.getId()), "mud_brick_slab", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_WALL, colours, KekeBlocks.getDyedMudBrickWall(colours.getId()), "mud_brick_wall", recipeConsumer);
+
             //PAINTBRUSH
             paintbrushRecipe(colours, KekeItems.getPaintBrush(colours.getId()), recipeConsumer);
 

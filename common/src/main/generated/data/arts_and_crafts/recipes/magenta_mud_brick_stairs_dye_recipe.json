@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_brick_stairs",
+  "key": {
+    "K": {
+      "item": "minecraft:mud_brick_stairs"
+    },
+    "Q": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:magenta_mud_brick_stairs"
+  },
+  "show_notification": true
+}
