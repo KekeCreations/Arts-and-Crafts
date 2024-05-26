@@ -89,7 +89,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
             $$3 = $$4;
         }
 
-        $$0.setBlock($$1, this.getStateForAge($$3), 2);
+        $$0.setBlock($$1, this.getStateForAge($$3).setValue(FACING, $$2.getValue(FACING)), 2);
     }
 
     @Override
