@@ -32,6 +32,16 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendDecoratedPots();
         appendDyes();
         appendChalkSticks();
+        appendBoats();
+        appendChestBoats();
+    }
+    private void appendBoats() {
+        this.tag(ItemTags.BOATS)
+                .add(KekeItems.CORK_BOAT.get());
+    }
+    private void appendChestBoats() {
+        this.tag(ItemTags.CHEST_BOATS)
+                .add(KekeItems.CORK_CHEST_BOAT.get());
     }
 
     private void appendDyes() {

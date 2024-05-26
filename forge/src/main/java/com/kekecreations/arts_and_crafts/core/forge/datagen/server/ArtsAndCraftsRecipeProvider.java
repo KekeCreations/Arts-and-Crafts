@@ -5,8 +5,11 @@ import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
@@ -120,6 +123,23 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(Blocks.CALCITE), has(Blocks.CALCITE))
                 .unlockedBy(getItemName(KekeBlocks.GYPSUM.get()), has(KekeBlocks.GYPSUM.get()))
                 .save(recipeConsumer);
+
+        //CORK
+        planksFromLogsRecipe(KekeBlocks.CORK_LOG, KekeBlocks.CORK_PLANKS, recipeConsumer);
+        woodFromLogsRecipe(KekeBlocks.CORK_LOG, KekeBlocks.CORK_WOOD, recipeConsumer);
+        woodFromLogsRecipe(KekeBlocks.STRIPPED_CORK_LOG, KekeBlocks.STRIPPED_CORK_WOOD, recipeConsumer);
+        slabRecipe(KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_SLAB.get(), recipeConsumer);
+        fenceRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_FENCE, recipeConsumer);
+        stairRecipe(KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_STAIRS.get(), recipeConsumer);
+        buttonRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_BUTTON, recipeConsumer);
+        pressurePlateRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_PRESSURE_PLATE, recipeConsumer);
+        doorRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_DOOR, recipeConsumer);
+        trapdoorRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_TRAPDOOR, recipeConsumer);
+        fenceGateRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_FENCE_GATE, recipeConsumer);
+        signRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_SIGN, recipeConsumer);
+        hangingSignRecipe(KekeBlocks.STRIPPED_CORK_LOG, KekeBlocks.CORK_HANGING_SIGN, recipeConsumer);
+        woodenBoat(recipeConsumer, KekeItems.CORK_BOAT.get(), KekeBlocks.CORK_PLANKS.get());
+        chestBoatRecipe(recipeConsumer, KekeItems.CORK_CHEST_BOAT.get(), KekeItems.CORK_BOAT.get());
 
         for (DyeColor colours : DyeColor.values()) {
             //CHALK
@@ -341,8 +361,12 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(Items.BRUSH), has(Items.BRUSH))
                 .save(recipeConsumer);
     }
+    //Modified vanilla methods
+    public static void chestBoatRecipe(Consumer<FinishedRecipe> consumer, ItemLike itemLike, ItemLike itemLike2) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, itemLike).requires(Blocks.CHEST).requires(itemLike2).group("chest_boat").unlockedBy("has_boat", RecipeProvider.has(ItemTags.BOATS)).save(consumer);
+    }
 
-    //Thank you to Uraneptus for allowing me to use their datagen methods from Sully's Mod
+    //Thank you to Uraneptus for allowing me to use their datagen methods from Sully's Mod - Applies to all methods below this note
     protected static void stonecutterRecipes(RecipeCategory category, Item ingredient, Item result, int resultCount, Consumer<FinishedRecipe> consumer) {
         String prefix = getItemName(result) + "_from_" + getItemName(ingredient);
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), category, result, resultCount)
@@ -352,5 +376,54 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         String prefix = getItemName(result.get()) + "_from_" + getItemName(ingredient.get());
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient.get()), category, result.get(), resultCount)
                 .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer, ArtsAndCrafts.id("stonecutting/"+ prefix + "_stonecutting"));
+    }
+    private static void planksFromLogsRecipe(Supplier<? extends ItemLike> pLogs, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get(), 4).requires(pLogs.get())
+                .unlockedBy("has_logs", has(pLogs.get())).save(consumer);
+    }
+
+    private static void woodFromLogsRecipe(Supplier<? extends ItemLike> pLog, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 3).define('#', pLog.get()).pattern("##").pattern("##")
+                .unlockedBy("has_log", has(pLog.get())).save(consumer);
+    }
+
+    private static void fenceRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 3).define('W', ingredient.get()).define('#', Items.STICK).pattern("W#W").pattern("W#W")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void pressurePlateRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get()).define('#', ingredient.get()).pattern("##")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void doorRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 3).define('#', ingredient.get()).pattern("##").pattern("##").pattern("##")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void trapdoorRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 2).define('#', ingredient.get()).pattern("###").pattern("###")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void fenceGateRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get()).define('#', Items.STICK).define('W', ingredient.get()).pattern("#W#").pattern("#W#")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void signRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 3).define('#', ingredient.get()).define('X', Items.STICK).pattern("###").pattern("###").pattern(" X ")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    private static void hangingSignRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 6).define('#', ingredient.get()).define('X', Items.CHAIN).pattern("X X").pattern("###").pattern("###")
+                .unlockedBy(getHasName(ingredient.get()), has(ingredient.get())).save(consumer);
+    }
+
+    protected static void buttonRecipes(RecipeCategory category, ItemLike ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
+        ShapelessRecipeBuilder.shapeless(category, result.get()).requires(ingredient)
+                .unlockedBy(getHasName(ingredient), has(ingredient)).save(consumer);
     }
 }

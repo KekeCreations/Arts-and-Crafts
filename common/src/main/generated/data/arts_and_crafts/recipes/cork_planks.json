@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "arts_and_crafts:cork_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:cork_planks"
+  }
+}
