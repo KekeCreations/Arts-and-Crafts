@@ -138,6 +138,10 @@ public class PaintBrushItem extends Item {
                             PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedWool(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                             return InteractionResult.SUCCESS;
                         }
+                        else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CARPET.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedCarpet(colour.getId()))) {
+                            PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedCarpet(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                            return InteractionResult.SUCCESS;
+                        }
                         //CONCRETE
                         else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CONCRETE.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedConcrete(colour.getId()))) {
                             PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedConcrete(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);

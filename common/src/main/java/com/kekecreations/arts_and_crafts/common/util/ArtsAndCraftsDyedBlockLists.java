@@ -21,6 +21,7 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_SHULKER_BOX = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_BANNER = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_BED = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_CARPET = new HashMap<>();
 
 
 
@@ -36,6 +37,26 @@ public class ArtsAndCraftsDyedBlockLists {
         shulkerBoxList();
         bannerList();
         bedList();
+        carpetList();
+    }
+
+    public static void carpetList() {
+        DYED_CARPET.put(DyeColor.WHITE, Blocks.WHITE_CARPET);
+        DYED_CARPET.put(DyeColor.ORANGE, Blocks.ORANGE_CARPET);
+        DYED_CARPET.put(DyeColor.MAGENTA, Blocks.MAGENTA_CARPET);
+        DYED_CARPET.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_CARPET);
+        DYED_CARPET.put(DyeColor.YELLOW, Blocks.YELLOW_CARPET);
+        DYED_CARPET.put(DyeColor.LIME, Blocks.LIME_CARPET);
+        DYED_CARPET.put(DyeColor.PINK, Blocks.PINK_CARPET);
+        DYED_CARPET.put(DyeColor.GRAY, Blocks.GRAY_CARPET);
+        DYED_CARPET.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_CARPET);
+        DYED_CARPET.put(DyeColor.CYAN, Blocks.CYAN_CARPET);
+        DYED_CARPET.put(DyeColor.PURPLE, Blocks.PURPLE_CARPET);
+        DYED_CARPET.put(DyeColor.BLUE, Blocks.BLUE_CARPET);
+        DYED_CARPET.put(DyeColor.BROWN, Blocks.BROWN_CARPET);
+        DYED_CARPET.put(DyeColor.GREEN, Blocks.GREEN_CARPET);
+        DYED_CARPET.put(DyeColor.RED, Blocks.RED_CARPET);
+        DYED_CARPET.put(DyeColor.BLACK, Blocks.BLACK_CARPET);
     }
 
     public static void bedList() {
@@ -245,6 +266,10 @@ public class ArtsAndCraftsDyedBlockLists {
         DYED_SHULKER_BOX.put(DyeColor.GREEN, Blocks.GREEN_SHULKER_BOX);
         DYED_SHULKER_BOX.put(DyeColor.RED, Blocks.RED_SHULKER_BOX);
         DYED_SHULKER_BOX.put(DyeColor.BLACK, Blocks.BLACK_SHULKER_BOX);
+    }
+
+    public static Block getDyedCarpet(int colours) {
+        return DYED_CARPET.get(DyeColor.byId(colours));
     }
 
     public static Block getDyedBed(int colours) {

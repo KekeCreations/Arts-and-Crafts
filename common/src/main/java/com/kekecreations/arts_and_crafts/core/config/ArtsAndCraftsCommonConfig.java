@@ -26,6 +26,7 @@ public class ArtsAndCraftsCommonConfig {
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_SHULKER_BOX;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_PLASTER;
     public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_BED;
+    public static final ForgeConfigSpec.ConfigValue<Boolean> CAN_PAINT_CARPET;
 
 
 
@@ -110,6 +111,10 @@ public class ArtsAndCraftsCommonConfig {
         CAN_PAINT_BED = BUILDER
                 .comment("Do you want paintbrushes to be able to paint beds?")
                 .define("Paintbrushes Can Paint Beds", true);
+
+        CAN_PAINT_CARPET = BUILDER
+                .comment("Do you want paintbrushes to be able to paint carpets?")
+                .define("Paintbrushes Can Paint Carpets", true);
 
 
 
