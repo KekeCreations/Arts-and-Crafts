@@ -20,6 +20,7 @@ public class ArtsAndCraftsDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_GLASS_PANES = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_SHULKER_BOX = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_BANNER = new HashMap<>();
+    public static HashMap<StringRepresentable, Block> DYED_BED = new HashMap<>();
 
 
 
@@ -34,6 +35,26 @@ public class ArtsAndCraftsDyedBlockLists {
         glassPanesList();
         shulkerBoxList();
         bannerList();
+        bedList();
+    }
+
+    public static void bedList() {
+        DYED_BED.put(DyeColor.WHITE, Blocks.WHITE_BED);
+        DYED_BED.put(DyeColor.ORANGE, Blocks.ORANGE_BED);
+        DYED_BED.put(DyeColor.MAGENTA, Blocks.MAGENTA_BED);
+        DYED_BED.put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_BED);
+        DYED_BED.put(DyeColor.YELLOW, Blocks.YELLOW_BED);
+        DYED_BED.put(DyeColor.LIME, Blocks.LIME_BED);
+        DYED_BED.put(DyeColor.PINK, Blocks.PINK_BED);
+        DYED_BED.put(DyeColor.GRAY, Blocks.GRAY_BED);
+        DYED_BED.put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_BED);
+        DYED_BED.put(DyeColor.CYAN, Blocks.CYAN_BED);
+        DYED_BED.put(DyeColor.PURPLE, Blocks.PURPLE_BED);
+        DYED_BED.put(DyeColor.BLUE, Blocks.BLUE_BED);
+        DYED_BED.put(DyeColor.BROWN, Blocks.BROWN_BED);
+        DYED_BED.put(DyeColor.GREEN, Blocks.GREEN_BED);
+        DYED_BED.put(DyeColor.RED, Blocks.RED_BED);
+        DYED_BED.put(DyeColor.BLACK, Blocks.BLACK_BED);
     }
 
     public static void bannerList() {
@@ -224,6 +245,10 @@ public class ArtsAndCraftsDyedBlockLists {
         DYED_SHULKER_BOX.put(DyeColor.GREEN, Blocks.GREEN_SHULKER_BOX);
         DYED_SHULKER_BOX.put(DyeColor.RED, Blocks.RED_SHULKER_BOX);
         DYED_SHULKER_BOX.put(DyeColor.BLACK, Blocks.BLACK_SHULKER_BOX);
+    }
+
+    public static Block getDyedBed(int colours) {
+        return DYED_BED.get(DyeColor.byId(colours));
     }
 
     public static Block getDyedBanner(int colours) {

@@ -5,6 +5,7 @@
   "minVersion": "0.8",
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
+    "BedBlockMixin",
     "BlockEntityTypeMixin",
     "BlockSetTypeMixin",
     "DecoratedPotPatternsMixin",

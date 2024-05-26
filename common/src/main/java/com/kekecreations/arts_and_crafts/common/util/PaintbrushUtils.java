@@ -9,15 +9,16 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 
@@ -50,6 +51,34 @@ public class PaintbrushUtils {
         level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
         level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
         damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
+    }
+
+    public static void paintBed(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        if (blockState.getValue(BlockStateProperties.BED_PART) == BedPart.FOOT) {
+            level.setBlockAndUpdate(pos.relative(blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)), Blocks.AIR.defaultBlockState());
+            level.setBlockAndUpdate(pos, blockStateToPlace
+                    .setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING))
+                    .setValue(BlockStateProperties.BED_PART, BedPart.FOOT)
+                    .setValue(BlockStateProperties.OCCUPIED, blockState.getValue(BlockStateProperties.OCCUPIED)));
+            level.setBlockAndUpdate(pos.relative(blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)), blockStateToPlace
+                    .setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING))
+                    .setValue(BlockStateProperties.BED_PART, BedPart.HEAD)
+                    .setValue(BlockStateProperties.OCCUPIED, blockState.getValue(BlockStateProperties.OCCUPIED)));
+        } else {
+            level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+            level.setBlockAndUpdate(pos, blockStateToPlace
+                    .setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING))
+                    .setValue(BlockStateProperties.BED_PART, BedPart.HEAD)
+                    .setValue(BlockStateProperties.OCCUPIED, blockState.getValue(BlockStateProperties.OCCUPIED)));
+            level.setBlockAndUpdate(pos.relative(blockState.getValue(BlockStateProperties.HORIZONTAL_FACING), -1), blockStateToPlace
+                    .setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING))
+                    .setValue(BlockStateProperties.BED_PART, BedPart.FOOT)
+                    .setValue(BlockStateProperties.OCCUPIED, blockState.getValue(BlockStateProperties.OCCUPIED)));
+        }
+        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+        level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
+        level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
     }
 
     public static void paintPlaster(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
