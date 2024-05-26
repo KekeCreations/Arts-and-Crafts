@@ -131,6 +131,11 @@ public class ArtsAndCraftsForge {
                 addAfter(event, KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
                 addAfter(event, KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
 
+                addAfter(event, KekeBlocks.getDyedSoapstoneBrickWall(DyeColor.PINK.getId()), KekeBlocks.getDyedMudBricks(colours.getId()));
+                addAfter(event, KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickStairs(colours.getId()));
+                addAfter(event, KekeBlocks.getDyedMudBrickStairs(colours.getId()), KekeBlocks.getDyedMudBrickSlab(colours.getId()));
+                addAfter(event, KekeBlocks.getDyedMudBrickSlab(colours.getId()), KekeBlocks.getDyedMudBrickWall(colours.getId()));
+
                 addAfter(event, KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
         }
