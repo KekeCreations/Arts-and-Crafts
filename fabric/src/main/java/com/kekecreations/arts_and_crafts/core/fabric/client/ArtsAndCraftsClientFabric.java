@@ -77,6 +77,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.PLASTER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
     }
 
 

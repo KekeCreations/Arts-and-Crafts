@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.tags.ItemTags;
@@ -49,6 +50,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         chalkDust();
         decoratedPots();
         mudBricks();
+        dropOther(KekeBlocks.LOTUS_FLOWER.get(), KekeItems.LOTUS_PISTILS.get());
     }
 
     private void bleached() {

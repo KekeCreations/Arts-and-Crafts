@@ -110,6 +110,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.CORK_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.PLASTER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(KekeBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
     }
 
 

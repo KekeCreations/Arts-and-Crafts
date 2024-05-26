@@ -14,6 +14,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -91,6 +92,20 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DECORATED_POTS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
+
+    public static final Supplier<Block> LOTUS_FLOWER = registerBlock("lotus_flower", () -> new LotusFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).randomTicks().lightLevel(($$0x) -> {
+        switch ($$0x.getValue(BlockStateProperties.AGE_3)) {
+            case 0, 1 -> {
+                return 5;
+            }
+            case 2, 3 -> {
+                return 10;
+            }
+            default -> {
+                return 0;
+            }
+        }
+    })));
 
     //BLEACHED
     public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));

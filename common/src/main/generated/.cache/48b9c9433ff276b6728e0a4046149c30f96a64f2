@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-17T06:14:22.1640974	Item Models: arts_and_crafts
+// 1.20.1	2024-05-26T09:47:27.5650723	Item Models: arts_and_crafts
 1b127836ff8f6d162519645d794ec3caaccafeeb assets/arts_and_crafts/models/item/black_chalk_stick.json
 b303bfb18bc31bdd837c85ec2bfb8a8cf7effdc7 assets/arts_and_crafts/models/item/black_decorated_pot.json
 d8dc925d72d8baf2a8af1ce8e5cc2c6c5d7a9ef5 assets/arts_and_crafts/models/item/black_flower_pot.json
@@ -45,6 +45,7 @@ c144062aa9280c3fc79bd22ed4b3f2157036723b assets/arts_and_crafts/models/item/ligh
 97eca2cea8d7998a10bdba1a82843824b100daf9 assets/arts_and_crafts/models/item/lime_decorated_pot.json
 6be3cfa52c22424fb4ce4250472bc5345f767f23 assets/arts_and_crafts/models/item/lime_flower_pot.json
 6997c371472600368fdefb54cbb0866f9284e244 assets/arts_and_crafts/models/item/lime_paintbrush.json
+3f9589d1744a1bfcd7aee3efd7e36de94b4d46e0 assets/arts_and_crafts/models/item/lotus_pistils.json
 40653aa90ad76819286b700579bd0141102d3e78 assets/arts_and_crafts/models/item/magenta_chalk_stick.json
 d8bfd4c3b58785fc7d56eb573bd1b1e4925cfdc6 assets/arts_and_crafts/models/item/magenta_decorated_pot.json
 b042ccc26437305499b19cb30d3fb48685fff03d assets/arts_and_crafts/models/item/magenta_flower_pot.json

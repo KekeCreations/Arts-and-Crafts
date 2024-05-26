@@ -2,10 +2,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 
 import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
-import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
-import com.kekecreations.arts_and_crafts.common.item.CustomBoatItem;
-import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.*;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,6 +18,8 @@ public class KekeItems {
     public static final HashMap<DyeColor, Supplier<DyedDecoratedPotBlockItem>> DYED_DECORATED_POT_BLOCK_ITEMS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<PaintBrushItem>> PAINT_BRUSHES = new HashMap<>();
+
+    public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties().stacksTo(16)));
 
 
     public static final Supplier<SignItem> CORK_SIGN = registerItem("cork_sign", () -> new SignItem(new Item.Properties().stacksTo(16), KekeBlocks.CORK_SIGN.get(), KekeBlocks.CORK_WALL_SIGN.get()));

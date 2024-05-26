@@ -41,6 +41,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItemWithBlockFolder(KekeBlocks.CORK_SAPLING.get().asItem());
         basicItem(KekeItems.CORK_SIGN.get());
         basicItem(KekeItems.CORK_HANGING_SIGN.get());
+        basicItem(KekeItems.LOTUS_PISTILS.get());
     }
     private ResourceLocation key(Item item) {
         return ForgeRegistries.ITEMS.getKey(item);

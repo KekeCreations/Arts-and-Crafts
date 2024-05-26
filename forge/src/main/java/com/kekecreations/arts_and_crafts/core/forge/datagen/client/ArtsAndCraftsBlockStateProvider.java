@@ -83,6 +83,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
 
         normalFlowerPotBlock(KekeBlocks.POTTED_CORK_SAPLING.get(), "cork_sapling", "arts_and_crafts");
 
+
+        lotusFlowerBlock(KekeBlocks.LOTUS_FLOWER.get());
+
         //DYED STUFF
         for (DyeColor colours : DyeColor.values()) {
             plasterWithItem(KekeBlocks.getDyedPlaster(colours.getId()), colours);
@@ -250,6 +253,46 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     public void normalFlowerPotBlock(Block block, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel("potted_" + flower).texture("plant", modId + ":block/" + flower)).build());
     }
+
+    public void lotusFlowerBlock(Block block) {
+        getVariantBuilder(block)
+                .partialState().with(BlockStateProperties.AGE_3, 0).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_0").texture("lotus", "block/lotus_0").texture("particle", "block/lotus_0")).rotationY(180).build())
+                .partialState().with(BlockStateProperties.AGE_3, 1).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_1").texture("lotus", "block/lotus_1").texture("particle", "block/lotus_1")).rotationY(180).build())
+                .partialState().with(BlockStateProperties.AGE_3, 2).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_2").texture("lotus", "block/lotus_2").texture("particle", "block/lotus_2")).rotationY(180).build())
+                .partialState().with(BlockStateProperties.AGE_3, 3).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_3").texture("lotus", "block/lotus_3").texture("particle", "block/lotus_3")).rotationY(180).build())
+                //EAST
+                .partialState().with(BlockStateProperties.AGE_3, 0).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_0").texture("lotus", "block/lotus_0").texture("particle", "block/lotus_0")).rotationY(270).build())
+                .partialState().with(BlockStateProperties.AGE_3, 1).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_1").texture("lotus", "block/lotus_1").texture("particle", "block/lotus_1")).rotationY(270).build())
+                .partialState().with(BlockStateProperties.AGE_3, 2).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_2").texture("lotus", "block/lotus_2").texture("particle", "block/lotus_2")).rotationY(270).build())
+                .partialState().with(BlockStateProperties.AGE_3, 3).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_3").texture("lotus", "block/lotus_3").texture("particle", "block/lotus_3")).rotationY(270).build())
+                //SOUTH
+                .partialState().with(BlockStateProperties.AGE_3, 0).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_0").texture("lotus", "block/lotus_0").texture("particle", "block/lotus_0")).build())
+                .partialState().with(BlockStateProperties.AGE_3, 1).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_1").texture("lotus", "block/lotus_1").texture("particle", "block/lotus_1")).build())
+                .partialState().with(BlockStateProperties.AGE_3, 2).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_2").texture("lotus", "block/lotus_2").texture("particle", "block/lotus_2")).build())
+                .partialState().with(BlockStateProperties.AGE_3, 3).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_3").texture("lotus", "block/lotus_3").texture("particle", "block/lotus_3")).build())
+                //WEST
+                .partialState().with(BlockStateProperties.AGE_3, 0).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_0").texture("lotus", "block/lotus_0").texture("particle", "block/lotus_0")).rotationY(90).build())
+                .partialState().with(BlockStateProperties.AGE_3, 1).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_1").texture("lotus", "block/lotus_1").texture("particle", "block/lotus_1")).rotationY(90).build())
+                .partialState().with(BlockStateProperties.AGE_3, 2).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_2").texture("lotus", "block/lotus_2").texture("particle", "block/lotus_2")).rotationY(90).build())
+                .partialState().with(BlockStateProperties.AGE_3, 3).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_3").texture("lotus", "block/lotus_3").texture("particle", "block/lotus_3")).rotationY(90).build());
+    }
+
     public void normalPlasterBlock(Block block) {
         getVariantBuilder(block)
                 .partialState().with(BlockStateProperties.FACING, Direction.NORTH)
@@ -753,6 +796,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> plasterModel(String name) {
         return models().withExistingParent(name, "arts_and_crafts:block/plaster_model");
+    }
+    public ModelBuilder<?> lotusFlowerModel(String name) {
+        return models().withExistingParent(name, "arts_and_crafts:block/lotus_flower_model");
     }
     public ModelBuilder<?> flowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/flower_pot");

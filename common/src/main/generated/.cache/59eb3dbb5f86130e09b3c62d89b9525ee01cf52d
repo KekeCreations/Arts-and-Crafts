@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-26T05:03:33.3487564	Loot Tables
+// 1.20.1	2024-05-26T09:47:27.5535566	Loot Tables
 b192febc153e25411caaabbf806ea71423e3fcc5 data/arts_and_crafts/loot_tables/blocks/black_chalk.json
 7e5907d19cc499140da3aedfc8c2b3421f292f3d data/arts_and_crafts/loot_tables/blocks/black_chalk_dust.json
 d8edff3ffb3878d8a514d3365dac49acc512d49a data/arts_and_crafts/loot_tables/blocks/black_decorated_pot.json
@@ -564,6 +564,7 @@ a9857c9c9bd41ac62cfa166c6669a1082c825192 data/arts_and_crafts/loot_tables/blocks
 df30421631db1227f89530ab6b020c2dac6bea83 data/arts_and_crafts/loot_tables/blocks/lime_terracotta_shingle_slab.json
 cac6455966d97a797d719215263d8a572d0fc484 data/arts_and_crafts/loot_tables/blocks/lime_terracotta_shingle_stairs.json
 9583437777cc46abe90ecf5d995662f411a2ddeb data/arts_and_crafts/loot_tables/blocks/lime_terracotta_shingle_wall.json
+7da6857a9365e4360dd5bc75bb169f62935fc597 data/arts_and_crafts/loot_tables/blocks/lotus_flower.json
 b35e6f18ca31315e5916e81312aa35c5848dca96 data/arts_and_crafts/loot_tables/blocks/magenta_chalk.json
 627d105e63ace6f6bbae4ad5811073510458c8fb data/arts_and_crafts/loot_tables/blocks/magenta_chalk_dust.json
 798f735079c358272ed1cd5894584c05c8609d95 data/arts_and_crafts/loot_tables/blocks/magenta_decorated_pot.json

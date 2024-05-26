@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts:block/lotus_flower_model",
+  "textures": {
+    "lotus": "arts_and_crafts:block/lotus_0",
+    "particle": "arts_and_crafts:block/lotus_0"
+  }
+}
