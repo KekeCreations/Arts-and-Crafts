@@ -142,6 +142,20 @@ public class PaintBrushItem extends Item {
                             PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedCarpet(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
                             return InteractionResult.SUCCESS;
                         }
+                        //MUD BRICKS
+                        else if (ArtsAndCraftsCommonConfig.CAN_PAINT_MUD_BRICKS.get() && (blockState.is(KekeBlocks.getDyedMudBricks(colour.getId())) || blockState.is(Blocks.MUD_BRICKS))) {
+                            PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedMudBricks(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                            return InteractionResult.SUCCESS;
+                        } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_MUD_BRICKS.get() && (blockState.is(KekeBlocks.getDyedMudBrickSlab(colour.getId())) || blockState.is(Blocks.MUD_BRICK_SLAB))) {
+                            PaintbrushUtils.paintSlab(level, KekeBlocks.getDyedMudBrickSlab(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                            return InteractionResult.SUCCESS;
+                        } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_MUD_BRICKS.get() && (blockState.is(KekeBlocks.getDyedMudBrickStairs(colour.getId())) || blockState.is(Blocks.MUD_BRICK_STAIRS))) {
+                            PaintbrushUtils.paintStairs(level, KekeBlocks.getDyedMudBrickStairs(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                            return InteractionResult.SUCCESS;
+                        } else if (ArtsAndCraftsCommonConfig.CAN_PAINT_MUD_BRICKS.get() && (blockState.is(KekeBlocks.getDyedMudBrickWall(colour.getId())) || blockState.is(Blocks.MUD_BRICK_WALL))) {
+                            PaintbrushUtils.paintWall(level, KekeBlocks.getDyedMudBrickWall(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
+                            return InteractionResult.SUCCESS;
+                        }
                         //CONCRETE
                         else if (ArtsAndCraftsCommonConfig.CAN_PAINT_CONCRETE.get() && blockState.is(ArtsAndCraftsDyedBlockLists.getDyedConcrete(colour.getId()))) {
                             PaintbrushUtils.paintBlock(level, ArtsAndCraftsDyedBlockLists.getDyedConcrete(paintbrushDyeColour.getId()).defaultBlockState(), pos, player, itemStack, hand);
