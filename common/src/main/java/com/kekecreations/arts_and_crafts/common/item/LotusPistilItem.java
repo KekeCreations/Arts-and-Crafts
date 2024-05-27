@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -45,7 +46,7 @@ public class LotusPistilItem extends Item {
         RandomSource randomSource = level.getRandom();
         BlockState clickedState = level.getBlockState(pos);
 
-        if (clickedState.is(Blocks.LILY_PAD)) {
+        if (clickedState.is(ArtsAndCraftsTags.BlockTags.LILY_PADS)) {
             BlockState state = KekeBlocks.LOTUS_FLOWER.get().getStateForPlacement(blockPlaceContext);
             if (state != null) {
                 level.setBlockAndUpdate(pos, state);

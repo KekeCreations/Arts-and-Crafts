@@ -147,12 +147,14 @@ public class ArtsAndCraftsForge {
             addAfter(event, Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
             addAfter(event, Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
             addAfter(event, Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
+            addAfter(event, Items.LILY_PAD, KekeItems.LOTUS_PISTILS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
                 addAfter(event, KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
+            addAfter(event, KekeItems.getPaintBrush(DyeColor.PINK.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
             addAfter(event, Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
             addAfter(event, KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         }
@@ -198,6 +200,7 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
             addAfter(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
             addAfter(event, KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
+            addAfter(event, Items.PINK_DYE, KekeItems.BLEACHDEW.get());
         }
     }
 }

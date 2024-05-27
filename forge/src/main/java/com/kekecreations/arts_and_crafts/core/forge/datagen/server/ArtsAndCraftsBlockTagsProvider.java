@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -40,6 +41,12 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
         appendPlanks();
         appendAxes();
         appendChalkDust();
+        appendLilyPads();
+    }
+
+    private void appendLilyPads() {
+        this.tag(ArtsAndCraftsTags.BlockTags.LILY_PADS)
+                .add(Blocks.LILY_PAD);
     }
 
 

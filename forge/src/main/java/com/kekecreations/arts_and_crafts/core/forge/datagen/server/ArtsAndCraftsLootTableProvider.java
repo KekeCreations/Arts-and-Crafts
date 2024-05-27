@@ -16,7 +16,8 @@ public class ArtsAndCraftsLootTableProvider extends LootTableProvider {
 
     public ArtsAndCraftsLootTableProvider(PackOutput packOutput) {
         super(packOutput, Collections.emptySet(), List.of(
-                new LootTableProvider.SubProviderEntry(ArtsAndCraftsBlockLootSubProvider::new, LootContextParamSets.BLOCK)
+                new LootTableProvider.SubProviderEntry(ArtsAndCraftsBlockLootSubProvider::new, LootContextParamSets.BLOCK),
+                new SubProviderEntry(ArtsAndCraftsBuiltInLootTableSubProvider::new, LootContextParamSets.BLOCK)
         ));
     }
 }

@@ -106,6 +106,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), "Polished Gypsum Slab");
         add(KekeBlocks.POLISHED_GYPSUM_WALL.get(), "Polished Gypsum Wall");
         add(KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), "Polished Gypsum Stairs");
+        add(KekeBlocks.LOTUS_FLOWER.get(), "Lotus Flower");
         add(KekeBlocks.BLEACHED_WOOL.get(), "Bleached Wool");
 
 
@@ -118,6 +119,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(KekeItems.GATEWAY_POTTERY_SHERD.get(), "Gateway Pottery Sherd");
         add(KekeItems.BLEACHDEW.get(), "Bleachdew");
         add(KekeItems.BLEACHDEW_PAINTBRUSH.get(), "Bleachdew Paintbrush");
+        add(KekeItems.LOTUS_PISTILS.get(), "Lotus Pistils");
 
         //ENTITY TYPES
         add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");

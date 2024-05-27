@@ -1,10 +1,13 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsBuiltInLootTables;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
@@ -17,7 +20,6 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.WaterlilyBlock;
@@ -27,8 +29,16 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Iterator;
+import java.util.List;
 
 public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
@@ -52,7 +62,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     }
 
     public BlockState getStateForAge(int $$0) {
-        return (BlockState)this.defaultBlockState().setValue(this.getAgeProperty(), $$0);
+        return this.defaultBlockState().setValue(this.getAgeProperty(), $$0);
     }
 
     public final boolean isMaxAge(BlockState $$0) {
@@ -107,29 +117,34 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
         this.growCrops(serverLevel, blockPos, blockState);
     }
 
+    private void dropPistilsAndBleach(Level level, BlockPos pos) {
+        ServerLevel serverLevel = (ServerLevel) level;
+        LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST);
+        LootParams lootParams = (new LootParams.Builder(serverLevel)).withParameter(LootContextParams.ORIGIN, pos.getCenter()).withParameter(LootContextParams.TOOL, ItemStack.EMPTY).withParameter(LootContextParams.BLOCK_STATE, this.defaultBlockState()).create(LootContextParamSets.BLOCK);
+        List<ItemStack> itemStackList = lootTable.getRandomItems(lootParams);
+
+        for (ItemStack itemStack : itemStackList) {
+            popResource(level, pos, itemStack);
+        }
+        level.playSound(null, pos, SoundEvents.SNIFFER_DROP_SEED, SoundSource.BLOCKS, 1.0F, 1.0F);
+    }
+
     @Override
     public @NotNull InteractionResult use(@NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide()) {
-            if (itemStack.is(Items.SHEARS)) {
-                BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
-                level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, true).setValue(BlockStateProperties.AGE_3, blockState.getValue(BlockStateProperties.AGE_3)).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
-                if (!player.getAbilities().instabuild) {
-                    itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(interactionHand));
+            if (!blockState.getValue(SHEARED)) {
+                if (itemStack.is(Items.SHEARS)) {
+                    BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
+                    level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, true).setValue(BlockStateProperties.AGE_3, blockState.getValue(BlockStateProperties.AGE_3)).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
+                    if (!player.getAbilities().instabuild) {
+                        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(interactionHand));
+                    }
+                    return InteractionResult.SUCCESS;
                 }
-                return InteractionResult.SUCCESS;
-            }
-            else if (itemStack.isEmpty()) {
-                if (isMaxAge(blockState) && !blockState.getValue(SHEARED)) {
+                else if (isMaxAge(blockState)) {
                     //LOOT
-                    ItemStack bleachdew = KekeItems.BLEACHDEW.get().getDefaultInstance();
-                    ItemStack lotusPistils = KekeItems.LOTUS_PISTILS.get().getDefaultInstance();
-                    bleachdew.setCount(Mth.nextInt(level.random, 1, 2));
-                    lotusPistils.setCount(Mth.nextInt(level.random, 0, 2));
-                    ItemEntity bleachdewItemEntity = new ItemEntity(level, blockPos.getX(), blockPos.getY() + 0.3F, blockPos.getZ(), bleachdew);
-                    ItemEntity lotusPistilsItemEntity = new ItemEntity(level, blockPos.getX(), blockPos.getY() + 0.3F, blockPos.getZ(), lotusPistils);
-                    level.addFreshEntity(bleachdewItemEntity);
-                    level.addFreshEntity(lotusPistilsItemEntity);
+                    dropPistilsAndBleach(level, blockPos);
                     //SET CROP BACK TO 1
                     BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, blockState.getValue(SHEARED)).setValue(BlockStateProperties.AGE_3, 1).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));

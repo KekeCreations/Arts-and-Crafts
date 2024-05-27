@@ -30,6 +30,9 @@ public class ArtsAndCraftsTags {
         public static final TagKey<Block> CHALK_DUST
                 = tag("chalk_dust");
 
+        public static final TagKey<Block> LILY_PADS
+                = tag("lily_pads");
+
         private static TagKey<Block> tag(String name) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
         }
