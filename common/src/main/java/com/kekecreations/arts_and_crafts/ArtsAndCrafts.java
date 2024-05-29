@@ -16,6 +16,7 @@ public class ArtsAndCrafts {
     
     public static void init() {
         KekeParticles.register();
+        ArtsAndCraftsSounds.register();
         KekeEntityTypes.register();
         KekeBlocks.register();
         ArtsAndCraftsDyedBlockLists.registerLists();

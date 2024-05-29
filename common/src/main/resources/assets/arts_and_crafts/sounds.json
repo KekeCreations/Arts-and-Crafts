@@ -1,0 +1,11 @@
+{
+  "item.paintbrush.paint": {
+    "sounds": [
+      "arts_and_crafts:item/paintbrush/paint1",
+      "arts_and_crafts:item/paintbrush/paint2",
+      "arts_and_crafts:item/paintbrush/paint3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.generic.place"
+  }
+}

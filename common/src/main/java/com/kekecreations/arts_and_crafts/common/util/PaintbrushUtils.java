@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.common.util;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -55,7 +56,7 @@ public class PaintbrushUtils {
 
     }
     public static void paintbrushItemEvents(Level level, BlockState state, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
-        level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
+        level.playSound(null, pos, ArtsAndCraftsSounds.PAINT_WITH_PAINTBRUSH.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
         level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
         damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
     }

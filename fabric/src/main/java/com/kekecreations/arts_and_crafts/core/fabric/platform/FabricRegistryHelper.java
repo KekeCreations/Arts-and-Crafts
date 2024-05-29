@@ -7,6 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +23,11 @@ public class FabricRegistryHelper implements RegistryHelper {
         return () -> value;
     }
 
+    public Supplier<SoundEvent> registerSound(String id) {
+        var location = new ResourceLocation(ArtsAndCrafts.MOD_ID, id);
+        var soundEvent = Registry.register(BuiltInRegistries.SOUND_EVENT, location, SoundEvent.createVariableRangeEvent(location));
+        return () -> soundEvent;
+    }
 
     @Override
     public <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> blockSupplier) {

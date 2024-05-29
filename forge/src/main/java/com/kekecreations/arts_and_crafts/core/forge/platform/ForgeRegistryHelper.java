@@ -6,6 +6,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +21,7 @@ public class ForgeRegistryHelper implements RegistryHelper {
 
     private static final RegistryMap registryMap = new RegistryMap();
 
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ArtsAndCrafts.MOD_ID);
@@ -28,6 +30,10 @@ public class ForgeRegistryHelper implements RegistryHelper {
     @Override
     public <T> Supplier<T> register(Registry<? super T> registry, String name, Supplier<T> entry) {
         return registryMap.register(registry, name, entry);
+    }
+
+    public Supplier<SoundEvent> registerSound(String id) {
+        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ArtsAndCrafts.MOD_ID, id)));
     }
 
 
