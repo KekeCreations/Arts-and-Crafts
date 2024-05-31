@@ -32,6 +32,10 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), GenerationStep.Decoration.VEGETAL_DECORATION, KekeFeatures.PlacedFeatures.CORK_TREE);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, KekeFeatures.PlacedFeatures.SOAPSTONE_PATCH);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, KekeFeatures.PlacedFeatures.CHALK_PATCH);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, KekeFeatures.PlacedFeatures.GYPSUM_PATCH);
     }
 
 

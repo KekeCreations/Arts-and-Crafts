@@ -19,8 +19,13 @@ public class ArtsAndCraftsBiomeTagsProvider extends BiomeTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider arg) {
         appendSoapstoneCanGenerateIn();
+        appendGypsumCanGenerateIn();
     }
 
+    private void appendGypsumCanGenerateIn() {
+        this.tag(ArtsAndCraftsTags.BiomeTags.GYPSUM_CAN_GENERATE_IN)
+                .add(Biomes.DESERT);
+    }
     private void appendSoapstoneCanGenerateIn() {
         this.tag(ArtsAndCraftsTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN)
                 .add(Biomes.BADLANDS)

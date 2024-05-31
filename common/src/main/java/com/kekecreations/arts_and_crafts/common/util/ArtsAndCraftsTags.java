@@ -43,6 +43,9 @@ public class ArtsAndCraftsTags {
         public static final TagKey<Biome> SOAPSTONE_CAN_GENERATE_IN
                 = tag("soapstone_can_generate_in");
 
+        public static final TagKey<Biome> GYPSUM_CAN_GENERATE_IN
+                = tag("gypsum_can_generate_in");
+
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
         }
