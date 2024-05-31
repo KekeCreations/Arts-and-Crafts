@@ -55,6 +55,8 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
             this.tag(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
                     .add(KekeItems.getChalkStick(colours.getId()));
         }
+        this.tag(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
+                .add(KekeItems.BLEACHED_CHALK_STICK.get());
     }
     private void appendDecoratedPots() {
         for (DyeColor colours : DyeColor.values()) {

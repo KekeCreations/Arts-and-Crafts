@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.util;
 
+import com.kekecreations.arts_and_crafts.common.block.BleachedChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;

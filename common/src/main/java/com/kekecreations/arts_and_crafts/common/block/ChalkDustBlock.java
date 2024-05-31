@@ -39,7 +39,6 @@ public class ChalkDustBlock extends DirectionalBlock {
     private static final VoxelShape SOUTH_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 1.0);
 
 
-    private static final Map<DyeColor, ChalkDustBlock> BLOCK_BY_COLOR = Maps.newEnumMap(DyeColor.class);
     private final DyeColor dyeColor;
 
     public static final int MAX_STATE = 32;
@@ -50,11 +49,10 @@ public class ChalkDustBlock extends DirectionalBlock {
         return this.dyeColor;
     }
 
-    public ChalkDustBlock(DyeColor dyeColor, Properties properties) {
+    public ChalkDustBlock(@Nullable DyeColor dyeColor, Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(this.getChalkDustProperty(), 0).setValue(FACING, Direction.SOUTH));
         this.dyeColor = dyeColor;
-        BLOCK_BY_COLOR.put(dyeColor, this);
     }
 
     protected IntegerProperty getChalkDustProperty() {

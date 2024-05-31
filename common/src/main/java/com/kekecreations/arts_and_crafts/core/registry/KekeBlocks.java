@@ -110,7 +110,8 @@ public class KekeBlocks {
     //BLEACHED
     public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
     public static final Supplier<Block> BLEACHED_CARPET = registerBlockWithItem("bleached_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_CARPET)));
-
+    public static final Supplier<Block> BLEACHED_CHALK_DUST = registerBlock("bleached_chalk_dust", () -> new ChalkDustBlock(null, BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
+    public static final Supplier<Block> BLEACHED_CHALK = registerBlockWithItem("bleached_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f)));
     //GYPSUM
     public static final Supplier<Block> GYPSUM = registerBlockWithItem("gypsum", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).requiresCorrectToolForDrops().strength(1.75F, 5F)));
     public static final Supplier<SlabBlock> GYPSUM_SLAB = registerBlockWithItem("gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));
@@ -310,9 +311,11 @@ public class KekeBlocks {
 
     //GET CHALK
     public static Block getChalk(int colours){
+        CHALK.put(null, BLEACHED_CHALK);
         return CHALK.get(DyeColor.byId(colours)).get();
     }
     public static Block getChalkDust(DyeColor colours){
+        CHALK_DUST.put(null, BLEACHED_CHALK_DUST);
         return CHALK_DUST.get(colours).get();
     }
 

@@ -109,6 +109,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(KekeBlocks.LOTUS_FLOWER.get(), "Lotus Flower");
         add(KekeBlocks.BLEACHED_WOOL.get(), "Bleached Wool");
         add(KekeBlocks.BLEACHED_CARPET.get(), "Bleached Carpet");
+        add(KekeBlocks.BLEACHED_CHALK.get(), "Bleached Chalk");
 
 
         //ITEMS
@@ -121,6 +122,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(KekeItems.BLEACHDEW.get(), "Bleachdew");
         add(KekeItems.BLEACHDEW_PAINTBRUSH.get(), "Bleachdew Paintbrush");
         add(KekeItems.LOTUS_PISTILS.get(), "Lotus Pistils");
+        add(KekeItems.BLEACHED_CHALK_STICK.get(), "Bleached Chalk Stick");
 
         //ENTITY TYPES
         add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");

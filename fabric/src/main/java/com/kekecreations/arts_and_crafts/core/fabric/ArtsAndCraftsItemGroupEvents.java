@@ -72,6 +72,7 @@ public class ArtsAndCraftsItemGroupEvents {
 
                 event.addAfter(KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
+            event.addBefore(KekeBlocks.getChalk(DyeColor.WHITE.getId()), KekeBlocks.BLEACHED_CHALK.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
@@ -88,6 +89,7 @@ public class ArtsAndCraftsItemGroupEvents {
                 event.addAfter(KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
             event.addBefore(KekeItems.getPaintBrush(DyeColor.WHITE.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
+            event.addBefore(KekeItems.getChalkStick(DyeColor.WHITE.getId()), KekeItems.BLEACHED_CHALK_STICK.get());
             event.addAfter(Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
             event.addAfter(KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         });

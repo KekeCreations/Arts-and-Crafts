@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
@@ -32,18 +31,15 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Map;
 
 public class ChalkStickItem extends Item {
 
-    private static final Map<DyeColor, ChalkStickItem> ITEM_BY_COLOR = Maps.newEnumMap(DyeColor.class);
     private final DyeColor dyeColor;
     public static final String TAG_CHALK_PATTERN = "ChalkPattern";
 
-    public ChalkStickItem(DyeColor dyeColor, Properties properties) {
+    public ChalkStickItem(@Nullable DyeColor dyeColor, Properties properties) {
         super(properties);
         this.dyeColor = dyeColor;
-        ITEM_BY_COLOR.put(dyeColor, this);
     }
 
     public DyeColor getDyeColor() {

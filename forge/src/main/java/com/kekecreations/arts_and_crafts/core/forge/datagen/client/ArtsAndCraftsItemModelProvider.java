@@ -29,6 +29,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
             decoratedPotItem(KekeItems.getDyedDecoratedPotBlockItem(colours));
             basicHandheld(KekeItems.getPaintBrush(colours.getId()));
         }
+        basicHandheld(KekeItems.BLEACHED_CHALK_STICK.get());
         basicItem(KekeItems.CORK_BOAT.get());
         basicItem(KekeItems.CORK_CHEST_BOAT.get());
         basicItem(KekeItems.ROLL_POTTERY_SHERD.get());

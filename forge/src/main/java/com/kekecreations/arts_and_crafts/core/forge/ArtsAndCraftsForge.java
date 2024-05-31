@@ -148,6 +148,7 @@ public class ArtsAndCraftsForge {
 
                 addAfter(event, KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
             }
+            addBefore(event, KekeBlocks.getChalk(DyeColor.WHITE.getId()), KekeBlocks.BLEACHED_CHALK.get());
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
@@ -164,6 +165,7 @@ public class ArtsAndCraftsForge {
                 addAfter(event, Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
                 addAfter(event, KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
+            addBefore(event, KekeItems.getChalkStick(DyeColor.WHITE.getId()), KekeItems.BLEACHED_CHALK_STICK.get());
             addBefore(event, KekeItems.getPaintBrush(DyeColor.WHITE.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
             addAfter(event, Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
             addAfter(event, KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());

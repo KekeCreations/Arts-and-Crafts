@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "chalk_sticks",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "arts_and_crafts:bleached_chalk_stick"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:brown_chalk_stick"
+  }
+}

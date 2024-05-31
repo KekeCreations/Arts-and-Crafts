@@ -58,6 +58,12 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         List<Item> carpetList = List.of(Blocks.BLACK_CARPET.asItem(), Blocks.BLUE_CARPET.asItem(), Blocks.BROWN_CARPET.asItem(), Blocks.CYAN_CARPET.asItem(), Blocks.GRAY_CARPET.asItem(), Blocks.GREEN_CARPET.asItem(), Blocks.LIGHT_BLUE_CARPET.asItem(), Blocks.LIGHT_GRAY_CARPET.asItem(), Blocks.LIME_CARPET.asItem(), Blocks.MAGENTA_CARPET.asItem(), Blocks.ORANGE_CARPET.asItem(), Blocks.PINK_CARPET.asItem(), Blocks.PURPLE_CARPET.asItem(), Blocks.RED_CARPET.asItem(), Blocks.YELLOW_CARPET.asItem(), Blocks.WHITE_CARPET.asItem());
         colorBleachedBlockWithDye(recipeConsumer, dyeList, carpetList, KekeBlocks.BLEACHED_CARPET.get(),  "carpet");
         bleachBlock(recipeConsumer, carpetList, KekeBlocks.BLEACHED_CARPET.get(), "carpet");
+        //chalk
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, chalkList, KekeBlocks.BLEACHED_CHALK.get(), "chalk");
+        bleachBlock(recipeConsumer, chalkList, KekeBlocks.BLEACHED_CHALK.get(), "chalk");
+        //chalk sticks
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
+        bleachBlock(recipeConsumer, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
 
 
         //GYPSUM

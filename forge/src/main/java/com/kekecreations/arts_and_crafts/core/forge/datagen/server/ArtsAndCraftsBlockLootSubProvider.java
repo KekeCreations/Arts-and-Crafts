@@ -88,6 +88,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(KekeBlocks.getChalk(colours.getId()));
         }
+        dropSelf(KekeBlocks.BLEACHED_CHALK.get());
     }
 
     private void soapstone() {
@@ -167,6 +168,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         for (DyeColor colours : DyeColor.values()) {
             add(KekeBlocks.getChalkDust(colours), noDrop());
         }
+        add(KekeBlocks.BLEACHED_CHALK_DUST.get(), noDrop());
     }
 
     private void flowerPots() {

@@ -10,6 +10,9 @@ import java.util.function.Supplier;
 public class KekeParticles {
 
     public static final HashMap<DyeColor, Supplier<SimpleParticleType>> CHALK_DRAW_PARTICLES = new HashMap<>();
+
+    public static final Supplier<SimpleParticleType> BLEACHED_CHALK_DRAW = registerParticle("bleached_chalk_draw");
+
     public static void register() {
 
     }
@@ -21,6 +24,7 @@ public class KekeParticles {
     }
 
     public static SimpleParticleType getChalkDrawParticle(DyeColor colours) {
+        CHALK_DRAW_PARTICLES.put(null, BLEACHED_CHALK_DRAW);
         return CHALK_DRAW_PARTICLES.get(colours).get();
     }
 

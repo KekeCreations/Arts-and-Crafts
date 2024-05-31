@@ -78,6 +78,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.PLASTER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KekeBlocks.BLEACHED_CHALK_DUST.get(), RenderType.cutout());
     }
 
 
@@ -85,6 +86,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         for (DyeColor colours : DyeColor.values()) {
             ParticleFactoryRegistry.getInstance().register(KekeParticles.getChalkDrawParticle(colours), ChalkDustParticle.Factory::new);
         }
+        ParticleFactoryRegistry.getInstance().register(KekeParticles.BLEACHED_CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
     }
 
     public static void registerBlockColours() {

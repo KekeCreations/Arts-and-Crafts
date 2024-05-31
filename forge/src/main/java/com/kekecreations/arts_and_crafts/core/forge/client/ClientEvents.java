@@ -53,6 +53,7 @@ public class ClientEvents {
         for (DyeColor colours : DyeColor.values()) {
             registerParticleProvidersEvent.registerSpriteSet(KekeParticles.getChalkDrawParticle(colours), ChalkDustParticle.Factory::new);
         }
+        registerParticleProvidersEvent.registerSpriteSet(KekeParticles.BLEACHED_CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
     }
     @SubscribeEvent
     public static void registerBlockColours(RegisterColorHandlersEvent.Block registerColorHandlersEvent) {
@@ -111,6 +112,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.PLASTER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(KekeBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(KekeBlocks.BLEACHED_CHALK_DUST.get(), RenderType.cutout());
     }
 
 

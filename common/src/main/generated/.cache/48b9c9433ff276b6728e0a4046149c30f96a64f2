@@ -1,10 +1,11 @@
-// 1.20.1	2024-05-26T09:47:27.5650723	Item Models: arts_and_crafts
+// 1.20.1	2024-05-31T14:16:32.9384565	Item Models: arts_and_crafts
 1b127836ff8f6d162519645d794ec3caaccafeeb assets/arts_and_crafts/models/item/black_chalk_stick.json
 b303bfb18bc31bdd837c85ec2bfb8a8cf7effdc7 assets/arts_and_crafts/models/item/black_decorated_pot.json
 d8dc925d72d8baf2a8af1ce8e5cc2c6c5d7a9ef5 assets/arts_and_crafts/models/item/black_flower_pot.json
 4d0580b90b56c38453d6272da3119cd7f152551a assets/arts_and_crafts/models/item/black_paintbrush.json
 017d483de1aba7c71944be59ff5f2adaa37787b3 assets/arts_and_crafts/models/item/bleachdew.json
 e272fde4f8cb1561e521d690964fe4def9b17637 assets/arts_and_crafts/models/item/bleachdew_paintbrush.json
+4ee96b4748c2fbd2b7118b6b20e0e19f24969abb assets/arts_and_crafts/models/item/bleached_chalk_stick.json
 ad7bd5f58e0f522682abae7db2c4e254b5047279 assets/arts_and_crafts/models/item/blue_chalk_stick.json
 510a0772c32b0b716c676a865eb5ac8b26d9438a assets/arts_and_crafts/models/item/blue_decorated_pot.json
 77845986261b6010797da4d0c428303255e7a376 assets/arts_and_crafts/models/item/blue_flower_pot.json
