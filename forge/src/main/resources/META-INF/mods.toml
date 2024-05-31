@@ -11,7 +11,7 @@ authors = "KekeCreations and Ari"
 description = '''
 A fabric & forge mod that adds all new decoration features into the game!
 '''
-#logoFile = ""
+logoFile = "arts_and_crafts_icon.png"
 
 [[dependencies.arts_and_crafts]]
 modId = "forge"
