@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:bleached_wool"
+    }
+  },
+  "pattern": [
+    "KK"
+  ],
+  "result": {
+    "count": 3,
+    "item": "arts_and_crafts:bleached_carpet"
+  },
+  "show_notification": true
+}

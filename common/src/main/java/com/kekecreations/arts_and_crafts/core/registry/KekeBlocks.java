@@ -109,6 +109,7 @@ public class KekeBlocks {
 
     //BLEACHED
     public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    public static final Supplier<Block> BLEACHED_CARPET = registerBlockWithItem("bleached_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_CARPET)));
 
     //GYPSUM
     public static final Supplier<Block> GYPSUM = registerBlockWithItem("gypsum", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).requiresCorrectToolForDrops().strength(1.75F, 5F)));

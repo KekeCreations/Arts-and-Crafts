@@ -42,6 +42,17 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
         appendAxes();
         appendChalkDust();
         appendLilyPads();
+        appendWoolCarpets();
+        appendWool();
+    }
+
+    private void appendWool() {
+        this.tag(BlockTags.WOOL)
+                .add(KekeBlocks.BLEACHED_WOOL.get());
+    }
+    private void appendWoolCarpets() {
+        this.tag(BlockTags.WOOL_CARPETS)
+                .add(KekeBlocks.BLEACHED_CARPET.get());
     }
 
     private void appendLilyPads() {

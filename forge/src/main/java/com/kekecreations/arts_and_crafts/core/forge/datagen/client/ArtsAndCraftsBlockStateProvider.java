@@ -58,6 +58,8 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
 
         //Bleached
         cubeAllWithItem(KekeBlocks.BLEACHED_WOOL.get());
+        carpetWithItem(KekeBlocks.BLEACHED_CARPET.get(), KekeBlocks.BLEACHED_WOOL.get());
+
 
         //Cork
         logWithItem(KekeBlocks.CORK_LOG.get());
@@ -205,6 +207,11 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         ResourceLocation resLoc = blockTexture(blockTexture);
         buttonBlock(block, resLoc);
         simpleBlockItem(block, models().buttonInventory(name(block), resLoc));
+    }
+    private void carpetWithItem(Block block, Block blockTexture) {
+        ResourceLocation resLoc = blockTexture(blockTexture);
+        simpleBlock(block, models().carpet(name(block), resLoc));
+        simpleBlockItem(block, models().carpet(name(block), resLoc));
     }
     private void trapdoorWithItem(TrapDoorBlock block, Block blockTexture) {
         ResourceLocation resLoc = blockTexture(blockTexture);

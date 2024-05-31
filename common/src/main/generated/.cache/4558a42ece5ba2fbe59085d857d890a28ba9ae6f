@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-27T11:19:17.2742487	Tags for minecraft:block mod id arts_and_crafts
+// 1.20.1	2024-05-31T13:25:52.6589436	Tags for minecraft:block mod id arts_and_crafts
 74aa0ae727679076b099c9abcd10b4edcdcc689e data/arts_and_crafts/tags/blocks/chalk_dust.json
 99f83e457ff791a3a3526794b3db529328f6ad37 data/arts_and_crafts/tags/blocks/lily_pads.json
 b9f1f197fae49f0fe3a1a2de261e1cc4c289c480 data/minecraft/tags/blocks/fence_gates.json
@@ -21,3 +21,5 @@ bde269277214cf95efcb7cde91ac7bdb7cec92d0 data/minecraft/tags/blocks/wooden_doors
 3e8322291d42c9c839f7c0afe5c4878fce19e0eb data/minecraft/tags/blocks/wooden_slabs.json
 edcccad96fea376a86d9492ef22f78ef6ba825ca data/minecraft/tags/blocks/wooden_stairs.json
 4cb1effd0ecd43581739a0d434a26a0bb875f4af data/minecraft/tags/blocks/wooden_trapdoors.json
+907804ffda10a6acc6a9b1df9928ea71c8e40a12 data/minecraft/tags/blocks/wool.json
+b8be7c1f550d88e3f4b9d167c6e1165f6276f99f data/minecraft/tags/blocks/wool_carpets.json

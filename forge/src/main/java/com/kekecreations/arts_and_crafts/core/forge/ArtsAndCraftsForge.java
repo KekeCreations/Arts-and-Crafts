@@ -81,6 +81,13 @@ public class ArtsAndCraftsForge {
         event.getEntries().putAfter(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
+    private void addBefore(BuildCreativeModeTabContentsEvent event, Block beforeItem, Block item) {
+        event.getEntries().putBefore(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+    }
+    private void addBefore(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
+        event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+    }
+
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
@@ -105,6 +112,9 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
 
             addAfter(event, Blocks.PINK_STAINED_GLASS_PANE, KekeBlocks.PLASTER.get());
+
+            addBefore(event, Blocks.WHITE_WOOL, KekeBlocks.BLEACHED_WOOL.get());
+            addBefore(event, Blocks.WHITE_CARPET, KekeBlocks.BLEACHED_CARPET.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
@@ -154,7 +164,7 @@ public class ArtsAndCraftsForge {
                 addAfter(event, Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
                 addAfter(event, KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
             }
-            addAfter(event, KekeItems.getPaintBrush(DyeColor.PINK.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
+            addBefore(event, KekeItems.getPaintBrush(DyeColor.WHITE.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
             addAfter(event, Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
             addAfter(event, KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
         }
@@ -200,7 +210,7 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
             addAfter(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
             addAfter(event, KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
-            addAfter(event, Items.PINK_DYE, KekeItems.BLEACHDEW.get());
+            addBefore(event, Items.WHITE_DYE, KekeItems.BLEACHDEW.get());
         }
     }
 }

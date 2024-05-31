@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_needed_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:dye_orange_wool_with_bleached_wool"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_needed_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:dye_orange_wool_with_bleached_wool"
+    ]
+  },
+  "sends_telemetry_event": false
+}

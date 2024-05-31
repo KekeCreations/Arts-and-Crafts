@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "wool",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_wool"
+    },
+    {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:bleached_wool"
+  }
+}

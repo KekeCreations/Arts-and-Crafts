@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "carpet",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "arts_and_crafts:bleached_carpet"
+    }
+  ],
+  "result": {
+    "item": "minecraft:yellow_carpet"
+  }
+}
