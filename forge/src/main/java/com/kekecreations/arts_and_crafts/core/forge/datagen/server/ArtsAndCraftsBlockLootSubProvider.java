@@ -56,6 +56,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     private void bleached() {
         dropSelf(KekeBlocks.BLEACHED_WOOL.get());
         dropSelf(KekeBlocks.BLEACHED_CARPET.get());
+        dropSelf(KekeBlocks.GLAZED_TERRACOTTA.get());
     }
     private void decoratedPots() {
         for (DyeColor colours : DyeColor.values()) {

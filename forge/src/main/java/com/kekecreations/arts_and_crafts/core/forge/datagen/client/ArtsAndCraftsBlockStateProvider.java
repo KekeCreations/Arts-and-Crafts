@@ -61,6 +61,8 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         carpetWithItem(KekeBlocks.BLEACHED_CARPET.get(), KekeBlocks.BLEACHED_WOOL.get());
         chalkDustBlock(KekeBlocks.BLEACHED_CHALK_DUST.get(), "bleached");
         cubeAllWithItem(KekeBlocks.BLEACHED_CHALK.get());
+        glazedTerracotta(KekeBlocks.GLAZED_TERRACOTTA.get());
+        simpleBlockItem(KekeBlocks.GLAZED_TERRACOTTA.get(), glazedTerracottaModel("glazed_terracotta"));
 
 
         //Cork
@@ -300,6 +302,18 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
                 .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_2").texture("lotus", "block/lotus_2").texture("particle", "block/lotus_2")).rotationY(90).build())
                 .partialState().with(BlockStateProperties.AGE_3, 3).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
                 .addModels(ConfiguredModel.builder().modelFile(lotusFlowerModel("lotus_flower_3").texture("lotus", "block/lotus_3").texture("particle", "block/lotus_3")).rotationY(90).build());
+    }
+
+    public void glazedTerracotta(Block block) {
+        getVariantBuilder(block)
+                .partialState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).rotationY(180).build())
+                .partialState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).rotationY(270).build())
+                .partialState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).build())
+                .partialState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).rotationY(90).build());
     }
 
     public void normalPlasterBlock(Block block) {
@@ -808,6 +822,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> lotusFlowerModel(String name) {
         return models().withExistingParent(name, "arts_and_crafts:block/lotus_flower_model");
+    }
+    public ModelBuilder<?> glazedTerracottaModel(String name) {
+        return models().withExistingParent(name, "minecraft:block/template_glazed_terracotta");
     }
     public ModelBuilder<?> flowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/flower_pot");
