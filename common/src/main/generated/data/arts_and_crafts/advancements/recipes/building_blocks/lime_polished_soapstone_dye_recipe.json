@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "polished_soapstone": {
+    "lime_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:polished_soapstone"
+              "minecraft:lime_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "polished_soapstone",
+      "lime_dye",
       "has_the_recipe"
     ]
   ],

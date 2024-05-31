@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "soapstone_bricks": {
+    "yellow_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone_bricks"
+              "minecraft:yellow_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "soapstone_bricks",
+      "yellow_dye",
       "has_the_recipe"
     ]
   ],

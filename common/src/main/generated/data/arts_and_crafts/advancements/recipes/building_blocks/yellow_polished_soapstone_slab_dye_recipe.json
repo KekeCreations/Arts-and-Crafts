@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "polished_soapstone_slab": {
+    "yellow_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:polished_soapstone_slab"
+              "minecraft:yellow_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "polished_soapstone_slab",
+      "yellow_dye",
       "has_the_recipe"
     ]
   ],

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "plaster": {
+    "orange_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:plaster"
+              "minecraft:orange_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "plaster",
+      "orange_dye",
       "has_the_recipe"
     ]
   ],

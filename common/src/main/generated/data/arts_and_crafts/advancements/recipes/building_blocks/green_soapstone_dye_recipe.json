@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "arts_and_crafts:green_soapstone_dye_recipe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "soapstone": {
+    "green_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone"
+              "minecraft:green_dye"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:green_soapstone_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "soapstone",
+      "green_dye",
       "has_the_recipe"
     ]
   ],

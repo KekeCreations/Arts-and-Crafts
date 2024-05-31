@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "brush": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:brush"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "arts_and_crafts:magenta_paintbrush"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magenta_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "brush",
+      "magenta_dye",
       "has_the_recipe"
     ]
   ],

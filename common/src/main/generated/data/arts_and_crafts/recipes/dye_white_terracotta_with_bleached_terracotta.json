@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "terracotta",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:terracotta"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_terracotta"
+  }
+}

@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "arts_and_crafts:black_soapstone_dye_recipe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "soapstone": {
+    "black_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone"
+              "minecraft:black_dye"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:black_soapstone_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "soapstone",
+      "black_dye",
       "has_the_recipe"
     ]
   ],

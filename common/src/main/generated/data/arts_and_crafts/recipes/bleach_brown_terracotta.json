@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "terracotta",
+  "key": {
+    "K": {
+      "item": "minecraft:brown_terracotta"
+    },
+    "Q": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:terracotta"
+  },
+  "show_notification": true
+}

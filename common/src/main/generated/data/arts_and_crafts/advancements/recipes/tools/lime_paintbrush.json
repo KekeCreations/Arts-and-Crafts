@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "brush": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:brush"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "arts_and_crafts:lime_paintbrush"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "lime_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lime_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "brush",
+      "lime_dye",
       "has_the_recipe"
     ]
   ],

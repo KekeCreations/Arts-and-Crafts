@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "brush": {
+    "black_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:brush"
+              "minecraft:black_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "brush",
+      "black_dye",
       "has_the_recipe"
     ]
   ],

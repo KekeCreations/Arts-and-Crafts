@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "brush": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:brush"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "arts_and_crafts:pink_paintbrush"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "pink_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "brush",
+      "pink_dye",
       "has_the_recipe"
     ]
   ],

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "mud_bricks": {
+    "lime_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_bricks"
+              "minecraft:lime_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "mud_bricks",
+      "lime_dye",
       "has_the_recipe"
     ]
   ],

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "mud_brick_wall": {
+    "white_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_brick_wall"
+              "minecraft:white_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "mud_brick_wall",
+      "white_dye",
       "has_the_recipe"
     ]
   ],

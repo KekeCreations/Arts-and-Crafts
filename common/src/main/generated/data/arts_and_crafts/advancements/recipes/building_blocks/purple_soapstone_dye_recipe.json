@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "soapstone": {
+    "purple_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone"
+              "minecraft:purple_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "soapstone",
+      "purple_dye",
       "has_the_recipe"
     ]
   ],

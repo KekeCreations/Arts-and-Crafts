@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "plaster",
+  "ingredients": [
+    {
+      "item": "minecraft:green_dye"
+    },
+    {
+      "item": "arts_and_crafts:plaster"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts:green_plaster"
+  }
+}

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "terracotta_shingles": {
+    "white_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:terracotta_shingles"
+              "minecraft:white_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "terracotta_shingles",
+      "white_dye",
       "has_the_recipe"
     ]
   ],

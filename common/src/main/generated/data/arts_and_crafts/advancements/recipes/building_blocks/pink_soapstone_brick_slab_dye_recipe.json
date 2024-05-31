@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "soapstone_brick_slab": {
+    "pink_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone_brick_slab"
+              "minecraft:pink_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "soapstone_brick_slab",
+      "pink_dye",
       "has_the_recipe"
     ]
   ],

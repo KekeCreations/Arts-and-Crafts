@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "plaster": {
+    "white_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:plaster"
+              "minecraft:white_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "plaster",
+      "white_dye",
       "has_the_recipe"
     ]
   ],

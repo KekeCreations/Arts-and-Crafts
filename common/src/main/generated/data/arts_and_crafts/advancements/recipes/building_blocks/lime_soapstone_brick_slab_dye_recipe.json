@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "soapstone_brick_slab": {
+    "lime_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:soapstone_brick_slab"
+              "minecraft:lime_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "soapstone_brick_slab",
+      "lime_dye",
       "has_the_recipe"
     ]
   ],

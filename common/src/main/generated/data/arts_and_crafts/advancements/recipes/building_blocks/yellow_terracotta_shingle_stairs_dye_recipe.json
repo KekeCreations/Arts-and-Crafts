@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "terracotta_shingle_stairs": {
+    "yellow_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:terracotta_shingle_stairs"
+              "minecraft:yellow_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "terracotta_shingle_stairs",
+      "yellow_dye",
       "has_the_recipe"
     ]
   ],

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "mud_brick_slab": {
+    "orange_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_brick_slab"
+              "minecraft:orange_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "mud_brick_slab",
+      "orange_dye",
       "has_the_recipe"
     ]
   ],

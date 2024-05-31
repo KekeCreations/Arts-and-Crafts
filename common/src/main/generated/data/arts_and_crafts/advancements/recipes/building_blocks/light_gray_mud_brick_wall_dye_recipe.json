@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "mud_brick_wall": {
+    "light_gray_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_brick_wall"
+              "minecraft:light_gray_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "mud_brick_wall",
+      "light_gray_dye",
       "has_the_recipe"
     ]
   ],

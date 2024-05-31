@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "terracotta_shingle_slab": {
+    "light_gray_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:terracotta_shingle_slab"
+              "minecraft:light_gray_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "terracotta_shingle_slab",
+      "light_gray_dye",
       "has_the_recipe"
     ]
   ],

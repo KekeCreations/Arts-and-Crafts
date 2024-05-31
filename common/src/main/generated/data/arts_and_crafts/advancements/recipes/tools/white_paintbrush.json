@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "brush": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:brush"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "arts_and_crafts:white_paintbrush"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "white_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:white_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "brush",
+      "white_dye",
       "has_the_recipe"
     ]
   ],

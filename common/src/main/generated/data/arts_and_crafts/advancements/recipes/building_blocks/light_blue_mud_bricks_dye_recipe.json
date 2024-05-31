@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "mud_bricks": {
+    "light_blue_dye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:mud_bricks"
+              "minecraft:light_blue_dye"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "mud_bricks",
+      "light_blue_dye",
       "has_the_recipe"
     ]
   ],

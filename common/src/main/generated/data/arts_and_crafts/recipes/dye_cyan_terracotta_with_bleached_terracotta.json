@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "terracotta",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_dye"
+    },
+    {
+      "item": "minecraft:terracotta"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cyan_terracotta"
+  }
+}
