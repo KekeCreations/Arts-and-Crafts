@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.util.ArtsAndCraftsFabricLootModifiers;
 import com.kekecreations.arts_and_crafts.core.registry.KekeFeatures;
 import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
@@ -23,6 +24,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ArtsAndCrafts.init();
         ArtsAndCraftsItemGroupEvents.add();
         KekeFabricFlammableAndStrippableBlocks.register();
+        ArtsAndCraftsFabricLootModifiers.modifyVanillaLootTables();
         createBiomeModifications();
     }
 
