@@ -66,15 +66,12 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         bleachBlock(recipeConsumer, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
         //terracotta
         List<Item> terracottaList = List.of(Blocks.BLACK_TERRACOTTA.asItem(), Blocks.BLUE_TERRACOTTA.asItem(), Blocks.BROWN_TERRACOTTA.asItem(), Blocks.CYAN_TERRACOTTA.asItem(), Blocks.GRAY_TERRACOTTA.asItem(), Blocks.GREEN_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_TERRACOTTA.asItem(), Blocks.LIME_TERRACOTTA.asItem(), Blocks.MAGENTA_TERRACOTTA.asItem(), Blocks.ORANGE_TERRACOTTA.asItem(), Blocks.PINK_TERRACOTTA.asItem(), Blocks.PURPLE_TERRACOTTA.asItem(), Blocks.RED_TERRACOTTA.asItem(), Blocks.YELLOW_TERRACOTTA.asItem(), Blocks.WHITE_TERRACOTTA.asItem());
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, terracottaList, Blocks.TERRACOTTA, "terracotta");
         bleachBlockAlt(recipeConsumer, terracottaList, Blocks.TERRACOTTA, "terracotta");
         smeltingRecipe(Blocks.TERRACOTTA, KekeBlocks.GLAZED_TERRACOTTA.get(), RecipeCategory.BUILDING_BLOCKS, 0.1F, recipeConsumer);
         List<Item> glazedTerracottaList = List.of(Blocks.BLACK_GLAZED_TERRACOTTA.asItem(), Blocks.BLUE_GLAZED_TERRACOTTA.asItem(), Blocks.BROWN_GLAZED_TERRACOTTA.asItem(), Blocks.CYAN_GLAZED_TERRACOTTA.asItem(), Blocks.GRAY_GLAZED_TERRACOTTA.asItem(), Blocks.GREEN_GLAZED_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA.asItem(), Blocks.LIME_GLAZED_TERRACOTTA.asItem(), Blocks.MAGENTA_GLAZED_TERRACOTTA.asItem(), Blocks.ORANGE_GLAZED_TERRACOTTA.asItem(), Blocks.PINK_GLAZED_TERRACOTTA.asItem(), Blocks.PURPLE_GLAZED_TERRACOTTA.asItem(), Blocks.RED_GLAZED_TERRACOTTA.asItem(), Blocks.YELLOW_GLAZED_TERRACOTTA.asItem(), Blocks.WHITE_GLAZED_TERRACOTTA.asItem());
         bleachBlockAlt(recipeConsumer, glazedTerracottaList, KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, glazedTerracottaList, KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
         //Plaster
         List<Item> plasterList = List.of(KekeBlocks.getDyedPlaster(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.WHITE.getId()).asItem());
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, plasterList, KekeBlocks.PLASTER.get(), "plaster");
         bleachBlockAlt(recipeConsumer, plasterList, KekeBlocks.PLASTER.get(), "plaster");
 
 
@@ -189,6 +186,8 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         chestBoatRecipe(recipeConsumer, KekeItems.CORK_CHEST_BOAT.get(), KekeItems.CORK_BOAT.get());
 
         for (DyeColor colours : DyeColor.values()) {
+            //BLEACH
+            dyeBlockRecipe(KekeBlocks.GLAZED_TERRACOTTA.get(), colours, ArtsAndCraftsDyedBlockLists.getDyedGlazedTerracotta(colours.getId()), "glazed_terracotta", recipeConsumer);
             //CHALK
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(colours.getId()).asItem(), KekeItems.getChalkStick(colours.getId()), 1, recipeConsumer);
             //SOAPSTONE

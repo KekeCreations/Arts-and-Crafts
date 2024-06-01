@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "brown_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:brown_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:brown_glazed_terracotta_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "brown_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:brown_glazed_terracotta_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

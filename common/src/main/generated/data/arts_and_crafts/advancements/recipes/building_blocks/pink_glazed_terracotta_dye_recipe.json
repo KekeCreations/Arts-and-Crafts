@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:pink_glazed_terracotta_dye_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "pink_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "pink_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:pink_glazed_terracotta_dye_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

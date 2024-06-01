@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glazed_terracotta",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:glazed_terracotta"
+    },
+    "Q": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:light_blue_glazed_terracotta"
+  },
+  "show_notification": true
+}
