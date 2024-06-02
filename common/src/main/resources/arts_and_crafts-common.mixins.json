@@ -15,6 +15,7 @@
     "WoodTypeMixin"
   ],
   "client": [
+    "LlamaDecorLayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
