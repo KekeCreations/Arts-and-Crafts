@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "arts_and_crafts:block/bleached_concrete_powder"
+      },
+      {
+        "model": "arts_and_crafts:block/bleached_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "arts_and_crafts:block/bleached_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "arts_and_crafts:block/bleached_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -39,6 +39,8 @@ public class ArtsAndCraftsItemGroupEvents {
 
             event.addBefore(Blocks.WHITE_WOOL, KekeBlocks.BLEACHED_WOOL.get());
             event.addBefore(Blocks.WHITE_CARPET, KekeBlocks.BLEACHED_CARPET.get());
+            event.addBefore(Blocks.WHITE_CONCRETE, KekeBlocks.BLEACHED_CONCRETE.get());
+            event.addBefore(Blocks.WHITE_CONCRETE_POWDER, KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));

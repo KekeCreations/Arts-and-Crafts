@@ -73,6 +73,8 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         //Plaster
         List<Item> plasterList = List.of(KekeBlocks.getDyedPlaster(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.WHITE.getId()).asItem());
         bleachBlockAlt(recipeConsumer, plasterList, KekeBlocks.PLASTER.get(), "plaster");
+        //concrete
+        concretePowder(recipeConsumer, KekeBlocks.BLEACHED_CONCRETE_POWDER.get(), KekeItems.BLEACHDEW.get());
 
 
 

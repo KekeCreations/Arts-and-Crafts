@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-31T21:17:40.6974497	Loot Tables
+// 1.20.1	2024-06-02T05:20:08.1466897	Loot Tables
 b192febc153e25411caaabbf806ea71423e3fcc5 data/arts_and_crafts/loot_tables/blocks/black_chalk.json
 7e5907d19cc499140da3aedfc8c2b3421f292f3d data/arts_and_crafts/loot_tables/blocks/black_chalk_dust.json
 d8edff3ffb3878d8a514d3365dac49acc512d49a data/arts_and_crafts/loot_tables/blocks/black_decorated_pot.json
@@ -62,6 +62,8 @@ a8f0be9bf6bb552503a71760231fda045b565faa data/arts_and_crafts/loot_tables/blocks
 8a3cffe2fb4538732ef382aa43298589f662818f data/arts_and_crafts/loot_tables/blocks/bleached_carpet.json
 0d53a055e0202ef26d9d5f57a3169a11c420a3c3 data/arts_and_crafts/loot_tables/blocks/bleached_chalk.json
 a7fc026f912b1ed0e717f8d6973a910a866a5144 data/arts_and_crafts/loot_tables/blocks/bleached_chalk_dust.json
+78a25f9d0b57fcca473d2b3bd8df55e8effd251d data/arts_and_crafts/loot_tables/blocks/bleached_concrete.json
+5b940d57b36facf917d4e03dd18e125ae1a512b0 data/arts_and_crafts/loot_tables/blocks/bleached_concrete_powder.json
 941ee3b6c295940845cf2d1d0ebcddaa55f9a7d3 data/arts_and_crafts/loot_tables/blocks/bleached_wool.json
 2e4205f69ce3c20470c6e3b30d52ec2f5cb00648 data/arts_and_crafts/loot_tables/blocks/blue_chalk.json
 bd21dcc2e3274261a39629db336268c618146550 data/arts_and_crafts/loot_tables/blocks/blue_chalk_dust.json

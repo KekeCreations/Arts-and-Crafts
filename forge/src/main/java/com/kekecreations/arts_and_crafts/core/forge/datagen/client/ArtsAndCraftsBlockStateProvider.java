@@ -61,8 +61,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         carpetWithItem(KekeBlocks.BLEACHED_CARPET.get(), KekeBlocks.BLEACHED_WOOL.get());
         chalkDustBlock(KekeBlocks.BLEACHED_CHALK_DUST.get(), "bleached");
         cubeAllWithItem(KekeBlocks.BLEACHED_CHALK.get());
-        glazedTerracotta(KekeBlocks.GLAZED_TERRACOTTA.get());
-        simpleBlockItem(KekeBlocks.GLAZED_TERRACOTTA.get(), glazedTerracottaModel("glazed_terracotta"));
+        glazedTerracottaWithItem(KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
+        concretePowderWithItem(KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
+        cubeAllWithItem(KekeBlocks.BLEACHED_CONCRETE.get());
 
 
         //Cork
@@ -175,6 +176,15 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
 
     private void cubeAllWithItem(Block block) {
         simpleBlockWithItem(block, cubeAll(block));
+    }
+    private void concretePowderWithItem(Block block) {
+        concretePowderBlock(block);
+        simpleBlockItem(block, cubeAll(block));
+    }
+
+    private void glazedTerracottaWithItem(Block block, String blockId) {
+        glazedTerracotta(block);
+        simpleBlockItem(block, glazedTerracottaModel(blockId));
     }
 
     private void stairsWithItem(StairBlock block, Block blockTexture) {
@@ -314,6 +324,17 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
                 .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).build())
                 .partialState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
                 .addModels(ConfiguredModel.builder().modelFile(glazedTerracottaModel(name(block)).texture("pattern", "block/" + name(block))).rotationY(90).build());
+    }
+    public void concretePowderBlock(Block block) {
+        getVariantBuilder(block)
+                .partialState()
+                .addModels(ConfiguredModel.builder().modelFile(cubeAllModel(name(block)).texture("all", "block/" + name(block))).build())
+                .partialState()
+                .addModels(ConfiguredModel.builder().modelFile(cubeAllModel(name(block)).texture("all", "block/" + name(block))).rotationY(90).build())
+                .partialState()
+                .addModels(ConfiguredModel.builder().modelFile(cubeAllModel(name(block)).texture("all", "block/" + name(block))).rotationY(180).build())
+                .partialState()
+                .addModels(ConfiguredModel.builder().modelFile(cubeAllModel(name(block)).texture("all", "block/" + name(block))).rotationY(270).build());
     }
 
     public void normalPlasterBlock(Block block) {
@@ -828,6 +849,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> flowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/flower_pot");
+    }
+    public ModelBuilder<?> cubeAllModel(String name) {
+        return models().withExistingParent(name, "minecraft:block/cube_all");
     }
     public ModelBuilder<?> flowerPotCrossModel(String name) {
         return models().withExistingParent(name, "minecraft:block/flower_pot_cross");

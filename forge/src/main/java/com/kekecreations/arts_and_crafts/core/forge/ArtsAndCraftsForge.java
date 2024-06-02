@@ -115,6 +115,8 @@ public class ArtsAndCraftsForge {
 
             addBefore(event, Blocks.WHITE_WOOL, KekeBlocks.BLEACHED_WOOL.get());
             addBefore(event, Blocks.WHITE_CARPET, KekeBlocks.BLEACHED_CARPET.get());
+            addBefore(event, Blocks.WHITE_CONCRETE, KekeBlocks.BLEACHED_CONCRETE.get());
+            addBefore(event, Blocks.WHITE_CONCRETE_POWDER, KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
