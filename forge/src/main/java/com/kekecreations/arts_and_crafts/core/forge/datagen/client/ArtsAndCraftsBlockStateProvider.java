@@ -252,10 +252,10 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         }
     }
     public void azaleaFlowerPotBlock(Block block, DyeColor dyeColor, String flower) {
-        if (flower.equals("azalea_bush")) {
+        if (flower.equals("potted_azalea_bush")) {
             simpleBlock(block, ConfiguredModel.builder().modelFile(azaleaFlowerPotModel(dyeColor.getName() + "_potted_" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
         }
-        if (flower.equals("flowering_azalea_bush")) {
+        if (flower.equals("potted_flowering_azalea_bush")) {
             simpleBlock(block, ConfiguredModel.builder().modelFile(floweringAzaleaFlowerPotModel(dyeColor.getName() + "_potted_" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
         }
     }
