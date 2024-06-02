@@ -50,6 +50,9 @@ public class PaintBrushItem extends Item {
 
 
         if (!level.isClientSide()) {
+
+
+            /*
             if (paintbrushDyeColour == null) {
                 for (DyeColor colour : DyeColor.values()) {
                     //SOAPSTONE
@@ -198,6 +201,7 @@ public class PaintBrushItem extends Item {
                     }
                 }
             }
+            */
         }
         return InteractionResult.FAIL;
     }

@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.item.palette.PaletteManager;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
@@ -19,6 +20,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -44,6 +46,7 @@ public class ArtsAndCraftsForge {
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
+        modEventBus.addListener(this::addReloadListeners);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -89,6 +92,9 @@ public class ArtsAndCraftsForge {
         event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
+    public void addReloadListeners(AddReloadListenerEvent event) {
+        event.addListener(PaletteManager.INSTANCE);
+    }
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {

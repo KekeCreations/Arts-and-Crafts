@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.fabric;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.item.palette.PaletteManager;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
@@ -10,9 +11,18 @@ import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.fml.config.ModConfig;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
 
 public class ArtsAndCraftsFabric implements ModInitializer {
     @Override
@@ -25,6 +35,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ArtsAndCraftsItemGroupEvents.add();
         KekeFabricFlammableAndStrippableBlocks.register();
         ArtsAndCraftsFabricLootModifiers.modifyVanillaLootTables();
+        addReloadListeners();
         createBiomeModifications();
     }
 
@@ -40,5 +51,17 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, KekeFeatures.PlacedFeatures.GYPSUM_PATCH);
     }
 
+    public void addReloadListeners() {
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new IdentifiableResourceReloadListener() {
+            @Override
+            public ResourceLocation getFabricId() {
+                return ArtsAndCrafts.id("paintbrush_palette");
+            }
 
+            @Override
+            public CompletableFuture<Void> reload(PreparationBarrier preparationBarrier, ResourceManager resourceManager, ProfilerFiller profilerFiller, ProfilerFiller profilerFiller2, Executor executor, Executor executor2) {
+                return PaletteManager.INSTANCE.reload(preparationBarrier, resourceManager, profilerFiller, profilerFiller2, executor, executor2);
+            }
+        });
+    }
 }
