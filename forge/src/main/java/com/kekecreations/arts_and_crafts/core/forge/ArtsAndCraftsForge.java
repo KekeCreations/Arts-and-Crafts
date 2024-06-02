@@ -37,6 +37,7 @@ public class ArtsAndCraftsForge {
 
         ArtsAndCrafts.init();
 
+        ForgeRegistryHelper.SOUNDS.register(modEventBus);
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
         ForgeRegistryHelper.BLOCKS.register(modEventBus);
         ForgeRegistryHelper.ITEMS.register(modEventBus);
