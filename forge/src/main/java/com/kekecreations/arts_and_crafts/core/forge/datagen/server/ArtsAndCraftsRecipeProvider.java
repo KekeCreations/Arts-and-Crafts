@@ -186,6 +186,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         hangingSignRecipe(KekeBlocks.STRIPPED_CORK_LOG, KekeBlocks.CORK_HANGING_SIGN, recipeConsumer);
         woodenBoat(recipeConsumer, KekeItems.CORK_BOAT.get(), KekeBlocks.CORK_PLANKS.get());
         chestBoatRecipe(recipeConsumer, KekeItems.CORK_CHEST_BOAT.get(), KekeItems.CORK_BOAT.get());
+        typeRecipe(KekeBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get(), recipeConsumer);
 
         for (DyeColor colours : DyeColor.values()) {
             //BLEACH
