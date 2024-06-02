@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:cork"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "stripped_cork_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:stripped_cork_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "stripped_cork_wood",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:cork"
+    ]
+  },
+  "sends_telemetry_event": false
+}

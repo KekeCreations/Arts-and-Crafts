@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-31T15:30:44.0156006	Tags for minecraft:item mod id arts_and_crafts
+// 1.20.1	2024-06-02T06:23:45.7351738	Tags for minecraft:item mod id arts_and_crafts
 600ccf402a38ad9c7f66da9413cdf6c12aa8e707 data/arts_and_crafts/tags/items/chalk_sticks.json
 3eb77ae8624a3cb2a6c8de2163925946edaf5830 data/arts_and_crafts/tags/items/decorated_pots.json
 4ce44c6fc029a87b377f0223f8309a779826ad87 data/arts_and_crafts/tags/items/dyes.json
@@ -8,3 +8,4 @@ bfbdf5c6f1c49da9e7fe2ef9ae56f218984468d6 data/minecraft/tags/items/chest_boats.j
 7622ac7cef31bb4c0790bb637b18f66c7e8b38d3 data/minecraft/tags/items/logs_that_burn.json
 c6233070cedacbe242758f9cfb3f30303909dd16 data/minecraft/tags/items/planks.json
 0f33c9f6677a16f41979c5c697980628ec2edc47 data/minecraft/tags/items/wooden_buttons.json
+b8be7c1f550d88e3f4b9d167c6e1165f6276f99f data/minecraft/tags/items/wool_carpets.json
