@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.mixin.DecoratedPotBlockEntityAccessor;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -12,6 +13,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -45,6 +47,8 @@ public class PaintbrushUtils {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedPot) {
             dyedPot.setDecoration(decorations);
+        } else if (blockEntity instanceof DecoratedPotBlockEntityAccessor decoratedPot) {
+            decoratedPot.setDecorations(decorations);
         }
     }
 
@@ -83,6 +87,12 @@ public class PaintbrushUtils {
         level.playSound(null, pos, ArtsAndCraftsSounds.PAINT_WITH_PAINTBRUSH.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
         level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
         damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
+    }
+
+    public static void paintBlock(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
+        BlockState blockState = level.getBlockState(pos);
+        level.setBlockAndUpdate(pos, blockStateToPlace.getBlock().withPropertiesOf(blockState));
+        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
 
     public static void paintBed(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
@@ -152,11 +162,6 @@ public class PaintbrushUtils {
                 .setValue(BlockStateProperties.WATERLOGGED, blockState.getValue(BlockStateProperties.WATERLOGGED))
                 .setValue(BlockStateProperties.LIT, blockState.getValue(BlockStateProperties.LIT))
                 .setValue(BlockStateProperties.CANDLES, blockState.getValue(BlockStateProperties.CANDLES)));
-        paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
-    }
-    public static void paintBlock(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
-        BlockState blockState = level.getBlockState(pos);
-        level.setBlockAndUpdate(pos, blockStateToPlace);
         paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
     public static void paintSlab(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {

@@ -73,6 +73,9 @@ public class ArtsAndCraftsForge {
         generator.addProvider(event.includeServer(), new ArtsAndCraftsBiomeTagsProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID, fileHelper));
     }
 
+    public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
+        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC, PaintbrushPalette.CODEC);
+    }
 
     private void addAfter(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
         event.getEntries().putAfter(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -92,10 +95,6 @@ public class ArtsAndCraftsForge {
     }
     private void addBefore(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
         event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-    }
-
-    public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
-        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC, PaintbrushPalette.CODEC);
     }
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
@@ -127,6 +126,7 @@ public class ArtsAndCraftsForge {
             addBefore(event, Blocks.WHITE_CONCRETE, KekeBlocks.BLEACHED_CONCRETE.get());
             addBefore(event, Blocks.WHITE_CONCRETE_POWDER, KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
             addBefore(event, Blocks.WHITE_GLAZED_TERRACOTTA, KekeBlocks.GLAZED_TERRACOTTA.get());
+            addBefore(event, Blocks.WHITE_BED, KekeBlocks.BLEACHED_BED.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));

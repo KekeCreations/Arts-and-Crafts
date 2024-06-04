@@ -18,6 +18,8 @@ public class KekeItems {
 
     public static final HashMap<DyeColor, Supplier<PaintbrushItem>> PAINT_BRUSHES = new HashMap<>();
 
+    public static Supplier<Item> BLEACHED_BED = registerItem("bleached_bed", () -> new CustomBedBlockItem(KekeBlocks.BLEACHED_BED.get(), new Item.Properties().stacksTo(1)));
+
     public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties().stacksTo(16)));
 
 

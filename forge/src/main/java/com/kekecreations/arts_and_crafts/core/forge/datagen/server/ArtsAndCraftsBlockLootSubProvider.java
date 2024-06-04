@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.block.CustomBedBlock;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DecoratedPotBlock;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
@@ -59,6 +61,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         dropSelf(KekeBlocks.GLAZED_TERRACOTTA.get());
         dropSelf(KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
         dropSelf(KekeBlocks.BLEACHED_CONCRETE.get());
+        add(KekeBlocks.BLEACHED_BED.get(), createSinglePropConditionTable(KekeBlocks.BLEACHED_BED.get(), CustomBedBlock.PART, BedPart.HEAD));
     }
     private void decoratedPots() {
         for (DyeColor colours : DyeColor.values()) {

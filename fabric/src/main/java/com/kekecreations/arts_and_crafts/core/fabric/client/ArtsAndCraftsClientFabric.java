@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.core.fabric.client;
 
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.CustomBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
@@ -18,6 +19,7 @@ import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.GrassColor;
 
@@ -105,9 +107,11 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         EntityRendererRegistry.register(KekeEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
         EntityRendererRegistry.register(KekeEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
         BlockEntityRendererRegistry.register(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
+        BlockEntityRendererRegistry.register(KekeEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), CustomBedBER::new);
         for (DyeColor colours : DyeColor.values()) {
             BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
         }
+        BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
     }
     public static void registerModelLayers() {
         EntityModelLayerRegistry.registerModelLayer(CustomBoatRenderer.BOAT, BoatModel::createBodyModel);

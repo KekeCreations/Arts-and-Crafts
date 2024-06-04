@@ -113,6 +113,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(KekeBlocks.GLAZED_TERRACOTTA.get(), "Glazed Terracotta");
         add(KekeBlocks.BLEACHED_CONCRETE.get(), "Bleached Concrete");
         add(KekeBlocks.BLEACHED_CONCRETE_POWDER.get(), "Bleached Concrete Powder");
+        add(KekeBlocks.BLEACHED_BED.get(), "Bleached Bed");
 
 
 

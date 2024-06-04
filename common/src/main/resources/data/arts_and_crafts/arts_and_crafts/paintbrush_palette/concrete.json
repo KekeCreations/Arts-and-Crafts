@@ -16,6 +16,7 @@
         "arts_and_crafts:blue_paintbrush": "minecraft:blue_concrete",
         "arts_and_crafts:purple_paintbrush": "minecraft:purple_concrete",
         "arts_and_crafts:magenta_paintbrush": "minecraft:magenta_concrete",
-        "arts_and_crafts:pink_paintbrush": "minecraft:pink_concrete"
+        "arts_and_crafts:pink_paintbrush": "minecraft:pink_concrete",
+        "arts_and_crafts:bleachdew_paintbrush": "arts_and_crafts:bleached_concrete"
     }
 }

@@ -1,8 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
+import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
+import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
@@ -18,6 +21,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
@@ -44,16 +48,28 @@ public class PaintbrushItem extends Item {
         BlockPos pos = context.getClickedPos();
         Player player = context.getPlayer();
         ItemStack itemStack = context.getItemInHand();
-        DyeColor paintbrushDyeColour = this.getDyeColor();
         BlockState blockState = level.getBlockState(pos);
-        BlockEntity blockEntity = level.getBlockEntity(pos);
         InteractionHand hand = context.getHand();
+        BlockEntity blockEntity = context.getLevel().getBlockEntity(pos);
 
         Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
 
-        if (!level.isClientSide() && finalBlock != null) {
+        if (!level.isClientSide() && finalBlock != null && finalBlock != blockState.getBlock()) {
+            if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
+                DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
+                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
+                return InteractionResult.SUCCESS;
+            } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
+                DecoratedPotBlockEntity.Decorations oldDecorations = decoratedPotBlockEntity.getDecorations();
+                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
+                return InteractionResult.SUCCESS;
+            }
 
             level.setBlockAndUpdate(pos, finalBlock.defaultBlockState());
+            PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+            return InteractionResult.SUCCESS;
 
 
 

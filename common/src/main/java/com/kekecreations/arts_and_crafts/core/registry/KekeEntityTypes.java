@@ -2,10 +2,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
-import com.kekecreations.arts_and_crafts.common.entity.CustomChestBoat;
-import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.*;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -61,6 +58,12 @@ public class KekeEntityTypes {
                     KekeBlocks.getDyedDecoratedPot(DyeColor.GREEN.getId()),
                     KekeBlocks.getDyedDecoratedPot(DyeColor.RED.getId()),
                     KekeBlocks.getDyedDecoratedPot(DyeColor.BLACK.getId())
+            )
+    );
+
+    public static final Supplier<BlockEntityType<CustomBedBlockEntity>> CUSTOM_BED_BLOCK_ENTITY = registerBlockEntityType("custom_bed_block_entity", () ->
+            createBlockEntity(CustomBedBlockEntity::new,
+                    KekeBlocks.BLEACHED_BED.get()
             )
     );
 

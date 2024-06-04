@@ -10,6 +10,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -43,6 +44,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItem(KekeItems.CORK_SIGN.get());
         basicItem(KekeItems.CORK_HANGING_SIGN.get());
         basicItem(KekeItems.LOTUS_PISTILS.get());
+        bedBlockItem(KekeItems.BLEACHED_BED.get());
     }
     private ResourceLocation key(Item item) {
         return ForgeRegistries.ITEMS.getKey(item);
@@ -65,5 +67,10 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
     private void decoratedPotItem(Item item) {
         withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/decorated_pot"))
                 .texture("particle", ArtsAndCrafts.id(ItemModelProvider.ITEM_FOLDER + "/" + name(item) + "_side"));
+    }
+
+    public void bedBlockItem(Item item) {
+        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/template_bed"))
+                .texture("particle", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/bleached_wool"));
     }
 }

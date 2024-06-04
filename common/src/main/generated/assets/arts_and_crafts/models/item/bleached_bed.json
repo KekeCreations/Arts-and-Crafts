@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_bed",
+  "textures": {
+    "particle": "arts_and_crafts:block/bleached_wool"
+  }
+}

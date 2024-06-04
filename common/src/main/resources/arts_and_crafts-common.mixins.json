@@ -8,6 +8,7 @@
     "BedBlockMixin",
     "BlockEntityTypeMixin",
     "BlockSetTypeMixin",
+    "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
     "EnchantmentMixin",
     "FlowerPotBlockMixin",
@@ -15,7 +16,6 @@
     "WoodTypeMixin"
   ],
   "client": [
-    "LlamaDecorLayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

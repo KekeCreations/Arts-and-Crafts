@@ -1,5 +1,7 @@
 package com.kekecreations.arts_and_crafts.client.renderer.bewlr;
 
+import com.kekecreations.arts_and_crafts.common.block.CustomBedBlock;
+import com.kekecreations.arts_and_crafts.common.entity.CustomBedBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -16,12 +18,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implements ResourceManagerReloadListener {
 
+    private final CustomBedBlockEntity bed;
     private DyedDecoratedPotBlockEntity dyedDecoratedPot;
     public ArtsAndCraftsBEWLR() {
         super(null, null);
         for (DyeColor colours : DyeColor.values()) {
             this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, KekeBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
         }
+        this.bed = new CustomBedBlockEntity(BlockPos.ZERO, KekeBlocks.BLEACHED_BED.get().defaultBlockState());
     }
 
     public void renderByItem(ItemStack itemStack, ItemDisplayContext itemDisplayContext, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
@@ -37,6 +41,11 @@ public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implemen
                     this.dyedDecoratedPot.setDyeColor(colours.getId());
                     blockEntity = this.dyedDecoratedPot;
                 }
+            }
+            if (blockState.is(KekeBlocks.BLEACHED_BED.get())) {
+                this.bed.setColor(((CustomBedBlock)blockState.getBlock()).getColor());
+                this.bed.setColor(DyeColor.WHITE);
+                blockEntity = this.bed;
             }
             blockEntityRenderDispatcher.renderItem((BlockEntity)blockEntity, poseStack, multiBufferSource, i, j);
         }

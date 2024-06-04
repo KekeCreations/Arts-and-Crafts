@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-03T15:47:23.0821069	Loot Tables
+// 1.20.1	2024-06-04T17:41:01.74403	Loot Tables
 b192febc153e25411caaabbf806ea71423e3fcc5 data/arts_and_crafts/loot_tables/blocks/black_chalk.json
 7e5907d19cc499140da3aedfc8c2b3421f292f3d data/arts_and_crafts/loot_tables/blocks/black_chalk_dust.json
 d8edff3ffb3878d8a514d3365dac49acc512d49a data/arts_and_crafts/loot_tables/blocks/black_decorated_pot.json
@@ -59,6 +59,7 @@ a4d90d7362e4111d9a5c25636b41094117ea989e data/arts_and_crafts/loot_tables/blocks
 c7493108fa50776bc155d4f10501ebdb6f52c27e data/arts_and_crafts/loot_tables/blocks/black_terracotta_shingle_slab.json
 14227203c6666e4f90078c6ef9318cfc19356074 data/arts_and_crafts/loot_tables/blocks/black_terracotta_shingle_stairs.json
 43a8c1205da0c7a4e9630e3b8c22d82f269969ec data/arts_and_crafts/loot_tables/blocks/black_terracotta_shingle_wall.json
+aec4d94abbacb26fc6669ecf17a4042872381e0e data/arts_and_crafts/loot_tables/blocks/bleached_bed.json
 8a3cffe2fb4538732ef382aa43298589f662818f data/arts_and_crafts/loot_tables/blocks/bleached_carpet.json
 0d53a055e0202ef26d9d5f57a3169a11c420a3c3 data/arts_and_crafts/loot_tables/blocks/bleached_chalk.json
 a7fc026f912b1ed0e717f8d6973a910a866a5144 data/arts_and_crafts/loot_tables/blocks/bleached_chalk_dust.json

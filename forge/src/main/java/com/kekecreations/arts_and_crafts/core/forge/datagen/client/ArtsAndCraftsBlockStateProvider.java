@@ -64,6 +64,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         glazedTerracottaWithItem(KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
         concretePowderWithItem(KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
         cubeAllWithItem(KekeBlocks.BLEACHED_CONCRETE.get());
+        bedBlock(KekeBlocks.BLEACHED_BED.get(), "bleached_bed");
 
 
         //Cork
@@ -185,6 +186,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     private void glazedTerracottaWithItem(Block block, String blockId) {
         glazedTerracotta(block);
         simpleBlockItem(block, glazedTerracottaModel(blockId));
+    }
+    private void bedBlock(Block block, String blockId) {
+        simpleBlock(block, bedModel(blockId).texture("particle", "minecraft:block/oak_planks"));
     }
 
     private void stairsWithItem(StairBlock block, Block blockTexture) {
@@ -867,5 +871,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> floweringAzaleaFlowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/potted_flowering_azalea_bush");
+    }
+
+    public ModelBuilder<?> bedModel(String name) {
+        return models().withExistingParent(name, "minecraft:block/bed");
     }
 }
