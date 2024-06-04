@@ -10,6 +10,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
@@ -23,10 +24,11 @@ public class FlowerPotBlockMixin {
 
     @Inject(method = "use", at = @At("TAIL"), cancellable = true)
     public void arts_and_crafts_use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult $$5, CallbackInfoReturnable<InteractionResult> cir) {
-        if (ArtsAndCraftsCommonConfig.CAN_PAINT_FLOWER_POTS.get()) {
-            ItemStack itemStack = player.getItemInHand(interactionHand);
-            if (itemStack.getItem() instanceof PaintbrushItem paintBrushItem) {
-                PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        if (itemStack.getItem() instanceof PaintbrushItem) {
+            Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
+            if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
                 cir.setReturnValue(InteractionResult.SUCCESS);
             }
         }
