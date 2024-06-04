@@ -1,0 +1,22 @@
+{
+    "blocks": "#arts_and_crafts:paintable/terracotta_shingles",
+    "mappings": {
+        "arts_and_crafts:white_paintbrush": "arts_and_crafts:white_terracotta_shingles",
+        "arts_and_crafts:light_gray_paintbrush": "arts_and_crafts:light_gray_terracotta_shingles",
+        "arts_and_crafts:gray_paintbrush": "arts_and_crafts:gray_terracotta_shingles",
+        "arts_and_crafts:black_paintbrush": "arts_and_crafts:black_terracotta_shingles",
+        "arts_and_crafts:brown_paintbrush": "arts_and_crafts:brown_terracotta_shingles",
+        "arts_and_crafts:red_paintbrush": "arts_and_crafts:red_terracotta_shingles",
+        "arts_and_crafts:orange_paintbrush": "arts_and_crafts:orange_terracotta_shingles",
+        "arts_and_crafts:yellow_paintbrush": "arts_and_crafts:yellow_terracotta_shingles",
+        "arts_and_crafts:lime_paintbrush": "arts_and_crafts:lime_terracotta_shingles",
+        "arts_and_crafts:green_paintbrush": "arts_and_crafts:green_terracotta_shingles",
+        "arts_and_crafts:cyan_paintbrush": "arts_and_crafts:cyan_terracotta_shingles",
+        "arts_and_crafts:light_blue_paintbrush": "arts_and_crafts:light_blue_terracotta_shingles",
+        "arts_and_crafts:blue_paintbrush": "arts_and_crafts:blue_terracotta_shingles",
+        "arts_and_crafts:purple_paintbrush": "arts_and_crafts:purple_terracotta_shingles",
+        "arts_and_crafts:magenta_paintbrush": "arts_and_crafts:magenta_terracotta_shingles",
+        "arts_and_crafts:pink_paintbrush": "arts_and_crafts:pink_terracotta_shingles",
+        "arts_and_crafts:bleachdew_paintbrush": "arts_and_crafts:terracotta_shingles"
+    }
+}

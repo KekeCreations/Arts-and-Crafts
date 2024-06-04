@@ -67,7 +67,6 @@ public class PaintbrushItem extends Item {
                 return InteractionResult.SUCCESS;
             }
 
-            level.setBlockAndUpdate(pos, finalBlock.defaultBlockState());
             PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
             return InteractionResult.SUCCESS;
 
