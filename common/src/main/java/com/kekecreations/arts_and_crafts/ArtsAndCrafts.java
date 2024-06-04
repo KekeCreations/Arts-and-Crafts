@@ -21,6 +21,7 @@ public class ArtsAndCrafts {
         KekeBlocks.register();
         ArtsAndCraftsDyedBlockLists.registerLists();
         KekeItems.register();
+        ArtsAndCraftsRegistries.register();
         KekeCustomSherdPatterns.register();
         KekeRecipeSerializer.register();
         CreativeCategoryUtils.addVanillaDyesToColourOrder();

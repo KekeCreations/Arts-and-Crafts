@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
@@ -26,7 +26,7 @@ public class BedBlockMixin {
         if (ArtsAndCraftsCommonConfig.CAN_PAINT_BED.get()) {
             ItemStack itemStack = player.getItemInHand(interactionHand);
             if (!level.isClientSide()) {
-                if (itemStack.getItem() instanceof PaintBrushItem paintBrushItem) {
+                if (itemStack.getItem() instanceof PaintbrushItem paintBrushItem) {
                     if (level.getBlockState(blockPos).getBlock() instanceof BedBlock bedBlock && bedBlock.getColor() != paintBrushItem.getDyeColor()) {
                         PaintbrushUtils.paintBed(level, ArtsAndCraftsDyedBlockLists.getDyedBed(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
                         cir.setReturnValue(InteractionResult.SUCCESS);

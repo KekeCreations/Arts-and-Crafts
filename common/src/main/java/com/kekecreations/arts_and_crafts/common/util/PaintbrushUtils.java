@@ -2,11 +2,16 @@ package com.kekecreations.arts_and_crafts.common.util;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,13 +21,16 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BedPart;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.gameevent.GameEvent;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class PaintbrushUtils {
 
@@ -39,6 +47,22 @@ public class PaintbrushUtils {
             dyedPot.setDecoration(decorations);
         }
     }
+
+    @Nullable
+    public static Block getFinalBlock(RegistryAccess access, BlockState state, ItemStack stack) {
+        Optional<PaintbrushPalette> optionalPalette = access.registryOrThrow(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE).stream().filter(
+                searchPalette -> searchPalette.blocks().contains(state.getBlockHolder())
+        ).findFirst();
+        if (optionalPalette.isEmpty()) return null;
+
+        PaintbrushPalette palette = optionalPalette.get();
+        Holder<Block> holder = palette.mappings().get(stack.getItemHolder());
+
+        if (holder.unwrapKey().isEmpty()) return null;
+        
+        return access.registryOrThrow(Registries.BLOCK).getOrThrow(holder.unwrapKey().get());
+    }
+
     public static void damagePaintbrushWhenPainting(Level level, Player player, ItemStack itemStack, BlockState blockState, BlockPos pos, InteractionHand hand) {
         if (!player.getAbilities().instabuild) {
             if (player instanceof ServerPlayer serverPlayer) {

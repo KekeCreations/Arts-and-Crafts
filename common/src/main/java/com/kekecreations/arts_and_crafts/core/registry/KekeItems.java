@@ -4,7 +4,6 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
 import com.kekecreations.arts_and_crafts.common.item.*;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
-import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
 
@@ -17,7 +16,7 @@ public class KekeItems {
 
     public static final HashMap<DyeColor, Supplier<DyedDecoratedPotBlockItem>> DYED_DECORATED_POT_BLOCK_ITEMS = new HashMap<>();
 
-    public static final HashMap<DyeColor, Supplier<PaintBrushItem>> PAINT_BRUSHES = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<PaintbrushItem>> PAINT_BRUSHES = new HashMap<>();
 
     public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties().stacksTo(16)));
 
@@ -40,7 +39,7 @@ public class KekeItems {
 
     //BLEACHED
     public static final Supplier<Item> BLEACHDEW = registerItem("bleachdew", () -> new Item(new Item.Properties()));
-    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintBrushItem(null, new Item.Properties().stacksTo(1).durability(48)));
+    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintbrushItem(null, new Item.Properties().stacksTo(1).durability(48)));
     public static final Supplier<Item> BLEACHED_CHALK_STICK = registerItem("bleached_chalk_stick", () -> new ChalkStickItem(null, new Item.Properties().stacksTo(1).durability(32)));
 
 
@@ -48,7 +47,7 @@ public class KekeItems {
         for (DyeColor colours : DyeColor.values()) {
             CHALK_STICKS.put(colours, registerItem(colours + "_chalk_stick", () -> new ChalkStickItem(colours, new Item.Properties().stacksTo(1).durability(32))));
             DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(KekeBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties().stacksTo(1))));
-            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintBrushItem(colours, new Item.Properties().stacksTo(1).durability(48))));
+            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintbrushItem(colours, new Item.Properties().stacksTo(1).durability(48))));
         }
     }
 
@@ -59,7 +58,7 @@ public class KekeItems {
         return DYED_DECORATED_POT_BLOCK_ITEMS.get(colours).get();
     }
 
-    public static PaintBrushItem getPaintBrush(int colours) {
+    public static PaintbrushItem getPaintBrush(int colours) {
         return PAINT_BRUSHES.get(DyeColor.byId(colours)).get();
     }
 

@@ -1,24 +1,18 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.data.recipes.packs.VanillaRecipeProvider;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CarpetBlock;
-import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -336,7 +330,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer);
     }
-    protected static void paintbrushRecipe(DyeColor dyeColour, PaintBrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
+    protected static void paintbrushRecipe(DyeColor dyeColour, PaintbrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem,1)
                 .pattern(" K ")
                 .pattern("KQK")

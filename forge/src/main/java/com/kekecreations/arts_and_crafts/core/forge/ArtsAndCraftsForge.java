@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.item.palette.PaletteManager;
+import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
@@ -9,9 +9,11 @@ import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCrafts
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.server.*;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.*;
@@ -20,7 +22,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,6 +29,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DataPackRegistryEvent;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -46,7 +48,7 @@ public class ArtsAndCraftsForge {
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
-        modEventBus.addListener(this::addReloadListeners);
+        modEventBus.addListener(this::datapackRegistry);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -92,8 +94,8 @@ public class ArtsAndCraftsForge {
         event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
-    public void addReloadListeners(AddReloadListenerEvent event) {
-        event.addListener(PaletteManager.INSTANCE);
+    public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
+        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC, PaintbrushPalette.CODEC);
     }
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {

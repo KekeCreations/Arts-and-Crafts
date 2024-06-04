@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
@@ -39,7 +39,7 @@ public class ShulkerBoxBlockMixin {
             }
             ItemStack itemStack = player.getItemInHand(interactionHand);
             ShulkerBoxBlock $this = (ShulkerBoxBlock)(Object)this;
-            if (itemStack.getItem() instanceof PaintBrushItem paintBrushItem && $this.getColor() != paintBrushItem.getDyeColor()) {
+            if (itemStack.getItem() instanceof PaintbrushItem paintBrushItem && $this.getColor() != paintBrushItem.getDyeColor()) {
                 PaintbrushUtils.paintShulkerBox(level, ArtsAndCraftsDyedBlockLists.getDyedShulkerBox(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
                 BlockEntity newBlockEntity = level.getBlockEntity(blockPos);
                 if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {

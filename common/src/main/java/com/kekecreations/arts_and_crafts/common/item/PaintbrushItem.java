@@ -1,10 +1,12 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
+import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
-import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -14,17 +16,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.jetbrains.annotations.NotNull;
 
-public class PaintBrushItem extends Item {
+public class PaintbrushItem extends Item {
 
     private final DyeColor dyeColor;
 
-    public PaintBrushItem(DyeColor dyeColor, Properties properties) {
+    public PaintbrushItem(DyeColor dyeColor, Properties properties) {
         super(properties);
         this.dyeColor = dyeColor;
     }
@@ -38,18 +39,22 @@ public class PaintBrushItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext useOnContext) {
-        Level level = useOnContext.getLevel();
-        BlockPos pos = useOnContext.getClickedPos();
-        Player player = useOnContext.getPlayer();
-        ItemStack itemStack = useOnContext.getItemInHand();
+    public InteractionResult useOn(UseOnContext context) {
+        Level level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        Player player = context.getPlayer();
+        ItemStack itemStack = context.getItemInHand();
         DyeColor paintbrushDyeColour = this.getDyeColor();
         BlockState blockState = level.getBlockState(pos);
         BlockEntity blockEntity = level.getBlockEntity(pos);
-        InteractionHand hand = useOnContext.getHand();
+        InteractionHand hand = context.getHand();
 
+        Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
 
-        if (!level.isClientSide()) {
+        if (!level.isClientSide() && finalBlock != null) {
+
+            level.setBlockAndUpdate(pos, finalBlock.defaultBlockState());
+
 
 
             /*

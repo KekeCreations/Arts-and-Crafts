@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -25,7 +25,7 @@ public class FlowerPotBlockMixin {
     public void arts_and_crafts_use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult $$5, CallbackInfoReturnable<InteractionResult> cir) {
         if (ArtsAndCraftsCommonConfig.CAN_PAINT_FLOWER_POTS.get()) {
             ItemStack itemStack = player.getItemInHand(interactionHand);
-            if (itemStack.getItem() instanceof PaintBrushItem paintBrushItem) {
+            if (itemStack.getItem() instanceof PaintbrushItem paintBrushItem) {
                 PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
                 cir.setReturnValue(InteractionResult.SUCCESS);
             }

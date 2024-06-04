@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
-import com.kekecreations.arts_and_crafts.common.item.PaintBrushItem;
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
@@ -132,7 +132,7 @@ public class CustomFlowerPotBlock extends Block {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         if (ArtsAndCraftsCommonConfig.CAN_PAINT_FLOWER_POTS.get()) {
-            if (itemStack.getItem() instanceof PaintBrushItem paintBrushItem && paintBrushItem.getDyeColor() != this.colour) {
+            if (itemStack.getItem() instanceof PaintbrushItem paintBrushItem && paintBrushItem.getDyeColor() != this.colour) {
                 PaintbrushUtils.paintBlock(level, KekeBlocks.getDyedFlowerPot(paintBrushItem.getDyeColor().getId()).defaultBlockState(), blockPos, player, itemStack, interactionHand);
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
