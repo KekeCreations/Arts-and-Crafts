@@ -1,0 +1,22 @@
+{
+    "blocks": "#arts_and_crafts:paintable/glass",
+    "mappings": {
+        "arts_and_crafts:white_paintbrush": "minecraft:white_stained_glass",
+        "arts_and_crafts:light_gray_paintbrush": "minecraft:light_gray_stained_glass",
+        "arts_and_crafts:gray_paintbrush": "minecraft:gray_stained_glass",
+        "arts_and_crafts:black_paintbrush": "minecraft:black_stained_glass",
+        "arts_and_crafts:brown_paintbrush": "minecraft:brown_stained_glass",
+        "arts_and_crafts:red_paintbrush": "minecraft:red_stained_glass",
+        "arts_and_crafts:orange_paintbrush": "minecraft:orange_stained_glass",
+        "arts_and_crafts:yellow_paintbrush": "minecraft:yellow_stained_glass",
+        "arts_and_crafts:lime_paintbrush": "minecraft:lime_stained_glass",
+        "arts_and_crafts:green_paintbrush": "minecraft:green_stained_glass",
+        "arts_and_crafts:cyan_paintbrush": "minecraft:cyan_stained_glass",
+        "arts_and_crafts:light_blue_paintbrush": "minecraft:light_blue_stained_glass",
+        "arts_and_crafts:blue_paintbrush": "minecraft:blue_stained_glass",
+        "arts_and_crafts:purple_paintbrush": "minecraft:purple_stained_glass",
+        "arts_and_crafts:magenta_paintbrush": "minecraft:magenta_stained_glass",
+        "arts_and_crafts:pink_paintbrush": "minecraft:pink_stained_glass",
+        "arts_and_crafts:bleachdew_paintbrush": "minecraft:glass"
+    }
+}
