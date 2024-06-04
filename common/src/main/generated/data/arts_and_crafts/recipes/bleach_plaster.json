@@ -1,0 +1,70 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "plaster",
+  "key": {
+    "K": [
+      {
+        "item": "arts_and_crafts:black_plaster"
+      },
+      {
+        "item": "arts_and_crafts:blue_plaster"
+      },
+      {
+        "item": "arts_and_crafts:brown_plaster"
+      },
+      {
+        "item": "arts_and_crafts:cyan_plaster"
+      },
+      {
+        "item": "arts_and_crafts:gray_plaster"
+      },
+      {
+        "item": "arts_and_crafts:green_plaster"
+      },
+      {
+        "item": "arts_and_crafts:light_blue_plaster"
+      },
+      {
+        "item": "arts_and_crafts:light_gray_plaster"
+      },
+      {
+        "item": "arts_and_crafts:lime_plaster"
+      },
+      {
+        "item": "arts_and_crafts:magenta_plaster"
+      },
+      {
+        "item": "arts_and_crafts:orange_plaster"
+      },
+      {
+        "item": "arts_and_crafts:pink_plaster"
+      },
+      {
+        "item": "arts_and_crafts:purple_plaster"
+      },
+      {
+        "item": "arts_and_crafts:red_plaster"
+      },
+      {
+        "item": "arts_and_crafts:yellow_plaster"
+      },
+      {
+        "item": "arts_and_crafts:white_plaster"
+      }
+    ],
+    "Q": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:plaster"
+  },
+  "show_notification": true
+}

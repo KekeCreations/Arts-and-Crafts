@@ -31,8 +31,8 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //DYE BLOCKS
         List<Item> dyeList = List.of(Items.BLACK_DYE, Items.BLUE_DYE, Items.BROWN_DYE, Items.CYAN_DYE, Items.GRAY_DYE, Items.GREEN_DYE, Items.LIGHT_BLUE_DYE, Items.LIGHT_GRAY_DYE, Items.LIME_DYE, Items.MAGENTA_DYE, Items.ORANGE_DYE, Items.PINK_DYE, Items.PURPLE_DYE, Items.RED_DYE, Items.YELLOW_DYE, Items.WHITE_DYE);
-        List<Item> chalkList = List.of(KekeBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIME.getId()).asItem(), KekeBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PINK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.RED.getId()).asItem(), KekeBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getChalk(DyeColor.WHITE.getId()).asItem());
-        List<Item> chalkStickList = List.of(KekeItems.getChalkStick(DyeColor.BLACK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BROWN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.CYAN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GREEN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIME.getId()).asItem(), KekeItems.getChalkStick(DyeColor.MAGENTA.getId()).asItem(), KekeItems.getChalkStick(DyeColor.ORANGE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PINK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PURPLE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.RED.getId()).asItem(), KekeItems.getChalkStick(DyeColor.YELLOW.getId()).asItem(), KekeItems.getChalkStick(DyeColor.WHITE.getId()).asItem());
+        List<Item> chalkList = List.of(KekeBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIME.getId()).asItem(), KekeBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PINK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.RED.getId()).asItem(), KekeBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getChalk(DyeColor.WHITE.getId()).asItem(), KekeBlocks.BLEACHED_CHALK.get().asItem());
+        List<Item> chalkStickList = List.of(KekeItems.getChalkStick(DyeColor.BLACK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BROWN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.CYAN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GREEN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIME.getId()).asItem(), KekeItems.getChalkStick(DyeColor.MAGENTA.getId()).asItem(), KekeItems.getChalkStick(DyeColor.ORANGE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PINK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PURPLE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.RED.getId()).asItem(), KekeItems.getChalkStick(DyeColor.YELLOW.getId()).asItem(), KekeItems.getChalkStick(DyeColor.WHITE.getId()).asItem(), KekeItems.BLEACHED_CHALK_STICK.get());
         List<Item> flowerPotList = List.of(KekeBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()).asItem());
         colorBlockWithDye(recipeConsumer, dyeList, chalkList, "chalk");
         colorBlockWithDye(recipeConsumer, dyeList, chalkStickList, "chalk_sticks");
@@ -53,10 +53,8 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         colorBleachedBlockWithDye(recipeConsumer, dyeList, carpetList, KekeBlocks.BLEACHED_CARPET.get(),  "carpet");
         bleachBlock(recipeConsumer, carpetList, KekeBlocks.BLEACHED_CARPET.get(), "carpet");
         //chalk
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, chalkList, KekeBlocks.BLEACHED_CHALK.get(), "chalk");
         bleachBlock(recipeConsumer, chalkList, KekeBlocks.BLEACHED_CHALK.get(), "chalk");
         //chalk sticks
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
         bleachBlock(recipeConsumer, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
         //terracotta
         List<Item> terracottaList = List.of(Blocks.BLACK_TERRACOTTA.asItem(), Blocks.BLUE_TERRACOTTA.asItem(), Blocks.BROWN_TERRACOTTA.asItem(), Blocks.CYAN_TERRACOTTA.asItem(), Blocks.GRAY_TERRACOTTA.asItem(), Blocks.GREEN_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_TERRACOTTA.asItem(), Blocks.LIME_TERRACOTTA.asItem(), Blocks.MAGENTA_TERRACOTTA.asItem(), Blocks.ORANGE_TERRACOTTA.asItem(), Blocks.PINK_TERRACOTTA.asItem(), Blocks.PURPLE_TERRACOTTA.asItem(), Blocks.RED_TERRACOTTA.asItem(), Blocks.YELLOW_TERRACOTTA.asItem(), Blocks.WHITE_TERRACOTTA.asItem());
@@ -69,6 +67,11 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         bleachBlockAlt(recipeConsumer, plasterList, KekeBlocks.PLASTER.get(), "plaster");
         //concrete
         concretePowder(recipeConsumer, KekeBlocks.BLEACHED_CONCRETE_POWDER.get(), KekeItems.BLEACHDEW.get());
+        //bed
+        List<Item> bedList = List.of(Items.BLACK_BED, Items.BLUE_BED, Items.BROWN_BED, Items.CYAN_BED, Items.GRAY_BED, Items.GREEN_BED, Items.LIGHT_BLUE_BED, Items.LIGHT_GRAY_BED, Items.LIME_BED, Items.MAGENTA_BED, Items.ORANGE_BED, Items.PINK_BED, Items.PURPLE_BED, Items.RED_BED, Items.YELLOW_BED, Items.WHITE_BED);
+        bedFromPlanksAndWool(recipeConsumer, KekeItems.BLEACHED_BED.get(), KekeBlocks.BLEACHED_WOOL.get());
+        bleachBlock(recipeConsumer, bedList, KekeItems.BLEACHED_BED.get(), "bed");
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, bedList, KekeBlocks.BLEACHED_BED.get(), "bed");
 
 
 
@@ -368,28 +371,22 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         }
     }
 
-    protected static void bleachBlockAlt(Consumer<FinishedRecipe> p_289666_, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
-        for(int i = 0; i < p_289675_.size(); ++i) {
-            Item item = p_289675_.get(i);
-            ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, bleachedBlock, 8)
-                    .pattern("KKK")
-                    .pattern("KQK")
-                    .pattern("KKK")
-                    .define('K', item)
-                    .define('Q', KekeItems.BLEACHDEW.get())
-                    .group(p_289641_)
-                    .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + getItemName(item));
-        }
+    protected static void bleachBlockAlt(Consumer<FinishedRecipe> p_289666_, List<Item> itemList, ItemLike bleachedBlock, String string) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, bleachedBlock, 8)
+                .pattern("KKK")
+                .pattern("KQK")
+                .pattern("KKK")
+                .define('K', Ingredient.of(itemList.stream().map(ItemStack::new)))
+                .define('Q', KekeItems.BLEACHDEW.get())
+                .group(string)
+                .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + string);
     }
     protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
-        for(int i = 0; i < p_289675_.size(); ++i) {
-            Item item = p_289675_.get(i);
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bleachedBlock)
-                    .requires(item)
-                    .requires(KekeItems.BLEACHDEW.get())
-                    .group(p_289641_)
-                    .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + getItemName(item));
-        }
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bleachedBlock)
+                .requires(Ingredient.of(p_289675_.stream().map(ItemStack::new)))
+                .requires(KekeItems.BLEACHDEW.get())
+                .group(p_289641_)
+                .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + p_289641_);
     }
 
     //Thank you to Uraneptus for allowing me to use their datagen methods from Sully's Mod - Applies to all methods below this note

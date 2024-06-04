@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "bed",
+  "ingredients": [
+    {
+      "item": "minecraft:light_blue_dye"
+    },
+    {
+      "item": "arts_and_crafts:bleached_bed"
+    }
+  ],
+  "result": {
+    "item": "minecraft:light_blue_bed"
+  }
+}
