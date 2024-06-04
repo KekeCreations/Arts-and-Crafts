@@ -15,7 +15,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "arts_and_crafts:adventure/execute_order_33",
+  "parent": "arts_and_crafts:adventure/flashpoint",
   "criteria": {
     "chalk_shift_click": {
       "trigger": "minecraft:item_used_on_block",

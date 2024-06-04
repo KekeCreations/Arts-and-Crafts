@@ -143,8 +143,8 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add("advancements.adventure.board_planning.description", "Have all chalk sticks in your inventory");
         add("advancements.adventure.let_the_creativity_flow_through_you.title", "Let Creativity Flow Through You");
         add("advancements.adventure.let_the_creativity_flow_through_you.description", "Cycle the chalk pattern forwards by interacting with chalk dust with a chalk stick in your main hand or off hand!!");
-        add("advancements.adventure.execute_order_33.title", "Execute Order 33");
-        add("advancements.adventure.execute_order_33.description", "Cycle the chalk pattern backwards by shift clicking chalk dust with a chalk stick in your offhand!");
+        add("advancements.adventure.flashpoint.title", "Flashpoint");
+        add("advancements.adventure.flashpoint.description", "Cycle the chalk pattern backwards by shift clicking chalk dust with a chalk stick in your offhand!");
         add("advancements.adventure.handpicked.title", "Handpicked");
         add("advancements.adventure.handpicked.description", "Save a chalk pattern by shift clicking with a chalk stick in your main hand!");
 
