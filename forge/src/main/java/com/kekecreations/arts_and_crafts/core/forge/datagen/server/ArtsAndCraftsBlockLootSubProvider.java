@@ -70,7 +70,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(KekeBlocks.getDyedMudBricks(colours.getId()));
             dropSelf(KekeBlocks.getDyedMudBrickStairs(colours.getId()));
-            dropSelf(KekeBlocks.getDyedMudBrickSlab(colours.getId()));
+            add(KekeBlocks.getDyedMudBrickSlab(colours.getId()), createSlabItemTable(KekeBlocks.getDyedMudBrickSlab(colours.getId())));
             dropSelf(KekeBlocks.getDyedMudBrickWall(colours.getId()));
         }
     }
@@ -79,11 +79,11 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(KekeBlocks.getDyedTerracottaShingles(colours.getId()));
             dropSelf(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()));
-            dropSelf(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()));
+            add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), createSlabItemTable(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId())));
             dropSelf(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()));
         }
         dropSelf(KekeBlocks.TERRACOTTA_SHINGLES.get());
-        dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get());
+        add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), createSlabItemTable(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get()));
         dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get());
         dropSelf(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
     }
@@ -98,42 +98,42 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(KekeBlocks.getDyedSoapstone(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneStairs(colours.getId()));
-            dropSelf(KekeBlocks.getDyedSoapstoneSlab(colours.getId()));
+            add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), createSlabItemTable(KekeBlocks.getDyedSoapstoneSlab(colours.getId())));
             dropSelf(KekeBlocks.getDyedSoapstoneWall(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
             dropSelf(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
-            dropSelf(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
+            add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), createSlabItemTable(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId())));
             dropSelf(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
             dropSelf(KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
             dropSelf(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
-            dropSelf(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
+            add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), createSlabItemTable(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId())));
             dropSelf(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
         }
         dropSelf(KekeBlocks.SOAPSTONE.get());
-        dropSelf(KekeBlocks.SOAPSTONE_SLAB.get());
+        add(KekeBlocks.SOAPSTONE_SLAB.get(), createSlabItemTable(KekeBlocks.SOAPSTONE_SLAB.get()));
         dropSelf(KekeBlocks.SOAPSTONE_WALL.get());
         dropSelf(KekeBlocks.SOAPSTONE_STAIRS.get());
         dropSelf(KekeBlocks.SOAPSTONE_BRICKS.get());
-        dropSelf(KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
+        add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), createSlabItemTable(KekeBlocks.SOAPSTONE_BRICK_SLAB.get()));
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_WALL.get());
         dropSelf(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE.get());
-        dropSelf(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
+        add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), createSlabItemTable(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get()));
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
         dropSelf(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
     }
 
     private void gypsum() {
         dropSelf(KekeBlocks.GYPSUM.get());
-        dropSelf(KekeBlocks.GYPSUM_SLAB.get());
+        add(KekeBlocks.GYPSUM_SLAB.get(), createSlabItemTable(KekeBlocks.GYPSUM_SLAB.get()));
         dropSelf(KekeBlocks.GYPSUM_WALL.get());
         dropSelf(KekeBlocks.GYPSUM_STAIRS.get());
         dropSelf(KekeBlocks.GYPSUM_BRICKS.get());
-        dropSelf(KekeBlocks.GYPSUM_BRICK_SLAB.get());
+        add(KekeBlocks.GYPSUM_BRICK_SLAB.get(), createSlabItemTable(KekeBlocks.GYPSUM_BRICK_SLAB.get()));
         dropSelf(KekeBlocks.GYPSUM_BRICK_WALL.get());
         dropSelf(KekeBlocks.GYPSUM_BRICK_STAIRS.get());
         dropSelf(KekeBlocks.POLISHED_GYPSUM.get());
-        dropSelf(KekeBlocks.POLISHED_GYPSUM_SLAB.get());
+        add(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), createSlabItemTable(KekeBlocks.POLISHED_GYPSUM_SLAB.get()));
         dropSelf(KekeBlocks.POLISHED_GYPSUM_WALL.get());
         dropSelf(KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
     }
@@ -149,7 +149,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         dropSelf(KekeBlocks.STRIPPED_CORK_WOOD.get());
         dropSelf(KekeBlocks.CORK_PLANKS.get());
         dropSelf(KekeBlocks.CORK_STAIRS.get());
-        dropSelf(KekeBlocks.CORK_SLAB.get());
+        add(KekeBlocks.CORK_SLAB.get(), createSlabItemTable(KekeBlocks.CORK_SLAB.get()));
         dropSelf(KekeBlocks.CORK_FENCE.get());
         dropSelf(KekeBlocks.CORK_FENCE_GATE.get());
         dropSelf(KekeBlocks.CORK_BUTTON.get());

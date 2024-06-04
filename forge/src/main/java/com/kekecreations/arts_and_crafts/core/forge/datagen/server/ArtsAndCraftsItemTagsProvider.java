@@ -34,6 +34,11 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendChalkSticks();
         appendBoats();
         appendChestBoats();
+        appendWoolCarpets();
+    }
+    private void appendWoolCarpets() {
+        this.tag(ItemTags.WOOL_CARPETS)
+                .add(KekeBlocks.BLEACHED_CARPET.get().asItem());
     }
     private void appendBoats() {
         this.tag(ItemTags.BOATS)
