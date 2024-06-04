@@ -6,32 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "arts_and_crafts:lotus_pistils",
-          "weight": 40
-        },
-        {
-          "type": "minecraft:item",
-          "name": "arts_and_crafts:bleachdew",
-          "weight": 60
+          "name": "arts_and_crafts:bleachdew"
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
         "max": 2.0,
-        "min": 1.0
-      }
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "arts_and_crafts:lotus_pistils"
-        }
-      ],
-      "rolls": {
-        "type": "minecraft:uniform",
-        "max": 1.0,
         "min": 1.0
       }
     }

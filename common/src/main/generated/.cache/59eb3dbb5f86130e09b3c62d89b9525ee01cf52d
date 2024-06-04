@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-04T17:41:01.74403	Loot Tables
+// 1.20.1	2024-06-05T00:25:07.8494827	Loot Tables
 b192febc153e25411caaabbf806ea71423e3fcc5 data/arts_and_crafts/loot_tables/blocks/black_chalk.json
 7e5907d19cc499140da3aedfc8c2b3421f292f3d data/arts_and_crafts/loot_tables/blocks/black_chalk_dust.json
 d8edff3ffb3878d8a514d3365dac49acc512d49a data/arts_and_crafts/loot_tables/blocks/black_decorated_pot.json
@@ -1017,4 +1017,4 @@ e9ff27acb637029659881b4fe642a40a88681577 data/arts_and_crafts/loot_tables/blocks
 6bf09359b0ec0944e004b8ecf3e5b1d88a3e1cf7 data/arts_and_crafts/loot_tables/blocks/yellow_terracotta_shingle_slab.json
 daf5874cfc2d5e430a9717a982c81fe89e385709 data/arts_and_crafts/loot_tables/blocks/yellow_terracotta_shingle_stairs.json
 88cb41016f301b22f03b9c38769f7e0555db08a6 data/arts_and_crafts/loot_tables/blocks/yellow_terracotta_shingle_wall.json
-40f8c559491d0a67d86deda2754995397f7822bf data/arts_and_crafts/loot_tables/gameplay/lotus_flower_harvest.json
+feed896060b57f9ba3dc29adb720851db1f31702 data/arts_and_crafts/loot_tables/gameplay/lotus_flower_harvest.json

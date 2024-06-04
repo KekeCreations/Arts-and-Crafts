@@ -90,7 +90,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
         }
     }
     protected int getBonemealAgeIncrease(Level $$0) {
-        return Mth.nextInt($$0.random, 1, 2);
+        return Mth.nextInt($$0.random, 0, 1);
     }
     public void growCrops(Level $$0, BlockPos $$1, BlockState $$2) {
         int $$3 = this.getAge($$2) + this.getBonemealAgeIncrease($$0);
@@ -117,7 +117,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
         this.growCrops(serverLevel, blockPos, blockState);
     }
 
-    private void dropPistilsAndBleach(Level level, BlockPos pos) {
+    private void dropBleach(Level level, BlockPos pos) {
         ServerLevel serverLevel = (ServerLevel) level;
         LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST);
         LootParams lootParams = (new LootParams.Builder(serverLevel)).withParameter(LootContextParams.ORIGIN, pos.getCenter()).withParameter(LootContextParams.TOOL, ItemStack.EMPTY).withParameter(LootContextParams.BLOCK_STATE, this.defaultBlockState()).create(LootContextParamSets.BLOCK);
@@ -144,7 +144,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
                 }
                 else if (isMaxAge(blockState)) {
                     //LOOT
-                    dropPistilsAndBleach(level, blockPos);
+                    dropBleach(level, blockPos);
                     //SET CROP BACK TO 1
                     BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, blockState.getValue(SHEARED)).setValue(BlockStateProperties.AGE_3, 1).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));

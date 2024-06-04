@@ -16,9 +16,6 @@ public class ArtsAndCraftsBuiltInLootTableSubProvider implements LootTableSubPro
     public void generate(BiConsumer<ResourceLocation, LootTable.Builder> biConsumer) {
         biConsumer.accept(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST, LootTable.lootTable()
                 .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 2.0F))
-                        .add(LootItem.lootTableItem(KekeItems.LOTUS_PISTILS.get()).setWeight(40))
-                        .add(LootItem.lootTableItem(KekeItems.BLEACHDEW.get()).setWeight(60)))
-                .withPool(LootPool.lootPool().setRolls(UniformGenerator.between(1.0F, 1.0F))
-                        .add(LootItem.lootTableItem(KekeItems.LOTUS_PISTILS.get()))));
+                        .add(LootItem.lootTableItem(KekeItems.BLEACHDEW.get()))));
     }
 }
