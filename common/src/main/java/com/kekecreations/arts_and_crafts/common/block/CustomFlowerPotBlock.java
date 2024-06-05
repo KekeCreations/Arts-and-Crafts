@@ -3,7 +3,6 @@ package com.kekecreations.arts_and_crafts.common.block;
 import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
-import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

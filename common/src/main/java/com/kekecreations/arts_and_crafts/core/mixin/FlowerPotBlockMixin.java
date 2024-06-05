@@ -2,8 +2,6 @@ package com.kekecreations.arts_and_crafts.core.mixin;
 
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
-import com.kekecreations.arts_and_crafts.core.config.ArtsAndCraftsCommonConfig;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
