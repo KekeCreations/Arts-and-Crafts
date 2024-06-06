@@ -24,6 +24,9 @@ public class ArtsAndCraftsGlobalLootModifiersProvider extends GlobalLootModifier
         add("ruined_pottery_sherd_from_archaeology_common", new ModifyItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON).build() }, KekeItems.RUINED_POTTERY_SHERD.get()));
 
+        add("pottery_sherd_from_archaeology_common", new ModifyItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON).build() }, KekeItems.POTTERY_SHERD.get()));
+
         add("bleachdew_from_archaeology_common", new ModifyItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON).build() }, KekeItems.BLEACHDEW.get()));
 

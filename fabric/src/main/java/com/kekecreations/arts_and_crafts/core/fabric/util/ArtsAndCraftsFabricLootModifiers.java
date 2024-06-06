@@ -12,11 +12,6 @@ public class ArtsAndCraftsFabricLootModifiers {
     public static void modifyVanillaLootTables() {
         LootTableEvents.MODIFY.register((resource, loot, id, builder, source) -> {
             if (BuiltInLootTables.SNIFFER_DIGGING.equals(id)) {
-                /*
-                LootPool.Builder poolBuilder = LootPool.lootPool().when(LootItemRandomChanceCondition.randomChance(0.3F)).add(LootItem.lootTableItem(KekeItems.LOTUS_PISTILS.get()))
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2)).build());
-
-                 */
                 builder.modifyPools(itemEntry -> {
                     itemEntry.with((LootItem.lootTableItem(KekeItems.LOTUS_PISTILS.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))).build()));
                 });
@@ -24,6 +19,7 @@ public class ArtsAndCraftsFabricLootModifiers {
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON.equals(id)) {
                 builder.modifyPools(itemEntry -> {
                         itemEntry.with((LootItem.lootTableItem(KekeItems.RUINED_POTTERY_SHERD.get()).setWeight(25)).build());
+                        itemEntry.with((LootItem.lootTableItem(KekeItems.POTTERY_SHERD.get()).setWeight(10)).build());
                         itemEntry.with((LootItem.lootTableItem(KekeItems.BLEACHDEW.get()).setWeight(10)).build());
                         itemEntry.with((LootItem.lootTableItem(KekeItems.CORK_HANGING_SIGN.get()).setWeight(30)).build());
                 });
