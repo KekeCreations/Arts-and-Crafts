@@ -3,11 +3,13 @@ package com.kekecreations.arts_and_crafts.core.forge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
+import com.kekecreations.arts_and_crafts.core.forge.datagen.ArtsAndCraftsGlobalLootModifiersProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.server.*;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.forge.registry.ArtsAndCraftsLootModifiers;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
@@ -40,6 +42,7 @@ public class ArtsAndCraftsForge {
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
         ForgeRegistryHelper.BLOCKS.register(modEventBus);
         ForgeRegistryHelper.ITEMS.register(modEventBus);
+        ArtsAndCraftsLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
@@ -66,6 +69,7 @@ public class ArtsAndCraftsForge {
         generator.addProvider(event.includeServer(), new ArtsAndCraftsItemTagsProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), ArtsAndCrafts.MOD_ID, fileHelper));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsLootTableProvider(packOutput));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsBiomeTagsProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID, fileHelper));
+        generator.addProvider(event.includeServer(), new ArtsAndCraftsGlobalLootModifiersProvider(packOutput));
     }
 
     public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {

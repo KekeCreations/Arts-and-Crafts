@@ -1,0 +1,10 @@
+{
+  "type": "arts_and_crafts:modify_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:archaeology/trail_ruins_rare"
+    }
+  ],
+  "item": "arts_and_crafts:finale_pottery_sherd"
+}
