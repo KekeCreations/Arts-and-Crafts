@@ -219,10 +219,11 @@ public class ArtsAndCraftsForge {
             addAfter(event, KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICK_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            addAfter(event, Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
-            addAfter(event, KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
-            addAfter(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
-            addAfter(event, KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
+            addAfter(event, Items.PRIZE_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
+            addBefore(event, Items.FRIEND_POTTERY_SHERD, KekeItems.FINALE_POTTERY_SHERD.get());
+            addAfter(event, Items.FRIEND_POTTERY_SHERD, KekeItems.GATEWAY_POTTERY_SHERD.get());
+            addBefore(event, Items.ANGLER_POTTERY_SHERD, KekeItems.RUINED_POTTERY_SHERD.get());
+            addBefore(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.POTTERY_SHERD.get());
             addBefore(event, Items.WHITE_DYE, KekeItems.BLEACHDEW.get());
         }
     }

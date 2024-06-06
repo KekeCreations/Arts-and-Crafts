@@ -30,11 +30,15 @@ public abstract class DecoratedPotPatternsMixin {
         if (item == KekeItems.GATEWAY_POTTERY_SHERD.get()) {
             cir.setReturnValue(KekeCustomSherdPatterns.GATEWAY_POTTERY_PATTERN);
         }
+        if (item == KekeItems.POTTERY_SHERD.get()) {
+            cir.setReturnValue(KekeCustomSherdPatterns.POTTERY_PATTERN);
+        }
     }
 
     @Inject(method = "bootstrap", at = @At("TAIL"))
     private static void arts_and_crafts_bootstrap(Registry<String> registry, CallbackInfoReturnable<String> cir) {
         //NORMAL
+        Registry.register(registry, KekeCustomSherdPatterns.POTTERY_PATTERN, "pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.ROLL_POTTERY_PATTERN, "roll_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.RUINED_POTTERY_PATTERN, "ruined_pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.FINALE_POTTERY_PATTERN, "finale_pottery_pattern");

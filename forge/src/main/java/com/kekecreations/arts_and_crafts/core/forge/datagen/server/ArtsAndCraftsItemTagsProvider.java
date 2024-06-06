@@ -75,7 +75,8 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
                 .add(KekeItems.ROLL_POTTERY_SHERD.get())
                 .add(KekeItems.RUINED_POTTERY_SHERD.get())
                 .add(KekeItems.FINALE_POTTERY_SHERD.get())
-                .add(KekeItems.GATEWAY_POTTERY_SHERD.get());
+                .add(KekeItems.GATEWAY_POTTERY_SHERD.get())
+                .add(KekeItems.POTTERY_SHERD.get());
     }
 
     private void appendPlanks() {

@@ -31,7 +31,7 @@ public class KekeItems {
 
     public static final Supplier<CustomBoatItem> CORK_CHEST_BOAT = registerItem("cork_chest_boat", () -> new CustomBoatItem(true, CustomBoat.WoodType.CORK, new Item.Properties().stacksTo(1)));
 
-
+    public static final Supplier<Item> POTTERY_SHERD = registerItem("pottery_sherd", () -> new Item(new Item.Properties()));
     public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", () -> new Item(new Item.Properties()));
     public static final Supplier<Item> RUINED_POTTERY_SHERD = registerItem("ruined_pottery_sherd", () -> new Item(new Item.Properties()));
     public static final Supplier<Item> FINALE_POTTERY_SHERD = registerItem("finale_pottery_sherd", () -> new Item(new Item.Properties()));

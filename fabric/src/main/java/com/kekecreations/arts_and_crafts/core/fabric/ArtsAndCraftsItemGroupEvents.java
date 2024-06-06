@@ -136,10 +136,11 @@ public class ArtsAndCraftsItemGroupEvents {
             event.addAfter(KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICK_WALL.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(event -> {
-            event.addAfter(Items.SNORT_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
-            event.addAfter(KekeItems.ROLL_POTTERY_SHERD.get(), KekeItems.RUINED_POTTERY_SHERD.get());
-            event.addAfter(KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.FINALE_POTTERY_SHERD.get());
-            event.addAfter(KekeItems.FINALE_POTTERY_SHERD.get(), KekeItems.GATEWAY_POTTERY_SHERD.get());
+            event.addAfter(Items.PRIZE_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
+            event.addBefore(Items.FRIEND_POTTERY_SHERD, KekeItems.FINALE_POTTERY_SHERD.get());
+            event.addAfter(Items.FRIEND_POTTERY_SHERD, KekeItems.GATEWAY_POTTERY_SHERD.get());
+            event.addBefore(Items.ANGLER_POTTERY_SHERD, KekeItems.RUINED_POTTERY_SHERD.get());
+            event.addBefore(KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.POTTERY_SHERD.get());
             event.addBefore(Items.WHITE_DYE, KekeItems.BLEACHDEW.get());
         });
     }

@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceKey;
 
 public class KekeCustomSherdPatterns {
 
+    public static final ResourceKey<String> POTTERY_PATTERN = create("pottery_pattern");
     public static final ResourceKey<String> ROLL_POTTERY_PATTERN = create("roll_pottery_pattern");
     public static final ResourceKey<String> RUINED_POTTERY_PATTERN = create("ruined_pottery_pattern");
     public static final ResourceKey<String> FINALE_POTTERY_PATTERN = create("finale_pottery_pattern");

@@ -3,6 +3,7 @@
     {
       "type": "paletted_permutations",
       "textures": [
+        "arts_and_crafts:entity/decorated_pot/pottery_pattern",
         "arts_and_crafts:entity/decorated_pot/roll_pottery_pattern",
         "arts_and_crafts:entity/decorated_pot/ruined_pottery_pattern",
         "arts_and_crafts:entity/decorated_pot/finale_pottery_pattern",

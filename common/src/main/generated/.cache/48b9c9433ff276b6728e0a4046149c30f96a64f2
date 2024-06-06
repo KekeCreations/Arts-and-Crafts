@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-04T18:46:43.4339771	Item Models: arts_and_crafts
+// 1.20.1	2024-06-06T03:03:12.3782668	Item Models: arts_and_crafts
 1b127836ff8f6d162519645d794ec3caaccafeeb assets/arts_and_crafts/models/item/black_chalk_stick.json
 b303bfb18bc31bdd837c85ec2bfb8a8cf7effdc7 assets/arts_and_crafts/models/item/black_decorated_pot.json
 d8dc925d72d8baf2a8af1ce8e5cc2c6c5d7a9ef5 assets/arts_and_crafts/models/item/black_flower_pot.json
@@ -60,6 +60,7 @@ b089867d45700124b926d321f37ad934684e89c1 assets/arts_and_crafts/models/item/pink
 bb75574eae272aefad5499f0bb7f6f499af86c10 assets/arts_and_crafts/models/item/pink_decorated_pot.json
 4b515517f9c76f7fd987445912d22243344c30da assets/arts_and_crafts/models/item/pink_flower_pot.json
 a0e9a83646233daa25fbc9d516c572bbbf9fb45f assets/arts_and_crafts/models/item/pink_paintbrush.json
+a1f78b656c440286135bb86db7f94d06fba30bbf assets/arts_and_crafts/models/item/pottery_sherd.json
 8546d80b741e86712efbddd6bce13a6476b97269 assets/arts_and_crafts/models/item/purple_chalk_stick.json
 d25be3223c4c0db83ec9a362b4b67692fac5b29c assets/arts_and_crafts/models/item/purple_decorated_pot.json
 81e960f0da2b7e3ff0b6428f26bea339b2db639e assets/arts_and_crafts/models/item/purple_flower_pot.json

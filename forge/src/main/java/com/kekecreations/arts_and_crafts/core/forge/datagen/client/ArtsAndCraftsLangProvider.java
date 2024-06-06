@@ -120,6 +120,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         //ITEMS
         add(KekeItems.CORK_BOAT.get(), "Cork Boat");
         add(KekeItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
+        add(KekeItems.POTTERY_SHERD.get(), "Pottery Sherd");
         add(KekeItems.ROLL_POTTERY_SHERD.get(), "Roll Pottery Sherd");
         add(KekeItems.RUINED_POTTERY_SHERD.get(), "Ruined Pottery Sherd");
         add(KekeItems.FINALE_POTTERY_SHERD.get(), "Finale Pottery Sherd");
