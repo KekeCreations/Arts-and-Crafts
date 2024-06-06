@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/KekeCreations/Arts-and-Crafts/issues"
 license = "All rights reserved"
 
 [[mods]]
 modId = "arts_and_crafts"
 version = "${version}"
 displayName = "Arts & Crafts"
-authors = "KekeCreations and Ari"
+authors = "KekeCreations and Arbeet!"
 description = '''
 A fabric & forge mod that adds all new decoration features into the game!
 '''
