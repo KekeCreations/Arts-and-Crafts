@@ -15,6 +15,21 @@
         }
       ],
       "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lily_pad"
+        }
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "arts_and_crafts:blocks/lotus_flower"
