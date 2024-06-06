@@ -152,6 +152,14 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         //lotus
         add("advancements.husbandry.let_the_past_bloom.title", "Let The Past Bloom!");
         add("advancements.husbandry.let_the_past_bloom.description", "Interact with a lily pad using some Lotus Pistils");
+        add("advancements.husbandry.circa_1980.title", "Circa 1980");
+        add("advancements.husbandry.circa_1980.description", "Obtain some bleachdew from a fully bloomed Lotus Flower!");
+        //paintbrush & bleach
+        add("advancements.adventure.aspiring_davinci.title", "Aspiring Davinci!");
+        add("advancements.adventure.aspiring_davinci.description", "Craft any coloured paintbrush");
+        add("advancements.adventure.born_to_paint_forced_to_mop.title", "Born To Paint Forced To Mop");
+        add("advancements.adventure.born_to_paint_forced_to_mop.description", "Craft a bleachdew paintbrush");
+
 
 
 

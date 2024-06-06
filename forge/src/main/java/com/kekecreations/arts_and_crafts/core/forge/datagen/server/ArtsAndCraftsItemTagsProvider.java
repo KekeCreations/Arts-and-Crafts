@@ -35,7 +35,17 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendBoats();
         appendChestBoats();
         appendWoolCarpets();
+        appendPaintbrushes();
     }
+    private void appendPaintbrushes() {
+        for (DyeColor colours : DyeColor.values()) {
+            this.tag(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
+                    .add(KekeItems.getPaintBrush(colours.getId()));
+        }
+        this.tag(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
+                .add(KekeItems.BLEACHDEW_PAINTBRUSH.get());
+    }
+
     private void appendWoolCarpets() {
         this.tag(ItemTags.WOOL_CARPETS)
                 .add(KekeBlocks.BLEACHED_CARPET.get().asItem());

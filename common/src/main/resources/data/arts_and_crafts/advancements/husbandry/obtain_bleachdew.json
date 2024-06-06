@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "arts_and_crafts:bleachdew"
+    },
+    "title": {
+      "translate": "advancements.husbandry.circa_1980.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.circa_1980.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "arts_and_crafts:husbandry/interact_with_lily_pad_using_some_lotus_pistils",
+  "criteria": {
+    "bleachdew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:bleachdew"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bleachdew"
+    ]
+  ],
+  "rewards": {
+    "experience": 2
+  },
+  "sends_telemetry_event": true
+}

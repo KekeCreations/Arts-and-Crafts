@@ -20,6 +20,9 @@ public class ArtsAndCraftsTags {
         public static final TagKey<Item> CHALK_STICKS
                 = tag("chalk_sticks");
 
+        public static final TagKey<Item> PAINTBRUSHES
+                = tag("paintbrushes");
+
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
