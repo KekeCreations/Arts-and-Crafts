@@ -18,10 +18,10 @@ public class ArtsAndCraftsFabricLootModifiers {
             }
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON.equals(id)) {
                 builder.modifyPools(itemEntry -> {
-                        itemEntry.with((LootItem.lootTableItem(KekeItems.RUINED_POTTERY_SHERD.get()).setWeight(25)).build());
+                        itemEntry.with((LootItem.lootTableItem(KekeItems.RUINED_POTTERY_SHERD.get()).setWeight(10)).build());
                         itemEntry.with((LootItem.lootTableItem(KekeItems.POTTERY_SHERD.get()).setWeight(10)).build());
-                        itemEntry.with((LootItem.lootTableItem(KekeItems.BLEACHDEW.get()).setWeight(10)).build());
-                        itemEntry.with((LootItem.lootTableItem(KekeItems.CORK_HANGING_SIGN.get()).setWeight(30)).build());
+                        itemEntry.with((LootItem.lootTableItem(KekeItems.BLEACHDEW.get()).setWeight(5)).build());
+                        itemEntry.with((LootItem.lootTableItem(KekeItems.CORK_HANGING_SIGN.get()).setWeight(25)).build());
                 });
             }
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE.equals(id)) {

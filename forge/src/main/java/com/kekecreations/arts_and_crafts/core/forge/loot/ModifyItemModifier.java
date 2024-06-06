@@ -34,7 +34,7 @@ public class ModifyItemModifier extends LootModifier {
             }
         }
 
-        if (context.getRandom().nextFloat() < 0.1f) {
+        if (context.getRandom().nextFloat() < 0.08f) {
             generatedLoot.clear();
             generatedLoot.add(new ItemStack(this.item));
         }
