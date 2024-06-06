@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "arts_and_crafts:lotus_pistils"
+    },
+    "title": {
+      "translate": "advancements.husbandry.let_the_past_bloom.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.let_the_past_bloom.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/obtain_sniffer_egg",
+  "criteria": {
+    "interact": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "arts_and_crafts:lotus_flower",
+            "properties": {}
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "interact"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

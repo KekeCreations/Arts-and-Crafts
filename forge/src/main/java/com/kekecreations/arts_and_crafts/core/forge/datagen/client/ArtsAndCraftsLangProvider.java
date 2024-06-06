@@ -138,6 +138,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
 
 
         //ADVANCEMENTS
+        //chalk
         add("advancements.adventure.no_you_cant_eat_it.title", "No You Can't Eat It!");
         add("advancements.adventure.no_you_cant_eat_it.description", "Craft any coloured chalk stick!");
         add("advancements.adventure.board_planning.title", "Board Planning");
@@ -148,6 +149,15 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add("advancements.adventure.flashpoint.description", "Cycle the chalk pattern backwards by shift clicking chalk dust with a chalk stick in your offhand!");
         add("advancements.adventure.handpicked.title", "Handpicked");
         add("advancements.adventure.handpicked.description", "Save a chalk pattern by shift clicking with a chalk stick in your main hand!");
+        //lotus
+        add("advancements.husbandry.let_the_past_bloom.title", "Let The Past Bloom!");
+        add("advancements.husbandry.let_the_past_bloom.description", "Interact with a lily pad using some Lotus Pistils");
+
+
+
+
+
+
 
         //TOOL TIPS
         add("tooltip.arts_and_crafts.chalk_pattern_0", "Dot Pattern");

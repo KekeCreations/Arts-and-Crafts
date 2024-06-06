@@ -84,7 +84,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
             if ($$4 < this.getMaxAge()) {
                 float $$5 = getGrowthSpeed($$1);
                 if ($$3.nextInt((int) (25.0F / $$5) + 1) == 0) {
-                    $$1.setBlock($$2, this.getStateForAge($$4 + 1), 2);
+                    $$1.setBlock($$2, this.getStateForAge($$4 + 1).setValue(FACING, $$0.getValue(FACING)), 2);
                 }
             }
         }
