@@ -66,6 +66,8 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
             this.tag(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
                     .add(KekeBlocks.getChalkDust(colours));
         }
+        this.tag(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
+                .add(KekeBlocks.BLEACHED_CHALK_DUST.get());
     }
 
     private void appendHoglinRepellents() {

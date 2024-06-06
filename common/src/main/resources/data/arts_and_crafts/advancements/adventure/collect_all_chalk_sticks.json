@@ -15,12 +15,17 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "arts_and_crafts:adventure/no_you_cant_eat_it",
+  "parent": "arts_and_crafts:adventure/craft_chalk_stick",
   "criteria": {
     "chalk_stick": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
+          {
+            "items": [
+              "arts_and_crafts:bleached_chalk_stick"
+            ]
+          },
           {
             "items": [
               "arts_and_crafts:white_chalk_stick"

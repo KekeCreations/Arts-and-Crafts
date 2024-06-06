@@ -1,23 +1,23 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:red_chalk_stick",
+      "item": "arts_and_crafts:lime_chalk_stick",
       "nbt": "{Damage:0}"
     },
     "title": {
-      "translate": "advancements.adventure.handpicked.title"
+      "translate": "advancements.adventure.let_the_creativity_flow_through_you.title"
     },
     "description": {
-      "translate": "advancements.adventure.handpicked.description"
+      "translate": "advancements.adventure.let_the_creativity_flow_through_you.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "arts_and_crafts:adventure/flashpoint",
+  "parent": "arts_and_crafts:adventure/craft_chalk_stick",
   "criteria": {
-    "chalk_shift_click": {
+    "chalk_interact": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
@@ -26,12 +26,7 @@
             "entity": "this",
             "predicate": {
               "flags": {
-                "is_sneaking": true
-              },
-              "equipment": {
-                "mainhand": {
-                  "tag": "arts_and_crafts:chalk_sticks"
-                }
+                "is_sneaking": false
               }
             }
           }
@@ -57,7 +52,7 @@
   },
   "requirements": [
     [
-      "chalk_shift_click"
+      "chalk_interact"
     ]
   ],
   "sends_telemetry_event": true
