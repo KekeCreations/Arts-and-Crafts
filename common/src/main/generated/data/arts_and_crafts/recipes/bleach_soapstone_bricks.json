@@ -1,0 +1,70 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soapstone_bricks",
+  "key": {
+    "K": [
+      {
+        "item": "arts_and_crafts:black_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:blue_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:brown_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:cyan_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:gray_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:green_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:light_blue_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:light_gray_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:lime_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:magenta_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:orange_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:pink_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:purple_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:red_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:yellow_soapstone_bricks"
+      },
+      {
+        "item": "arts_and_crafts:white_soapstone_bricks"
+      }
+    ],
+    "Q": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:soapstone_bricks"
+  },
+  "show_notification": true
+}
