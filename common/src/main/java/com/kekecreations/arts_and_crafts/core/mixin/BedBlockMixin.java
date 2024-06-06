@@ -22,12 +22,14 @@ public class BedBlockMixin {
 
     @Inject(method = "use", at = @At(value= "HEAD"), cancellable = true)
     public void arts_and_crafts_use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult, CallbackInfoReturnable<InteractionResult> cir) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
-        if (itemStack.getItem() instanceof PaintbrushItem) {
-            Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
-            if (finalBlock != null && finalBlock != blockState.getBlock()) {
-                PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
-                cir.setReturnValue(InteractionResult.SUCCESS);
+        if (!level.isClientSide()) {
+            ItemStack itemStack = player.getItemInHand(interactionHand);
+            if (itemStack.getItem() instanceof PaintbrushItem) {
+                Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
+                if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                    PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                    cir.setReturnValue(InteractionResult.SUCCESS);
+                }
             }
         }
     }

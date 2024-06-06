@@ -130,11 +130,13 @@ public class CustomFlowerPotBlock extends Block {
             level.gameEvent((Entity)player, GameEvent.BLOCK_CHANGE, blockPos);
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        if (itemStack.getItem() instanceof PaintbrushItem) {
-            Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
-            if (finalBlock != null && finalBlock != blockState.getBlock()) {
-                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
-                return InteractionResult.SUCCESS;
+        if (!level.isClientSide()) {
+            if (itemStack.getItem() instanceof PaintbrushItem) {
+                Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
+                if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                    return InteractionResult.SUCCESS;
+                }
             }
         }
         return InteractionResult.CONSUME;

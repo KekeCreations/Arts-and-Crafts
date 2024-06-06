@@ -27,25 +27,27 @@ public class ShulkerBoxBlockMixin {
 
     @Inject(method = "use", at = @At(value= "INVOKE", target = "net/minecraft/world/level/Level.getBlockEntity (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;"), cancellable = true)
     public void arts_and_crafts_use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult, CallbackInfoReturnable<InteractionResult> cir) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
-        if (itemStack.getItem() instanceof PaintbrushItem) {
-            Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
-            if (finalBlock != null && finalBlock != blockState.getBlock()) {
-                List<ItemStack> itemList = new ArrayList<ItemStack>();
-                BlockEntity blockEntity = level.getBlockEntity(blockPos);
-                if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
-                    for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
-                        itemList.add(shulkerBE.getItem(i));
+        if (!level.isClientSide()) {
+            ItemStack itemStack = player.getItemInHand(interactionHand);
+            if (itemStack.getItem() instanceof PaintbrushItem) {
+                Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
+                if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                    List<ItemStack> itemList = new ArrayList<ItemStack>();
+                    BlockEntity blockEntity = level.getBlockEntity(blockPos);
+                    if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
+                        for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
+                            itemList.add(shulkerBE.getItem(i));
+                        }
                     }
-                }
-                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
-                BlockEntity newBlockEntity = level.getBlockEntity(blockPos);
-                if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
-                    for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
-                        newShulkerBE.setItem(i, itemList.get(i));
+                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                    BlockEntity newBlockEntity = level.getBlockEntity(blockPos);
+                    if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
+                        for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
+                            newShulkerBE.setItem(i, itemList.get(i));
+                        }
                     }
+                    cir.setReturnValue(InteractionResult.SUCCESS);
                 }
-                cir.setReturnValue(InteractionResult.SUCCESS);
             }
         }
     }
