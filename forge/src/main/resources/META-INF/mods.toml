@@ -1,6 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
 issueTrackerURL = "https://github.com/KekeCreations/Arts-and-Crafts/issues"
+updateJSONURL="https://raw.githubusercontent.com/KekeCreations/Arts-And-Crafts/1.20.1x/forge_updates.json"
 license = "All rights reserved"
 
 [[mods]]
