@@ -5,7 +5,7 @@ plugins {
     id 'fabric-loom'
 }
 base {
-    archivesName = "${mod_name}-fabric-${minecraft_version}"
+    archivesName = "${archives_base_name}-fabric-${minecraft_version}"
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
@@ -14,7 +14,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.3.6")))
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
+    //implementation project(":common")
 }
 
 loom {
