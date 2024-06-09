@@ -28,6 +28,12 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendPlanks();
         appendLogsThatBurn();
         appendWoodenButtons();
+        appendWoodenSlabs();
+        appendWoodenDoors();
+        appendWoodenFences();
+        appendWoodenStairs();
+        appendWoodenPressurePlates();
+        appendWoodenTrapdoors();
         appendDecoratedPotSherds();
         appendDecoratedPots();
         appendDyes();
@@ -36,6 +42,50 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendChestBoats();
         appendWoolCarpets();
         appendPaintbrushes();
+        appendSigns();
+        appendHangingSigns();
+        appendSaplings();
+        appendFenceGates();
+    }
+    private void appendFenceGates() {
+        this.tag(ItemTags.FENCE_GATES)
+                .add(KekeBlocks.CORK_FENCE_GATE.get().asItem());
+    }
+    private void appendWoodenSlabs() {
+        this.tag(ItemTags.WOODEN_SLABS)
+                .add(KekeBlocks.CORK_SLAB.get().asItem());
+    }
+    private void appendWoodenDoors() {
+        this.tag(ItemTags.WOODEN_DOORS)
+                .add(KekeBlocks.CORK_DOOR.get().asItem());
+    }
+    private void appendWoodenFences() {
+        this.tag(ItemTags.WOODEN_FENCES)
+                .add(KekeBlocks.CORK_FENCE.get().asItem());
+    }
+    private void appendWoodenStairs() {
+        this.tag(ItemTags.WOODEN_STAIRS)
+                .add(KekeBlocks.CORK_STAIRS.get().asItem());
+    }
+    private void appendWoodenPressurePlates() {
+        this.tag(ItemTags.WOODEN_PRESSURE_PLATES)
+                .add(KekeBlocks.CORK_PRESSURE_PLATE.get().asItem());
+    }
+    private void appendWoodenTrapdoors() {
+        this.tag(ItemTags.WOODEN_TRAPDOORS)
+                .add(KekeBlocks.CORK_TRAPDOOR.get().asItem());
+    }
+    private void appendSigns() {
+        this.tag(ItemTags.SIGNS)
+                .add(KekeItems.CORK_SIGN.get());
+    }
+    private void appendHangingSigns() {
+        this.tag(ItemTags.HANGING_SIGNS)
+                .add(KekeItems.CORK_HANGING_SIGN.get());
+    }
+    private void appendSaplings() {
+        this.tag(ItemTags.SAPLINGS)
+                .add(KekeBlocks.CORK_SAPLING.get().asItem());
     }
     private void appendPaintbrushes() {
         for (DyeColor colours : DyeColor.values()) {
