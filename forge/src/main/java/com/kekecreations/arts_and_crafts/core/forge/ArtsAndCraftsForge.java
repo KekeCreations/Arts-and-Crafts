@@ -73,7 +73,7 @@ public class ArtsAndCraftsForge {
     }
 
     public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
-        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC, PaintbrushPalette.CODEC);
+        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }
 
     private void addAfter(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {

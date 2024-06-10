@@ -23,7 +23,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         KekeFabricFlammableAndStrippableBlocks.register();
         ArtsAndCraftsFabricLootModifiers.modifyVanillaLootTables();
         createBiomeModifications();
-        DynamicRegistries.registerSynced(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
+        DynamicRegistries.register(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }
 
     public void createBiomeModifications() {

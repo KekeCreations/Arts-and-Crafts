@@ -52,9 +52,9 @@ public class PaintbrushItem extends Item {
         InteractionHand hand = context.getHand();
         BlockEntity blockEntity = context.getLevel().getBlockEntity(pos);
 
-        Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
 
         if (!level.isClientSide()) {
+            Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
             if (finalBlock != null && finalBlock != blockState.getBlock()) {
                 if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
                     DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
