@@ -46,6 +46,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItem(KekeItems.CORK_HANGING_SIGN.get());
         basicItem(KekeItems.LOTUS_PISTILS.get());
         bedBlockItem(KekeItems.BLEACHED_BED.get());
+        buttonInventory(KekeBlocks.CORK_BUTTON.get().asItem(), "cork_planks");
     }
     private ResourceLocation key(Item item) {
         return ForgeRegistries.ITEMS.getKey(item);
@@ -73,5 +74,8 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
     public void bedBlockItem(Item item) {
         withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/template_bed"))
                 .texture("particle", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/bleached_wool"));
+    }
+    public void buttonInventory(Item item, String texture) {
+        withExistingParent(name(item), BLOCK_FOLDER + "/button_inventory").texture("texture", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/" + texture));
     }
 }
