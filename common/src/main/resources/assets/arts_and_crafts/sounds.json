@@ -7,5 +7,52 @@
     ],
     "category": "block",
     "subtitle": "subtitles.block.generic.place"
+  },
+  "block.soapstone.break": {
+    "sounds": [
+      "arts_and_crafts:block/soapstone/break1",
+      "arts_and_crafts:block/soapstone/break2",
+      "arts_and_crafts:block/soapstone/break3",
+      "arts_and_crafts:block/soapstone/break4"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.soapstone.place": {
+    "sounds": [
+      "arts_and_crafts:block/soapstone/break1",
+      "arts_and_crafts:block/soapstone/break2",
+      "arts_and_crafts:block/soapstone/break3",
+      "arts_and_crafts:block/soapstone/break4"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.soapstone.step": {
+    "sounds": [
+      "arts_and_crafts:block/soapstone/step1",
+      "arts_and_crafts:block/soapstone/step2",
+      "arts_and_crafts:block/soapstone/step3",
+      "arts_and_crafts:block/soapstone/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.soapstone.hit": {
+    "sounds": [
+      "arts_and_crafts:block/soapstone/step1",
+      "arts_and_crafts:block/soapstone/step2",
+      "arts_and_crafts:block/soapstone/step3",
+      "arts_and_crafts:block/soapstone/step4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.soapstone.fall": {
+    "sounds": [
+      "arts_and_crafts:block/soapstone/step1",
+      "arts_and_crafts:block/soapstone/step2",
+      "arts_and_crafts:block/soapstone/step3",
+      "arts_and_crafts:block/soapstone/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }
