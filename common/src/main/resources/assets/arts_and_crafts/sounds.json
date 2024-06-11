@@ -54,5 +54,101 @@
       "arts_and_crafts:block/soapstone/step4"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.cork.break": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_wood_break1",
+      "arts_and_crafts:block/cork/cork_wood_break2",
+      "arts_and_crafts:block/cork/cork_wood_break3",
+      "arts_and_crafts:block/cork/cork_wood_break4",
+      "arts_and_crafts:block/cork/cork_wood_break5"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.cork.place": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_wood_break1",
+      "arts_and_crafts:block/cork/cork_wood_break2",
+      "arts_and_crafts:block/cork/cork_wood_break3",
+      "arts_and_crafts:block/cork/cork_wood_break4",
+      "arts_and_crafts:block/cork/cork_wood_break5"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.cork_wood_door.close": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_door_toggle1",
+      "arts_and_crafts:block/cork/cork_door_toggle2",
+      "arts_and_crafts:block/cork/cork_door_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.door.toggle"
+  },
+  "block.cork_wood_door.open": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_door_toggle1",
+      "arts_and_crafts:block/cork/cork_door_toggle2",
+      "arts_and_crafts:block/cork/cork_door_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.door.toggle"
+  },
+  "block.cork_wood_trapdoor.open": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle1",
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle2",
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.trapdoor.toggle"
+  },
+  "block.cork_wood_trapdoor.close": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle1",
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle2",
+      "arts_and_crafts:block/cork/cork_trapdoor_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.trapdoor.toggle"
+  },
+  "block.cork_wood_fence_gate.close": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle1",
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle2",
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.fence_gate.toggle"
+  },
+  "block.cork_wood_fence_gate.open": {
+    "sounds": [
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle1",
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle2",
+      "arts_and_crafts:block/cork/cork_fence_gate_toggle3"
+    ],
+    "category": "block",
+    "subtitle": "subtitles.block.fence_gate.toggle"
+  },
+  "block.cork_wood_button.click_off": {
+    "sounds": [
+      {
+        "name": "arts_and_crafts:block/cork/cork_button_press",
+        "pitch": 0.5,
+        "volume": 0.4
+      }
+    ],
+    "subtitle": "subtitles.block.button.click"
+  },
+  "block.cork_wood_button.click_on": {
+    "sounds": [
+      {
+        "name": "arts_and_crafts:block/cork/cork_button_press",
+        "pitch": 0.6,
+        "volume": 0.4
+      }
+    ],
+    "subtitle": "subtitles.block.button.click"
   }
 }

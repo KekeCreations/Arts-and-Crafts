@@ -168,7 +168,7 @@ public class KekeBlocks {
 
     //CORK ETC
 
-    public static final Supplier<FloatingBlock> CORK = registerBlockWithItem("cork", () -> new FloatingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS)));
+    public static final Supplier<FloatingBlock> CORK = registerBlockWithItem("cork", () -> new FloatingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(ArtsAndCraftsSoundTypes.CORK).instrument(NoteBlockInstrument.BASS)));
     public static final Supplier<FloatingBlock> SMOOTH_CORK = registerBlockWithItem("smooth_cork", () -> new FloatingBlock(BlockBehaviour.Properties.copy(CORK.get())));
     public static final Supplier<SaplingBlock> CORK_SAPLING = registerBlockWithItem("cork_sapling", () -> new CorkSapling(new CorkTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
@@ -177,15 +177,15 @@ public class KekeBlocks {
 
     public static final Supplier<FlammableRotatedPillarBlock> STRIPPED_CORK_LOG = registerBlockWithItem("stripped_cork_log", () -> log(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
-    public static final Supplier<FlammableRotatedPillarBlock> CORK_WOOD = registerBlockWithItem("cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Supplier<FlammableRotatedPillarBlock> CORK_WOOD = registerBlockWithItem("cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ArtsAndCraftsSoundTypes.CORK).ignitedByLava()));
 
-    public static final Supplier<FlammableRotatedPillarBlock> STRIPPED_CORK_WOOD = registerBlockWithItem("stripped_cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Supplier<FlammableRotatedPillarBlock> STRIPPED_CORK_WOOD = registerBlockWithItem("stripped_cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ArtsAndCraftsSoundTypes.CORK).ignitedByLava()));
 
-    public static final Supplier<FlammableBlock> CORK_PLANKS = registerBlockWithItem("cork_planks", () -> new FlammableBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(SoundType.WOOD).ignitedByLava()));
-    public static final Supplier<FlammableSlabBlock> CORK_SLAB = registerBlockWithItem("cork_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(CORK_PLANKS.get())));
-    public static final Supplier<FlammableStairBlock> CORK_STAIRS = registerBlockWithItem("cork_stairs", () -> new FlammableStairBlock(CORK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(CORK_PLANKS.get())));
-    public static final Supplier<FlammableFenceBlock> CORK_FENCE = registerBlockWithItem("cork_fence", () -> new FlammableFenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(SoundType.WOOD).ignitedByLava()));
-    public static final Supplier<FlammableFenceGateBlock> CORK_FENCE_GATE = registerBlockWithItem("cork_fence_gate", () -> new FlammableFenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).ignitedByLava(), KekeWoodType.CORK));
+    public static final Supplier<FlammableBlock> CORK_PLANKS = registerBlockWithItem("cork_planks", () -> new FlammableBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ArtsAndCraftsSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableSlabBlock> CORK_SLAB = registerBlockWithItem("cork_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ArtsAndCraftsSoundTypes.CORK)));
+    public static final Supplier<FlammableStairBlock> CORK_STAIRS = registerBlockWithItem("cork_stairs", () -> new FlammableStairBlock(CORK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ArtsAndCraftsSoundTypes.CORK)));
+    public static final Supplier<FlammableFenceBlock> CORK_FENCE = registerBlockWithItem("cork_fence", () -> new FlammableFenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ArtsAndCraftsSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableFenceGateBlock> CORK_FENCE_GATE = registerBlockWithItem("cork_fence_gate", () -> new FlammableFenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).sound(ArtsAndCraftsSoundTypes.CORK).strength(2.0f, 3.0f).ignitedByLava(), KekeWoodType.CORK));
     public static final Supplier<FlammableLeavesBlock> CORK_LEAVES = registerBlockWithItem("cork_leaves", () -> leaves(SoundType.GRASS));
 
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = registerBlock("potted_cork_sapling", () -> KekeBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));

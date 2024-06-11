@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/button_inventory",
+  "parent": "minecraft:block/button",
   "textures": {
     "texture": "arts_and_crafts:block/cork_planks"
   }

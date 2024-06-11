@@ -224,7 +224,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     private void buttonWithItem(ButtonBlock block, Block blockTexture) {
         ResourceLocation resLoc = blockTexture(blockTexture);
         buttonBlock(block, resLoc);
-        simpleBlockItem(block, models().buttonInventory(name(block), resLoc));
+        //simpleBlockItem(block, models().buttonInventory(name(block), resLoc));
     }
     private void carpetWithItem(Block block, Block blockTexture) {
         ResourceLocation resLoc = blockTexture(blockTexture);

@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-04T18:46:43.439486	Block States: arts_and_crafts
+// 1.20.1	2024-06-11T20:49:00.9254798	Block States: arts_and_crafts
 62c207c63e4b990f703081714e334de8798ebc98 assets/arts_and_crafts/blockstates/black_chalk.json
 fdece24ae4e84473ed23d6087102096e1078e638 assets/arts_and_crafts/blockstates/black_chalk_dust.json
 958da65c2b62373809313f16dd514345d38c2dbf assets/arts_and_crafts/blockstates/black_flower_pot.json
@@ -1406,7 +1406,7 @@ aa2e8e0ee5c31c98fb13b53e8ceec8f0f359de35 assets/arts_and_crafts/models/block/bro
 f4cf5f97880940b5fe67abafecbea1641df7e13e assets/arts_and_crafts/models/block/brown_vertical_line_middle.json
 0462197a40ebd2507a9b650f67cbfb485daa49bf assets/arts_and_crafts/models/block/brown_x.json
 bbb8c859d71a5194cc128f4a4a79024d87f43dbe assets/arts_and_crafts/models/block/cork.json
-4aa8648ce7162d33fc2dac8b4ecd7162001ae3cf assets/arts_and_crafts/models/block/cork_button.json
+85c3716070f2ba704a8f20bd844826731d1dd4d9 assets/arts_and_crafts/models/block/cork_button.json
 72fbb595c0d8ec129f70312ae66a5eea448954a9 assets/arts_and_crafts/models/block/cork_button_pressed.json
 e7bf2a9854e2480e2812d1e81b946a72781a12f5 assets/arts_and_crafts/models/block/cork_door_bottom_left.json
 5387335506cbe725609a92ed80240c31b81d1ef4 assets/arts_and_crafts/models/block/cork_door_bottom_left_open.json
@@ -3170,7 +3170,6 @@ b431c47b7e7bafb7eb21505b85bd4efba37cdc92 assets/arts_and_crafts/models/item/brow
 9dae429bf951f0f2fab52955185624dc47b25cbe assets/arts_and_crafts/models/item/brown_terracotta_shingle_stairs.json
 268568659f26f84ddc5864f4b07e7d40717a5221 assets/arts_and_crafts/models/item/brown_terracotta_shingle_wall.json
 c9df83ce0df339013430872e02255082044dce67 assets/arts_and_crafts/models/item/cork.json
-f13eb25c7bc77f9b9620e33d59a131e522aece0b assets/arts_and_crafts/models/item/cork_button.json
 6eebfacece653fb9183c8e0e0293ef293cc03ef6 assets/arts_and_crafts/models/item/cork_fence.json
 f84ed06ba2994b77c3eef423a888a26d4dff57b0 assets/arts_and_crafts/models/item/cork_fence_gate.json
 57c017f08c92d15bac2925f987d199dbdf269fec assets/arts_and_crafts/models/item/cork_leaves.json
