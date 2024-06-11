@@ -37,6 +37,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         colorBlockWithDye(recipeConsumer, dyeList, chalkList, "chalk");
         colorBlockWithDye(recipeConsumer, dyeList, chalkStickList, "chalk_sticks");
         colorBlockWithDye(recipeConsumer, dyeList, flowerPotList, "flower_pots");
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, flowerPotList, Blocks.FLOWER_POT, "flower_pots");
 
         //BLEACHED
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.BLEACHED_CARPET.get(),3)
@@ -193,6 +194,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         woodenBoat(recipeConsumer, KekeItems.CORK_BOAT.get(), KekeBlocks.CORK_PLANKS.get());
         chestBoatRecipe(recipeConsumer, KekeItems.CORK_CHEST_BOAT.get(), KekeItems.CORK_BOAT.get());
         typeRecipe(KekeBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get(), recipeConsumer);
+        typeRecipe(KekeBlocks.CORK.get(), KekeBlocks.SMOOTH_CORK.get(), recipeConsumer);
 
         for (DyeColor colours : DyeColor.values()) {
             //CHALK

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:cork"
+    }
+  },
+  "pattern": [
+    "KK",
+    "KK"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:smooth_cork"
+  },
+  "show_notification": true
+}
