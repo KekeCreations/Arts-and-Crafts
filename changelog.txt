@@ -7,6 +7,7 @@ Bug Fixes
 • Fixed Bleached Chalk Stick crash with Jade Installed
 • Fixed Bleached Chalk Stick spamming logs with One Probe Installed
 • Fixed Pick blocking bleached chalk dust crash
+• Fixed Forge Mod Information
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Code Changes
 • Chalk List and Chalk Dust List no longer uses dye colours, instead uses Integers
