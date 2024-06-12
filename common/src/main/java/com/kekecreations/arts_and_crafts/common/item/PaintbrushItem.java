@@ -1,20 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
@@ -23,24 +14,14 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
 
 public class PaintbrushItem extends Item {
 
-    private final DyeColor dyeColor;
 
-    public PaintbrushItem(DyeColor dyeColor, Properties properties) {
+    public PaintbrushItem(Item.Properties properties) {
         super(properties);
-        this.dyeColor = dyeColor;
     }
 
-    public DyeColor getDyeColor() {
-        return this.dyeColor;
-    }
-
-    public boolean isValidRepairItem(@NotNull ItemStack stack, ItemStack repairCandidate) {
-        return repairCandidate.is(DyeItem.byColor(this.getDyeColor()));
-    }
 
     @Override
     public InteractionResult useOn(UseOnContext context) {

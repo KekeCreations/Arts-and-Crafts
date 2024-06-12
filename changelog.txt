@@ -4,10 +4,14 @@ Arts & Crafts Changelog
 V1.0.2
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Bug Fixes
-• Fixed Bleached Dust crash with Jade Installed
+• Fixed Bleached Chalk Stick crash with Jade Installed
+• Fixed Bleached Chalk Stick spamming logs with One Probe Installed
 • Fixed Pick blocking bleached chalk dust crash
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Code Changes
+• Chalk List and Chalk Dust List no longer uses dye colours, instead uses Integers
+• Paintbrush no longer stores a dye colour
+• Forgot to put it in V1.0.1 changelog, but I fixed the cork button model
 
 
 

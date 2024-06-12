@@ -41,7 +41,7 @@ public class KekeItems {
 
     //BLEACHED
     public static final Supplier<Item> BLEACHDEW = registerItem("bleachdew", () -> new Item(new Item.Properties()));
-    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintbrushItem(null, new Item.Properties().stacksTo(1).durability(48)));
+    public static final Supplier<Item> BLEACHDEW_PAINTBRUSH = registerItem("bleachdew_paintbrush", () -> new PaintbrushItem(new Item.Properties().stacksTo(1).durability(48)));
     public static final Supplier<ChalkStickItem> BLEACHED_CHALK_STICK = registerItem("bleached_chalk_stick", () -> new ChalkStickItem(-1, new Item.Properties().stacksTo(1).durability(32)));
 
 
@@ -50,7 +50,7 @@ public class KekeItems {
         for (DyeColor colours : DyeColor.values()) {
             CHALK_STICKS.put(colours.getId(), registerItem(colours + "_chalk_stick", () -> new ChalkStickItem(colours.getId(), new Item.Properties().stacksTo(1).durability(32))));
             DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(KekeBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties().stacksTo(1))));
-            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintbrushItem(colours, new Item.Properties().stacksTo(1).durability(48))));
+            PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintbrushItem(new Item.Properties().stacksTo(1).durability(48))));
         }
     }
 

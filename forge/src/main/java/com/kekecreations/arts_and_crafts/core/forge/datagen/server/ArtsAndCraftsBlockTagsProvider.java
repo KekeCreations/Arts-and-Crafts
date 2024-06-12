@@ -64,7 +64,7 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
     private void appendChalkDust() {
         for (DyeColor colours : DyeColor.values()) {
             this.tag(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
-                    .add(KekeBlocks.getChalkDust(colours));
+                    .add(KekeBlocks.getChalkDust(colours.getId()));
         }
         this.tag(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
                 .add(KekeBlocks.BLEACHED_CHALK_DUST.get());

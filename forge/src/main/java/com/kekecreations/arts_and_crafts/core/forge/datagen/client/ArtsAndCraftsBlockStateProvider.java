@@ -98,7 +98,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         for (DyeColor colours : DyeColor.values()) {
             plasterWithItem(KekeBlocks.getDyedPlaster(colours.getId()), colours);
             plasterWithItem(KekeBlocks.PLASTER.get(), null);
-            chalkDustBlock(KekeBlocks.getChalkDust(colours), colours.getName());
+            chalkDustBlock(KekeBlocks.getChalkDust(colours.getId()), colours.getName());
             cubeAllWithItem(KekeBlocks.getChalk(colours.getId()));
             //Terracotta Shingles
             cubeAllWithItem(KekeBlocks.getDyedTerracottaShingles(colours.getId()));

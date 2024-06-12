@@ -175,7 +175,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     }
     private void chalkDust() {
         for (DyeColor colours : DyeColor.values()) {
-            add(KekeBlocks.getChalkDust(colours), noDrop());
+            add(KekeBlocks.getChalkDust(colours.getId()), noDrop());
         }
         add(KekeBlocks.BLEACHED_CHALK_DUST.get(), noDrop());
     }

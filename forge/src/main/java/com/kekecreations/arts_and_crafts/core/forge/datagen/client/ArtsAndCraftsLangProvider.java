@@ -25,7 +25,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
 
             //BLOCKS
             add(KekeBlocks.getDyedFlowerPot(colours.getId()), stringColour + " Flower Pot");
-            add(KekeBlocks.getChalkDust(colours), stringColour + " Chalk Dust");
+            add(KekeBlocks.getChalkDust(colours.getId()), stringColour + " Chalk Dust");
             add(KekeBlocks.getChalk(colours.getId()), stringColour + " Chalk");
 
             add(KekeBlocks.getDyedTerracottaShingles(colours.getId()), stringColour + " Terracotta Shingles");

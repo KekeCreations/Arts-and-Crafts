@@ -30,7 +30,7 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_WALL = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_STAIRS = new HashMap<>();
 
-    public static final HashMap<DyeColor, Supplier<Block>> CHALK = new HashMap<>();
+    public static final HashMap<Integer, Supplier<Block>> CHALK = new HashMap<>();
     public static final HashMap<Integer, Supplier<Block>> CHALK_DUST = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICKS = new HashMap<>();
@@ -196,6 +196,7 @@ public class KekeBlocks {
 
     static {
         CHALK_DUST.put(-1, BLEACHED_CHALK_DUST);
+        CHALK.put(-1, BLEACHED_CHALK);
         for (DyeColor colours : DyeColor.values()) {
             //DYED PLASTER
             DYED_PLASTER.put(colours, registerBlockWithItem(colours + "_plaster", () -> new PlasterBlock(colours, BlockBehaviour.Properties.copy(PLASTER.get()))));
@@ -229,7 +230,7 @@ public class KekeBlocks {
             DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_polished_soapstone_stairs", () -> new CustomStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
 
             //CHALK
-            CHALK.put(colours, registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+            CHALK.put(colours.getId(), registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
 
             CHALK_DUST.put(colours.getId(), registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(colours.getId(), BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
 
@@ -319,8 +320,7 @@ public class KekeBlocks {
 
     //GET CHALK
     public static Block getChalk(int colours){
-        CHALK.put(null, BLEACHED_CHALK);
-        return CHALK.get(DyeColor.byId(colours)).get();
+        return CHALK.get(colours).get();
     }
     public static Block getChalkDust(int colours){
         return CHALK_DUST.get(colours).get();
