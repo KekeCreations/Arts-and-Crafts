@@ -34,15 +34,15 @@ import java.util.List;
 
 public class ChalkStickItem extends Item {
 
-    private final DyeColor dyeColor;
+    private final Integer dyeColor;
     public static final String TAG_CHALK_PATTERN = "ChalkPattern";
 
-    public ChalkStickItem(@Nullable DyeColor dyeColor, Properties properties) {
+    public ChalkStickItem(Integer dyeColor, Properties properties) {
         super(properties);
         this.dyeColor = dyeColor;
     }
 
-    public DyeColor getDyeColor() {
+    public int getDyeColor() {
         return this.dyeColor;
     }
 

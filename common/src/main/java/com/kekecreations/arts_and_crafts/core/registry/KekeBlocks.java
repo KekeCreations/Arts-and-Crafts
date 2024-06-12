@@ -31,7 +31,7 @@ public class KekeBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_STAIRS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> CHALK = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> CHALK_DUST = new HashMap<>();
+    public static final HashMap<Integer, Supplier<Block>> CHALK_DUST = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICKS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_SLAB = new HashMap<>();
@@ -114,7 +114,7 @@ public class KekeBlocks {
     public static final Supplier<Block> BLEACHED_CONCRETE = registerBlockWithItem("bleached_concrete", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE)));
     public static final Supplier<Block> BLEACHED_CONCRETE_POWDER = registerBlockWithItem("bleached_concrete_powder", () -> new ConcretePowderBlock(BLEACHED_CONCRETE.get(), BlockBehaviour.Properties.copy(Blocks.WHITE_CONCRETE_POWDER)));
     public static final Supplier<Block> BLEACHED_CARPET = registerBlockWithItem("bleached_carpet", () -> new CarpetBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_CARPET)));
-    public static final Supplier<Block> BLEACHED_CHALK_DUST = registerBlock("bleached_chalk_dust", () -> new ChalkDustBlock(null, BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
+    public static final Supplier<Block> BLEACHED_CHALK_DUST = registerBlock("bleached_chalk_dust", () -> new ChalkDustBlock(-1, BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).sound(SoundType.CALCITE).noCollission().instabreak()));
     public static final Supplier<Block> BLEACHED_CHALK = registerBlockWithItem("bleached_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f)));
     public static final Supplier<Block> BLEACHED_BED = registerBlock("bleached_bed", () -> bed(DyeColor.WHITE));
 
@@ -195,6 +195,7 @@ public class KekeBlocks {
 
 
     static {
+        CHALK_DUST.put(-1, BLEACHED_CHALK_DUST);
         for (DyeColor colours : DyeColor.values()) {
             //DYED PLASTER
             DYED_PLASTER.put(colours, registerBlockWithItem(colours + "_plaster", () -> new PlasterBlock(colours, BlockBehaviour.Properties.copy(PLASTER.get()))));
@@ -230,7 +231,7 @@ public class KekeBlocks {
             //CHALK
             CHALK.put(colours, registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
 
-            CHALK_DUST.put(colours, registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(colours, BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
+            CHALK_DUST.put(colours.getId(), registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(colours.getId(), BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak())));
 
 
             DYED_FLOWER_POTS.put(colours, registerBlockWithItem(colours + "_flower_pot", () -> KekeBlocks.flowerPot(Blocks.AIR, colours)));
@@ -321,8 +322,7 @@ public class KekeBlocks {
         CHALK.put(null, BLEACHED_CHALK);
         return CHALK.get(DyeColor.byId(colours)).get();
     }
-    public static Block getChalkDust(DyeColor colours){
-        CHALK_DUST.put(null, BLEACHED_CHALK_DUST);
+    public static Block getChalkDust(int colours){
         return CHALK_DUST.get(colours).get();
     }
 

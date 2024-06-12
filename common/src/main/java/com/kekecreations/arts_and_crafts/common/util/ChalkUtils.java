@@ -1,11 +1,9 @@
 package com.kekecreations.arts_and_crafts.common.util;
 
-import com.kekecreations.arts_and_crafts.common.block.BleachedChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -16,7 +14,7 @@ public class ChalkUtils {
         return blockState.getValue(KekeBlockStateProperties.CHALK_PATTERN);
     }
 
-    public static void spawnChalkParticle(Level level, double x, double y, double z, DyeColor colours) {
+    public static void spawnChalkParticle(Level level, double x, double y, double z, Integer colours) {
         level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
         level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
         level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );

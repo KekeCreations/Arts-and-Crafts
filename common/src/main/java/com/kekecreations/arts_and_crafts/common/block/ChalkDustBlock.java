@@ -39,17 +39,17 @@ public class ChalkDustBlock extends DirectionalBlock {
     private static final VoxelShape SOUTH_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 1.0);
 
 
-    private final DyeColor dyeColor;
+    private final Integer dyeColor;
 
     public static final int MAX_STATE = 32;
 
     public static final IntegerProperty CHALK_DUST_STATES = KekeBlockStateProperties.CHALK_PATTERN;
 
-    public DyeColor getDyeColor() {
+    public int getDyeColor() {
         return this.dyeColor;
     }
 
-    public ChalkDustBlock(@Nullable DyeColor dyeColor, Properties properties) {
+    public ChalkDustBlock(Integer dyeColor, Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(this.getChalkDustProperty(), 0).setValue(FACING, Direction.SOUTH));
         this.dyeColor = dyeColor;
@@ -72,7 +72,7 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
-        ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor.getId()));
+        ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor));
         if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
             chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
         }
