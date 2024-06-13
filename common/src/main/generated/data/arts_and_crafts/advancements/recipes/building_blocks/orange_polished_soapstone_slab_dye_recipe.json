@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:orange_dye"
-            ]
+            "items": "minecraft:orange_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "orange_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "orange_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:orange_polished_soapstone_slab_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:black_dye"
-            ]
+            "items": "minecraft:black_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "black_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "black_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:black_mud_brick_slab_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:purple_dye"
-            ]
+            "items": "minecraft:purple_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "purple_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "purple_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:purple_paintbrush"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

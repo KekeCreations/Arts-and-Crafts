@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:boats"
+            "items": "#minecraft:boats"
           }
         ]
       },
@@ -20,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_boat",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_boat"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:cork_chest_boat"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

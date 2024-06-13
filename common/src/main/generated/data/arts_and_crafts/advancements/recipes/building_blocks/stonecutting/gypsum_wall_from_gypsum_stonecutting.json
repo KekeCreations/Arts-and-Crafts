@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:gypsum"
-            ]
+            "items": "arts_and_crafts:gypsum"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_gypsum",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_gypsum"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/gypsum_wall_from_gypsum_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

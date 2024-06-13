@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:gray_dye"
-            ]
+            "items": "minecraft:gray_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "gray_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "gray_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:gray_soapstone_stairs_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

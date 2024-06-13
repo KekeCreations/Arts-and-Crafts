@@ -6,6 +6,7 @@ import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
@@ -39,7 +40,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     /*
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ForgeRegistryHelper.BLOCKS.getEntries();
+       return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get)::iterator;
     }
 
      */

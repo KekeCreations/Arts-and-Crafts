@@ -15,7 +15,7 @@
     "KQK"
   ],
   "result": {
-    "item": "arts_and_crafts:yellow_paintbrush"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "arts_and_crafts:yellow_paintbrush"
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:brown_dye"
-            ]
+            "items": "minecraft:brown_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_needed_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_needed_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:dye_brown_glazed_terracotta"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

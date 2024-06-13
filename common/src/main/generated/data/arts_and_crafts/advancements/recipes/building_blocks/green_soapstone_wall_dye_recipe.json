@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:green_dye"
-            ]
+            "items": "minecraft:green_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "green_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "green_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:green_soapstone_wall_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

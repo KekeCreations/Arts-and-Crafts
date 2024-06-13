@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:cyan_soapstone"
-            ]
+            "items": "arts_and_crafts:cyan_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_cyan_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_cyan_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/cyan_soapstone_stairs_from_cyan_soapstone_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

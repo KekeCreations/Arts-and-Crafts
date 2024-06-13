@@ -15,7 +15,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "arts_and_crafts:cork_fence"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:cork_fence"
+  }
 }

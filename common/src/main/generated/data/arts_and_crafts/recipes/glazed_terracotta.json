@@ -6,5 +6,8 @@
   "ingredient": {
     "item": "minecraft:terracotta"
   },
-  "result": "arts_and_crafts:glazed_terracotta"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:glazed_terracotta"
+  }
 }

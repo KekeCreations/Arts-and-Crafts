@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:lime_dye"
-            ]
+            "items": "minecraft:lime_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "lime_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "lime_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:lime_terracotta_shingle_slab_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

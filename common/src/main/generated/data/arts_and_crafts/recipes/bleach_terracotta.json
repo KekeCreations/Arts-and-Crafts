@@ -64,7 +64,6 @@
   ],
   "result": {
     "count": 8,
-    "item": "minecraft:terracotta"
-  },
-  "show_notification": true
+    "id": "minecraft:terracotta"
+  }
 }

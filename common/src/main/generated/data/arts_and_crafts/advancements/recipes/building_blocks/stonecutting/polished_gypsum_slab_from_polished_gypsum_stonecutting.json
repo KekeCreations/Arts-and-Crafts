@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:polished_gypsum"
-            ]
+            "items": "arts_and_crafts:polished_gypsum"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_polished_gypsum",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_polished_gypsum"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/polished_gypsum_slab_from_polished_gypsum_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:cyan_chalk"
-            ]
+            "items": "arts_and_crafts:cyan_chalk"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_cyan_chalk",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_cyan_chalk"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/cyan_chalk_stick_from_cyan_chalk_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

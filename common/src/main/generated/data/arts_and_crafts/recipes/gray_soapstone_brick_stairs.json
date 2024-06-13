@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "arts_and_crafts:gray_soapstone_brick_stairs"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:gray_soapstone_brick_stairs"
+  }
 }

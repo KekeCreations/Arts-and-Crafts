@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:bleached_wool"
-            ]
+            "items": "arts_and_crafts:bleached_wool"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_bleached_wool",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_bleached_wool"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:bleached_bed"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

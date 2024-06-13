@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:orange_terracotta"
-            ]
+            "items": "minecraft:orange_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "orange_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "orange_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:orange_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

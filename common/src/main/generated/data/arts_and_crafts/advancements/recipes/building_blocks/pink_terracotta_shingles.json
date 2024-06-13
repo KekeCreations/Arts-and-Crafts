@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:pink_terracotta"
-            ]
+            "items": "minecraft:pink_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "pink_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "pink_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:pink_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

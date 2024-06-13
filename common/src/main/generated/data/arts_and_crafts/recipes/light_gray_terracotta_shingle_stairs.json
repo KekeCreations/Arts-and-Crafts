@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "arts_and_crafts:light_gray_terracotta_shingle_stairs"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:light_gray_terracotta_shingle_stairs"
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:magenta_terracotta"
-            ]
+            "items": "minecraft:magenta_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "magenta_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "magenta_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:magenta_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

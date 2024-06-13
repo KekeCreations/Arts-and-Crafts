@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:gray_bed"
+    "count": 1,
+    "id": "minecraft:gray_bed"
   }
 }

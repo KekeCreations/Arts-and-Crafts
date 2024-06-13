@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:purple_soapstone"
-            ]
+            "items": "arts_and_crafts:purple_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_purple_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_purple_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/purple_soapstone_brick_stairs_from_purple_soapstone_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

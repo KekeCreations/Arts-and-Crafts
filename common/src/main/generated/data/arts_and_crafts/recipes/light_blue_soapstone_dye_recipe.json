@@ -17,7 +17,6 @@
   ],
   "result": {
     "count": 8,
-    "item": "arts_and_crafts:light_blue_soapstone"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:light_blue_soapstone"
+  }
 }

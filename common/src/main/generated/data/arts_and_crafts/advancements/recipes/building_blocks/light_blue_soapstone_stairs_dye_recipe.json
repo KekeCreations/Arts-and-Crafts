@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:light_blue_dye"
-            ]
+            "items": "minecraft:light_blue_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "light_blue_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "light_blue_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:light_blue_soapstone_stairs_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

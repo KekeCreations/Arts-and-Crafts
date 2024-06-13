@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:yellow_soapstone_bricks"
-            ]
+            "items": "arts_and_crafts:yellow_soapstone_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_yellow_soapstone_bricks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_yellow_soapstone_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/yellow_soapstone_brick_wall_from_yellow_soapstone_bricks_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

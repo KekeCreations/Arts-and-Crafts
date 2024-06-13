@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:magenta_terracotta_shingles"
-            ]
+            "items": "arts_and_crafts:magenta_terracotta_shingles"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_magenta_terracotta_shingles",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_magenta_terracotta_shingles"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/magenta_terracotta_shingle_stairs_from_magenta_terracotta_shingles_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

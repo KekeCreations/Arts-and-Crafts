@@ -31,7 +31,7 @@ runs {
     }
 }
 
-sourceSets.main.resources { srcDir project(":common").file('src/generated/resources').getAbsolutePath() }
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
 
 dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"

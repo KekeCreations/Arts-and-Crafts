@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:bleachdew"
-            ]
+            "items": "arts_and_crafts:bleachdew"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_needed_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_needed_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:bleach_carpet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

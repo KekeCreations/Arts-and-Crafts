@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:terracotta"
-            ]
+            "items": "minecraft:terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

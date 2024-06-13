@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:green_terracotta"
-            ]
+            "items": "minecraft:green_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "green_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "green_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:green_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

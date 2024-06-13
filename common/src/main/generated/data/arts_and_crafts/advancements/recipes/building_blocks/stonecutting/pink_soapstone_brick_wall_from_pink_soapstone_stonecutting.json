@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:pink_soapstone"
-            ]
+            "items": "arts_and_crafts:pink_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_pink_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_pink_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/pink_soapstone_brick_wall_from_pink_soapstone_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

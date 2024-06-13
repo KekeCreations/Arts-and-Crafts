@@ -1,8 +1,10 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "item": "arts_and_crafts:orange_soapstone"
   },
-  "result": "arts_and_crafts:orange_polished_soapstone_stairs"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:orange_polished_soapstone_stairs"
+  }
 }

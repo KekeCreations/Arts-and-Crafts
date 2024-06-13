@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:calcite"
-            ]
+            "items": "minecraft:calcite"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:gypsum"
-            ]
+            "items": "arts_and_crafts:gypsum"
           }
         ]
       },
@@ -34,15 +30,14 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "calcite",
-      "gypsum",
-      "has_the_recipe"
+      "gypsum"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:white_chalk"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

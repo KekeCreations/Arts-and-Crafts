@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:white_terracotta_shingles"
-            ]
+            "items": "arts_and_crafts:white_terracotta_shingles"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_white_terracotta_shingles",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_white_terracotta_shingles"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/white_terracotta_shingle_stairs_from_white_terracotta_shingles_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:bleachdew"
-            ]
+            "items": "arts_and_crafts:bleachdew"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "bleachdew",
-      "has_the_recipe"
+      "has_the_recipe",
+      "bleachdew"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:gray_banner_to_white_banner"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

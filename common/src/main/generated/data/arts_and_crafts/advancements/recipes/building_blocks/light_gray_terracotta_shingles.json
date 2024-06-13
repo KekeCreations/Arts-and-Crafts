@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:light_gray_terracotta"
-            ]
+            "items": "minecraft:light_gray_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "light_gray_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "light_gray_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:light_gray_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

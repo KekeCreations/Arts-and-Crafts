@@ -1,8 +1,10 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "item": "arts_and_crafts:lime_terracotta_shingles"
   },
-  "result": "arts_and_crafts:lime_terracotta_shingle_wall"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:lime_terracotta_shingle_wall"
+  }
 }

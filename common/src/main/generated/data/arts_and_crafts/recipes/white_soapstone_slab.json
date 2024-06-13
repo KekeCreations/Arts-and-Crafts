@@ -11,7 +11,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "arts_and_crafts:white_soapstone_slab"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:white_soapstone_slab"
+  }
 }

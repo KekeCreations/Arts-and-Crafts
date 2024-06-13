@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:gravel"
-            ]
+            "items": "minecraft:gravel"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:sand"
-            ]
+            "items": "minecraft:sand"
           }
         ]
       },
@@ -34,15 +30,14 @@
   },
   "requirements": [
     [
+      "has_the_recipe",
       "has_sand",
-      "has_gravel",
-      "has_the_recipe"
+      "has_gravel"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:bleached_concrete_powder"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

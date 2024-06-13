@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:terracotta_shingles"
-            ]
+            "items": "arts_and_crafts:terracotta_shingles"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_terracotta_shingles",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_terracotta_shingles"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/terracotta_shingle_slab_from_terracotta_shingles_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

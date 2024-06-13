@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:lime_soapstone"
-            ]
+            "items": "arts_and_crafts:lime_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_lime_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_lime_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/lime_soapstone_brick_wall_from_lime_soapstone_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

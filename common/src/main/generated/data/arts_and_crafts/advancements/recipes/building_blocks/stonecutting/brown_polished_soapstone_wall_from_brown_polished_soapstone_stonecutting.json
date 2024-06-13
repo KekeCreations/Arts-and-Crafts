@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:brown_polished_soapstone"
-            ]
+            "items": "arts_and_crafts:brown_polished_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_brown_polished_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_brown_polished_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/brown_polished_soapstone_wall_from_brown_polished_soapstone_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

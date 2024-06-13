@@ -64,7 +64,6 @@
   ],
   "result": {
     "count": 8,
-    "item": "arts_and_crafts:terracotta_shingles"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:terracotta_shingles"
+  }
 }

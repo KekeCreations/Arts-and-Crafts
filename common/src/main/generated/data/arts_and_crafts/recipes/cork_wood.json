@@ -12,7 +12,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "arts_and_crafts:cork_wood"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:cork_wood"
+  }
 }

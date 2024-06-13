@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:magenta_chalk"
-            ]
+            "items": "arts_and_crafts:magenta_chalk"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_magenta_chalk",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_magenta_chalk"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/magenta_chalk_stick_from_magenta_chalk_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:orange_polished_soapstone"
-            ]
+            "items": "arts_and_crafts:orange_polished_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "orange_polished_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "orange_polished_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:orange_polished_soapstone_wall"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

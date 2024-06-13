@@ -1,8 +1,10 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "item": "arts_and_crafts:pink_soapstone"
   },
-  "result": "arts_and_crafts:pink_soapstone_wall"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:pink_soapstone_wall"
+  }
 }

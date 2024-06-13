@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:brown_terracotta_shingles"
-            ]
+            "items": "arts_and_crafts:brown_terracotta_shingles"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "brown_terracotta_shingles",
-      "has_the_recipe"
+      "has_the_recipe",
+      "brown_terracotta_shingles"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:brown_terracotta_shingle_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

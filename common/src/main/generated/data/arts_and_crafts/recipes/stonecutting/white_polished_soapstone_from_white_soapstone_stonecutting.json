@@ -1,8 +1,10 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "item": "arts_and_crafts:white_soapstone"
   },
-  "result": "arts_and_crafts:white_polished_soapstone"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:white_polished_soapstone"
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:orange_mud_bricks"
-            ]
+            "items": "arts_and_crafts:orange_mud_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "orange_mud_bricks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "orange_mud_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:orange_mud_brick_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

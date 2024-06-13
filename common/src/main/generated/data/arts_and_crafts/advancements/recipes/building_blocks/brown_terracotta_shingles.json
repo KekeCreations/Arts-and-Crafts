@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:brown_terracotta"
-            ]
+            "items": "minecraft:brown_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "brown_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "brown_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:brown_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -17,7 +17,6 @@
   ],
   "result": {
     "count": 8,
-    "item": "arts_and_crafts:magenta_polished_soapstone_slab"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:magenta_polished_soapstone_slab"
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:blue_soapstone"
-            ]
+            "items": "arts_and_crafts:blue_soapstone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "blue_soapstone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "blue_soapstone"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:blue_soapstone_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

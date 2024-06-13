@@ -11,6 +11,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:white_banner"
+    "count": 1,
+    "id": "minecraft:white_banner"
   }
 }

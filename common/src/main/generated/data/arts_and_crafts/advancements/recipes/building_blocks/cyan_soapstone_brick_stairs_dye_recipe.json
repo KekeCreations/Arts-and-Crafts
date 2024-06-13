@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:cyan_dye"
-            ]
+            "items": "minecraft:cyan_dye"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "cyan_dye",
-      "has_the_recipe"
+      "has_the_recipe",
+      "cyan_dye"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:cyan_soapstone_brick_stairs_dye_recipe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

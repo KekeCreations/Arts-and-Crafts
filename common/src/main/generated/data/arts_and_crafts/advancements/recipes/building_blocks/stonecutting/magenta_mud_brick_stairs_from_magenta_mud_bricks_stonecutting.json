@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:magenta_mud_bricks"
-            ]
+            "items": "arts_and_crafts:magenta_mud_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_magenta_mud_bricks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_magenta_mud_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/magenta_mud_brick_stairs_from_magenta_mud_bricks_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

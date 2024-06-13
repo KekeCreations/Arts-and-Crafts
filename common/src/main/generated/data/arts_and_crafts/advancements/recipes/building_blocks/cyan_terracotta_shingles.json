@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:cyan_terracotta"
-            ]
+            "items": "minecraft:cyan_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "cyan_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "cyan_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:cyan_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

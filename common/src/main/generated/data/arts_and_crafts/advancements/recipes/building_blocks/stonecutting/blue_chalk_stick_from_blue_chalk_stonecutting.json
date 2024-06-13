@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:blue_chalk"
-            ]
+            "items": "arts_and_crafts:blue_chalk"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_blue_chalk",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_blue_chalk"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:stonecutting/blue_chalk_stick_from_blue_chalk_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

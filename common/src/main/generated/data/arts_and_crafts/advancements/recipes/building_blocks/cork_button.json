@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "arts_and_crafts:cork_planks"
-            ]
+            "items": "arts_and_crafts:cork_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_cork_planks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_cork_planks"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:cork_button"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

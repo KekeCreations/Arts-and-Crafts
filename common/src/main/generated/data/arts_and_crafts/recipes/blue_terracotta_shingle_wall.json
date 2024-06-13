@@ -12,7 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "arts_and_crafts:blue_terracotta_shingle_wall"
-  },
-  "show_notification": true
+    "id": "arts_and_crafts:blue_terracotta_shingle_wall"
+  }
 }

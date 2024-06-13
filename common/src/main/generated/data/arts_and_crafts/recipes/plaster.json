@@ -6,5 +6,8 @@
   "ingredient": {
     "item": "arts_and_crafts:gypsum"
   },
-  "result": "arts_and_crafts:plaster"
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:plaster"
+  }
 }

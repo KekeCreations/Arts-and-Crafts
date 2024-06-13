@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:purple_terracotta"
-            ]
+            "items": "minecraft:purple_terracotta"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "purple_terracotta",
-      "has_the_recipe"
+      "has_the_recipe",
+      "purple_terracotta"
     ]
   ],
   "rewards": {
     "recipes": [
       "arts_and_crafts:purple_terracotta_shingles"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
