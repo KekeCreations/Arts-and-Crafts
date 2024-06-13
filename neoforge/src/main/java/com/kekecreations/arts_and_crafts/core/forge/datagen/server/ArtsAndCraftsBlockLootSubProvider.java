@@ -43,14 +43,6 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
     }
 
-    /*
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-       return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get)::iterator;
-    }
-
-     */
-
     @Override
     public void generate() {
         terracottaShingles();
