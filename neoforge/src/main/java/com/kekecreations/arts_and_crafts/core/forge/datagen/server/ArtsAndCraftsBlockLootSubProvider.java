@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper
 import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -31,10 +32,15 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
-
     private static final Set<Item> EXPLOSION_RESISTANT = Set.of();
-    public ArtsAndCraftsBlockLootSubProvider() {
-        super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags());
+
+    public ArtsAndCraftsBlockLootSubProvider(HolderLookup.Provider provider) {
+        super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
+    }
+
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
     }
 
     /*
