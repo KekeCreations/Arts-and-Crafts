@@ -33,7 +33,7 @@ public class ForgeRegistryHelper implements RegistryHelper {
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ArtsAndCrafts.MOD_ID);
 
     public Supplier<SoundEvent> registerSound(String id) {
-        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ArtsAndCrafts.MOD_ID, id)));
+        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, id)));
     }
 
 
