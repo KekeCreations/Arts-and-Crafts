@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsDataComponents;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -73,8 +74,8 @@ public class ChalkDustBlock extends DirectionalBlock {
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor));
-        if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
-            chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
+        if (itemStack.has(ArtsAndCraftsDataComponents.CHALK_PATTERN.get()) && Screen.hasControlDown()) {
+            itemStack.set(ArtsAndCraftsDataComponents.CHALK_PATTERN.get(), getChalkDustStates(blockState));
         }
         return itemStack;
     }

@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.core.forge.platform;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
@@ -29,8 +30,7 @@ public class ForgeRegistryHelper implements RegistryHelper {
 
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZER = DeferredRegister.create(Registries.RECIPE_SERIALIZER, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(Registries.PARTICLE_TYPE, ArtsAndCrafts.MOD_ID);
-
-
+    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ArtsAndCrafts.MOD_ID);
 
     public Supplier<SoundEvent> registerSound(String id) {
         return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ArtsAndCrafts.MOD_ID, id)));
@@ -65,6 +65,11 @@ public class ForgeRegistryHelper implements RegistryHelper {
     @Override
     public <T extends RecipeSerializer<?>> Supplier<T> registerRecipeSerializer(String id, Supplier<T> itemSupplier) {
         return RECIPE_SERIALIZER.register(id, itemSupplier);
+    }
+
+    @Override
+    public <T> Supplier<DataComponentType<T>> registerDataComponent(String id, Supplier<DataComponentType<T>> dataSupplier) {
+        return DATA_COMPONENT_TYPES.register(id, dataSupplier);
     }
 
     @Override

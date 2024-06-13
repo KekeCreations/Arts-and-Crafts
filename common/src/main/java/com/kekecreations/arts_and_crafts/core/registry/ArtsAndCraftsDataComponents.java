@@ -6,14 +6,19 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.util.ExtraCodecs;
 
 import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
 
 public class ArtsAndCraftsDataComponents {
 
-    public static final Supplier<DataComponentType<Integer>> CHALK_PATTERN = registerDataComponent("chalk_pattern", () -> DataComponentType.builder().persistent(ExtraCodecs.intRange(0, 99)).networkSynchronized(ByteBufCodecs.VAR_INT));
+    public static final Supplier<DataComponentType<Integer>> CHALK_PATTERN = registerDataComponent("chalk_pattern", builder -> {
+        builder.persistent(ExtraCodecs.intRange(0, 99));
+        builder.networkSynchronized(ByteBufCodecs.VAR_INT);
+        return builder;
+    });
 
 
-    private static <T extends DataComponentType<?>> Supplier registerDataComponent(String name, Supplier<T> itemSupplier) {
-        return Services.REGISTRY.registerDataComponent(name, itemSupplier);
+    private static <T> Supplier<DataComponentType<T>> registerDataComponent(String name, UnaryOperator<DataComponentType.Builder<T>> dataComponent) {
+        return Services.REGISTRY.registerDataComponent(name, () -> dataComponent.apply(DataComponentType.builder()).build());
     }
 
     public static void loadComponents() {

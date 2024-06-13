@@ -30,7 +30,7 @@ public interface RegistryHelper {
 
     <T extends RecipeSerializer<?>> Supplier<T> registerRecipeSerializer(String id, java.util.function.Supplier<T> recipeSupplier);
 
-    <T extends DataComponentType<?>> Supplier<T> registerDataComponent(String id, java.util.function.Supplier<T> dataSupplier);
+    <T> Supplier<DataComponentType<T>> registerDataComponent(String id, java.util.function.Supplier<DataComponentType<T>> dataSupplier);
 
 
 
