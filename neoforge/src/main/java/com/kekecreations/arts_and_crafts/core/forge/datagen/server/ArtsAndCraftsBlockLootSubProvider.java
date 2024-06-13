@@ -32,19 +32,15 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
-
     private static final Set<Item> EXPLOSION_RESISTANT = Set.of();
+
     public ArtsAndCraftsBlockLootSubProvider(HolderLookup.Provider provider) {
         super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
-
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ForgeRegistryHelper.BLOCKS.getEntries().stream()
-                .map(DeferredHolder::get)
-                .map(block -> (Block) block)
-                .collect(Collectors.toSet());
+        return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
     }
 
     @Override
