@@ -25,7 +25,7 @@ public class ArtsAndCraftsTags {
 
 
         private static TagKey<Item> tag(String name) {
-            return TagKey.create(Registries.ITEM, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));
         }
     }
 
@@ -37,7 +37,7 @@ public class ArtsAndCraftsTags {
                 = tag("lily_pads");
 
         private static TagKey<Block> tag(String name) {
-            return TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));
         }
 
     }
@@ -50,7 +50,7 @@ public class ArtsAndCraftsTags {
                 = tag("gypsum_can_generate_in");
 
         private static TagKey<Biome> tag(String name) {
-            return TagKey.create(Registries.BIOME, new ResourceLocation(ArtsAndCrafts.MOD_ID, name));
+            return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));
         }
 
     }

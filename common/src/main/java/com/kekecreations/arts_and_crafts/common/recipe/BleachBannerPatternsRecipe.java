@@ -11,6 +11,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CraftingInput;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
@@ -24,12 +25,12 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         super(craftingBookCategory);
     }
 
-    public boolean matches(CraftingContainer craftingContainer, @NotNull Level level) {
+    public boolean matches(CraftingInput craftingInput, @NotNull Level level) {
         int i = 0;
         int j = 0;
 
-        for(int k = 0; k < craftingContainer.getContainerSize(); ++k) {
-            ItemStack itemStack = craftingContainer.getItem(k);
+        for(int k = 0; k < craftingInput.size(); ++k) {
+            ItemStack itemStack = craftingInput.getItem(k);
             if (!itemStack.isEmpty()) {
                 if (itemStack.is(ItemTags.BANNERS) && itemStack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY).layers().size() > 0) {
                     ++i;
@@ -50,11 +51,11 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull HolderLookup.Provider provider) {
+    public @NotNull ItemStack assemble(CraftingInput craftingInput, @NotNull HolderLookup.Provider provider) {
         ItemStack itemStack = ItemStack.EMPTY;
 
-        for(int i = 0; i < craftingContainer.getContainerSize(); ++i) {
-            ItemStack itemStack2 = craftingContainer.getItem(i);
+        for(int i = 0; i < craftingInput.size(); ++i) {
+            ItemStack itemStack2 = craftingInput.getItem(i);
             if (!itemStack2.isEmpty()) {
                 Item item = itemStack2.getItem();
                 if (Block.byItem(item) instanceof BannerBlock) {

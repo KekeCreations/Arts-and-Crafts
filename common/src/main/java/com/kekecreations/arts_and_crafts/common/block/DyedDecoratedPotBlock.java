@@ -16,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
@@ -58,7 +59,7 @@ public class DyedDecoratedPotBlock extends BaseEntityBlock implements SimpleWate
 
     private final DyeColor dyeColor;
 
-    public static final ResourceLocation SHERDS_DYNAMIC_DROP_ID = new ResourceLocation("sherds");
+    public static final ResourceLocation SHERDS_DYNAMIC_DROP_ID = ResourceLocation.withDefaultNamespace("sherds");
     private static final VoxelShape BOUNDING_BOX = Block.box(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
     private static final DirectionProperty HORIZONTAL_FACING;
     public static final BooleanProperty CRACKED;
@@ -176,7 +177,7 @@ public class DyedDecoratedPotBlock extends BaseEntityBlock implements SimpleWate
     public BlockState playerWillDestroy(Level level, BlockPos blockPos, BlockState blockState, Player player) {
         ItemStack itemStack = player.getMainHandItem();
         BlockState blockState2 = blockState;
-        if (itemStack.is(ItemTags.BREAKS_DECORATED_POTS) && !EnchantmentHelper.hasSilkTouch(itemStack)) {
+        if (itemStack.is(ItemTags.BREAKS_DECORATED_POTS) && !EnchantmentHelper.hasTag(itemStack, EnchantmentTags.PREVENTS_DECORATED_POT_SHATTERING)) {
             blockState2 = (BlockState)blockState.setValue(CRACKED, true);
             level.setBlock(blockPos, blockState2, 4);
         }

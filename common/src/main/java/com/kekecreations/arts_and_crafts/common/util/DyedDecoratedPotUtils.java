@@ -62,6 +62,6 @@ public class DyedDecoratedPotUtils {
         if (colour == DyeColor.YELLOW) {
             return Sheets.getDecoratedPotMaterial(KekeCustomSherdPatterns.YELLOW_DECORATED_POT_BASE);
         }
-        return Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BASE);
+        return Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BLANK);
     }
 }
