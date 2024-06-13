@@ -3,7 +3,9 @@ package com.kekecreations.arts_and_crafts.common.recipe;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.DyeItem;
@@ -16,11 +18,12 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DecoratedPotBlock;
+import net.minecraft.world.level.block.entity.PotDecorations;
 import org.jetbrains.annotations.NotNull;
 
 public class DyedDecoratedPotRecipe extends CustomRecipe {
-    public DyedDecoratedPotRecipe(ResourceLocation resourceLocation, CraftingBookCategory craftingBookCategory) {
-        super(resourceLocation, craftingBookCategory);
+    public DyedDecoratedPotRecipe(CraftingBookCategory craftingBookCategory) {
+        super(craftingBookCategory);
     }
 
     public boolean matches(CraftingContainer craftingContainer, @NotNull Level level) {
@@ -49,7 +52,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull RegistryAccess registryAccess) {
+    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull HolderLookup.Provider provider) {
         ItemStack itemStack = ItemStack.EMPTY;
         DyeItem dyeItem = (DyeItem)Items.WHITE_DYE;
 
@@ -66,9 +69,10 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         }
 
         ItemStack itemStack3 = DyedDecoratedPotBlock.getColoredItemStack(dyeItem.getDyeColor());
-        if (itemStack.hasTag()) {
-            assert itemStack.getTag() != null;
-            itemStack3.setTag(itemStack.getTag().copy());
+        if (!itemStack.getOrDefault(DataComponents.POT_DECORATIONS, PotDecorations.EMPTY).ordered().isEmpty()) {
+            //assert itemStack.getTag() != null;
+            itemStack3.set(DataComponents.POT_DECORATIONS, itemStack.getComponents().get(DataComponents.POT_DECORATIONS));
+            //itemStack3.setTag(itemStack.getTag().copy());
         }
 
         return itemStack3;

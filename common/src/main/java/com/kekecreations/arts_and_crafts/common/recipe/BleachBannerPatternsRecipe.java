@@ -3,7 +3,9 @@ package com.kekecreations.arts_and_crafts.common.recipe;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.inventory.CraftingContainer;
@@ -14,11 +16,12 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BannerBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import org.jetbrains.annotations.NotNull;
 
 public class BleachBannerPatternsRecipe extends CustomRecipe {
-    public BleachBannerPatternsRecipe(ResourceLocation resourceLocation, CraftingBookCategory craftingBookCategory) {
-        super(resourceLocation, craftingBookCategory);
+    public BleachBannerPatternsRecipe(CraftingBookCategory craftingBookCategory) {
+        super(craftingBookCategory);
     }
 
     public boolean matches(CraftingContainer craftingContainer, @NotNull Level level) {
@@ -28,7 +31,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         for(int k = 0; k < craftingContainer.getContainerSize(); ++k) {
             ItemStack itemStack = craftingContainer.getItem(k);
             if (!itemStack.isEmpty()) {
-                if (itemStack.is(ItemTags.BANNERS) && itemStack.hasTag()) {
+                if (itemStack.is(ItemTags.BANNERS) && itemStack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY).layers().size() > 0) {
                     ++i;
                 } else {
                     if (!(itemStack.is(KekeItems.BLEACHDEW.get()))) {
@@ -47,7 +50,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull RegistryAccess registryAccess) {
+    public @NotNull ItemStack assemble(CraftingContainer craftingContainer, @NotNull HolderLookup.Provider provider) {
         ItemStack itemStack = ItemStack.EMPTY;
 
         for(int i = 0; i < craftingContainer.getContainerSize(); ++i) {

@@ -10,12 +10,14 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class DyedDecoratedPotBlock extends DecoratedPotBlock {
@@ -34,13 +36,18 @@ public class DyedDecoratedPotBlock extends DecoratedPotBlock {
         return customDecoratedPotBlockEntity;
     }
 
-
     @Override
-    public @NotNull List<ItemStack> getDrops(@NotNull BlockState blockState, LootParams.Builder builder) {
-        BlockEntity blockentity = builder.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
-        if (blockentity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
-            builder.withDynamicDrop(SHERDS_DYNAMIC_DROP_ID, (p_284876_) -> {
-                dyedDecoratedPotBlockEntity.getDecorations().sorted().map(Item::getDefaultInstance).forEach(p_284876_);
+    protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
+        BlockEntity blockEntity = (BlockEntity)builder.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
+        if (blockEntity instanceof DyedDecoratedPotBlockEntity decoratedPotBlockEntity) {
+            builder.withDynamicDrop(SHERDS_DYNAMIC_DROP_ID, (consumer) -> {
+                Iterator var2 = decoratedPotBlockEntity.getDecorations().ordered().iterator();
+
+                while(var2.hasNext()) {
+                    Item item = (Item)var2.next();
+                    consumer.accept(item.getDefaultInstance());
+                }
+
             });
         }
 

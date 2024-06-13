@@ -12,6 +12,7 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
@@ -19,6 +20,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -28,6 +30,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -44,7 +47,7 @@ public class PaintbrushUtils {
                 .setValue(BlockStateProperties.WATERLOGGED, oldState.getValue(BlockStateProperties.WATERLOGGED));
     }
 
-    public static void setPotDecorations(Level level, BlockPos pos, DecoratedPotBlockEntity.Decorations decorations) {
+    public static void setPotDecorations(Level level, BlockPos pos, PotDecorations decorations) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedPot) {
             dyedPot.setDecoration(decorations);
@@ -74,10 +77,14 @@ public class PaintbrushUtils {
                 CriteriaTriggers.PLACED_BLOCK.trigger(serverPlayer, pos, itemStack);
             }
             blockState.getBlock().setPlacedBy(level, pos, blockState, player, itemStack);
-            itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+            if (hand == InteractionHand.MAIN_HAND) {
+                itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+            } else {
+                itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+            }
             if (itemStack.isEmpty()) {
                 ItemStack itemStack2 = new ItemStack(Items.BRUSH);
-                itemStack2.setTag(itemStack.getTag());
+                itemStack2.set(DataComponents.CUSTOM_NAME, itemStack.getComponents().get(DataComponents.CUSTOM_NAME));
                 player.setItemInHand(hand, itemStack2);
             }
 
@@ -120,7 +127,11 @@ public class PaintbrushUtils {
                     .setValue(BlockStateProperties.BED_PART, BedPart.FOOT)
                     .setValue(BlockStateProperties.OCCUPIED, blockState.getValue(BlockStateProperties.OCCUPIED)));
         }
-        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+        if (hand == InteractionHand.MAIN_HAND) {
+            itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+        } else {
+            itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+        }
         level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
         level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, blockState));
     }
@@ -198,13 +209,13 @@ public class PaintbrushUtils {
     public static void paintDecoratedPot(Level level, BlockEntity blockEntity, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand, DyeColor paintbrushDyeColour) {
         BlockState blockState = level.getBlockState(pos);
         if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
-            DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
+            PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
             DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
             level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
             PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
         }
         else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
-            DecoratedPotBlockEntity.Decorations oldDecorations = decoratedPotBlockEntity.getDecorations();
+            PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
             DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
             level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
             PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);

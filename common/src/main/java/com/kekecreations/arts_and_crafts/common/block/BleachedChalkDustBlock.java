@@ -1,13 +1,12 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -23,10 +22,9 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.util.Arrays;
-import java.util.Map;
 import java.util.Objects;
 
 public class BleachedChalkDustBlock extends DirectionalBlock  {
@@ -48,6 +46,12 @@ public class BleachedChalkDustBlock extends DirectionalBlock  {
         this.registerDefaultState(this.stateDefinition.any().setValue(this.getChalkDustProperty(), 0).setValue(FACING, Direction.SOUTH));
     }
 
+    public static final MapCodec<BleachedChalkDustBlock> CODEC = simpleCodec(BleachedChalkDustBlock::new);
+    @Override
+    protected MapCodec<? extends DirectionalBlock> codec() {
+        return CODEC;
+    }
+
     protected IntegerProperty getChalkDustProperty() {
         return CHALK_DUST_STATES;
     }
@@ -64,7 +68,7 @@ public class BleachedChalkDustBlock extends DirectionalBlock  {
     }
 
     @Override
-    public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+    public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         ItemStack itemStack = new ItemStack(KekeItems.BLEACHED_CHALK_STICK.get());
         if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
             chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));

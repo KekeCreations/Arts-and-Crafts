@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class FlammableFenceGateBlock extends FenceGateBlock {
 
-    public FlammableFenceGateBlock(Properties $$0, WoodType $$1) {
-        super($$0, $$1);
+    public FlammableFenceGateBlock(WoodType woodType, Properties properties) {
+        super(woodType, properties);
     }
 }

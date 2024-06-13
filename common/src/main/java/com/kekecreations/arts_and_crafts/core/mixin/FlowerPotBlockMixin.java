@@ -20,7 +20,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(FlowerPotBlock.class)
 public class FlowerPotBlockMixin {
 
-    @Inject(method = "use", at = @At("TAIL"), cancellable = true)
+    /*
+    @Inject(method = "useItemOn(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/ItemInteractionResult;", at = @At("TAIL"), cancellable = true)
     public void arts_and_crafts_use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult $$5, CallbackInfoReturnable<InteractionResult> cir) {
         if (!level.isClientSide()) {
             ItemStack itemStack = player.getItemInHand(interactionHand);
@@ -33,4 +34,6 @@ public class FlowerPotBlockMixin {
             }
         }
     }
+
+     */
 }

@@ -31,7 +31,7 @@ public class KekeRecipeSerializer<T extends Recipe<?>> {
     }
 
     private static <S extends RecipeSerializer<T>, T extends Recipe<?>> Supplier registerRecipe(String string, Supplier<S> recipeSerializer) {
-        return Services.REGISTRY.register(BuiltInRegistries.RECIPE_SERIALIZER, string, recipeSerializer);
+        return Services.REGISTRY.registerRecipeSerializer(string, recipeSerializer);
     }
 
 

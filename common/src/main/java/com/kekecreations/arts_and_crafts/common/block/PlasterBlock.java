@@ -1,5 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.DyeColor;
@@ -7,7 +9,9 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -17,8 +21,8 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -96,5 +100,16 @@ public class PlasterBlock extends DirectionalBlock implements SimpleWaterloggedB
 
     static {
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    }
+
+    public static final MapCodec<PlasterBlock> CODEC = RecordCodecBuilder.mapCodec(($$0) -> {
+        return $$0.group(DyeColor.CODEC.fieldOf("dyecolor").forGetter(($$0x) -> {
+            return $$0x.dyeColor;
+        }), propertiesCodec()).apply($$0, PlasterBlock::new);
+    });
+
+    @Override
+    protected MapCodec<? extends DirectionalBlock> codec() {
+        return CODEC;
     }
 }

@@ -67,7 +67,7 @@ public class KekeItems {
 
 
     private static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {
-        return Services.REGISTRY.register(BuiltInRegistries.ITEM, name, itemSupplier);
+        return Services.REGISTRY.registerItem(name, itemSupplier);
     }
 
 

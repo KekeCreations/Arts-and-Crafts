@@ -69,14 +69,14 @@ public class KekeEntityTypes {
 
 
     private static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntityType(String name, Supplier<BlockEntityType<T>> type) {
-        return Services.REGISTRY.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, name, type);
+        return Services.REGISTRY.registerBlockEntityType(name, type);
     }
     private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(IPlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
         return Services.PLATFORM.createBlockEntity(blockEntitySupplier, blocks);
     }
 
     private static <T extends EntityType<?>> Supplier<T> registerEntityType(String name, Supplier<T> entityTypeSupplier) {
-        return Services.REGISTRY.register(BuiltInRegistries.ENTITY_TYPE, name, entityTypeSupplier);
+        return Services.REGISTRY.registerEntityType(name, entityTypeSupplier);
     }
 
     public static void register() {

@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class PaintbrushItem extends Item {
@@ -38,12 +39,12 @@ public class PaintbrushItem extends Item {
             Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
             if (finalBlock != null && finalBlock != blockState.getBlock()) {
                 if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
-                    DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
+                    PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
                     return InteractionResult.SUCCESS;
                 } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
-                    DecoratedPotBlockEntity.Decorations oldDecorations = decoratedPotBlockEntity.getDecorations();
+                    PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
                     return InteractionResult.sidedSuccess(true);

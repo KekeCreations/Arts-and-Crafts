@@ -12,6 +12,8 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -103,7 +105,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
         return !blockState.getValue(SHEARED) && !isMaxAge(blockState);
     }
 
@@ -119,7 +121,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
 
     private void dropBleach(Level level, BlockPos pos) {
         ServerLevel serverLevel = (ServerLevel) level;
-        LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST);
+        LootTable lootTable = serverLevel.getServer().reloadableRegistries().getLootTable(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST);
         LootParams lootParams = (new LootParams.Builder(serverLevel)).withParameter(LootContextParams.ORIGIN, pos.getCenter()).withParameter(LootContextParams.TOOL, ItemStack.EMPTY).withParameter(LootContextParams.BLOCK_STATE, this.defaultBlockState()).create(LootContextParamSets.BLOCK);
         List<ItemStack> itemStackList = lootTable.getRandomItems(lootParams);
 
@@ -130,17 +132,17 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     }
 
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
+    public ItemInteractionResult useItemOn(ItemStack itemStack, @NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
+        //ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide()) {
             if (!blockState.getValue(SHEARED)) {
                 if (itemStack.is(Items.SHEARS)) {
                     BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, true).setValue(BlockStateProperties.AGE_3, blockState.getValue(BlockStateProperties.AGE_3)).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
                     if (!player.getAbilities().instabuild) {
-                        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(interactionHand));
+                        itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
                     }
-                    return InteractionResult.SUCCESS;
+                    return ItemInteractionResult.SUCCESS;
                 }
                 else if (isMaxAge(blockState)) {
                     //LOOT
@@ -148,14 +150,14 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
                     //SET CROP BACK TO 1
                     BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, blockState.getValue(SHEARED)).setValue(BlockStateProperties.AGE_3, 1).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
-                    return InteractionResult.SUCCESS;
+                    return ItemInteractionResult.SUCCESS;
                 }
             }
         }
-        return InteractionResult.FAIL;
+        return ItemInteractionResult.FAIL;
     }
 
-    public ItemStack getCloneItemStack(BlockGetter $$0, BlockPos $$1, BlockState $$2) {
+    public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos $$1, BlockState $$2) {
         return KekeItems.LOTUS_PISTILS.get().getDefaultInstance();
     }
 

@@ -42,9 +42,9 @@ public class CustomChestBoat extends ChestBoat implements CustomBoatAccessor {
 
 
     @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_ID_BOAT_WOOD_TYPE, CustomBoat.WoodType.OAK.ordinal());
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(DATA_ID_BOAT_WOOD_TYPE, CustomBoat.WoodType.OAK.ordinal());
     }
 
     @Override

@@ -19,12 +19,15 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
+import net.minecraft.world.level.block.entity.PotDecorations;
 
 import java.util.Objects;
+import java.util.Optional;
 
 public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPotBlockEntity> {
     private static final String NECK = "neck";
@@ -65,19 +68,47 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         poseStack.translate(0.5, 0.0, 0.5);
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - direction.toYRot()));
         poseStack.translate(-0.5, 0.0, -0.5);
+        DecoratedPotBlockEntity.WobbleStyle wobbleStyle = decoratedPotBlockEntity.lastWobbleStyle;
+        if (wobbleStyle != null && decoratedPotBlockEntity.getLevel() != null) {
+            float g = ((float)(decoratedPotBlockEntity.getLevel().getGameTime() - decoratedPotBlockEntity.wobbleStartedAtTick) + f) / (float)wobbleStyle.duration;
+            if (g >= 0.0F && g <= 1.0F) {
+                float h;
+                float k;
+                if (wobbleStyle == DecoratedPotBlockEntity.WobbleStyle.POSITIVE) {
+                    h = 0.015625F;
+                    k = g * 6.2831855F;
+                    float l = -1.5F * (Mth.cos(k) + 0.5F) * Mth.sin(k / 2.0F);
+                    poseStack.rotateAround(Axis.XP.rotation(l * 0.015625F), 0.5F, 0.0F, 0.5F);
+                    float m = Mth.sin(k);
+                    poseStack.rotateAround(Axis.ZP.rotation(m * 0.015625F), 0.5F, 0.0F, 0.5F);
+                } else {
+                    h = Mth.sin(-g * 3.0F * 3.1415927F) * 0.125F;
+                    k = 1.0F - g;
+                    poseStack.rotateAround(Axis.YP.rotation(h * k), 0.5F, 0.0F, 0.5F);
+                }
+            }
+        }
         VertexConsumer vertexConsumer = this.baseMaterial.buffer(multiBufferSource, RenderType::entitySolid);
         this.neck.render(poseStack, vertexConsumer, i, j);
         this.top.render(poseStack, vertexConsumer, i, j);
         this.bottom.render(poseStack, vertexConsumer, i, j);
-        DecoratedPotBlockEntity.Decorations decorations = decoratedPotBlockEntity.getDecorations();
-        this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front(), decoratedPotBlockEntity);
-        this.renderSide(this.backSide, poseStack, multiBufferSource, i, j,  decorations.back(),  decoratedPotBlockEntity);
-        this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j,  decorations.left(), decoratedPotBlockEntity);
-        this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j,  decorations.right(), decoratedPotBlockEntity);
+        PotDecorations decorations = decoratedPotBlockEntity.getDecorations();
+        if (decorations.front().isPresent()) {
+            this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front().get(), decoratedPotBlockEntity);
+        }
+        if (decorations.back().isPresent()) {
+            this.renderSide(this.backSide, poseStack, multiBufferSource, i, j, decorations.back().get(), decoratedPotBlockEntity);
+        }
+        if (decorations.left().isPresent()) {
+            this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j, decorations.left().get(), decoratedPotBlockEntity);
+        }
+        if (decorations.right().isPresent()) {
+            this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j, decorations.right().get(), decoratedPotBlockEntity);
+        }
         poseStack.popPose();
     }
 
-    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, Item item,  DyedDecoratedPotBlockEntity pot) {
+    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, Item item, DyedDecoratedPotBlockEntity pot) {
         Minecraft instance = Minecraft.getInstance();
         TextureAtlas textureAtlas = instance.getModelManager().getAtlas(Sheets.DECORATED_POT_SHEET);
         TextureAtlasSprite sprite =  textureAtlas.getSprite(renderMaterial(pot, item));

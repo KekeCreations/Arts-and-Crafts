@@ -9,7 +9,9 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ArtsAndCraftsFabricLootModifiers {
 
+
     public static void modifyVanillaLootTables() {
+        /*
         LootTableEvents.MODIFY.register((resource, loot, id, builder, source) -> {
             if (BuiltInLootTables.SNIFFER_DIGGING.equals(id)) {
                 builder.modifyPools(itemEntry -> {
@@ -33,5 +35,7 @@ public class ArtsAndCraftsFabricLootModifiers {
                 });
             }
         });
+
+         */
     }
 }

@@ -4,7 +4,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 
 public class CustomButtonBlock extends ButtonBlock {
-    public CustomButtonBlock(Properties properties, BlockSetType blockSetType, int i, boolean bl) {
-        super(properties, blockSetType, i, bl);
+    public CustomButtonBlock(BlockSetType blockSetType, int i, Properties properties) {
+        super(blockSetType, i, properties);
     }
 }
