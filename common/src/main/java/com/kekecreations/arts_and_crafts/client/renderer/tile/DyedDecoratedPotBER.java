@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.util.DyedDecoratedPotUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -24,6 +25,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.minecraft.world.level.block.entity.PotDecorations;
 
@@ -48,7 +50,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
     private Material baseMaterial;
 
     public DyedDecoratedPotBER(BlockEntityRendererProvider.Context context) {
-        this.baseMaterial = Objects.requireNonNull(Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BASE));
+        this.baseMaterial = Objects.requireNonNull(Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BLANK));
         ModelPart modelPart = context.bakeLayer(ModelLayers.DECORATED_POT_BASE);
         this.neck = modelPart.getChild("neck");
         this.top = modelPart.getChild("top");
@@ -127,12 +129,12 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         modelPart.render(poseStack, vertex, i, j);
     }
     private ResourceLocation renderMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
-        ResourceKey<String> patternKey = DecoratedPotPatterns.getResourceKey(item);
+        ResourceKey<DecoratedPotPattern> patternKey = DecoratedPotPatterns.getPatternFromItem(item);
         if (patternKey != null) {
             return patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_" + potEntity.getDyeColor().getName());
         } else {
             //return Objects.requireNonNull(DecoratedPotPatterns.getResourceKey(Items.BRICK)).location();
-            return new ResourceLocation("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
+            return ArtsAndCrafts.id("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
         }
     }
 }

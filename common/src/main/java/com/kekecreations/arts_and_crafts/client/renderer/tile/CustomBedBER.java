@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.CustomBedBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -42,9 +43,9 @@ public class CustomBedBER implements BlockEntityRenderer<CustomBedBlockEntity> {
 
     @Override
     public void render(CustomBedBlockEntity bedBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
-        Material material = new Material(Sheets.BED_SHEET, new ResourceLocation("entity/bed/red"));
+        Material material = new Material(Sheets.BED_SHEET, ResourceLocation.withDefaultNamespace("entity/bed/red"));
         if (bedBlockEntity.getColor() == DyeColor.WHITE) {
-            material = new Material(Sheets.BED_SHEET, new ResourceLocation("entity/bed/bleached"));
+            material = new Material(Sheets.BED_SHEET, ArtsAndCrafts.id("entity/bed/bleached"));
         }
         Level level = bedBlockEntity.getLevel();
         if (level != null) {

@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,8 +16,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class DecoratedPotPatternsMixin {
 
 
-    @Inject(method = "getResourceKey", at = @At("RETURN"), cancellable = true)
-    private static void arts_and_crafts_addedPatterns(Item item, CallbackInfoReturnable<ResourceKey<String>> cir) {
+    @Inject(method = "getPatternFromItem", at = @At("RETURN"), cancellable = true)
+    private static void arts_and_crafts_addedPatterns(Item item, CallbackInfoReturnable<ResourceKey<DecoratedPotPattern>> cir) {
 
         if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
             cir.setReturnValue(KekeCustomSherdPatterns.ROLL_POTTERY_PATTERN);
@@ -36,7 +37,7 @@ public abstract class DecoratedPotPatternsMixin {
     }
 
     @Inject(method = "bootstrap", at = @At("TAIL"))
-    private static void arts_and_crafts_bootstrap(Registry<String> registry, CallbackInfoReturnable<String> cir) {
+    private static DecoratedPotPattern arts_and_crafts_bootstrap(Registry<DecoratedPotPattern> registry, CallbackInfoReturnable<String> cir) {
         //NORMAL
         Registry.register(registry, KekeCustomSherdPatterns.POTTERY_PATTERN, "pottery_pattern");
         Registry.register(registry, KekeCustomSherdPatterns.ROLL_POTTERY_PATTERN, "roll_pottery_pattern");

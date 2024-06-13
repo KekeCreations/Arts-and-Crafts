@@ -29,8 +29,8 @@ import java.util.stream.Stream;
 
 
 public class CustomBoatRenderer  extends EntityRenderer<Boat> {
-    public static final ModelLayerLocation BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "boat"), "main");
-    public static final ModelLayerLocation CHEST_BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "chest_boat"), "main");
+    public static final ModelLayerLocation BOAT = new ModelLayerLocation(ArtsAndCrafts.id("boat"), "main");
+    public static final ModelLayerLocation CHEST_BOAT = new ModelLayerLocation(ArtsAndCrafts.id("chest_boat"), "main");
 
     private final Map<CustomBoat.WoodType, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
@@ -70,7 +70,7 @@ public class CustomBoatRenderer  extends EntityRenderer<Boat> {
         matrixStack.mulPose(Axis.YP.rotationDegrees(90.0F));
         listModel.setupAnim(boat, partialTicks, 0.0F, -0.1F, 0.0F, 0.0F);
         VertexConsumer vertexConsumer = buffer.getBuffer(listModel.renderType(resourceLocation));
-        listModel.renderToBuffer(matrixStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        listModel.renderToBuffer(matrixStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY);
         if (!boat.isUnderWater()) {
             VertexConsumer vertexConsumer2 = buffer.getBuffer(RenderType.waterMask());
             if (listModel instanceof WaterPatchModel waterPatchModel) {
@@ -92,7 +92,7 @@ public class CustomBoatRenderer  extends EntityRenderer<Boat> {
         //ResourceLocation location = SketchBuiltInRegistries.BOAT_TYPE.getKey(type);
 
         String path = chestBoat ? "textures/entity/chest_boat/" + type.name().toLowerCase() + ".png" : "textures/entity/boat/" + type.name().toLowerCase() + ".png";
-        return new ResourceLocation(ArtsAndCrafts.MOD_ID, path);
+        return ArtsAndCrafts.id(path);
     }
 
     public ResourceLocation getTextureLocation(Boat boat) {
