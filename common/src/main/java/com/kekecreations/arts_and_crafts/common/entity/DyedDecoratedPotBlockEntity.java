@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.entity;
 
 import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -35,7 +36,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
     public static final int EVENT_POT_WOBBLES = 1;
     public long wobbleStartedAtTick;
     @Nullable
-    public DecoratedPotBlockEntity.WobbleStyle lastWobbleStyle;
+    public DyedDecoratedPotBlockEntity.WobbleStyle lastWobbleStyle;
     private PotDecorations decorations;
     private ItemStack item;
     @Nullable
@@ -45,6 +46,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
 
     public DyedDecoratedPotBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
+        this.item = ItemStack.EMPTY;
         this.decorations = PotDecorations.EMPTY;
         this.dyeColor = DyeColor.BLACK.getId();
     }
@@ -57,21 +59,21 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
         this.dyeColor = value;
     }
 
-    protected void saveAdditional(CompoundTag $$0, HolderLookup.Provider $$1) {
-        super.saveAdditional($$0, $$1);
-        this.decorations.save($$0);
-        if (!this.trySaveLootTable($$0) && !this.item.isEmpty()) {
-            $$0.put("item", this.item.save($$1));
+    protected void saveAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
+        super.saveAdditional(compoundTag, provider);
+        this.decorations.save(compoundTag);
+        if (!this.trySaveLootTable(compoundTag) && !this.item.isEmpty()) {
+            compoundTag.put("item", this.item.save(provider));
         }
 
     }
 
-    protected void loadAdditional(CompoundTag $$0, HolderLookup.Provider $$1) {
-        super.loadAdditional($$0, $$1);
-        this.decorations = PotDecorations.load($$0);
-        if (!this.tryLoadLootTable($$0)) {
-            if ($$0.contains("item", 10)) {
-                this.item = (ItemStack)ItemStack.parse($$1, $$0.getCompound("item")).orElse(ItemStack.EMPTY);
+    protected void loadAdditional(CompoundTag compoundTag, HolderLookup.Provider provider) {
+        super.loadAdditional(compoundTag, provider);
+        this.decorations = PotDecorations.load(compoundTag);
+        if (!this.tryLoadLootTable(compoundTag)) {
+            if (compoundTag.contains("item", 10)) {
+                this.item = (ItemStack)ItemStack.parse(provider, compoundTag.getCompound("item")).orElse(ItemStack.EMPTY);
             } else {
                 this.item = ItemStack.EMPTY;
             }
@@ -105,8 +107,8 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
         this.applyComponentsFromItemStack(itemStack);
     }
 
-    public ItemStack getPotAsItem() {
-        ItemStack itemStack = Items.DECORATED_POT.getDefaultInstance();
+    public ItemStack getPotAsItem(DyeColor dyeColor) {
+        ItemStack itemStack = KekeItems.getDyedDecoratedPotBlockItem(dyeColor).getDefaultInstance();
         itemStack.applyComponents(this.collectComponents());
         return itemStack;
     }
@@ -176,16 +178,16 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
         return this;
     }
 
-    public void wobble(DecoratedPotBlockEntity.WobbleStyle wobbleStyle) {
+    public void wobble(DyedDecoratedPotBlockEntity.WobbleStyle wobbleStyle) {
         if (this.level != null && !this.level.isClientSide()) {
             this.level.blockEvent(this.getBlockPos(), this.getBlockState().getBlock(), 1, wobbleStyle.ordinal());
         }
     }
 
     public boolean triggerEvent(int i, int j) {
-        if (this.level != null && i == 1 && j >= 0 && j < DecoratedPotBlockEntity.WobbleStyle.values().length) {
+        if (this.level != null && i == 1 && j >= 0 && j < DyedDecoratedPotBlockEntity.WobbleStyle.values().length) {
             this.wobbleStartedAtTick = this.level.getGameTime();
-            this.lastWobbleStyle = DecoratedPotBlockEntity.WobbleStyle.values()[j];
+            this.lastWobbleStyle = DyedDecoratedPotBlockEntity.WobbleStyle.values()[j];
             return true;
         } else {
             return super.triggerEvent(i, j);

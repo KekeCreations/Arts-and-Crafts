@@ -68,7 +68,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
             }
         }
 
-        ItemStack itemStack3 = DyedDecoratedPotBlock.getColoredItemStack(dyeItem.getDyeColor());
+        ItemStack itemStack3 = DyedDecoratedPotBlock.getBlockByColor(dyeItem.getDyeColor()).asItem().getDefaultInstance();
         if (!itemStack.getOrDefault(DataComponents.POT_DECORATIONS, PotDecorations.EMPTY).ordered().isEmpty()) {
             //assert itemStack.getTag() != null;
             itemStack3.set(DataComponents.POT_DECORATIONS, itemStack.getComponents().get(DataComponents.POT_DECORATIONS));

@@ -22,6 +22,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.minecraft.world.level.block.entity.PotDecorations;
@@ -62,19 +63,21 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
 
     public void render(DyedDecoratedPotBlockEntity decoratedPotBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
         DyeColor colour = decoratedPotBlockEntity.getDyeColor();
-        this.baseMaterial = Objects.requireNonNull(DyedDecoratedPotUtils.getDecoratedPotBase(colour));
+        if (DyedDecoratedPotUtils.getDecoratedPotBase(colour) != null) {
+            this.baseMaterial = DyedDecoratedPotUtils.getDecoratedPotBase(colour);
+        }
         poseStack.pushPose();
         Direction direction = decoratedPotBlockEntity.getDirection();
         poseStack.translate(0.5, 0.0, 0.5);
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - direction.toYRot()));
         poseStack.translate(-0.5, 0.0, -0.5);
-        DecoratedPotBlockEntity.WobbleStyle wobbleStyle = decoratedPotBlockEntity.lastWobbleStyle;
+        DyedDecoratedPotBlockEntity.WobbleStyle wobbleStyle = decoratedPotBlockEntity.lastWobbleStyle;
         if (wobbleStyle != null && decoratedPotBlockEntity.getLevel() != null) {
             float g = ((float)(decoratedPotBlockEntity.getLevel().getGameTime() - decoratedPotBlockEntity.wobbleStartedAtTick) + f) / (float)wobbleStyle.duration;
             if (g >= 0.0F && g <= 1.0F) {
                 float h;
                 float k;
-                if (wobbleStyle == DecoratedPotBlockEntity.WobbleStyle.POSITIVE) {
+                if (wobbleStyle == DyedDecoratedPotBlockEntity.WobbleStyle.POSITIVE) {
                     h = 0.015625F;
                     k = g * 6.2831855F;
                     float l = -1.5F * (Mth.cos(k) + 0.5F) * Mth.sin(k / 2.0F);
@@ -95,15 +98,23 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         PotDecorations decorations = decoratedPotBlockEntity.getDecorations();
         if (decorations.front().isPresent()) {
             this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front().get(), decoratedPotBlockEntity);
+        } else {
+            this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
         }
         if (decorations.back().isPresent()) {
             this.renderSide(this.backSide, poseStack, multiBufferSource, i, j, decorations.back().get(), decoratedPotBlockEntity);
+        } else {
+            this.renderSide(this.backSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
         }
         if (decorations.left().isPresent()) {
             this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j, decorations.left().get(), decoratedPotBlockEntity);
+        } else {
+            this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
         }
         if (decorations.right().isPresent()) {
             this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j, decorations.right().get(), decoratedPotBlockEntity);
+        } else {
+            this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
         }
         poseStack.popPose();
     }
