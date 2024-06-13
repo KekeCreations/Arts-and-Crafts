@@ -10,8 +10,5 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class KekeWoodType {
 
-    public static final WoodType CORK = WoodTypeMixin.invokeRegister(new WoodType(ArtsAndCrafts.id("cork").toString(), KekeBlockSetType.CORK, ArtsAndCraftsSoundTypes.CORK, SoundType.CHERRY_WOOD_HANGING_SIGN, ArtsAndCraftsSounds.CORK_WOOD_FENCE_GATE_CLOSE.get(), ArtsAndCraftsSounds.CORK_WOOD_FENCE_GATE_OPEN.get()));
-
-
-
+    public static final WoodType CORK = new WoodType(ArtsAndCrafts.id("cork").toString(), KekeBlockSetType.CORK, ArtsAndCraftsSoundTypes.CORK, SoundType.CHERRY_WOOD_HANGING_SIGN, ArtsAndCraftsSounds.CORK_WOOD_FENCE_GATE_CLOSE.get(), ArtsAndCraftsSounds.CORK_WOOD_FENCE_GATE_OPEN.get());
 }

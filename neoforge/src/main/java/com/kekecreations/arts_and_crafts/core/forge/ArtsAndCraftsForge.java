@@ -22,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -32,21 +33,21 @@ import java.util.concurrent.CompletableFuture;
 @Mod(ArtsAndCrafts.MOD_ID)
 public class ArtsAndCraftsForge {
     public ArtsAndCraftsForge(IEventBus modEventBus) {
-        //IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ArtsAndCrafts.init();
 
         ForgeRegistryHelper.SOUNDS.register(modEventBus);
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
         ForgeRegistryHelper.BLOCKS.register(modEventBus);
         ForgeRegistryHelper.ITEMS.register(modEventBus);
+        ForgeRegistryHelper.ENTITY_TYPES.register(modEventBus);
+        ForgeRegistryHelper.BLOCK_ENTITY_TYPES.register(modEventBus);
+        ForgeRegistryHelper.RECIPE_SERIALIZER.register(modEventBus);
+        ForgeRegistryHelper.DATA_COMPONENT_TYPES.register(modEventBus);
         ArtsAndCraftsLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
         modEventBus.addListener(this::datapackRegistry);
-
-        //MinecraftForge.EVENT_BUS.register(this);
     }
     @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
