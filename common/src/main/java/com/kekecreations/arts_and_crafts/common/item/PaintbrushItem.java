@@ -12,10 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
-import net.minecraft.world.level.block.entity.PotDecorations;
-import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
+import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.ArrayList;
@@ -65,6 +62,9 @@ public class PaintbrushItem extends Item {
                             newShulkerBE.setItem(i, itemList.get(i));
                         }
                     }
+                    return InteractionResult.SUCCESS;
+                } else if (blockEntity instanceof BedBlockEntity) {
+                    PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     return InteractionResult.SUCCESS;
                 }
 
