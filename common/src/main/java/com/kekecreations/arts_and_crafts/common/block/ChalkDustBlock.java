@@ -1,13 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -26,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
-import java.util.Map;
 import java.util.Objects;
 
 public class ChalkDustBlock extends DirectionalBlock {
@@ -72,7 +69,7 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
-        ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor));
+        ItemStack itemStack = new ItemStack(ACItems.getChalkStick(this.dyeColor));
         if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
             chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
         }

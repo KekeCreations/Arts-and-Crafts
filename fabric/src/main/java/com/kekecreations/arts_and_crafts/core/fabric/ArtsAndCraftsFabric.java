@@ -3,10 +3,10 @@ package com.kekecreations.arts_and_crafts.core.fabric;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.KekeFabricFlammableAndStrippableBlocks;
-import com.kekecreations.arts_and_crafts.core.fabric.util.ArtsAndCraftsFabricLootModifiers;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
-import com.kekecreations.arts_and_crafts.core.registry.KekeFeatures;
+import com.kekecreations.arts_and_crafts.core.fabric.registry.ACFlammableAndStrippableBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.util.ACFabricLootModifiers;
+import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.ACFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -19,20 +19,20 @@ public class ArtsAndCraftsFabric implements ModInitializer {
     public void onInitialize() {
 
         ArtsAndCrafts.init();
-        ArtsAndCraftsItemGroupEvents.add();
-        KekeFabricFlammableAndStrippableBlocks.register();
-        ArtsAndCraftsFabricLootModifiers.modifyVanillaLootTables();
+        ACItemGroupEvents.add();
+        ACFlammableAndStrippableBlocks.register();
+        ACFabricLootModifiers.modifyVanillaLootTables();
         createBiomeModifications();
-        DynamicRegistries.register(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
+        DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }
 
     public void createBiomeModifications() {
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), GenerationStep.Decoration.VEGETAL_DECORATION, KekeFeatures.PlacedFeatures.CORK_TREE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), GenerationStep.Decoration.VEGETAL_DECORATION, ACFeatures.PlacedFeatures.CORK_TREE);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, KekeFeatures.PlacedFeatures.SOAPSTONE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, ACFeatures.PlacedFeatures.SOAPSTONE_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, KekeFeatures.PlacedFeatures.CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, KekeFeatures.PlacedFeatures.GYPSUM_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ArtsAndCraftsTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.GYPSUM_PATCH);
     }
 }

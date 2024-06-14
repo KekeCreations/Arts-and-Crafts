@@ -1,8 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -16,8 +15,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 
@@ -47,7 +44,7 @@ public class LotusPistilItem extends Item {
         BlockState clickedState = level.getBlockState(pos);
 
         if (clickedState.is(ArtsAndCraftsTags.BlockTags.LILY_PADS)) {
-            BlockState state = KekeBlocks.LOTUS_FLOWER.get().getStateForPlacement(blockPlaceContext);
+            BlockState state = ACBlocks.LOTUS_FLOWER.get().getStateForPlacement(blockPlaceContext);
             if (state != null) {
                 level.setBlockAndUpdate(pos, state);
                 level.playSound(null, pos, SoundEvents.LILY_PAD_PLACE, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);

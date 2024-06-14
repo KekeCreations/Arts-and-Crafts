@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.forge.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.FlammableStairBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableStairBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableStairBlock.class)
+@Mixin(ACFlammableStairBlock.class)
 public class FlammableStairBlockSelfMixin extends StairBlock {
 
 

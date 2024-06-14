@@ -7,7 +7,7 @@
   "client": [
   ],
   "mixins": [
-    "CustomBedBlockItemSelfMixin",
+    "ACBedBlockItemSelfMixin",
     "DyedDecoratedPotBlockItemSelfMixin",
     "FlammableBlockSelfMixin",
     "FlammableFenceBlockSelfMixin",

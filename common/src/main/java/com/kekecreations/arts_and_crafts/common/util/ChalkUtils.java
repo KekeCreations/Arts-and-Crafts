@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts.common.util;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.core.registry.KekeParticles;
+import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,10 +15,10 @@ public class ChalkUtils {
     }
 
     public static void spawnChalkParticle(Level level, double x, double y, double z, Integer colours) {
-        level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        level.addParticle(KekeParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
     }
 
     public static BlockState changeChalkDustState(BlockState blockState, Player player, int k) {

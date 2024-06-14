@@ -2,8 +2,8 @@ package com.kekecreations.arts_and_crafts.client.renderer.entity;
 
 import com.google.common.collect.ImmutableMap;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.entity.CustomBoat;
-import com.kekecreations.arts_and_crafts.common.entity.CustomChestBoat;
+import com.kekecreations.arts_and_crafts.common.entity.ACBoat;
+import com.kekecreations.arts_and_crafts.common.entity.ACChestBoat;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
@@ -32,12 +32,12 @@ public class CustomBoatRenderer  extends EntityRenderer<Boat> {
     public static final ModelLayerLocation BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "boat"), "main");
     public static final ModelLayerLocation CHEST_BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "chest_boat"), "main");
 
-    private final Map<CustomBoat.WoodType, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
+    private final Map<ACBoat.WoodType, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
     public CustomBoatRenderer(EntityRendererProvider.Context context, boolean chestBoat) {
         super(context);
 
-        this.boatResources = Stream.of(CustomBoat.WoodType.values()).collect(ImmutableMap.toImmutableMap(type -> {
+        this.boatResources = Stream.of(ACBoat.WoodType.values()).collect(ImmutableMap.toImmutableMap(type -> {
             return type;
         }, type -> {
             return Pair.of(getTextureLocation(type, chestBoat), createBoatModel(context, type, chestBoat));
@@ -82,13 +82,13 @@ public class CustomBoatRenderer  extends EntityRenderer<Boat> {
         super.render(boat, entityYaw, partialTicks, matrixStack, buffer, packedLight);
     }
 
-    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context context, CustomBoat.WoodType type, boolean chestBoat) {
+    private ListModel<Boat> createBoatModel(EntityRendererProvider.Context context, ACBoat.WoodType type, boolean chestBoat) {
         ModelPart modelPart = context.bakeLayer(chestBoat ? CHEST_BOAT : BOAT);
 
         return chestBoat ? new ChestBoatModel(modelPart) : new BoatModel(modelPart);
     }
 
-    private static ResourceLocation getTextureLocation(CustomBoat.WoodType type, boolean chestBoat) {
+    private static ResourceLocation getTextureLocation(ACBoat.WoodType type, boolean chestBoat) {
         //ResourceLocation location = SketchBuiltInRegistries.BOAT_TYPE.getKey(type);
 
         String path = chestBoat ? "textures/entity/chest_boat/" + type.name().toLowerCase() + ".png" : "textures/entity/boat/" + type.name().toLowerCase() + ".png";
@@ -100,12 +100,12 @@ public class CustomBoatRenderer  extends EntityRenderer<Boat> {
     }
 
     private Pair<ResourceLocation, ListModel<Boat>> getBoatPair(Boat boat) {
-        if (boat instanceof CustomBoat customBoat) {
+        if (boat instanceof ACBoat customBoat) {
             return boatResources.get(customBoat.getBoatWoodType());
         }
-        if (boat instanceof CustomChestBoat customBoat) {
+        if (boat instanceof ACChestBoat customBoat) {
             return boatResources.get(customBoat.getBoatWoodType());
         }
-        return boatResources.get(CustomBoat.WoodType.CORK);
+        return boatResources.get(ACBoat.WoodType.CORK);
     }
 }

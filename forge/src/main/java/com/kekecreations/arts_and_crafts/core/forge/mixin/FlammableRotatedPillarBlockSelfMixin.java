@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.FlammableRotatedPillarBlock;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableRotatedPillarBlock;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
@@ -13,7 +13,7 @@ import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableRotatedPillarBlock.class)
+@Mixin(ACFlammableRotatedPillarBlock.class)
 public class FlammableRotatedPillarBlockSelfMixin extends RotatedPillarBlock {
     public FlammableRotatedPillarBlockSelfMixin(Properties p_55926_) {
         super(p_55926_);
@@ -36,12 +36,12 @@ public class FlammableRotatedPillarBlockSelfMixin extends RotatedPillarBlock {
     @Override
     public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
         if(context.getItemInHand().getItem() instanceof AxeItem) {
-            if(state.is(KekeBlocks.CORK_LOG.get())) {
-                return KekeBlocks.STRIPPED_CORK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(ACBlocks.CORK_LOG.get())) {
+                return ACBlocks.STRIPPED_CORK_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
 
-            if(state.is(KekeBlocks.CORK_WOOD.get())) {
-                return KekeBlocks.STRIPPED_CORK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            if(state.is(ACBlocks.CORK_WOOD.get())) {
+                return ACBlocks.STRIPPED_CORK_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 

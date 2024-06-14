@@ -3,7 +3,7 @@ package com.kekecreations.arts_and_crafts.common.item;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
@@ -16,7 +16,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -168,7 +167,7 @@ public class ChalkStickItem extends Item {
         Player player = blockPlaceContext.getPlayer();
         ItemStack itemStack = blockPlaceContext.getItemInHand();
         if (itemStack.getItem() instanceof ChalkStickItem chalkStick) {
-            BlockState state = KekeBlocks.getChalkDust(this.getDyeColor()).getStateForPlacement(blockPlaceContext);
+            BlockState state = ACBlocks.getChalkDust(this.getDyeColor()).getStateForPlacement(blockPlaceContext);
             BlockState clickedState = level.getBlockState(pos);
 
             if (state != null && !(clickedState.getBlock() instanceof ChalkDustBlock)) {

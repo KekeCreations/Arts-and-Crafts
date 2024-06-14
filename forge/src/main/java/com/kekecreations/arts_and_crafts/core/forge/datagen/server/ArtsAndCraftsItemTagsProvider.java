@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -49,64 +49,64 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
     }
     private void appendFenceGates() {
         this.tag(ItemTags.FENCE_GATES)
-                .add(KekeBlocks.CORK_FENCE_GATE.get().asItem());
+                .add(ACBlocks.CORK_FENCE_GATE.get().asItem());
     }
     private void appendWoodenSlabs() {
         this.tag(ItemTags.WOODEN_SLABS)
-                .add(KekeBlocks.CORK_SLAB.get().asItem());
+                .add(ACBlocks.CORK_SLAB.get().asItem());
     }
     private void appendWoodenDoors() {
         this.tag(ItemTags.WOODEN_DOORS)
-                .add(KekeBlocks.CORK_DOOR.get().asItem());
+                .add(ACBlocks.CORK_DOOR.get().asItem());
     }
     private void appendWoodenFences() {
         this.tag(ItemTags.WOODEN_FENCES)
-                .add(KekeBlocks.CORK_FENCE.get().asItem());
+                .add(ACBlocks.CORK_FENCE.get().asItem());
     }
     private void appendWoodenStairs() {
         this.tag(ItemTags.WOODEN_STAIRS)
-                .add(KekeBlocks.CORK_STAIRS.get().asItem());
+                .add(ACBlocks.CORK_STAIRS.get().asItem());
     }
     private void appendWoodenPressurePlates() {
         this.tag(ItemTags.WOODEN_PRESSURE_PLATES)
-                .add(KekeBlocks.CORK_PRESSURE_PLATE.get().asItem());
+                .add(ACBlocks.CORK_PRESSURE_PLATE.get().asItem());
     }
     private void appendWoodenTrapdoors() {
         this.tag(ItemTags.WOODEN_TRAPDOORS)
-                .add(KekeBlocks.CORK_TRAPDOOR.get().asItem());
+                .add(ACBlocks.CORK_TRAPDOOR.get().asItem());
     }
     private void appendSigns() {
         this.tag(ItemTags.SIGNS)
-                .add(KekeItems.CORK_SIGN.get());
+                .add(ACItems.CORK_SIGN.get());
     }
     private void appendHangingSigns() {
         this.tag(ItemTags.HANGING_SIGNS)
-                .add(KekeItems.CORK_HANGING_SIGN.get());
+                .add(ACItems.CORK_HANGING_SIGN.get());
     }
     private void appendSaplings() {
         this.tag(ItemTags.SAPLINGS)
-                .add(KekeBlocks.CORK_SAPLING.get().asItem());
+                .add(ACBlocks.CORK_SAPLING.get().asItem());
     }
     private void appendPaintbrushes() {
         for (DyeColor colours : DyeColor.values()) {
             this.tag(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
-                    .add(KekeItems.getPaintBrush(colours.getId()));
+                    .add(ACItems.getPaintBrush(colours.getId()));
         }
         this.tag(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
-                .add(KekeItems.BLEACHDEW_PAINTBRUSH.get());
+                .add(ACItems.BLEACHDEW_PAINTBRUSH.get());
     }
 
     private void appendWoolCarpets() {
         this.tag(ItemTags.WOOL_CARPETS)
-                .add(KekeBlocks.BLEACHED_CARPET.get().asItem());
+                .add(ACBlocks.BLEACHED_CARPET.get().asItem());
     }
     private void appendBoats() {
         this.tag(ItemTags.BOATS)
-                .add(KekeItems.CORK_BOAT.get());
+                .add(ACItems.CORK_BOAT.get());
     }
     private void appendChestBoats() {
         this.tag(ItemTags.CHEST_BOATS)
-                .add(KekeItems.CORK_CHEST_BOAT.get());
+                .add(ACItems.CORK_CHEST_BOAT.get());
     }
 
     private void appendDyes() {
@@ -118,40 +118,40 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
     private void appendChalkSticks() {
         for (DyeColor colours : DyeColor.values()) {
             this.tag(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
-                    .add(KekeItems.getChalkStick(colours.getId()));
+                    .add(ACItems.getChalkStick(colours.getId()));
         }
         this.tag(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
-                .add(KekeItems.BLEACHED_CHALK_STICK.get());
+                .add(ACItems.BLEACHED_CHALK_STICK.get());
     }
     private void appendDecoratedPots() {
         for (DyeColor colours : DyeColor.values()) {
             this.tag(ArtsAndCraftsTags.ItemTags.DECORATED_POTS)
                     .add(Items.DECORATED_POT)
-                    .add(KekeItems.getDyedDecoratedPotBlockItem(colours));
+                    .add(ACItems.getDyedDecoratedPotBlockItem(colours));
         }
     }
     private void appendDecoratedPotSherds() {
         this.tag(ItemTags.DECORATED_POT_SHERDS)
-                .add(KekeItems.ROLL_POTTERY_SHERD.get())
-                .add(KekeItems.RUINED_POTTERY_SHERD.get())
-                .add(KekeItems.FINALE_POTTERY_SHERD.get())
-                .add(KekeItems.GATEWAY_POTTERY_SHERD.get())
-                .add(KekeItems.POTTERY_SHERD.get());
+                .add(ACItems.ROLL_POTTERY_SHERD.get())
+                .add(ACItems.RUINED_POTTERY_SHERD.get())
+                .add(ACItems.FINALE_POTTERY_SHERD.get())
+                .add(ACItems.GATEWAY_POTTERY_SHERD.get())
+                .add(ACItems.POTTERY_SHERD.get());
     }
 
     private void appendPlanks() {
         this.tag(ItemTags.PLANKS)
-                .add(KekeBlocks.CORK_PLANKS.get().asItem());
+                .add(ACBlocks.CORK_PLANKS.get().asItem());
     }
     private void appendWoodenButtons() {
         this.tag(ItemTags.WOODEN_BUTTONS)
-                .add(KekeBlocks.CORK_BUTTON.get().asItem());
+                .add(ACBlocks.CORK_BUTTON.get().asItem());
     }
     private void appendLogsThatBurn() {
         this.tag(ItemTags.LOGS_THAT_BURN)
-                .add(KekeBlocks.CORK_LOG.get().asItem())
-                .add(KekeBlocks.STRIPPED_CORK_LOG.get().asItem())
-                .add(KekeBlocks.CORK_WOOD.get().asItem())
-                .add(KekeBlocks.STRIPPED_CORK_WOOD.get().asItem());
+                .add(ACBlocks.CORK_LOG.get().asItem())
+                .add(ACBlocks.STRIPPED_CORK_LOG.get().asItem())
+                .add(ACBlocks.CORK_WOOD.get().asItem())
+                .add(ACBlocks.STRIPPED_CORK_WOOD.get().asItem());
     }
 }

@@ -9,10 +9,10 @@ import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCrafts
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.server.*;
 import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts.core.forge.registry.ArtsAndCraftsLootModifiers;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.forge.registry.ACLootModifiers;
+import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -42,7 +42,7 @@ public class ArtsAndCraftsForge {
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
         ForgeRegistryHelper.BLOCKS.register(modEventBus);
         ForgeRegistryHelper.ITEMS.register(modEventBus);
-        ArtsAndCraftsLootModifiers.register(modEventBus);
+        ACLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
@@ -73,7 +73,7 @@ public class ArtsAndCraftsForge {
     }
 
     public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
-        event.dataPackRegistry(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
+        event.dataPackRegistry(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }
 
     private void addAfter(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
@@ -98,133 +98,133 @@ public class ArtsAndCraftsForge {
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
-            addAfter(event, Blocks.PINK_GLAZED_TERRACOTTA, KekeBlocks.TERRACOTTA_SHINGLES.get());
-            addAfter(event, KekeBlocks.TERRACOTTA_SHINGLES.get(), KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
-            addAfter(event, KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get());
-            addAfter(event, KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), KekeBlocks.TERRACOTTA_SHINGLE_WALL.get());
+            addAfter(event, Blocks.PINK_GLAZED_TERRACOTTA, ACBlocks.TERRACOTTA_SHINGLES.get());
+            addAfter(event, ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
+            addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get());
+            addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get());
 
-            addAfter(event, KekeBlocks.getChalk(DyeColor.PINK.getId()), KekeBlocks.SOAPSTONE.get());
-            addAfter(event, KekeBlocks.SOAPSTONE.get(), KekeBlocks.SOAPSTONE_STAIRS.get());
-            addAfter(event, KekeBlocks.SOAPSTONE_STAIRS.get(), KekeBlocks.SOAPSTONE_SLAB.get());
-            addAfter(event, KekeBlocks.SOAPSTONE_SLAB.get(), KekeBlocks.SOAPSTONE_WALL.get());
+            addAfter(event, ACBlocks.getChalk(DyeColor.PINK.getId()), ACBlocks.SOAPSTONE.get());
+            addAfter(event, ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_STAIRS.get());
+            addAfter(event, ACBlocks.SOAPSTONE_STAIRS.get(), ACBlocks.SOAPSTONE_SLAB.get());
+            addAfter(event, ACBlocks.SOAPSTONE_SLAB.get(), ACBlocks.SOAPSTONE_WALL.get());
 
-            addAfter(event, KekeBlocks.SOAPSTONE_WALL.get(), KekeBlocks.POLISHED_SOAPSTONE.get());
-            addAfter(event, KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get());
-            addAfter(event, KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), KekeBlocks.POLISHED_SOAPSTONE_SLAB.get());
-            addAfter(event, KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), KekeBlocks.POLISHED_SOAPSTONE_WALL.get());
+            addAfter(event, ACBlocks.SOAPSTONE_WALL.get(), ACBlocks.POLISHED_SOAPSTONE.get());
+            addAfter(event, ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get());
+            addAfter(event, ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get());
+            addAfter(event, ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), ACBlocks.POLISHED_SOAPSTONE_WALL.get());
 
-            addAfter(event, KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), KekeBlocks.SOAPSTONE_BRICKS.get());
-            addAfter(event, KekeBlocks.SOAPSTONE_BRICKS.get(), KekeBlocks.SOAPSTONE_BRICK_STAIRS.get());
-            addAfter(event, KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get());
-            addAfter(event, KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get());
+            addAfter(event, ACBlocks.POLISHED_SOAPSTONE_WALL.get(), ACBlocks.SOAPSTONE_BRICKS.get());
+            addAfter(event, ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get());
+            addAfter(event, ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), ACBlocks.SOAPSTONE_BRICK_SLAB.get());
+            addAfter(event, ACBlocks.SOAPSTONE_BRICK_SLAB.get(), ACBlocks.SOAPSTONE_BRICK_WALL.get());
 
-            addAfter(event, Blocks.PINK_STAINED_GLASS_PANE, KekeBlocks.PLASTER.get());
+            addAfter(event, Blocks.PINK_STAINED_GLASS_PANE, ACBlocks.PLASTER.get());
 
-            addBefore(event, Blocks.WHITE_WOOL, KekeBlocks.BLEACHED_WOOL.get());
-            addBefore(event, Blocks.WHITE_CARPET, KekeBlocks.BLEACHED_CARPET.get());
-            addBefore(event, Blocks.WHITE_CONCRETE, KekeBlocks.BLEACHED_CONCRETE.get());
-            addBefore(event, Blocks.WHITE_CONCRETE_POWDER, KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
-            addBefore(event, Blocks.WHITE_GLAZED_TERRACOTTA, KekeBlocks.GLAZED_TERRACOTTA.get());
-            addBefore(event, Blocks.WHITE_BED, KekeBlocks.BLEACHED_BED.get());
+            addBefore(event, Blocks.WHITE_WOOL, ACBlocks.BLEACHED_WOOL.get());
+            addBefore(event, Blocks.WHITE_CARPET, ACBlocks.BLEACHED_CARPET.get());
+            addBefore(event, Blocks.WHITE_CONCRETE, ACBlocks.BLEACHED_CONCRETE.get());
+            addBefore(event, Blocks.WHITE_CONCRETE_POWDER, ACBlocks.BLEACHED_CONCRETE_POWDER.get());
+            addBefore(event, Blocks.WHITE_GLAZED_TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get());
+            addBefore(event, Blocks.WHITE_BED, ACBlocks.BLEACHED_BED.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
-                addAfter(event, Items.PINK_BANNER, KekeBlocks.getChalk(colours.getId()));
-                addAfter(event, Items.PINK_CANDLE, KekeBlocks.getDyedFlowerPot(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), KekeBlocks.getDyedDecoratedPot(colours.getId()));
+                addAfter(event, Items.PINK_BANNER, ACBlocks.getChalk(colours.getId()));
+                addAfter(event, Items.PINK_CANDLE, ACBlocks.getDyedFlowerPot(colours.getId()));
+                addAfter(event, ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), ACBlocks.getDyedDecoratedPot(colours.getId()));
 
-                addAfter(event, KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()));
+                addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), ACBlocks.getDyedTerracottaShingles(colours.getId()));
+                addAfter(event, ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleStairs(colours.getId()));
+                addAfter(event, ACBlocks.getDyedTerracottaShingleStairs(colours.getId()), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()));
+                addAfter(event, ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), ACBlocks.getDyedTerracottaShingleWall(colours.getId()));
 
-                addAfter(event, KekeBlocks.SOAPSTONE_BRICK_WALL.get(), KekeBlocks.getDyedSoapstone(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneStairs(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstoneStairs(colours.getId()), KekeBlocks.getDyedSoapstoneSlab(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), KekeBlocks.getDyedSoapstoneWall(colours.getId()));
+                addAfter(event, ACBlocks.SOAPSTONE_BRICK_WALL.get(), ACBlocks.getDyedSoapstone(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneStairs(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneStairs(colours.getId()), ACBlocks.getDyedSoapstoneSlab(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneSlab(colours.getId()), ACBlocks.getDyedSoapstoneWall(colours.getId()));
 
-                addAfter(event, KekeBlocks.getDyedSoapstoneWall(colours.getId()), KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneWall(colours.getId()), ACBlocks.getDyedPolishedSoapstone(colours.getId()));
+                addAfter(event, ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()));
+                addAfter(event, ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()));
+                addAfter(event, ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()));
 
-                addAfter(event, KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()));
+                addAfter(event, ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()), ACBlocks.getDyedSoapstoneBricks(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()));
 
-                addAfter(event, KekeBlocks.getDyedSoapstoneBrickWall(DyeColor.PINK.getId()), KekeBlocks.getDyedMudBricks(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickStairs(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedMudBrickStairs(colours.getId()), KekeBlocks.getDyedMudBrickSlab(colours.getId()));
-                addAfter(event, KekeBlocks.getDyedMudBrickSlab(colours.getId()), KekeBlocks.getDyedMudBrickWall(colours.getId()));
+                addAfter(event, ACBlocks.getDyedSoapstoneBrickWall(DyeColor.PINK.getId()), ACBlocks.getDyedMudBricks(colours.getId()));
+                addAfter(event, ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickStairs(colours.getId()));
+                addAfter(event, ACBlocks.getDyedMudBrickStairs(colours.getId()), ACBlocks.getDyedMudBrickSlab(colours.getId()));
+                addAfter(event, ACBlocks.getDyedMudBrickSlab(colours.getId()), ACBlocks.getDyedMudBrickWall(colours.getId()));
 
-                addAfter(event, KekeBlocks.PLASTER.get(), KekeBlocks.getDyedPlaster(colours.getId()));
+                addAfter(event, ACBlocks.PLASTER.get(), ACBlocks.getDyedPlaster(colours.getId()));
             }
-            addBefore(event, KekeBlocks.getChalk(DyeColor.WHITE.getId()), KekeBlocks.BLEACHED_CHALK.get());
+            addBefore(event, ACBlocks.getChalk(DyeColor.WHITE.getId()), ACBlocks.BLEACHED_CHALK.get());
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(KekeBlocks.getChalk(DyeColor.WHITE.getId()));
-            event.accept(KekeBlocks.SOAPSTONE.get());
-            event.accept(KekeBlocks.GYPSUM.get());
+            event.accept(ACBlocks.getChalk(DyeColor.WHITE.getId()));
+            event.accept(ACBlocks.SOAPSTONE.get());
+            event.accept(ACBlocks.GYPSUM.get());
 
-            addAfter(event, Blocks.ACACIA_LOG, KekeBlocks.CORK_LOG.get());
-            addAfter(event, Blocks.ACACIA_LEAVES, KekeBlocks.CORK_LEAVES.get());
-            addAfter(event, Blocks.ACACIA_SAPLING, KekeBlocks.CORK_SAPLING.get());
-            addAfter(event, Items.LILY_PAD, KekeItems.LOTUS_PISTILS.get());
+            addAfter(event, Blocks.ACACIA_LOG, ACBlocks.CORK_LOG.get());
+            addAfter(event, Blocks.ACACIA_LEAVES, ACBlocks.CORK_LEAVES.get());
+            addAfter(event, Blocks.ACACIA_SAPLING, ACBlocks.CORK_SAPLING.get());
+            addAfter(event, Items.LILY_PAD, ACItems.LOTUS_PISTILS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
-                addAfter(event, Items.MUSIC_DISC_RELIC, KekeItems.getChalkStick(colours.getId()));
-                addAfter(event, KekeItems.getChalkStick(DyeColor.PINK.getId()), KekeItems.getPaintBrush(colours.getId()));
+                addAfter(event, Items.MUSIC_DISC_RELIC, ACItems.getChalkStick(colours.getId()));
+                addAfter(event, ACItems.getChalkStick(DyeColor.PINK.getId()), ACItems.getPaintBrush(colours.getId()));
             }
-            addBefore(event, KekeItems.getChalkStick(DyeColor.WHITE.getId()), KekeItems.BLEACHED_CHALK_STICK.get());
-            addBefore(event, KekeItems.getPaintBrush(DyeColor.WHITE.getId()), KekeItems.BLEACHDEW_PAINTBRUSH.get());
-            addAfter(event, Items.ACACIA_CHEST_BOAT, KekeItems.CORK_BOAT.get());
-            addAfter(event, KekeItems.CORK_BOAT.get(), KekeItems.CORK_CHEST_BOAT.get());
+            addBefore(event, ACItems.getChalkStick(DyeColor.WHITE.getId()), ACItems.BLEACHED_CHALK_STICK.get());
+            addBefore(event, ACItems.getPaintBrush(DyeColor.WHITE.getId()), ACItems.BLEACHDEW_PAINTBRUSH.get());
+            addAfter(event, Items.ACACIA_CHEST_BOAT, ACItems.CORK_BOAT.get());
+            addAfter(event, ACItems.CORK_BOAT.get(), ACItems.CORK_CHEST_BOAT.get());
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
-                addAfter(event, Items.FLOWER_POT, KekeBlocks.getDyedFlowerPot(colours.getId()));
-                addAfter(event, Items.DECORATED_POT, KekeBlocks.getDyedDecoratedPot(colours.getId()));
+                addAfter(event, Items.FLOWER_POT, ACBlocks.getDyedFlowerPot(colours.getId()));
+                addAfter(event, Items.DECORATED_POT, ACBlocks.getDyedDecoratedPot(colours.getId()));
             }
-            addAfter(event, Items.ACACIA_HANGING_SIGN, KekeItems.CORK_SIGN.get());
-            addAfter(event, KekeItems.CORK_SIGN.get(), KekeItems.CORK_HANGING_SIGN.get());
+            addAfter(event, Items.ACACIA_HANGING_SIGN, ACItems.CORK_SIGN.get());
+            addAfter(event, ACItems.CORK_SIGN.get(), ACItems.CORK_HANGING_SIGN.get());
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            addAfter(event, Blocks.ACACIA_BUTTON, KekeBlocks.CORK_LOG.get());
-            addAfter(event, KekeBlocks.CORK_LOG.get(), KekeBlocks.CORK_WOOD.get());
-            addAfter(event, KekeBlocks.CORK_WOOD.get(), KekeBlocks.STRIPPED_CORK_LOG.get());
-            addAfter(event, KekeBlocks.STRIPPED_CORK_LOG.get(), KekeBlocks.STRIPPED_CORK_WOOD.get());
-            addAfter(event, KekeBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get());
-            addAfter(event, KekeBlocks.CORK.get(), KekeBlocks.SMOOTH_CORK.get());
-            addAfter(event, KekeBlocks.SMOOTH_CORK.get(), KekeBlocks.CORK_PLANKS.get());
-            addAfter(event, KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_STAIRS.get());
-            addAfter(event, KekeBlocks.CORK_STAIRS.get(), KekeBlocks.CORK_SLAB.get());
-            addAfter(event, KekeBlocks.CORK_SLAB.get(), KekeBlocks.CORK_FENCE.get());
-            addAfter(event, KekeBlocks.CORK_FENCE.get(), KekeBlocks.CORK_FENCE_GATE.get());
-            addAfter(event, KekeBlocks.CORK_FENCE_GATE.get(), KekeBlocks.CORK_DOOR.get());
-            addAfter(event, KekeBlocks.CORK_DOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
-            addAfter(event, KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_PRESSURE_PLATE.get());
-            addAfter(event, KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_BUTTON.get());
-            addAfter(event, Blocks.MUD_BRICK_WALL, KekeBlocks.GYPSUM.get());
-            addAfter(event, KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_STAIRS.get());
-            addAfter(event, KekeBlocks.GYPSUM_STAIRS.get(), KekeBlocks.GYPSUM_SLAB.get());
-            addAfter(event, KekeBlocks.GYPSUM_SLAB.get(), KekeBlocks.GYPSUM_WALL.get());
-            addAfter(event, KekeBlocks.GYPSUM_WALL.get(), KekeBlocks.POLISHED_GYPSUM.get());
-            addAfter(event, KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_STAIRS.get());
-            addAfter(event, KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), KekeBlocks.POLISHED_GYPSUM_SLAB.get());
-            addAfter(event, KekeBlocks.POLISHED_GYPSUM_SLAB.get(), KekeBlocks.POLISHED_GYPSUM_WALL.get());
-            addAfter(event, KekeBlocks.POLISHED_GYPSUM_WALL.get(), KekeBlocks.GYPSUM_BRICKS.get());
-            addAfter(event, KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_STAIRS.get());
-            addAfter(event, KekeBlocks.GYPSUM_BRICK_STAIRS.get(), KekeBlocks.GYPSUM_BRICK_SLAB.get());
-            addAfter(event, KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICK_WALL.get());
+            addAfter(event, Blocks.ACACIA_BUTTON, ACBlocks.CORK_LOG.get());
+            addAfter(event, ACBlocks.CORK_LOG.get(), ACBlocks.CORK_WOOD.get());
+            addAfter(event, ACBlocks.CORK_WOOD.get(), ACBlocks.STRIPPED_CORK_LOG.get());
+            addAfter(event, ACBlocks.STRIPPED_CORK_LOG.get(), ACBlocks.STRIPPED_CORK_WOOD.get());
+            addAfter(event, ACBlocks.STRIPPED_CORK_WOOD.get(), ACBlocks.CORK.get());
+            addAfter(event, ACBlocks.CORK.get(), ACBlocks.SMOOTH_CORK.get());
+            addAfter(event, ACBlocks.SMOOTH_CORK.get(), ACBlocks.CORK_PLANKS.get());
+            addAfter(event, ACBlocks.CORK_PLANKS.get(), ACBlocks.CORK_STAIRS.get());
+            addAfter(event, ACBlocks.CORK_STAIRS.get(), ACBlocks.CORK_SLAB.get());
+            addAfter(event, ACBlocks.CORK_SLAB.get(), ACBlocks.CORK_FENCE.get());
+            addAfter(event, ACBlocks.CORK_FENCE.get(), ACBlocks.CORK_FENCE_GATE.get());
+            addAfter(event, ACBlocks.CORK_FENCE_GATE.get(), ACBlocks.CORK_DOOR.get());
+            addAfter(event, ACBlocks.CORK_DOOR.get(), ACBlocks.CORK_TRAPDOOR.get());
+            addAfter(event, ACBlocks.CORK_TRAPDOOR.get(), ACBlocks.CORK_PRESSURE_PLATE.get());
+            addAfter(event, ACBlocks.CORK_PRESSURE_PLATE.get(), ACBlocks.CORK_BUTTON.get());
+            addAfter(event, Blocks.MUD_BRICK_WALL, ACBlocks.GYPSUM.get());
+            addAfter(event, ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_STAIRS.get());
+            addAfter(event, ACBlocks.GYPSUM_STAIRS.get(), ACBlocks.GYPSUM_SLAB.get());
+            addAfter(event, ACBlocks.GYPSUM_SLAB.get(), ACBlocks.GYPSUM_WALL.get());
+            addAfter(event, ACBlocks.GYPSUM_WALL.get(), ACBlocks.POLISHED_GYPSUM.get());
+            addAfter(event, ACBlocks.POLISHED_GYPSUM.get(), ACBlocks.POLISHED_GYPSUM_STAIRS.get());
+            addAfter(event, ACBlocks.POLISHED_GYPSUM_STAIRS.get(), ACBlocks.POLISHED_GYPSUM_SLAB.get());
+            addAfter(event, ACBlocks.POLISHED_GYPSUM_SLAB.get(), ACBlocks.POLISHED_GYPSUM_WALL.get());
+            addAfter(event, ACBlocks.POLISHED_GYPSUM_WALL.get(), ACBlocks.GYPSUM_BRICKS.get());
+            addAfter(event, ACBlocks.GYPSUM_BRICKS.get(), ACBlocks.GYPSUM_BRICK_STAIRS.get());
+            addAfter(event, ACBlocks.GYPSUM_BRICK_STAIRS.get(), ACBlocks.GYPSUM_BRICK_SLAB.get());
+            addAfter(event, ACBlocks.GYPSUM_BRICK_SLAB.get(), ACBlocks.GYPSUM_BRICK_WALL.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            addAfter(event, Items.PRIZE_POTTERY_SHERD, KekeItems.ROLL_POTTERY_SHERD.get());
-            addBefore(event, Items.FRIEND_POTTERY_SHERD, KekeItems.FINALE_POTTERY_SHERD.get());
-            addAfter(event, Items.FRIEND_POTTERY_SHERD, KekeItems.GATEWAY_POTTERY_SHERD.get());
-            addBefore(event, Items.ANGLER_POTTERY_SHERD, KekeItems.RUINED_POTTERY_SHERD.get());
-            addBefore(event, KekeItems.RUINED_POTTERY_SHERD.get(), KekeItems.POTTERY_SHERD.get());
-            addBefore(event, Items.WHITE_DYE, KekeItems.BLEACHDEW.get());
+            addAfter(event, Items.PRIZE_POTTERY_SHERD, ACItems.ROLL_POTTERY_SHERD.get());
+            addBefore(event, Items.FRIEND_POTTERY_SHERD, ACItems.FINALE_POTTERY_SHERD.get());
+            addAfter(event, Items.FRIEND_POTTERY_SHERD, ACItems.GATEWAY_POTTERY_SHERD.get());
+            addBefore(event, Items.ANGLER_POTTERY_SHERD, ACItems.RUINED_POTTERY_SHERD.get());
+            addBefore(event, ACItems.RUINED_POTTERY_SHERD.get(), ACItems.POTTERY_SHERD.get());
+            addBefore(event, Items.WHITE_DYE, ACItems.BLEACHDEW.get());
         }
     }
 }

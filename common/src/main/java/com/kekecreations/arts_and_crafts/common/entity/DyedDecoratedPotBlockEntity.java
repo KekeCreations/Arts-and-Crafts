@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.entity;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -21,7 +21,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity {
 
 
     public DyedDecoratedPotBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
+        super(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
         this.decorations = DecoratedPotBlockEntity.Decorations.EMPTY;
         this.dyeColor = DyeColor.BLACK.getId();
     }

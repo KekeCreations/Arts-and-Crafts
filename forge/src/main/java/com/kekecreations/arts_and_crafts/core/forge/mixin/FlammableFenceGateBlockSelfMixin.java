@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.forge.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.FlammableFenceGateBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableFenceGateBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableFenceGateBlock.class)
+@Mixin(ACFlammableFenceGateBlock.class)
 public class FlammableFenceGateBlockSelfMixin extends FenceGateBlock {
 
 

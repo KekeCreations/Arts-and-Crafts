@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.forge.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.FlammableLeavesBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableLeavesBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableLeavesBlock.class)
+@Mixin(ACFlammableLeavesBlock.class)
 public class FlammableLeavesBlockSelfMixin extends LeavesBlock  {
 
     public FlammableLeavesBlockSelfMixin(Properties p_49795_) {

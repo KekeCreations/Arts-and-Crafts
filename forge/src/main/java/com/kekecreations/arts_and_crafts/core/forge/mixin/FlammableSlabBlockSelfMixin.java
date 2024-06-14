@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.forge.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.FlammableSlabBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableSlabBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableSlabBlock.class)
+@Mixin(ACFlammableSlabBlock.class)
 public class FlammableSlabBlockSelfMixin extends SlabBlock {
 
     public FlammableSlabBlockSelfMixin(Properties p_49795_) {

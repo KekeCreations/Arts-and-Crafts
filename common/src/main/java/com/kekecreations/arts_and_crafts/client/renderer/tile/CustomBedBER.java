@@ -1,17 +1,12 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
-import com.kekecreations.arts_and_crafts.common.entity.CustomBedBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.CubeListBuilder;
-import net.minecraft.client.model.geom.builders.LayerDefinition;
-import net.minecraft.client.model.geom.builders.MeshDefinition;
-import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
@@ -31,7 +26,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 
-public class CustomBedBER implements BlockEntityRenderer<CustomBedBlockEntity> {
+public class CustomBedBER implements BlockEntityRenderer<ACBedBlockEntity> {
     private final ModelPart headRoot;
     private final ModelPart footRoot;
 
@@ -41,7 +36,7 @@ public class CustomBedBER implements BlockEntityRenderer<CustomBedBlockEntity> {
     }
 
     @Override
-    public void render(CustomBedBlockEntity bedBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
+    public void render(ACBedBlockEntity bedBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
         Material material = new Material(Sheets.BED_SHEET, new ResourceLocation("entity/bed/red"));
         if (bedBlockEntity.getColor() == DyeColor.WHITE) {
             material = new Material(Sheets.BED_SHEET, new ResourceLocation("entity/bed/bleached"));

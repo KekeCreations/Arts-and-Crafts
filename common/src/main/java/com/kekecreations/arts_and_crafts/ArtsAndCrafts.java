@@ -15,15 +15,15 @@ public class ArtsAndCrafts {
     public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
     
     public static void init() {
-        KekeParticles.register();
-        ArtsAndCraftsSounds.register();
-        KekeEntityTypes.register();
-        KekeBlocks.register();
+        ACParticles.register();
+        ACSounds.register();
+        ACEntityTypes.register();
+        ACBlocks.register();
         ArtsAndCraftsDyedBlockLists.registerLists();
-        KekeItems.register();
-        ArtsAndCraftsRegistries.register();
-        KekeCustomSherdPatterns.register();
-        KekeRecipeSerializer.register();
+        ACItems.register();
+        ACRegistries.register();
+        ACCustomSherdPatterns.register();
+        ACRecipeSerializer.register();
         CreativeCategoryUtils.addVanillaDyesToColourOrder();
     }
 

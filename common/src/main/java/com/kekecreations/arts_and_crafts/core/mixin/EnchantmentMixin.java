@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -15,7 +15,7 @@ public class EnchantmentMixin {
     @Inject(method = "canEnchant", at = @At("HEAD"), cancellable = true)
     private void arts_and_crafts_removePaintBrushes(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         for (DyeColor colours : DyeColor.values()) {
-            if (stack.is(KekeItems.getPaintBrush(colours.getId()))) cir.setReturnValue(false);
+            if (stack.is(ACItems.getPaintBrush(colours.getId()))) cir.setReturnValue(false);
         }
     }
 }

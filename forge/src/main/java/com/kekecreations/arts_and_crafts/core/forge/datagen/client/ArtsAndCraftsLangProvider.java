@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.client;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -19,121 +19,121 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colours.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
 
             //ITEMS
-            add(KekeItems.getChalkStick(colours.getId()), stringColour + " Chalk Stick");
-            add(KekeItems.getPaintBrush(colours.getId()), stringColour + " Paintbrush");
+            add(ACItems.getChalkStick(colours.getId()), stringColour + " Chalk Stick");
+            add(ACItems.getPaintBrush(colours.getId()), stringColour + " Paintbrush");
 
 
             //BLOCKS
-            add(KekeBlocks.getDyedFlowerPot(colours.getId()), stringColour + " Flower Pot");
-            add(KekeBlocks.getChalkDust(colours.getId()), stringColour + " Chalk Dust");
-            add(KekeBlocks.getChalk(colours.getId()), stringColour + " Chalk");
+            add(ACBlocks.getDyedFlowerPot(colours.getId()), stringColour + " Flower Pot");
+            add(ACBlocks.getChalkDust(colours.getId()), stringColour + " Chalk Dust");
+            add(ACBlocks.getChalk(colours.getId()), stringColour + " Chalk");
 
-            add(KekeBlocks.getDyedTerracottaShingles(colours.getId()), stringColour + " Terracotta Shingles");
-            add(KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), stringColour + " Terracotta Shingle Slab");
-            add(KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), stringColour + " Terracotta Shingle Wall");
-            add(KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), stringColour + " Terracotta Shingle Stairs");
+            add(ACBlocks.getDyedTerracottaShingles(colours.getId()), stringColour + " Terracotta Shingles");
+            add(ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), stringColour + " Terracotta Shingle Slab");
+            add(ACBlocks.getDyedTerracottaShingleWall(colours.getId()), stringColour + " Terracotta Shingle Wall");
+            add(ACBlocks.getDyedTerracottaShingleStairs(colours.getId()), stringColour + " Terracotta Shingle Stairs");
 
-            add(KekeBlocks.getDyedMudBricks(colours.getId()), stringColour + " Mud Bricks");
-            add(KekeBlocks.getDyedMudBrickSlab(colours.getId()), stringColour + " Mud Brick Slab");
-            add(KekeBlocks.getDyedMudBrickWall(colours.getId()), stringColour + " Mud Brick Wall");
-            add(KekeBlocks.getDyedMudBrickStairs(colours.getId()), stringColour + " Mud Brick Stairs");
+            add(ACBlocks.getDyedMudBricks(colours.getId()), stringColour + " Mud Bricks");
+            add(ACBlocks.getDyedMudBrickSlab(colours.getId()), stringColour + " Mud Brick Slab");
+            add(ACBlocks.getDyedMudBrickWall(colours.getId()), stringColour + " Mud Brick Wall");
+            add(ACBlocks.getDyedMudBrickStairs(colours.getId()), stringColour + " Mud Brick Stairs");
 
-            add(KekeBlocks.getDyedSoapstone(colours.getId()), stringColour + " Soapstone");
-            add(KekeBlocks.getDyedSoapstoneSlab(colours.getId()), stringColour + " Soapstone Slab");
-            add(KekeBlocks.getDyedSoapstoneWall(colours.getId()), stringColour + " Soapstone Wall");
-            add(KekeBlocks.getDyedSoapstoneStairs(colours.getId()), stringColour + " Soapstone Stairs");
+            add(ACBlocks.getDyedSoapstone(colours.getId()), stringColour + " Soapstone");
+            add(ACBlocks.getDyedSoapstoneSlab(colours.getId()), stringColour + " Soapstone Slab");
+            add(ACBlocks.getDyedSoapstoneWall(colours.getId()), stringColour + " Soapstone Wall");
+            add(ACBlocks.getDyedSoapstoneStairs(colours.getId()), stringColour + " Soapstone Stairs");
 
-            add(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), stringColour + " Soapstone Bricks");
-            add(KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), stringColour + " Soapstone Brick Slab");
-            add(KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringColour + " Soapstone Brick Wall");
-            add(KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringColour + " Soapstone Brick Stairs");
+            add(ACBlocks.getDyedSoapstoneBricks(colours.getId()), stringColour + " Soapstone Bricks");
+            add(ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()), stringColour + " Soapstone Brick Slab");
+            add(ACBlocks.getDyedSoapstoneBrickWall(colours.getId()), stringColour + " Soapstone Brick Wall");
+            add(ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()), stringColour + " Soapstone Brick Stairs");
 
-            add(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), stringColour + " Polished Soapstone");
-            add(KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), stringColour + " Polished Soapstone Slab");
-            add(KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), stringColour + " Polished Soapstone Wall");
-            add(KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringColour + " Polished Soapstone Stairs");
+            add(ACBlocks.getDyedPolishedSoapstone(colours.getId()), stringColour + " Polished Soapstone");
+            add(ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), stringColour + " Polished Soapstone Slab");
+            add(ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()), stringColour + " Polished Soapstone Wall");
+            add(ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), stringColour + " Polished Soapstone Stairs");
 
-            add(KekeBlocks.getDyedDecoratedPot(colours.getId()), stringColour + " Decorated Pot");
+            add(ACBlocks.getDyedDecoratedPot(colours.getId()), stringColour + " Decorated Pot");
 
-            add(KekeBlocks.getDyedPlaster(colours.getId()), stringColour + " Plaster");
+            add(ACBlocks.getDyedPlaster(colours.getId()), stringColour + " Plaster");
         }
         //BLOCKS
-        add(KekeBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
-        add(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");
-        add(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), "Terracotta Shingle Wall");
-        add(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), "Terracotta Shingle Stairs");
-        add(KekeBlocks.SOAPSTONE.get(), "Soapstone");
-        add(KekeBlocks.SOAPSTONE_SLAB.get(), "Soapstone Slab");
-        add(KekeBlocks.SOAPSTONE_WALL.get(), "Soapstone Wall");
-        add(KekeBlocks.SOAPSTONE_STAIRS.get(), "Soapstone Stairs");
-        add(KekeBlocks.SOAPSTONE_BRICKS.get(), "Soapstone Bricks");
-        add(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), "Soapstone Brick Slab");
-        add(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), "Soapstone Brick Wall");
-        add(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
-        add(KekeBlocks.POLISHED_SOAPSTONE.get(), "Polished Soapstone");
-        add(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), "Polished Soapstone Slab");
-        add(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), "Polished Soapstone Wall");
-        add(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), "Polished Soapstone Stairs");
-        add(KekeBlocks.CORK_PLANKS.get(), "Cork Planks");
-        add(KekeBlocks.CORK_LOG.get(), "Cork Log");
-        add(KekeBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
-        add(KekeBlocks.CORK_DOOR.get(), "Cork Door");
-        add(KekeBlocks.CORK_TRAPDOOR.get(), "Cork Trapdoor");
-        add(KekeBlocks.CORK_BUTTON.get(), "Cork Button");
-        add(KekeBlocks.CORK_FENCE.get(), "Cork Fence");
-        add(KekeBlocks.CORK_FENCE_GATE.get(), "Cork Fence Gate");
-        add(KekeBlocks.CORK_PRESSURE_PLATE.get(), "Cork Pressure Plate");
-        add(KekeBlocks.CORK_SLAB.get(), "Cork Slab");
-        add(KekeBlocks.CORK_STAIRS.get(), "Cork Stairs");
-        add(KekeBlocks.CORK_SIGN.get(), "Cork Sign");
-        add(KekeBlocks.CORK_HANGING_SIGN.get(), "Cork Hanging Sign");
-        add(KekeBlocks.CORK_WOOD.get(), "Cork Wood");
-        add(KekeBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
-        add(KekeBlocks.CORK.get(), "Cork");
-        add(KekeBlocks.SMOOTH_CORK.get(), "Smooth Cork");
-        add(KekeBlocks.CORK_LEAVES.get(), "Cork Leaves");
-        add(KekeBlocks.CORK_SAPLING.get(), "Cork Sapling");
-        add(KekeBlocks.PLASTER.get(), "Plaster");
-        add(KekeBlocks.GYPSUM.get(), "Gypsum");
-        add(KekeBlocks.GYPSUM_SLAB.get(), "Gypsum Slab");
-        add(KekeBlocks.GYPSUM_WALL.get(), "Gypsum Wall");
-        add(KekeBlocks.GYPSUM_STAIRS.get(), "Gypsum Stairs");
-        add(KekeBlocks.GYPSUM_BRICKS.get(), "Gypsum Bricks");
-        add(KekeBlocks.GYPSUM_BRICK_SLAB.get(), "Gypsum Brick Slab");
-        add(KekeBlocks.GYPSUM_BRICK_WALL.get(), "Gypsum Brick Wall");
-        add(KekeBlocks.GYPSUM_BRICK_STAIRS.get(), "Gypsum Brick Stairs");
-        add(KekeBlocks.POLISHED_GYPSUM.get(), "Polished Gypsum");
-        add(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), "Polished Gypsum Slab");
-        add(KekeBlocks.POLISHED_GYPSUM_WALL.get(), "Polished Gypsum Wall");
-        add(KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), "Polished Gypsum Stairs");
-        add(KekeBlocks.LOTUS_FLOWER.get(), "Lotus Flower");
-        add(KekeBlocks.BLEACHED_WOOL.get(), "Bleached Wool");
-        add(KekeBlocks.BLEACHED_CARPET.get(), "Bleached Carpet");
-        add(KekeBlocks.BLEACHED_CHALK.get(), "Bleached Chalk");
-        add(KekeBlocks.GLAZED_TERRACOTTA.get(), "Glazed Terracotta");
-        add(KekeBlocks.BLEACHED_CONCRETE.get(), "Bleached Concrete");
-        add(KekeBlocks.BLEACHED_CONCRETE_POWDER.get(), "Bleached Concrete Powder");
-        add(KekeBlocks.BLEACHED_BED.get(), "Bleached Bed");
+        add(ACBlocks.TERRACOTTA_SHINGLES.get(), "Terracotta Shingles");
+        add(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), "Terracotta Shingle Slab");
+        add(ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), "Terracotta Shingle Wall");
+        add(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), "Terracotta Shingle Stairs");
+        add(ACBlocks.SOAPSTONE.get(), "Soapstone");
+        add(ACBlocks.SOAPSTONE_SLAB.get(), "Soapstone Slab");
+        add(ACBlocks.SOAPSTONE_WALL.get(), "Soapstone Wall");
+        add(ACBlocks.SOAPSTONE_STAIRS.get(), "Soapstone Stairs");
+        add(ACBlocks.SOAPSTONE_BRICKS.get(), "Soapstone Bricks");
+        add(ACBlocks.SOAPSTONE_BRICK_SLAB.get(), "Soapstone Brick Slab");
+        add(ACBlocks.SOAPSTONE_BRICK_WALL.get(), "Soapstone Brick Wall");
+        add(ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), "Soapstone Brick Stairs");
+        add(ACBlocks.POLISHED_SOAPSTONE.get(), "Polished Soapstone");
+        add(ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), "Polished Soapstone Slab");
+        add(ACBlocks.POLISHED_SOAPSTONE_WALL.get(), "Polished Soapstone Wall");
+        add(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), "Polished Soapstone Stairs");
+        add(ACBlocks.CORK_PLANKS.get(), "Cork Planks");
+        add(ACBlocks.CORK_LOG.get(), "Cork Log");
+        add(ACBlocks.STRIPPED_CORK_LOG.get(), "Stripped Cork Log");
+        add(ACBlocks.CORK_DOOR.get(), "Cork Door");
+        add(ACBlocks.CORK_TRAPDOOR.get(), "Cork Trapdoor");
+        add(ACBlocks.CORK_BUTTON.get(), "Cork Button");
+        add(ACBlocks.CORK_FENCE.get(), "Cork Fence");
+        add(ACBlocks.CORK_FENCE_GATE.get(), "Cork Fence Gate");
+        add(ACBlocks.CORK_PRESSURE_PLATE.get(), "Cork Pressure Plate");
+        add(ACBlocks.CORK_SLAB.get(), "Cork Slab");
+        add(ACBlocks.CORK_STAIRS.get(), "Cork Stairs");
+        add(ACBlocks.CORK_SIGN.get(), "Cork Sign");
+        add(ACBlocks.CORK_HANGING_SIGN.get(), "Cork Hanging Sign");
+        add(ACBlocks.CORK_WOOD.get(), "Cork Wood");
+        add(ACBlocks.STRIPPED_CORK_WOOD.get(), "Stripped Cork Wood");
+        add(ACBlocks.CORK.get(), "Cork");
+        add(ACBlocks.SMOOTH_CORK.get(), "Smooth Cork");
+        add(ACBlocks.CORK_LEAVES.get(), "Cork Leaves");
+        add(ACBlocks.CORK_SAPLING.get(), "Cork Sapling");
+        add(ACBlocks.PLASTER.get(), "Plaster");
+        add(ACBlocks.GYPSUM.get(), "Gypsum");
+        add(ACBlocks.GYPSUM_SLAB.get(), "Gypsum Slab");
+        add(ACBlocks.GYPSUM_WALL.get(), "Gypsum Wall");
+        add(ACBlocks.GYPSUM_STAIRS.get(), "Gypsum Stairs");
+        add(ACBlocks.GYPSUM_BRICKS.get(), "Gypsum Bricks");
+        add(ACBlocks.GYPSUM_BRICK_SLAB.get(), "Gypsum Brick Slab");
+        add(ACBlocks.GYPSUM_BRICK_WALL.get(), "Gypsum Brick Wall");
+        add(ACBlocks.GYPSUM_BRICK_STAIRS.get(), "Gypsum Brick Stairs");
+        add(ACBlocks.POLISHED_GYPSUM.get(), "Polished Gypsum");
+        add(ACBlocks.POLISHED_GYPSUM_SLAB.get(), "Polished Gypsum Slab");
+        add(ACBlocks.POLISHED_GYPSUM_WALL.get(), "Polished Gypsum Wall");
+        add(ACBlocks.POLISHED_GYPSUM_STAIRS.get(), "Polished Gypsum Stairs");
+        add(ACBlocks.LOTUS_FLOWER.get(), "Lotus Flower");
+        add(ACBlocks.BLEACHED_WOOL.get(), "Bleached Wool");
+        add(ACBlocks.BLEACHED_CARPET.get(), "Bleached Carpet");
+        add(ACBlocks.BLEACHED_CHALK.get(), "Bleached Chalk");
+        add(ACBlocks.GLAZED_TERRACOTTA.get(), "Glazed Terracotta");
+        add(ACBlocks.BLEACHED_CONCRETE.get(), "Bleached Concrete");
+        add(ACBlocks.BLEACHED_CONCRETE_POWDER.get(), "Bleached Concrete Powder");
+        add(ACBlocks.BLEACHED_BED.get(), "Bleached Bed");
 
 
 
         //ITEMS
-        add(KekeItems.CORK_BOAT.get(), "Cork Boat");
-        add(KekeItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
-        add(KekeItems.POTTERY_SHERD.get(), "Pottery Sherd");
-        add(KekeItems.ROLL_POTTERY_SHERD.get(), "Roll Pottery Sherd");
-        add(KekeItems.RUINED_POTTERY_SHERD.get(), "Ruined Pottery Sherd");
-        add(KekeItems.FINALE_POTTERY_SHERD.get(), "Finale Pottery Sherd");
-        add(KekeItems.GATEWAY_POTTERY_SHERD.get(), "Gateway Pottery Sherd");
-        add(KekeItems.BLEACHDEW.get(), "Bleachdew");
-        add(KekeItems.BLEACHDEW_PAINTBRUSH.get(), "Bleachdew Paintbrush");
-        add(KekeItems.LOTUS_PISTILS.get(), "Lotus Pistils");
-        add(KekeItems.BLEACHED_CHALK_STICK.get(), "Bleached Chalk Stick");
+        add(ACItems.CORK_BOAT.get(), "Cork Boat");
+        add(ACItems.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
+        add(ACItems.POTTERY_SHERD.get(), "Pottery Sherd");
+        add(ACItems.ROLL_POTTERY_SHERD.get(), "Roll Pottery Sherd");
+        add(ACItems.RUINED_POTTERY_SHERD.get(), "Ruined Pottery Sherd");
+        add(ACItems.FINALE_POTTERY_SHERD.get(), "Finale Pottery Sherd");
+        add(ACItems.GATEWAY_POTTERY_SHERD.get(), "Gateway Pottery Sherd");
+        add(ACItems.BLEACHDEW.get(), "Bleachdew");
+        add(ACItems.BLEACHDEW_PAINTBRUSH.get(), "Bleachdew Paintbrush");
+        add(ACItems.LOTUS_PISTILS.get(), "Lotus Pistils");
+        add(ACItems.BLEACHED_CHALK_STICK.get(), "Bleached Chalk Stick");
 
         //ENTITY TYPES
-        add(KekeEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
-        add(KekeEntityTypes.BOAT.get(), "Boat");
-        add(KekeEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
+        add(ACEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
+        add(ACEntityTypes.BOAT.get(), "Boat");
+        add(ACEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
 
 
 

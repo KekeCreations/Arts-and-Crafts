@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsBuiltInLootTables;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACBuiltInLootTables;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -12,7 +12,6 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -29,7 +28,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -37,7 +35,6 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBlock {
@@ -119,7 +116,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
 
     private void dropBleach(Level level, BlockPos pos) {
         ServerLevel serverLevel = (ServerLevel) level;
-        LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(ArtsAndCraftsBuiltInLootTables.LOTUS_FLOWER_HARVEST);
+        LootTable lootTable = serverLevel.getServer().getLootData().getLootTable(ACBuiltInLootTables.LOTUS_FLOWER_HARVEST);
         LootParams lootParams = (new LootParams.Builder(serverLevel)).withParameter(LootContextParams.ORIGIN, pos.getCenter()).withParameter(LootContextParams.TOOL, ItemStack.EMPTY).withParameter(LootContextParams.BLOCK_STATE, this.defaultBlockState()).create(LootContextParamSets.BLOCK);
         List<ItemStack> itemStackList = lootTable.getRandomItems(lootParams);
 
@@ -135,7 +132,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
         if (!level.isClientSide()) {
             if (!blockState.getValue(SHEARED)) {
                 if (itemStack.is(Items.SHEARS)) {
-                    BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
+                    BlockState blockStateToPlace = ACBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, true).setValue(BlockStateProperties.AGE_3, blockState.getValue(BlockStateProperties.AGE_3)).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
                     if (!player.getAbilities().instabuild) {
                         itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(interactionHand));
@@ -146,7 +143,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
                     //LOOT
                     dropBleach(level, blockPos);
                     //SET CROP BACK TO 1
-                    BlockState blockStateToPlace = KekeBlocks.LOTUS_FLOWER.get().defaultBlockState();
+                    BlockState blockStateToPlace = ACBlocks.LOTUS_FLOWER.get().defaultBlockState();
                     level.setBlockAndUpdate(blockPos, blockStateToPlace.setValue(SHEARED, blockState.getValue(SHEARED)).setValue(BlockStateProperties.AGE_3, 1).setValue(BlockStateProperties.HORIZONTAL_FACING, blockState.getValue(BlockStateProperties.HORIZONTAL_FACING)));
                     return InteractionResult.SUCCESS;
                 }
@@ -156,7 +153,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     }
 
     public ItemStack getCloneItemStack(BlockGetter $$0, BlockPos $$1, BlockState $$2) {
-        return KekeItems.LOTUS_PISTILS.get().getDefaultInstance();
+        return ACItems.LOTUS_PISTILS.get().getDefaultInstance();
     }
 
     @Override

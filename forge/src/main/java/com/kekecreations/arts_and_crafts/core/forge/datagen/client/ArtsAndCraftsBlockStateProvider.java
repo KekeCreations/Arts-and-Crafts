@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.client;
 
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -23,148 +23,148 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         //GYPSUM
-        cubeAllWithItem(KekeBlocks.GYPSUM.get());
-        cubeAllWithItem(KekeBlocks.GYPSUM_BRICKS.get());
-        cubeAllWithItem(KekeBlocks.POLISHED_GYPSUM.get());
-        stairsWithItem(KekeBlocks.GYPSUM_STAIRS.get(), KekeBlocks.GYPSUM.get());
-        stairsWithItem(KekeBlocks.GYPSUM_BRICK_STAIRS.get(), KekeBlocks.GYPSUM_BRICKS.get());
-        stairsWithItem(KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), KekeBlocks.POLISHED_GYPSUM.get());
-        slabWithItem(KekeBlocks.GYPSUM_SLAB.get(), KekeBlocks.GYPSUM.get());
-        slabWithItem(KekeBlocks.GYPSUM_BRICK_SLAB.get(), KekeBlocks.GYPSUM_BRICKS.get());
-        slabWithItem(KekeBlocks.POLISHED_GYPSUM_SLAB.get(), KekeBlocks.POLISHED_GYPSUM.get());
-        wallWithItem(KekeBlocks.GYPSUM_WALL.get(), KekeBlocks.GYPSUM.get());
-        wallWithItem(KekeBlocks.GYPSUM_BRICK_WALL.get(), KekeBlocks.GYPSUM_BRICKS.get());
-        wallWithItem(KekeBlocks.POLISHED_GYPSUM_WALL.get(), KekeBlocks.POLISHED_GYPSUM.get());
+        cubeAllWithItem(ACBlocks.GYPSUM.get());
+        cubeAllWithItem(ACBlocks.GYPSUM_BRICKS.get());
+        cubeAllWithItem(ACBlocks.POLISHED_GYPSUM.get());
+        stairsWithItem(ACBlocks.GYPSUM_STAIRS.get(), ACBlocks.GYPSUM.get());
+        stairsWithItem(ACBlocks.GYPSUM_BRICK_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get());
+        stairsWithItem(ACBlocks.POLISHED_GYPSUM_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get());
+        slabWithItem(ACBlocks.GYPSUM_SLAB.get(), ACBlocks.GYPSUM.get());
+        slabWithItem(ACBlocks.GYPSUM_BRICK_SLAB.get(), ACBlocks.GYPSUM_BRICKS.get());
+        slabWithItem(ACBlocks.POLISHED_GYPSUM_SLAB.get(), ACBlocks.POLISHED_GYPSUM.get());
+        wallWithItem(ACBlocks.GYPSUM_WALL.get(), ACBlocks.GYPSUM.get());
+        wallWithItem(ACBlocks.GYPSUM_BRICK_WALL.get(), ACBlocks.GYPSUM_BRICKS.get());
+        wallWithItem(ACBlocks.POLISHED_GYPSUM_WALL.get(), ACBlocks.POLISHED_GYPSUM.get());
 
         //SOAPSTONE
-        cubeAllWithItem(KekeBlocks.SOAPSTONE.get());
-        cubeAllWithItem(KekeBlocks.SOAPSTONE_BRICKS.get());
-        cubeAllWithItem(KekeBlocks.POLISHED_SOAPSTONE.get());
-        stairsWithItem(KekeBlocks.SOAPSTONE_STAIRS.get(), KekeBlocks.SOAPSTONE.get());
-        stairsWithItem(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), KekeBlocks.SOAPSTONE_BRICKS.get());
-        stairsWithItem(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), KekeBlocks.POLISHED_SOAPSTONE.get());
-        slabWithItem(KekeBlocks.SOAPSTONE_SLAB.get(), KekeBlocks.SOAPSTONE.get());
-        slabWithItem(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), KekeBlocks.SOAPSTONE_BRICKS.get());
-        slabWithItem(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), KekeBlocks.POLISHED_SOAPSTONE.get());
-        wallWithItem(KekeBlocks.SOAPSTONE_WALL.get(), KekeBlocks.SOAPSTONE.get());
-        wallWithItem(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), KekeBlocks.SOAPSTONE_BRICKS.get());
-        wallWithItem(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), KekeBlocks.POLISHED_SOAPSTONE.get());
+        cubeAllWithItem(ACBlocks.SOAPSTONE.get());
+        cubeAllWithItem(ACBlocks.SOAPSTONE_BRICKS.get());
+        cubeAllWithItem(ACBlocks.POLISHED_SOAPSTONE.get());
+        stairsWithItem(ACBlocks.SOAPSTONE_STAIRS.get(), ACBlocks.SOAPSTONE.get());
+        stairsWithItem(ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get());
+        stairsWithItem(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get());
+        slabWithItem(ACBlocks.SOAPSTONE_SLAB.get(), ACBlocks.SOAPSTONE.get());
+        slabWithItem(ACBlocks.SOAPSTONE_BRICK_SLAB.get(), ACBlocks.SOAPSTONE_BRICKS.get());
+        slabWithItem(ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), ACBlocks.POLISHED_SOAPSTONE.get());
+        wallWithItem(ACBlocks.SOAPSTONE_WALL.get(), ACBlocks.SOAPSTONE.get());
+        wallWithItem(ACBlocks.SOAPSTONE_BRICK_WALL.get(), ACBlocks.SOAPSTONE_BRICKS.get());
+        wallWithItem(ACBlocks.POLISHED_SOAPSTONE_WALL.get(), ACBlocks.POLISHED_SOAPSTONE.get());
 
         //Terracotta Shingles
-        cubeAllWithItem(KekeBlocks.TERRACOTTA_SHINGLES.get());
-        stairsWithItem(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), KekeBlocks.TERRACOTTA_SHINGLES.get());
-        slabWithItem(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), KekeBlocks.TERRACOTTA_SHINGLES.get());
-        wallWithItem(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), KekeBlocks.TERRACOTTA_SHINGLES.get());
+        cubeAllWithItem(ACBlocks.TERRACOTTA_SHINGLES.get());
+        stairsWithItem(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
+        slabWithItem(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
+        wallWithItem(ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
 
         //Bleached
-        cubeAllWithItem(KekeBlocks.BLEACHED_WOOL.get());
-        carpetWithItem(KekeBlocks.BLEACHED_CARPET.get(), KekeBlocks.BLEACHED_WOOL.get());
-        chalkDustBlock(KekeBlocks.BLEACHED_CHALK_DUST.get(), "bleached");
-        cubeAllWithItem(KekeBlocks.BLEACHED_CHALK.get());
-        glazedTerracottaWithItem(KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
-        concretePowderWithItem(KekeBlocks.BLEACHED_CONCRETE_POWDER.get());
-        cubeAllWithItem(KekeBlocks.BLEACHED_CONCRETE.get());
-        bedBlock(KekeBlocks.BLEACHED_BED.get(), "bleached_bed");
+        cubeAllWithItem(ACBlocks.BLEACHED_WOOL.get());
+        carpetWithItem(ACBlocks.BLEACHED_CARPET.get(), ACBlocks.BLEACHED_WOOL.get());
+        chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), "bleached");
+        cubeAllWithItem(ACBlocks.BLEACHED_CHALK.get());
+        glazedTerracottaWithItem(ACBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
+        concretePowderWithItem(ACBlocks.BLEACHED_CONCRETE_POWDER.get());
+        cubeAllWithItem(ACBlocks.BLEACHED_CONCRETE.get());
+        bedBlock(ACBlocks.BLEACHED_BED.get(), "bleached_bed");
 
 
         //Cork
-        logWithItem(KekeBlocks.CORK_LOG.get());
-        logWithItem(KekeBlocks.STRIPPED_CORK_LOG.get());
-        logWithItem(KekeBlocks.CORK_WOOD.get());
-        logWithItem(KekeBlocks.STRIPPED_CORK_WOOD.get());
-        doorBlock(KekeBlocks.CORK_DOOR.get(), "cork", new ResourceLocation("arts_and_crafts:block/cork_door_bottom"), new ResourceLocation("arts_and_crafts:block/cork_door_top"));
-        cubeAllWithItem(KekeBlocks.CORK.get());
-        cubeAllWithItem(KekeBlocks.SMOOTH_CORK.get());
-        cubeAllWithItem(KekeBlocks.CORK_LEAVES.get());
-        simpleBlock(KekeBlocks.CORK_SAPLING.get(), models().withExistingParent("cork_sapling", "minecraft:block/cross").texture("cross", "block/cork_sapling"));
-        cubeAllWithItem(KekeBlocks.CORK_PLANKS.get());
-        stairsWithItem(KekeBlocks.CORK_STAIRS.get(), KekeBlocks.CORK_PLANKS.get());
-        slabWithItem(KekeBlocks.CORK_SLAB.get(), KekeBlocks.CORK_PLANKS.get());
-        fenceWithItem(KekeBlocks.CORK_FENCE.get(), KekeBlocks.CORK_PLANKS.get());
-        fenceGateWithItem(KekeBlocks.CORK_FENCE_GATE.get(), KekeBlocks.CORK_PLANKS.get());
-        pressurePlateWithItem(KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_PLANKS.get());
-        buttonWithItem(KekeBlocks.CORK_BUTTON.get(), KekeBlocks.CORK_PLANKS.get());
-        trapdoorWithItem(KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
-        signBlock(KekeBlocks.CORK_SIGN.get(), KekeBlocks.CORK_WALL_SIGN.get(), new ResourceLocation("arts_and_crafts:block/cork_planks"));
-        hangingSignBlock(KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get(),"cork");
+        logWithItem(ACBlocks.CORK_LOG.get());
+        logWithItem(ACBlocks.STRIPPED_CORK_LOG.get());
+        logWithItem(ACBlocks.CORK_WOOD.get());
+        logWithItem(ACBlocks.STRIPPED_CORK_WOOD.get());
+        doorBlock(ACBlocks.CORK_DOOR.get(), "cork", new ResourceLocation("arts_and_crafts:block/cork_door_bottom"), new ResourceLocation("arts_and_crafts:block/cork_door_top"));
+        cubeAllWithItem(ACBlocks.CORK.get());
+        cubeAllWithItem(ACBlocks.SMOOTH_CORK.get());
+        cubeAllWithItem(ACBlocks.CORK_LEAVES.get());
+        simpleBlock(ACBlocks.CORK_SAPLING.get(), models().withExistingParent("cork_sapling", "minecraft:block/cross").texture("cross", "block/cork_sapling"));
+        cubeAllWithItem(ACBlocks.CORK_PLANKS.get());
+        stairsWithItem(ACBlocks.CORK_STAIRS.get(), ACBlocks.CORK_PLANKS.get());
+        slabWithItem(ACBlocks.CORK_SLAB.get(), ACBlocks.CORK_PLANKS.get());
+        fenceWithItem(ACBlocks.CORK_FENCE.get(), ACBlocks.CORK_PLANKS.get());
+        fenceGateWithItem(ACBlocks.CORK_FENCE_GATE.get(), ACBlocks.CORK_PLANKS.get());
+        pressurePlateWithItem(ACBlocks.CORK_PRESSURE_PLATE.get(), ACBlocks.CORK_PLANKS.get());
+        buttonWithItem(ACBlocks.CORK_BUTTON.get(), ACBlocks.CORK_PLANKS.get());
+        trapdoorWithItem(ACBlocks.CORK_TRAPDOOR.get(), ACBlocks.CORK_TRAPDOOR.get());
+        signBlock(ACBlocks.CORK_SIGN.get(), ACBlocks.CORK_WALL_SIGN.get(), new ResourceLocation("arts_and_crafts:block/cork_planks"));
+        hangingSignBlock(ACBlocks.CORK_HANGING_SIGN.get(), ACBlocks.CORK_WALL_HANGING_SIGN.get(),"cork");
 
 
-        normalFlowerPotBlock(KekeBlocks.POTTED_CORK_SAPLING.get(), "cork_sapling", "arts_and_crafts");
+        normalFlowerPotBlock(ACBlocks.POTTED_CORK_SAPLING.get(), "cork_sapling", "arts_and_crafts");
 
 
-        lotusFlowerBlock(KekeBlocks.LOTUS_FLOWER.get());
+        lotusFlowerBlock(ACBlocks.LOTUS_FLOWER.get());
 
         //DYED STUFF
         for (DyeColor colours : DyeColor.values()) {
-            plasterWithItem(KekeBlocks.getDyedPlaster(colours.getId()), colours);
-            plasterWithItem(KekeBlocks.PLASTER.get(), null);
-            chalkDustBlock(KekeBlocks.getChalkDust(colours.getId()), colours.getName());
-            cubeAllWithItem(KekeBlocks.getChalk(colours.getId()));
+            plasterWithItem(ACBlocks.getDyedPlaster(colours.getId()), colours);
+            plasterWithItem(ACBlocks.PLASTER.get(), null);
+            chalkDustBlock(ACBlocks.getChalkDust(colours.getId()), colours.getName());
+            cubeAllWithItem(ACBlocks.getChalk(colours.getId()));
             //Terracotta Shingles
-            cubeAllWithItem(KekeBlocks.getDyedTerracottaShingles(colours.getId()));
-            stairsWithItem(((StairBlock)KekeBlocks.getDyedTerracottaShingleStairs(colours.getId())), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
-            slabWithItem(((SlabBlock)KekeBlocks.getDyedTerracottaShingleSlab(colours.getId())), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
-            wallWithItem(((WallBlock)KekeBlocks.getDyedTerracottaShingleWall(colours.getId())), KekeBlocks.getDyedTerracottaShingles(colours.getId()));
+            cubeAllWithItem(ACBlocks.getDyedTerracottaShingles(colours.getId()));
+            stairsWithItem(((StairBlock) ACBlocks.getDyedTerracottaShingleStairs(colours.getId())), ACBlocks.getDyedTerracottaShingles(colours.getId()));
+            slabWithItem(((SlabBlock) ACBlocks.getDyedTerracottaShingleSlab(colours.getId())), ACBlocks.getDyedTerracottaShingles(colours.getId()));
+            wallWithItem(((WallBlock) ACBlocks.getDyedTerracottaShingleWall(colours.getId())), ACBlocks.getDyedTerracottaShingles(colours.getId()));
 
             //Dyed Mud Bricks
-            cubeAllWithItem(KekeBlocks.getDyedMudBricks(colours.getId()));
-            stairsWithItem(((StairBlock)KekeBlocks.getDyedMudBrickStairs(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
-            slabWithItem(((SlabBlock)KekeBlocks.getDyedMudBrickSlab(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
-            wallWithItem(((WallBlock)KekeBlocks.getDyedMudBrickWall(colours.getId())), KekeBlocks.getDyedMudBricks(colours.getId()));
+            cubeAllWithItem(ACBlocks.getDyedMudBricks(colours.getId()));
+            stairsWithItem(((StairBlock) ACBlocks.getDyedMudBrickStairs(colours.getId())), ACBlocks.getDyedMudBricks(colours.getId()));
+            slabWithItem(((SlabBlock) ACBlocks.getDyedMudBrickSlab(colours.getId())), ACBlocks.getDyedMudBricks(colours.getId()));
+            wallWithItem(((WallBlock) ACBlocks.getDyedMudBrickWall(colours.getId())), ACBlocks.getDyedMudBricks(colours.getId()));
 
             //Soapstone
-            cubeAllWithItem(KekeBlocks.getDyedSoapstone(colours.getId()));
-            stairsWithItem(((StairBlock)KekeBlocks.getDyedSoapstoneStairs(colours.getId())), KekeBlocks.getDyedSoapstone(colours.getId()));
-            slabWithItem(((SlabBlock)KekeBlocks.getDyedSoapstoneSlab(colours.getId())), KekeBlocks.getDyedSoapstone(colours.getId()));
-            wallWithItem(((WallBlock)KekeBlocks.getDyedSoapstoneWall(colours.getId())), KekeBlocks.getDyedSoapstone(colours.getId()));
-            cubeAllWithItem(KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
-            stairsWithItem(((StairBlock)KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId())), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
-            slabWithItem(((SlabBlock)KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId())), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
-            wallWithItem(((WallBlock)KekeBlocks.getDyedSoapstoneBrickWall(colours.getId())), KekeBlocks.getDyedSoapstoneBricks(colours.getId()));
-            cubeAllWithItem(KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
-            stairsWithItem(((StairBlock)KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId())), KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
-            slabWithItem(((SlabBlock)KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId())), KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
-            wallWithItem(((WallBlock)KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId())), KekeBlocks.getDyedPolishedSoapstone(colours.getId()));
+            cubeAllWithItem(ACBlocks.getDyedSoapstone(colours.getId()));
+            stairsWithItem(((StairBlock) ACBlocks.getDyedSoapstoneStairs(colours.getId())), ACBlocks.getDyedSoapstone(colours.getId()));
+            slabWithItem(((SlabBlock) ACBlocks.getDyedSoapstoneSlab(colours.getId())), ACBlocks.getDyedSoapstone(colours.getId()));
+            wallWithItem(((WallBlock) ACBlocks.getDyedSoapstoneWall(colours.getId())), ACBlocks.getDyedSoapstone(colours.getId()));
+            cubeAllWithItem(ACBlocks.getDyedSoapstoneBricks(colours.getId()));
+            stairsWithItem(((StairBlock) ACBlocks.getDyedSoapstoneBrickStairs(colours.getId())), ACBlocks.getDyedSoapstoneBricks(colours.getId()));
+            slabWithItem(((SlabBlock) ACBlocks.getDyedSoapstoneBrickSlab(colours.getId())), ACBlocks.getDyedSoapstoneBricks(colours.getId()));
+            wallWithItem(((WallBlock) ACBlocks.getDyedSoapstoneBrickWall(colours.getId())), ACBlocks.getDyedSoapstoneBricks(colours.getId()));
+            cubeAllWithItem(ACBlocks.getDyedPolishedSoapstone(colours.getId()));
+            stairsWithItem(((StairBlock) ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId())), ACBlocks.getDyedPolishedSoapstone(colours.getId()));
+            slabWithItem(((SlabBlock) ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId())), ACBlocks.getDyedPolishedSoapstone(colours.getId()));
+            wallWithItem(((WallBlock) ACBlocks.getDyedPolishedSoapstoneWall(colours.getId())), ACBlocks.getDyedPolishedSoapstone(colours.getId()));
 
-            emptyFlowerPotBlock(KekeBlocks.getDyedFlowerPot(colours.getId()), colours);
+            emptyFlowerPotBlock(ACBlocks.getDyedFlowerPot(colours.getId()), colours);
 
-            flowerPotBlock(KekeBlocks.getDyedPottedCorkSapling(colours), colours, "cork_sapling", "arts_and_crafts");
-            flowerPotBlock(KekeBlocks.getDyedPottedOakSapling(colours), colours, "oak_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedSpruceSapling(colours), colours, "spruce_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedBirchSapling(colours), colours, "birch_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedJungleSapling(colours), colours, "jungle_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedAcaciaSapling(colours), colours, "acacia_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedCherrySapling(colours), colours, "cherry_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedDarkOakSapling(colours), colours, "dark_oak_sapling", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedMangrovePropagule(colours), colours, "mangrove_propagule", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedCorkSapling(colours), colours, "cork_sapling", "arts_and_crafts");
+            flowerPotBlock(ACBlocks.getDyedPottedOakSapling(colours), colours, "oak_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedSpruceSapling(colours), colours, "spruce_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedBirchSapling(colours), colours, "birch_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedJungleSapling(colours), colours, "jungle_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedAcaciaSapling(colours), colours, "acacia_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedCherrySapling(colours), colours, "cherry_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedDarkOakSapling(colours), colours, "dark_oak_sapling", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colours), colours, "mangrove_propagule", "minecraft");
 
-            flowerPotBlock(KekeBlocks.getDyedPottedCrimsonFungus(colours), colours, "crimson_fungus", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedCrimsonRoots(colours), colours, "crimson_roots_pot", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedWarpedFungus(colours), colours, "warped_fungus", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedWarpedRoots(colours), colours, "warped_roots_pot", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedCrimsonFungus(colours), colours, "crimson_fungus", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedCrimsonRoots(colours), colours, "crimson_roots_pot", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedWarpedFungus(colours), colours, "warped_fungus", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedWarpedRoots(colours), colours, "warped_roots_pot", "minecraft");
 
-            flowerPotBlock(KekeBlocks.getDyedPottedFern(colours), colours, "fern", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedDandelion(colours), colours, "dandelion", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedPoppy(colours), colours, "poppy", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedBlueOrchid(colours), colours, "blue_orchid", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedAllium(colours), colours, "allium", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedAzureBluet(colours), colours, "azure_bluet", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedRedTulip(colours), colours, "red_tulip", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedOrangeTulip(colours), colours, "orange_tulip", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedWhiteTulip(colours), colours, "white_tulip", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedPinkTulip(colours), colours, "pink_tulip", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedOxeyeDaisy(colours), colours, "oxeye_daisy", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedCornflower(colours), colours, "cornflower", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedLilyOfTheValley(colours), colours, "lily_of_the_valley", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedWitherRose(colours), colours, "wither_rose", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedRedMushroom(colours), colours, "red_mushroom", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedBrownMushroom(colours), colours, "brown_mushroom", "minecraft");
-            flowerPotBlock(KekeBlocks.getDyedPottedDeadBush(colours), colours, "dead_bush", "minecraft");
-            cactusFlowerPotBlock(KekeBlocks.getDyedPottedCactus(colours), colours);
-            bambooFlowerPotBlock(KekeBlocks.getDyedPottedBamboo(colours), colours);
-            azaleaFlowerPotBlock(KekeBlocks.getDyedPottedAzalea(colours), colours, "potted_azalea_bush");
-            azaleaFlowerPotBlock(KekeBlocks.getDyedPottedFloweringAzalea(colours), colours, "potted_flowering_azalea_bush");
-            flowerPotBlock(KekeBlocks.getDyedPottedTorchFlower(colours), colours, "torchflower", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedFern(colours), colours, "fern", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedDandelion(colours), colours, "dandelion", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedPoppy(colours), colours, "poppy", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedBlueOrchid(colours), colours, "blue_orchid", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedAllium(colours), colours, "allium", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedAzureBluet(colours), colours, "azure_bluet", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedRedTulip(colours), colours, "red_tulip", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedOrangeTulip(colours), colours, "orange_tulip", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedWhiteTulip(colours), colours, "white_tulip", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedPinkTulip(colours), colours, "pink_tulip", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedOxeyeDaisy(colours), colours, "oxeye_daisy", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedCornflower(colours), colours, "cornflower", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedLilyOfTheValley(colours), colours, "lily_of_the_valley", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedWitherRose(colours), colours, "wither_rose", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedRedMushroom(colours), colours, "red_mushroom", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedBrownMushroom(colours), colours, "brown_mushroom", "minecraft");
+            flowerPotBlock(ACBlocks.getDyedPottedDeadBush(colours), colours, "dead_bush", "minecraft");
+            cactusFlowerPotBlock(ACBlocks.getDyedPottedCactus(colours), colours);
+            bambooFlowerPotBlock(ACBlocks.getDyedPottedBamboo(colours), colours);
+            azaleaFlowerPotBlock(ACBlocks.getDyedPottedAzalea(colours), colours, "potted_azalea_bush");
+            azaleaFlowerPotBlock(ACBlocks.getDyedPottedFloweringAzalea(colours), colours, "potted_flowering_azalea_bush");
+            flowerPotBlock(ACBlocks.getDyedPottedTorchFlower(colours), colours, "torchflower", "minecraft");
         }
     }
     private ResourceLocation key(Block block) {

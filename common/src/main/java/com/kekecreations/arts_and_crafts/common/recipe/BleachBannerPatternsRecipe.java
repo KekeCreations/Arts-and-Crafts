@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -31,7 +31,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
                 if (itemStack.is(ItemTags.BANNERS) && itemStack.hasTag()) {
                     ++i;
                 } else {
-                    if (!(itemStack.is(KekeItems.BLEACHDEW.get()))) {
+                    if (!(itemStack.is(ACItems.BLEACHDEW.get()))) {
                         return false;
                     }
 
@@ -71,7 +71,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
     }
 
     public RecipeSerializer<?> getSerializer() {
-        return KekeRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
+        return ACRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
     }
 
 }

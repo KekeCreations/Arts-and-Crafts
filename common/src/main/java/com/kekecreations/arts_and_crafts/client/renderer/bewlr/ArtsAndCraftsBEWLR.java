@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts.client.renderer.bewlr;
 
-import com.kekecreations.arts_and_crafts.common.block.CustomBedBlock;
-import com.kekecreations.arts_and_crafts.common.entity.CustomBedBlockEntity;
+import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
+import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -18,14 +18,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implements ResourceManagerReloadListener {
 
-    private final CustomBedBlockEntity bed;
+    private final ACBedBlockEntity bed;
     private DyedDecoratedPotBlockEntity dyedDecoratedPot;
     public ArtsAndCraftsBEWLR() {
         super(null, null);
         for (DyeColor colours : DyeColor.values()) {
-            this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, KekeBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
+            this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, ACBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
         }
-        this.bed = new CustomBedBlockEntity(BlockPos.ZERO, KekeBlocks.BLEACHED_BED.get().defaultBlockState());
+        this.bed = new ACBedBlockEntity(BlockPos.ZERO, ACBlocks.BLEACHED_BED.get().defaultBlockState());
     }
 
     public void renderByItem(ItemStack itemStack, ItemDisplayContext itemDisplayContext, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
@@ -36,14 +36,14 @@ public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implemen
             BlockState blockState = block.defaultBlockState();
             Object blockEntity = null;
             for (DyeColor colours : DyeColor.values()) {
-                if (blockState.is(KekeBlocks.getDyedDecoratedPot(colours.getId()))) {
+                if (blockState.is(ACBlocks.getDyedDecoratedPot(colours.getId()))) {
                     this.dyedDecoratedPot.setFromItem(itemStack);
                     this.dyedDecoratedPot.setDyeColor(colours.getId());
                     blockEntity = this.dyedDecoratedPot;
                 }
             }
-            if (blockState.is(KekeBlocks.BLEACHED_BED.get())) {
-                this.bed.setColor(((CustomBedBlock)blockState.getBlock()).getColor());
+            if (blockState.is(ACBlocks.BLEACHED_BED.get())) {
+                this.bed.setColor(((ACBedBlock)blockState.getBlock()).getColor());
                 this.bed.setColor(DyeColor.WHITE);
                 blockEntity = this.bed;
             }

@@ -3,8 +3,8 @@ package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -31,251 +31,251 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //DYE BLOCKS
         List<Item> dyeList = List.of(Items.BLACK_DYE, Items.BLUE_DYE, Items.BROWN_DYE, Items.CYAN_DYE, Items.GRAY_DYE, Items.GREEN_DYE, Items.LIGHT_BLUE_DYE, Items.LIGHT_GRAY_DYE, Items.LIME_DYE, Items.MAGENTA_DYE, Items.ORANGE_DYE, Items.PINK_DYE, Items.PURPLE_DYE, Items.RED_DYE, Items.YELLOW_DYE, Items.WHITE_DYE);
-        List<Item> chalkList = List.of(KekeBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getChalk(DyeColor.LIME.getId()).asItem(), KekeBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PINK.getId()).asItem(), KekeBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getChalk(DyeColor.RED.getId()).asItem(), KekeBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getChalk(DyeColor.WHITE.getId()).asItem(), KekeBlocks.BLEACHED_CHALK.get().asItem());
-        List<Item> chalkStickList = List.of(KekeItems.getChalkStick(DyeColor.BLACK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.BROWN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.CYAN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.GREEN.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeItems.getChalkStick(DyeColor.LIME.getId()).asItem(), KekeItems.getChalkStick(DyeColor.MAGENTA.getId()).asItem(), KekeItems.getChalkStick(DyeColor.ORANGE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PINK.getId()).asItem(), KekeItems.getChalkStick(DyeColor.PURPLE.getId()).asItem(), KekeItems.getChalkStick(DyeColor.RED.getId()).asItem(), KekeItems.getChalkStick(DyeColor.YELLOW.getId()).asItem(), KekeItems.getChalkStick(DyeColor.WHITE.getId()).asItem(), KekeItems.BLEACHED_CHALK_STICK.get());
-        List<Item> flowerPotList = List.of(KekeBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()).asItem());
+        List<Item> chalkList = List.of(ACBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), ACBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), ACBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), ACBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), ACBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), ACBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIME.getId()).asItem(), ACBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getChalk(DyeColor.PINK.getId()).asItem(), ACBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getChalk(DyeColor.RED.getId()).asItem(), ACBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getChalk(DyeColor.WHITE.getId()).asItem(), ACBlocks.BLEACHED_CHALK.get().asItem());
+        List<Item> chalkStickList = List.of(ACItems.getChalkStick(DyeColor.BLACK.getId()).asItem(), ACItems.getChalkStick(DyeColor.BLUE.getId()).asItem(), ACItems.getChalkStick(DyeColor.BROWN.getId()).asItem(), ACItems.getChalkStick(DyeColor.CYAN.getId()).asItem(), ACItems.getChalkStick(DyeColor.GRAY.getId()).asItem(), ACItems.getChalkStick(DyeColor.GREEN.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIME.getId()).asItem(), ACItems.getChalkStick(DyeColor.MAGENTA.getId()).asItem(), ACItems.getChalkStick(DyeColor.ORANGE.getId()).asItem(), ACItems.getChalkStick(DyeColor.PINK.getId()).asItem(), ACItems.getChalkStick(DyeColor.PURPLE.getId()).asItem(), ACItems.getChalkStick(DyeColor.RED.getId()).asItem(), ACItems.getChalkStick(DyeColor.YELLOW.getId()).asItem(), ACItems.getChalkStick(DyeColor.WHITE.getId()).asItem(), ACItems.BLEACHED_CHALK_STICK.get());
+        List<Item> flowerPotList = List.of(ACBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()).asItem());
         colorBlockWithDye(recipeConsumer, dyeList, chalkList, "chalk");
         colorBlockWithDye(recipeConsumer, dyeList, chalkStickList, "chalk_sticks");
         colorBlockWithDye(recipeConsumer, dyeList, flowerPotList, "flower_pots");
         colorBleachedBlockWithDye(recipeConsumer, dyeList, flowerPotList, Blocks.FLOWER_POT, "flower_pots");
 
         //BLEACHED
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.BLEACHED_CARPET.get(),3)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CARPET.get(),3)
                 .pattern("KK")
-                .define('K', KekeBlocks.BLEACHED_WOOL.get())
-                .unlockedBy(getItemName(KekeItems.BLEACHDEW.get()), has(KekeItems.BLEACHDEW.get()))
+                .define('K', ACBlocks.BLEACHED_WOOL.get())
+                .unlockedBy(getItemName(ACItems.BLEACHDEW.get()), has(ACItems.BLEACHDEW.get()))
                 .save(recipeConsumer);
         //wool
         List<Item> woolList = List.of(Blocks.BLACK_WOOL.asItem(), Blocks.BLUE_WOOL.asItem(), Blocks.BROWN_WOOL.asItem(), Blocks.CYAN_WOOL.asItem(), Blocks.GRAY_WOOL.asItem(), Blocks.GREEN_WOOL.asItem(), Blocks.LIGHT_BLUE_WOOL.asItem(), Blocks.LIGHT_GRAY_WOOL.asItem(), Blocks.LIME_WOOL.asItem(), Blocks.MAGENTA_WOOL.asItem(), Blocks.ORANGE_WOOL.asItem(), Blocks.PINK_WOOL.asItem(), Blocks.PURPLE_WOOL.asItem(), Blocks.RED_WOOL.asItem(), Blocks.YELLOW_WOOL.asItem(), Blocks.WHITE_WOOL.asItem());
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, woolList, KekeBlocks.BLEACHED_WOOL.get(),  "wool");
-        bleachBlock(recipeConsumer, woolList, KekeBlocks.BLEACHED_WOOL.get(), "wool");
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, woolList, ACBlocks.BLEACHED_WOOL.get(),  "wool");
+        bleachBlock(recipeConsumer, woolList, ACBlocks.BLEACHED_WOOL.get(), "wool");
         //carpet
         List<Item> carpetList = List.of(Blocks.BLACK_CARPET.asItem(), Blocks.BLUE_CARPET.asItem(), Blocks.BROWN_CARPET.asItem(), Blocks.CYAN_CARPET.asItem(), Blocks.GRAY_CARPET.asItem(), Blocks.GREEN_CARPET.asItem(), Blocks.LIGHT_BLUE_CARPET.asItem(), Blocks.LIGHT_GRAY_CARPET.asItem(), Blocks.LIME_CARPET.asItem(), Blocks.MAGENTA_CARPET.asItem(), Blocks.ORANGE_CARPET.asItem(), Blocks.PINK_CARPET.asItem(), Blocks.PURPLE_CARPET.asItem(), Blocks.RED_CARPET.asItem(), Blocks.YELLOW_CARPET.asItem(), Blocks.WHITE_CARPET.asItem());
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, carpetList, KekeBlocks.BLEACHED_CARPET.get(),  "carpet");
-        bleachBlock(recipeConsumer, carpetList, KekeBlocks.BLEACHED_CARPET.get(), "carpet");
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, carpetList, ACBlocks.BLEACHED_CARPET.get(),  "carpet");
+        bleachBlock(recipeConsumer, carpetList, ACBlocks.BLEACHED_CARPET.get(), "carpet");
         //chalk
-        bleachBlock(recipeConsumer, chalkList, KekeBlocks.BLEACHED_CHALK.get(), "chalk");
+        bleachBlock(recipeConsumer, chalkList, ACBlocks.BLEACHED_CHALK.get(), "chalk");
         //chalk sticks
-        bleachBlock(recipeConsumer, chalkStickList, KekeItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
+        bleachBlock(recipeConsumer, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
         //terracotta
         List<Item> terracottaList = List.of(Blocks.BLACK_TERRACOTTA.asItem(), Blocks.BLUE_TERRACOTTA.asItem(), Blocks.BROWN_TERRACOTTA.asItem(), Blocks.CYAN_TERRACOTTA.asItem(), Blocks.GRAY_TERRACOTTA.asItem(), Blocks.GREEN_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_TERRACOTTA.asItem(), Blocks.LIME_TERRACOTTA.asItem(), Blocks.MAGENTA_TERRACOTTA.asItem(), Blocks.ORANGE_TERRACOTTA.asItem(), Blocks.PINK_TERRACOTTA.asItem(), Blocks.PURPLE_TERRACOTTA.asItem(), Blocks.RED_TERRACOTTA.asItem(), Blocks.YELLOW_TERRACOTTA.asItem(), Blocks.WHITE_TERRACOTTA.asItem());
         bleachBlockAlt(recipeConsumer, terracottaList, Blocks.TERRACOTTA, "terracotta");
-        smeltingRecipe(Blocks.TERRACOTTA, KekeBlocks.GLAZED_TERRACOTTA.get(), RecipeCategory.BUILDING_BLOCKS, 0.1F, recipeConsumer);
+        smeltingRecipe(Blocks.TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get(), RecipeCategory.BUILDING_BLOCKS, 0.1F, recipeConsumer);
         List<Item> glazedTerracottaList = List.of(Blocks.BLACK_GLAZED_TERRACOTTA.asItem(), Blocks.BLUE_GLAZED_TERRACOTTA.asItem(), Blocks.BROWN_GLAZED_TERRACOTTA.asItem(), Blocks.CYAN_GLAZED_TERRACOTTA.asItem(), Blocks.GRAY_GLAZED_TERRACOTTA.asItem(), Blocks.GREEN_GLAZED_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA.asItem(), Blocks.LIME_GLAZED_TERRACOTTA.asItem(), Blocks.MAGENTA_GLAZED_TERRACOTTA.asItem(), Blocks.ORANGE_GLAZED_TERRACOTTA.asItem(), Blocks.PINK_GLAZED_TERRACOTTA.asItem(), Blocks.PURPLE_GLAZED_TERRACOTTA.asItem(), Blocks.RED_GLAZED_TERRACOTTA.asItem(), Blocks.YELLOW_GLAZED_TERRACOTTA.asItem(), Blocks.WHITE_GLAZED_TERRACOTTA.asItem());
-        bleachBlockAlt(recipeConsumer, glazedTerracottaList, KekeBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
+        bleachBlockAlt(recipeConsumer, glazedTerracottaList, ACBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
         colorBlockWithDye(recipeConsumer, dyeList, glazedTerracottaList, "glazed_terracotta");
         //Plaster
-        List<Item> plasterList = List.of(KekeBlocks.getDyedPlaster(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedPlaster(DyeColor.WHITE.getId()).asItem());
-        bleachBlockAlt(recipeConsumer, plasterList, KekeBlocks.PLASTER.get(), "plaster");
+        List<Item> plasterList = List.of(ACBlocks.getDyedPlaster(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedPlaster(DyeColor.WHITE.getId()).asItem());
+        bleachBlockAlt(recipeConsumer, plasterList, ACBlocks.PLASTER.get(), "plaster");
         //concrete
-        concretePowder(recipeConsumer, KekeBlocks.BLEACHED_CONCRETE_POWDER.get(), KekeItems.BLEACHDEW.get());
+        concretePowder(recipeConsumer, ACBlocks.BLEACHED_CONCRETE_POWDER.get(), ACItems.BLEACHDEW.get());
         //bed
         List<Item> bedList = List.of(Items.BLACK_BED, Items.BLUE_BED, Items.BROWN_BED, Items.CYAN_BED, Items.GRAY_BED, Items.GREEN_BED, Items.LIGHT_BLUE_BED, Items.LIGHT_GRAY_BED, Items.LIME_BED, Items.MAGENTA_BED, Items.ORANGE_BED, Items.PINK_BED, Items.PURPLE_BED, Items.RED_BED, Items.YELLOW_BED, Items.WHITE_BED);
-        bedFromPlanksAndWool(recipeConsumer, KekeItems.BLEACHED_BED.get(), KekeBlocks.BLEACHED_WOOL.get());
-        bleachBlock(recipeConsumer, bedList, KekeItems.BLEACHED_BED.get(), "bed");
-        colorBleachedBlockWithDye(recipeConsumer, dyeList, bedList, KekeBlocks.BLEACHED_BED.get(), "bed");
+        bedFromPlanksAndWool(recipeConsumer, ACItems.BLEACHED_BED.get(), ACBlocks.BLEACHED_WOOL.get());
+        bleachBlock(recipeConsumer, bedList, ACItems.BLEACHED_BED.get(), "bed");
+        colorBleachedBlockWithDye(recipeConsumer, dyeList, bedList, ACBlocks.BLEACHED_BED.get(), "bed");
         //soapstone
-        List<Item> soapstoneList = List.of(KekeBlocks.getDyedSoapstone(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedSoapstone(DyeColor.WHITE.getId()).asItem());
-        bleachBlockAlt(recipeConsumer, soapstoneList, KekeBlocks.SOAPSTONE.get(), "soapstone");
-        List<Item> polishedSoapstoneList = List.of(KekeBlocks.getDyedPolishedSoapstone(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(DyeColor.WHITE.getId()).asItem());
-        bleachBlockAlt(recipeConsumer, polishedSoapstoneList, KekeBlocks.POLISHED_SOAPSTONE.get(), "polished_soapstone");
-        List<Item> soapstoneBricksList = List.of(KekeBlocks.getDyedSoapstoneBricks(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(DyeColor.WHITE.getId()).asItem());
-        bleachBlockAlt(recipeConsumer, soapstoneBricksList, KekeBlocks.SOAPSTONE_BRICKS.get(), "soapstone_bricks");
+        List<Item> soapstoneList = List.of(ACBlocks.getDyedSoapstone(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedSoapstone(DyeColor.WHITE.getId()).asItem());
+        bleachBlockAlt(recipeConsumer, soapstoneList, ACBlocks.SOAPSTONE.get(), "soapstone");
+        List<Item> polishedSoapstoneList = List.of(ACBlocks.getDyedPolishedSoapstone(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(DyeColor.WHITE.getId()).asItem());
+        bleachBlockAlt(recipeConsumer, polishedSoapstoneList, ACBlocks.POLISHED_SOAPSTONE.get(), "polished_soapstone");
+        List<Item> soapstoneBricksList = List.of(ACBlocks.getDyedSoapstoneBricks(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(DyeColor.WHITE.getId()).asItem());
+        bleachBlockAlt(recipeConsumer, soapstoneBricksList, ACBlocks.SOAPSTONE_BRICKS.get(), "soapstone_bricks");
         //terracotta shingles
-        List<Item> terracottaShinglesList = List.of(KekeBlocks.getDyedTerracottaShingles(DyeColor.BLACK.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.BLUE.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.BROWN.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.CYAN.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.GRAY.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.GREEN.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.LIGHT_BLUE.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.LIGHT_GRAY.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.LIME.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.MAGENTA.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.ORANGE.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.PINK.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.PURPLE.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.RED.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.YELLOW.getId()).asItem(), KekeBlocks.getDyedTerracottaShingles(DyeColor.WHITE.getId()).asItem());
-        bleachBlockAlt(recipeConsumer, terracottaShinglesList, KekeBlocks.TERRACOTTA_SHINGLES.get(), "terracotta_shingles");
+        List<Item> terracottaShinglesList = List.of(ACBlocks.getDyedTerracottaShingles(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedTerracottaShingles(DyeColor.WHITE.getId()).asItem());
+        bleachBlockAlt(recipeConsumer, terracottaShinglesList, ACBlocks.TERRACOTTA_SHINGLES.get(), "terracotta_shingles");
 
 
         //GYPSUM
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_BRICKS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.POLISHED_GYPSUM, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_SLAB, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_WALL, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM, KekeBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM_BRICKS, KekeBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM_BRICKS, KekeBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.GYPSUM_BRICKS, KekeBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_GYPSUM, KekeBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
-        stairRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.GYPSUM_WALL.get(), recipeConsumer);
-        stairRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM_WALL.get(), recipeConsumer);
-        stairRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.GYPSUM_BRICKS.get(), KekeBlocks.GYPSUM_BRICK_WALL.get(), recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICKS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_STAIRS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_WALL, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
+        stairRecipe(ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_WALL.get(), recipeConsumer);
+        stairRecipe(ACBlocks.POLISHED_GYPSUM.get(), ACBlocks.POLISHED_GYPSUM_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.POLISHED_GYPSUM.get(), ACBlocks.POLISHED_GYPSUM_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.POLISHED_GYPSUM.get(), ACBlocks.POLISHED_GYPSUM_WALL.get(), recipeConsumer);
+        stairRecipe(ACBlocks.GYPSUM_BRICKS.get(), ACBlocks.GYPSUM_BRICK_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.GYPSUM_BRICKS.get(), ACBlocks.GYPSUM_BRICK_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.GYPSUM_BRICKS.get(), ACBlocks.GYPSUM_BRICK_WALL.get(), recipeConsumer);
 
         //GYPSUM TO BRICK OR POLISHED RECIPES
-        typeRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.POLISHED_GYPSUM.get(), recipeConsumer);
-        typeRecipe(KekeBlocks.POLISHED_GYPSUM.get(), KekeBlocks.GYPSUM_BRICKS.get(), recipeConsumer);
+        typeRecipe(ACBlocks.GYPSUM.get(), ACBlocks.POLISHED_GYPSUM.get(), recipeConsumer);
+        typeRecipe(ACBlocks.POLISHED_GYPSUM.get(), ACBlocks.GYPSUM_BRICKS.get(), recipeConsumer);
 
         //SOAPSTONE
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
-        stairRecipe(KekeBlocks.SOAPSTONE.get(), KekeBlocks.SOAPSTONE_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.SOAPSTONE.get(), KekeBlocks.SOAPSTONE_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.SOAPSTONE.get(), KekeBlocks.SOAPSTONE_WALL.get(), recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_BRICKS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
+        stairRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_WALL.get(), recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICKS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
 
         //SOAPSTONE TO BRICK OR POLISHED RECIPES
-        typeRecipe(KekeBlocks.SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE.get(), recipeConsumer);
-        typeRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.SOAPSTONE_BRICKS.get(), recipeConsumer);
+        typeRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE.get(), recipeConsumer);
+        typeRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.SOAPSTONE_BRICKS.get(), recipeConsumer);
 
         //POLISHED SOAPSTONE
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.POLISHED_SOAPSTONE.get().asItem(), KekeBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
-        stairRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
+        stairRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_WALL.get(), recipeConsumer);
 
         //SOAPSTONE BRICKS
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE_BRICKS.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE_BRICKS.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.SOAPSTONE_BRICKS.get().asItem(), KekeBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
-        stairRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), KekeBlocks.SOAPSTONE_BRICK_WALL.get(), recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
+        stairRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_WALL.get(), recipeConsumer);
 
         //TERRACOTTA SHINGLES
-        typeRecipe(Blocks.TERRACOTTA, KekeBlocks.TERRACOTTA_SHINGLES.get(), recipeConsumer);
-        stairRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), recipeConsumer);
-        slabRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), recipeConsumer);
-        wallRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get().asItem(),1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get().asItem(),1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), KekeBlocks.TERRACOTTA_SHINGLE_WALL.get().asItem(),1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, Blocks.TERRACOTTA.asItem(), KekeBlocks.TERRACOTTA_SHINGLES.get().asItem(), 1, recipeConsumer);
+        typeRecipe(Blocks.TERRACOTTA, ACBlocks.TERRACOTTA_SHINGLES.get(), recipeConsumer);
+        stairRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), recipeConsumer);
+        slabRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), recipeConsumer);
+        wallRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get().asItem(),1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get().asItem(),1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get().asItem(),1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, Blocks.TERRACOTTA.asItem(), ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), 1, recipeConsumer);
 
         //PLASTER
-        smeltingRecipe(KekeBlocks.GYPSUM.get(), KekeBlocks.PLASTER.get(), RecipeCategory.BUILDING_BLOCKS, 0F, recipeConsumer);
+        smeltingRecipe(ACBlocks.GYPSUM.get(), ACBlocks.PLASTER.get(), RecipeCategory.BUILDING_BLOCKS, 0F, recipeConsumer);
 
         //CHALK
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(DyeColor.WHITE.getId()),2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(DyeColor.WHITE.getId()),2)
                 .pattern("QK")
                 .pattern("KQ")
                 .define('K', Blocks.CALCITE)
-                .define('Q', KekeBlocks.GYPSUM.get())
+                .define('Q', ACBlocks.GYPSUM.get())
                 .unlockedBy(getItemName(Blocks.CALCITE), has(Blocks.CALCITE))
-                .unlockedBy(getItemName(KekeBlocks.GYPSUM.get()), has(KekeBlocks.GYPSUM.get()))
+                .unlockedBy(getItemName(ACBlocks.GYPSUM.get()), has(ACBlocks.GYPSUM.get()))
                 .save(recipeConsumer);
 
         //CORK
-        planksFromLogsRecipe(KekeBlocks.CORK_LOG, KekeBlocks.CORK_PLANKS, recipeConsumer);
-        woodFromLogsRecipe(KekeBlocks.CORK_LOG, KekeBlocks.CORK_WOOD, recipeConsumer);
-        woodFromLogsRecipe(KekeBlocks.STRIPPED_CORK_LOG, KekeBlocks.STRIPPED_CORK_WOOD, recipeConsumer);
-        slabRecipe(KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_SLAB.get(), recipeConsumer);
-        fenceRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_FENCE, recipeConsumer);
-        stairRecipe(KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_STAIRS.get(), recipeConsumer);
-        buttonRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.CORK_PLANKS.get(), KekeBlocks.CORK_BUTTON, recipeConsumer);
-        pressurePlateRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_PRESSURE_PLATE, recipeConsumer);
-        doorRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_DOOR, recipeConsumer);
-        trapdoorRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_TRAPDOOR, recipeConsumer);
-        fenceGateRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_FENCE_GATE, recipeConsumer);
-        signRecipe(KekeBlocks.CORK_PLANKS, KekeBlocks.CORK_SIGN, recipeConsumer);
-        hangingSignRecipe(KekeBlocks.STRIPPED_CORK_LOG, KekeBlocks.CORK_HANGING_SIGN, recipeConsumer);
-        woodenBoat(recipeConsumer, KekeItems.CORK_BOAT.get(), KekeBlocks.CORK_PLANKS.get());
-        chestBoatRecipe(recipeConsumer, KekeItems.CORK_CHEST_BOAT.get(), KekeItems.CORK_BOAT.get());
-        typeRecipe(KekeBlocks.STRIPPED_CORK_WOOD.get(), KekeBlocks.CORK.get(), recipeConsumer);
-        typeRecipe(KekeBlocks.CORK.get(), KekeBlocks.SMOOTH_CORK.get(), recipeConsumer);
+        planksFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_PLANKS, recipeConsumer);
+        woodFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_WOOD, recipeConsumer);
+        woodFromLogsRecipe(ACBlocks.STRIPPED_CORK_LOG, ACBlocks.STRIPPED_CORK_WOOD, recipeConsumer);
+        slabRecipe(ACBlocks.CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), recipeConsumer);
+        fenceRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_FENCE, recipeConsumer);
+        stairRecipe(ACBlocks.CORK_PLANKS.get(), ACBlocks.CORK_STAIRS.get(), recipeConsumer);
+        buttonRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.CORK_PLANKS.get(), ACBlocks.CORK_BUTTON, recipeConsumer);
+        pressurePlateRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_PRESSURE_PLATE, recipeConsumer);
+        doorRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_DOOR, recipeConsumer);
+        trapdoorRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_TRAPDOOR, recipeConsumer);
+        fenceGateRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_FENCE_GATE, recipeConsumer);
+        signRecipe(ACBlocks.CORK_PLANKS, ACBlocks.CORK_SIGN, recipeConsumer);
+        hangingSignRecipe(ACBlocks.STRIPPED_CORK_LOG, ACBlocks.CORK_HANGING_SIGN, recipeConsumer);
+        woodenBoat(recipeConsumer, ACItems.CORK_BOAT.get(), ACBlocks.CORK_PLANKS.get());
+        chestBoatRecipe(recipeConsumer, ACItems.CORK_CHEST_BOAT.get(), ACItems.CORK_BOAT.get());
+        typeRecipe(ACBlocks.STRIPPED_CORK_WOOD.get(), ACBlocks.CORK.get(), recipeConsumer);
+        typeRecipe(ACBlocks.CORK.get(), ACBlocks.SMOOTH_CORK.get(), recipeConsumer);
 
         for (DyeColor colours : DyeColor.values()) {
             //CHALK
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getChalk(colours.getId()).asItem(), KekeItems.getChalkStick(colours.getId()), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACItems.getChalkStick(colours.getId()), 1, recipeConsumer);
             //SOAPSTONE
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
-            stairRecipe(KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneStairs(colours.getId()), recipeConsumer);
-            slabRecipe(KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneSlab(colours.getId()), recipeConsumer);
-            wallRecipe(KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneWall(colours.getId()), recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stairRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneStairs(colours.getId()), recipeConsumer);
+            slabRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneSlab(colours.getId()), recipeConsumer);
+            wallRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneWall(colours.getId()), recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
             //SOAPSTONE TO BRICK OR POLISHED RECIPES
-            typeRecipe(KekeBlocks.getDyedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstone(colours.getId()), recipeConsumer);
-            typeRecipe(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedSoapstoneBricks(colours.getId()), recipeConsumer);
+            typeRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstone(colours.getId()), recipeConsumer);
+            typeRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneBricks(colours.getId()), recipeConsumer);
             //POLISHED SOAPSTONE
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
-            stairRecipe(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), recipeConsumer);
-            slabRecipe(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), recipeConsumer);
-            wallRecipe(KekeBlocks.getDyedPolishedSoapstone(colours.getId()), KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stairRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), recipeConsumer);
+            slabRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), recipeConsumer);
+            wallRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()), recipeConsumer);
             //SOAPSTONE BRICKS
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
-            stairRecipe(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), recipeConsumer);
-            slabRecipe(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickSlab(colours.getId()), recipeConsumer);
-            wallRecipe(KekeBlocks.getDyedSoapstoneBricks(colours.getId()), KekeBlocks.getDyedSoapstoneBrickWall(colours.getId()), recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stairRecipe(ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()), recipeConsumer);
+            slabRecipe(ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()), recipeConsumer);
+            wallRecipe(ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()), recipeConsumer);
 
             //DYE SOAPSTONE RECIPES
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE.get(), colours, KekeBlocks.getDyedSoapstone(colours.getId()), "soapstone", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_STAIRS.get(), colours, KekeBlocks.getDyedSoapstoneStairs(colours.getId()), "soapstone_stairs", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_SLAB.get(), colours, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_slab", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_WALL.get(), colours, KekeBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_wall", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE.get(), colours, KekeBlocks.getDyedPolishedSoapstone(colours.getId()), "polished_soapstone", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_STAIRS.get(), colours, KekeBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), "polished_soapstone_stairs", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_SLAB.get(), colours, KekeBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), "polished_soapstone_slab", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.POLISHED_SOAPSTONE_WALL.get(), colours, KekeBlocks.getDyedPolishedSoapstoneWall(colours.getId()), "polished_soapstone_wall", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICKS.get(), colours, KekeBlocks.getDyedSoapstoneBricks(colours.getId()), "soapstone_brick", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_STAIRS.get(), colours, KekeBlocks.getDyedSoapstoneBrickStairs(colours.getId()), "soapstone_brick_stairs", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_SLAB.get(), colours, KekeBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_brick_slab", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.SOAPSTONE_BRICK_WALL.get(), colours, KekeBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_brick_wall", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE.get(), colours, ACBlocks.getDyedSoapstone(colours.getId()), "soapstone", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_STAIRS.get(), colours, ACBlocks.getDyedSoapstoneStairs(colours.getId()), "soapstone_stairs", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_SLAB.get(), colours, ACBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_slab", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_WALL.get(), colours, ACBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_wall", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), colours, ACBlocks.getDyedPolishedSoapstone(colours.getId()), "polished_soapstone", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), colours, ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), "polished_soapstone_stairs", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), colours, ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), "polished_soapstone_slab", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.POLISHED_SOAPSTONE_WALL.get(), colours, ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()), "polished_soapstone_wall", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), colours, ACBlocks.getDyedSoapstoneBricks(colours.getId()), "soapstone_brick", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), colours, ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()), "soapstone_brick_stairs", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_BRICK_SLAB.get(), colours, ACBlocks.getDyedSoapstoneSlab(colours.getId()), "soapstone_brick_slab", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.SOAPSTONE_BRICK_WALL.get(), colours, ACBlocks.getDyedSoapstoneWall(colours.getId()), "soapstone_brick_wall", recipeConsumer);
 
             //MUD BRICKS
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedMudBricks(colours.getId()).asItem(), KekeBlocks.getDyedMudBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
-            stairRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickStairs(colours.getId()), recipeConsumer);
-            slabRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickSlab(colours.getId()), recipeConsumer);
-            wallRecipe(KekeBlocks.getDyedMudBricks(colours.getId()), KekeBlocks.getDyedMudBrickWall(colours.getId()), recipeConsumer);
-            dyeBlockRecipe(Blocks.MUD_BRICKS, colours, KekeBlocks.getDyedMudBricks(colours.getId()), "mud_bricks", recipeConsumer);
-            dyeBlockRecipe(Blocks.MUD_BRICK_STAIRS, colours, KekeBlocks.getDyedMudBrickStairs(colours.getId()), "mud_brick_stairs", recipeConsumer);
-            dyeBlockRecipe(Blocks.MUD_BRICK_SLAB, colours, KekeBlocks.getDyedMudBrickSlab(colours.getId()), "mud_brick_slab", recipeConsumer);
-            dyeBlockRecipe(Blocks.MUD_BRICK_WALL, colours, KekeBlocks.getDyedMudBrickWall(colours.getId()), "mud_brick_wall", recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
+            stairRecipe(ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickStairs(colours.getId()), recipeConsumer);
+            slabRecipe(ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickSlab(colours.getId()), recipeConsumer);
+            wallRecipe(ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickWall(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICKS, colours, ACBlocks.getDyedMudBricks(colours.getId()), "mud_bricks", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_STAIRS, colours, ACBlocks.getDyedMudBrickStairs(colours.getId()), "mud_brick_stairs", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_SLAB, colours, ACBlocks.getDyedMudBrickSlab(colours.getId()), "mud_brick_slab", recipeConsumer);
+            dyeBlockRecipe(Blocks.MUD_BRICK_WALL, colours, ACBlocks.getDyedMudBrickWall(colours.getId()), "mud_brick_wall", recipeConsumer);
 
             //PAINTBRUSH
-            paintbrushRecipe(colours, KekeItems.getPaintBrush(colours.getId()), recipeConsumer);
+            paintbrushRecipe(colours, ACItems.getPaintBrush(colours.getId()), recipeConsumer);
 
             //TERRACOTTA SHINGLES
-            typeRecipe(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colours.getId()), KekeBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLES.get(), colours, KekeBlocks.getDyedTerracottaShingles(colours.getId()), "terracotta_shingle", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), colours, KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), "terracotta_shingle_stairs", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_SLAB.get(), colours, KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), "terracotta_shingle_slab", recipeConsumer);
-            dyeBlockRecipe(KekeBlocks.TERRACOTTA_SHINGLE_WALL.get(), colours, KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), "terracotta_shingle_wall", recipeConsumer);
-            stairRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()), recipeConsumer);
-            slabRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()), recipeConsumer);
-            wallRecipe(KekeBlocks.getDyedTerracottaShingles(colours.getId()), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()), recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleStairs(colours.getId()).asItem(),1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(),1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, KekeBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), KekeBlocks.getDyedTerracottaShingleWall(colours.getId()).asItem(),1, recipeConsumer);
+            typeRecipe(ArtsAndCraftsDyedBlockLists.getDyedTerracotta(colours.getId()), ACBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
+            dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), colours, ACBlocks.getDyedTerracottaShingles(colours.getId()), "terracotta_shingle", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), colours, ACBlocks.getDyedTerracottaShingleStairs(colours.getId()), "terracotta_shingle_stairs", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), colours, ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), "terracotta_shingle_slab", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), colours, ACBlocks.getDyedTerracottaShingleWall(colours.getId()), "terracotta_shingle_wall", recipeConsumer);
+            stairRecipe(ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleStairs(colours.getId()), recipeConsumer);
+            slabRecipe(ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), recipeConsumer);
+            wallRecipe(ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleWall(colours.getId()), recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleStairs(colours.getId()).asItem(),1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(),1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleWall(colours.getId()).asItem(),1, recipeConsumer);
 
             //PLASTER
-            dyeBlockRecipe(KekeBlocks.PLASTER.get(), colours, KekeBlocks.getDyedPlaster(colours.getId()), "plaster", recipeConsumer);
+            dyeBlockRecipe(ACBlocks.PLASTER.get(), colours, ACBlocks.getDyedPlaster(colours.getId()), "plaster", recipeConsumer);
 
             //BANNER
             bleachBannerRecipe(ArtsAndCraftsDyedBlockLists.getDyedBanner(colours.getId()), colours, "bleach_banner", recipeConsumer);
@@ -290,9 +290,9 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         if (dyeColour != DyeColor.WHITE) {
             ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, Blocks.WHITE_BANNER, 1)
                     .requires(craftingBlock)
-                    .requires(KekeItems.BLEACHDEW.get())
+                    .requires(ACItems.BLEACHDEW.get())
                     .group(group)
-                    .unlockedBy(getItemName(KekeItems.BLEACHDEW.get()), has(KekeItems.BLEACHDEW.get()))
+                    .unlockedBy(getItemName(ACItems.BLEACHDEW.get()), has(ACItems.BLEACHDEW.get()))
                     .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_to_" + getItemName(Blocks.WHITE_BANNER));
         }
     }
@@ -386,16 +386,16 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .pattern("KQK")
                 .pattern("KKK")
                 .define('K', Ingredient.of(itemList.stream().map(ItemStack::new)))
-                .define('Q', KekeItems.BLEACHDEW.get())
+                .define('Q', ACItems.BLEACHDEW.get())
                 .group(string)
-                .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + string);
+                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + string);
     }
     protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bleachedBlock)
                 .requires(Ingredient.of(p_289675_.stream().map(ItemStack::new)))
-                .requires(KekeItems.BLEACHDEW.get())
+                .requires(ACItems.BLEACHDEW.get())
                 .group(p_289641_)
-                .unlockedBy("has_needed_dye", has(KekeItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + p_289641_);
+                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + p_289641_);
     }
 
     //Thank you to Uraneptus for allowing me to use their datagen methods from Sully's Mod - Applies to all methods below this note

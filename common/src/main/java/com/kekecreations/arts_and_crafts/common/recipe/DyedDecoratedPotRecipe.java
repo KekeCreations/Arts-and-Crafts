@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts.common.recipe;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
+import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
@@ -79,7 +79,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
     }
 
     public RecipeSerializer<?> getSerializer() {
-        return KekeRecipeSerializer.DYED_DECORATED_POT_RECIPE.get();
+        return ACRecipeSerializer.DYED_DECORATED_POT_RECIPE.get();
     }
 
 }
