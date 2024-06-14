@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.common.util.DyedDecoratedPotUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -24,22 +23,11 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.minecraft.world.level.block.entity.PotDecorations;
 
-import java.util.Objects;
-import java.util.Optional;
-
 public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPotBlockEntity> {
-    private static final String NECK = "neck";
-    private static final String FRONT = "front";
-    private static final String BACK = "back";
-    private static final String LEFT = "left";
-    private static final String RIGHT = "right";
-    private static final String TOP = "top";
-    private static final String BOTTOM = "bottom";
     private final ModelPart neck;
     private final ModelPart frontSide;
     private final ModelPart backSide;
@@ -47,10 +35,9 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
     private final ModelPart rightSide;
     private final ModelPart top;
     private final ModelPart bottom;
-    private Material baseMaterial;
+    private final TextureAtlas decoratedPotAtlas;
 
     public DyedDecoratedPotBER(BlockEntityRendererProvider.Context context) {
-        this.baseMaterial = Objects.requireNonNull(Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BLANK));
         ModelPart modelPart = context.bakeLayer(ModelLayers.DECORATED_POT_BASE);
         this.neck = modelPart.getChild("neck");
         this.top = modelPart.getChild("top");
@@ -60,14 +47,12 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         this.backSide = modelPart2.getChild("back");
         this.leftSide = modelPart2.getChild("left");
         this.rightSide = modelPart2.getChild("right");
+        this.decoratedPotAtlas = Minecraft.getInstance().getModelManager().getAtlas(Sheets.DECORATED_POT_SHEET);
     }
 
 
     public void render(DyedDecoratedPotBlockEntity decoratedPotBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
         DyeColor colour = decoratedPotBlockEntity.getDyeColor();
-        if (DyedDecoratedPotUtils.getDecoratedPotBase(colour) != null) {
-            this.baseMaterial = DyedDecoratedPotUtils.getDecoratedPotBase(colour);
-        }
         poseStack.pushPose();
         Direction direction = decoratedPotBlockEntity.getDirection();
         poseStack.translate(0.5, 0.0, 0.5);
@@ -93,7 +78,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
                 }
             }
         }
-        VertexConsumer vertexConsumer = this.baseMaterial.buffer(multiBufferSource, RenderType::entitySolid);
+        VertexConsumer vertexConsumer = createDecoratedPotMaterial(colour).buffer(multiBufferSource, RenderType::entitySolid);
         this.neck.render(poseStack, vertexConsumer, i, j);
         this.top.render(poseStack, vertexConsumer, i, j);
         this.bottom.render(poseStack, vertexConsumer, i, j);
@@ -121,20 +106,24 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         poseStack.popPose();
     }
 
-    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, Item item, DyedDecoratedPotBlockEntity pot) {
-        Minecraft instance = Minecraft.getInstance();
-        TextureAtlas textureAtlas = instance.getModelManager().getAtlas(Sheets.DECORATED_POT_SHEET);
-        TextureAtlasSprite sprite =  textureAtlas.getSprite(renderMaterial(pot, item));
-        VertexConsumer vertex = sprite.wrap(multiBufferSource.getBuffer(RenderType.entitySolid(Sheets.DECORATED_POT_SHEET)));
+    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource bufferSource, int i, int j, Item item, DyedDecoratedPotBlockEntity pot) {
+        TextureAtlasSprite sprite = this.decoratedPotAtlas.getSprite(this.getTexture(pot, item));
+        VertexConsumer vertex = sprite.wrap(bufferSource.getBuffer(RenderType.entitySolid(Sheets.DECORATED_POT_SHEET)));
         modelPart.render(poseStack, vertex, i, j);
     }
-    private ResourceLocation renderMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
+
+    private ResourceLocation getTexture(DyedDecoratedPotBlockEntity potEntity, Item item) {
         ResourceKey<DecoratedPotPattern> patternKey = DecoratedPotPatterns.getPatternFromItem(item);
-        if (patternKey != null) {
-            return patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_" + potEntity.getDyeColor().getName());
+        if (patternKey != null && item != Items.BRICK) {
+            ResourceLocation location = patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_pottery_pattern_" + potEntity.getDyeColor().getName());
+            ArtsAndCrafts.LOG.info(location.toString());
+            return location;
         } else {
-            //return Objects.requireNonNull(DecoratedPotPatterns.getResourceKey(Items.BRICK)).location();
-            return ArtsAndCrafts.id("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
+            return ResourceLocation.withDefaultNamespace("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
         }
+    }
+
+    private static Material createDecoratedPotMaterial(DyeColor color) {
+        return new Material(Sheets.DECORATED_POT_SHEET, ArtsAndCrafts.id("entity/decorated_pot/" + color.getName() + "_decorated_pot_base"));
     }
 }

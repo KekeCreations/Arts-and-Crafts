@@ -15,6 +15,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 
 import java.util.function.Supplier;
 
@@ -44,6 +45,12 @@ public class FabricRegistryHelper implements RegistryHelper {
     public <T extends Item> Supplier<T> registerItem(String id, Supplier<T> itemSupplier) {
         var item = Registry.register(BuiltInRegistries.ITEM, ArtsAndCrafts.id(id), itemSupplier.get());
         return () -> item;
+    }
+
+    @Override
+    public Supplier<DecoratedPotPattern> registerDecoratedPotPattern(String id, Supplier<DecoratedPotPattern> decoratedPotPatternSupplier) {
+        var decoratedPotPattern = Registry.register(BuiltInRegistries.DECORATED_POT_PATTERN, ArtsAndCrafts.id(id), decoratedPotPatternSupplier.get());
+        return () -> decoratedPotPattern;
     }
 
     @Override

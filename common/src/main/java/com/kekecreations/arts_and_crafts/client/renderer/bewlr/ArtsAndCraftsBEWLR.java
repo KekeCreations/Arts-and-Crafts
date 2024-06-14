@@ -21,7 +21,7 @@ public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implemen
     private final CustomBedBlockEntity bed;
     private DyedDecoratedPotBlockEntity dyedDecoratedPot;
     public ArtsAndCraftsBEWLR() {
-        super(null, null);
+        super(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels());
         for (DyeColor colours : DyeColor.values()) {
             this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, KekeBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
         }

@@ -52,22 +52,22 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
     }
 
     private void basicItemWithBlockFolder(Item item) {
-        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/generated"))
+        withExistingParent(name(item), ResourceLocation.withDefaultNamespace(ItemModelProvider.ITEM_FOLDER + "/generated"))
                 .texture("layer0", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/" + name(item)));
     }
 
     private void basicHandheld(Item item) {
-        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/handheld"))
+        withExistingParent(name(item), ResourceLocation.withDefaultNamespace(ItemModelProvider.ITEM_FOLDER + "/handheld"))
                 .texture("layer0", ArtsAndCrafts.id(ItemModelProvider.ITEM_FOLDER + "/" + name(item)));
     }
 
     private void decoratedPotItem(Item item) {
-        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/decorated_pot"))
+        withExistingParent(name(item), ResourceLocation.withDefaultNamespace(ItemModelProvider.ITEM_FOLDER + "/decorated_pot"))
                 .texture("particle", ArtsAndCrafts.id(ItemModelProvider.ITEM_FOLDER + "/" + name(item) + "_side"));
     }
 
     public void bedBlockItem(Item item) {
-        withExistingParent(name(item), new ResourceLocation(ItemModelProvider.ITEM_FOLDER + "/template_bed"))
+        withExistingParent(name(item), ResourceLocation.withDefaultNamespace(ItemModelProvider.ITEM_FOLDER + "/template_bed"))
                 .texture("particle", ArtsAndCrafts.id(ItemModelProvider.BLOCK_FOLDER + "/bleached_wool"));
     }
     public void buttonInventory(Item item, String texture) {

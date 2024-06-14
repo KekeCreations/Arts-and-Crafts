@@ -23,7 +23,7 @@ public class ArtsAndCrafts {
         ArtsAndCraftsDyedBlockLists.registerLists();
         KekeItems.register();
         ArtsAndCraftsRegistries.register();
-        KekeCustomSherdPatterns.register();
+        ACDecoratedPotPatterns.registerPotPatterns();
         KekeRecipeSerializer.register();
         CreativeCategoryUtils.addVanillaDyesToColourOrder();
     }
