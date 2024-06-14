@@ -73,7 +73,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         logWithItem(KekeBlocks.STRIPPED_CORK_LOG.get());
         logWithItem(KekeBlocks.CORK_WOOD.get());
         logWithItem(KekeBlocks.STRIPPED_CORK_WOOD.get());
-        doorBlock(KekeBlocks.CORK_DOOR.get(), "cork", ArtsAndCrafts.id("arts_and_crafts:block/cork_door_bottom"), ArtsAndCrafts.id("arts_and_crafts:block/cork_door_top"));
+        doorBlock(KekeBlocks.CORK_DOOR.get(), "cork", ArtsAndCrafts.id("block/cork_door_bottom"), ArtsAndCrafts.id("block/cork_door_top"));
         cubeAllWithItem(KekeBlocks.CORK.get());
         cubeAllWithItem(KekeBlocks.SMOOTH_CORK.get());
         cubeAllWithItem(KekeBlocks.CORK_LEAVES.get());
@@ -86,7 +86,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         pressurePlateWithItem(KekeBlocks.CORK_PRESSURE_PLATE.get(), KekeBlocks.CORK_PLANKS.get());
         buttonWithItem(KekeBlocks.CORK_BUTTON.get(), KekeBlocks.CORK_PLANKS.get());
         trapdoorWithItem(KekeBlocks.CORK_TRAPDOOR.get(), KekeBlocks.CORK_TRAPDOOR.get());
-        signBlock(KekeBlocks.CORK_SIGN.get(), KekeBlocks.CORK_WALL_SIGN.get(), ArtsAndCrafts.id("arts_and_crafts:block/cork_planks"));
+        signBlock(KekeBlocks.CORK_SIGN.get(), KekeBlocks.CORK_WALL_SIGN.get(), ArtsAndCrafts.id("block/cork_planks"));
         hangingSignBlock(KekeBlocks.CORK_HANGING_SIGN.get(), KekeBlocks.CORK_WALL_HANGING_SIGN.get(),"cork");
 
 
@@ -238,7 +238,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block, models().trapdoorOrientableBottom(name(block), resLoc));
     }
     private void hangingSignBlock(Block hangingSignBlock, Block wallHangingSignBlock, String woodType) {
-        ModelFile sign = models().sign(name(hangingSignBlock), ArtsAndCrafts.id("arts_and_crafts:block/" + woodType + "_planks"));
+        ModelFile sign = models().sign(name(hangingSignBlock), ArtsAndCrafts.id("block/" + woodType + "_planks"));
         simpleBlock(hangingSignBlock, sign);
         simpleBlock(wallHangingSignBlock, sign);
     }
