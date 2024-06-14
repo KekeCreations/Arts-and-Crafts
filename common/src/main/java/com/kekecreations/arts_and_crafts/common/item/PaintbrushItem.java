@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +15,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.PotDecorations;
+import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaintbrushItem extends Item {
 
@@ -48,6 +53,19 @@ public class PaintbrushItem extends Item {
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
                     return InteractionResult.sidedSuccess(true);
+                } else if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
+                    List<ItemStack> itemList = new ArrayList<ItemStack>();
+                    for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
+                        itemList.add(shulkerBE.getItem(i));
+                    }
+                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                    if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
+                        for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
+                            newShulkerBE.setItem(i, itemList.get(i));
+                        }
+                    }
+                    return InteractionResult.SUCCESS;
                 }
 
                 PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);

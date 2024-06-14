@@ -1,19 +1,13 @@
 {
   "required": true,
   "package": "com.kekecreations.arts_and_crafts.core.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
-    "BedBlockMixin",
-    "BlockEntityTypeMixin",
-    "BlockSetTypeMixin",
     "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
-    "EnchantmentMixin",
-    "FlowerPotBlockMixin",
-    "ShulkerBoxBlockMixin",
-    "WoodTypeMixin"
+    "FlowerPotBlockMixin"
   ],
   "client": [
   ],

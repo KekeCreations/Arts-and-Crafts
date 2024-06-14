@@ -33,3 +33,5 @@ loom {
         }
     }
 }
+
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }

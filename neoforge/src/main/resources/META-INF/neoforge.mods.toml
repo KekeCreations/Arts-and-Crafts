@@ -15,6 +15,12 @@ A fabric & forge mod that adds all new decoration features into the game!
 '''
 logoFile = "arts_and_crafts_icon.png"
 
+
+[[mixins]]
+config = "arts_and_crafts-common.mixins.json"
+[[mixins]]
+config = "arts_and_crafts.neoforge.mixins.json"
+
 [[dependencies.arts_and_crafts]]
 modId = "neoforge"
 mandatory = true
@@ -25,6 +31,6 @@ side = "BOTH"
 [[dependencies.arts_and_crafts]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.6,)"
+versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"

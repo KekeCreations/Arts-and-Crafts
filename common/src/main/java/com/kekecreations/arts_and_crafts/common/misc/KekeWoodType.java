@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.misc;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.mixin.WoodTypeMixin;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSoundTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;
 import net.minecraft.world.level.block.SoundType;
