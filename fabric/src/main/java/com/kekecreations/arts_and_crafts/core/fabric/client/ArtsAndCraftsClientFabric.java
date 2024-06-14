@@ -109,7 +109,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRendererRegistry.register(KekeEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), CustomBedBER::new);
         for (DyeColor colours : DyeColor.values()) {
-            BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+            //BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
         }
         BuiltinItemRendererRegistry.INSTANCE.register(KekeBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
     }
