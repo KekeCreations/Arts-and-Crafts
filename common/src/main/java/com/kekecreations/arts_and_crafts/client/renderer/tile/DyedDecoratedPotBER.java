@@ -116,7 +116,6 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
         ResourceKey<DecoratedPotPattern> patternKey = DecoratedPotPatterns.getPatternFromItem(item);
         if (patternKey != null && item != Items.BRICK) {
             ResourceLocation location = patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_pottery_pattern_" + potEntity.getDyeColor().getName());
-            ArtsAndCrafts.LOG.info(location.toString());
             return location;
         } else {
             return ResourceLocation.withDefaultNamespace("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());

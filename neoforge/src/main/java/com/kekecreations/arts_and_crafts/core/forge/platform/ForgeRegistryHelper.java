@@ -32,7 +32,6 @@ public class ForgeRegistryHelper implements RegistryHelper {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZER = DeferredRegister.create(Registries.RECIPE_SERIALIZER, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(Registries.PARTICLE_TYPE, ArtsAndCrafts.MOD_ID);
     public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ArtsAndCrafts.MOD_ID);
-    public static final DeferredRegister<DecoratedPotPattern> DECORATED_POT_PATTERNS = DeferredRegister.create(Registries.DECORATED_POT_PATTERN, ArtsAndCrafts.MOD_ID);
 
     public Supplier<SoundEvent> registerSound(String id) {
         return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, id)));
@@ -54,11 +53,6 @@ public class ForgeRegistryHelper implements RegistryHelper {
     @Override
     public <T extends Item> Supplier<T> registerItem(String id, Supplier<T> itemSupplier) {
         return ITEMS.register(id, itemSupplier);
-    }
-
-    @Override
-    public Supplier<DecoratedPotPattern> registerDecoratedPotPattern(String id, Supplier<DecoratedPotPattern> decoratedPotPatternSupplier) {
-        return DECORATED_POT_PATTERNS.register(id, decoratedPotPatternSupplier);
     }
 
     @Override

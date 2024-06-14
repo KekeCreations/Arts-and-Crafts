@@ -21,8 +21,6 @@ public interface RegistryHelper {
 
     <T extends Item> Supplier<T> registerItem(String id, Supplier<T> itemSupplier);
 
-    Supplier<DecoratedPotPattern> registerDecoratedPotPattern(String id, Supplier<DecoratedPotPattern> decoratedPotPatternSupplier);
-
     <T extends EntityType<?>> Supplier<T> registerEntityType(String id, Supplier<T> entitySupplier);
 
     <T extends BlockEntityType<?>> Supplier<T> registerBlockEntityType(String id, Supplier<T> blockEntitySupplier);

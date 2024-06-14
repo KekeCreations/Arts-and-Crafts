@@ -48,12 +48,6 @@ public class FabricRegistryHelper implements RegistryHelper {
     }
 
     @Override
-    public Supplier<DecoratedPotPattern> registerDecoratedPotPattern(String id, Supplier<DecoratedPotPattern> decoratedPotPatternSupplier) {
-        var decoratedPotPattern = Registry.register(BuiltInRegistries.DECORATED_POT_PATTERN, ArtsAndCrafts.id(id), decoratedPotPatternSupplier.get());
-        return () -> decoratedPotPattern;
-    }
-
-    @Override
     public <T extends EntityType<?>> Supplier<T> registerEntityType(String id, Supplier<T> entitySupplier) {
         var entityType = Registry.register(BuiltInRegistries.ENTITY_TYPE, ArtsAndCrafts.id(id), entitySupplier.get());
         return () -> entityType;

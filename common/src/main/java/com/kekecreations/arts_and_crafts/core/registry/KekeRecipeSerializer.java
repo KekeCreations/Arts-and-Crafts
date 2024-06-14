@@ -19,7 +19,7 @@ public class KekeRecipeSerializer<T extends Recipe<?>> {
 
     public static final Supplier<RecipeSerializer<DecoratedPotRecipe>> DYED_DECORATED_POT_RECIPE = registerRecipe("crafting_dyed_decorated_pot",  () -> new SimpleCraftingRecipeSerializer<>(DyedDecoratedPotRecipe::new));
 
-    public static final Supplier<RecipeSerializer<DecoratedPotRecipe>> BLEACH_BANNER_PATTERNS_RECIPE = registerRecipe("crafting_bleach_banner_patterns",  () -> new SimpleCraftingRecipeSerializer<>(BleachBannerPatternsRecipe::new));
+    public static final Supplier<RecipeSerializer<BleachBannerPatternsRecipe>> BLEACH_BANNER_PATTERNS_RECIPE = registerRecipe("crafting_bleach_banner_patterns",  () -> new SimpleCraftingRecipeSerializer<>(BleachBannerPatternsRecipe::new));
 
 
 

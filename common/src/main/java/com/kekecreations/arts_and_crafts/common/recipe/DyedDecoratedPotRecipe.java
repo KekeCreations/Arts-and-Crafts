@@ -4,10 +4,6 @@ import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,20 +15,18 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DecoratedPotBlock;
-import net.minecraft.world.level.block.entity.PotDecorations;
 import org.jetbrains.annotations.NotNull;
 
 public class DyedDecoratedPotRecipe extends CustomRecipe {
     public DyedDecoratedPotRecipe(CraftingBookCategory craftingBookCategory) {
         super(craftingBookCategory);
     }
-
-    public boolean matches(CraftingInput craftingInput, @NotNull Level level) {
+    public boolean matches(CraftingInput craftingContainer, @NotNull Level level) {
         int i = 0;
         int j = 0;
 
-        for(int k = 0; k < craftingInput.size(); ++k) {
-            ItemStack itemStack = craftingInput.getItem(k);
+        for(int k = 0; k < craftingContainer.size(); ++k) {
+            ItemStack itemStack = craftingContainer.getItem(k);
             if (!itemStack.isEmpty()) {
                 if (itemStack.is(ArtsAndCraftsTags.ItemTags.DECORATED_POTS)) {
                     ++i;
@@ -53,12 +47,12 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public @NotNull ItemStack assemble(CraftingInput craftingInput, @NotNull HolderLookup.Provider provider) {
+    public @NotNull ItemStack assemble(CraftingInput craftingContainer, @NotNull HolderLookup.Provider provider) {
         ItemStack itemStack = ItemStack.EMPTY;
         DyeItem dyeItem = (DyeItem)Items.WHITE_DYE;
 
-        for(int i = 0; i < craftingInput.size(); ++i) {
-            ItemStack itemStack2 = craftingInput.getItem(i);
+        for(int i = 0; i < craftingContainer.size(); ++i) {
+            ItemStack itemStack2 = craftingContainer.getItem(i);
             if (!itemStack2.isEmpty()) {
                 Item item = itemStack2.getItem();
                 if (Block.byItem(item) instanceof DyedDecoratedPotBlock || Block.byItem(item) instanceof DecoratedPotBlock) {
@@ -69,14 +63,9 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
             }
         }
 
-        ItemStack itemStack3 = DyedDecoratedPotBlock.getBlockByColor(dyeItem.getDyeColor()).asItem().getDefaultInstance();
-        if (!itemStack.getOrDefault(DataComponents.POT_DECORATIONS, PotDecorations.EMPTY).ordered().isEmpty()) {
-            //assert itemStack.getTag() != null;
-            itemStack3.set(DataComponents.POT_DECORATIONS, itemStack.getComponents().get(DataComponents.POT_DECORATIONS));
-            //itemStack3.setTag(itemStack.getTag().copy());
-        }
-
-        return itemStack3;
+        Block block = DyedDecoratedPotBlock.getBlockByColor(dyeItem.getDyeColor());
+        //return itemStack.transmuteCopy(block, 1);
+        return itemStack;
     }
 
     public boolean canCraftInDimensions(int i, int j) {

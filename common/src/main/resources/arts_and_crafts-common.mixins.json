@@ -5,9 +5,11 @@
   "minVersion": "0.8",
   "refmap": "${mod_id}.refmap.json",
   "mixins": [
+    "BlockEntityTypeMixin",
     "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
-    "FlowerPotBlockMixin"
+    "FlowerPotBlockMixin",
+    "WoodTypeMixin"
   ],
   "client": [
   ],
