@@ -64,8 +64,7 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         }
 
         Block block = DyedDecoratedPotBlock.getBlockByColor(dyeItem.getDyeColor());
-        //return itemStack.transmuteCopy(block, 1);
-        return itemStack;
+        return itemStack.transmuteCopy(block, 1);
     }
 
     public boolean canCraftInDimensions(int i, int j) {
