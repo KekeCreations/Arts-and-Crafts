@@ -3,18 +3,17 @@ package com.kekecreations.arts_and_crafts.common.util;
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.mixin.DecoratedPotBlockEntityAccessor;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsRegistries;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.ACSounds;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -58,7 +57,7 @@ public class PaintbrushUtils {
 
     @Nullable
     public static Block getFinalBlock(RegistryAccess access, BlockState state, ItemStack stack) {
-        Optional<PaintbrushPalette> optionalPalette = access.registryOrThrow(ArtsAndCraftsRegistries.PAINTBRUSH_PALETTE).stream().filter(
+        Optional<PaintbrushPalette> optionalPalette = access.registryOrThrow(ACRegistries.PAINTBRUSH_PALETTE).stream().filter(
                 searchPalette -> searchPalette.blocks().contains(state.getBlockHolder())
         ).findFirst();
         if (optionalPalette.isEmpty()) return null;
@@ -92,7 +91,7 @@ public class PaintbrushUtils {
 
     }
     public static void paintbrushItemEvents(Level level, BlockState state, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
-        level.playSound(null, pos, ArtsAndCraftsSounds.PAINT_WITH_PAINTBRUSH.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
+        level.playSound(null, pos, ACSounds.PAINT_WITH_PAINTBRUSH.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
         level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, state));
         player.awardStat(Stats.ITEM_USED.get(itemStack.getItem()));
         damagePaintbrushWhenPainting(level, player, itemStack, state, pos, hand);
@@ -147,7 +146,7 @@ public class PaintbrushUtils {
     public static void paintChalkDust(Level level, BlockState blockStateToPlace, BlockPos pos, Player player, ItemStack itemStack, InteractionHand hand) {
         BlockState blockState = level.getBlockState(pos);
         level.setBlockAndUpdate(pos, blockStateToPlace
-                .setValue(KekeBlockStateProperties.CHALK_PATTERN, blockState.getValue(KekeBlockStateProperties.CHALK_PATTERN))
+                .setValue(ACBlockStateProperties.CHALK_PATTERN, blockState.getValue(ACBlockStateProperties.CHALK_PATTERN))
                 .setValue(BlockStateProperties.FACING, blockState.getValue(BlockStateProperties.FACING)));
         paintbrushItemEvents(level, blockState, pos, player, itemStack,  hand);
     }
@@ -210,13 +209,13 @@ public class PaintbrushUtils {
         BlockState blockState = level.getBlockState(pos);
         if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
             PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
-            DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
+            DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) ACBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
             level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
             PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
         }
         else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
             PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
-            DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) KekeBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
+            DyedDecoratedPotBlock placedPot = (DyedDecoratedPotBlock) ACBlocks.getDyedDecoratedPot(paintbrushDyeColour.getId());
             level.setBlockAndUpdate(pos, PaintbrushUtils.placePotStatesFromAnotherBlock(placedPot.defaultBlockState(), blockState));
             PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
         }

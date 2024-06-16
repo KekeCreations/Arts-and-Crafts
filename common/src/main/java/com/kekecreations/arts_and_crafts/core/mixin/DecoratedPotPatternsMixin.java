@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.mixin;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACDecoratedPotPatterns;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
@@ -17,19 +17,19 @@ public class DecoratedPotPatternsMixin {
 
     @Inject(method = "getPatternFromItem", at = @At("HEAD"), cancellable = true)
     private static void getPatternFromItem(Item item, CallbackInfoReturnable<ResourceKey<DecoratedPotPattern>> cir) {
-        if (item == KekeItems.ROLL_POTTERY_SHERD.get()) {
+        if (item == ACItems.ROLL_POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.ROLL_POTTERY_PATTERN);
         }
-        if (item == KekeItems.RUINED_POTTERY_SHERD.get()) {
+        if (item == ACItems.RUINED_POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.RUINED_POTTERY_PATTERN);
         }
-        if (item == KekeItems.FINALE_POTTERY_SHERD.get()) {
+        if (item == ACItems.FINALE_POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.FINALE_POTTERY_PATTERN);
         }
-        if (item == KekeItems.GATEWAY_POTTERY_SHERD.get()) {
+        if (item == ACItems.GATEWAY_POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.GATEWAY_POTTERY_PATTERN);
         }
-        if (item == KekeItems.POTTERY_SHERD.get()) {
+        if (item == ACItems.POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.POTTERY_PATTERN);
         }
     }

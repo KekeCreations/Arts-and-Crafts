@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.entity;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -12,13 +12,11 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.RandomizableContainer;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -45,7 +43,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
 
 
     public DyedDecoratedPotBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(KekeEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
+        super(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), blockPos, blockState);
         this.item = ItemStack.EMPTY;
         this.decorations = PotDecorations.EMPTY;
         this.dyeColor = DyeColor.BLACK.getId();
@@ -108,7 +106,7 @@ public class DyedDecoratedPotBlockEntity extends BlockEntity implements Randomiz
     }
 
     public ItemStack getPotAsItem(DyeColor dyeColor) {
-        ItemStack itemStack = KekeItems.getDyedDecoratedPotBlockItem(dyeColor).getDefaultInstance();
+        ItemStack itemStack = ACItems.getDyedDecoratedPotBlockItem(dyeColor).getDefaultInstance();
         itemStack.applyComponents(this.collectComponents());
         return itemStack;
     }

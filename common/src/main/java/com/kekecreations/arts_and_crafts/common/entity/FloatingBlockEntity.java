@@ -2,8 +2,8 @@ package com.kekecreations.arts_and_crafts.common.entity;
 
 import com.kekecreations.arts_and_crafts.common.block.Floatable;
 import com.kekecreations.arts_and_crafts.common.block.FloatingBlock;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.KekeEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.CrashReportCategory;
 import net.minecraft.core.BlockPos;
@@ -41,7 +41,7 @@ import java.util.function.Predicate;
 
 public class FloatingBlockEntity extends Entity {
     private static final Logger LOGGER = LogUtils.getLogger();
-    private BlockState blockState = KekeBlocks.CORK.get().defaultBlockState();
+    private BlockState blockState = ACBlocks.CORK.get().defaultBlockState();
     public int time;
     public boolean dropItem = true;
     private boolean cancelDrop;
@@ -58,7 +58,7 @@ public class FloatingBlockEntity extends Entity {
     }
 
     private FloatingBlockEntity(Level level, double d, double e, double f, BlockState blockState) {
-        this(KekeEntityTypes.FLOATING_BLOCK.get(), level);
+        this(ACEntityTypes.FLOATING_BLOCK.get(), level);
         this.blockState = blockState;
         this.blocksBuilding = true;
         this.setPos(d, e, f);

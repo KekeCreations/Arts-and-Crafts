@@ -1,14 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
-import com.kekecreations.arts_and_crafts.core.registry.KekeRecipeSerializer;
+import com.kekecreations.arts_and_crafts.common.util.ACDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
+import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;
@@ -35,7 +32,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
                 if (itemStack.is(ItemTags.BANNERS) && itemStack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY).layers().size() > 0) {
                     ++i;
                 } else {
-                    if (!(itemStack.is(KekeItems.BLEACHDEW.get()))) {
+                    if (!(itemStack.is(ACItems.BLEACHDEW.get()))) {
                         return false;
                     }
 
@@ -65,7 +62,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         }
 
         if (itemStack.getItem() instanceof BannerItem bannerItem) {
-            return ArtsAndCraftsDyedBlockLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
+            return ACDyedBlockLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
         }
         return itemStack;
     }
@@ -75,7 +72,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
     }
 
     public RecipeSerializer<?> getSerializer() {
-        return KekeRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
+        return ACRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
     }
 
 }

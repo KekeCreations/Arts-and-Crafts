@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
+import com.kekecreations.arts_and_crafts.common.util.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
@@ -15,16 +15,16 @@ public class ArtsAndCrafts {
     public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
     
     public static void init() {
-        ArtsAndCraftsDataComponents.loadComponents();
-        KekeParticles.register();
-        ArtsAndCraftsSounds.register();
-        KekeEntityTypes.register();
-        KekeBlocks.register();
-        ArtsAndCraftsDyedBlockLists.registerLists();
-        KekeItems.register();
-        ArtsAndCraftsRegistries.register();
+        ACDataComponents.loadComponents();
+        ACParticles.register();
+        ACSounds.register();
+        ACEntityTypes.register();
+        ACBlocks.register();
+        ACDyedBlockLists.registerLists();
+        ACItems.register();
+        ACRegistries.register();
         ACDecoratedPotPatterns.registerPotPatterns();
-        KekeRecipeSerializer.register();
+        ACRecipeSerializer.register();
         CreativeCategoryUtils.addVanillaDyesToColourOrder();
     }
 

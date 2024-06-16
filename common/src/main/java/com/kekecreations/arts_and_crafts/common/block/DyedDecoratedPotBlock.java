@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.ChatFormatting;
@@ -48,7 +48,6 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Iterator;
@@ -246,22 +245,22 @@ public class DyedDecoratedPotBlock extends BaseEntityBlock implements SimpleWate
         } else {
             return switch (arg) {
                 default -> Blocks.DECORATED_POT;
-                case WHITE -> KekeBlocks.getDyedDecoratedPot(DyeColor.WHITE.getId());
-                case ORANGE -> KekeBlocks.getDyedDecoratedPot(DyeColor.ORANGE.getId());
-                case MAGENTA -> KekeBlocks.getDyedDecoratedPot(DyeColor.MAGENTA.getId());
-                case LIGHT_BLUE -> KekeBlocks.getDyedDecoratedPot(DyeColor.LIGHT_BLUE.getId());
-                case YELLOW -> KekeBlocks.getDyedDecoratedPot(DyeColor.YELLOW.getId());
-                case LIME -> KekeBlocks.getDyedDecoratedPot(DyeColor.LIME.getId());
-                case PINK -> KekeBlocks.getDyedDecoratedPot(DyeColor.PINK.getId());
-                case GRAY -> KekeBlocks.getDyedDecoratedPot(DyeColor.GRAY.getId());
-                case LIGHT_GRAY -> KekeBlocks.getDyedDecoratedPot(DyeColor.LIGHT_GRAY.getId());
-                case CYAN -> KekeBlocks.getDyedDecoratedPot(DyeColor.CYAN.getId());
-                case PURPLE -> KekeBlocks.getDyedDecoratedPot(DyeColor.PURPLE.getId());
-                case BLUE -> KekeBlocks.getDyedDecoratedPot(DyeColor.BLUE.getId());
-                case BROWN -> KekeBlocks.getDyedDecoratedPot(DyeColor.BROWN.getId());
-                case GREEN -> KekeBlocks.getDyedDecoratedPot(DyeColor.GREEN.getId());
-                case RED -> KekeBlocks.getDyedDecoratedPot(DyeColor.RED.getId());
-                case BLACK -> KekeBlocks.getDyedDecoratedPot(DyeColor.BLACK.getId());
+                case WHITE -> ACBlocks.getDyedDecoratedPot(DyeColor.WHITE.getId());
+                case ORANGE -> ACBlocks.getDyedDecoratedPot(DyeColor.ORANGE.getId());
+                case MAGENTA -> ACBlocks.getDyedDecoratedPot(DyeColor.MAGENTA.getId());
+                case LIGHT_BLUE -> ACBlocks.getDyedDecoratedPot(DyeColor.LIGHT_BLUE.getId());
+                case YELLOW -> ACBlocks.getDyedDecoratedPot(DyeColor.YELLOW.getId());
+                case LIME -> ACBlocks.getDyedDecoratedPot(DyeColor.LIME.getId());
+                case PINK -> ACBlocks.getDyedDecoratedPot(DyeColor.PINK.getId());
+                case GRAY -> ACBlocks.getDyedDecoratedPot(DyeColor.GRAY.getId());
+                case LIGHT_GRAY -> ACBlocks.getDyedDecoratedPot(DyeColor.LIGHT_GRAY.getId());
+                case CYAN -> ACBlocks.getDyedDecoratedPot(DyeColor.CYAN.getId());
+                case PURPLE -> ACBlocks.getDyedDecoratedPot(DyeColor.PURPLE.getId());
+                case BLUE -> ACBlocks.getDyedDecoratedPot(DyeColor.BLUE.getId());
+                case BROWN -> ACBlocks.getDyedDecoratedPot(DyeColor.BROWN.getId());
+                case GREEN -> ACBlocks.getDyedDecoratedPot(DyeColor.GREEN.getId());
+                case RED -> ACBlocks.getDyedDecoratedPot(DyeColor.RED.getId());
+                case BLACK -> ACBlocks.getDyedDecoratedPot(DyeColor.BLACK.getId());
             };
         }
     }

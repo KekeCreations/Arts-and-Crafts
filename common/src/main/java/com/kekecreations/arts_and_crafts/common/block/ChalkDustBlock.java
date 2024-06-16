@@ -1,9 +1,8 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.kekecreations.arts_and_crafts.common.item.ChalkStickItem;
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
-import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsDataComponents;
-import com.kekecreations.arts_and_crafts.core.registry.KekeItems;
+import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.registry.ACDataComponents;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -44,7 +43,7 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     public static final int MAX_STATE = 32;
 
-    public static final IntegerProperty CHALK_DUST_STATES = KekeBlockStateProperties.CHALK_PATTERN;
+    public static final IntegerProperty CHALK_DUST_STATES = ACBlockStateProperties.CHALK_PATTERN;
 
     public int getDyeColor() {
         return this.dyeColor;
@@ -73,9 +72,9 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
-        ItemStack itemStack = new ItemStack(KekeItems.getChalkStick(this.dyeColor));
-        if (itemStack.has(ArtsAndCraftsDataComponents.CHALK_PATTERN.get()) && Screen.hasControlDown()) {
-            itemStack.set(ArtsAndCraftsDataComponents.CHALK_PATTERN.get(), getChalkDustStates(blockState));
+        ItemStack itemStack = new ItemStack(ACItems.getChalkStick(this.dyeColor));
+        if (itemStack.has(ACDataComponents.CHALK_PATTERN.get()) && Screen.hasControlDown()) {
+            itemStack.set(ACDataComponents.CHALK_PATTERN.get(), getChalkDustStates(blockState));
         }
         return itemStack;
     }
