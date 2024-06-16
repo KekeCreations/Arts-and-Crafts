@@ -42,15 +42,33 @@ public class PaintbrushItem extends Item {
             Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
             if (finalBlock != null && finalBlock != blockState.getBlock()) {
                 if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
+                    ItemStack potItemStack = dyedDecoratedPotBlockEntity.getTheItem().copyAndClear();
+
                     PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
+
+                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                    if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                    } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                    }
                     return InteractionResult.SUCCESS;
                 } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
+                    ItemStack potItemStack = decoratedPotBlockEntity.getTheItem().copyAndClear();
+
                     PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
-                    return InteractionResult.sidedSuccess(true);
+
+                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                    if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                    } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                    }
+                    return InteractionResult.SUCCESS;
                 } else if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
                     List<ItemStack> itemList = new ArrayList<ItemStack>();
                     for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
