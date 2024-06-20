@@ -26,11 +26,11 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 
-public class CustomBedBER implements BlockEntityRenderer<ACBedBlockEntity> {
+public class ACBedBER implements BlockEntityRenderer<ACBedBlockEntity> {
     private final ModelPart headRoot;
     private final ModelPart footRoot;
 
-    public CustomBedBER(BlockEntityRendererProvider.Context context) {
+    public ACBedBER(BlockEntityRendererProvider.Context context) {
         this.headRoot = context.bakeLayer(ModelLayers.BED_HEAD);
         this.footRoot = context.bakeLayer(ModelLayers.BED_FOOT);
     }

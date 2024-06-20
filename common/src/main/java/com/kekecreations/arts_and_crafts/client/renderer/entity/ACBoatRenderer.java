@@ -28,13 +28,13 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 
-public class CustomBoatRenderer  extends EntityRenderer<Boat> {
+public class ACBoatRenderer extends EntityRenderer<Boat> {
     public static final ModelLayerLocation BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "boat"), "main");
     public static final ModelLayerLocation CHEST_BOAT = new ModelLayerLocation(new ResourceLocation(ArtsAndCrafts.MOD_ID, "chest_boat"), "main");
 
     private final Map<ACBoat.WoodType, Pair<ResourceLocation, ListModel<Boat>>> boatResources;
 
-    public CustomBoatRenderer(EntityRendererProvider.Context context, boolean chestBoat) {
+    public ACBoatRenderer(EntityRendererProvider.Context context, boolean chestBoat) {
         super(context);
 
         this.boatResources = Stream.of(ACBoat.WoodType.values()).collect(ImmutableMap.toImmutableMap(type -> {

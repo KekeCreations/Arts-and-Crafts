@@ -2,9 +2,9 @@ package com.kekecreations.arts_and_crafts.core.fabric.client;
 
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
-import com.kekecreations.arts_and_crafts.client.renderer.tile.CustomBedBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
-import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
@@ -103,18 +103,18 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
     static ArtsAndCraftsBEWLR artsAndCraftsBlockEntityWithoutLevelRenderer = new ArtsAndCraftsBEWLR();
     public static void registerRenderers() {
         EntityRendererRegistry.register(ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
-        EntityRendererRegistry.register(ACEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
-        EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
+        EntityRendererRegistry.register(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
+        EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
         BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
-        BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), CustomBedBER::new);
+        BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
         for (DyeColor colours : DyeColor.values()) {
             BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
         }
         BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
     }
     public static void registerModelLayers() {
-        EntityModelLayerRegistry.registerModelLayer(CustomBoatRenderer.BOAT, BoatModel::createBodyModel);
-        EntityModelLayerRegistry.registerModelLayer(CustomBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
+        EntityModelLayerRegistry.registerModelLayer(ACBoatRenderer.BOAT, BoatModel::createBodyModel);
+        EntityModelLayerRegistry.registerModelLayer(ACBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
     }
 
 }

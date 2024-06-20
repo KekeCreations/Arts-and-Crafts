@@ -3,9 +3,9 @@ package com.kekecreations.arts_and_crafts.core.forge.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
-import com.kekecreations.arts_and_crafts.client.renderer.tile.CustomBedBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
-import com.kekecreations.arts_and_crafts.client.renderer.entity.CustomBoatRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
@@ -39,15 +39,15 @@ public class ClientEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Entity Renderers
         event.registerEntityRenderer(ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
-        event.registerEntityRenderer(ACEntityTypes.BOAT.get(), context -> new CustomBoatRenderer(context, false));
-        event.registerEntityRenderer(ACEntityTypes.CHEST_BOAT.get(), context -> new CustomBoatRenderer(context, true));
+        event.registerEntityRenderer(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
+        event.registerEntityRenderer(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
         event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
-        event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), CustomBedBER::new);
+        event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
     }
     @SubscribeEvent
     public static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(CustomBoatRenderer.BOAT, BoatModel::createBodyModel);
-        event.registerLayerDefinition(CustomBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ACBoatRenderer.BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ACBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
     }
 
     @SubscribeEvent
