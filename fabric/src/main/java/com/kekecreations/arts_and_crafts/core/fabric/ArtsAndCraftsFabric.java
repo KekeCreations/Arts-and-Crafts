@@ -3,8 +3,9 @@ package com.kekecreations.arts_and_crafts.core.fabric;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.fabric.registry.ACFlammableAndStrippableBlocks;
-import com.kekecreations.arts_and_crafts.core.fabric.util.ACFabricLootModifiers;
+import com.kekecreations.arts_and_crafts.core.fabric.common.event.ACItemGroupEvents;
+import com.kekecreations.arts_and_crafts.core.fabric.core.registry.ACFlammableAndStrippableBlocks;
+import com.kekecreations.arts_and_crafts.core.fabric.common.event.ACLootTableEvents;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACFeatures;
 import net.fabricmc.api.ModInitializer;
@@ -21,7 +22,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ArtsAndCrafts.init();
         ACItemGroupEvents.add();
         ACFlammableAndStrippableBlocks.register();
-        ACFabricLootModifiers.modifyVanillaLootTables();
+        ACLootTableEvents.modifyVanillaLootTables();
         createBiomeModifications();
         DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }

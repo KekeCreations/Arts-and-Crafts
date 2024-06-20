@@ -7,9 +7,9 @@ import com.kekecreations.arts_and_crafts.core.forge.datagen.ArtsAndCraftsGlobalL
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
+import com.kekecreations.arts_and_crafts.core.forge.core.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.forge.core.registry.ACLootModifiers;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.server.*;
-import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts.core.forge.registry.ACLootModifiers;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;

@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.fabric;
+package com.kekecreations.arts_and_crafts.core.fabric.common.event;
 
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;

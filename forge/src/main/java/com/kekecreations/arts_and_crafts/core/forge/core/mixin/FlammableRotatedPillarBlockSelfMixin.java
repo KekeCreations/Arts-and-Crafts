@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.forge.mixin;
+package com.kekecreations.arts_and_crafts.core.forge.core.mixin;
 
 import com.kekecreations.arts_and_crafts.common.block.ACFlammableRotatedPillarBlock;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;

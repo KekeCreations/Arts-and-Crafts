@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.forge.loot;
+package com.kekecreations.arts_and_crafts.core.forge.common.loot;
 
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;

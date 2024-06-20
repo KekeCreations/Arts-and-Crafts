@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.fabric.platform;
+package com.kekecreations.arts_and_crafts.core.fabric.core.platform;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;

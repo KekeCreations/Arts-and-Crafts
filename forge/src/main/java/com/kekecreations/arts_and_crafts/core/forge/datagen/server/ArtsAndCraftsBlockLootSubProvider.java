@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
-import com.kekecreations.arts_and_crafts.core.forge.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.forge.core.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.advancements.critereon.ItemPredicate;

@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.forge.datagen;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.forge.loot.ModifyItemModifier;
+import com.kekecreations.arts_and_crafts.core.forge.common.loot.ModifyItemModifier;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;

@@ -1,18 +1,19 @@
-package com.kekecreations.arts_and_crafts.core.forge.mixin;
+package com.kekecreations.arts_and_crafts.core.forge.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.ACFlammableFenceBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableStairBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(ACFlammableFenceBlock.class)
-public class FlammableFenceBlockSelfMixin extends FenceBlock {
+@Mixin(ACFlammableStairBlock.class)
+public class FlammableStairBlockSelfMixin extends StairBlock {
 
-    public FlammableFenceBlockSelfMixin(Properties p_49795_) {
-        super(p_49795_);
+
+    public FlammableStairBlockSelfMixin(BlockState p_56862_, Properties p_56863_) {
+        super(p_56862_, p_56863_);
     }
 
     @Override

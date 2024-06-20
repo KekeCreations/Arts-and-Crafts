@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.fabric.registry;
+package com.kekecreations.arts_and_crafts.core.fabric.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;

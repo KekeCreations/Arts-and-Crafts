@@ -1,8 +1,8 @@
-package com.kekecreations.arts_and_crafts.core.forge.registry;
+package com.kekecreations.arts_and_crafts.core.forge.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.forge.loot.AddItemModifier;
-import com.kekecreations.arts_and_crafts.core.forge.loot.ModifyItemModifier;
+import com.kekecreations.arts_and_crafts.core.forge.common.loot.AddItemModifier;
+import com.kekecreations.arts_and_crafts.core.forge.common.loot.ModifyItemModifier;
 import com.mojang.serialization.Codec;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
