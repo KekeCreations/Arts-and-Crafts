@@ -174,7 +174,7 @@ public class ArtsAndCraftsForge {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 addAfter(event, Items.MUSIC_DISC_RELIC, ACItems.getChalkStick(colours.getId()));
-                addAfter(event, ACItems.getChalkStick(DyeColor.PINK.getId()), ACItems.getPaintBrush(colours.getId()));
+                addAfter(event, Items.BRUSH, ACItems.getPaintBrush(colours.getId()));
             }
             addBefore(event, ACItems.getChalkStick(DyeColor.WHITE.getId()), ACItems.BLEACHED_CHALK_STICK.get());
             addBefore(event, ACItems.getPaintBrush(DyeColor.WHITE.getId()), ACItems.BLEACHDEW_PAINTBRUSH.get());

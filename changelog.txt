@@ -1,5 +1,20 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.0
+Code Changes
+• Refactored Code and Packages
+• Got rid of an unused mixin
+• Removed Mixin Extras
+Creative Category
+• Paintbrushes are now put after the brush item
+Bug Fixes
+• Fixed Paintbrushes not being in Creative Category for some people
+• Fixed Paintbrushes not showing up in JEI for some people!
+
+
+
+
+
 V1.0.3
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Code Changes

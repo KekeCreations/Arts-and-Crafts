@@ -90,7 +90,7 @@ public class ACItemGroupEvents {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
                 event.addAfter(Items.MUSIC_DISC_RELIC, ACItems.getChalkStick(colours.getId()));
-                event.addAfter(ACItems.getChalkStick(DyeColor.PINK.getId()), ACItems.getPaintBrush(colours.getId()));
+                event.addAfter(Items.BRUSH, ACItems.getPaintBrush(colours.getId()));
             }
             event.addBefore(ACItems.getPaintBrush(DyeColor.WHITE.getId()), ACItems.BLEACHDEW_PAINTBRUSH.get());
             event.addBefore(ACItems.getChalkStick(DyeColor.WHITE.getId()), ACItems.BLEACHED_CHALK_STICK.get());
