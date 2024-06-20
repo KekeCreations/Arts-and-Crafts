@@ -45,6 +45,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .define('K', ACBlocks.BLEACHED_WOOL.get())
                 .unlockedBy(getItemName(ACItems.BLEACHDEW.get()), has(ACItems.BLEACHDEW.get()))
                 .save(recipeConsumer);
+        paintbrushRecipe(ACItems.BLEACHDEW.get(), ACItems.BLEACHDEW_PAINTBRUSH.get(), recipeConsumer);
         //wool
         List<Item> woolList = List.of(Blocks.BLACK_WOOL.asItem(), Blocks.BLUE_WOOL.asItem(), Blocks.BROWN_WOOL.asItem(), Blocks.CYAN_WOOL.asItem(), Blocks.GRAY_WOOL.asItem(), Blocks.GREEN_WOOL.asItem(), Blocks.LIGHT_BLUE_WOOL.asItem(), Blocks.LIGHT_GRAY_WOOL.asItem(), Blocks.LIME_WOOL.asItem(), Blocks.MAGENTA_WOOL.asItem(), Blocks.ORANGE_WOOL.asItem(), Blocks.PINK_WOOL.asItem(), Blocks.PURPLE_WOOL.asItem(), Blocks.RED_WOOL.asItem(), Blocks.YELLOW_WOOL.asItem(), Blocks.WHITE_WOOL.asItem());
         colorBleachedBlockWithDye(recipeConsumer, dyeList, woolList, ACBlocks.BLEACHED_WOOL.get(),  "wool");
@@ -350,6 +351,16 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .define('Q', Items.BRUSH)
                 .group("paintbrush")
                 .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
+                .save(recipeConsumer);
+    }
+    protected static void paintbrushRecipe(Item item, Item paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem,1)
+                .pattern(" K ")
+                .pattern("KQK")
+                .define('K', item)
+                .define('Q', Items.BRUSH)
+                .group("paintbrush")
+                .unlockedBy(getItemName(item), has(item))
                 .save(recipeConsumer);
     }
     //Modified vanilla methods

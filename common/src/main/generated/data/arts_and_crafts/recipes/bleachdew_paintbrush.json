@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "paintbrush",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:bleachdew"
+    },
+    "Q": {
+      "item": "minecraft:brush"
+    }
+  },
+  "pattern": [
+    " K ",
+    "KQK"
+  ],
+  "result": {
+    "item": "arts_and_crafts:bleachdew_paintbrush"
+  },
+  "show_notification": true
+}
