@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.recipe.BleachBannerPatternsRecipe;
+import com.kekecreations.arts_and_crafts.common.recipe.BleachDecoratedPotRecipe;
 import com.kekecreations.arts_and_crafts.common.recipe.DyedDecoratedPotRecipe;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import net.minecraft.core.Registry;
@@ -21,6 +22,7 @@ public class ACRecipeSerializer<T extends Recipe<?>> {
 
     public static final Supplier<RecipeSerializer<BleachBannerPatternsRecipe>> BLEACH_BANNER_PATTERNS_RECIPE = registerRecipe("crafting_bleach_banner_patterns",  () -> new SimpleCraftingRecipeSerializer<>(BleachBannerPatternsRecipe::new));
 
+    public static final Supplier<RecipeSerializer<DecoratedPotRecipe>> BLEACH_DECORATED_POT_RECIPE = registerRecipe("crafting_bleach_decorated_pot",  () -> new SimpleCraftingRecipeSerializer<>(BleachDecoratedPotRecipe::new));
 
 
 

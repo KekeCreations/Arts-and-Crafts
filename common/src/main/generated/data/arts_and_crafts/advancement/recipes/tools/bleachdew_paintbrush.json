@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "bleachdew": {
+      "conditions": {
+        "items": [
+          {
+            "items": "arts_and_crafts:bleachdew"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:bleachdew_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "bleachdew"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:bleachdew_paintbrush"
+    ]
+  }
+}
