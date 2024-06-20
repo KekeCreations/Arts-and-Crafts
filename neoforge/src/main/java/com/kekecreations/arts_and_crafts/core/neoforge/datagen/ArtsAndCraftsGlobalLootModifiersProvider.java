@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.neoforge.datagen;
 
-import com.kekecreations.arts_and_crafts.core.neoforge.loot.ModifyItemModifier;
+import com.kekecreations.arts_and_crafts.core.neoforge.common.loot.ModifyItemModifier;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

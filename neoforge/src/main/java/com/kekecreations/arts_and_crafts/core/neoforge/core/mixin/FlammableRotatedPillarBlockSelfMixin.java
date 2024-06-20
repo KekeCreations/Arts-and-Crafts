@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.mixin;
+package com.kekecreations.arts_and_crafts.core.neoforge.core.mixin;
 
 import com.kekecreations.arts_and_crafts.common.block.ACFlammableRotatedPillarBlock;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;

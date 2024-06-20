@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.neoforge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
-import com.kekecreations.arts_and_crafts.core.neoforge.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.neoforge.core.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;

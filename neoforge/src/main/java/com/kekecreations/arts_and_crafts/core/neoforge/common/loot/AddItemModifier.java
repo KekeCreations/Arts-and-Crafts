@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.loot;
+package com.kekecreations.arts_and_crafts.core.neoforge.common.loot;
 
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.MapCodec;

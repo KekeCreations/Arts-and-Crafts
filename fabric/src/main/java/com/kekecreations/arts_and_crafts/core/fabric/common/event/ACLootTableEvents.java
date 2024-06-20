@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.fabric.util;
+package com.kekecreations.arts_and_crafts.core.fabric.common.event;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
@@ -7,7 +7,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
-public class ArtsAndCraftsFabricLootModifiers {
+public class ACLootTableEvents {
 
 
     public static void modifyVanillaLootTables() {

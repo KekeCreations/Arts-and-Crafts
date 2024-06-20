@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.platform;
+package com.kekecreations.arts_and_crafts.core.neoforge.core.platform;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;

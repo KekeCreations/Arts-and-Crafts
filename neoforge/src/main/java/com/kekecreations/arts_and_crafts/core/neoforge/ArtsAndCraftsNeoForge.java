@@ -8,8 +8,8 @@ import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCra
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.server.*;
-import com.kekecreations.arts_and_crafts.core.neoforge.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts.core.neoforge.registry.ArtsAndCraftsLootModifiers;
+import com.kekecreations.arts_and_crafts.core.neoforge.core.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts.core.neoforge.core.registry.ArtsAndCraftsLootModifiers;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;

@@ -1,17 +1,17 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.mixin;
+package com.kekecreations.arts_and_crafts.core.neoforge.core.mixin;
 
-import com.kekecreations.arts_and_crafts.common.block.ACFlammableLeavesBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlammableBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(ACFlammableLeavesBlock.class)
-public class FlammableLeavesBlockSelfMixin extends LeavesBlock  {
+@Mixin(ACFlammableBlock.class)
+public class FlammableBlockSelfMixin extends Block {
 
-    public FlammableLeavesBlockSelfMixin(Properties p_49795_) {
+    public FlammableBlockSelfMixin(Properties p_49795_) {
         super(p_49795_);
     }
 
@@ -21,10 +21,11 @@ public class FlammableLeavesBlockSelfMixin extends LeavesBlock  {
     }
     @Override
     public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 30;
+        return 5;
     }
+
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 60;
+        return 20;
     }
 }

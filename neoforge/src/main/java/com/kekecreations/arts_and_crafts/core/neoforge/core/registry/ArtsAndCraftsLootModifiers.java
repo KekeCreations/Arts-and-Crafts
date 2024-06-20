@@ -1,8 +1,8 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.registry;
+package com.kekecreations.arts_and_crafts.core.neoforge.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.neoforge.loot.AddItemModifier;
-import com.kekecreations.arts_and_crafts.core.neoforge.loot.ModifyItemModifier;
+import com.kekecreations.arts_and_crafts.core.neoforge.common.loot.AddItemModifier;
+import com.kekecreations.arts_and_crafts.core.neoforge.common.loot.ModifyItemModifier;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;

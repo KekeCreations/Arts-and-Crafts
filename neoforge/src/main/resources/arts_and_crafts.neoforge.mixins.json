@@ -7,15 +7,15 @@
   "client": [
   ],
   "mixins": [
-    "CustomBedBlockItemSelfMixin",
-    "DyedDecoratedPotBlockItemSelfMixin",
-    "FlammableBlockSelfMixin",
-    "FlammableFenceBlockSelfMixin",
-    "FlammableFenceGateBlockSelfMixin",
-    "FlammableLeavesBlockSelfMixin",
-    "FlammableRotatedPillarBlockSelfMixin",
-    "FlammableSlabBlockSelfMixin",
-    "FlammableStairBlockSelfMixin"
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.CustomBedBlockItemSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.DyedDecoratedPotBlockItemSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableFenceBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableFenceGateBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableLeavesBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableRotatedPillarBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableSlabBlockSelfMixin",
+    "com.kekecreations.arts_and_crafts.core.neoforge.core.mixin.FlammableStairBlockSelfMixin"
   ],
   "injectors": {
     "defaultRequire": 1

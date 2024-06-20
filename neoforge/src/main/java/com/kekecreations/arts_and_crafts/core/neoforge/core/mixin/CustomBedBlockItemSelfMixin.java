@@ -1,7 +1,7 @@
-package com.kekecreations.arts_and_crafts.core.neoforge.mixin;
+package com.kekecreations.arts_and_crafts.core.neoforge.core.mixin;
 
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
-import com.kekecreations.arts_and_crafts.common.item.DyedDecoratedPotBlockItem;
+import com.kekecreations.arts_and_crafts.common.item.ACBedBlockItem;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
@@ -9,11 +9,10 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.function.Consumer;
 
+@Mixin(ACBedBlockItem.class)
+public class CustomBedBlockItemSelfMixin extends Item {
 
-@Mixin(DyedDecoratedPotBlockItem.class)
-public class DyedDecoratedPotBlockItemSelfMixin extends Item {
-
-    public DyedDecoratedPotBlockItemSelfMixin(Properties arg) {
+    public CustomBedBlockItemSelfMixin(Properties arg) {
         super(arg);
     }
 
