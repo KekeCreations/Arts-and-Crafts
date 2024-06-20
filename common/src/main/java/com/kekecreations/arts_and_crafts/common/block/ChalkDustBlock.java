@@ -9,7 +9,13 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -20,7 +26,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
@@ -38,6 +46,7 @@ public class ChalkDustBlock extends DirectionalBlock {
     private static final VoxelShape NORTH_AABB = Block.box(0.0, 0.0, 15.0, 16.0, 16.0, 16.0);
     private static final VoxelShape SOUTH_AABB = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 1.0);
 
+    public static final BooleanProperty GLOW;
 
     private final Integer dyeColor;
 
@@ -51,7 +60,7 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     public ChalkDustBlock(Integer dyeColor, Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(this.getChalkDustProperty(), 0).setValue(FACING, Direction.SOUTH));
+        this.registerDefaultState(this.stateDefinition.any().setValue(this.getChalkDustProperty(), 0).setValue(FACING, Direction.SOUTH).setValue(GLOW, false));
         this.dyeColor = dyeColor;
     }
 
@@ -61,6 +70,23 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     public int getMaxState() {
         return MAX_STATE;
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
+        if (!level.isClientSide()) {
+            if (!blockState.getValue(GLOW)) {
+                if (itemStack.is(Items.GLOW_INK_SAC)) {
+                    level.setBlockAndUpdate(pos, blockState.setValue(GLOW, true));
+                    level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    if (!player.isCreative()) {
+                        itemStack.setCount(itemStack.getCount() - 1);
+                    }
+                    return ItemInteractionResult.sidedSuccess(true);
+                }
+            }
+        }
+        return ItemInteractionResult.FAIL;
     }
 
     public int getChalkDustStates(BlockState blockState) {
@@ -84,6 +110,7 @@ public class ChalkDustBlock extends DirectionalBlock {
         super.createBlockStateDefinition(builder);
         builder.add(CHALK_DUST_STATES);
         builder.add(FACING);
+        builder.add(GLOW);
     }
 
     @Override
@@ -163,5 +190,10 @@ public class ChalkDustBlock extends DirectionalBlock {
     @Override
     protected MapCodec<? extends DirectionalBlock> codec() {
         return CODEC;
+    }
+
+
+    static {
+        GLOW = BooleanProperty.create("glow");
     }
 }
