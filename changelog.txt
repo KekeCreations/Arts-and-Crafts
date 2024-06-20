@@ -10,6 +10,13 @@ Creative Category
 Bug Fixes
 • Fixed Paintbrushes not being in Creative Category for some people
 • Fixed Paintbrushes not showing up in JEI for some people!
+Recipes
+• Added Bleach Decorated Pot Recipe
+• Added Bleachdew Paintbrush Recipe!
+Lang
+• Added Ukraine Translations (uk_ua.json) Thank you Unroman!
+Block Features
+• You can now make chalk dust glow with glow ink sacs!
 
 
 
