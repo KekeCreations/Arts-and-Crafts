@@ -7,6 +7,8 @@ Bug Fixes
 • Fixed Chalk Sticks not showing up in JEI for some people!
 Creative Category
 • Chalk Sticks are now put after TNT minecarts
+Recipes
+• Added Bleached Chalk Stick Recipe!
 
 
 

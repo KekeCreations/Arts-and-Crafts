@@ -169,6 +169,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         smeltingRecipe(ACBlocks.GYPSUM.get(), ACBlocks.PLASTER.get(), RecipeCategory.BUILDING_BLOCKS, 0F, recipeConsumer);
 
         //CHALK
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACItems.BLEACHED_CHALK_STICK.get(), 1, recipeConsumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(DyeColor.WHITE.getId()),2)
                 .pattern("QK")
                 .pattern("KQ")
