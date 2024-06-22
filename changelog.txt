@@ -3,6 +3,10 @@ Arts & Crafts Changelog
 V1.1.2
 Bug Fixes
 • Fixed paintbrushes breaking beds instead of painting them
+• Fixed Chalk Sticks not being in Creative Category for some people
+• Fixed Chalk Sticks not showing up in JEI for some people!
+Creative Category
+• Chalk Sticks are now put after TNT minecarts
 
 
 
