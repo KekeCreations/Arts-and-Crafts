@@ -178,6 +178,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(Blocks.CALCITE), has(Blocks.CALCITE))
                 .unlockedBy(getItemName(ACBlocks.GYPSUM.get()), has(ACBlocks.GYPSUM.get()))
                 .save(recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACItems.BLEACHED_CHALK_STICK.get(), 1, recipeConsumer);
 
         //CORK
         planksFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_PLANKS, recipeConsumer);
