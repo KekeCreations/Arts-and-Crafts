@@ -3,6 +3,7 @@ Arts & Crafts Changelog
 V1.1.3
 Bug Fixes
 • Fixed Dyed flower pots become normal after taking the flower out
+• Updated NeoForge to fix a crash
 
 
 
