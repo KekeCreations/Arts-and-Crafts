@@ -2,7 +2,7 @@ Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V1.1.3
 Bug Fixes
-• Fixed Painting shulker boxes clears inventory if sneaking
+• Fixed Painting shulker boxes clears inventory
 Feature Changes
 • You now need to shift to paint Shulker Boxes
 • You now need to shift to paint Flower Pots
