@@ -132,10 +132,12 @@ public class ACFlowerPotBlock extends Block {
         }
         if (!level.isClientSide()) {
             if (itemStack.getItem() instanceof PaintbrushItem) {
-                Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
-                if (finalBlock != null && finalBlock != blockState.getBlock()) {
-                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
-                    return InteractionResult.SUCCESS;
+                if (player.isCrouching()) {
+                    Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
+                    if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                        PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), blockPos, player, itemStack, interactionHand);
+                        return InteractionResult.SUCCESS;
+                    }
                 }
             }
         }

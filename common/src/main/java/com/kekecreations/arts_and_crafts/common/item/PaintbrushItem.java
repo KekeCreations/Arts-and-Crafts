@@ -15,7 +15,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BedBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaintbrushItem extends Item {
 
@@ -51,6 +55,19 @@ public class PaintbrushItem extends Item {
                     return InteractionResult.sidedSuccess(true);
                 } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                     PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                } else if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
+                    List<ItemStack> itemList = new ArrayList<ItemStack>();
+                    for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
+                        itemList.add(shulkerBE.getItem(i));
+                    }
+                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                    if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
+                        for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
+                            newShulkerBE.setItem(i, itemList.get(i));
+                        }
+                    }
+                    return InteractionResult.SUCCESS;
                 }
 
                 PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);

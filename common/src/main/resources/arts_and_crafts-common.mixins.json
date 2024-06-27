@@ -11,8 +11,6 @@
     "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
     "EnchantmentMixin",
-    "FlowerPotBlockMixin",
-    "ShulkerBoxBlockMixin",
     "WoodTypeMixin"
   ],
   "client": [
