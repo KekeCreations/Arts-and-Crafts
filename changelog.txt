@@ -1,5 +1,12 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.3
+Bug Fixes
+• Fixed Dyed flower pots become normal after taking the flower out
+
+
+
+
 V1.1.2
 Bug Fixes
 • Fixed Chalk Sticks not being in Creative Category for some people

@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.common.block;
 import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.stats.Stats;
@@ -140,7 +141,7 @@ public class ACFlowerPotBlock extends Block {
                 player.drop(itemStack, false);
             }
 
-            level.setBlock(blockPos, Blocks.FLOWER_POT.defaultBlockState(), 3);
+            level.setBlock(blockPos, ACBlocks.getDyedFlowerPot(this.colour.getId()).defaultBlockState(), 3);
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, blockPos);
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
