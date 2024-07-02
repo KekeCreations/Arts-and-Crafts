@@ -347,8 +347,8 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
     }
     protected static void paintbrushRecipe(DyeColor dyeColour, PaintbrushItem paintbrushItem, RecipeOutput recipeConsumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem,1)
-                .pattern(" K ")
-                .pattern("KQK")
+                .pattern("KK")
+                .pattern("KQ")
                 .define('K', DyeItem.byColor(dyeColour))
                 .define('Q', Items.BRUSH)
                 .group("paintbrush")

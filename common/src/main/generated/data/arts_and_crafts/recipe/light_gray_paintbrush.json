@@ -11,8 +11,8 @@
     }
   },
   "pattern": [
-    " K ",
-    "KQK"
+    "KK",
+    "KQ"
   ],
   "result": {
     "count": 1,
