@@ -11,8 +11,8 @@
     }
   },
   "pattern": [
-    " K ",
-    "KQK"
+    "KK",
+    "KQ"
   ],
   "result": {
     "item": "arts_and_crafts:yellow_paintbrush"

@@ -1,13 +1,14 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-V1.1.3
+
+
+V1.1.4
 Bug Fixes
-• Fixed Painting shulker boxes clears inventory
-Feature Changes
-• You now need to shift to paint Shulker Boxes
-• You now need to shift to paint Flower Pots
-Code Changes
-• Removed unused event stuff
+• Fixed missing bleached chalk dust translation
+Features
+• Changed Paintbrush Recipe
+• Added Russian translations (Thank you Arkoto & Clarthen!)
+
 
 
 

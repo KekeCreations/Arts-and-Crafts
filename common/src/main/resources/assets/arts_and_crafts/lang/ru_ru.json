@@ -17,7 +17,7 @@
   "advancements.husbandry.circa_1980.title": "Где-то в 1980",
   "advancements.husbandry.let_the_past_bloom.description": "Повзаимодействуйте с кувшинкой, используя пестики лотоса",
   "advancements.husbandry.let_the_past_bloom.title": "Пусть прошлое цветёт!",
-  
+
   "block.arts_and_crafts.black_chalk": "Чёрный мел",
   "block.arts_and_crafts.black_chalk_dust": "Рисунок чёрным мелом",
   "block.arts_and_crafts.black_decorated_pot": "Чёрная узорчатая ваза",
@@ -43,14 +43,15 @@
   "block.arts_and_crafts.black_terracotta_shingle_stairs": "Ступеньки из чёрной керамической черепицы",
   "block.arts_and_crafts.black_terracotta_shingle_wall": "Ограда из чёрной керамической черепицы",
   "block.arts_and_crafts.black_terracotta_shingles": "Чёрная керамическая черепица",
-  
+
   "block.arts_and_crafts.bleached_bed": "Отбелённая кровать",
   "block.arts_and_crafts.bleached_carpet": "Отбелённый ковёр",
   "block.arts_and_crafts.bleached_chalk": "Отбелённый мел",
   "block.arts_and_crafts.bleached_concrete": "Отбелённый бетон",
   "block.arts_and_crafts.bleached_concrete_powder": "Отбелённый сухой бетон",
   "block.arts_and_crafts.bleached_wool": "Отбелённая шерсть",
-  
+  "block.arts_and_crafts.bleached_chalk_dust": "Рисунок Отбелённая мелом",
+
   "block.arts_and_crafts.blue_chalk": "Синий мел",
   "block.arts_and_crafts.blue_chalk_dust": "Рисунок синим мелом",
   "block.arts_and_crafts.blue_decorated_pot": "Синяя узорчатая ваза",
@@ -76,7 +77,7 @@
   "block.arts_and_crafts.blue_terracotta_shingle_stairs": "Ступеньки из синей керамической черепицы",
   "block.arts_and_crafts.blue_terracotta_shingle_wall": "Ограда из синей керамической черепицы",
   "block.arts_and_crafts.blue_terracotta_shingles": "Синяя керамическая черепица",
-  
+
   "block.arts_and_crafts.brown_chalk": "Коричневый мел",
   "block.arts_and_crafts.brown_chalk_dust": "Рисунок коричневым мелом",
   "block.arts_and_crafts.brown_decorated_pot": "Коричневая узорчатая ваза",
@@ -102,7 +103,7 @@
   "block.arts_and_crafts.brown_terracotta_shingle_stairs": "Ступеньки из коричневой керамической черепицы",
   "block.arts_and_crafts.brown_terracotta_shingle_wall": "Ограда из коричневой керамической черепицы",
   "block.arts_and_crafts.brown_terracotta_shingles": "Коричневая керамическая черепица",
-  
+
   "block.arts_and_crafts.cork": "Пробка",
   "block.arts_and_crafts.cork_button": "Пробковая кнопка",
   "block.arts_and_crafts.cork_door": "Пробковая дверь",
@@ -119,7 +120,7 @@
   "block.arts_and_crafts.cork_stairs": "Пробковые ступеньки",
   "block.arts_and_crafts.cork_trapdoor": "Пробковый люк",
   "block.arts_and_crafts.cork_wood": "Пробковая древесина",
-  
+
   "block.arts_and_crafts.cyan_chalk": "Бирюзовый мел",
   "block.arts_and_crafts.cyan_chalk_dust": "Рисунок бирюзовым мелом",
   "block.arts_and_crafts.cyan_decorated_pot": "Бирюзовая узорчатая ваза",
@@ -145,9 +146,9 @@
   "block.arts_and_crafts.cyan_terracotta_shingle_stairs": "Ступеньки из бирюзовой керамической черепицы",
   "block.arts_and_crafts.cyan_terracotta_shingle_wall": "Ограда из бирюзовой керамической черепицы",
   "block.arts_and_crafts.cyan_terracotta_shingles": "Бирюзовая керамическая черепица",
-  
+
   "block.arts_and_crafts.glazed_terracotta": "Глазурованная керамика",
-  
+
   "block.arts_and_crafts.gray_chalk": "Серый мел",
   "block.arts_and_crafts.gray_chalk_dust": "Рисунок серым мелом",
   "block.arts_and_crafts.gray_decorated_pot": "Серая узорчатая ваза",
@@ -173,7 +174,7 @@
   "block.arts_and_crafts.gray_terracotta_shingle_stairs": "Ступеньки из серой керамической черепицы",
   "block.arts_and_crafts.gray_terracotta_shingle_wall": "Ограда из серой керамической черепицы",
   "block.arts_and_crafts.gray_terracotta_shingles": "Серая керамическая черепица",
-  
+
   "block.arts_and_crafts.green_chalk": "Зелёный мел",
   "block.arts_and_crafts.green_chalk_dust": "Рисунок зелёным мелом",
   "block.arts_and_crafts.green_decorated_pot": "Зелёная узорчатая ваза",
@@ -199,7 +200,7 @@
   "block.arts_and_crafts.green_terracotta_shingle_stairs": "Ступеньки из зелёной керамической черепицы",
   "block.arts_and_crafts.green_terracotta_shingle_wall": "Ограда из зелёной керамической черепицы",
   "block.arts_and_crafts.green_terracotta_shingles": "Зелёная керамическая черепица",
-  
+
   "block.arts_and_crafts.gypsum": "Гипс",
   "block.arts_and_crafts.gypsum_brick_slab": "Плита из гипсового кирпича",
   "block.arts_and_crafts.gypsum_brick_stairs": "Ступеньки из гипсового кирпича",
@@ -208,7 +209,7 @@
   "block.arts_and_crafts.gypsum_slab": "Гипсовая плита",
   "block.arts_and_crafts.gypsum_stairs": "Гипсовые ступеньки",
   "block.arts_and_crafts.gypsum_wall": "Гипсовая ограда",
-  
+
   "block.arts_and_crafts.light_blue_chalk": "Голубой мел",
   "block.arts_and_crafts.light_blue_chalk_dust": "Рисунок голубым мелом",
   "block.arts_and_crafts.light_blue_decorated_pot": "Голубая узорчатая ваза",
@@ -234,7 +235,7 @@
   "block.arts_and_crafts.light_blue_terracotta_shingle_stairs": "Ступеньки из голубой керамической черепицы",
   "block.arts_and_crafts.light_blue_terracotta_shingle_wall": "Ограда из голубой керамической черепицы",
   "block.arts_and_crafts.light_blue_terracotta_shingles": "Голубая керамическая черепица",
-  
+
   "block.arts_and_crafts.light_gray_chalk": "Светло-серый мел",
   "block.arts_and_crafts.light_gray_chalk_dust": "Рисунок светло-сероым мелом",
   "block.arts_and_crafts.light_gray_decorated_pot": "Светло-серая узорчатая ваза",
@@ -260,7 +261,7 @@
   "block.arts_and_crafts.light_gray_terracotta_shingle_stairs": "Ступеньки из светло-серой керамической черепицы",
   "block.arts_and_crafts.light_gray_terracotta_shingle_wall": "Ограда из светло-серой керамической черепицы",
   "block.arts_and_crafts.light_gray_terracotta_shingles": "Светло-серая керамическая черепица",
-  
+
   "block.arts_and_crafts.lime_chalk": "Лаймовый мел",
   "block.arts_and_crafts.lime_chalk_dust": "Рисунок лаймовым мелом",
   "block.arts_and_crafts.lime_decorated_pot": "Лаймовая узорчатая ваза",
@@ -286,9 +287,9 @@
   "block.arts_and_crafts.lime_terracotta_shingle_stairs": "Ступеньки из лаймовой керамической черепицы",
   "block.arts_and_crafts.lime_terracotta_shingle_wall": "Ограда из лаймовой керамической черепицы",
   "block.arts_and_crafts.lime_terracotta_shingles": "Лаймовая керамическая черепица",
-  
+
   "block.arts_and_crafts.lotus_flower": "Цветок лотоса",
-  
+
   "block.arts_and_crafts.magenta_chalk": "Пурпурный мел",
   "block.arts_and_crafts.magenta_chalk_dust": "Рисунок пурпурным мелом",
   "block.arts_and_crafts.magenta_decorated_pot": "Пурпурная узорчатая ваза",
@@ -314,7 +315,7 @@
   "block.arts_and_crafts.magenta_terracotta_shingle_stairs": "Ступеньки из пурпурной керамической черепицы",
   "block.arts_and_crafts.magenta_terracotta_shingle_wall": "Ограда из пурпурной керамической черепицы",
   "block.arts_and_crafts.magenta_terracotta_shingles": "Пурпурная керамическая черепица",
-  
+
   "block.arts_and_crafts.orange_chalk": "Оранжевый мел",
   "block.arts_and_crafts.orange_chalk_dust": "Рисунок оранжевым мелом",
   "block.arts_and_crafts.orange_decorated_pot": "Оранжевая узорчатая ваза",
@@ -340,7 +341,7 @@
   "block.arts_and_crafts.orange_terracotta_shingle_stairs": "Ступеньки из оранжевой керамической черепицы",
   "block.arts_and_crafts.orange_terracotta_shingle_wall": "Ограда из оранжевой керамической черепицы",
   "block.arts_and_crafts.orange_terracotta_shingles": "Оранжевая керамическая черепица",
-  
+
   "block.arts_and_crafts.pink_chalk": "Розовый мел",
   "block.arts_and_crafts.pink_chalk_dust": "Рисунок розовым мелом",
   "block.arts_and_crafts.pink_decorated_pot": "Розовая узорчатая ваза",
@@ -366,7 +367,7 @@
   "block.arts_and_crafts.pink_terracotta_shingle_stairs": "Ступеньки из розовой керамической черепицы",
   "block.arts_and_crafts.pink_terracotta_shingle_wall": "Ограда из розовой керамической черепицы",
   "block.arts_and_crafts.pink_terracotta_shingles": "Розовая керамическая черепица",
-  
+
   "block.arts_and_crafts.plaster": "Штукатурка",
   "block.arts_and_crafts.polished_gypsum": "Полированный гипс",
   "block.arts_and_crafts.polished_gypsum_slab": "Плита из полированного гипса",
@@ -376,7 +377,7 @@
   "block.arts_and_crafts.polished_soapstone_slab": "Плита из полированного стеатита",
   "block.arts_and_crafts.polished_soapstone_stairs": "Ступеньки из полированного стеатита",
   "block.arts_and_crafts.polished_soapstone_wall": "Ограда из полированного стеатита",
-  
+
   "block.arts_and_crafts.purple_chalk": "Фиолетовый мел",
   "block.arts_and_crafts.purple_chalk_dust": "Рисунок фиолетовым мелом",
   "block.arts_and_crafts.purple_decorated_pot": "Фиолетовая узорчатая ваза",
@@ -402,7 +403,7 @@
   "block.arts_and_crafts.purple_terracotta_shingle_stairs": "Ступеньки из фиолетовой керамической черепицы",
   "block.arts_and_crafts.purple_terracotta_shingle_wall": "Ограда из фиолетовой керамической черепицы",
   "block.arts_and_crafts.purple_terracotta_shingles": "Фиолетовая керамическая черепица",
-  
+
   "block.arts_and_crafts.red_chalk": "Красный мел",
   "block.arts_and_crafts.red_chalk_dust": "Рисунок красным мелом",
   "block.arts_and_crafts.red_decorated_pot": "Красная узорчатая ваза",
@@ -428,7 +429,7 @@
   "block.arts_and_crafts.red_terracotta_shingle_stairs": "Ступеньки из красной керамической черепицы",
   "block.arts_and_crafts.red_terracotta_shingle_wall": "Ограда из красной керамической черепицы",
   "block.arts_and_crafts.red_terracotta_shingles": "Красная керамическая черепица",
-  
+
   "block.arts_and_crafts.smooth_cork": "Полированная пробка",
   "block.arts_and_crafts.soapstone": "Стеатит",
   "block.arts_and_crafts.soapstone_brick_slab": "Плита из стеатитового кирпича",
@@ -444,7 +445,7 @@
   "block.arts_and_crafts.terracotta_shingle_stairs": "Ступеньки из керамической черепицы",
   "block.arts_and_crafts.terracotta_shingle_wall": "Ограда из керамической черепицы",
   "block.arts_and_crafts.terracotta_shingles": "Керамическая черепица",
-  
+
   "block.arts_and_crafts.white_chalk": "Белый мел",
   "block.arts_and_crafts.white_chalk_dust": "Рисунок белым мелом",
   "block.arts_and_crafts.white_decorated_pot": "Белая узорчатая ваза",
@@ -470,7 +471,7 @@
   "block.arts_and_crafts.white_terracotta_shingle_stairs": "Ступеньки из белой керамической черепицы",
   "block.arts_and_crafts.white_terracotta_shingle_wall": "Ограда из белой керамической черепицы",
   "block.arts_and_crafts.white_terracotta_shingles": "Белая керамическая черепица",
-  
+
   "block.arts_and_crafts.yellow_chalk": "Жёлтый мел",
   "block.arts_and_crafts.yellow_chalk_dust": "Рисунок жёлтым мелом",
   "block.arts_and_crafts.yellow_decorated_pot": "Жёлтая узорчатая ваза",
@@ -496,11 +497,11 @@
   "block.arts_and_crafts.yellow_terracotta_shingle_stairs": "Ступеньки из жёлтой керамической черепицы",
   "block.arts_and_crafts.yellow_terracotta_shingle_wall": "Ограда из жёлтой керамической черепицы",
   "block.arts_and_crafts.yellow_terracotta_shingles": "Жёлтая керамическая черепица",
-  
+
   "entity.arts_and_crafts.boat": "Лодка",
   "entity.arts_and_crafts.chest_boat": "Грузовая лодка",
   "entity.arts_and_crafts.floating_block": "Floating Block",
-  
+
   "item.arts_and_crafts.black_chalk_stick": "Чёрный мелок",
   "item.arts_and_crafts.black_paintbrush": "Чёрная кисть",
   "item.arts_and_crafts.bleachdew": "Отбеливающая роса",
@@ -544,7 +545,7 @@
   "item.arts_and_crafts.white_paintbrush": "Белая кисть",
   "item.arts_and_crafts.yellow_chalk_stick": "Жёлтый мелок",
   "item.arts_and_crafts.yellow_paintbrush": "Жёлтая кисть",
-  
+
   "tooltip.arts_and_crafts.chalk_pattern_0": "Точка",
   "tooltip.arts_and_crafts.chalk_pattern_1": "Вертикальная линия",
   "tooltip.arts_and_crafts.chalk_pattern_2": "Горизонтальная линия",
