@@ -1,5 +1,15 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.4
+Bug Fixes
+• Fixed missing bleached chalk dust translation
+Features
+• Changed Paintbrush Recipe
+• Added Russian translations (Thank you Arkoto & Clarthen!)
+
+
+
+
 V1.1.3
 Bug Fixes
 • Fixed Dyed flower pots become normal after taking the flower out
