@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.4-bugfix
+• Fixed creative category causing a crash in creative mode
+
+
+
+
 V1.1.4
 Bug Fixes
 • Fixed missing bleached chalk dust translation

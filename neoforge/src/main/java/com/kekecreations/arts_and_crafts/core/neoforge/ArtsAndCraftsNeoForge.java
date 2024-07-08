@@ -75,23 +75,23 @@ public class ArtsAndCraftsNeoForge {
     }
 
     private void addAfter(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
-        event.getEntries().putAfter(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertAfter(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
     private void addAfter(BuildCreativeModeTabContentsEvent event, Block beforeItem, Item item) {
-        event.getEntries().putAfter(beforeItem.asItem().getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertAfter(beforeItem.asItem().getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
     private void addAfter(BuildCreativeModeTabContentsEvent event, Item beforeItem, Block item) {
-        event.getEntries().putAfter(beforeItem.getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertAfter(beforeItem.getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
     private void addAfter(BuildCreativeModeTabContentsEvent event, Block beforeItem, Block item) {
-        event.getEntries().putAfter(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertAfter(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
     private void addBefore(BuildCreativeModeTabContentsEvent event, Block beforeItem, Block item) {
-        event.getEntries().putBefore(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertBefore(beforeItem.asItem().getDefaultInstance(), item.asItem().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
     private void addBefore(BuildCreativeModeTabContentsEvent event, Item beforeItem, Item item) {
-        event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
@@ -100,6 +100,10 @@ public class ArtsAndCraftsNeoForge {
             addAfter(event, ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
             addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get());
             addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get());
+
+            for(DyeColor colour : CreativeCategoryUtils.colourOrder) {
+                addAfter(event, Items.PINK_BANNER, ACBlocks.getChalk(colour.getId()));
+            }
 
             addAfter(event, ACBlocks.getChalk(DyeColor.PINK.getId()), ACBlocks.SOAPSTONE.get());
             addAfter(event, ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_STAIRS.get());
@@ -126,7 +130,6 @@ public class ArtsAndCraftsNeoForge {
             addBefore(event, Blocks.WHITE_BED, ACBlocks.BLEACHED_BED.get());
 
             for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
-                addAfter(event, Items.PINK_BANNER, ACBlocks.getChalk(colours.getId()));
                 addAfter(event, Items.PINK_CANDLE, ACBlocks.getDyedFlowerPot(colours.getId()));
                 addAfter(event, ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), ACBlocks.getDyedDecoratedPot(colours.getId()));
 
