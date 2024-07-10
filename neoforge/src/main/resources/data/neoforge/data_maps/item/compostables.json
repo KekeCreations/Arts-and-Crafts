@@ -1,0 +1,10 @@
+{
+  "values": {
+    "arts_and_crafts:cork_sapling": {
+      "chance": 0.3
+    },
+    "arts_and_crafts:cork_leaves": {
+      "chance": 0.3
+    }
+  }
+}

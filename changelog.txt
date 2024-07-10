@@ -1,5 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.5
+• Cork Sapling can now be used in the composter
+• Cork Leaves can now be used in the composter
+• da_dk Translations done by jquann1998!  (Thank you!)
+• Updated NeoForge Version
+
+
+
 V1.1.4-bugfix
 • Fixed creative category causing a crash in creative mode
 
