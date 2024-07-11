@@ -1,5 +1,9 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.5
+• Cork Sapling can now be used in the composter
+• Cork Leaves can now be used in the composter
+• da_dk Translations done by jquann1998!  (Thank you!)
 
 
 V1.1.4
