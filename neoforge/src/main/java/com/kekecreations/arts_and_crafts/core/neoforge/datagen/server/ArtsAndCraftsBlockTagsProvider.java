@@ -196,6 +196,7 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
 
     private void appendPickaxes() {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ACBlocks.GLAZED_TERRACOTTA.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLES.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
