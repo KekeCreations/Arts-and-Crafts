@@ -1,5 +1,14 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.6
+• Fixed Glazed Terracotta Texture to allow for more patterns to be made
+• Glazed Terracotta now has correct loot table and mining speed
+• Updated NeoForge Version Again
+
+
+
+
+
 V1.1.5
 • Cork Sapling can now be used in the composter
 • Cork Leaves can now be used in the composter
