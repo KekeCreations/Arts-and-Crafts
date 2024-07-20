@@ -92,19 +92,19 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICKS, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_SLAB, 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_WALL, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_SLAB, 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM, ACBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_SLAB, 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.GYPSUM_BRICKS, ACBlocks.GYPSUM_BRICK_WALL, 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_STAIRS, 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_SLAB, 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_GYPSUM, ACBlocks.POLISHED_GYPSUM_WALL, 1, recipeConsumer);
         stairRecipe(ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_STAIRS.get(), recipeConsumer);
         slabRecipe(ACBlocks.GYPSUM.get(), ACBlocks.GYPSUM_SLAB.get(), recipeConsumer);
@@ -122,18 +122,18 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //SOAPSTONE
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_SLAB.get().asItem(), 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
         stairRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_STAIRS.get(), recipeConsumer);
         slabRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_SLAB.get(), recipeConsumer);
         wallRecipe(ACBlocks.SOAPSTONE.get(), ACBlocks.SOAPSTONE_WALL.get(), recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE.get().asItem(), 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICKS.get().asItem(), 1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE.get().asItem(), ACBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
 
         //SOAPSTONE TO BRICK OR POLISHED RECIPES
@@ -142,7 +142,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //POLISHED SOAPSTONE
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get().asItem(), 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), ACBlocks.POLISHED_SOAPSTONE_WALL.get().asItem(), 1, recipeConsumer);
         stairRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_STAIRS.get(), recipeConsumer);
         slabRecipe(ACBlocks.POLISHED_SOAPSTONE.get(), ACBlocks.POLISHED_SOAPSTONE_SLAB.get(), recipeConsumer);
@@ -150,7 +150,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //SOAPSTONE BRICKS
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get().asItem(), 1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_SLAB.get().asItem(), 2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), ACBlocks.SOAPSTONE_BRICK_WALL.get().asItem(), 1, recipeConsumer);
         stairRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_STAIRS.get(), recipeConsumer);
         slabRecipe(ACBlocks.SOAPSTONE_BRICKS.get(), ACBlocks.SOAPSTONE_BRICK_SLAB.get(), recipeConsumer);
@@ -162,7 +162,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         slabRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), recipeConsumer);
         wallRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get().asItem(),1, recipeConsumer);
-        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get().asItem(),1, recipeConsumer);
+        stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get().asItem(),2, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get().asItem(),1, recipeConsumer);
         stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, Blocks.TERRACOTTA.asItem(), ACBlocks.TERRACOTTA_SHINGLES.get().asItem(), 1, recipeConsumer);
 
@@ -204,32 +204,32 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACItems.getChalkStick(colours.getId()), 1, recipeConsumer);
             //SOAPSTONE
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
             stairRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneStairs(colours.getId()), recipeConsumer);
             slabRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneSlab(colours.getId()), recipeConsumer);
             wallRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneWall(colours.getId()), recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
             //SOAPSTONE TO BRICK OR POLISHED RECIPES
             typeRecipe(ACBlocks.getDyedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstone(colours.getId()), recipeConsumer);
             typeRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedSoapstoneBricks(colours.getId()), recipeConsumer);
             //POLISHED SOAPSTONE
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedPolishedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()).asItem(), 1, recipeConsumer);
             stairRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()), recipeConsumer);
             slabRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()), recipeConsumer);
             wallRecipe(ACBlocks.getDyedPolishedSoapstone(colours.getId()), ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()), recipeConsumer);
             //SOAPSTONE BRICKS
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstoneBricks(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
             stairRecipe(ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()), recipeConsumer);
             slabRecipe(ACBlocks.getDyedSoapstoneBricks(colours.getId()), ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()), recipeConsumer);
@@ -251,7 +251,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
             //MUD BRICKS
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickStairs(colours.getId()).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickSlab(colours.getId()).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickSlab(colours.getId()).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBricks(colours.getId()).asItem(), ACBlocks.getDyedMudBrickWall(colours.getId()).asItem(), 1, recipeConsumer);
             stairRecipe(ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickStairs(colours.getId()), recipeConsumer);
             slabRecipe(ACBlocks.getDyedMudBricks(colours.getId()), ACBlocks.getDyedMudBrickSlab(colours.getId()), recipeConsumer);
@@ -274,7 +274,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             slabRecipe(ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), recipeConsumer);
             wallRecipe(ACBlocks.getDyedTerracottaShingles(colours.getId()), ACBlocks.getDyedTerracottaShingleWall(colours.getId()), recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleStairs(colours.getId()).asItem(),1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(),1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(),2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), ACBlocks.getDyedTerracottaShingleWall(colours.getId()).asItem(),1, recipeConsumer);
 
             //PLASTER
