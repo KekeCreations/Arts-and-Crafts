@@ -3,16 +3,19 @@ package com.kekecreations.arts_and_crafts.core.neoforge.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
+import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
@@ -25,6 +28,8 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -33,6 +38,25 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @EventBusSubscriber(modid = ArtsAndCrafts.MOD_ID, bus= EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEvents {
 
+    @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
+    public static void registerBEWLR(RegisterClientExtensionsEvent event) {
+        event.registerItem(new IClientItemExtensions() {
+
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return new ArtsAndCraftsBEWLR();
+            }
+        }, ACItems.BLEACHED_BED.get());
+        for (DyeColor colour : DyeColor.values()) {
+            event.registerItem(new IClientItemExtensions() {
+                @Override
+                public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                    return new ArtsAndCraftsBEWLR();
+                }
+            }, ACItems.getDyedDecoratedPotBlockItem(colour));
+        }
+    }
 
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent

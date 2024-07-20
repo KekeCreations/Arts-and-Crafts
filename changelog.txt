@@ -2,6 +2,7 @@ Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V1.1.7
 • Fixed all stonecutter slab recipes in the mod giving you the wrong amount of slabs
+• Updated NeoForge Version and removed methods that are marked for removal
 
 
 
