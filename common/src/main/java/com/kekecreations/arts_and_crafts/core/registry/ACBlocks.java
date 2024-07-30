@@ -180,9 +180,9 @@ public class ACBlocks {
     public static final Supplier<SaplingBlock> CORK_SAPLING = registerBlockWithItem("cork_sapling", () -> new CorkSapling(new CorkTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> CORK_LOG = registerBlockWithItem("cork_log", () -> log(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
+    public static final Supplier<ACFlammableRotatedPillarBlock> CORK_LOG = registerBlockWithItem("cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> STRIPPED_CORK_LOG = registerBlockWithItem("stripped_cork_log", () -> log(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
+    public static final Supplier<ACFlammableRotatedPillarBlock> STRIPPED_CORK_LOG = registerBlockWithItem("stripped_cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
     public static final Supplier<ACFlammableRotatedPillarBlock> CORK_WOOD = registerBlockWithItem("cork_wood", () -> new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
 
@@ -504,6 +504,10 @@ public class ACBlocks {
 
     private static ACFlammableRotatedPillarBlock log(MapColor mapColor, MapColor mapColor2) {
         return new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
+    }
+
+    private static ACFlammableRotatedPillarBlock corkLog(MapColor mapColor, MapColor mapColor2) {
+        return new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava());
     }
 
     private static ACFlammableLeavesBlock leaves(SoundType soundType) {

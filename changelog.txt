@@ -1,6 +1,7 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+V1.1.8
+• Fixed Cork Log & Stripped Cork Log having the wrong sounds
 
 V1.1.7
 • Fixed all stonecutter slab recipes in the mod giving you the wrong amount of slabs
