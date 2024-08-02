@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
 	"textures": {
-		"hanging_flower_pot": "#hanging_flower_pot",
-		"particle": "#particle"
+		"hanging_flower_pot": "#hanging_flower_pot"
 	},
 	"elements": [
 		{
@@ -123,15 +123,28 @@
 				"up": {"uv": [11, 5.5, 16, 9.5], "texture": "#hanging_flower_pot"},
 				"down": {"uv": [11, 5.5, 16, 9.5], "texture": "#hanging_flower_pot"}
 			}
+		},
+		{
+			"from": [0, 14, 7],
+			"to": [16, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 14, 7]},
+			"faces": {
+				"north": {"uv": [0, 9, 8, 10], "texture": "#hanging_flower_pot"},
+				"east": {"uv": [1, 11, 2, 12], "texture": "#hanging_flower_pot"},
+				"south": {"uv": [8, 9, 0, 10], "texture": "#hanging_flower_pot"},
+				"west": {"uv": [1, 11, 2, 12], "texture": "#hanging_flower_pot"},
+				"up": {"uv": [8, 8, 0, 9], "texture": "#hanging_flower_pot"},
+				"down": {"uv": [0, 10, 8, 11], "texture": "#hanging_flower_pot"}
+			}
 		}
 	],
-	"display": {},
 	"groups": [
 		{
 			"name": "hanging_pot",
 			"origin": [8, 0, 8],
 			"color": 0,
 			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-		}
+		},
+		9
 	]
 }
