@@ -139,6 +139,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.PLASTER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.BLEACHED_CHALK_DUST.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), RenderType.cutout());
     }
 
 
