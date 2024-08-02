@@ -10,4 +10,6 @@ public class ACBlockStateProperties {
 
 
     public static final BooleanProperty HAS_PLANT = BooleanProperty.create("has_plant");
+
+    public static final BooleanProperty PLANK = BooleanProperty.create("plank");
 }

@@ -37,6 +37,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         wallWithItem(ACBlocks.GYPSUM_BRICK_WALL.get(), ACBlocks.GYPSUM_BRICKS.get());
         wallWithItem(ACBlocks.POLISHED_GYPSUM_WALL.get(), ACBlocks.POLISHED_GYPSUM.get());
 
+        //HANGING FLOWER POT
+        hangingFlowerPotBlock(Blocks.CRIMSON_PLANKS, "minecraft:", ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
+
         //SOAPSTONE
         cubeAllWithItem(ACBlocks.SOAPSTONE.get());
         cubeAllWithItem(ACBlocks.SOAPSTONE_BRICKS.get());
@@ -838,6 +841,37 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
                 .addModels(ConfiguredModel.builder().modelFile(chalkDustModel(dyeColor + "_arch_3").texture("dust", arch3).texture("particle", arch3)).rotationX(90).build())
                 .partialState().with(ACBlockStateProperties.CHALK_PATTERN, 32).with(BlockStateProperties.FACING, Direction.DOWN)
                 .addModels(ConfiguredModel.builder().modelFile(chalkDustModel(dyeColor + "_arch_3").texture("dust", arch3).texture("particle", arch3)).rotationX(270).build());
+    }
+
+    public void hangingFlowerPotBlock(Block plank, String plankModId, Block hangingFlowerPot) {
+        getVariantBuilder(hangingFlowerPot)
+                .partialState().with(ACBlockStateProperties.PLANK, false).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModel(name(hangingFlowerPot)).texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(180).build())
+                .partialState().with(ACBlockStateProperties.PLANK, true).with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModelWithPlank(name(hangingFlowerPot) + "_with_plank").texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(180).build())
+                //EAST
+                .partialState().with(ACBlockStateProperties.PLANK, false).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModel(name(hangingFlowerPot)).texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(270).build())
+                .partialState().with(ACBlockStateProperties.PLANK, true).with(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModelWithPlank(name(hangingFlowerPot) + "_with_plank").texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(270).build())
+                //SOUTH
+                .partialState().with(ACBlockStateProperties.PLANK, false).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModel(name(hangingFlowerPot)).texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).build())
+                .partialState().with(ACBlockStateProperties.PLANK, true).with(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModelWithPlank(name(hangingFlowerPot) + "_with_plank").texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).build())
+                //WEST
+                .partialState().with(ACBlockStateProperties.PLANK, false).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModel(name(hangingFlowerPot)).texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(90).build())
+                .partialState().with(ACBlockStateProperties.PLANK, true).with(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST)
+                .addModels(ConfiguredModel.builder().modelFile(hangingFlowerPotModelWithPlank(name(hangingFlowerPot) + "_with_plank").texture("hanging_flower_pot", "block/" + name(hangingFlowerPot)).texture("particle", plankModId + "block/" + name(plank))).rotationY(90).build());
+    }
+
+    public ModelBuilder<?> hangingFlowerPotModel(String name) {
+        return models().withExistingParent(name, "arts_and_crafts:block/template_hanging_flower_pot");
+    }
+
+    public ModelBuilder<?> hangingFlowerPotModelWithPlank(String name) {
+        return models().withExistingParent(name, "arts_and_crafts:block/template_hanging_flower_pot_with_plank");
     }
 
     public ModelBuilder<?> chalkDustModel(String name) {

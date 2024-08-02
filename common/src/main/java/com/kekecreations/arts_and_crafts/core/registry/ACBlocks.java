@@ -94,6 +94,10 @@ public class ACBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
 
+
+
+    public static final Supplier<Block> CRIMSON_HANGING_FLOWER_POT = registerBlockWithItem("crimson_hanging_flower_pot", () -> new HangingFlowerPot(BlockBehaviour.Properties.of().sound(SoundType.CHAIN)));
+
     public static final Supplier<Block> LOTUS_FLOWER = registerBlock("lotus_flower", () -> new LotusFlowerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LILY_PAD).randomTicks().lightLevel(($$0x) -> {
         switch ($$0x.getValue(BlockStateProperties.AGE_3)) {
             case 0, 1 -> {

@@ -115,6 +115,7 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(ACBlocks.BLEACHED_CONCRETE_POWDER.get(), "Bleached Concrete Powder");
         add(ACBlocks.BLEACHED_BED.get(), "Bleached Bed");
         add(ACBlocks.BLEACHED_CHALK_DUST.get(), "Bleached Chalk Dust");
+        add(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), "Crimson Hanging Flower Pot");
 
 
 

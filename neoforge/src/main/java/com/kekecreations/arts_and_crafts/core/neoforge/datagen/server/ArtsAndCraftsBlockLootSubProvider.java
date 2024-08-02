@@ -52,10 +52,15 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         gypsum();
         bleached();
         flowerPots();
+        hangingFlowerPots();
         chalkDust();
         decoratedPots();
         mudBricks();
         add(ACBlocks.LOTUS_FLOWER.get(), createTwoItemTable(ACItems.LOTUS_PISTILS.get(), Items.LILY_PAD));
+    }
+
+    private void hangingFlowerPots() {
+        dropSelf(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
     }
 
     private void bleached() {

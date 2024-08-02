@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts:block/template_hanging_flower_pot",
+  "textures": {
+    "hanging_flower_pot": "arts_and_crafts:block/crimson_hanging_flower_pot",
+    "particle": "minecraft:block/crimson_planks"
+  }
+}
