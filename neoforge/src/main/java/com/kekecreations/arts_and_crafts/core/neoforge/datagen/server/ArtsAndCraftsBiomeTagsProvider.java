@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.common.util.ACTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -24,6 +25,7 @@ public class ArtsAndCraftsBiomeTagsProvider extends BiomeTagsProvider {
 
     private void appendGypsumCanGenerateIn() {
         this.tag(ACTags.BiomeTags.GYPSUM_CAN_GENERATE_IN)
+                .addTag(BiomeTags.HAS_DESERT_PYRAMID)
                 .add(Biomes.DESERT);
     }
     private void appendSoapstoneCanGenerateIn() {

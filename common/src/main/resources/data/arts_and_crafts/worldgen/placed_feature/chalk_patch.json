@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 20
+      "count": 28
     },
     {
       "type": "minecraft:in_square"
@@ -29,8 +29,8 @@
         "direction": "up"
       },
       "allowed_search_condition": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:stone"
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:base_stone_overworld"
       }
     },
     {

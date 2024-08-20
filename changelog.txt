@@ -1,5 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V2.0.0
+• Chalk now spawns more in mountains
+• Chalk can now replace all blocks in the #minecraft:base_stone_overworld tag
+• Gypsum now spawns in biomes with a Desert Temple
+
+
+
+
 V1.1.8
 • Fixed Cork Log & Stripped Cork Log having the wrong sounds
 
