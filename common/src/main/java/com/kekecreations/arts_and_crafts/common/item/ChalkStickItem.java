@@ -70,7 +70,7 @@ public class ChalkStickItem extends Item {
                         if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
                             ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
                         }
-                    } else if (!player.isCrouching() && chalkDustBlock.getDyeColor() == this.getDyeColor()) {
+                    } else if (!player.isShiftKeyDown() && chalkDustBlock.getDyeColor() == this.getDyeColor()) {
                         ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
                     }
                 }
@@ -89,7 +89,7 @@ public class ChalkStickItem extends Item {
                             return InteractionResult.SUCCESS;
                         }
                     } else {
-                        if (player.isCrouching()) {
+                        if (player.isShiftKeyDown()) {
                             itemStack.set(ACDataComponents.CHALK_PATTERN.get(), ChalkUtils.getChalkPatternFromChalkDust(blockState));
                             return InteractionResult.SUCCESS;
                         } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
