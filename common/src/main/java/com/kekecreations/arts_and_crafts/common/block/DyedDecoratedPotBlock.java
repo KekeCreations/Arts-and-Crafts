@@ -31,7 +31,6 @@ import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -158,7 +157,7 @@ public class DyedDecoratedPotBlock extends BaseEntityBlock implements SimpleWate
 
     protected List<ItemStack> getDrops(BlockState blockState, LootParams.Builder builder) {
         BlockEntity blockEntity = (BlockEntity)builder.getOptionalParameter(LootContextParams.BLOCK_ENTITY);
-        if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
+        if (blockEntity instanceof DyedDecoratedPotBlockEntity decoratedPotBlockEntity) {
             builder.withDynamicDrop(SHERDS_DYNAMIC_DROP_ID, (consumer) -> {
                 Iterator var2 = decoratedPotBlockEntity.getDecorations().ordered().iterator();
 

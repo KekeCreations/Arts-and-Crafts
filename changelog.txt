@@ -1,9 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V2.0.0
+Bug Fixes
 • Chalk now spawns more in mountains
 • Chalk can now replace all blocks in the #minecraft:base_stone_overworld tag
 • Gypsum now spawns in biomes with a Desert Temple
+• Fixed Dyed Decorated Pots not dropping sherds
 
 
 
