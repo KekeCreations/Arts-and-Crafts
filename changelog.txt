@@ -3,6 +3,8 @@ Arts & Crafts Changelog
 V1.1.9
 • Fixed Dyed Potted Fern not rendering properly
 • Fixed Dyed Potted Mangrove Propagule not rendering properly
+• Added Portuguese Brazilian translations
+• Chalk Sticks now work while flying
 
 
 
