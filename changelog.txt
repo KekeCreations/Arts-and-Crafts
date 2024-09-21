@@ -5,6 +5,9 @@ V1.1.9
 • Fixed Dyed Potted Mangrove Propagule not rendering properly
 • Added Portuguese Brazilian translations
 • Chalk Sticks now work while flying
+• Made chalk blobs generate more often in mountains
+• Made chalk now replace all blocks in the #minecraft:base_stone_overworld tag
+• Made gypsum generate in biomes with a Desert Temple
 
 
 
