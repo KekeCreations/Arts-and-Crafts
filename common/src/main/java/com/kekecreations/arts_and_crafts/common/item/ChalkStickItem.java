@@ -121,7 +121,6 @@ public class ChalkStickItem extends Item {
                 RandomSource randomSource = level.getRandom();
 
                 int chalkPattern = itemStack.getOrDefault(ACDataComponents.CHALK_PATTERN.get(), 0);
-                ArtsAndCrafts.LOG.info("Pattern: {}", chalkPattern);
                 level.setBlockAndUpdate(pos, state.setValue(ACBlockStateProperties.CHALK_PATTERN, chalkPattern));
                 level.playSound(null, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));
