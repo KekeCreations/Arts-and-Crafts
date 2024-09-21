@@ -143,7 +143,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
             flowerPotBlock(ACBlocks.getDyedPottedWarpedFungus(colours), colours, "warped_fungus", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedWarpedRoots(colours), colours, "warped_roots_pot", "minecraft");
 
-            flowerPotBlock(ACBlocks.getDyedPottedFern(colours), colours, "fern", "minecraft");
+            tintedFlowerPotBlock(ACBlocks.getDyedPottedFern(colours), colours, "fern", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedDandelion(colours), colours, "dandelion", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedPoppy(colours), colours, "poppy", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedBlueOrchid(colours), colours, "blue_orchid", "minecraft");
@@ -274,6 +274,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public void flowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
+    }
+    public void tintedFlowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(tintedFlowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
     }
     public void normalFlowerPotBlock(Block block, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel("potted_" + flower).texture("plant", modId + ":block/" + flower)).build());
@@ -859,6 +862,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> flowerPotCrossModel(String name) {
         return models().withExistingParent(name, "minecraft:block/flower_pot_cross");
+    }
+    public ModelBuilder<?> tintedFlowerPotCrossModel(String name) {
+        return models().withExistingParent(name, "minecraft:block/tinted_flower_pot_cross");
     }
     public ModelBuilder<?> cactusFlowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/potted_cactus");
