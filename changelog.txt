@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.1.9
+• Fixed Dyed Potted Fern not rendering properly
+• Fixed Dyed Potted Mangrove Propagule not rendering properly
+
+
+
 V1.1.8
 • Fixed Cork Log & Stripped Cork Log having the wrong sounds
 
