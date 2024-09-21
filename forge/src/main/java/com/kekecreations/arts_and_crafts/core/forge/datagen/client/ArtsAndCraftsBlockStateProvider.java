@@ -136,7 +136,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
             flowerPotBlock(ACBlocks.getDyedPottedAcaciaSapling(colours), colours, "acacia_sapling", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedCherrySapling(colours), colours, "cherry_sapling", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedDarkOakSapling(colours), colours, "dark_oak_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colours), colours, "mangrove_propagule", "minecraft");
+            mangrovePropaguleFlowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colours), colours,  "minecraft");
 
             flowerPotBlock(ACBlocks.getDyedPottedCrimsonFungus(colours), colours, "crimson_fungus", "minecraft");
             flowerPotBlock(ACBlocks.getDyedPottedCrimsonRoots(colours), colours, "crimson_roots_pot", "minecraft");
@@ -271,6 +271,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public void emptyFlowerPotBlock(Block block, DyeColor dyeColor) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotModel(dyeColor.getName() + "_flower_pot").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
+    }
+    public void mangrovePropaguleFlowerPotBlock(Block block, DyeColor dyeColor, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(mangrovePropaguleFlowerPotModel(dyeColor.getName() + "_potted_mangrove_propagule").texture("plant", modId + ":block/mangrove_propagule").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
     }
     public void flowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
@@ -877,6 +880,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     }
     public ModelBuilder<?> floweringAzaleaFlowerPotModel(String name) {
         return models().withExistingParent(name, "minecraft:block/potted_flowering_azalea_bush");
+    }
+    public ModelBuilder<?> mangrovePropaguleFlowerPotModel(String name) {
+        return models().withExistingParent(name, "minecraft:block/potted_mangrove_propagule");
     }
 
     public ModelBuilder<?> bedModel(String name) {
