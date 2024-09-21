@@ -11,6 +11,7 @@ V1.1.9
 • Fixed Dyed Potted Mangrove Propagule not rendering properly
 • Updated NeoForge Version to latest
 • Removed Chalk Stick Debug Messages
+• Changed Render Type to cutout on Base Dyed Flower Pots
 
 
 V1.1.8

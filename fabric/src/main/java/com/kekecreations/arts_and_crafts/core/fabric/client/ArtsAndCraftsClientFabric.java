@@ -74,13 +74,14 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedTorchFlower(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCorkSapling(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
         }
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.PLASTER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.LOTUS_FLOWER.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), RenderType.cutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), RenderType.cutout());
+        //BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), RenderType.cutout());
     }
 
 

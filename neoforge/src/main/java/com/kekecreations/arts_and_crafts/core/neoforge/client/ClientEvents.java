@@ -133,6 +133,7 @@ public class ClientEvents {
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedTorchFlower(colours), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCorkSapling(colours), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
         }
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.CORK_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
