@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/flower_pot_cross",
+  "parent": "minecraft:block/potted_mangrove_propagule",
   "textures": {
     "flowerpot": "arts_and_crafts:block/pink_flower_pot",
     "particle": "arts_and_crafts:block/pink_flower_pot",

@@ -6,6 +6,9 @@ V1.1.9
 • Gypsum now spawns in biomes with a Desert Temple
 • Fixed Dyed Decorated Pots not dropping sherds
 • Fixed Dyed Potted Fern not rendering properly
+• Added Portuguese Brazilian translations
+• Chalk Sticks now work while flying
+• Fixed Dyed Potted Mangrove Propagule not rendering properly
 
 
 V1.1.8
