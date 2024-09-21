@@ -1,7 +1,7 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V1.1.9
-• Chalk now spawns more in mountains
+• Made chalk blobs generate more often in mountains
 • Chalk can now replace all blocks in the #minecraft:base_stone_overworld tag
 • Gypsum now spawns in biomes with a Desert Temple
 • Fixed Dyed Decorated Pots not dropping sherds
@@ -9,6 +9,7 @@ V1.1.9
 • Added Portuguese Brazilian translations
 • Chalk Sticks now work while flying
 • Fixed Dyed Potted Mangrove Propagule not rendering properly
+• Updated NeoForge Version to latest
 
 
 V1.1.8

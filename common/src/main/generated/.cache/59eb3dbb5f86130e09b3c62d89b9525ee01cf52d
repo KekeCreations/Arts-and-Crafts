@@ -1,4 +1,4 @@
-// 1.21	2024-08-02T13:37:27.4425962	Loot Tables
+// 1.21	2024-09-21T22:03:51.5856328	Loot Tables
 b192febc153e25411caaabbf806ea71423e3fcc5 data/arts_and_crafts/loot_table/blocks/black_chalk.json
 7e5907d19cc499140da3aedfc8c2b3421f292f3d data/arts_and_crafts/loot_table/blocks/black_chalk_dust.json
 09f5b1a354e2e5ffa00548afc379a54f7e606990 data/arts_and_crafts/loot_table/blocks/black_decorated_pot.json
@@ -202,7 +202,6 @@ df7461602e9d6b9df6367e2ee664635867fa1f3c data/arts_and_crafts/loot_table/blocks/
 c7eb232a691f437f0a3c8e342edc941ace4988ce data/arts_and_crafts/loot_table/blocks/cork_stairs.json
 da6e79deb3fb34d1f19ee6764a0b0a196470ace0 data/arts_and_crafts/loot_table/blocks/cork_trapdoor.json
 d76efc64049f83ce475679f58159e4782bc15258 data/arts_and_crafts/loot_table/blocks/cork_wood.json
-140ed30812a8e998038be499dbd22c44525e1f28 data/arts_and_crafts/loot_table/blocks/crimson_hanging_flower_pot.json
 5971183b98621299865fba867547fc2d3560dfbc data/arts_and_crafts/loot_table/blocks/cyan_chalk.json
 6492c02401d720ba45cd789efac5a5476855649d data/arts_and_crafts/loot_table/blocks/cyan_chalk_dust.json
 5ac169d668725df0b6510e6d2abc00e270dc24b3 data/arts_and_crafts/loot_table/blocks/cyan_decorated_pot.json

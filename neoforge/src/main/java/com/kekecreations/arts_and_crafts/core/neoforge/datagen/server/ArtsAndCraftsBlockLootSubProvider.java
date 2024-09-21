@@ -60,7 +60,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     }
 
     private void hangingFlowerPots() {
-        dropSelf(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
+        //dropSelf(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
     }
 
     private void bleached() {

@@ -38,7 +38,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         wallWithItem(ACBlocks.POLISHED_GYPSUM_WALL.get(), ACBlocks.POLISHED_GYPSUM.get());
 
         //HANGING FLOWER POT
-        hangingFlowerPotBlock(Blocks.CRIMSON_PLANKS, "minecraft:", ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
+        //hangingFlowerPotBlock(Blocks.CRIMSON_PLANKS, "minecraft:", ACBlocks.CRIMSON_HANGING_FLOWER_POT.get());
 
         //SOAPSTONE
         cubeAllWithItem(ACBlocks.SOAPSTONE.get());
