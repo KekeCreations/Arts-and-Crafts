@@ -68,16 +68,17 @@ public class PaintbrushItem extends Item {
                         newDecoratedPotBlockEntity.setTheItem(potItemStack);
                     }
                     return InteractionResult.SUCCESS;
-                } else if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
+                } else if (blockEntity instanceof BaseContainerBlockEntity container) {
                     List<ItemStack> itemList = new ArrayList<ItemStack>();
-                    for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
-                        itemList.add(shulkerBE.getItem(i));
+                    for (int i = 0; i < container.getContainerSize(); ++i) {
+                        itemList.add(container.getItem(i));
+                        container.setItem(i, ItemStack.EMPTY);
                     }
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     BlockEntity newBlockEntity = level.getBlockEntity(pos);
-                    if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
-                        for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
-                            newShulkerBE.setItem(i, itemList.get(i));
+                    if (newBlockEntity instanceof BaseContainerBlockEntity newContainer) {
+                        for (int i = 0; i < newContainer.getContainerSize(); ++i) {
+                            newContainer.setItem(i, itemList.get(i));
                         }
                     }
                     return InteractionResult.SUCCESS;
