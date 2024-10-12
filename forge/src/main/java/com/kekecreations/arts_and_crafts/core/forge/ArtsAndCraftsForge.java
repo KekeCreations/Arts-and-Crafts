@@ -4,7 +4,6 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.forge.common.ACCompostables;
-import com.kekecreations.arts_and_crafts.core.forge.datagen.ArtsAndCraftsGlobalLootModifiersProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
@@ -72,7 +71,6 @@ public class ArtsAndCraftsForge {
         generator.addProvider(event.includeServer(), new ArtsAndCraftsItemTagsProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), ArtsAndCrafts.MOD_ID, fileHelper));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsLootTableProvider(packOutput));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsBiomeTagsProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID, fileHelper));
-        generator.addProvider(event.includeServer(), new ArtsAndCraftsGlobalLootModifiersProvider(packOutput));
     }
 
     private void loadCompleteEvent(FMLLoadCompleteEvent event) {
