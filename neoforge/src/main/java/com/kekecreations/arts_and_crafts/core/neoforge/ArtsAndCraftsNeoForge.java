@@ -3,7 +3,6 @@ package com.kekecreations.arts_and_crafts.core.neoforge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
-import com.kekecreations.arts_and_crafts.core.neoforge.datagen.ArtsAndCraftsGlobalLootModifiersProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsLangProvider;
@@ -67,7 +66,6 @@ public class ArtsAndCraftsNeoForge {
         generator.addProvider(event.includeServer(), new ArtsAndCraftsItemTagsProvider(packOutput, lookupProvider, blockTagProvider.contentsGetter(), ArtsAndCrafts.MOD_ID, fileHelper));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsLootTableProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ArtsAndCraftsBiomeTagsProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID, fileHelper));
-        generator.addProvider(event.includeServer(), new ArtsAndCraftsGlobalLootModifiersProvider(packOutput, lookupProvider, ArtsAndCrafts.MOD_ID));
     }
 
     public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
