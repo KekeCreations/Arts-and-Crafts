@@ -12,10 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BedBlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
-import net.minecraft.world.level.block.entity.ShulkerBoxBlockEntity;
+import net.minecraft.world.level.block.entity.*;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.ArrayList;
@@ -55,16 +52,17 @@ public class PaintbrushItem extends Item {
                     return InteractionResult.sidedSuccess(true);
                 } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                     PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                } else if (blockEntity instanceof ShulkerBoxBlockEntity shulkerBE) {
+                } else if (blockEntity instanceof BaseContainerBlockEntity container) {
                     List<ItemStack> itemList = new ArrayList<ItemStack>();
-                    for (int i = 0; i < shulkerBE.getContainerSize(); ++i) {
-                        itemList.add(shulkerBE.getItem(i));
+                    for (int i = 0; i < container.getContainerSize(); ++i) {
+                        itemList.add(container.getItem(i));
+                        container.setItem(i, ItemStack.EMPTY);
                     }
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     BlockEntity newBlockEntity = level.getBlockEntity(pos);
-                    if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulkerBE) {
-                        for (int i = 0; i < newShulkerBE.getContainerSize(); ++i) {
-                            newShulkerBE.setItem(i, itemList.get(i));
+                    if (newBlockEntity instanceof BaseContainerBlockEntity newContainer) {
+                        for (int i = 0; i < newContainer.getContainerSize(); ++i) {
+                            newContainer.setItem(i, itemList.get(i));
                         }
                     }
                     return InteractionResult.SUCCESS;
