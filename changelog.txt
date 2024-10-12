@@ -1,5 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.2.0
+• Fixed an issue where loot table modifiers, link to issue report: https://github.com/KekeCreations/Arts-and-Crafts/issues/27
+• Fixed an issue with paintbrush compat where block entities with inventories would get their inventory cleared.
+• Added translated for zh_cn.json (Thank you IwasConfused!)
+
+
+
+
 V1.1.9
 • Fixed Dyed Potted Fern not rendering properly
 • Fixed Dyed Potted Mangrove Propagule not rendering properly
