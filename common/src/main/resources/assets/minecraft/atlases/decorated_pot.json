@@ -1,7 +1,7 @@
 {
   "sources": [
     {
-      "type": "paletted_permutations",
+      "type": "arts_and_crafts:paletted_permutations",
       "textures": [
         "arts_and_crafts:entity/decorated_pot/pottery_pattern",
         "arts_and_crafts:entity/decorated_pot/roll_pottery_pattern",
