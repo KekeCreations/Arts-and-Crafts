@@ -1,5 +1,12 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.3.0
+• Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
+• Dyed Decorated Pots base material is now rendered the same way the sides are.
+• Dyed Decorated Pots now work with texture packs when they modify the palette texture!
+
+
+
 V1.2.0
 • Fixed an issue with loot table modifiers, link to issue report: https://github.com/KekeCreations/Arts-and-Crafts/issues/27
 • Fixed an issue with paintbrush compat where block entities with inventories would get their inventory cleared.
