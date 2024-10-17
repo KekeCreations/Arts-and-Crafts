@@ -2,33 +2,12 @@
   "sources": [
     {
       "type": "arts_and_crafts:paletted_permutations",
-      "textures": [
-        "arts_and_crafts:entity/decorated_pot/pottery_pattern",
-        "arts_and_crafts:entity/decorated_pot/roll_pottery_pattern",
-        "arts_and_crafts:entity/decorated_pot/ruined_pottery_pattern",
-        "arts_and_crafts:entity/decorated_pot/finale_pottery_pattern",
-        "arts_and_crafts:entity/decorated_pot/gateway_pottery_pattern",
-        "entity/decorated_pot/decorated_pot_side",
-        "entity/decorated_pot/angler_pottery_pattern",
-        "entity/decorated_pot/archer_pottery_pattern",
-        "entity/decorated_pot/arms_up_pottery_pattern",
-        "entity/decorated_pot/blade_pottery_pattern",
-        "entity/decorated_pot/brewer_pottery_pattern",
-        "entity/decorated_pot/burn_pottery_pattern",
-        "entity/decorated_pot/danger_pottery_pattern",
-        "entity/decorated_pot/explorer_pottery_pattern",
-        "entity/decorated_pot/friend_pottery_pattern",
-        "entity/decorated_pot/heart_pottery_pattern",
-        "entity/decorated_pot/heartbreak_pottery_pattern",
-        "entity/decorated_pot/howl_pottery_pattern",
-        "entity/decorated_pot/miner_pottery_pattern",
-        "entity/decorated_pot/mourner_pottery_pattern",
-        "entity/decorated_pot/plenty_pottery_pattern",
-        "entity/decorated_pot/prize_pottery_pattern",
-        "entity/decorated_pot/sheaf_pottery_pattern",
-        "entity/decorated_pot/shelter_pottery_pattern",
-        "entity/decorated_pot/skull_pottery_pattern",
-        "entity/decorated_pot/snort_pottery_pattern"
+      "sources": [
+        {
+          "type": "minecraft:directory",
+          "prefix": "entity/decorated_pot/",
+          "source": "entity/decorated_pot"
+        }
       ],
       "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
       "permutations": {

@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.client.renderer.atlas;
 
 import com.google.common.base.Suppliers;
+import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
@@ -167,7 +168,7 @@ public class ACPalettedPermutations implements SpriteSource {
     }
 
     public SpriteSourceType type() {
-        return SpriteSources.PALETTED_PERMUTATIONS;
+        return ACSpriteSources.PALETTED_PERMUTATIONS;
     }
 
     static record ACPalettedSpriteSupplier(LazyLoadedImage baseImage, Supplier<IntUnaryOperator> paletteSupplier, ResourceLocation permutationLocation) implements SpriteSource.SpriteSupplier {
