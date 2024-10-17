@@ -13,12 +13,14 @@ import net.minecraft.client.renderer.texture.atlas.SpriteSource;
 import net.minecraft.client.renderer.texture.atlas.SpriteSourceType;
 import net.minecraft.client.renderer.texture.atlas.SpriteSources;
 import net.minecraft.client.renderer.texture.atlas.sources.LazyLoadedImage;
+import net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations;
 import net.minecraft.client.resources.metadata.animation.AnimationMetadataSection;
 import net.minecraft.client.resources.metadata.animation.FrameSize;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.FastColor;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 
@@ -26,30 +28,31 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 import java.util.function.IntUnaryOperator;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class ACPalettedPermutations implements SpriteSource {
     static final Logger LOGGER = LogUtils.getLogger();
     public static final Codec<ACPalettedPermutations> CODEC = RecordCodecBuilder.create((instance) -> {
-        return instance.group(Codec.list(ResourceLocation.CODEC).fieldOf("textures").forGetter((palettedPermutations) -> {
-            return palettedPermutations.textures;
+        return instance.group(Codec.list(SpriteSources.CODEC).fieldOf("sources").forGetter((palettedPermutations) -> {
+            return palettedPermutations.sources;
         }), ResourceLocation.CODEC.fieldOf("palette_key").forGetter((palettedPermutations) -> {
             return palettedPermutations.paletteKey;
         }), Codec.unboundedMap(Codec.STRING, ResourceLocation.CODEC).fieldOf("permutations").forGetter((palettedPermutations) -> {
             return palettedPermutations.permutations;
         })).apply(instance, ACPalettedPermutations::new);
     });
-    private final List<ResourceLocation> textures;
+    private final List<SpriteSource> sources;
     private final Map<String, ResourceLocation> permutations;
     private final ResourceLocation paletteKey;
 
-    private ACPalettedPermutations(List<ResourceLocation> list, ResourceLocation resourceLocation, Map<String, ResourceLocation> map) {
-        this.textures = list;
+    private ACPalettedPermutations(List<SpriteSource> list, ResourceLocation resourceLocation, Map<String, ResourceLocation> map) {
+        this.sources = list;
         this.permutations = map;
         this.paletteKey = resourceLocation;
     }
 
-    public void run(ResourceManager resourceManager, SpriteSource.Output output) {
+    public void run(@NotNull ResourceManager resourceManager, SpriteSource.@NotNull Output output) {
         Supplier<int[]> supplier = Suppliers.memoize(() -> {
             return loadPaletteEntryFromImage(resourceManager, this.paletteKey);
         });
@@ -59,28 +62,47 @@ public class ACPalettedPermutations implements SpriteSource {
                 return createPaletteMapping((int[])supplier.get(), loadPaletteEntryFromImage(resourceManager, resourceLocationx));
             }));
         });
-        Iterator var5 = this.textures.iterator();
-
-        while(true) {
-            while(var5.hasNext()) {
-                ResourceLocation resourceLocation = (ResourceLocation)var5.next();
-                ResourceLocation resourceLocation2 = TEXTURE_ID_CONVERTER.idToFile(resourceLocation);
-                Optional<Resource> optional = resourceManager.getResource(resourceLocation2);
-                if (optional.isEmpty()) {
-                    LOGGER.warn("Unable to find texture {}", resourceLocation2);
-                } else {
-                    LazyLoadedImage lazyLoadedImage = new LazyLoadedImage(resourceLocation2, (Resource)optional.get(), map.size());
-                    Iterator var10 = map.entrySet().iterator();
-
-                    while(var10.hasNext()) {
-                        Map.Entry<String, Supplier<IntUnaryOperator>> entry = (Map.Entry)var10.next();
-                        ResourceLocation resourceLocation3 = resourceLocation.withSuffix("_" + (String)entry.getKey());
-                        output.add(resourceLocation3, new ACPalettedSpriteSupplier(lazyLoadedImage, (Supplier)entry.getValue(), resourceLocation3));
+        HashMap<ResourceLocation, SpriteSource.SpriteSupplier> sourceOutputMap = new HashMap<>();
+        Output sourceOutput = new Output() {
+            @Override
+            public void add(@NotNull ResourceLocation location, @NotNull SpriteSupplier spriteSupplier) {
+                SpriteSource.SpriteSupplier supplier = sourceOutputMap.put(location, spriteSupplier);
+                if (supplier != null) {
+                    supplier.discard();
+                }
+            }
+            @Override
+            public void removeAll(@NotNull Predicate<ResourceLocation> predicate) {
+                Iterator<Map.Entry<ResourceLocation, SpriteSupplier>> iterator = sourceOutputMap.entrySet().iterator();
+                while (iterator.hasNext()) {
+                    Map.Entry<ResourceLocation, SpriteSource.SpriteSupplier> entry = iterator.next();
+                    if (predicate.test(entry.getKey())) {
+                        entry.getValue().discard();
+                        iterator.remove();
                     }
                 }
             }
+        };
+        for (Iterator<SpriteSource> it = this.sources.iterator(); it.hasNext(); ) {
+            SpriteSource source = it.next();
+            source.run(resourceManager, sourceOutput);
+        }
+        for (Iterator<ResourceLocation> it = sourceOutputMap.keySet().iterator(); it.hasNext(); ) {
+            ResourceLocation resourceLocation = it.next();
+            ResourceLocation resourceLocation2 = TEXTURE_ID_CONVERTER.idToFile(resourceLocation);
+            Optional<Resource> optional = resourceManager.getResource(resourceLocation2);
+            if (optional.isEmpty()) {
+                LOGGER.warn("Unable to find texture {}", resourceLocation2);
+            } else {
+                LazyLoadedImage lazyLoadedImage = new LazyLoadedImage(resourceLocation2, (Resource)optional.get(), map.size());
+                Iterator var10 = map.entrySet().iterator();
 
-            return;
+                while(var10.hasNext()) {
+                    Map.Entry<String, Supplier<IntUnaryOperator>> entry = (Map.Entry)var10.next();
+                    ResourceLocation resourceLocation3 = resourceLocation.withSuffix("_" + (String)entry.getKey());
+                    output.add(resourceLocation3, new ACPalettedSpriteSupplier(lazyLoadedImage, (Supplier)entry.getValue(), resourceLocation3));
+                }
+            }
         }
     }
 

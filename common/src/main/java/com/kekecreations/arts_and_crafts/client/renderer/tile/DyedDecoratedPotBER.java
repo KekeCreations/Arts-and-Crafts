@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
-import com.kekecreations.arts_and_crafts.common.util.DyedDecoratedPotUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -19,7 +18,6 @@ import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
@@ -58,8 +56,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
 
 
     public void render(DyedDecoratedPotBlockEntity decoratedPotBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
-        DyeColor colour = decoratedPotBlockEntity.getDyeColor();
-        this.baseMaterial = Objects.requireNonNull(DyedDecoratedPotUtils.getDecoratedPotBase(colour));
+        this.baseMaterial = new Material(Sheets.DECORATED_POT_SHEET, renderBaseMaterial(decoratedPotBlockEntity));
         poseStack.pushPose();
         Direction direction = decoratedPotBlockEntity.getDirection();
         poseStack.translate(0.5, 0.0, 0.5);
@@ -80,17 +77,19 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
     private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, Item item,  DyedDecoratedPotBlockEntity pot) {
         Minecraft instance = Minecraft.getInstance();
         TextureAtlas textureAtlas = instance.getModelManager().getAtlas(Sheets.DECORATED_POT_SHEET);
-        TextureAtlasSprite sprite =  textureAtlas.getSprite(renderMaterial(pot, item));
+        TextureAtlasSprite sprite =  textureAtlas.getSprite(renderSideMaterial(pot, item));
         VertexConsumer vertex = sprite.wrap(multiBufferSource.getBuffer(RenderType.entitySolid(Sheets.DECORATED_POT_SHEET)));
         modelPart.render(poseStack, vertex, i, j);
     }
-    private ResourceLocation renderMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
+    private ResourceLocation renderSideMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
         ResourceKey<String> patternKey = DecoratedPotPatterns.getResourceKey(item);
         if (patternKey != null) {
             return patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_" + potEntity.getDyeColor().getName());
         } else {
-            //return Objects.requireNonNull(DecoratedPotPatterns.getResourceKey(Items.BRICK)).location();
             return new ResourceLocation("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
         }
+    }
+    private ResourceLocation renderBaseMaterial(DyedDecoratedPotBlockEntity potEntity) {
+        return new ResourceLocation("entity/decorated_pot/decorated_pot_base_" + potEntity.getDyeColor().getName());
     }
 }
