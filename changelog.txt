@@ -1,9 +1,21 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V1.3.0
+Changelog
 • Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
 • Dyed Decorated Pots base material is now rendered the same way the sides are.
 • Dyed Decorated Pots now work with texture packs when they modify the palette texture!
+• Updated zh_cn translations.
+
+
+Mentions
+• A special thanks to @Takiaaa for updating zh_cn.json translations!
+• A special thanks to IwasConfused for turning the updated zh_cn.json into a GitHub pull request!
+• A special thanks to Iamnotagenius for allowing me to use their config code for Fabric!
+
+
+
+
 
 
 
