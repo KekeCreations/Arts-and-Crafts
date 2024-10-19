@@ -31,6 +31,11 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
+    public String getConfigDirectory() {
+        return FabricLoader.getInstance().getConfigDir().toString();
+    }
+
+    @Override
     public <T extends BlockEntity> BlockEntityType<T> createBlockEntity(IPlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
         return FabricBlockEntityTypeBuilder.create(blockEntitySupplier::create, blocks).build();
     }

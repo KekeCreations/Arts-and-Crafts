@@ -1,8 +1,10 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.google.common.collect.Maps;
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
+import com.kekecreations.arts_and_crafts.core.config.Config;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -11,6 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -78,6 +81,11 @@ public class ACFlowerPotBlock extends Block {
             case RED -> RED_POTTED_BY_CONTENT.put(block, this);
             case BLACK -> BLACK_POTTED_BY_CONTENT.put(block, this);
         }
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return ArtsAndCrafts.getConfig().areDyedFlowerPotsEnabled();
     }
 
     private boolean isEmpty() {

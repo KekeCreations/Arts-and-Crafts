@@ -137,6 +137,8 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(ACEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
 
 
+        //CONFIG
+        add("message.arts_and_crafts.error.config.general", "An error occured while loading config. Using defaults. Check out logs for details");
 
         //ADVANCEMENTS
         //chalk

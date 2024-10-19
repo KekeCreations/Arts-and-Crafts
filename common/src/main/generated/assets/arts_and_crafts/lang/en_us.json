@@ -520,6 +520,7 @@
   "item.arts_and_crafts.white_paintbrush": "White Paintbrush",
   "item.arts_and_crafts.yellow_chalk_stick": "Yellow Chalk Stick",
   "item.arts_and_crafts.yellow_paintbrush": "Yellow Paintbrush",
+  "message.arts_and_crafts.error.config.general": "An error occured while loading config. Using defaults. Check out logs for details",
   "tooltip.arts_and_crafts.chalk_pattern_0": "Dot Pattern",
   "tooltip.arts_and_crafts.chalk_pattern_1": "Vertical Line Pattern",
   "tooltip.arts_and_crafts.chalk_pattern_10": "East T Cross Pattern",

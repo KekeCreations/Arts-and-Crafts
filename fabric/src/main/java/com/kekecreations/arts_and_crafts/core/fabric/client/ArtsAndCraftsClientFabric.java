@@ -1,11 +1,13 @@
 package com.kekecreations.arts_and_crafts.core.fabric.client;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
+import com.kekecreations.arts_and_crafts.core.config.Config;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
@@ -13,6 +15,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.*;
 import net.minecraft.client.model.BoatModel;
@@ -32,6 +35,10 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         registerBlockColours();
         registerRenderers();
         registerModelLayers();
+
+        ClientPlayNetworking.registerGlobalReceiver(ArtsAndCrafts.SYNC_CONFIG_PACKET, (client, handler, buf, responseSender) -> {
+            ArtsAndCrafts.setConfig(Config.readFromServer(buf));
+        });
     }
 
 
