@@ -1,12 +1,15 @@
 package com.kekecreations.arts_and_crafts.core.platform;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.core.platform.services.ConfigHelper;
 import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
 import com.kekecreations.arts_and_crafts.core.platform.services.RegistryHelper;
 
 import java.util.ServiceLoader;
 
 public class Services {
+
+    public static final ConfigHelper CONFIG = load(ConfigHelper.class);
 
     public static final RegistryHelper REGISTRY = load(RegistryHelper.class);
 

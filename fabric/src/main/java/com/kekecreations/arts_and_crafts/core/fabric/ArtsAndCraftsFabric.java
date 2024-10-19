@@ -3,7 +3,7 @@ package com.kekecreations.arts_and_crafts.core.fabric;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
-import com.kekecreations.arts_and_crafts.core.config.Config;
+import com.kekecreations.arts_and_crafts.core.fabric.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.fabric.common.event.ACItemGroupEvents;
 import com.kekecreations.arts_and_crafts.core.fabric.core.registry.ACFabricRegistries;
 import com.kekecreations.arts_and_crafts.core.fabric.common.event.ACLootTableEvents;
@@ -26,10 +26,18 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
-import static com.kekecreations.arts_and_crafts.ArtsAndCrafts.SYNC_CONFIG_PACKET;
-import static com.kekecreations.arts_and_crafts.ArtsAndCrafts.config;
-
 public class ArtsAndCraftsFabric implements ModInitializer {
+
+    //Config stuff
+    public static final ResourceLocation SYNC_CONFIG_PACKET = ResourceLocation.tryBuild(ArtsAndCrafts.MOD_ID, "sync_config");
+    public static FabricConfig config;
+    public static FabricConfig getConfig() {
+        return config;
+    }
+    public static void setConfig(FabricConfig config) {
+        ArtsAndCraftsFabric.config = config;
+    }
+
     @Override
     public void onInitialize() {
         ArtsAndCrafts.init();
@@ -59,7 +67,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
 
                     @Override
                     public void onResourceManagerReload(ResourceManager manager) {
-                        config = Config.load();
+                        config = FabricConfig.load();
                     }
                 });
 
@@ -67,9 +75,9 @@ public class ArtsAndCraftsFabric implements ModInitializer {
             var buf = PacketByteBufs.create();
             config.writeToClient(buf);
             ServerPlayNetworking.send(player, SYNC_CONFIG_PACKET, buf);
-            if (Config.lastError != null) {
+            if (FabricConfig.lastError != null) {
                 player.displayClientMessage(Component.literal("[Arts & Crafts]: ")
-                        .append(Config.lastError).withStyle(ChatFormatting.RED),
+                        .append(FabricConfig.lastError).withStyle(ChatFormatting.RED),
                         false);
             }
         });

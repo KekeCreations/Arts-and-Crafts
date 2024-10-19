@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.forge.common.ACCompostables;
+import com.kekecreations.arts_and_crafts.core.forge.core.config.ForgeConfig;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.forge.datagen.client.ArtsAndCraftsLangProvider;
@@ -25,7 +26,9 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DataPackRegistryEvent;
@@ -36,6 +39,8 @@ import java.util.concurrent.CompletableFuture;
 public class ArtsAndCraftsForge {
     public ArtsAndCraftsForge() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ForgeConfig.SPEC, "arts-and-crafts.toml");
 
         ArtsAndCrafts.init();
 

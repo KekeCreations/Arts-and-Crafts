@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.core.config;
+package com.kekecreations.arts_and_crafts.core.fabric.core.config;
 
 import blue.endless.jankson.Comment;
 import blue.endless.jankson.Jankson;
@@ -6,6 +6,7 @@ import blue.endless.jankson.api.DeserializationException;
 import blue.endless.jankson.api.SyntaxError;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -17,10 +18,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 //Original file was wrote by https://github.com/Iamnotagenius. Massive thanks to them!
-public class Config {
+public class FabricConfig {
     private static File getConfigFile() {
         return Path.of(
-                Services.PLATFORM.getConfigDirectory(),
+                FabricLoader.getInstance().getConfigDir().toString(),
                 ArtsAndCrafts.MOD_ID,
                 "config.json5"
         ).toFile();
@@ -42,13 +43,13 @@ public class Config {
         }
     }
 
-    public static Config load() {
-        var defaults = new Config();
+    public static FabricConfig load() {
+        var defaults = new FabricConfig();
         try {
             if (getConfigFile().exists()) {
                 lastError = null;
                 var json = JANKSON.load(getConfigFile());
-                return JANKSON.fromJsonCarefully(json, Config.class);
+                return JANKSON.fromJsonCarefully(json, FabricConfig.class);
             }
             defaults.save();
             lastError = null;
@@ -75,9 +76,9 @@ public class Config {
         return defaults;
     }
 
-    public static Config readFromServer(FriendlyByteBuf buf) {
+    public static FabricConfig readFromServer(FriendlyByteBuf buf) {
         try {
-            return JANKSON.fromJsonCarefully(buf.readUtf(), Config.class);
+            return JANKSON.fromJsonCarefully(buf.readUtf(), FabricConfig.class);
         } catch (SyntaxError | DeserializationException e) {
             ArtsAndCrafts.LOG.error("Error while retrieving config from server: {}", e);
         }
@@ -93,7 +94,7 @@ public class Config {
     }
 
     @Comment("Allows flower pots to be dyed when true. Default value: true")
-    private boolean ENABLE_DYED_FLOWER_POTS = false;
+    private boolean ENABLE_DYED_FLOWER_POTS = true;
 
     public boolean areDyedFlowerPotsEnabled() {
         return ENABLE_DYED_FLOWER_POTS;

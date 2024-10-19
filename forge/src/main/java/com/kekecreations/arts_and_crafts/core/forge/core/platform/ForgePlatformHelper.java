@@ -28,11 +28,6 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public String getConfigDirectory() {
-        return FMLConfig.defaultConfigPath();
-    }
-
-    @Override
     public <T extends BlockEntity> BlockEntityType<T> createBlockEntity(BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
         return BlockEntityType.Builder.of(blockEntitySupplier::create, blocks).build(null);
     }

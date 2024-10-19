@@ -4,7 +4,7 @@ import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
-import com.kekecreations.arts_and_crafts.core.config.Config;
+import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -85,7 +85,7 @@ public class ACFlowerPotBlock extends Block {
 
     @Override
     public boolean isEnabled(FeatureFlagSet $$0) {
-        return ArtsAndCrafts.getConfig().areDyedFlowerPotsEnabled();
+        return Services.CONFIG.areDyedFlowerPotsEnabled();
     }
 
     private boolean isEmpty() {

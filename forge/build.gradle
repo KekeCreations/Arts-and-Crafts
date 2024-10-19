@@ -81,7 +81,7 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     //For config
-    implementation("blue.endless:jankson:${jankson_version}")
+    jarJar implementation("blue.endless:jankson:${jankson_version}")
 }
 
 tasks.withType(JavaCompile).configureEach {

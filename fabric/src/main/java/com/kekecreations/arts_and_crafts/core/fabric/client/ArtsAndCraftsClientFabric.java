@@ -1,13 +1,13 @@
 package com.kekecreations.arts_and_crafts.core.fabric.client;
 
-import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
-import com.kekecreations.arts_and_crafts.core.config.Config;
+import com.kekecreations.arts_and_crafts.core.fabric.ArtsAndCraftsFabric;
+import com.kekecreations.arts_and_crafts.core.fabric.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
@@ -36,8 +36,8 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         registerRenderers();
         registerModelLayers();
 
-        ClientPlayNetworking.registerGlobalReceiver(ArtsAndCrafts.SYNC_CONFIG_PACKET, (client, handler, buf, responseSender) -> {
-            ArtsAndCrafts.setConfig(Config.readFromServer(buf));
+        ClientPlayNetworking.registerGlobalReceiver(ArtsAndCraftsFabric.SYNC_CONFIG_PACKET, (client, handler, buf, responseSender) -> {
+            ArtsAndCraftsFabric.setConfig(FabricConfig.readFromServer(buf));
         });
     }
 
