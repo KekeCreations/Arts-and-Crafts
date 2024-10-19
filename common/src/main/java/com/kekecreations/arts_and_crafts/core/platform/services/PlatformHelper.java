@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public interface IPlatformHelper {
+public interface PlatformHelper {
 
     /**
      * Gets the name of the current platform

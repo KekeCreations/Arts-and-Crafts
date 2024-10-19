@@ -1,15 +1,13 @@
 package com.kekecreations.arts_and_crafts.forge.core.platform;
 
-import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
+import com.kekecreations.arts_and_crafts.core.platform.services.PlatformHelper;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.loading.FMLConfig;
 import net.minecraftforge.fml.loading.FMLLoader;
 
-public class ForgePlatformHelper implements IPlatformHelper {
+public class ForgePlatformHelper implements PlatformHelper {
 
 
     @Override
