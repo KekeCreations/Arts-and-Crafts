@@ -5,4 +5,6 @@ public interface ConfigHelper {
     boolean areDyedFlowerPotsEnabled();
 
     boolean areChalkSticksEnabled();
+
+    boolean areDyedDecoratedPotsEnabled();
 }

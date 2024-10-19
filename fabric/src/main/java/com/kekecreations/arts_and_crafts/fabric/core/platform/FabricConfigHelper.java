@@ -16,4 +16,9 @@ public class FabricConfigHelper implements ConfigHelper {
         return ArtsAndCraftsFabric.getConfig().areChalkSticksEnabled();
     }
 
+    @Override
+    public boolean areDyedDecoratedPotsEnabled() {
+        return ArtsAndCraftsFabric.getConfig().areDyedDecoratedPotsEnabled();
+    }
+
 }

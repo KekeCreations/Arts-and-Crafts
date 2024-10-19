@@ -14,4 +14,9 @@ public class ForgeConfigHelper implements ConfigHelper {
     public boolean areChalkSticksEnabled() {
         return ForgeConfig.ENABLE_CHALK_STICKS.get();
     }
+
+    @Override
+    public boolean areDyedDecoratedPotsEnabled() {
+        return ForgeConfig.ENABLE_DYED_DECORATED_POTS.get();
+    }
 }

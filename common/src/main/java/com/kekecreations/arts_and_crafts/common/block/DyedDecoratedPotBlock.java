@@ -1,8 +1,10 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -25,6 +27,11 @@ public class DyedDecoratedPotBlock extends DecoratedPotBlock {
     public DyedDecoratedPotBlock(DyeColor colour, Properties properties) {
         super(properties);
         this.dyeColor = colour;
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.CONFIG.areDyedDecoratedPotsEnabled();
     }
 
     @Override

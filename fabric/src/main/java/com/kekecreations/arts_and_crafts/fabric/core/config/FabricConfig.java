@@ -99,10 +99,17 @@ public class FabricConfig {
         return enableDyedFlowerPots;
     }
 
-    @Comment("Should Chalk Sticks be enabled? Default value: true")
+    @Comment("Should chalk sticks be enabled? Default value: true")
     private boolean enableChalkSticks = true;
 
     public boolean areChalkSticksEnabled() {
         return enableChalkSticks;
+    }
+
+    @Comment("Allows decorated pots to be dyed when true. Default value: true")
+    private boolean enableDyedDecoratedPots = true;
+
+    public boolean areDyedDecoratedPotsEnabled() {
+        return enableDyedDecoratedPots;
     }
 }
