@@ -19,11 +19,11 @@ public class ForgeConfig {
         BUILDER.push("Features");
         ENABLE_DYED_FLOWER_POTS = BUILDER
                 .comment("Allows flower pots to be dyed when true. Default value: true")
-                .define(" ENABLE_DYED_FLOWER_POTS", true);
+                .define("enableDyedFlowerPots", true);
 
         ENABLE_CHALK_STICKS = BUILDER
                 .comment("Should Chalk Sticks be enabled? Default value: true")
-                .define(" ENABLE_CHALK_STICKS", true);
+                .define("enableChalkSticks", true);
 
 
         BUILDER.pop();
