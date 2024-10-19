@@ -40,6 +40,9 @@ public class PaintbrushItem extends Item {
         if (!level.isClientSide()) {
             Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
             if (finalBlock != null && finalBlock != blockState.getBlock()) {
+                if (!finalBlock.isEnabled(finalBlock.requiredFeatures())) {
+                    return InteractionResult.FAIL;
+                }
                 if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
                     DecoratedPotBlockEntity.Decorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
