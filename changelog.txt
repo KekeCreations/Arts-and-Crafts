@@ -6,6 +6,7 @@ Changelog
 • Dyed Decorated Pots base material is now rendered the same way the sides are.
 • Dyed Decorated Pots now work with texture packs when they modify the palette texture!
 • Updated zh_cn translations.
+• Code Cleanup
 
 
 Mentions
