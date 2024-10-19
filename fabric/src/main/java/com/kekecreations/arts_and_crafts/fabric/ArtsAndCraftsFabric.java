@@ -40,8 +40,8 @@ public class ArtsAndCraftsFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ArtsAndCrafts.init();
         config();
+        ArtsAndCrafts.init();
         ACItemGroupEvents.add();
         ACFabricRegistries.register();
         ACLootTableEvents.modifyVanillaLootTables();

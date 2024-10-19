@@ -249,7 +249,7 @@ public class ACBlocks {
             }))));
 
 
-            DYED_FLOWER_POTS.put(colours, registerBlockWithItem(colours + "_flower_pot", () -> ACBlocks.flowerPot(Blocks.AIR, colours)));
+            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", () -> ACBlocks.flowerPot(Blocks.AIR, colours)));
 
             //DYED SAPLING POTS
             DYED_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oak_sapling", () -> ACBlocks.flowerPot(Blocks.OAK_SAPLING, colours)));
@@ -500,10 +500,6 @@ public class ACBlocks {
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
-    }
-
-    private static ACFlammableRotatedPillarBlock log(MapColor mapColor, MapColor mapColor2) {
-        return new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
     }
 
     private static ACFlammableRotatedPillarBlock corkLog(MapColor mapColor, MapColor mapColor2) {
