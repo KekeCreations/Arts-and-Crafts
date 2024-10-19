@@ -10,4 +10,10 @@ public class FabricConfigHelper implements ConfigHelper {
     public boolean areDyedFlowerPotsEnabled() {
         return ArtsAndCraftsFabric.getConfig().areDyedFlowerPotsEnabled();
     }
+
+    @Override
+    public boolean areChalkSticksEnabled() {
+        return ArtsAndCraftsFabric.getConfig().areChalkSticksEnabled();
+    }
+
 }

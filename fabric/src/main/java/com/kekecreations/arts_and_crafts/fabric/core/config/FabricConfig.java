@@ -98,4 +98,11 @@ public class FabricConfig {
     public boolean areDyedFlowerPotsEnabled() {
         return ENABLE_DYED_FLOWER_POTS;
     }
+
+    @Comment("Should Chalk Sticks be enabled? Default value: true")
+    private boolean ENABLE_CHALK_STICKS = true;
+
+    public boolean areChalkSticksEnabled() {
+        return ENABLE_CHALK_STICKS;
+    }
 }

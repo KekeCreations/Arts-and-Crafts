@@ -5,6 +5,7 @@ Changelog
 • Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
 • Dyed Decorated Pots base material is now rendered the same way the sides are.
 • Dyed Decorated Pots now work with texture packs when they modify the palette texture!
+• Added a config option to enable or disable Chalk Sticks!
 • Updated zh_cn translations.
 • Code Cleanup
 
