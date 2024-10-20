@@ -1,10 +1,10 @@
 {
   "type": "forge:add_features",
   "biomes": [
-    "minecraft:stony_peaks"
+    "minecraft:stony_shore"
   ],
   "features": [
-    "arts_and_crafts:chalk_patch"
+    "arts_and_crafts:shore_chalk_patch"
   ],
   "step": "top_layer_modification"
 }

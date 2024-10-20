@@ -1,18 +1,26 @@
 {
-  "type": "minecraft:ore",
+  "type": "minecraft:disk",
   "config": {
-    "size": 18,
-    "discard_chance_on_air_exposure": 0.02,
-    "targets": [
-      {
-        "target": {
-          "predicate_type": "minecraft:block_match",
-          "block": "minecraft:sandstone"
-      },
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
         "state": {
           "Name": "arts_and_crafts:gypsum"
         }
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "minecraft:sandstone"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 2,
+        "max_inclusive": 3
       }
-    ]
+    },
+    "half_height": 3
   }
 }

@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 28
+      "count": 8
     },
     {
       "type": "minecraft:in_square"
@@ -23,7 +23,7 @@
     {
       "type": "minecraft:environment_scan",
       "direction_of_search": "down",
-      "max_steps": 12,
+      "max_steps": 18,
       "target_condition": {
         "type": "minecraft:has_sturdy_face",
         "direction": "up"
