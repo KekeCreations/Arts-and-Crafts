@@ -13,10 +13,13 @@ Changelog
 • Chalk now generates in disks instead of blobs.
 • Chalk now only generates in Stony Peaks & Stony Shores.
 • Chalk generates more often in Stony peaks.
-
 • Updated zh_cn translations.
 • Code Cleanup
 
+Wiki Links
+• How to add paintbrush compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-paintbrush-compat
+• About Dyed Decorated Pots Compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-dyed-decorated-pot-compat
+• About configs: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/about-the-config
 
 Mentions
 • A special thanks to @Takiaaa for updating zh_cn.json translations!
