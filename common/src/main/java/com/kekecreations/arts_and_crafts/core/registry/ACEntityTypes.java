@@ -24,6 +24,12 @@ public class ACEntityTypes {
                     //.updateInterval(20)
                     .build(dataFixer("floating_block")));
 
+    public static final Supplier<EntityType<ACSheep>> SHEEP = registerEntityType("sheep", () ->
+            EntityType.Builder.of(ACSheep::new, MobCategory.CREATURE)
+                    .sized(0.9F, 1.3F)
+                    .clientTrackingRange(10)
+                    .build(dataFixer("sheep")));
+
 
 
     public static final Supplier<EntityType<ACBoat>> BOAT = registerEntityType("boat", () ->
@@ -80,10 +86,6 @@ public class ACEntityTypes {
     }
 
     public static void register() {
-        createMobAttributes();
-    }
-
-    public static void createMobAttributes() {
     }
 
     private static String dataFixer(String mobName) {

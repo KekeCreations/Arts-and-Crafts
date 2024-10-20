@@ -1,6 +1,9 @@
 package com.kekecreations.arts_and_crafts.fabric.core.registry;
 
+import com.kekecreations.arts_and_crafts.common.entity.ACSheep;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -30,5 +33,8 @@ public class ACFabricRegistries {
         //COMPOSTING
         CompostingChanceRegistry.INSTANCE.add(ACBlocks.CORK_SAPLING.get(), 0.3F);
         CompostingChanceRegistry.INSTANCE.add(ACBlocks.CORK_LEAVES.get(), 0.3F);
+
+        //ATTRIBUTE
+        FabricDefaultAttributeRegistry.register(ACEntityTypes.SHEEP.get(), ACSheep.createAttributes());
     }
 }

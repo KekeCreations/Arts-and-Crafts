@@ -1,7 +1,9 @@
 package com.kekecreations.arts_and_crafts.fabric.client;
 
+import com.kekecreations.arts_and_crafts.client.model.ACSheepModel;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.bewlr.ArtsAndCraftsBEWLR;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.ACSheepRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
@@ -118,10 +120,12 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
             BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
         }
         BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+        EntityRendererRegistry.register(ACEntityTypes.SHEEP.get(), ACSheepRenderer::new);
     }
     public static void registerModelLayers() {
         EntityModelLayerRegistry.registerModelLayer(ACBoatRenderer.BOAT, BoatModel::createBodyModel);
         EntityModelLayerRegistry.registerModelLayer(ACBoatRenderer.CHEST_BOAT, ChestBoatModel::createBodyModel);
+        //EntityModelLayerRegistry.registerModelLayer(ACSheepRenderer);
     }
 
 }
