@@ -11,6 +11,7 @@
     "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
     "EnchantmentMixin",
+    "SpriteSourcesMixin",
     "WoodTypeMixin"
   ],
   "client": [

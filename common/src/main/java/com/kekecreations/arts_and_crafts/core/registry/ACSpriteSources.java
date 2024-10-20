@@ -2,10 +2,10 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.renderer.atlas.ACPalettedPermutations;
+import com.kekecreations.arts_and_crafts.core.mixin.SpriteSourcesMixin;
 import com.mojang.serialization.Codec;
 import net.minecraft.client.renderer.texture.atlas.SpriteSource;
 import net.minecraft.client.renderer.texture.atlas.SpriteSourceType;
-import net.minecraft.client.renderer.texture.atlas.SpriteSources;
 
 public class ACSpriteSources {
 
@@ -13,7 +13,7 @@ public class ACSpriteSources {
 
 
     public static SpriteSourceType registerSpriteSources(String id, Codec<? extends SpriteSource> codec) {
-        return SpriteSources.register(ArtsAndCrafts.id(id).toString(), codec);
+        return SpriteSourcesMixin.invokeRegister(ArtsAndCrafts.id(id).toString(), codec);
     }
 
     public static void register() {
