@@ -1,5 +1,19 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.3.1
+Changelog
+• Rewrote Dyed Flower Pots  (More optimised and has support for dye mods now!)
+
+Wiki Links
+• How to add paintbrush compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-paintbrush-compat
+• About Dyed Decorated Pots Compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-dyed-decorated-pot-compat
+• About configs: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/about-the-config
+
+
+
+
+
+
 V1.3.0
 Changelog
 • Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
