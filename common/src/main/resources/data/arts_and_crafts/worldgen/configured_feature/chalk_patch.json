@@ -1,18 +1,24 @@
 {
-  "type": "minecraft:ore",
+  "type": "minecraft:disk",
   "config": {
-    "size": 22,
-    "discard_chance_on_air_exposure": 0.02,
-    "targets": [
-      {
-        "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:base_stone_overworld"
-        },
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
         "state": {
           "Name": "arts_and_crafts:white_chalk"
         }
-      }
-    ]
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "#minecraft:base_stone_overworld"
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 6,
+      "max_inclusive": 8
+    },
+    "half_height": 2
   }
 }

@@ -13,6 +13,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.event.registry.DynamicRegistries;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ArtsAndCraftsFabric implements ModInitializer {
@@ -29,11 +30,9 @@ public class ArtsAndCraftsFabric implements ModInitializer {
 
     public void createBiomeModifications() {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), GenerationStep.Decoration.VEGETAL_DECORATION, ACFeatures.PlacedFeatures.CORK_TREE);
-
         BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, ACFeatures.PlacedFeatures.SOAPSTONE_PATCH);
-
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
-
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_PEAKS), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_SHORE), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.SHORE_CHALK_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.GYPSUM_PATCH);
     }
 }

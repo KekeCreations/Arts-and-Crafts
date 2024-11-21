@@ -14,6 +14,7 @@ public class ACFeatures {
         public static final ResourceKey<ConfiguredFeature<?, ?>> SOAPSTONE_PATCH = createKey("soapstone_patch");
 
         public static final ResourceKey<ConfiguredFeature<?, ?>> CHALK_PATCH = createKey("chalk_patch");
+        public static final ResourceKey<ConfiguredFeature<?, ?>> SHORE_CHALK_PATCH = createKey("shore_chalk_patch");
 
         public static final ResourceKey<ConfiguredFeature<?, ?>> GYPSUM_PATCH = createKey("gypsum_patch");
 
@@ -31,6 +32,7 @@ public class ACFeatures {
         public static final ResourceKey<PlacedFeature> SOAPSTONE_PATCH = createKey("soapstone_patch");
 
         public static final ResourceKey<PlacedFeature> CHALK_PATCH = createKey("chalk_patch");
+        public static final ResourceKey<PlacedFeature> SHORE_CHALK_PATCH = createKey("shore_chalk_patch");
         public static final ResourceKey<PlacedFeature> GYPSUM_PATCH = createKey("gypsum_patch");
 
 
