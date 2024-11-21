@@ -15,6 +15,7 @@ public class ArtsAndCrafts {
     public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
     
     public static void init() {
+        ACSpriteSources.register();
         ACDataComponents.loadComponents();
         ACParticles.register();
         ACSounds.register();

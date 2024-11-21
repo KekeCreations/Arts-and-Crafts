@@ -12,6 +12,7 @@
     "WoodTypeMixin"
   ],
   "client": [
+    "SpriteSourcesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

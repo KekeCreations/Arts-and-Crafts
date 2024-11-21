@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
-import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -17,15 +16,17 @@ import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.DecoratedPotPattern;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.minecraft.world.level.block.entity.PotDecorations;
+
+import java.util.Objects;
 
 public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPotBlockEntity> {
     private final ModelPart neck;
@@ -36,8 +37,10 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
     private final ModelPart top;
     private final ModelPart bottom;
     private final TextureAtlas decoratedPotAtlas;
+    private Material baseMaterial;
 
     public DyedDecoratedPotBER(BlockEntityRendererProvider.Context context) {
+        this.baseMaterial = Objects.requireNonNull(Sheets.getDecoratedPotMaterial(DecoratedPotPatterns.BLANK));
         ModelPart modelPart = context.bakeLayer(ModelLayers.DECORATED_POT_BASE);
         this.neck = modelPart.getChild("neck");
         this.top = modelPart.getChild("top");
@@ -52,7 +55,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
 
 
     public void render(DyedDecoratedPotBlockEntity decoratedPotBlockEntity, float f, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j) {
-        DyeColor colour = decoratedPotBlockEntity.getDyeColor();
+        this.baseMaterial = new Material(Sheets.DECORATED_POT_SHEET, renderBaseMaterial(decoratedPotBlockEntity));
         poseStack.pushPose();
         Direction direction = decoratedPotBlockEntity.getDirection();
         poseStack.translate(0.5, 0.0, 0.5);
@@ -78,51 +81,32 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
                 }
             }
         }
-        VertexConsumer vertexConsumer = createDecoratedPotMaterial(colour).buffer(multiBufferSource, RenderType::entitySolid);
+        VertexConsumer vertexConsumer = this.baseMaterial.buffer(multiBufferSource, RenderType::entitySolid);
         this.neck.render(poseStack, vertexConsumer, i, j);
         this.top.render(poseStack, vertexConsumer, i, j);
         this.bottom.render(poseStack, vertexConsumer, i, j);
         PotDecorations decorations = decoratedPotBlockEntity.getDecorations();
-        if (decorations.front().isPresent()) {
-            this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front().get(), decoratedPotBlockEntity);
-        } else {
-            this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
-        }
-        if (decorations.back().isPresent()) {
-            this.renderSide(this.backSide, poseStack, multiBufferSource, i, j, decorations.back().get(), decoratedPotBlockEntity);
-        } else {
-            this.renderSide(this.backSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
-        }
-        if (decorations.left().isPresent()) {
-            this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j, decorations.left().get(), decoratedPotBlockEntity);
-        } else {
-            this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
-        }
-        if (decorations.right().isPresent()) {
-            this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j, decorations.right().get(), decoratedPotBlockEntity);
-        } else {
-            this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j, Items.BRICK, decoratedPotBlockEntity);
-        }
+        this.renderSide(this.frontSide, poseStack, multiBufferSource, i, j, decorations.front().orElse(Items.BRICK), decoratedPotBlockEntity);
+        this.renderSide(this.backSide, poseStack, multiBufferSource, i, j,  decorations.back().orElse(Items.BRICK),  decoratedPotBlockEntity);
+        this.renderSide(this.leftSide, poseStack, multiBufferSource, i, j,  decorations.left().orElse(Items.BRICK), decoratedPotBlockEntity);
+        this.renderSide(this.rightSide, poseStack, multiBufferSource, i, j,  decorations.right().orElse(Items.BRICK), decoratedPotBlockEntity);
         poseStack.popPose();
     }
 
-    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource bufferSource, int i, int j, Item item, DyedDecoratedPotBlockEntity pot) {
-        TextureAtlasSprite sprite = this.decoratedPotAtlas.getSprite(this.getTexture(pot, item));
-        VertexConsumer vertex = sprite.wrap(bufferSource.getBuffer(RenderType.entitySolid(Sheets.DECORATED_POT_SHEET)));
+    private void renderSide(ModelPart modelPart, PoseStack poseStack, MultiBufferSource multiBufferSource, int i, int j, Item item,  DyedDecoratedPotBlockEntity pot) {
+        TextureAtlasSprite sprite =  this.decoratedPotAtlas.getSprite(renderSideMaterial(pot, item));
+        VertexConsumer vertex = sprite.wrap(multiBufferSource.getBuffer(RenderType.entitySolid(Sheets.DECORATED_POT_SHEET)));
         modelPart.render(poseStack, vertex, i, j);
     }
-
-    private ResourceLocation getTexture(DyedDecoratedPotBlockEntity potEntity, Item item) {
+    private ResourceLocation renderSideMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
         ResourceKey<DecoratedPotPattern> patternKey = DecoratedPotPatterns.getPatternFromItem(item);
-        if (patternKey != null && item != Items.BRICK) {
-            ResourceLocation location = patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_pottery_pattern_" + potEntity.getDyeColor().getName());
-            return location;
+        if (patternKey != null && DecoratedPotPatterns.getPatternFromItem(item) != DecoratedPotPatterns.BLANK) {
+            return patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_pottery_pattern_" + potEntity.getDyeColor().getName());
         } else {
             return ResourceLocation.withDefaultNamespace("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
         }
     }
-
-    private static Material createDecoratedPotMaterial(DyeColor color) {
-        return new Material(Sheets.DECORATED_POT_SHEET, ArtsAndCrafts.id("entity/decorated_pot/" + color.getName() + "_decorated_pot_base"));
+    private ResourceLocation renderBaseMaterial(DyedDecoratedPotBlockEntity potEntity) {
+        return ResourceLocation.withDefaultNamespace("entity/decorated_pot/decorated_pot_base_" + potEntity.getDyeColor().getName());
     }
 }
