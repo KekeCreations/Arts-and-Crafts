@@ -1,5 +1,10 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.3.1
+• Fixed dedicated servers crashing
+
+
+
 V1.3.0
 • Optimised Dyed Decorated Pot Code
 • Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
