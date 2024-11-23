@@ -17,6 +17,16 @@ V1.3.0
 • Code Cleanup
 • Rewrote Dyed Flower Pots  (More optimised and has support for dye mods now!)
 
+Wiki Links
+• How to add paintbrush compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-paintbrush-compat
+• About Dyed Decorated Pots Compat: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/how-to-add-dyed-decorated-pot-compat
+• About configs: https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts/about-the-config
+
+Mentions
+• A special thanks to @Takiaaa for updating zh_cn.json translations!
+• A special thanks to IwasConfused for turning the updated zh_cn.json into a GitHub pull request!
+• A special thanks to Iamnotagenius for allowing me to use their config code for Fabric!
+
 
 
 
