@@ -1,7 +1,21 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-V1.3.1
+V1.3.0
 • Optimised Dyed Decorated Pot Code
+• Dyed Decorated Pots now have native sherd support! (Supports sherds from all mods!)
+• Dyed Decorated Pots base material is now rendered the same way the sides are.
+• Dyed Decorated Pots now work with texture packs when they modify the palette texture!
+• Added a config option to enable or disable Chalk Sticks!
+• Added a config option to enable or disable Dyed Flower Pots!
+• Added a config option to enable or disable Dyed Decorated Pots!
+• Gypsum now generates in disks instead of blobs.
+• Gypsum now generates more often and in bigger patches.
+• Chalk now generates in disks instead of blobs.
+• Chalk now only generates in Stony Peaks & Stony Shores.
+• Chalk generates more often in Stony peaks.
+• Updated zh_cn translations.
+• Code Cleanup
+• Rewrote Dyed Flower Pots  (More optimised and has support for dye mods now!)
 
 
 
