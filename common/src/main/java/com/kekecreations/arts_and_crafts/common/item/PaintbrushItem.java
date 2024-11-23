@@ -40,55 +40,57 @@ public class PaintbrushItem extends Item {
         if (!level.isClientSide()) {
             Block finalBlock = PaintbrushUtils.getFinalBlock(level.registryAccess(), blockState, itemStack);
             if (finalBlock != null && finalBlock != blockState.getBlock()) {
-                if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
-                    ItemStack potItemStack = dyedDecoratedPotBlockEntity.getTheItem().copyAndClear();
+                if (finalBlock.isEnabled(finalBlock.requiredFeatures())) {
+                    if (blockEntity instanceof DyedDecoratedPotBlockEntity dyedDecoratedPotBlockEntity) {
+                        ItemStack potItemStack = dyedDecoratedPotBlockEntity.getTheItem().copyAndClear();
 
-                    PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
-                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                    PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
+                        PotDecorations oldDecorations = dyedDecoratedPotBlockEntity.getDecorations();
+                        PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                        PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
 
-                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
-                    if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
-                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
-                    } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
-                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
-                    }
-                    return InteractionResult.SUCCESS;
-                } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
-                    ItemStack potItemStack = decoratedPotBlockEntity.getTheItem().copyAndClear();
-
-                    PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
-                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                    PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
-
-                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
-                    if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
-                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
-                    } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
-                        newDecoratedPotBlockEntity.setTheItem(potItemStack);
-                    }
-                    return InteractionResult.SUCCESS;
-                } else if (blockEntity instanceof BaseContainerBlockEntity container) {
-                    List<ItemStack> itemList = new ArrayList<ItemStack>();
-                    for (int i = 0; i < container.getContainerSize(); ++i) {
-                        itemList.add(container.getItem(i));
-                        container.setItem(i, ItemStack.EMPTY);
-                    }
-                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                    BlockEntity newBlockEntity = level.getBlockEntity(pos);
-                    if (newBlockEntity instanceof BaseContainerBlockEntity newContainer) {
-                        for (int i = 0; i < newContainer.getContainerSize(); ++i) {
-                            newContainer.setItem(i, itemList.get(i));
+                        BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                        if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                            newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                        } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                            newDecoratedPotBlockEntity.setTheItem(potItemStack);
                         }
+                        return InteractionResult.SUCCESS;
+                    } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
+                        ItemStack potItemStack = decoratedPotBlockEntity.getTheItem().copyAndClear();
+
+                        PotDecorations oldDecorations = decoratedPotBlockEntity.getDecorations();
+                        PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                        PaintbrushUtils.setPotDecorations(level, pos, oldDecorations);
+
+                        BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                        if (newBlockEntity instanceof DyedDecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                            newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                        } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
+                            newDecoratedPotBlockEntity.setTheItem(potItemStack);
+                        }
+                        return InteractionResult.SUCCESS;
+                    } else if (blockEntity instanceof BaseContainerBlockEntity container) {
+                        List<ItemStack> itemList = new ArrayList<ItemStack>();
+                        for (int i = 0; i < container.getContainerSize(); ++i) {
+                            itemList.add(container.getItem(i));
+                            container.setItem(i, ItemStack.EMPTY);
+                        }
+                        PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                        BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                        if (newBlockEntity instanceof BaseContainerBlockEntity newContainer) {
+                            for (int i = 0; i < newContainer.getContainerSize(); ++i) {
+                                newContainer.setItem(i, itemList.get(i));
+                            }
+                        }
+                        return InteractionResult.SUCCESS;
+                    } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
+                        PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                        return InteractionResult.SUCCESS;
                     }
-                    return InteractionResult.SUCCESS;
-                } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
-                    PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+
+                    PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     return InteractionResult.SUCCESS;
                 }
-
-                PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                return InteractionResult.SUCCESS;
             }
         }
         return InteractionResult.FAIL;
