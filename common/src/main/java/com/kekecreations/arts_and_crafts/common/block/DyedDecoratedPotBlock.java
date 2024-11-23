@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -24,6 +25,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -67,6 +69,11 @@ public class DyedDecoratedPotBlock extends BaseEntityBlock implements SimpleWate
         super(properties);
         this.registerDefaultState((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(HORIZONTAL_FACING, Direction.NORTH)).setValue(WATERLOGGED, false)).setValue(CRACKED, false));
         this.dyeColor = colour;
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.CONFIG.areDyedDecoratedPotsEnabled();
     }
 
     @Override

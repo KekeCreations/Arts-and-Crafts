@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
+import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACDataComponents;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.mojang.serialization.Codec;
@@ -14,6 +15,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -103,6 +105,11 @@ public class ChalkDustBlock extends DirectionalBlock {
             itemStack.set(ACDataComponents.CHALK_PATTERN.get(), getChalkDustStates(blockState));
         }
         return itemStack;
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.CONFIG.areChalkSticksEnabled();
     }
 
 

@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
+import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACDataComponents;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.ChatFormatting;
@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -50,6 +51,11 @@ public class ChalkStickItem extends Item {
         if (!itemStack.has(ACDataComponents.CHALK_PATTERN.get())) return;
 
         toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_" + itemStack.get(ACDataComponents.CHALK_PATTERN.get())).withStyle(ChatFormatting.GRAY));
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.CONFIG.areChalkSticksEnabled();
     }
 
     @Override

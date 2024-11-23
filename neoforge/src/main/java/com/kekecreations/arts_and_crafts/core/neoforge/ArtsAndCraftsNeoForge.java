@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.core.neoforge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
+import com.kekecreations.arts_and_crafts.core.neoforge.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.core.neoforge.datagen.client.ArtsAndCraftsLangProvider;
@@ -20,7 +21,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,8 +33,9 @@ import java.util.concurrent.CompletableFuture;
 
 @Mod(ArtsAndCrafts.MOD_ID)
 public class ArtsAndCraftsNeoForge {
-    public ArtsAndCraftsNeoForge(IEventBus modEventBus) {
+    public ArtsAndCraftsNeoForge(IEventBus modEventBus,  ModContainer modContainer) {
         ArtsAndCrafts.init();
+        modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
 
         ForgeRegistryHelper.SOUNDS.register(modEventBus);
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);

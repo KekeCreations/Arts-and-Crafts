@@ -4,7 +4,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.*;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
-import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
+import com.kekecreations.arts_and_crafts.core.platform.services.PlatformHelper;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.DyeColor;
@@ -70,7 +70,7 @@ public class ACEntityTypes {
     private static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntityType(String name, Supplier<BlockEntityType<T>> type) {
         return Services.REGISTRY.registerBlockEntityType(name, type);
     }
-    private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(IPlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
+    private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(PlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
         return Services.PLATFORM.createBlockEntity(blockEntitySupplier, blocks);
     }
 
