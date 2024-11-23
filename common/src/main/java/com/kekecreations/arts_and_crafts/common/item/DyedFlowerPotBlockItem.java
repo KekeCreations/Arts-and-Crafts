@@ -5,13 +5,13 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 
-public class DyedDecoratedPotBlockItem extends BlockItem {
-    public DyedDecoratedPotBlockItem(Block block, Properties properties) {
-        super(block, properties);
+public class DyedFlowerPotBlockItem extends BlockItem {
+    public DyedFlowerPotBlockItem(Block $$0, Properties $$1) {
+        super($$0, $$1);
     }
 
     @Override
     public boolean isEnabled(FeatureFlagSet $$0) {
-        return Services.CONFIG.areDyedDecoratedPotsEnabled();
+        return Services.CONFIG.areDyedFlowerPotsEnabled();
     }
 }

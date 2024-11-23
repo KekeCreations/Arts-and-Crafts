@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class ACItems {
+    public static final HashMap<Integer, Supplier<DyedFlowerPotBlockItem>> FLOWER_POTS = new HashMap<>();
 
     public static final HashMap<Integer, Supplier<ChalkStickItem>> CHALK_STICKS = new HashMap<>();
 
@@ -47,6 +48,7 @@ public class ACItems {
     static {
         CHALK_STICKS.put(-1, BLEACHED_CHALK_STICK);
         for (DyeColor colours : DyeColor.values()) {
+            FLOWER_POTS.put(colours.getId(), registerItem(colours + "_flower_pot", () -> new DyedFlowerPotBlockItem(ACBlocks.getDyedFlowerPot(colours.getId()), new Item.Properties())));
             CHALK_STICKS.put(colours.getId(), registerItem(colours + "_chalk_stick", () -> new ChalkStickItem(colours.getId(), new Item.Properties().stacksTo(1).durability(32))));
             DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(ACBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties())));
             PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintbrushItem(new Item.Properties().stacksTo(1).durability(48))));

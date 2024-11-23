@@ -253,7 +253,7 @@ public class ACBlocks {
             }))));
 
 
-            DYED_FLOWER_POTS.put(colours, registerBlockWithItem(colours + "_flower_pot", () -> ACBlocks.flowerPot(Blocks.AIR, colours)));
+            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", () -> ACBlocks.flowerPot(Blocks.AIR, colours)));
 
             //DYED SAPLING POTS
             DYED_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oak_sapling", () -> ACBlocks.flowerPot(Blocks.OAK_SAPLING, colours)));
