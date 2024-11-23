@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.google.common.collect.Maps;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
@@ -31,26 +30,17 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class ACFlowerPotBlock extends Block {
 
-    private static final Map<Block, Block> WHITE_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> ORANGE_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> MAGENTA_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> LIGHT_BLUE_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> YELLOW_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> LIME_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> PINK_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> GRAY_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> LIGHT_GRAY_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> CYAN_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> PURPLE_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> BLUE_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> BROWN_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> GREEN_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> RED_POTTED_BY_CONTENT = Maps.newHashMap();
-    private static final Map<Block, Block> BLACK_POTTED_BY_CONTENT = Maps.newHashMap();
+    public static final HashMap<DyeColor, HashMap<Block, Block>> POTTED_MAPS = new HashMap();
+
+    static {
+        for (DyeColor colour : DyeColor.values()) {
+            POTTED_MAPS.put(colour, new HashMap<Block, Block>());
+        }
+    }
     private final Block content;
     private final DyeColor colour;
 
@@ -62,24 +52,7 @@ public class ACFlowerPotBlock extends Block {
         super(properties);
         this.content = block;
         this.colour = dyeColor;
-        switch (this.colour) {
-            case WHITE -> WHITE_POTTED_BY_CONTENT.put(block, this);
-            case ORANGE -> ORANGE_POTTED_BY_CONTENT.put(block, this);
-            case MAGENTA -> MAGENTA_POTTED_BY_CONTENT.put(block, this);
-            case LIGHT_BLUE -> LIGHT_BLUE_POTTED_BY_CONTENT.put(block, this);
-            case YELLOW -> YELLOW_POTTED_BY_CONTENT.put(block, this);
-            case LIME -> LIME_POTTED_BY_CONTENT.put(block, this);
-            case PINK -> PINK_POTTED_BY_CONTENT.put(block, this);
-            case GRAY -> GRAY_POTTED_BY_CONTENT.put(block, this);
-            case LIGHT_GRAY -> LIGHT_GRAY_POTTED_BY_CONTENT.put(block, this);
-            case CYAN -> CYAN_POTTED_BY_CONTENT.put(block, this);
-            case PURPLE -> PURPLE_POTTED_BY_CONTENT.put(block, this);
-            case BLUE -> BLUE_POTTED_BY_CONTENT.put(block, this);
-            case BROWN -> BROWN_POTTED_BY_CONTENT.put(block, this);
-            case GREEN -> GREEN_POTTED_BY_CONTENT.put(block, this);
-            case RED -> RED_POTTED_BY_CONTENT.put(block, this);
-            case BLACK -> BLACK_POTTED_BY_CONTENT.put(block, this);
-        }
+        POTTED_MAPS.get(colour).put(block, this);
     }
 
     @Override
@@ -95,25 +68,8 @@ public class ACFlowerPotBlock extends Block {
     protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         Item item = itemStack.getItem();
         Block block = Blocks.AIR;
-        if (item instanceof BlockItem blockItem) {
-            switch (this.colour) {
-                case WHITE -> block = WHITE_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case ORANGE -> block = ORANGE_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case MAGENTA -> block = MAGENTA_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case LIGHT_BLUE -> block = LIGHT_BLUE_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case YELLOW -> block = YELLOW_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case LIME -> block = LIME_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case PINK -> block = PINK_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case GRAY -> block = GRAY_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case LIGHT_GRAY -> block = LIGHT_GRAY_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case CYAN -> block = CYAN_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case PURPLE -> block = PURPLE_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case BLUE -> block = BLUE_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case BROWN -> block = BROWN_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case GREEN -> block = GREEN_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case RED -> block = RED_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-                case BLACK -> block = BLACK_POTTED_BY_CONTENT.getOrDefault(blockItem.getBlock(), Blocks.AIR);
-            }
+        if (item instanceof BlockItem) {
+            block = (item instanceof BlockItem ? (Block)POTTED_MAPS.get(this.colour).getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR);
         }
         if (!level.isClientSide()) {
             if (itemStack.getItem() instanceof PaintbrushItem) {
