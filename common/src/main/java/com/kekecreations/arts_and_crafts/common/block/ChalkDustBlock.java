@@ -102,11 +102,14 @@ public class ChalkDustBlock extends DirectionalBlock {
         return this.getChalkDustStates(blockState) >= this.getMaxState();
     }
 
-    @Override
-    public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+
+    public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos blockPos, BlockState blockState) {
         ItemStack itemStack = new ItemStack(ACItems.getChalkStick(this.dyeColor));
-        if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
-            chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
+        //Fix Diet mod crash.
+        if (!Services.PLATFORM.isModLoaded("diet")) {
+            if (itemStack.getItem() instanceof ChalkStickItem chalkStickItem && Screen.hasControlDown()) {
+                chalkStickItem.setChalkPattern(itemStack, getChalkDustStates(blockState));
+            }
         }
         return itemStack;
     }
