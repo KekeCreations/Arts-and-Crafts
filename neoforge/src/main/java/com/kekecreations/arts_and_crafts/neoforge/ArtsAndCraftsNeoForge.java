@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.neoforge;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
+import com.kekecreations.arts_and_crafts.neoforge.common.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
@@ -27,6 +28,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -54,6 +56,7 @@ public class ArtsAndCraftsNeoForge {
         ForgeRegistryHelper.DATA_COMPONENT_TYPES.register(modEventBus);
         ArtsAndCraftsLootModifiers.register(modEventBus);
 
+        NeoForge.EVENT_BUS.register(new OnWorldLoadEvent());
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);
         modEventBus.addListener(this::datapackRegistry);
