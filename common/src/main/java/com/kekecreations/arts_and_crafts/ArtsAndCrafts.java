@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
 import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
-import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -25,7 +24,6 @@ public class ArtsAndCrafts {
         ACRegistries.register();
         ACDecoratedPotPatterns.registerPotPatterns();
         ACRecipeSerializer.register();
-        CreativeCategoryUtils.addVanillaDyesToColourOrder();
     }
 
     public static ResourceLocation id(String name) {

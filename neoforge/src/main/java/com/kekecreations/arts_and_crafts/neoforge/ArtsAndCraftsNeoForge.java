@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.neoforge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
-import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
@@ -14,6 +13,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.server.*;
+import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryUtils;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -110,7 +110,7 @@ public class ArtsAndCraftsNeoForge {
             addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get());
             addAfter(event, ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), ACBlocks.TERRACOTTA_SHINGLE_WALL.get());
 
-            for(DyeColor colour : CreativeCategoryUtils.colourOrder) {
+            for(DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 addAfter(event, Items.PINK_BANNER, ACBlocks.getChalk(colour.getId()));
             }
 
@@ -138,7 +138,7 @@ public class ArtsAndCraftsNeoForge {
             addBefore(event, Blocks.WHITE_GLAZED_TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get());
             addBefore(event, Blocks.WHITE_BED, ACBlocks.BLEACHED_BED.get());
 
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 addAfter(event, Items.PINK_CANDLE, ACBlocks.getDyedFlowerPot(colours.getId()));
                 addAfter(event, ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), ACBlocks.getDyedDecoratedPot(colours.getId()));
 
@@ -182,7 +182,7 @@ public class ArtsAndCraftsNeoForge {
             addAfter(event, Items.LILY_PAD, ACItems.LOTUS_PISTILS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 addAfter(event, Items.TNT_MINECART, ACItems.getChalkStick(colours.getId()));
                 addAfter(event, Items.BRUSH, ACItems.getPaintBrush(colours.getId()));
             }
@@ -192,7 +192,7 @@ public class ArtsAndCraftsNeoForge {
             addAfter(event, ACItems.CORK_BOAT.get(), ACItems.CORK_CHEST_BOAT.get());
         }
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 addAfter(event, Items.FLOWER_POT, ACBlocks.getDyedFlowerPot(colours.getId()));
                 addAfter(event, Items.DECORATED_POT, ACBlocks.getDyedDecoratedPot(colours.getId()));
             }

@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.fabric.common.event;
 
-import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
+import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryUtils;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.DyeColor;
@@ -44,7 +44,7 @@ public class ACItemGroupEvents {
             event.addBefore(Blocks.WHITE_GLAZED_TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get());
             event.addBefore(Blocks.WHITE_BED, ACItems.BLEACHED_BED.get());
 
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 event.addAfter(Items.PINK_BANNER, ACBlocks.getChalk(colours.getId()));
                 event.addAfter(Items.PINK_CANDLE, ACBlocks.getDyedFlowerPot(colours.getId()));
                 event.addAfter(ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), ACBlocks.getDyedDecoratedPot(colours.getId()));
@@ -88,7 +88,7 @@ public class ACItemGroupEvents {
             event.addAfter(Items.LILY_PAD, ACItems.LOTUS_PISTILS.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(event -> {
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 event.addAfter(Items.TNT_MINECART, ACItems.getChalkStick(colours.getId()));
                 event.addAfter(Items.BRUSH, ACItems.getPaintBrush(colours.getId()));
             }
@@ -98,7 +98,7 @@ public class ACItemGroupEvents {
             event.addAfter(ACItems.CORK_BOAT.get(), ACItems.CORK_CHEST_BOAT.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(event -> {
-            for (DyeColor colours : CreativeCategoryUtils.colourOrder) {
+            for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 event.addAfter(Items.FLOWER_POT, ACBlocks.getDyedFlowerPot(colours.getId()));
                 event.addAfter(Items.DECORATED_POT, ACBlocks.getDyedDecoratedPot(colours.getId()));
             }
