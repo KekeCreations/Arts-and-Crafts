@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.util.ACProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -38,7 +38,7 @@ public class HangingFlowerPot extends Block {
 
     @Override
     protected VoxelShape getShape(BlockState blockState, BlockGetter $$1, BlockPos $$2, CollisionContext $$3) {
-        if (blockState.getValue(ACBlockStateProperties.PLANK)) {
+        if (blockState.getValue(ACProperties.PLANK)) {
             if (blockState.getValue(FACING) == Direction.EAST || blockState.getValue(FACING) == Direction.WEST) {
                 return AABB_EAST_AND_WEST;
             }
@@ -50,7 +50,7 @@ public class HangingFlowerPot extends Block {
     }
 
     static {
-        PLANK = ACBlockStateProperties.PLANK;
+        PLANK = ACProperties.PLANK;
         FACING = BlockStateProperties.HORIZONTAL_FACING;
         AABB_EAST_AND_WEST = Shapes.or(PLANK_SHAPE_EAST_AND_WEST, new VoxelShape[]{FLOWER_POT_SHAPE});
         AABB_NORTH_AND_SOUTH = Shapes.or(PLANK_SHAPE_NORTH_AND_SOUTH, new VoxelShape[]{FLOWER_POT_SHAPE});

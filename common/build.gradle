@@ -13,7 +13,7 @@ minecraft {
 
 dependencies {
     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
-    compileOnly "curse.maven:jinxedlib-1203401:6207760"
+    compileOnly "curse.maven:jinxedlib-1203401:6207765"
 }
 
 configurations {

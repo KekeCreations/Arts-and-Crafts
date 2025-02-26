@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.util.ACProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACDataComponents;
@@ -127,7 +127,7 @@ public class ChalkStickItem extends Item {
                 RandomSource randomSource = level.getRandom();
 
                 int chalkPattern = itemStack.getOrDefault(ACDataComponents.CHALK_PATTERN.get(), 0);
-                level.setBlockAndUpdate(pos, state.setValue(ACBlockStateProperties.CHALK_PATTERN, chalkPattern));
+                level.setBlockAndUpdate(pos, state.setValue(ACProperties.CHALK_PATTERN, chalkPattern));
                 level.playSound(null, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));
 

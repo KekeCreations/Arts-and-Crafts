@@ -1,12 +1,12 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
-import com.kekecreations.arts_and_crafts.common.misc.ACBlockSetType;
-import com.kekecreations.arts_and_crafts.common.misc.ACWoodType;
+import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
 import com.kekecreations.arts_and_crafts.common.util.ACTreeGrower;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -95,6 +96,22 @@ public class ACBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
 
 
+    public static final BlockSetType CORK_SET = new BlockSetType(
+            "cork",
+            true,
+            true,
+            true,
+            BlockSetType.PressurePlateSensitivity.EVERYTHING,
+            ACSoundTypes.CORK,
+            ACSounds.CORK_WOOD_DOOR_CLOSE.get(),
+            ACSounds.CORK_WOOD_DOOR_OPEN.get(),
+            ACSounds.CORK_WOOD_TRAPDOOR_CLOSE.get(),
+            ACSounds.CORK_WOOD_TRAPDOOR_OPEN.get(),
+            SoundEvents.CHERRY_WOOD_PRESSURE_PLATE_CLICK_OFF,
+            SoundEvents.CHERRY_WOOD_PRESSURE_PLATE_CLICK_ON,
+            ACSounds.CORK_WOOD_BUTTON_CLICK_OFF.get(),
+            ACSounds.CORK_WOOD_BUTTON_CLICK_ON.get()
+    );
 
     //public static final Supplier<Block> CRIMSON_HANGING_FLOWER_POT = registerBlockWithItem("crimson_hanging_flower_pot", () -> new HangingFlowerPot(BlockBehaviour.Properties.of().sound(SoundType.CHAIN)));
 
@@ -168,14 +185,14 @@ public class ACBlocks {
     public static final Supplier<ACStairBlock> POLISHED_SOAPSTONE_STAIRS = registerBlockWithItem("polished_soapstone_stairs", () -> new ACStairBlock(POLISHED_SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(SOAPSTONE.get())));
 
     //CORK
-    public static final Supplier<ACTrapDoorBlock> CORK_TRAPDOOR = registerBlockWithItem("cork_trapdoor", () -> new ACTrapDoorBlock(ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(ACBlocks::never).ignitedByLava()));
-    public static final Supplier<ACDoorBlock> CORK_DOOR = registerBlockWithItem("cork_door", () -> new ACDoorBlock(ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<ACTrapDoorBlock> CORK_TRAPDOOR = registerBlockWithItem("cork_trapdoor", () -> new ACTrapDoorBlock(CORK_SET, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(ACBlocks::never).ignitedByLava()));
+    public static final Supplier<ACDoorBlock> CORK_DOOR = registerBlockWithItem("cork_door", () -> new ACDoorBlock(CORK_SET, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<StandingSignBlock> CORK_SIGN = registerBlock("cork_sign", () -> new StandingSignBlock(ACWoodType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava()));
     public static final Supplier<WallSignBlock> CORK_WALL_SIGN = registerBlock("cork_wall_sign", () -> new WallSignBlock(ACWoodType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).dropsLike(CORK_SIGN.get()).ignitedByLava()));
     public static final Supplier<CeilingHangingSignBlock> CORK_HANGING_SIGN = registerBlock("cork_hanging_sign", () -> new CeilingHangingSignBlock(ACWoodType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava()));
     public static final Supplier<WallHangingSignBlock> CORK_WALL_HANGING_SIGN = registerBlock("cork_wall_hanging_sign", () -> new WallHangingSignBlock(ACWoodType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava().dropsLike(CORK_HANGING_SIGN.get())));
-    public static final Supplier<ACPressurePlateBlock> CORK_PRESSURE_PLATE = registerBlockWithItem("cork_pressure_plate", () -> new ACPressurePlateBlock(ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(0.5f).ignitedByLava().pushReaction(PushReaction.DESTROY)));
-    public static final Supplier<ACButtonBlock> CORK_BUTTON = registerBlockWithItem("cork_button", () -> new ACButtonBlock(ACBlockSetType.CORK, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<ACPressurePlateBlock> CORK_PRESSURE_PLATE = registerBlockWithItem("cork_pressure_plate", () -> new ACPressurePlateBlock(CORK_SET, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(0.5f).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<ACButtonBlock> CORK_BUTTON = registerBlockWithItem("cork_button", () -> new ACButtonBlock(CORK_SET, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY)));
 
     //CORK ETC
 

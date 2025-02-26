@@ -1,9 +1,9 @@
-package com.kekecreations.arts_and_crafts.common.misc;
+package com.kekecreations.arts_and_crafts.common.util;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class ACBlockStateProperties {
+public class ACProperties {
 
     public static final IntegerProperty CHALK_PATTERN = IntegerProperty.create("chalk_pattern", 0, 32);
 

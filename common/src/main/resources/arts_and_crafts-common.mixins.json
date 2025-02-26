@@ -8,8 +8,7 @@
     "BlockEntityTypeMixin",
     "DecoratedPotBlockEntityAccessor",
     "DecoratedPotPatternsMixin",
-    "FlowerPotBlockMixin",
-    "WoodTypeMixin"
+    "FlowerPotBlockMixin"
   ],
   "client": [
     "SpriteSourcesMixin"

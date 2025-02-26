@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
-import com.kekecreations.arts_and_crafts.common.misc.ACBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.util.ACProperties;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACDataComponents;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -54,7 +54,7 @@ public class ChalkDustBlock extends DirectionalBlock {
 
     public static final int MAX_STATE = 32;
 
-    public static final IntegerProperty CHALK_DUST_STATES = ACBlockStateProperties.CHALK_PATTERN;
+    public static final IntegerProperty CHALK_DUST_STATES = ACProperties.CHALK_PATTERN;
 
     public int getDyeColor() {
         return this.dyeColor;
