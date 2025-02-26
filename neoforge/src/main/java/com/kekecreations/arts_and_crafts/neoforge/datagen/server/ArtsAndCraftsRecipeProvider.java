@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
-import com.kekecreations.arts_and_crafts.common.util.ACDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.HolderLookup;

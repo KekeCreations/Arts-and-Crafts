@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 
-import com.kekecreations.arts_and_crafts.common.util.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;

@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.common.util.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;

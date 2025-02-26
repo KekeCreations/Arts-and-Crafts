@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
-import com.kekecreations.arts_and_crafts.common.util.ACTreeGrower;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

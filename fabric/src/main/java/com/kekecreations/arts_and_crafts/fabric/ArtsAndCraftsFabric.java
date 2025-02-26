@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts.fabric;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
-import com.kekecreations.arts_and_crafts.common.util.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.fabric.common.event.ACItemGroupEvents;
 import com.kekecreations.arts_and_crafts.fabric.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.fabric.core.registry.ACFabricRegistries;

@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
-import com.kekecreations.arts_and_crafts.common.util.ACDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.HolderLookup;

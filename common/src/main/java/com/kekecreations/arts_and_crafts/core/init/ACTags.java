@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.common.util;
+package com.kekecreations.arts_and_crafts.core.init;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import net.minecraft.core.registries.Registries;

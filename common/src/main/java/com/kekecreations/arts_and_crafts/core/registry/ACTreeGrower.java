@@ -1,7 +1,6 @@
-package com.kekecreations.arts_and_crafts.common.util;
+package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.core.registry.ACFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;

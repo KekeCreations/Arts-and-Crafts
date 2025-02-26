@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts.common.util;
+package com.kekecreations.arts_and_crafts.core.init;
 
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.DyeColor;

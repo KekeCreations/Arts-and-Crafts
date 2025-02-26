@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
-import com.kekecreations.arts_and_crafts.common.util.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeItem;

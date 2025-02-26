@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 
-import com.kekecreations.arts_and_crafts.common.util.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
