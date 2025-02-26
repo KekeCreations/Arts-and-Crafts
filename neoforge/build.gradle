@@ -35,4 +35,5 @@ sourceSets.main.resources { srcDir project(":common").file('src/main/generated/'
 
 dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
+    implementation "curse.maven:jinxedlib-1203401:6207765"
 }

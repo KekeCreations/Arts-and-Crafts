@@ -29,6 +29,9 @@ repositories {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
     }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 // Declare capabilities on the outgoing configurations.

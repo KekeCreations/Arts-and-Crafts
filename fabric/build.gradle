@@ -1,6 +1,6 @@
 plugins {
     id 'multiloader-loader'
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.7-SNAPSHOT'
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
@@ -9,6 +9,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     include implementation("blue.endless:jankson:${jankson_version}")
+    modImplementation "curse.maven:jinxedlib-1203401:6207760"
 }
 
 
