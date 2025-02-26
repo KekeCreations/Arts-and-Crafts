@@ -5,7 +5,6 @@ import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
@@ -14,17 +13,16 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import static com.kekecreations.arts_and_crafts.core.init.ACBlockSetType.*;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class ACBlocks {
-
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLES = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_SLAB = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_WALL = new HashMap<>();
@@ -94,23 +92,6 @@ public class ACBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
 
-
-    public static final BlockSetType CORK_SET = new BlockSetType(
-            "cork",
-            true,
-            true,
-            true,
-            BlockSetType.PressurePlateSensitivity.EVERYTHING,
-            ACSoundTypes.CORK,
-            ACSounds.CORK_WOOD_DOOR_CLOSE.get(),
-            ACSounds.CORK_WOOD_DOOR_OPEN.get(),
-            ACSounds.CORK_WOOD_TRAPDOOR_CLOSE.get(),
-            ACSounds.CORK_WOOD_TRAPDOOR_OPEN.get(),
-            SoundEvents.CHERRY_WOOD_PRESSURE_PLATE_CLICK_OFF,
-            SoundEvents.CHERRY_WOOD_PRESSURE_PLATE_CLICK_ON,
-            ACSounds.CORK_WOOD_BUTTON_CLICK_OFF.get(),
-            ACSounds.CORK_WOOD_BUTTON_CLICK_ON.get()
-    );
 
     //public static final Supplier<Block> CRIMSON_HANGING_FLOWER_POT = registerBlockWithItem("crimson_hanging_flower_pot", () -> new HangingFlowerPot(BlockBehaviour.Properties.of().sound(SoundType.CHAIN)));
 
