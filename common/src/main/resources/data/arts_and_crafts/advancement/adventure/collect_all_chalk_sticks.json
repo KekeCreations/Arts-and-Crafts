@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:cyan_chalk_stick",
-      "nbt": "{Damage:0}"
+      "id": "arts_and_crafts:cyan_chalk_stick"
     },
     "title": {
       "translate": "advancements.adventure.board_planning.title"
@@ -115,5 +114,8 @@
       "chalk_stick"
     ]
   ],
+  "rewards": {
+    "experience": 15
+  },
   "sends_telemetry_event": true
 }

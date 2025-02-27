@@ -1,28 +1,27 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:white_chalk_stick",
-      "nbt": "{Damage:0}"
+      "id": "arts_and_crafts:pottery_sherd"
     },
     "title": {
-      "translate": "advancements.adventure.no_you_cant_eat_it.title"
+      "translate": "advancements.adventure.a_clean_slate.title"
     },
     "description": {
-      "translate": "advancements.adventure.no_you_cant_eat_it.description"
+      "translate": "advancements.adventure.a_clean_slate.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "minecraft:adventure/root",
+  "parent": "minecraft:adventure/salvage_sherd",
   "criteria": {
-    "chalk_stick": {
+    "sherd": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "arts_and_crafts:chalk_sticks"
+            "items": "arts_and_crafts:pottery_sherd"
           }
         ]
       }
@@ -30,8 +29,11 @@
   },
   "requirements": [
     [
-      "chalk_stick"
+      "sherd"
     ]
   ],
+  "rewards": {
+    "experience": 5
+  },
   "sends_telemetry_event": true
 }

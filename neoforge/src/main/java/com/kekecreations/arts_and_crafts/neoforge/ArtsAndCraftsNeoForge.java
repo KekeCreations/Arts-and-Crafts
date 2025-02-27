@@ -52,6 +52,7 @@ public class ArtsAndCraftsNeoForge {
         modEventBus.addListener(this::gatherData);
         modEventBus.addListener(this::datapackRegistry);
     }
+
     @SubscribeEvent
     public void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();

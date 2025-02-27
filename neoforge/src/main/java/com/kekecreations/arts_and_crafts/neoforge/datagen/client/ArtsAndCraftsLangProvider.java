@@ -161,6 +161,9 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add("advancements.adventure.aspiring_davinci.description", "Craft any coloured paintbrush");
         add("advancements.adventure.born_to_paint_forced_to_mop.title", "Born To Paint Forced To Mop");
         add("advancements.adventure.born_to_paint_forced_to_mop.description", "Craft a bleachdew paintbrush");
+        //sherd
+        add("advancements.adventure.a_clean_slate.title", "A Clean Slate!");
+        add("advancements.adventure.a_clean_slate.description", "Find a blank pottery sherd");
 
 
 

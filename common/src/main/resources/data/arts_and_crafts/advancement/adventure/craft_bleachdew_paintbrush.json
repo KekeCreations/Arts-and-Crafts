@@ -1,28 +1,29 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:purple_paintbrush",
-      "nbt": "{Damage:0}"
+      "id": "arts_and_crafts:bleachdew_paintbrush"
     },
     "title": {
-      "translate": "advancements.adventure.aspiring_davinci.title"
+      "translate": "advancements.adventure.born_to_paint_forced_to_mop.title"
     },
     "description": {
-      "translate": "advancements.adventure.aspiring_davinci.description"
+      "translate": "advancements.adventure.born_to_paint_forced_to_mop.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "minecraft:adventure/root",
+  "parent": "arts_and_crafts:adventure/craft_paintbrush",
   "criteria": {
     "paintbrush": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "arts_and_crafts:paintbrushes"
+            "items": [
+              "arts_and_crafts:bleachdew_paintbrush"
+            ]
           }
         ]
       }

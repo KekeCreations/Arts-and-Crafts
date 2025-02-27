@@ -1,5 +1,17 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.4.0
+Features
+• Completing the collect all the different coloured chalk sticks advancement will now grant the player 15 experience
+• Completing the obtain bleachdew advancement will now grant the player 8 experience
+• Added A Clean Slate advancement for finding a blank pottery sherd
+Bug Fixes
+• Fixed every single advancement
+• Fixed Datagen crashing because of config
+
+
+
+
 V1.3.1
 • Fixed dedicated servers crashing
 

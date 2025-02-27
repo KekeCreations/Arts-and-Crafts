@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:lotus_pistils"
+      "id": "arts_and_crafts:lotus_pistils"
     },
     "title": {
       "translate": "advancements.husbandry.let_the_past_bloom.title"
