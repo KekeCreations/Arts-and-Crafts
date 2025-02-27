@@ -6,7 +6,6 @@ import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
-import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric;
 import com.kekecreations.arts_and_crafts.fabric.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
@@ -31,7 +30,6 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ACSpriteSources.register();
         registerBlockLayers();
         registerParticleFactories();
         registerBlockColours();

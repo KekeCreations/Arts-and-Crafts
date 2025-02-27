@@ -2,7 +2,6 @@ package com.kekecreations.arts_and_crafts.neoforge;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
-import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.kekecreations.arts_and_crafts.neoforge.common.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
@@ -21,13 +20,11 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -41,10 +38,6 @@ public class ArtsAndCraftsNeoForge {
     public ArtsAndCraftsNeoForge(IEventBus modEventBus,  ModContainer modContainer) {
         ArtsAndCrafts.init();
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
-
-        if (FMLEnvironment.dist == Dist.CLIENT) {
-            ACSpriteSources.register();
-        }
 
         ForgeRegistryHelper.SOUNDS.register(modEventBus);
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
