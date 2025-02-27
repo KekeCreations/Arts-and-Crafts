@@ -8,7 +8,6 @@ import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBl
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsLangProvider;
 import com.kekecreations.arts_and_crafts.neoforge.core.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts.neoforge.core.registry.ArtsAndCraftsLootModifiers;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -47,7 +46,6 @@ public class ArtsAndCraftsNeoForge {
         ForgeRegistryHelper.BLOCK_ENTITY_TYPES.register(modEventBus);
         ForgeRegistryHelper.RECIPE_SERIALIZER.register(modEventBus);
         ForgeRegistryHelper.DATA_COMPONENT_TYPES.register(modEventBus);
-        ArtsAndCraftsLootModifiers.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(new OnWorldLoadEvent());
         modEventBus.addListener(this::creativeItemGroups);
