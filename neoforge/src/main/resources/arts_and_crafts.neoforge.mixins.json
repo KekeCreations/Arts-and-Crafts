@@ -7,13 +7,6 @@
   "client": [
   ],
   "mixins": [
-    "FlammableBlockSelfMixin",
-    "FlammableFenceBlockSelfMixin",
-    "FlammableFenceGateBlockSelfMixin",
-    "FlammableLeavesBlockSelfMixin",
-    "FlammableRotatedPillarBlockSelfMixin",
-    "FlammableSlabBlockSelfMixin",
-    "FlammableStairBlockSelfMixin"
   ],
   "injectors": {
     "defaultRequire": 1
