@@ -34,3 +34,10 @@ mandatory = true
 versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.arts_and_crafts]]
+modId = "jinxedlib"
+mandatory = true
+versionRange = "[1.0.1,)"
+ordering = "NONE"
+side = "BOTH"

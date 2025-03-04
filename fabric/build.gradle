@@ -9,7 +9,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     include implementation("blue.endless:jankson:${jankson_version}")
-    modImplementation "curse.maven:jinxedlib-1203401:6207760"
+    modImplementation "curse.maven:jinxedlib-1203401:6251908"
 }
 
 
