@@ -1,6 +1,8 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
-import com.kekecreations.arts_and_crafts.core.platform.Services;
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 
 import java.util.function.Supplier;
@@ -31,7 +33,8 @@ public class ACSounds {
 
 
     private static Supplier<SoundEvent> registerSound(String name) {
-        return Services.REGISTRY.registerSound(name);
+        var location = ArtsAndCrafts.id(name);
+        return JinxedRegistryHelper.register(BuiltInRegistries.SOUND_EVENT, ArtsAndCrafts.MOD_ID, name, () -> SoundEvent.createVariableRangeEvent(location));
     }
 
     public static void register() {

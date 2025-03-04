@@ -5,6 +5,8 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.*;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.platform.services.PlatformHelper;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.DyeColor;
@@ -20,7 +22,6 @@ public class ACEntityTypes {
             EntityType.Builder.of(FloatingBlockEntity::new, MobCategory.MISC)
                     .sized(0.98f, 0.98f)
                     .clientTrackingRange(10)
-                    //.updateInterval(20)
                     .build(dataFixer("floating_block")));
 
 
@@ -68,14 +69,14 @@ public class ACEntityTypes {
 
 
     private static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntityType(String name, Supplier<BlockEntityType<T>> type) {
-        return Services.REGISTRY.registerBlockEntityType(name, type);
+        return JinxedRegistryHelper.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ArtsAndCrafts.MOD_ID, name, type);
     }
     private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(PlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {
         return Services.PLATFORM.createBlockEntity(blockEntitySupplier, blocks);
     }
 
     private static <T extends EntityType<?>> Supplier<T> registerEntityType(String name, Supplier<T> entityTypeSupplier) {
-        return Services.REGISTRY.registerEntityType(name, entityTypeSupplier);
+        return JinxedRegistryHelper.register(BuiltInRegistries.ENTITY_TYPE, ArtsAndCrafts.MOD_ID, name, entityTypeSupplier);
     }
 
     public static void register() {

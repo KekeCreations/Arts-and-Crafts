@@ -1,9 +1,11 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.jinxedlib.common.block.*;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -497,15 +499,11 @@ public class ACBlocks {
 
 
     private static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> blockSupplier) {
-        return Services.REGISTRY.registerBlock(name, blockSupplier);
+        return JinxedRegistryHelper.registerBlock(ArtsAndCrafts.MOD_ID, name, false, blockSupplier);
     }
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
-        return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
-    }
-
-    private static FlammableRotatedPillarBlock log(MapColor mapColor, MapColor mapColor2) {
-        return new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(SoundType.WOOD).ignitedByLava());
+        return JinxedRegistryHelper.registerBlock(ArtsAndCrafts.MOD_ID, name, true, blockSupplier);
     }
 
     private static FlammableRotatedPillarBlock corkLog(MapColor mapColor, MapColor mapColor2) {

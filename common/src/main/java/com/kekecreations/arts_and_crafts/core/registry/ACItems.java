@@ -1,9 +1,10 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.ACBoat;
 import com.kekecreations.arts_and_crafts.common.item.*;
-import com.kekecreations.arts_and_crafts.core.platform.Services;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.world.item.*;
 
 import java.util.HashMap;
@@ -68,7 +69,7 @@ public class ACItems {
 
 
     private static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {
-        return Services.REGISTRY.registerItem(name, itemSupplier);
+        return JinxedRegistryHelper.registerItem(ArtsAndCrafts.MOD_ID, name, itemSupplier);
     }
 
 

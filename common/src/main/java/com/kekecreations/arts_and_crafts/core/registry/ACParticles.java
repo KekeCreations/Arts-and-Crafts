@@ -1,7 +1,10 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
-import com.kekecreations.arts_and_crafts.core.platform.Services;
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.particle.CommonSimpleParticleType;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.DyeColor;
 
 import java.util.HashMap;
@@ -30,7 +33,7 @@ public class ACParticles {
 
 
     private static Supplier<SimpleParticleType> registerParticle(String name) {
-        return Services.REGISTRY.registerParticle(name);
+        return JinxedRegistryHelper.register(BuiltInRegistries.PARTICLE_TYPE, ArtsAndCrafts.MOD_ID, name, () -> new CommonSimpleParticleType(false));
     }
 
 }

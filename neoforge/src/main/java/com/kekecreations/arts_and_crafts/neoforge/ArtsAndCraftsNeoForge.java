@@ -7,7 +7,6 @@ import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsLangProvider;
-import com.kekecreations.arts_and_crafts.neoforge.core.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -37,15 +36,6 @@ public class ArtsAndCraftsNeoForge {
     public ArtsAndCraftsNeoForge(IEventBus modEventBus,  ModContainer modContainer) {
         ArtsAndCrafts.init();
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
-
-        ForgeRegistryHelper.SOUNDS.register(modEventBus);
-        ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);
-        ForgeRegistryHelper.BLOCKS.register(modEventBus);
-        ForgeRegistryHelper.ITEMS.register(modEventBus);
-        ForgeRegistryHelper.ENTITY_TYPES.register(modEventBus);
-        ForgeRegistryHelper.BLOCK_ENTITY_TYPES.register(modEventBus);
-        ForgeRegistryHelper.RECIPE_SERIALIZER.register(modEventBus);
-        ForgeRegistryHelper.DATA_COMPONENT_TYPES.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(new OnWorldLoadEvent());
         modEventBus.addListener(this::creativeItemGroups);
