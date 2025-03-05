@@ -60,7 +60,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         chalkDust();
         decoratedPots();
         mudBricks();
-        add(ACBlocks.LOTUS_FLOWER.get(), createTwoItemTable(ACItems.LOTUS_PISTILS.get(), Items.LILY_PAD));
+        dropOther(ACBlocks.LOTUS_FLOWER.get(), ACItems.LOTUS_PISTILS.get());
     }
 
     private void hangingFlowerPots() {

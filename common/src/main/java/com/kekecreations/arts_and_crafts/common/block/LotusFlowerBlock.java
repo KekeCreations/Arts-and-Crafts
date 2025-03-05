@@ -17,10 +17,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.IceBlock;
 import net.minecraft.world.level.block.WaterlilyBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -28,6 +30,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -128,7 +132,6 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack itemStack, @NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
-        //ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide()) {
             if (!blockState.getValue(SHEARED)) {
                 if (itemStack.is(Items.SHEARS)) {
@@ -150,6 +153,13 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
             }
         }
         return ItemInteractionResult.FAIL;
+    }
+
+    @Override
+    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+        FluidState fluidState = blockGetter.getFluidState(blockPos);
+        FluidState fluidState2 = blockGetter.getFluidState(blockPos.above());
+        return (fluidState.getType() == Fluids.WATER || blockState.getBlock() instanceof IceBlock) && fluidState2.getType() == Fluids.EMPTY;
     }
 
     public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos $$1, BlockState $$2) {

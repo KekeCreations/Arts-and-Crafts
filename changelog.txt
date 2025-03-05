@@ -6,17 +6,23 @@ Features
 • Completing the collect all the different coloured chalk sticks advancement will now grant the player 15 experience
 • Completing the obtain bleachdew advancement will now grant the player 8 experience
 • Added A Clean Slate advancement for finding a blank pottery sherd
-• Rewrote a majority of the mod and started using JinxedLib
+• Rewrote a majority of the mod and started using JinxedLib Features
 • Optimised code & classes & mixins
 • Added a configurable creative mode tab full of Arts & Crafts features!
 • Added ja_jp translations (Thank you Abbage230!)
 • Lotus Pistils are now compostable with a chance of 0.8
 • Bleachdew is now compostable with a chance of 0.5
 • You can now bleach sheep if you want to???  (Thank Yirmiri for this one)
+• Removed #arts_and_crafts:lily_pads block tag
+• Lotus flower no longer drops Lily Pads when destroyed
+• Lotus flower no longer requires a Lily Pad to be placed, instead it can be placed directly onto Water
+• Lotus Pistils stack size has been increased from 16 to 64
+
 Bug Fixes
 • Fixed every single advancement
 • Fixed Datagen crashing because of config
 • Fixed Chalk Sticks not using dimensional max build height
+• Fixed Lotus Flower Compatibility Conflicts
 
 
 
