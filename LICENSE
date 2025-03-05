@@ -1,0 +1,64 @@
+Arts & Crafts License
+Version 1.0, March 2025
+
+
+Copyright (c) 2025 KekeCreations. All Rights Reserved.
+
+
+Permissions are hereby granted, below, to any person having a copy of this software and/or its associated files:
+
+
+Usage - You may use this software for private and public use. You may use this software as a library or integrate it with your code with the predicate that it must be downloaded directly from my sources. This software may not be bundled with your code in any way, shape or form.
+Copying - You may copy this software for private use or to contribute to this software.
+Modification - You may modify this software for private use or to contribute to this software.
+Publishing - You may not publish copies of this software.
+Distributing - You may not distribute this software.
+Sublicensing - You may not sublicense this software.
+Selling - You may not sell this software, any part of this software, or restrict its access behind any paywall to monetised link.
+
+Special Cases and Commercial Usage Clarification:
+In the cases of special or commercial use, including, but not limited to the production of other Minecraft mods, any Member of the project who is noted as the copyright holder of this software may provide written consent to grant you a non-exclusive, non-transferable, world-wide license usage of any aspect of this software. This consent can be revoked at any time by any Member of the project.
+
+Modpack Clarification:
+Permission is granted for Modpacks to include this software as long as the copy of this software in the pack is done via a manifest which would download this software from its respective CurseForge or Modrinth page. In the case of explicit written permission by a copyright holder, this software may permitted to be used as an override, allowing for the direct integration with the Modpack in question.
+
+Content Creator Clarification:
+Permission is granted to Content Creators to make use of and monetise content that is created using this software. Whilst not required of a Content Creator, a link back to the CurseForge or Modrinth page of this software is greatly appreciated and encouraged.
+
+Porting Clarification:
+Permission is not granted to any user of this software to make ports of this software. This means that if the software was created for Minecraft version 1.21, you may not port it to any other Minecraft version without express written permission from the copyright holders. This also means that if this software was created for the Fabric Mod Loader, it may not be ported to the Forge Mod Loader or Quilt Mod Loader without express written permission from the copyright holders. Permission is granted to any user to fork the repository of this software and create a port to a different mod loader or Minecraft version if, and only if, the port is to be submitted to the copyright holders as a Pull Request wherever this software's source code is hosted by the copyright holders. The submitter of the Pull Request containing the porting code agrees that all of the Members of the Project are free to negotiate the terms for the use of the submitted code. This includes, but will often not be the case that, submissions are used without compensation of any kind.
+
+Texture Asset Clarification:
+Permission is not granted to any user or contributor of this software to use the texture
+assets within the assets directories of this software in any way, 
+shape or form beyond contributing to this software.
+These assets are used, with permission from Ariana Arbeet, and she is the sole owner of these textures.
+
+For further clarification the assets directories can be found at the following link(s):
+https://github.com/KekeCreations/Arts-and-Crafts/tree/1.21x/common/src/main/resources/assets
+https://github.com/KekeCreations/Arts-and-Crafts/tree/1.20.1x/common/src/main/resources/assets
+
+Ariana Arbeet can be found at the following link(s):
+[Link to Ariana's BlueSky Page](https://bsky.app/profile/ariana-bit.bsky.social)
+[Link to Ariana's Curseforge Page](https://www.curseforge.com/members/abyarbeet/projects)
+[Link to Ariana's Modrinth Page](https://modrinth.com/user/arbeet)
+[Link to Ariana's Discord Server](https://discord.gg/WAm6N29ac7)
+
+KekeCreations can be found at the following link(s):
+[Link to KekeCreations' BlueSky Page](https://bsky.app/profile/kekecreations.bsky.social)
+[Link to KekeCreations' Curseforge Page](https://www.curseforge.com/members/kekecreations/projects)
+[Link to KekeCreations' Modrinth Page](https://modrinth.com/user/KekeCreations)
+[Link to KekeCreations' Discord Server](https://discord.gg/DuJj8Nx8nm)
+
+Definition of 'My Sources' in this license:
+My Sources in this license means a copy of this software or its associated files that come directly from the owner of this software, an example are the files uploaded by me on my CurseForge and Modrinth Pages.
+
+
+Definition of "Content Creator" in this license:
+Content Creator, in this license, means anyone who creates content on YouTube or any other social media platform regardless of affiliation or partner status.
+
+
+The above copyright notice and these permission notices shall be included in all copies or substantial portions of the Software.
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
