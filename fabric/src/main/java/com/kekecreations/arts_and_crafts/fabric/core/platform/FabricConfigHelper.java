@@ -8,27 +8,42 @@ public class FabricConfigHelper implements ConfigHelper {
 
     @Override
     public boolean areDyedFlowerPotsEnabled() {
-        return ArtsAndCraftsFabric.getConfig().areDyedFlowerPotsEnabled();
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().areDyedFlowerPotsEnabled();
+        }
+        return false;
     }
 
     @Override
     public boolean areChalkSticksEnabled() {
-        return ArtsAndCraftsFabric.getConfig().areChalkSticksEnabled();
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().areChalkSticksEnabled();
+        }
+        return false;
     }
 
     @Override
     public boolean areDyedDecoratedPotsEnabled() {
-        return ArtsAndCraftsFabric.getConfig().areDyedDecoratedPotsEnabled();
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().areDyedDecoratedPotsEnabled();
+        }
+        return false;
     }
 
     @Override
     public boolean isCreativeModeTabEnabled() {
-        return ArtsAndCraftsFabric.getConfig().enableCreativeModeTab();
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().enableCreativeModeTab();
+        }
+        return false;
     }
 
     @Override
     public boolean bleachableSheep() {
-        return ArtsAndCraftsFabric.getConfig().bleachableSheep();
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().bleachableSheep();
+        }
+        return false;
     }
 
 }
