@@ -124,4 +124,11 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean areDyedDecoratedPotsEnabled() {
         return enableDyedDecoratedPots;
     }
+
+    @Comment("When true adds a new creative mode tab full of Arts & Crafts features!")
+    private boolean enableCreativeModeTab = false;
+
+    public boolean enableCreativeModeTab() {
+        return enableCreativeModeTab;
+    }
 }

@@ -2,12 +2,13 @@ Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 V1.4.0
 Features
-• Using JinxedLib as a dependency
+• JinxedLib is now a dependency
 • Completing the collect all the different coloured chalk sticks advancement will now grant the player 15 experience
 • Completing the obtain bleachdew advancement will now grant the player 8 experience
 • Added A Clean Slate advancement for finding a blank pottery sherd
-• AC Paletted Permutations -> Jinxed Paletted Permutations
+• Rewrote a majority of the mod and started using JinxedLib
 • Optimised code & classes & mixins
+• Added a configurable creative mode tab full of Arts & Crafts features!
 Bug Fixes
 • Fixed every single advancement
 • Fixed Datagen crashing because of config

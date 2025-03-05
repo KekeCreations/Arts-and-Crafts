@@ -28,4 +28,12 @@ public class ForgeConfigHelper implements ConfigHelper {
         }
         return NeoForgeConfig.ENABLE_DYED_DECORATED_POTS.get();
     }
+
+    @Override
+    public boolean isCreativeModeTabEnabled() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.ENABLE_CREATIVE_MODE_TAB.get();
+    }
 }

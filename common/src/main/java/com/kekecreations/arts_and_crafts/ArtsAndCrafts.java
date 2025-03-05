@@ -24,6 +24,7 @@ public class ArtsAndCrafts {
         ACRegistries.register();
         ACDecoratedPotPatterns.registerPotPatterns();
         ACRecipeSerializer.register();
+        ACTabs.register();
     }
 
     public static ResourceLocation id(String name) {

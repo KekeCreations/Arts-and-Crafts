@@ -21,4 +21,9 @@ public class FabricConfigHelper implements ConfigHelper {
         return ArtsAndCraftsFabric.getConfig().areDyedDecoratedPotsEnabled();
     }
 
+    @Override
+    public boolean isCreativeModeTabEnabled() {
+        return ArtsAndCraftsFabric.getConfig().enableCreativeModeTab();
+    }
+
 }

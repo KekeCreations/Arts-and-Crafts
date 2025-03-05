@@ -7,4 +7,6 @@ public interface ConfigHelper {
     boolean areChalkSticksEnabled();
 
     boolean areDyedDecoratedPotsEnabled();
+
+    boolean isCreativeModeTabEnabled();
 }

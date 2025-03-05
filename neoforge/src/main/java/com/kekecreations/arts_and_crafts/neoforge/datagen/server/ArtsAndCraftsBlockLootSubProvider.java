@@ -3,9 +3,11 @@ package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
@@ -36,10 +38,13 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
+    /*
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
+        //return ForgeRegistryHelper.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
     }
+
+     */
 
     @Override
     public void generate() {

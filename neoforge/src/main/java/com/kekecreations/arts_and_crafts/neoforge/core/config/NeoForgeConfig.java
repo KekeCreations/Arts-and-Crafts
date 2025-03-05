@@ -9,6 +9,7 @@ public class NeoForgeConfig {
     public static final ModConfigSpec.BooleanValue ENABLE_DYED_FLOWER_POTS;
     public static final ModConfigSpec.BooleanValue ENABLE_CHALK_STICKS;
     public static final ModConfigSpec.BooleanValue ENABLE_DYED_DECORATED_POTS;
+    public static final ModConfigSpec.BooleanValue ENABLE_CREATIVE_MODE_TAB;
 
 
     static {
@@ -29,6 +30,10 @@ public class NeoForgeConfig {
         ENABLE_DYED_DECORATED_POTS = BUILDER
                 .comment("Allows decorated pots to be dyed when true. Default value: true")
                 .define("enableDyedDecoratedPots", true);
+
+        ENABLE_CREATIVE_MODE_TAB = BUILDER
+                .comment("When true adds a new creative mode tab full of Arts & Crafts features!")
+                .define("enableCreativeModeTab", false);
 
 
         BUILDER.pop();
