@@ -57,28 +57,28 @@ public class ACTabs {
                 pOutput.accept(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get());
                 pOutput.accept(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get());
                 pOutput.accept(ACBlocks.TERRACOTTA_SHINGLE_WALL.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedTerracottaShingles(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
                 }
                 pOutput.accept(ACItems.BLEACHED_CHALK_STICK.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACItems.getChalkStick(colour.getId()));
                 }
                 pOutput.accept(ACBlocks.BLEACHED_CHALK.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getChalk(colour.getId()));
                 }
                 pOutput.accept(ACItems.BLEACHDEW_PAINTBRUSH.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACItems.getPaintBrush(colour.getId()));
                 }
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedFlowerPot(colour.getId()));
                 }
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACItems.getDyedDecoratedPotBlockItem(colour));
                 }
                 pOutput.accept(ACBlocks.GYPSUM.get());
@@ -95,7 +95,7 @@ public class ACTabs {
                 pOutput.accept(ACBlocks.GYPSUM_BRICK_WALL.get());
 
                 pOutput.accept(ACBlocks.PLASTER.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedPlaster(colour.getId()));
                 }
 
@@ -103,7 +103,7 @@ public class ACTabs {
                 pOutput.accept(ACBlocks.SOAPSTONE_STAIRS.get());
                 pOutput.accept(ACBlocks.SOAPSTONE_SLAB.get());
                 pOutput.accept(ACBlocks.SOAPSTONE_WALL.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedSoapstone(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedSoapstoneStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedSoapstoneSlab(colour.getId()));
@@ -113,7 +113,7 @@ public class ACTabs {
                 pOutput.accept(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get());
                 pOutput.accept(ACBlocks.POLISHED_SOAPSTONE_SLAB.get());
                 pOutput.accept(ACBlocks.POLISHED_SOAPSTONE_WALL.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedPolishedSoapstone(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()));
@@ -123,13 +123,13 @@ public class ACTabs {
                 pOutput.accept(ACBlocks.SOAPSTONE_BRICK_STAIRS.get());
                 pOutput.accept(ACBlocks.SOAPSTONE_BRICK_SLAB.get());
                 pOutput.accept(ACBlocks.SOAPSTONE_BRICK_WALL.get());
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedSoapstoneBricks(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
                 }
-                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(ACBlocks.getDyedMudBricks(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedMudBrickStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedMudBrickSlab(colour.getId()));
