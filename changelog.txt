@@ -9,6 +9,9 @@ Features
 • Rewrote a majority of the mod and started using JinxedLib
 • Optimised code & classes & mixins
 • Added a configurable creative mode tab full of Arts & Crafts features!
+• Added ja_jp translations (Thank you Abbage230!)
+• Lotus Pistils are now compostable with a chance of 0.8
+• Bleachdew is now compostable with a chance of 0.5
 Bug Fixes
 • Fixed every single advancement
 • Fixed Datagen crashing because of config
