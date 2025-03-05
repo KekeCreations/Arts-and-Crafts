@@ -12,6 +12,7 @@ Features
 Bug Fixes
 • Fixed every single advancement
 • Fixed Datagen crashing because of config
+• Fixed Chalk Sticks not using dimensional max build height
 
 
 
