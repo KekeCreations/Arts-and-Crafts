@@ -131,4 +131,11 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean enableCreativeModeTab() {
         return enableCreativeModeTab;
     }
+
+    @Comment("Allows the player to bleach sheep  (Yirmiri wanted this really bad for some reason)")
+    private boolean bleachableSheep = false;
+
+    public boolean bleachableSheep() {
+        return bleachableSheep;
+    }
 }

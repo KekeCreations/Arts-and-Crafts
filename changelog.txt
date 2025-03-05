@@ -12,6 +12,7 @@ Features
 • Added ja_jp translations (Thank you Abbage230!)
 • Lotus Pistils are now compostable with a chance of 0.8
 • Bleachdew is now compostable with a chance of 0.5
+• You can now bleach sheep if you want to???  (Thank Yirmiri for this one)
 Bug Fixes
 • Fixed every single advancement
 • Fixed Datagen crashing because of config

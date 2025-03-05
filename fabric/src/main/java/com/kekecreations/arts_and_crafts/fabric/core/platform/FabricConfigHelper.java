@@ -26,4 +26,9 @@ public class FabricConfigHelper implements ConfigHelper {
         return ArtsAndCraftsFabric.getConfig().enableCreativeModeTab();
     }
 
+    @Override
+    public boolean bleachableSheep() {
+        return ArtsAndCraftsFabric.getConfig().bleachableSheep();
+    }
+
 }

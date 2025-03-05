@@ -36,4 +36,12 @@ public class ForgeConfigHelper implements ConfigHelper {
         }
         return NeoForgeConfig.ENABLE_CREATIVE_MODE_TAB.get();
     }
+
+    @Override
+    public boolean bleachableSheep() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.BLEACHABLE_SHEEP.get();
+    }
 }
