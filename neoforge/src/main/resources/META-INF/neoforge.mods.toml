@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-license = "All rights reserved"
+license = "https://github.com/KekeCreations/Arts-and-Crafts/blob/1.21x/LICENSE"
 
 [[mods]]
 modId = "arts_and_crafts"
