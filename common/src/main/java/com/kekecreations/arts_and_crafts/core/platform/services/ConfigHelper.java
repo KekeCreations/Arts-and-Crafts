@@ -11,4 +11,6 @@ public interface ConfigHelper {
     boolean isCreativeModeTabEnabled();
 
     boolean bleachableSheep();
+
+    boolean aprilFools2025();
 }

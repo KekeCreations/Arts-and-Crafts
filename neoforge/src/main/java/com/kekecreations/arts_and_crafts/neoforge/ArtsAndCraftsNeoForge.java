@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.neoforge.common.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
+import com.kekecreations.arts_and_crafts.neoforge.core.registry.ACLootModifiers;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsBlockStateProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsItemModelProvider;
 import com.kekecreations.arts_and_crafts.neoforge.datagen.client.ArtsAndCraftsLangProvider;
@@ -37,6 +38,7 @@ public class ArtsAndCraftsNeoForge {
         ArtsAndCrafts.init();
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
 
+        ACLootModifiers.register(modEventBus);
         NeoForge.EVENT_BUS.register(new OnWorldLoadEvent());
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::gatherData);

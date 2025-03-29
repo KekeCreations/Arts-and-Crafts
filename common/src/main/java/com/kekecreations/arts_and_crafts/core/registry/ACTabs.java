@@ -51,6 +51,8 @@ public class ACTabs {
                 pOutput.accept(ACItems.ROLL_POTTERY_SHERD.get());
                 pOutput.accept(ACItems.FINALE_POTTERY_SHERD.get());
                 pOutput.accept(ACItems.GATEWAY_POTTERY_SHERD.get());
+                pOutput.accept(ACItems.SUS_POTTERY_SHERD.get());
+                pOutput.accept(ACItems.VICTORY_POTTERY_SHERD.get());
 
                 pOutput.accept(ACBlocks.GLAZED_TERRACOTTA.get());
                 pOutput.accept(ACBlocks.TERRACOTTA_SHINGLES.get());

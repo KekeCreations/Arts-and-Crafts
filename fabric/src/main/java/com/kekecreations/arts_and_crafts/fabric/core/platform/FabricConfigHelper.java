@@ -46,4 +46,12 @@ public class FabricConfigHelper implements ConfigHelper {
         return false;
     }
 
+    @Override
+    public boolean aprilFools2025() {
+        if (ArtsAndCraftsFabric.getConfig() != null) {
+            return ArtsAndCraftsFabric.getConfig().aprilFools2025();
+        }
+        return false;
+    }
+
 }

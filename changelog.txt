@@ -1,5 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.4.2
+• April fools check the config?
+• Fixed the Handpicked Advancement
+
+
+
+
+
 V1.4.1
 • Fixed the mod crashing with mods that use the MoonLight Lib
 

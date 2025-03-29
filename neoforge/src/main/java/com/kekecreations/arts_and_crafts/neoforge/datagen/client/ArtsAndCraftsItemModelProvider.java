@@ -33,6 +33,7 @@ public class ArtsAndCraftsItemModelProvider extends ItemModelProvider {
         basicItem(ACItems.RUINED_POTTERY_SHERD.get());
         basicItem(ACItems.FINALE_POTTERY_SHERD.get());
         basicItem(ACItems.GATEWAY_POTTERY_SHERD.get());
+        basicItem(ACItems.SUS_POTTERY_SHERD.get());
         basicHandheld(ACItems.BLEACHDEW_PAINTBRUSH.get());
         basicItem(ACItems.BLEACHDEW.get());
         basicItem(ACBlocks.CORK_DOOR.get().asItem());

@@ -4,6 +4,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.ACBoat;
 import com.kekecreations.arts_and_crafts.common.item.*;
+import com.kekecreations.arts_and_crafts.common.item.april_fools.ACFoolItem;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.world.item.*;
 
@@ -19,17 +20,17 @@ public class ACItems {
 
     public static final HashMap<DyeColor, Supplier<PaintbrushItem>> PAINT_BRUSHES = new HashMap<>();
 
+
+    //April Fools 2025
+    public static final Supplier<Item> SUS_POTTERY_SHERD = registerItem("sus_pottery_sherd", () -> new ACFoolItem(new Item.Properties()));
+    public static final Supplier<Item> VICTORY_POTTERY_SHERD = registerItem("victory_pottery_sherd", () -> new ACFoolItem(new Item.Properties()));
+
+
     public static Supplier<Item> BLEACHED_BED = registerItem("bleached_bed", () -> new ACBedBlockItem(ACBlocks.BLEACHED_BED.get(), new Item.Properties().stacksTo(1)));
-
     public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties()));
-
-
     public static final Supplier<SignItem> CORK_SIGN = registerItem("cork_sign", () -> new SignItem(new Item.Properties().stacksTo(16), ACBlocks.CORK_SIGN.get(), ACBlocks.CORK_WALL_SIGN.get()));
     public static final Supplier<HangingSignItem> CORK_HANGING_SIGN = registerItem("cork_hanging_sign", () -> new HangingSignItem(ACBlocks.CORK_HANGING_SIGN.get(), ACBlocks.CORK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
-
-
     public static final Supplier<ACBoatItem> CORK_BOAT = registerItem("cork_boat", () -> new ACBoatItem(false, ACBoat.WoodType.CORK, new Item.Properties().stacksTo(1)));
-
     public static final Supplier<ACBoatItem> CORK_CHEST_BOAT = registerItem("cork_chest_boat", () -> new ACBoatItem(true, ACBoat.WoodType.CORK, new Item.Properties().stacksTo(1)));
 
     public static final Supplier<Item> POTTERY_SHERD = registerItem("pottery_sherd", () -> new Item(new Item.Properties()));

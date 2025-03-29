@@ -29,7 +29,7 @@
               },
               "equipment": {
                 "mainhand": {
-                  "tag": "arts_and_crafts:chalk_sticks"
+                  "items": "#arts_and_crafts:chalk_sticks"
                 }
               }
             }
@@ -40,14 +40,14 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "tag": "arts_and_crafts:chalk_dust"
+                "items": "#arts_and_crafts:chalk_dust"
               }
             }
           },
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "tag": "arts_and_crafts:chalk_sticks"
+              "items": "#arts_and_crafts:chalk_sticks"
             }
           }
         ]

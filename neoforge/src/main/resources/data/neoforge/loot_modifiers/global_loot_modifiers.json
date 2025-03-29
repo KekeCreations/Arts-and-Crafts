@@ -8,7 +8,9 @@
     "arts_and_crafts:gateway_pottery_sherd_from_archaeology_rare",
     "arts_and_crafts:finale_pottery_sherd_from_archaeology_rare",
     "arts_and_crafts:bleachdew_from_archaeology_common",
-    "arts_and_crafts:lotus_pistils_from_sniffer"
+    "arts_and_crafts:lotus_pistils_from_sniffer",
+    "arts_and_crafts:sus_pottery_sherd_from_archaeology_common",
+    "arts_and_crafts:victory_pottery_sherd_from_archaeology_common"
   ],
   "replace": false
 }

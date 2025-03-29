@@ -132,6 +132,9 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(ACItems.LOTUS_PISTILS.get(), "Lotus Pistils");
         add(ACItems.BLEACHED_CHALK_STICK.get(), "Bleached Chalk Stick");
 
+        //April fools
+        add(ACItems.SUS_POTTERY_SHERD.get(), "Sus Pottery Sherd");
+
         //ENTITY TYPES
         add(ACEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
         add(ACEntityTypes.BOAT.get(), "Boat");

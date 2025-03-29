@@ -44,4 +44,12 @@ public class ForgeConfigHelper implements ConfigHelper {
         }
         return NeoForgeConfig.BLEACHABLE_SHEEP.get();
     }
+
+    @Override
+    public boolean aprilFools2025() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.APRIL_FOOLS_2025.get();
+    }
 }

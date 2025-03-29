@@ -138,4 +138,11 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean bleachableSheep() {
         return bleachableSheep;
     }
+
+    @Comment("2025 April fools features")
+    private boolean aprilFools2025 = false;
+
+    public boolean aprilFools2025() {
+        return aprilFools2025;
+    }
 }
