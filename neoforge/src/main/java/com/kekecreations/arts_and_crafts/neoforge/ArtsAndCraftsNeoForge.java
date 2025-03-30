@@ -221,6 +221,8 @@ public class ArtsAndCraftsNeoForge {
             addAfter(event, Items.FRIEND_POTTERY_SHERD, ACItems.GATEWAY_POTTERY_SHERD.get());
             addBefore(event, Items.ANGLER_POTTERY_SHERD, ACItems.RUINED_POTTERY_SHERD.get());
             addBefore(event, ACItems.RUINED_POTTERY_SHERD.get(), ACItems.POTTERY_SHERD.get());
+            addAfter(event, Items.SNORT_POTTERY_SHERD, ACItems.SUS_POTTERY_SHERD.get());
+            addAfter(event, ACItems.SUS_POTTERY_SHERD.get(), ACItems.VICTORY_POTTERY_SHERD.get());
             addBefore(event, Items.WHITE_DYE, ACItems.BLEACHDEW.get());
         }
     }

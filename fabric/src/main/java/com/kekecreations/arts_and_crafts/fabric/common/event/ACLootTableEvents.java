@@ -1,8 +1,7 @@
 package com.kekecreations.arts_and_crafts.fabric.common.event;
 
-import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
@@ -12,7 +11,7 @@ public class ACLootTableEvents {
 
 
     public static void modifyVanillaLootTables() {
-        LootTableEvents.MODIFY.register((id, builder, source) -> {
+        LootTableEvents.MODIFY.register((id, builder, source, provider) -> {
             if (BuiltInLootTables.SNIFFER_DIGGING.equals(id)) {
                 builder.modifyPools(itemEntry -> {
                     itemEntry.with((LootItem.lootTableItem(ACItems.LOTUS_PISTILS.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))).build()));
@@ -24,10 +23,6 @@ public class ACLootTableEvents {
                         itemEntry.with((LootItem.lootTableItem(ACItems.POTTERY_SHERD.get()).setWeight(10)).build());
                         itemEntry.with((LootItem.lootTableItem(ACItems.BLEACHDEW.get()).setWeight(5)).build());
                         itemEntry.with((LootItem.lootTableItem(ACItems.CORK_HANGING_SIGN.get()).setWeight(25)).build());
-                        if (Services.CONFIG.aprilFools2025()) {
-                            itemEntry.with((LootItem.lootTableItem(ACItems.SUS_POTTERY_SHERD.get()).setWeight(1)).build());
-                            itemEntry.with((LootItem.lootTableItem(ACItems.VICTORY_POTTERY_SHERD.get()).setWeight(1)).build());
-                        }
                 });
             }
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE.equals(id)) {

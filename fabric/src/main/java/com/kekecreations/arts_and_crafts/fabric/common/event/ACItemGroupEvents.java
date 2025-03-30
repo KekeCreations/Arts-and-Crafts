@@ -142,6 +142,7 @@ public class ACItemGroupEvents {
             event.addBefore(Items.ANGLER_POTTERY_SHERD, ACItems.RUINED_POTTERY_SHERD.get());
             event.addBefore(ACItems.RUINED_POTTERY_SHERD.get(), ACItems.POTTERY_SHERD.get());
             event.addAfter(Items.SNORT_POTTERY_SHERD, ACItems.SUS_POTTERY_SHERD.get());
+            event.addAfter(ACItems.SUS_POTTERY_SHERD.get(), ACItems.VICTORY_POTTERY_SHERD.get());
             //POT AFTER PLENTY
             event.addBefore(Items.WHITE_DYE, ACItems.BLEACHDEW.get());
         });

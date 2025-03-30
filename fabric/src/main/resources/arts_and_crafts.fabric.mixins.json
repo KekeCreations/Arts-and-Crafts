@@ -1,12 +1,13 @@
 {
   "required": true,
-  "package": "com.kekecreations.arts_and_crafts.core.mixin",
+  "package": "com.kekecreations.arts_and_crafts.fabric.core.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "refmap": "${mod_id}.refmap.json",
   "client": [
   ],
   "mixins": [
+    "BrushableBlockEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
