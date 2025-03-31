@@ -3,6 +3,7 @@ Arts & Crafts Changelog
 V1.4.2
 • April fools check the config?
 • Fixed the Handpicked Advancement
+• Fixed the Flashpoint Advancement
 
 
 
