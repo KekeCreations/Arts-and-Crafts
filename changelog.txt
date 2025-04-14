@@ -1,5 +1,14 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+V1.4.3
+• Fixed automatic sherd compat with dyed decorated pots.
+• Fixed mod logger name being grammatically incorrect.
+• The mod now requires JinxedLib V1.0.3 or higher!
+• Fixed licensing in the mod description.
+
+
+
+
 V1.4.2
 • April fools check the config?
 • Fixed the Handpicked Advancement

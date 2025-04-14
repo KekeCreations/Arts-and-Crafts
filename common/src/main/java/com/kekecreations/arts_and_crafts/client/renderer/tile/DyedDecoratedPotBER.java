@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -101,7 +102,8 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
     private ResourceLocation renderSideMaterial(DyedDecoratedPotBlockEntity potEntity, Item item) {
         ResourceKey<DecoratedPotPattern> patternKey = DecoratedPotPatterns.getPatternFromItem(item);
         if (patternKey != null && DecoratedPotPatterns.getPatternFromItem(item) != DecoratedPotPatterns.BLANK) {
-            return patternKey.location().withPath(path -> "entity/decorated_pot/" + path + "_pottery_pattern_" + potEntity.getDyeColor().getName());
+            //The replace is to fix compat with other mods who don't do it like vanilla does.
+            return patternKey.location().withPath(path -> "entity/decorated_pot/" + path.replace("_pottery_pattern", "") + "_pottery_pattern_" + potEntity.getDyeColor().getName());
         } else {
             return ResourceLocation.withDefaultNamespace("entity/decorated_pot/decorated_pot_side_" + potEntity.getDyeColor().getName());
         }

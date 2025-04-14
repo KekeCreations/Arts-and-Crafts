@@ -39,5 +39,5 @@ neoForge {
 sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
 
 dependencies {
-    implementation "curse.maven:jinxedlib-1203401:6251899"
+    implementation "curse.maven:jinxedlib-1203401:6332450"
 }
