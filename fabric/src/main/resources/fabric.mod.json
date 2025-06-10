@@ -29,6 +29,6 @@
   "depends": {
     "fabric": "*",
     "minecraft": ">=1.20.1",
-    "jinxedlib": ">=1.0.3"
+    "jinxedlib": ">=1.0.1"
   }
 }

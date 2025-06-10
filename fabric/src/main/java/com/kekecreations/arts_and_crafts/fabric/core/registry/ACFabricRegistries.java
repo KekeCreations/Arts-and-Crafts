@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts.fabric.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 
@@ -27,8 +26,5 @@ public class ACFabricRegistries {
         StrippableBlockRegistry.register(ACBlocks.CORK_WOOD.get(), ACBlocks.STRIPPED_CORK_WOOD.get());
 
 
-        //COMPOSTING
-        CompostingChanceRegistry.INSTANCE.add(ACBlocks.CORK_SAPLING.get(), 0.3F);
-        CompostingChanceRegistry.INSTANCE.add(ACBlocks.CORK_LEAVES.get(), 0.3F);
     }
 }

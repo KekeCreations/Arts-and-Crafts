@@ -8,6 +8,8 @@ Arts & Crafts Changelog
 - Completing the obtain bleachdew advancement will now grant the player 8 experience (Backported change)
 - Backported the Clean Slate advancement for finding a blank pottery sherd
 - Backported ja_jp translations (Thank you Abbage230!)
+- Lotus Pistils are now compostable with a chance of 0.8  (Backported feature)
+- Bleachdew is now compostable with a chance of 0.5 (Backported feature)
 
 
 V1.3.2
