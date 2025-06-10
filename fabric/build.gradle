@@ -16,6 +16,7 @@ dependencies {
 
     //For config
     include implementation("blue.endless:jankson:${jankson_version}")
+    modImplementation "curse.maven:jinxedlib-1203401:6627520"
     implementation project(":common")
 }
 

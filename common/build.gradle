@@ -20,6 +20,7 @@ dependencies {
 
     //For config
     implementation("blue.endless:jankson:${jankson_version}")
+    compileOnly "curse.maven:jinxedlib-1203401:6630668"
 }
 base {
     archivesName = "${archives_base_name}-common-${minecraft_version}"
