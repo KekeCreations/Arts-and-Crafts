@@ -115,5 +115,8 @@
       "chalk_stick"
     ]
   ],
-  "sends_telemetry_event": true
+  "sends_telemetry_event": true,
+  "rewards": {
+    "experience": 15
+  }
 }

@@ -18,7 +18,7 @@ public class ACItems {
     public static final HashMap<DyeColor, Supplier<DyedFlowerPotBlockItem>> DYED_FLOWER_POT_BLOCK_ITEMS = new HashMap<>();
 
     public static Supplier<Item> BLEACHED_BED = registerItem("bleached_bed", () -> new ACBedBlockItem(ACBlocks.BLEACHED_BED.get(), new Item.Properties().stacksTo(1)));
-    public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties().stacksTo(16)));
+    public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", () -> new LotusPistilItem(new Item.Properties()));
 
 
     public static final Supplier<SignItem> CORK_SIGN = registerItem("cork_sign", () -> new SignItem(new Item.Properties().stacksTo(16), ACBlocks.CORK_SIGN.get(), ACBlocks.CORK_WALL_SIGN.get()));

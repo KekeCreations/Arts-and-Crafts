@@ -7,16 +7,25 @@ public class ForgeConfigHelper implements ConfigHelper {
 
     @Override
     public boolean areDyedFlowerPotsEnabled() {
+        if (!ForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
         return ForgeConfig.ENABLE_DYED_FLOWER_POTS.get();
     }
 
     @Override
     public boolean areChalkSticksEnabled() {
+        if (!ForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
         return ForgeConfig.ENABLE_CHALK_STICKS.get();
     }
 
     @Override
     public boolean areDyedDecoratedPotsEnabled() {
+        if (!ForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
         return ForgeConfig.ENABLE_DYED_DECORATED_POTS.get();
     }
 }

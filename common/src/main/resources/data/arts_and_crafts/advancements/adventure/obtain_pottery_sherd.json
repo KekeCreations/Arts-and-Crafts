@@ -1,20 +1,20 @@
 {
   "display": {
     "icon": {
-      "item": "arts_and_crafts:bleachdew"
+      "item": "arts_and_crafts:pottery_sherd"
     },
     "title": {
-      "translate": "advancements.husbandry.circa_1980.title"
+      "translate": "advancements.adventure.a_clean_slate.title"
     },
     "description": {
-      "translate": "advancements.husbandry.circa_1980.description"
+      "translate": "advancements.adventure.a_clean_slate.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "arts_and_crafts:husbandry/interact_with_lily_pad_using_some_lotus_pistils",
+  "parent": "minecraft:adventure/salvage_sherd",
   "criteria": {
     "bleachdew": {
       "trigger": "minecraft:inventory_changed",
@@ -22,7 +22,7 @@
         "items": [
           {
             "items": [
-              "arts_and_crafts:bleachdew"
+              "arts_and_crafts:pottery_sherd"
             ]
           }
         ]
@@ -35,7 +35,7 @@
     ]
   ],
   "rewards": {
-    "experience": 8
+    "experience": 5
   },
   "sends_telemetry_event": true
 }

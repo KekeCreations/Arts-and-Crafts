@@ -1,6 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-V1.5.0
+### V1.5.0
+- Backported adding JinxedLib
+- Backported code base changes
+- Backported Lotus Pistils stack size change from 16 to 64
+- Completing the collect all the different coloured chalk sticks advancement will now grant the player 15 experience (Backported change)
+- Completing the obtain bleachdew advancement will now grant the player 8 experience (Backported change)
+- Backported the Clean Slate advancement for finding a blank pottery sherd
+- Backported ja_jp translations (Thank you Abbage230!)
 
 
 V1.3.2
