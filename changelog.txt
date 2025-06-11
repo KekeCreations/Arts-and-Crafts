@@ -11,7 +11,10 @@ Arts & Crafts Changelog
 - Lotus Pistils are now compostable with a chance of 0.8  (Backported feature)
 - Bleachdew is now compostable with a chance of 0.5 (Backported feature)
 - Fixed mod logger name being grammatically incorrect (Backported change)
-- You can now bleach sheep if you want to???  (Thank Yirmiri for this one)
+- You can now bleach sheep if you want to???  (Thank Yirmiri for this one) (Backported feature)
+- Removed #arts_and_crafts:lily_pads block tag (Backported change)
+- Lotus flower no longer drops Lily Pads when destroyed (Backported change)
+- Lotus flower no longer requires a Lily Pad to be placed, instead it can be placed directly onto Water (Backported change)
 
 
 V1.3.2

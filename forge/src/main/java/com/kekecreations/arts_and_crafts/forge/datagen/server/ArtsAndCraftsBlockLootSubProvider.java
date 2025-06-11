@@ -10,7 +10,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -53,7 +52,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         chalkDust();
         decoratedPots();
         mudBricks();
-        add(ACBlocks.LOTUS_FLOWER.get(), createTwoItemTable(ACItems.LOTUS_PISTILS.get(), Items.LILY_PAD));
+        add(ACBlocks.LOTUS_FLOWER.get(), createSingleItemTable(ACItems.LOTUS_PISTILS.get(), ConstantValue.exactly(1.0F)));
     }
 
     private void bleached() {
@@ -227,9 +226,5 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
 
     private LootTable.Builder createDecoratedPotTable(Block p_277929_) {
         return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(DynamicLoot.dynamicEntry(DecoratedPotBlock.SHERDS_DYNAMIC_DROP_ID).when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.BREAKS_DECORATED_POTS))).when(HAS_NO_SILK_TOUCH).otherwise(LootItem.lootTableItem(p_277929_).apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY).copy("sherds", "BlockEntityTag.sherds")))));
-    }
-
-    public LootTable.Builder createTwoItemTable(ItemLike p_251912_, ItemLike itemLike2) {
-        return LootTable.lootTable().withPool(this.applyExplosionCondition(p_251912_, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(p_251912_)))).withPool(this.applyExplosionCondition(p_251912_, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(itemLike2))));
     }
 }
