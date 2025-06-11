@@ -17,6 +17,8 @@ Backported Features
 - Lotus flower no longer drops Lily Pads when destroyed (Backported change)
 - Lotus flower no longer requires a Lily Pad to be placed, instead it can be placed directly onto Water (Backported change)
 - Rewrote a majority of the mod and started using JinxedLib Features
+- Fixed Chalk Sticks not using dimensional max build height
+- Fixed licensing in the mod description.
 Features
 
 

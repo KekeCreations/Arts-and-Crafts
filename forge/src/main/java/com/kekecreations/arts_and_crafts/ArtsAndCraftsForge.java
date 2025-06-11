@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts;
 
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
+import com.kekecreations.arts_and_crafts.core.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.kekecreations.arts_and_crafts.core.config.ForgeConfig;
 import com.kekecreations.arts_and_crafts.datagen.client.ArtsAndCraftsBlockStateProvider;
@@ -45,6 +46,8 @@ public class ArtsAndCraftsForge {
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ACSpriteSources::register);
 
         ArtsAndCrafts.init();
+
+        MinecraftForge.EVENT_BUS.register(new OnWorldLoadEvent());
 
         ForgeRegistryHelper.SOUNDS.register(modEventBus);
         ForgeRegistryHelper.PARTICLE_TYPES.register(modEventBus);

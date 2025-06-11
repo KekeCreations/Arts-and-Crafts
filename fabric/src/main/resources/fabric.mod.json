@@ -12,7 +12,7 @@
     "homepage": "https://kekecreations.boomla.net/minecraft/java-mods/arts-and-crafts",
     "sources": "https://github.com/KekeCreations/Arts-and-Crafts/issues"
   },
-  "license": "All rights reserved",
+  "license": "https://github.com/KekeCreations/Arts-and-Crafts/blob/1.21x/LICENSE",
   "icon": "arts_and_crafts_icon.png",
   "environment": "*",
   "entrypoints": {

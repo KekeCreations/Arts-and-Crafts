@@ -168,8 +168,8 @@ public class ChalkStickItem extends Item {
     }
 
     public InteractionResult place(BlockPlaceContext blockPlaceContext) {
-        if (!blockPlaceContext.canPlace() || blockPlaceContext.getClickedPos().getY() > 319) return InteractionResult.FAIL;
         Level level = blockPlaceContext.getLevel();
+        if (!blockPlaceContext.canPlace() || blockPlaceContext.getClickedPos().getY() > level.getMaxBuildHeight()) return InteractionResult.FAIL;
         BlockPos pos = blockPlaceContext.getClickedPos();
         Player player = blockPlaceContext.getPlayer();
         ItemStack itemStack = blockPlaceContext.getItemInHand();

@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.common.event.ACItemGroupEvents;
+import com.kekecreations.arts_and_crafts.core.init.ACValidSigns;
 import com.kekecreations.arts_and_crafts.core.registry.ACFabricRegistries;
 import com.kekecreations.arts_and_crafts.common.event.ACLootTableEvents;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
@@ -47,6 +48,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ACLootTableEvents.modifyVanillaLootTables();
         createBiomeModifications();
         DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
+        ACValidSigns.register();
     }
 
     public void createBiomeModifications() {
