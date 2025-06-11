@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
@@ -30,10 +30,10 @@ public class DyedDecoratedPotRecipe extends CustomRecipe {
         for(int k = 0; k < craftingContainer.getContainerSize(); ++k) {
             ItemStack itemStack = craftingContainer.getItem(k);
             if (!itemStack.isEmpty()) {
-                if (itemStack.is(ArtsAndCraftsTags.ItemTags.DECORATED_POTS)) {
+                if (itemStack.is(ACTags.ItemTags.DECORATED_POTS)) {
                     ++i;
                 } else {
-                    if (!(itemStack.is(ArtsAndCraftsTags.ItemTags.DYES))) {
+                    if (!(itemStack.is(ACTags.ItemTags.DYES))) {
                         return false;
                     }
 

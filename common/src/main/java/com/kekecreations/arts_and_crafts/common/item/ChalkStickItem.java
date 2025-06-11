@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
+import com.kekecreations.arts_and_crafts.common.util.ACBlockStateProperties;
 import com.kekecreations.arts_and_crafts.common.util.ChalkUtils;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
@@ -180,9 +180,9 @@ public class ChalkStickItem extends Item {
             if (state != null && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
                 RandomSource randomSource = level.getRandom();
                 if (chalkStick.getChalkPattern(itemStack) != 100) {
-                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_PATTERN, chalkStick.getChalkPattern(itemStack)));
+                    level.setBlockAndUpdate(pos, state.setValue(ACBlockStateProperties.CHALK_PATTERN, chalkStick.getChalkPattern(itemStack)));
                 } else {
-                    level.setBlockAndUpdate(pos, state.setValue(KekeBlockStateProperties.CHALK_PATTERN, 0));
+                    level.setBlockAndUpdate(pos, state.setValue(ACBlockStateProperties.CHALK_PATTERN, 0));
                 }
                 level.playSound(null, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));

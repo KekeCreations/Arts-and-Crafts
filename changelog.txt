@@ -1,6 +1,7 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### V1.5.0
+Backported Features
 - Backported adding JinxedLib
 - Backported code base changes
 - Backported Lotus Pistils stack size change from 16 to 64
@@ -15,6 +16,9 @@ Arts & Crafts Changelog
 - Removed #arts_and_crafts:lily_pads block tag (Backported change)
 - Lotus flower no longer drops Lily Pads when destroyed (Backported change)
 - Lotus flower no longer requires a Lily Pad to be placed, instead it can be placed directly onto Water (Backported change)
+- Rewrote a majority of the mod and started using JinxedLib Features
+Features
+
 
 
 V1.3.2

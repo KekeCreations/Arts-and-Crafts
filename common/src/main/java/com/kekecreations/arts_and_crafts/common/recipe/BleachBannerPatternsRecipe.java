@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
@@ -61,7 +61,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         }
 
         if (itemStack.getItem() instanceof BannerItem bannerItem) {
-            return ArtsAndCraftsDyedBlockLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
+            return ACDyedBlockLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
         }
         return itemStack;
     }

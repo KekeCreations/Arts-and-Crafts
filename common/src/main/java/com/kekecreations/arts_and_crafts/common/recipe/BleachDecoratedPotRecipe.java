@@ -1,13 +1,12 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
 import com.kekecreations.arts_and_crafts.common.block.DyedDecoratedPotBlock;
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
-import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -31,7 +30,7 @@ public class BleachDecoratedPotRecipe extends CustomRecipe {
         for(int k = 0; k < craftingContainer.getContainerSize(); ++k) {
             ItemStack itemStack = craftingContainer.getItem(k);
             if (!itemStack.isEmpty()) {
-                if (itemStack.is(ArtsAndCraftsTags.ItemTags.DECORATED_POTS) && !itemStack.is(Items.DECORATED_POT)) {
+                if (itemStack.is(ACTags.ItemTags.DECORATED_POTS) && !itemStack.is(Items.DECORATED_POT)) {
                     ++i;
                 } else {
                     if (!(itemStack.is(ACItems.BLEACHDEW.get()))) {

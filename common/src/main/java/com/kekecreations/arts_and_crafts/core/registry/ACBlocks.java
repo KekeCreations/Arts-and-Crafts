@@ -2,9 +2,10 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.common.block.grower.CorkTreeGrower;
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
-import com.kekecreations.arts_and_crafts.common.misc.KekeWoodType;
+import com.kekecreations.arts_and_crafts.core.init.ACBlockSetType;
+import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
+import com.kekecreations.jinxedlib.common.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
@@ -130,48 +131,48 @@ public class ACBlocks {
     public static final Supplier<Block> GYPSUM = registerBlockWithItem("gypsum", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.HARP).requiresCorrectToolForDrops().strength(1.75F, 5F)));
     public static final Supplier<SlabBlock> GYPSUM_SLAB = registerBlockWithItem("gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));
     public static final Supplier<WallBlock> GYPSUM_WALL = registerBlockWithItem("gypsum_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(GYPSUM.get())));
-    public static final Supplier<ACStairBlock> GYPSUM_STAIRS = registerBlockWithItem("gypsum_stairs", () -> new ACStairBlock(GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM.get())));
+    public static final Supplier<CommonStairBlock> GYPSUM_STAIRS = registerBlockWithItem("gypsum_stairs", () -> new CommonStairBlock(GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM.get())));
     public static final Supplier<Block> GYPSUM_BRICKS = registerBlockWithItem("gypsum_bricks", () -> new Block(BlockBehaviour.Properties.copy(GYPSUM.get())));
     public static final Supplier<SlabBlock> GYPSUM_BRICK_SLAB = registerBlockWithItem("gypsum_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
     public static final Supplier<WallBlock> GYPSUM_BRICK_WALL = registerBlockWithItem("gypsum_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
-    public static final Supplier<ACStairBlock> GYPSUM_BRICK_STAIRS = registerBlockWithItem("gypsum_brick_stairs", () -> new ACStairBlock(GYPSUM_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
+    public static final Supplier<CommonStairBlock> GYPSUM_BRICK_STAIRS = registerBlockWithItem("gypsum_brick_stairs", () -> new CommonStairBlock(GYPSUM_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(GYPSUM_BRICKS.get())));
     public static final Supplier<Block> POLISHED_GYPSUM = registerBlockWithItem("polished_gypsum", () -> new Block(BlockBehaviour.Properties.copy(GYPSUM.get())));
     public static final Supplier<SlabBlock> POLISHED_GYPSUM_SLAB = registerBlockWithItem("polished_gypsum_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
     public static final Supplier<WallBlock> POLISHED_GYPSUM_WALL = registerBlockWithItem("polished_gypsum_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
-    public static final Supplier<ACStairBlock> POLISHED_GYPSUM_STAIRS = registerBlockWithItem("polished_gypsum_stairs", () -> new ACStairBlock(POLISHED_GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
+    public static final Supplier<CommonStairBlock> POLISHED_GYPSUM_STAIRS = registerBlockWithItem("polished_gypsum_stairs", () -> new CommonStairBlock(POLISHED_GYPSUM.get().defaultBlockState(), BlockBehaviour.Properties.copy(POLISHED_GYPSUM.get())));
 
     //NORMAL TERRACOTTA SHINGLES
     public static final Supplier<Block> TERRACOTTA_SHINGLES = registerBlockWithItem("terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f)));
     public static final Supplier<SlabBlock> TERRACOTTA_SHINGLE_SLAB = registerBlockWithItem("terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
     public static final Supplier<WallBlock> TERRACOTTA_SHINGLE_WALL = registerBlockWithItem("terracotta_shingle_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
-    public static final Supplier<ACStairBlock> TERRACOTTA_SHINGLE_STAIRS = registerBlockWithItem("terracotta_shingle_stairs", () -> new ACStairBlock(TERRACOTTA_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
+    public static final Supplier<CommonStairBlock> TERRACOTTA_SHINGLE_STAIRS = registerBlockWithItem("terracotta_shingle_stairs", () -> new CommonStairBlock(TERRACOTTA_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.copy(TERRACOTTA_SHINGLES.get())));
 
 
     //SOAPSTONE
     public static final Supplier<Block> SOAPSTONE = registerBlockWithItem("soapstone", () -> new Block(BlockBehaviour.Properties.of().sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
     public static final Supplier<SlabBlock> SOAPSTONE_SLAB = registerBlockWithItem("soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SOAPSTONE.get())));
     public static final Supplier<WallBlock> SOAPSTONE_WALL = registerBlockWithItem("soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE.get())));
-    public static final Supplier<ACStairBlock> SOAPSTONE_STAIRS = registerBlockWithItem("soapstone_stairs", () -> new ACStairBlock(SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
+    public static final Supplier<CommonStairBlock> SOAPSTONE_STAIRS = registerBlockWithItem("soapstone_stairs", () -> new CommonStairBlock(SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
 
     public static final Supplier<Block> SOAPSTONE_BRICKS = registerBlockWithItem("soapstone_bricks", () -> new Block(BlockBehaviour.Properties.of().sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
     public static final Supplier<SlabBlock> SOAPSTONE_BRICK_SLAB = registerBlockWithItem("soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
     public static final Supplier<WallBlock> SOAPSTONE_BRICK_WALL = registerBlockWithItem("soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
-    public static final Supplier<ACStairBlock> SOAPSTONE_BRICK_STAIRS = registerBlockWithItem("soapstone_brick_stairs", () -> new ACStairBlock(SOAPSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
+    public static final Supplier<CommonStairBlock> SOAPSTONE_BRICK_STAIRS = registerBlockWithItem("soapstone_brick_stairs", () -> new CommonStairBlock(SOAPSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE_BRICKS.get())));
 
     public static final Supplier<Block> POLISHED_SOAPSTONE = registerBlockWithItem("polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F)));
     public static final Supplier<SlabBlock> POLISHED_SOAPSTONE_SLAB = registerBlockWithItem("polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_SOAPSTONE.get())));
     public static final Supplier<WallBlock> POLISHED_SOAPSTONE_WALL = registerBlockWithItem("polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_SOAPSTONE.get())));
-    public static final Supplier<ACStairBlock> POLISHED_SOAPSTONE_STAIRS = registerBlockWithItem("polished_soapstone_stairs", () -> new ACStairBlock(POLISHED_SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
+    public static final Supplier<CommonStairBlock> POLISHED_SOAPSTONE_STAIRS = registerBlockWithItem("polished_soapstone_stairs", () -> new CommonStairBlock(POLISHED_SOAPSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(SOAPSTONE.get())));
 
     //CORK
-    public static final Supplier<ACTrapDoorBlock> CORK_TRAPDOOR = registerBlockWithItem("cork_trapdoor", () -> new ACTrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(ACBlocks::never).ignitedByLava(), KekeBlockSetType.CORK));
-    public static final Supplier<ACDoorBlock> CORK_DOOR = registerBlockWithItem("cork_door", () -> new ACDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK));
-    public static final Supplier<StandingSignBlock> CORK_SIGN = registerBlock("cork_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), KekeWoodType.CORK));
-    public static final Supplier<WallSignBlock> CORK_WALL_SIGN = registerBlock("cork_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).dropsLike(CORK_SIGN.get()).ignitedByLava(), KekeWoodType.CORK));
-    public static final Supplier<CeilingHangingSignBlock> CORK_HANGING_SIGN = registerBlock("cork_hanging_sign", () -> new CeilingHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), KekeWoodType.CORK));
-    public static final Supplier<WallHangingSignBlock> CORK_WALL_HANGING_SIGN = registerBlock("cork_wall_hanging_sign", () -> new WallHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava().dropsLike(CORK_HANGING_SIGN.get()), KekeWoodType.CORK));
-    public static final Supplier<ACPressurePlateBlock> CORK_PRESSURE_PLATE = registerBlockWithItem("cork_pressure_plate", () -> new ACPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(0.5f).ignitedByLava().pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK));
-    public static final Supplier<ACButtonBlock> CORK_BUTTON = registerBlockWithItem("cork_button", () -> new ACButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY), KekeBlockSetType.CORK, 30, true));
+    public static final Supplier<CommonTrapDoorBlock> CORK_TRAPDOOR = registerBlockWithItem("cork_trapdoor", () -> new CommonTrapDoorBlock(ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().isValidSpawn(ACBlocks::never).ignitedByLava()));
+    public static final Supplier<CommonDoorBlock> CORK_DOOR = registerBlockWithItem("cork_door", () -> new CommonDoorBlock(ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(3.0f).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<StandingSignBlock> CORK_SIGN = registerBlock("cork_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), ACWoodType.CORK));
+    public static final Supplier<WallSignBlock> CORK_WALL_SIGN = registerBlock("cork_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).dropsLike(CORK_SIGN.get()).ignitedByLava(), ACWoodType.CORK));
+    public static final Supplier<CeilingHangingSignBlock> CORK_HANGING_SIGN = registerBlock("cork_hanging_sign", () -> new CeilingHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava(), ACWoodType.CORK));
+    public static final Supplier<WallHangingSignBlock> CORK_WALL_HANGING_SIGN = registerBlock("cork_wall_hanging_sign", () -> new WallHangingSignBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(1.0f).ignitedByLava().dropsLike(CORK_HANGING_SIGN.get()), ACWoodType.CORK));
+    public static final Supplier<CommonPressurePlateBlock> CORK_PRESSURE_PLATE = registerBlockWithItem("cork_pressure_plate", () -> new CommonPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, ACBlockSetType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).noCollission().strength(0.5f).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<CommonButtonBlock> CORK_BUTTON = registerBlockWithItem("cork_button", () -> new CommonButtonBlock(ACBlockSetType.CORK, 30, true, BlockBehaviour.Properties.of().noCollission().strength(0.5f).pushReaction(PushReaction.DESTROY)));
 
     //CORK ETC
 
@@ -180,20 +181,20 @@ public class ACBlocks {
     public static final Supplier<SaplingBlock> CORK_SAPLING = registerBlockWithItem("cork_sapling", () -> new CorkSapling(new CorkTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> CORK_LOG = registerBlockWithItem("cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
+    public static final Supplier<FlammableRotatedPillarBlock> CORK_LOG = registerBlockWithItem("cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> STRIPPED_CORK_LOG = registerBlockWithItem("stripped_cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
+    public static final Supplier<FlammableRotatedPillarBlock> STRIPPED_CORK_LOG = registerBlockWithItem("stripped_cork_log", () -> corkLog(MapColor.COLOR_BROWN, MapColor.COLOR_BROWN));
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> CORK_WOOD = registerBlockWithItem("cork_wood", () -> new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableRotatedPillarBlock> CORK_WOOD = registerBlockWithItem("cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
 
-    public static final Supplier<ACFlammableRotatedPillarBlock> STRIPPED_CORK_WOOD = registerBlockWithItem("stripped_cork_wood", () -> new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableRotatedPillarBlock> STRIPPED_CORK_WOOD = registerBlockWithItem("stripped_cork_wood", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
 
-    public static final Supplier<ACFlammableBlock> CORK_PLANKS = registerBlockWithItem("cork_planks", () -> new ACFlammableBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
-    public static final Supplier<ACFlammableSlabBlock> CORK_SLAB = registerBlockWithItem("cork_slab", () -> new ACFlammableSlabBlock(BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ACSoundTypes.CORK)));
-    public static final Supplier<ACFlammableStairBlock> CORK_STAIRS = registerBlockWithItem("cork_stairs", () -> new ACFlammableStairBlock(CORK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ACSoundTypes.CORK)));
-    public static final Supplier<ACFlammableFenceBlock> CORK_FENCE = registerBlockWithItem("cork_fence", () -> new ACFlammableFenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
-    public static final Supplier<ACFlammableFenceGateBlock> CORK_FENCE_GATE = registerBlockWithItem("cork_fence_gate", () -> new ACFlammableFenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).sound(ACSoundTypes.CORK).strength(2.0f, 3.0f).ignitedByLava(), KekeWoodType.CORK));
-    public static final Supplier<ACFlammableLeavesBlock> CORK_LEAVES = registerBlockWithItem("cork_leaves", () -> leaves(SoundType.GRASS));
+    public static final Supplier<FlammablePlankBlock> CORK_PLANKS = registerBlockWithItem("cork_planks", () -> new FlammablePlankBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableSlabBlock> CORK_SLAB = registerBlockWithItem("cork_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ACSoundTypes.CORK)));
+    public static final Supplier<FlammableStairBlock> CORK_STAIRS = registerBlockWithItem("cork_stairs", () -> new FlammableStairBlock(CORK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(CORK_PLANKS.get()).sound(ACSoundTypes.CORK)));
+    public static final Supplier<FlammableFenceBlock> CORK_FENCE = registerBlockWithItem("cork_fence", () -> new FlammableFenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
+    public static final Supplier<FlammableFenceGateBlock> CORK_FENCE_GATE = registerBlockWithItem("cork_fence_gate", () -> new FlammableFenceGateBlock(ACWoodType.CORK, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).forceSolidOn().instrument(NoteBlockInstrument.BASS).sound(ACSoundTypes.CORK).strength(2.0f, 3.0f).ignitedByLava()));
+    public static final Supplier<FlammableLeavesBlock> CORK_LEAVES = registerBlockWithItem("cork_leaves", () -> leaves(SoundType.GRASS));
 
     public static final Supplier<FlowerPotBlock> POTTED_CORK_SAPLING = registerBlock("potted_cork_sapling", () -> ACBlocks.vanillaFlowerPot(CORK_SAPLING.get(), new FeatureFlag[0]));
 
@@ -212,29 +213,29 @@ public class ACBlocks {
             DYED_MUD_BRICKS.put(colours, registerBlockWithItem(colours + "_mud_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS).mapColor(colours))));
             DYED_MUD_BRICK_SLAB.put(colours, registerBlockWithItem(colours + "_mud_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).mapColor(colours))));
             DYED_MUD_BRICK_WALL.put(colours, registerBlockWithItem(colours + "_mud_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_WALL).mapColor(colours))));
-            DYED_MUD_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_mud_brick_stairs", () -> new ACStairBlock(getDyedMudBricks(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).mapColor(colours))));
+            DYED_MUD_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_mud_brick_stairs", () -> new CommonStairBlock(getDyedMudBricks(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_SLAB).mapColor(colours))));
 
             //DYED TERRACOTTA SHINGLES
             DYED_TERRACOTTA_SHINGLES.put(colours, registerBlockWithItem(colours + "_terracotta_shingles", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.25f, 4.2f))));
             DYED_TERRACOTTA_SHINGLE_SLAB.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
             DYED_TERRACOTTA_SHINGLE_WALL.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
-            DYED_TERRACOTTA_SHINGLE_STAIRS.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_stairs", () -> new ACStairBlock(getDyedTerracottaShingles(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
+            DYED_TERRACOTTA_SHINGLE_STAIRS.put(colours, registerBlockWithItem(colours + "_terracotta_shingle_stairs", () -> new CommonStairBlock(getDyedTerracottaShingles(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedTerracottaShingles(colours.getId())))));
 
             //DYED SOAPSTONE
             DYED_SOAPSTONE.put(colours, registerBlockWithItem(colours + "_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
             DYED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(colours + "_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
             DYED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(colours + "_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_stairs", () -> new ACStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_stairs", () -> new CommonStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
 
             DYED_SOAPSTONE_BRICKS.put(colours, registerBlockWithItem(colours + "_soapstone_bricks", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
             DYED_SOAPSTONE_BRICK_SLAB.put(colours, registerBlockWithItem(colours + "_soapstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
             DYED_SOAPSTONE_BRICK_WALL.put(colours, registerBlockWithItem(colours + "_soapstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
-            DYED_SOAPSTONE_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_brick_stairs", () -> new ACStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
+            DYED_SOAPSTONE_BRICK_STAIRS.put(colours, registerBlockWithItem(colours + "_soapstone_brick_stairs", () -> new CommonStairBlock(getDyedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedSoapstone(colours.getId())))));
 
             DYED_POLISHED_SOAPSTONE.put(colours, registerBlockWithItem(colours + "_polished_soapstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).sound(ACSoundTypes.SOAPSTONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.2F, 1F))));
             DYED_POLISHED_SOAPSTONE_SLAB.put(colours, registerBlockWithItem(colours + "_polished_soapstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
             DYED_POLISHED_SOAPSTONE_WALL.put(colours, registerBlockWithItem(colours + "_polished_soapstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
-            DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_polished_soapstone_stairs", () -> new ACStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
+            DYED_POLISHED_SOAPSTONE_STAIRS.put(colours, registerBlockWithItem(colours + "_polished_soapstone_stairs", () -> new CommonStairBlock(getDyedPolishedSoapstone(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.copy(getDyedPolishedSoapstone(colours.getId())))));
 
             //CHALK
             CHALK.put(colours.getId(), registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
@@ -502,12 +503,12 @@ public class ACBlocks {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
     }
 
-    private static ACFlammableRotatedPillarBlock corkLog(MapColor mapColor, MapColor mapColor2) {
-        return new ACFlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava());
+    private static FlammableRotatedPillarBlock corkLog(MapColor mapColor, MapColor mapColor2) {
+        return new FlammableRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(blockState -> blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? mapColor : mapColor2).instrument(NoteBlockInstrument.BASS).strength(2.0f).sound(ACSoundTypes.CORK).ignitedByLava());
     }
 
-    private static ACFlammableLeavesBlock leaves(SoundType soundType) {
-        return new ACFlammableLeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2f).randomTicks().sound(soundType).noOcclusion().isValidSpawn(ACBlocks::ocelotOrParrot).isSuffocating(ACBlocks::never).isViewBlocking(ACBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ACBlocks::never));
+    private static FlammableLeavesBlock leaves(SoundType soundType) {
+        return new FlammableLeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2f).randomTicks().sound(soundType).noOcclusion().isValidSpawn(ACBlocks::ocelotOrParrot).isSuffocating(ACBlocks::never).isViewBlocking(ACBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ACBlocks::never));
     }
 
     private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {
