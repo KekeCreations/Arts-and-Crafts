@@ -112,4 +112,11 @@ public class FabricConfig {
     public boolean areDyedDecoratedPotsEnabled() {
         return enableDyedDecoratedPots;
     }
+
+    @Comment("Allows the player to bleach sheep  (Yirmiri wanted this really bad for some reason)")
+    private boolean bleachableSheep = false;
+
+    public boolean bleachableSheep() {
+        return bleachableSheep;
+    }
 }

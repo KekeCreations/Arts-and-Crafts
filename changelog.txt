@@ -10,6 +10,8 @@ Arts & Crafts Changelog
 - Backported ja_jp translations (Thank you Abbage230!)
 - Lotus Pistils are now compostable with a chance of 0.8  (Backported feature)
 - Bleachdew is now compostable with a chance of 0.5 (Backported feature)
+- Fixed mod logger name being grammatically incorrect (Backported change)
+- You can now bleach sheep if you want to???  (Thank Yirmiri for this one)
 
 
 V1.3.2

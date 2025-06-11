@@ -28,4 +28,12 @@ public class ForgeConfigHelper implements ConfigHelper {
         }
         return ForgeConfig.ENABLE_DYED_DECORATED_POTS.get();
     }
+
+    @Override
+    public boolean bleachableSheep() {
+        if (!ForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return ForgeConfig.BLEACHABLE_SHEEP.get();
+    }
 }

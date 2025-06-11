@@ -11,6 +11,8 @@ public class ForgeConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_CHALK_STICKS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DYED_DECORATED_POTS;
 
+    public static final ForgeConfigSpec.BooleanValue BLEACHABLE_SHEEP;
+
 
     static {
         BUILDER.push("Arts & Crafts Config");
@@ -30,6 +32,10 @@ public class ForgeConfig {
         ENABLE_DYED_DECORATED_POTS = BUILDER
                 .comment("Allows decorated pots to be dyed when true. Default value: true")
                 .define("enableDyedDecoratedPots", true);
+
+        BLEACHABLE_SHEEP = BUILDER
+                .comment("Allows the player to bleach sheep  (Yirmiri wanted this really bad for some reason)")
+                .define("enableBleachableSheep", false);
 
 
         BUILDER.pop();
