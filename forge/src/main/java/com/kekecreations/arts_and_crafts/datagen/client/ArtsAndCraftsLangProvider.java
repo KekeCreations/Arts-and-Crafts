@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
+import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -15,6 +16,37 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            String stringColour = StringUtils.capitalize(colour.getName());
+            add(ACBlocks.getCobbledPetraforte(colour), "Cobbled " + stringColour + " Petraforte");
+            add(ACBlocks.getCobbledPetraforteStairs(colour), "Cobbled " + stringColour + " Petraforte Stairs");
+            add(ACBlocks.getCobbledPetraforteSlab(colour), "Cobbled " + stringColour + " Petraforte Slab");
+            add(ACBlocks.getCobbledPetraforteWall(colour), "Cobbled " + stringColour + " Petraforte Wall");
+
+            add(ACBlocks.getPetraforte(colour), stringColour + " Petraforte");
+            add(ACBlocks.getPetraforteStairs(colour), stringColour + " Petraforte Stairs");
+            add(ACBlocks.getPetraforteSlab(colour), stringColour + " Petraforte Slab");
+            add(ACBlocks.getPetraforteWall(colour), stringColour + " Petraforte Wall");
+
+            add(ACBlocks.getChiseledPetraforte(colour), "Chiseled " + stringColour + " Petraforte");
+
+            add(ACBlocks.getPetraforteBricks(colour), stringColour + " Petraforte Bricks");
+            add(ACBlocks.getPetraforteBrickStairs(colour), stringColour + " Petraforte Brick Stairs");
+            add(ACBlocks.getPetraforteBrickSlab(colour), stringColour + " Petraforte Brick Slab");
+            add(ACBlocks.getPetraforteBrickWall(colour), stringColour + " Petraforte Brick Wall");
+
+            add(ACBlocks.getPetrafortePillar(colour), stringColour + " Petraforte Pillar");
+
+            add(ACBlocks.getSmoothPetraforte(colour), "Smooth " + stringColour + " Petraforte");
+            add(ACBlocks.getSmoothPetraforteStairs(colour), "Smooth " + stringColour + " Petraforte Stairs");
+            add(ACBlocks.getSmoothPetraforteSlab(colour), "Smooth " + stringColour + " Petraforte Slab");
+            add(ACBlocks.getSmoothPetraforteWall(colour), "Smooth " + stringColour + " Petraforte Wall");
+
+            add(ACBlocks.getCutPetraforte(colour), "Cut " + stringColour + " Petraforte");
+            add(ACBlocks.getCutPetraforteStairs(colour), "Cut " + stringColour + " Petraforte Stairs");
+            add(ACBlocks.getCutPetraforteSlab(colour), "Cut " + stringColour + " Petraforte Slab");
+            add(ACBlocks.getCutPetraforteWall(colour), "Cut " + stringColour + " Petraforte Wall");
+        }
         for (DyeColor colours : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colours.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
 

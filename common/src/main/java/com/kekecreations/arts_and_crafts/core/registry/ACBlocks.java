@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.common.block.*;
 import com.kekecreations.arts_and_crafts.common.block.grower.CorkTreeGrower;
+import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
 import com.kekecreations.arts_and_crafts.core.init.ACBlockSetType;
 import com.kekecreations.arts_and_crafts.core.init.ACWoodType;
 import com.kekecreations.arts_and_crafts.core.platform.Services;
@@ -94,6 +95,35 @@ public class ACBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DECORATED_POTS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTER = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> COBBLED_PETRAFORTE = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<StairBlock>> COBBLED_PETRAFORTE_STAIRS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<SlabBlock>> COBBLED_PETRAFORTE_SLAB = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<WallBlock>> COBBLED_PETRAFORTE_WALL = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> PETRAFORTE = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<StairBlock>> PETRAFORTE_STAIRS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<SlabBlock>> PETRAFORTE_SLAB = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<WallBlock>> PETRAFORTE_WALL = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> CHISELED_PETRAFORTE = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> PETRAFORTE_BRICKS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<StairBlock>> PETRAFORTE_BRICK_STAIRS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<SlabBlock>> PETRAFORTE_BRICK_SLAB = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<WallBlock>> PETRAFORTE_BRICK_WALL = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<RotatedPillarBlock>> PETRAFORTE_PILLAR = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> SMOOTH_PETRAFORTE = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<StairBlock>> SMOOTH_PETRAFORTE_STAIRS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<SlabBlock>> SMOOTH_PETRAFORTE_SLAB = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<WallBlock>> SMOOTH_PETRAFORTE_WALL = new HashMap<>();
+
+    public static final HashMap<PetraforteColour, Supplier<Block>> CUT_PETRAFORTE = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<StairBlock>> CUT_PETRAFORTE_STAIRS = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<SlabBlock>> CUT_PETRAFORTE_SLAB = new HashMap<>();
+    public static final HashMap<PetraforteColour, Supplier<WallBlock>> CUT_PETRAFORTE_WALL = new HashMap<>();
 
     public static final Supplier<Block> LOTUS_FLOWER = registerBlock("lotus_flower", () -> new LotusFlowerBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).randomTicks().lightLevel(($$0x) -> {
         switch ($$0x.getValue(BlockStateProperties.AGE_3)) {
@@ -299,9 +329,129 @@ public class ACBlocks {
             //DYED DECORATED POTS
             DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
         }
+
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            COBBLED_PETRAFORTE.put(colour, registerBlockWithItem("cobbled_" + colour + "_petraforte", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            COBBLED_PETRAFORTE_STAIRS.put(colour, registerBlockWithItem("cobbled_" + colour + "_petraforte_stairs", () -> new CommonStairBlock(getCobbledPetraforte(colour).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            COBBLED_PETRAFORTE_SLAB.put(colour, registerBlockWithItem("cobbled_" + colour + "_petraforte_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            COBBLED_PETRAFORTE_WALL.put(colour, registerBlockWithItem("cobbled_" + colour + "_petraforte_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).mapColor(colour.getMapColor()))));
+
+            PETRAFORTE.put(colour, registerBlockWithItem(colour + "_petraforte", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).mapColor(colour.getMapColor()))));
+            PETRAFORTE_STAIRS.put(colour, registerBlockWithItem(colour + "_petraforte_stairs", () -> new CommonStairBlock(getPetraforte(colour).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).mapColor(colour.getMapColor()))));
+            PETRAFORTE_SLAB.put(colour, registerBlockWithItem(colour + "_petraforte_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).mapColor(colour.getMapColor()))));
+            PETRAFORTE_WALL.put(colour, registerBlockWithItem(colour + "_petraforte_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).mapColor(colour.getMapColor()))));
+
+            CHISELED_PETRAFORTE.put(colour, registerBlockWithItem("chiseled_" + colour + "_petraforte", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE).mapColor(colour.getMapColor()))));
+
+            PETRAFORTE_BRICKS.put(colour, registerBlockWithItem(colour + "_petraforte_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            PETRAFORTE_BRICK_STAIRS.put(colour, registerBlockWithItem(colour + "_petraforte_brick_stairs", () -> new CommonStairBlock(getPetraforteBricks(colour).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            PETRAFORTE_BRICK_SLAB.put(colour, registerBlockWithItem(colour + "_petraforte_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            PETRAFORTE_BRICK_WALL.put(colour, registerBlockWithItem(colour + "_petraforte_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+
+            PETRAFORTE_PILLAR.put(colour, registerBlockWithItem(colour + "_petraforte_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).mapColor(colour.getMapColor()))));
+
+            SMOOTH_PETRAFORTE.put(colour, registerBlockWithItem("smooth_" + colour + "_petraforte", () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            SMOOTH_PETRAFORTE_STAIRS.put(colour, registerBlockWithItem("smooth_" +colour + "_petraforte_stairs", () -> new CommonStairBlock(getSmoothPetraforte(colour).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            SMOOTH_PETRAFORTE_SLAB.put(colour, registerBlockWithItem("smooth_" +colour + "_petraforte_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).mapColor(colour.getMapColor()))));
+            SMOOTH_PETRAFORTE_WALL.put(colour, registerBlockWithItem("smooth_" +colour + "_petraforte_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).mapColor(colour.getMapColor()))));
+
+            CUT_PETRAFORTE.put(colour, registerBlockWithItem("cut_" + colour + "_petraforte", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            CUT_PETRAFORTE_STAIRS.put(colour, registerBlockWithItem("cut_" +colour + "_petraforte_stairs", () -> new CommonStairBlock(getCutPetraforte(colour).defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            CUT_PETRAFORTE_SLAB.put(colour, registerBlockWithItem("cut_" +colour + "_petraforte_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+            CUT_PETRAFORTE_WALL.put(colour, registerBlockWithItem("cut_" +colour + "_petraforte_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).mapColor(colour.getMapColor()))));
+
+        }
+    }
+    //GET METHODS
+    public static Block getCobbledPetraforte(PetraforteColour colour) {
+        return COBBLED_PETRAFORTE.get(colour).get();
     }
 
-    //GET METHODS
+    public static StairBlock getCobbledPetraforteStairs(PetraforteColour colour) {
+        return COBBLED_PETRAFORTE_STAIRS.get(colour).get();
+    }
+
+    public static SlabBlock getCobbledPetraforteSlab(PetraforteColour colour) {
+        return COBBLED_PETRAFORTE_SLAB.get(colour).get();
+    }
+
+    public static WallBlock getCobbledPetraforteWall(PetraforteColour colour) {
+        return COBBLED_PETRAFORTE_WALL.get(colour).get();
+    }
+
+    public static Block getPetraforte(PetraforteColour colour) {
+        return PETRAFORTE.get(colour).get();
+    }
+
+    public static StairBlock getPetraforteStairs(PetraforteColour colour) {
+        return PETRAFORTE_STAIRS.get(colour).get();
+    }
+
+    public static SlabBlock getPetraforteSlab(PetraforteColour colour) {
+        return PETRAFORTE_SLAB.get(colour).get();
+    }
+
+    public static WallBlock getPetraforteWall(PetraforteColour colour) {
+        return PETRAFORTE_WALL.get(colour).get();
+    }
+
+    public static Block getChiseledPetraforte(PetraforteColour colour) {
+        return CHISELED_PETRAFORTE.get(colour).get();
+    }
+
+    public static Block getPetraforteBricks(PetraforteColour colour) {
+        return PETRAFORTE_BRICKS.get(colour).get();
+    }
+
+    public static StairBlock getPetraforteBrickStairs(PetraforteColour colour) {
+        return PETRAFORTE_BRICK_STAIRS.get(colour).get();
+    }
+
+    public static SlabBlock getPetraforteBrickSlab(PetraforteColour colour) {
+        return PETRAFORTE_BRICK_SLAB.get(colour).get();
+    }
+
+    public static WallBlock getPetraforteBrickWall(PetraforteColour colour) {
+        return PETRAFORTE_BRICK_WALL.get(colour).get();
+    }
+
+    public static RotatedPillarBlock getPetrafortePillar(PetraforteColour colour) {
+        return PETRAFORTE_PILLAR.get(colour).get();
+    }
+
+    public static Block getSmoothPetraforte(PetraforteColour colour) {
+        return SMOOTH_PETRAFORTE.get(colour).get();
+    }
+
+    public static StairBlock getSmoothPetraforteStairs(PetraforteColour colour) {
+        return SMOOTH_PETRAFORTE_STAIRS.get(colour).get();
+    }
+
+    public static SlabBlock getSmoothPetraforteSlab(PetraforteColour colour) {
+        return SMOOTH_PETRAFORTE_SLAB.get(colour).get();
+    }
+
+    public static WallBlock getSmoothPetraforteWall(PetraforteColour colour) {
+        return SMOOTH_PETRAFORTE_WALL.get(colour).get();
+    }
+
+    public static Block getCutPetraforte(PetraforteColour colour) {
+        return CUT_PETRAFORTE.get(colour).get();
+    }
+
+    public static StairBlock getCutPetraforteStairs(PetraforteColour colour) {
+        return CUT_PETRAFORTE_STAIRS.get(colour).get();
+    }
+
+    public static SlabBlock getCutPetraforteSlab(PetraforteColour colour) {
+        return CUT_PETRAFORTE_SLAB.get(colour).get();
+    }
+
+    public static WallBlock getCutPetraforteWall(PetraforteColour colour) {
+        return CUT_PETRAFORTE_WALL.get(colour).get();
+    }
+
+
     //DYED MUD BRICKS
     public static Block getDyedMudBricks(int colours) {
         return DYED_MUD_BRICKS.get(DyeColor.byId(colours)).get();

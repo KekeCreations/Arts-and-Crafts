@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.HolderLookup;
@@ -147,6 +148,15 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
                     .add(ACBlocks.getDyedMudBrickWall(colours.getId()));
         }
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            tag(BlockTags.WALLS)
+                    .add(ACBlocks.getCobbledPetraforteWall(colour))
+                    .add(ACBlocks.getPetraforteWall(colour))
+                    .add(ACBlocks.getPetraforteBrickWall(colour))
+                    .add(ACBlocks.getSmoothPetraforteWall(colour))
+                    .add(ACBlocks.getCutPetraforteWall(colour))
+            ;
+        }
     }
 
     private void appendSlabs() {
@@ -166,6 +176,15 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
                     .add(ACBlocks.getDyedMudBrickSlab(colours.getId()));
         }
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            tag(BlockTags.SLABS)
+                    .add(ACBlocks.getCobbledPetraforteSlab(colour))
+                    .add(ACBlocks.getPetraforteSlab(colour))
+                    .add(ACBlocks.getPetraforteBrickSlab(colour))
+                    .add(ACBlocks.getSmoothPetraforteSlab(colour))
+                    .add(ACBlocks.getCutPetraforteSlab(colour))
+            ;
+        }
     }
     private void appendStairs() {
         this.tag(BlockTags.STAIRS)
@@ -183,6 +202,15 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()))
                     .add(ACBlocks.getDyedMudBrickStairs(colours.getId()));
+        }
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            tag(BlockTags.STAIRS)
+                    .add(ACBlocks.getCobbledPetraforteStairs(colour))
+                    .add(ACBlocks.getPetraforteStairs(colour))
+                    .add(ACBlocks.getPetraforteBrickStairs(colour))
+                    .add(ACBlocks.getSmoothPetraforteStairs(colour))
+                    .add(ACBlocks.getCutPetraforteStairs(colour))
+            ;
         }
     }
 
@@ -249,6 +277,38 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                     .add(ACBlocks.getChalk(colours.getId()))
 
                     .add(ACBlocks.getDyedPlaster(colours.getId()));
+        }
+        for (PetraforteColour colour : PetraforteColour.values()) {
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(ACBlocks.getCobbledPetraforte(colour))
+                    .add(ACBlocks.getCobbledPetraforteStairs(colour))
+                    .add(ACBlocks.getCobbledPetraforteSlab(colour))
+                    .add(ACBlocks.getCobbledPetraforteWall(colour))
+
+                    .add(ACBlocks.getPetraforte(colour))
+                    .add(ACBlocks.getPetraforteStairs(colour))
+                    .add(ACBlocks.getPetraforteSlab(colour))
+                    .add(ACBlocks.getPetraforteWall(colour))
+
+                    .add(ACBlocks.getChiseledPetraforte(colour))
+
+                    .add(ACBlocks.getPetraforteBricks(colour))
+                    .add(ACBlocks.getPetraforteBrickStairs(colour))
+                    .add(ACBlocks.getPetraforteBrickSlab(colour))
+                    .add(ACBlocks.getPetraforteBrickWall(colour))
+
+                    .add(ACBlocks.getPetrafortePillar(colour))
+
+                    .add(ACBlocks.getSmoothPetraforte(colour))
+                    .add(ACBlocks.getSmoothPetraforteStairs(colour))
+                    .add(ACBlocks.getSmoothPetraforteSlab(colour))
+                    .add(ACBlocks.getSmoothPetraforteWall(colour))
+
+                    .add(ACBlocks.getCutPetraforte(colour))
+                    .add(ACBlocks.getCutPetraforteStairs(colour))
+                    .add(ACBlocks.getCutPetraforteSlab(colour))
+                    .add(ACBlocks.getCutPetraforteWall(colour))
+            ;
         }
     }
     private void appendFlowerPots() {

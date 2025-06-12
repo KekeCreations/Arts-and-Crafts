@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
 import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
-import com.kekecreations.arts_and_crafts.core.init.ACValidSigns;
 import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
