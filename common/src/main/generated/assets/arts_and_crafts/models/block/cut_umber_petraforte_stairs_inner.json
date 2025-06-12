@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/cut_umber_petraforte",
-    "side": "arts_and_crafts:block/cut_umber_petraforte",
-    "top": "arts_and_crafts:block/cut_umber_petraforte"
-  }
-}

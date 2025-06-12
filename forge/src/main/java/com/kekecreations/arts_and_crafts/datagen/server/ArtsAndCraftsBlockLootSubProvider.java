@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.datagen.server;
 
 import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
-import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.platform.ForgeRegistryHelper;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -53,7 +53,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         chalkDust();
         decoratedPots();
         mudBricks();
-        petraforte();
+        pietraforte();
         add(ACBlocks.LOTUS_FLOWER.get(), createSingleItemTable(ACItems.LOTUS_PISTILS.get(), ConstantValue.exactly(1.0F)));
     }
 
@@ -179,36 +179,36 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         add(ACBlocks.BLEACHED_CHALK_DUST.get(), noDrop());
     }
 
-    private void petraforte() {
-        for (PetraforteColour colour : PetraforteColour.values()) {
-            dropSelf(ACBlocks.getCobbledPetraforte(colour));
-            dropSelf(ACBlocks.getCobbledPetraforteStairs(colour));
-            add(ACBlocks.getCobbledPetraforteSlab(colour), createSlabItemTable(ACBlocks.getCobbledPetraforteSlab(colour)));
-            dropSelf(ACBlocks.getCobbledPetraforteWall(colour));
+    private void pietraforte() {
+        for (PietraforteColour colour : PietraforteColour.values()) {
+            dropSelf(ACBlocks.getCobbledPietraforte(colour));
+            dropSelf(ACBlocks.getCobbledPietraforteStairs(colour));
+            add(ACBlocks.getCobbledPietraforteSlab(colour), createSlabItemTable(ACBlocks.getCobbledPietraforteSlab(colour)));
+            dropSelf(ACBlocks.getCobbledPietraforteWall(colour));
 
-            dropOther(ACBlocks.getPetraforte(colour), ACBlocks.getCobbledPetraforte(colour));
-            dropSelf(ACBlocks.getPetraforteStairs(colour));
-            add(ACBlocks.getPetraforteSlab(colour), createSlabItemTable(ACBlocks.getPetraforteSlab(colour)));
-            dropSelf(ACBlocks.getPetraforteWall(colour));
+            dropOther(ACBlocks.getPietraforte(colour), ACBlocks.getCobbledPietraforte(colour));
+            dropSelf(ACBlocks.getPietraforteStairs(colour));
+            add(ACBlocks.getPietraforteSlab(colour), createSlabItemTable(ACBlocks.getPietraforteSlab(colour)));
+            dropSelf(ACBlocks.getPietraforteWall(colour));
 
-            dropSelf(ACBlocks.getChiseledPetraforte(colour));
+            dropSelf(ACBlocks.getChiseledPietraforte(colour));
 
-            dropSelf(ACBlocks.getPetraforteBricks(colour));
-            dropSelf(ACBlocks.getPetraforteBrickStairs(colour));
-            add(ACBlocks.getPetraforteBrickSlab(colour), createSlabItemTable(ACBlocks.getPetraforteBrickSlab(colour)));
-            dropSelf(ACBlocks.getPetraforteBrickWall(colour));
+            dropSelf(ACBlocks.getPietraforteBricks(colour));
+            dropSelf(ACBlocks.getPietraforteBrickStairs(colour));
+            add(ACBlocks.getPietraforteBrickSlab(colour), createSlabItemTable(ACBlocks.getPietraforteBrickSlab(colour)));
+            dropSelf(ACBlocks.getPietraforteBrickWall(colour));
 
-            dropSelf(ACBlocks.getPetrafortePillar(colour));
+            dropSelf(ACBlocks.getPietrafortePillar(colour));
 
-            dropSelf(ACBlocks.getSmoothPetraforte(colour));
-            dropSelf(ACBlocks.getSmoothPetraforteStairs(colour));
-            add(ACBlocks.getSmoothPetraforteSlab(colour), createSlabItemTable(ACBlocks.getSmoothPetraforteSlab(colour)));
-            dropSelf(ACBlocks.getSmoothPetraforteWall(colour));
+            dropSelf(ACBlocks.getSmoothPietraforte(colour));
+            dropSelf(ACBlocks.getSmoothPietraforteStairs(colour));
+            add(ACBlocks.getSmoothPietraforteSlab(colour), createSlabItemTable(ACBlocks.getSmoothPietraforteSlab(colour)));
+            dropSelf(ACBlocks.getSmoothPietraforteWall(colour));
 
-            dropSelf(ACBlocks.getCutPetraforte(colour));
-            dropSelf(ACBlocks.getCutPetraforteStairs(colour));
-            add(ACBlocks.getCutPetraforteSlab(colour), createSlabItemTable(ACBlocks.getCutPetraforteSlab(colour)));
-            dropSelf(ACBlocks.getCutPetraforteWall(colour));
+            dropSelf(ACBlocks.getCutPietraforte(colour));
+            dropSelf(ACBlocks.getCutPietraforteStairs(colour));
+            add(ACBlocks.getCutPietraforteSlab(colour), createSlabItemTable(ACBlocks.getCutPietraforteSlab(colour)));
+            dropSelf(ACBlocks.getCutPietraforteWall(colour));
         }
     }
 

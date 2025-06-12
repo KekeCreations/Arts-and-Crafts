@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/marlot_petraforte_bricks",
-    "side": "arts_and_crafts:block/marlot_petraforte_bricks",
-    "top": "arts_and_crafts:block/marlot_petraforte_bricks"
-  }
-}

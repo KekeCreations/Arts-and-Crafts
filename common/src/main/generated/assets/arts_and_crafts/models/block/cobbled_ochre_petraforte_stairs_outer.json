@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/cobbled_ochre_petraforte",
-    "side": "arts_and_crafts:block/cobbled_ochre_petraforte",
-    "top": "arts_and_crafts:block/cobbled_ochre_petraforte"
-  }
-}

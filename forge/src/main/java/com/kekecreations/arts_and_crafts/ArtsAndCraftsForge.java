@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts;
 
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
-import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.core.registry.ACSpriteSources;
 import com.kekecreations.arts_and_crafts.core.config.ForgeConfig;
@@ -171,35 +171,35 @@ public class ArtsAndCraftsForge {
                 addAfter(event, ACBlocks.PLASTER.get(), ACBlocks.getDyedPlaster(colours.getId()));
             }
             addBefore(event, ACBlocks.getChalk(DyeColor.WHITE.getId()), ACBlocks.BLEACHED_CHALK.get());
-            for (PetraforteColour colour : PetraforteColour.values()) {
-                addAfter(event, ACBlocks.getDyedMudBrickWall(DyeColor.PINK.getId()), ACBlocks.getPetraforte(colour));
-                addAfter(event, ACBlocks.getPetraforte(colour), ACBlocks.getPetraforteStairs(colour));
-                addAfter(event, ACBlocks.getPetraforteStairs(colour), ACBlocks.getPetraforteSlab(colour));
-                addAfter(event, ACBlocks.getPetraforteSlab(colour), ACBlocks.getPetraforteWall(colour));
+            for (PietraforteColour colour : PietraforteColour.values()) {
+                addAfter(event, ACBlocks.getDyedMudBrickWall(DyeColor.PINK.getId()), ACBlocks.getPietraforte(colour));
+                addAfter(event, ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteStairs(colour));
+                addAfter(event, ACBlocks.getPietraforteStairs(colour), ACBlocks.getPietraforteSlab(colour));
+                addAfter(event, ACBlocks.getPietraforteSlab(colour), ACBlocks.getPietraforteWall(colour));
 
-                addAfter(event, ACBlocks.getPetraforteWall(colour), ACBlocks.getCobbledPetraforte(colour));
-                addAfter(event, ACBlocks.getCobbledPetraforte(colour), ACBlocks.getCobbledPetraforteStairs(colour));
-                addAfter(event, ACBlocks.getCobbledPetraforteStairs(colour), ACBlocks.getCobbledPetraforteSlab(colour));
-                addAfter(event, ACBlocks.getCobbledPetraforteSlab(colour), ACBlocks.getCobbledPetraforteWall(colour));
+                addAfter(event, ACBlocks.getPietraforteWall(colour), ACBlocks.getCobbledPietraforte(colour));
+                addAfter(event, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getCobbledPietraforteStairs(colour));
+                addAfter(event, ACBlocks.getCobbledPietraforteStairs(colour), ACBlocks.getCobbledPietraforteSlab(colour));
+                addAfter(event, ACBlocks.getCobbledPietraforteSlab(colour), ACBlocks.getCobbledPietraforteWall(colour));
 
-                addAfter(event, ACBlocks.getCobbledPetraforteWall(colour), ACBlocks.getChiseledPetraforte(colour));
+                addAfter(event, ACBlocks.getCobbledPietraforteWall(colour), ACBlocks.getChiseledPietraforte(colour));
 
-                addAfter(event, ACBlocks.getChiseledPetraforte(colour), ACBlocks.getPetraforteBricks(colour));
-                addAfter(event, ACBlocks.getPetraforteBricks(colour), ACBlocks.getPetraforteBrickStairs(colour));
-                addAfter(event, ACBlocks.getPetraforteBrickStairs(colour), ACBlocks.getPetraforteBrickSlab(colour));
-                addAfter(event, ACBlocks.getPetraforteBrickSlab(colour), ACBlocks.getPetraforteBrickWall(colour));
+                addAfter(event, ACBlocks.getChiseledPietraforte(colour), ACBlocks.getPietraforteBricks(colour));
+                addAfter(event, ACBlocks.getPietraforteBricks(colour), ACBlocks.getPietraforteBrickStairs(colour));
+                addAfter(event, ACBlocks.getPietraforteBrickStairs(colour), ACBlocks.getPietraforteBrickSlab(colour));
+                addAfter(event, ACBlocks.getPietraforteBrickSlab(colour), ACBlocks.getPietraforteBrickWall(colour));
 
-                addAfter(event, ACBlocks.getPetraforteBrickWall(colour), ACBlocks.getPetrafortePillar(colour));
+                addAfter(event, ACBlocks.getPietraforteBrickWall(colour), ACBlocks.getPietrafortePillar(colour));
 
-                addAfter(event, ACBlocks.getPetrafortePillar(colour), ACBlocks.getSmoothPetraforte(colour));
-                addAfter(event, ACBlocks.getSmoothPetraforte(colour), ACBlocks.getSmoothPetraforteStairs(colour));
-                addAfter(event, ACBlocks.getSmoothPetraforteStairs(colour), ACBlocks.getSmoothPetraforteSlab(colour));
-                addAfter(event, ACBlocks.getSmoothPetraforteSlab(colour), ACBlocks.getSmoothPetraforteWall(colour));
+                addAfter(event, ACBlocks.getPietrafortePillar(colour), ACBlocks.getSmoothPietraforte(colour));
+                addAfter(event, ACBlocks.getSmoothPietraforte(colour), ACBlocks.getSmoothPietraforteStairs(colour));
+                addAfter(event, ACBlocks.getSmoothPietraforteStairs(colour), ACBlocks.getSmoothPietraforteSlab(colour));
+                addAfter(event, ACBlocks.getSmoothPietraforteSlab(colour), ACBlocks.getSmoothPietraforteWall(colour));
 
-                addAfter(event, ACBlocks.getSmoothPetraforteWall(colour), ACBlocks.getCutPetraforte(colour));
-                addAfter(event, ACBlocks.getCutPetraforte(colour), ACBlocks.getCutPetraforteStairs(colour));
-                addAfter(event, ACBlocks.getCutPetraforteStairs(colour), ACBlocks.getCutPetraforteSlab(colour));
-                addAfter(event, ACBlocks.getCutPetraforteSlab(colour), ACBlocks.getCutPetraforteWall(colour));
+                addAfter(event, ACBlocks.getSmoothPietraforteWall(colour), ACBlocks.getCutPietraforte(colour));
+                addAfter(event, ACBlocks.getCutPietraforte(colour), ACBlocks.getCutPietraforteStairs(colour));
+                addAfter(event, ACBlocks.getCutPietraforteStairs(colour), ACBlocks.getCutPietraforteSlab(colour));
+                addAfter(event, ACBlocks.getCutPietraforteSlab(colour), ACBlocks.getCutPietraforteWall(colour));
 
 
             }

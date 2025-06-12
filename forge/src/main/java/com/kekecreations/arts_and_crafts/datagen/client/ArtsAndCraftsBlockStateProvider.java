@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
 import com.kekecreations.arts_and_crafts.common.util.ACBlockStateProperties;
-import com.kekecreations.arts_and_crafts.common.util.PetraforteColour;
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
@@ -24,36 +24,36 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        for (PetraforteColour colour : PetraforteColour.values()) {
-            cubeAllWithItem(ACBlocks.getCobbledPetraforte(colour));
-            stairsWithItem(ACBlocks.getCobbledPetraforteStairs(colour), ACBlocks.getCobbledPetraforte(colour));
-            slabWithItem(ACBlocks.getCobbledPetraforteSlab(colour), ACBlocks.getCobbledPetraforte(colour));
-            wallWithItem(ACBlocks.getCobbledPetraforteWall(colour), ACBlocks.getCobbledPetraforte(colour));
+        for (PietraforteColour colour : PietraforteColour.values()) {
+            cubeAllWithItem(ACBlocks.getCobbledPietraforte(colour));
+            stairsWithItem(ACBlocks.getCobbledPietraforteStairs(colour), ACBlocks.getCobbledPietraforte(colour));
+            slabWithItem(ACBlocks.getCobbledPietraforteSlab(colour), ACBlocks.getCobbledPietraforte(colour));
+            wallWithItem(ACBlocks.getCobbledPietraforteWall(colour), ACBlocks.getCobbledPietraforte(colour));
 
-            cubeAllWithItem(ACBlocks.getPetraforte(colour));
-            stairsWithItem(ACBlocks.getPetraforteStairs(colour), ACBlocks.getPetraforte(colour));
-            slabWithItem(ACBlocks.getPetraforteSlab(colour), ACBlocks.getPetraforte(colour));
-            wallWithItem(ACBlocks.getPetraforteWall(colour), ACBlocks.getPetraforte(colour));
+            cubeAllWithItem(ACBlocks.getPietraforte(colour));
+            stairsWithItem(ACBlocks.getPietraforteStairs(colour), ACBlocks.getPietraforte(colour));
+            slabWithItem(ACBlocks.getPietraforteSlab(colour), ACBlocks.getPietraforte(colour));
+            wallWithItem(ACBlocks.getPietraforteWall(colour), ACBlocks.getPietraforte(colour));
 
-            cubeAllWithItem(ACBlocks.getChiseledPetraforte(colour));
+            cubeAllWithItem(ACBlocks.getChiseledPietraforte(colour));
 
-            cubeAllWithItem(ACBlocks.getPetraforteBricks(colour));
-            stairsWithItem(ACBlocks.getPetraforteBrickStairs(colour), ACBlocks.getPetraforteBricks(colour));
-            slabWithItem(ACBlocks.getPetraforteBrickSlab(colour), ACBlocks.getPetraforteBricks(colour));
-            wallWithItem(ACBlocks.getPetraforteBrickWall(colour), ACBlocks.getPetraforteBricks(colour));
+            cubeAllWithItem(ACBlocks.getPietraforteBricks(colour));
+            stairsWithItem(ACBlocks.getPietraforteBrickStairs(colour), ACBlocks.getPietraforteBricks(colour));
+            slabWithItem(ACBlocks.getPietraforteBrickSlab(colour), ACBlocks.getPietraforteBricks(colour));
+            wallWithItem(ACBlocks.getPietraforteBrickWall(colour), ACBlocks.getPietraforteBricks(colour));
 
-            logWithItem(ACBlocks.getPetrafortePillar(colour));
+            logWithItem(ACBlocks.getPietrafortePillar(colour));
 
-            cubeAllWithItem(ACBlocks.getSmoothPetraforte(colour));
-            stairsWithItem(ACBlocks.getSmoothPetraforteStairs(colour), ACBlocks.getSmoothPetraforte(colour));
-            slabWithItem(ACBlocks.getSmoothPetraforteSlab(colour), ACBlocks.getSmoothPetraforte(colour));
-            wallWithItem(ACBlocks.getSmoothPetraforteWall(colour), ACBlocks.getSmoothPetraforte(colour));
+            cubeAllWithItem(ACBlocks.getSmoothPietraforte(colour));
+            stairsWithItem(ACBlocks.getSmoothPietraforteStairs(colour), ACBlocks.getSmoothPietraforte(colour));
+            slabWithItem(ACBlocks.getSmoothPietraforteSlab(colour), ACBlocks.getSmoothPietraforte(colour));
+            wallWithItem(ACBlocks.getSmoothPietraforteWall(colour), ACBlocks.getSmoothPietraforte(colour));
 
 
-            cubeAllWithItem(ACBlocks.getCutPetraforte(colour));
-            stairsWithItem(ACBlocks.getCutPetraforteStairs(colour), ACBlocks.getCutPetraforte(colour));
-            slabWithItem(ACBlocks.getCutPetraforteSlab(colour), ACBlocks.getCutPetraforte(colour));
-            wallWithItem(ACBlocks.getCutPetraforteWall(colour), ACBlocks.getCutPetraforte(colour));
+            cubeAllWithItem(ACBlocks.getCutPietraforte(colour));
+            stairsWithItem(ACBlocks.getCutPietraforteStairs(colour), ACBlocks.getCutPietraforte(colour));
+            slabWithItem(ACBlocks.getCutPietraforteSlab(colour), ACBlocks.getCutPietraforte(colour));
+            wallWithItem(ACBlocks.getCutPietraforteWall(colour), ACBlocks.getCutPietraforte(colour));
         }
         //GYPSUM
         cubeAllWithItem(ACBlocks.GYPSUM.get());
