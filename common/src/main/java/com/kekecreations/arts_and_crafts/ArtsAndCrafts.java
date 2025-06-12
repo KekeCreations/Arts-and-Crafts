@@ -23,6 +23,7 @@ public class ArtsAndCrafts {
         ACRegistries.register();
         ACCustomSherdPatterns.register();
         ACRecipeSerializer.register();
+        ACTabs.register();
     }
 
 

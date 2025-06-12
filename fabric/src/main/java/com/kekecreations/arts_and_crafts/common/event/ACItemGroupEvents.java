@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.event;
 
+import com.kekecreations.arts_and_crafts.common.util.pietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
@@ -77,6 +78,37 @@ public class ACItemGroupEvents {
                 event.addAfter(ACBlocks.PLASTER.get(), ACBlocks.getDyedPlaster(colours.getId()));
             }
             event.addBefore(ACBlocks.getChalk(DyeColor.WHITE.getId()), ACBlocks.BLEACHED_CHALK.get());
+
+            for (pietraforteColour colour : pietraforteColour.values()) {
+                event.addAfter(ACBlocks.getDyedMudBrickWall(DyeColor.PINK.getId()), ACBlocks.getpietraforte(colour));
+                event.addAfter(ACBlocks.getpietraforte(colour), ACBlocks.getpietraforteStairs(colour));
+                event.addAfter(ACBlocks.getpietraforteStairs(colour), ACBlocks.getpietraforteSlab(colour));
+                event.addAfter(ACBlocks.getpietraforteSlab(colour), ACBlocks.getpietraforteWall(colour));
+
+                event.addAfter(ACBlocks.getpietraforteWall(colour), ACBlocks.getCobbledpietraforte(colour));
+                event.addAfter(ACBlocks.getCobbledpietraforte(colour), ACBlocks.getCobbledpietraforteStairs(colour));
+                event.addAfter(ACBlocks.getCobbledpietraforteStairs(colour), ACBlocks.getCobbledpietraforteSlab(colour));
+                event.addAfter(ACBlocks.getCobbledpietraforteSlab(colour), ACBlocks.getCobbledpietraforteWall(colour));
+
+                event.addAfter(ACBlocks.getCobbledpietraforteWall(colour), ACBlocks.getChiseledpietraforte(colour));
+
+                event.addAfter(ACBlocks.getChiseledpietraforte(colour), ACBlocks.getpietraforteBricks(colour));
+                event.addAfter(ACBlocks.getpietraforteBricks(colour), ACBlocks.getpietraforteBrickStairs(colour));
+                event.addAfter(ACBlocks.getpietraforteBrickStairs(colour), ACBlocks.getpietraforteBrickSlab(colour));
+                event.addAfter(ACBlocks.getpietraforteBrickSlab(colour), ACBlocks.getpietraforteBrickWall(colour));
+
+                event.addAfter(ACBlocks.getpietraforteBrickWall(colour), ACBlocks.getpietrafortePillar(colour));
+
+                event.addAfter(ACBlocks.getpietrafortePillar(colour), ACBlocks.getSmoothpietraforte(colour));
+                event.addAfter(ACBlocks.getSmoothpietraforte(colour), ACBlocks.getSmoothpietraforteStairs(colour));
+                event.addAfter(ACBlocks.getSmoothpietraforteStairs(colour), ACBlocks.getSmoothpietraforteSlab(colour));
+                event.addAfter(ACBlocks.getSmoothpietraforteSlab(colour), ACBlocks.getSmoothpietraforteWall(colour));
+
+                event.addAfter(ACBlocks.getSmoothpietraforteWall(colour), ACBlocks.getCutpietraforte(colour));
+                event.addAfter(ACBlocks.getCutpietraforte(colour), ACBlocks.getCutpietraforteStairs(colour));
+                event.addAfter(ACBlocks.getCutpietraforteStairs(colour), ACBlocks.getCutpietraforteSlab(colour));
+                event.addAfter(ACBlocks.getCutpietraforteSlab(colour), ACBlocks.getCutpietraforteWall(colour));
+            }
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(event -> {
             event.accept(ACBlocks.getChalk(DyeColor.WHITE.getId()));
