@@ -35,6 +35,11 @@ public class ACFeatures {
         public static final ResourceKey<PlacedFeature> SHORE_CHALK_PATCH = createKey("shore_chalk_patch");
         public static final ResourceKey<PlacedFeature> GYPSUM_PATCH = createKey("gypsum_patch");
 
+        public static final ResourceKey<PlacedFeature> VERDANT_PIETRAFORTE_PATCH = createKey("verdant_pietraforte_patch");
+        public static final ResourceKey<PlacedFeature> OCHRE_PIETRAFORTE_PATCH = createKey("ochre_pietraforte_patch");
+        public static final ResourceKey<PlacedFeature> MARLOT_PIETRAFORTE_PATCH = createKey("marlot_pietraforte_patch");
+        public static final ResourceKey<PlacedFeature> IVORY_PIETRAFORTE_PATCH = createKey("ivory_pietraforte_patch");
+
 
         public static ResourceKey<PlacedFeature> createKey(String name) {
             return ResourceKey.create(Registries.PLACED_FEATURE, ArtsAndCrafts.id(name));

@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:beach",
+    "minecraft:desert"
+  ],
+  "features": [
+    "arts_and_crafts:ochre_pietraforte_patch"
+  ],
+  "step": "underground_decoration"
+}

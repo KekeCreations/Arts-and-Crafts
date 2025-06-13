@@ -19,7 +19,17 @@ Backported Features
 - Rewrote a majority of the mod and started using JinxedLib Features
 - Fixed Chalk Sticks not using dimensional max build height
 - Fixed licensing in the mod description.
+- Backported the creative mode tab.
 Features
+- Added Pietraforte Block Set
+- Added Cobbled Pietraforte Block Set
+- Added Pietraforte Bricks Block Set
+- Added Smooth Pietraforte Block Set
+- Added Cut Pietraforte Block Set
+- Added Chiseled Pietraforte Block Set
+- Added Pietraforte Pillar Block Set
+- Updated Ari's name in credits
+
 
 
 

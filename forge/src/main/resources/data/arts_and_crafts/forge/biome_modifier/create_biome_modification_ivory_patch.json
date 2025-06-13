@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:stony_peaks"
+  ],
+  "features": [
+    "arts_and_crafts:ivory_pietraforte_patch"
+  ],
+  "step": "underground_decoration"
+}

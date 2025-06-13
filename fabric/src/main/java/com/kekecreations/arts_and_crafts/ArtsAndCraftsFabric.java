@@ -57,6 +57,11 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_PEAKS), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_SHORE), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.SHORE_CHALK_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.GYPSUM_PATCH);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.FOREST, Biomes.JUNGLE), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.VERDANT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.BEACH, Biomes.DESERT), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.OCHRE_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.JUNGLE, Biomes.BADLANDS), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.MARLOT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_PEAKS), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.IVORY_PIETRAFORTE_PATCH);
     }
 
 
