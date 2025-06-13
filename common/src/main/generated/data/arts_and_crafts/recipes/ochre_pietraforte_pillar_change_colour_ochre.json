@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:ochre_pietraforte_pillar"
+    },
+    "X": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:marlot_pietraforte_pillar"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:umber_pietraforte_pillar_change_colour"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "marlot_pietraforte_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:marlot_pietraforte_pillar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "marlot_pietraforte_pillar",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:umber_pietraforte_pillar_change_colour"
+    ]
+  },
+  "sends_telemetry_event": false
+}

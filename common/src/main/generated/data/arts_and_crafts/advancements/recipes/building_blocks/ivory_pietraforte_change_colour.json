@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:ivory_pietraforte_change_colour"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "verdant_pietraforte": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:verdant_pietraforte"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "verdant_pietraforte",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:ivory_pietraforte_change_colour"
+    ]
+  },
+  "sends_telemetry_event": false
+}

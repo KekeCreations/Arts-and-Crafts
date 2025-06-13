@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.datagen.server;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -9,7 +10,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -28,6 +31,91 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> recipeConsumer) {
+        colourChangeRecipe(ACBlocks.getCobbledPietraforte(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getCobbledPietraforte(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCobbledPietraforte(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getCobbledPietraforte(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getCobbledPietraforte(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getCobbledPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getCobbledPietraforte(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getCobbledPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCobbledPietraforte(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getCobbledPietraforte(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCobbledPietraforte(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getCobbledPietraforte(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCobbledPietraforte(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getCobbledPietraforte(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getPietraforte(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getPietraforte(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforte(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getPietraforte(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getPietraforte(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getPietraforte(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforte(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getPietraforte(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforte(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getPietraforte(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforte(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getPietraforte(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getPietraforteBricks(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getPietraforteBricks(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforteBricks(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getPietraforteBricks(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getPietraforteBricks(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getPietraforteBricks(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getPietraforteBricks(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getPietraforteBricks(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforteBricks(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getPietraforteBricks(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforteBricks(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getPietraforteBricks(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietraforteBricks(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getPietraforteBricks(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getSmoothPietraforte(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getSmoothPietraforte(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getSmoothPietraforte(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getSmoothPietraforte(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getSmoothPietraforte(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getSmoothPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getSmoothPietraforte(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getSmoothPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getSmoothPietraforte(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getSmoothPietraforte(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getSmoothPietraforte(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getSmoothPietraforte(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getSmoothPietraforte(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getSmoothPietraforte(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getCutPietraforte(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getCutPietraforte(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCutPietraforte(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getCutPietraforte(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getCutPietraforte(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getCutPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getCutPietraforte(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getCutPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCutPietraforte(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getCutPietraforte(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCutPietraforte(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getCutPietraforte(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getCutPietraforte(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getCutPietraforte(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getChiseledPietraforte(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getChiseledPietraforte(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getChiseledPietraforte(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getChiseledPietraforte(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getChiseledPietraforte(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getChiseledPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getChiseledPietraforte(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getChiseledPietraforte(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getChiseledPietraforte(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getChiseledPietraforte(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getChiseledPietraforte(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getChiseledPietraforte(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getChiseledPietraforte(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getChiseledPietraforte(PietraforteColour.UMBER), recipeConsumer);
+
+        colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.VERDANT), Items.QUARTZ, ACBlocks.getPietrafortePillar(PietraforteColour.IVORY), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.OCHRE), Items.QUARTZ, ACBlocks.getPietrafortePillar(PietraforteColour.BEIGE), recipeConsumer);
+        colourChangeRecipe("_verdant", ACBlocks.getPietrafortePillar(PietraforteColour.VERDANT), Items.TERRACOTTA, ACBlocks.getPietrafortePillar(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe("_ochre", ACBlocks.getPietrafortePillar(PietraforteColour.OCHRE), Items.TERRACOTTA, ACBlocks.getPietrafortePillar(PietraforteColour.MARLOT), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.VERDANT), Items.COAL, ACBlocks.getPietrafortePillar(PietraforteColour.JET), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.OCHRE), Items.COAL, ACBlocks.getPietrafortePillar(PietraforteColour.HAZEL), recipeConsumer);
+        colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getPietrafortePillar(PietraforteColour.UMBER), recipeConsumer);
+
+
+        simpleCookingRecipe(recipeConsumer, RecipeSerializer.BLASTING_RECIPE, ACBlocks.getPietraforte(PietraforteColour.VERDANT), ACBlocks.getPietraforte(PietraforteColour.OCHRE), RecipeCategory.BUILDING_BLOCKS, 0, 150, "colourchange", "_cooking");
+        simpleCookingRecipe(recipeConsumer, RecipeSerializer.BLASTING_RECIPE, ACBlocks.getPietraforte(PietraforteColour.OCHRE), ACBlocks.getPietraforte(PietraforteColour.VERDANT), RecipeCategory.BUILDING_BLOCKS, 0, 150, "colourchange", "_cooking");
+        for (PietraforteColour colour : PietraforteColour.values()) {
+            simpleCookingRecipe(recipeConsumer, RecipeSerializer.SMELTING_RECIPE, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietraforte(colour), RecipeCategory.BUILDING_BLOCKS, 0.5F, 150, "smelt_pietraforte", "_smelting");
+            //TYPE Recipe
+            typeRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteBricks(colour), recipeConsumer);
+            typeRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getCutPietraforte(colour), recipeConsumer);
+            chiseledRecipe(ACBlocks.getPietraforteSlab(colour), ACBlocks.getSmoothPietraforte(colour), "arts_and_crafts:smooth_pietraforte_" + colour.getName(), recipeConsumer);
+            chiseledRecipe(ACBlocks.getSmoothPietraforteSlab(colour), ACBlocks.getCutPietraforte(colour), "arts_and_crafts:cut_pietraforte_" + colour.getName(), recipeConsumer);
+            //SLABS Recipe
+            slabRecipe(ACBlocks.getCobbledPietraforte(colour), ACBlocks.getCobbledPietraforteSlab(colour), recipeConsumer);
+            slabRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteSlab(colour), recipeConsumer);
+            slabRecipe(ACBlocks.getPietraforteBricks(colour), ACBlocks.getPietraforteBrickSlab(colour), recipeConsumer);
+            slabRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getSmoothPietraforteSlab(colour), recipeConsumer);
+            slabRecipe(ACBlocks.getCutPietraforte(colour), ACBlocks.getCutPietraforteSlab(colour), recipeConsumer);
+            //STAIRS Recipe
+            stairRecipe(ACBlocks.getCobbledPietraforte(colour), ACBlocks.getCobbledPietraforteStairs(colour), recipeConsumer);
+            stairRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteStairs(colour), recipeConsumer);
+            stairRecipe(ACBlocks.getPietraforteBricks(colour), ACBlocks.getPietraforteBrickStairs(colour), recipeConsumer);
+            stairRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getSmoothPietraforteStairs(colour), recipeConsumer);
+            stairRecipe(ACBlocks.getCutPietraforte(colour), ACBlocks.getCutPietraforteStairs(colour), recipeConsumer);
+            //SLABS Recipe
+            wallRecipe(ACBlocks.getCobbledPietraforte(colour), ACBlocks.getCobbledPietraforteWall(colour), recipeConsumer);
+            wallRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteWall(colour), recipeConsumer);
+            wallRecipe(ACBlocks.getPietraforteBricks(colour), ACBlocks.getPietraforteBrickWall(colour), recipeConsumer);
+            wallRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getSmoothPietraforteWall(colour), recipeConsumer);
+            wallRecipe(ACBlocks.getCutPietraforte(colour), ACBlocks.getCutPietraforteWall(colour), recipeConsumer);
+        }
 
         //DYE BLOCKS
         List<Item> dyeList = List.of(Items.BLACK_DYE, Items.BLUE_DYE, Items.BROWN_DYE, Items.CYAN_DYE, Items.GRAY_DYE, Items.GREEN_DYE, Items.LIGHT_BLUE_DYE, Items.LIGHT_GRAY_DYE, Items.LIME_DYE, Items.MAGENTA_DYE, Items.ORANGE_DYE, Items.PINK_DYE, Items.PURPLE_DYE, Items.RED_DYE, Items.YELLOW_DYE, Items.WHITE_DYE);
@@ -344,6 +432,34 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer);
     }
+
+    protected static void colourChangeRecipe(Block craftingBlock, Item craftingItem, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
+                .pattern("XK")
+                .pattern("KX")
+                .define('K', craftingBlock)
+                .define('X', craftingItem)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer, "arts_and_crafts:" + getItemName(resultBlock) + "_change_colour");
+    }
+
+    protected static void colourChangeRecipe(String string, Block craftingBlock, Item craftingItem, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
+                .pattern("XK")
+                .pattern("KX")
+                .define('K', craftingBlock)
+                .define('X', craftingItem)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_change_colour" + string);
+    }
+
+    protected static void chiseledRecipe(Block craftingBlock, Block resultBlock, String string, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,1)
+                .pattern("KK")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer, string);
+    }
     protected static void paintbrushRecipe(DyeColor dyeColour, PaintbrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem,1)
                 .pattern("KK")
@@ -469,5 +585,10 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
     protected static void buttonRecipes(RecipeCategory category, ItemLike ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
         ShapelessRecipeBuilder.shapeless(category, result.get()).requires(ingredient)
                 .unlockedBy(getHasName(ingredient), has(ingredient)).save(consumer);
+    }
+
+    protected static void simpleCookingRecipe(Consumer<FinishedRecipe> consumer, RecipeSerializer<? extends AbstractCookingRecipe> recipeSerializer, ItemLike craftingItem, ItemLike p_250066_, RecipeCategory p_251154_, float xp, int time, String p_251450_, String p_249236_) {
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(craftingItem), p_251154_, p_250066_, xp, time, recipeSerializer).group(p_251450_).unlockedBy(getHasName(craftingItem), has(craftingItem)).save(consumer, "arts_and_crafts:" + getItemName(p_250066_) + p_249236_ + "_" + getItemName(craftingItem));
+
     }
 }

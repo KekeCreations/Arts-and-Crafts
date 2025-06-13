@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:smooth_verdant_pietraforte_change_colour_verdant"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smooth_verdant_pietraforte": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:smooth_verdant_pietraforte"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smooth_verdant_pietraforte",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:smooth_verdant_pietraforte_change_colour_verdant"
+    ]
+  },
+  "sends_telemetry_event": false
+}

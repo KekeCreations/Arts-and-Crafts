@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "beige_pietraforte_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:beige_pietraforte_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:smooth_pietraforte_beige"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "beige_pietraforte_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:smooth_pietraforte_beige"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:ochre_pietraforte"
+    },
+    "X": {
+      "item": "minecraft:coal"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:hazel_pietraforte"
+  },
+  "show_notification": true
+}

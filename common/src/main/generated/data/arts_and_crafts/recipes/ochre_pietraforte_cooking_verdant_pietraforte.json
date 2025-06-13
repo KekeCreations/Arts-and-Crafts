@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 150,
+  "experience": 0.0,
+  "group": "colourchange",
+  "ingredient": {
+    "item": "arts_and_crafts:verdant_pietraforte"
+  },
+  "result": "arts_and_crafts:ochre_pietraforte"
+}
