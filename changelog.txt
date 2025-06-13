@@ -1,6 +1,7 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### V1.5.0
+### PLEASE NOTE THIS VERSION DOESN'T WORK WITH THE ARTS & CRAFTS COMPATIBILITY MOD
 Backported Features
 - Backported adding JinxedLib
 - Backported code base changes
