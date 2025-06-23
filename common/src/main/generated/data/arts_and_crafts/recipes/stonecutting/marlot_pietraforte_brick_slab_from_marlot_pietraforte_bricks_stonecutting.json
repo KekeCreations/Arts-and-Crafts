@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "arts_and_crafts:marlot_pietraforte_bricks"
+  },
+  "result": "arts_and_crafts:marlot_pietraforte_brick_slab"
+}

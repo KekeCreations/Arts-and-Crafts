@@ -1,5 +1,20 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.5.1
+- Fixed Cork Log Strippable Behaviour On Forge!
+- Fixed Cork Hanging Signs & Signs not having tags
+- Fixed Bleached Chalk & Bleached Concrete missing the mineable pickaxe tag
+- Fixed Bleached Bed missing the beds tag
+- Fixed Bleached Concrete Powder missing the mineable shovel tag
+- Fixed Bleached Bed and wool missing item tags
+- Smooth Pietraforte is now made through smelting
+- You can now craft Chiseled Pietraforte
+- You can now craft Pietraforte Pillars
+- Pietraforte now has stonecutter recipes!
+
+
+
+
 ### V1.5.0
 Backported Features
 - Backported adding JinxedLib

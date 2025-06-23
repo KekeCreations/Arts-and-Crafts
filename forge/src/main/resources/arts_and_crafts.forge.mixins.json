@@ -8,7 +8,8 @@
   ],
   "mixins": [
     "ACBedBlockItemSelfMixin",
-    "DyedDecoratedPotBlockItemSelfMixin"
+    "DyedDecoratedPotBlockItemSelfMixin",
+    "FlammableRotatedPillarBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

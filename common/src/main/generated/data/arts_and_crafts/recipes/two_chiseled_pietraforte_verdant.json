@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:cobbled_verdant_pietraforte_slab"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "item": "arts_and_crafts:chiseled_verdant_pietraforte"
+  },
+  "show_notification": true
+}

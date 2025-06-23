@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_marlot_pietraforte": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:marlot_pietraforte"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:stonecutting/marlot_pietraforte_stairs_from_marlot_pietraforte_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_marlot_pietraforte",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:stonecutting/marlot_pietraforte_stairs_from_marlot_pietraforte_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

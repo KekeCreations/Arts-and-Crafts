@@ -43,6 +43,56 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
         appendChalkDust();
         appendWoolCarpets();
         appendWool();
+        appendAllHangingSigns();
+        appendAllSigns();
+        appendWallSigns();
+        appendSigns();
+        appendHangingSigns();
+        appendWallHangingSigns();
+        appendBeds();
+        appendShovels();
+    }
+
+    private void appendBeds() {
+        this.tag(BlockTags.BEDS)
+                .add(ACBlocks.BLEACHED_BED.get());
+    }
+
+    private void appendShovels() {
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ACBlocks.BLEACHED_CONCRETE_POWDER.get());
+    }
+
+    private void appendAllSigns() {
+        this.tag(BlockTags.ALL_SIGNS)
+                .add(ACBlocks.CORK_HANGING_SIGN.get())
+                .add(ACBlocks.CORK_WALL_HANGING_SIGN.get());
+    }
+
+    private void appendWallSigns() {
+        this.tag(BlockTags.WALL_SIGNS)
+                .add(ACBlocks.CORK_WALL_HANGING_SIGN.get());
+    }
+
+    private void appendSigns() {
+        this.tag(BlockTags.SIGNS)
+                .add(ACBlocks.CORK_HANGING_SIGN.get());
+    }
+
+    private void appendAllHangingSigns() {
+        this.tag(BlockTags.ALL_HANGING_SIGNS)
+                .add(ACBlocks.CORK_HANGING_SIGN.get())
+                .add(ACBlocks.CORK_WALL_HANGING_SIGN.get());
+    }
+
+    private void appendHangingSigns() {
+        this.tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(ACBlocks.CORK_HANGING_SIGN.get());
+    }
+
+    private void appendWallHangingSigns() {
+        this.tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(ACBlocks.CORK_WALL_HANGING_SIGN.get());
     }
 
     private void appendWool() {
@@ -217,6 +267,8 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
 
     private void appendPickaxes() {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ACBlocks.BLEACHED_CONCRETE.get())
+                .add(ACBlocks.BLEACHED_CHALK.get())
                 .add(ACBlocks.GLAZED_TERRACOTTA.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLES.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get())

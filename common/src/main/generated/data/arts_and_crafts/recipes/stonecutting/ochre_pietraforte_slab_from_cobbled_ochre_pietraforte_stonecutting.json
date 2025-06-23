@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "arts_and_crafts:cobbled_ochre_pietraforte"
+  },
+  "result": "arts_and_crafts:ochre_pietraforte_slab"
+}

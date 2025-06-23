@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "arts_and_crafts:ivory_pietraforte"
+  },
+  "result": "arts_and_crafts:ivory_pietraforte_brick_stairs"
+}

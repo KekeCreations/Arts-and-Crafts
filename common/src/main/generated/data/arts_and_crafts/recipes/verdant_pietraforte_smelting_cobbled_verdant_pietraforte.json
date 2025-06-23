@@ -3,7 +3,7 @@
   "category": "blocks",
   "cookingtime": 150,
   "experience": 0.5,
-  "group": "smelt_pietraforte",
+  "group": "pietraforte",
   "ingredient": {
     "item": "arts_and_crafts:cobbled_verdant_pietraforte"
   },

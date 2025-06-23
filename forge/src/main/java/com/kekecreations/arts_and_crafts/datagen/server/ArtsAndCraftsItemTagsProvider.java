@@ -46,7 +46,20 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendHangingSigns();
         appendSaplings();
         appendFenceGates();
+        appendBeds();
+        appendWools();
     }
+
+    private void appendBeds() {
+        this.tag(ItemTags.BEDS)
+                .add(ACBlocks.BLEACHED_BED.get().asItem());
+    }
+
+    private void appendWools() {
+        this.tag(ItemTags.WOOL)
+                .add(ACBlocks.BLEACHED_WOOL.get().asItem());
+    }
+
     private void appendFenceGates() {
         this.tag(ItemTags.FENCE_GATES)
                 .add(ACBlocks.CORK_FENCE_GATE.get().asItem());

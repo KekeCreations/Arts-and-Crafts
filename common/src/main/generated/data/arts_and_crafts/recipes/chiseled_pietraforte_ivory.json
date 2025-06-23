@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "arts_and_crafts:ivory_pietraforte_slab"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "item": "arts_and_crafts:chiseled_ivory_pietraforte"
+  },
+  "show_notification": true
+}

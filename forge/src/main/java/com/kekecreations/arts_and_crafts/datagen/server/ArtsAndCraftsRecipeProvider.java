@@ -91,12 +91,15 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
         simpleCookingRecipe(recipeConsumer, RecipeSerializer.BLASTING_RECIPE, ACBlocks.getPietraforte(PietraforteColour.VERDANT), ACBlocks.getPietraforte(PietraforteColour.OCHRE), RecipeCategory.BUILDING_BLOCKS, 0, 150, "colourchange", "_cooking");
         simpleCookingRecipe(recipeConsumer, RecipeSerializer.BLASTING_RECIPE, ACBlocks.getPietraforte(PietraforteColour.OCHRE), ACBlocks.getPietraforte(PietraforteColour.VERDANT), RecipeCategory.BUILDING_BLOCKS, 0, 150, "colourchange", "_cooking");
         for (PietraforteColour colour : PietraforteColour.values()) {
-            simpleCookingRecipe(recipeConsumer, RecipeSerializer.SMELTING_RECIPE, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietraforte(colour), RecipeCategory.BUILDING_BLOCKS, 0.5F, 150, "smelt_pietraforte", "_smelting");
+            simpleCookingRecipe(recipeConsumer, RecipeSerializer.SMELTING_RECIPE, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietraforte(colour), RecipeCategory.BUILDING_BLOCKS, 0.5F, 150, "pietraforte", "_smelting");
+            simpleCookingRecipe(recipeConsumer, RecipeSerializer.SMELTING_RECIPE, ACBlocks.getPietraforte(colour), ACBlocks.getSmoothPietraforte(colour), RecipeCategory.BUILDING_BLOCKS, 0.5F, 150, "smooth_pietraforte", "_smelting");
             //TYPE Recipe
             typeRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteBricks(colour), recipeConsumer);
             typeRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getCutPietraforte(colour), recipeConsumer);
-            chiseledRecipe(ACBlocks.getPietraforteSlab(colour), ACBlocks.getSmoothPietraforte(colour), "arts_and_crafts:smooth_pietraforte_" + colour.getName(), recipeConsumer);
-            chiseledRecipe(ACBlocks.getSmoothPietraforteSlab(colour), ACBlocks.getCutPietraforte(colour), "arts_and_crafts:cut_pietraforte_" + colour.getName(), recipeConsumer);
+            chiseledOrPillarRecipe(ACBlocks.getPietraforteSlab(colour), ACBlocks.getChiseledPietraforte(colour), 1, "arts_and_crafts:chiseled_pietraforte_" + colour.getName(), recipeConsumer);
+            chiseledOrPillarRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietrafortePillar(colour), 2, "arts_and_crafts:pietraforte_pillar_" + colour.getName(), recipeConsumer);
+            chiseledOrPillarRecipe(ACBlocks.getCobbledPietraforteSlab(colour), ACBlocks.getChiseledPietraforte(colour), 1, "arts_and_crafts:two_chiseled_pietraforte_" + colour.getName(), recipeConsumer);
+            chiseledOrPillarRecipe(ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietrafortePillar(colour), 2, "arts_and_crafts:two_pietraforte_pillar_" + colour.getName(), recipeConsumer);
             //SLABS Recipe
             slabRecipe(ACBlocks.getCobbledPietraforte(colour), ACBlocks.getCobbledPietraforteSlab(colour), recipeConsumer);
             slabRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteSlab(colour), recipeConsumer);
@@ -115,6 +118,60 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             wallRecipe(ACBlocks.getPietraforteBricks(colour), ACBlocks.getPietraforteBrickWall(colour), recipeConsumer);
             wallRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getSmoothPietraforteWall(colour), recipeConsumer);
             wallRecipe(ACBlocks.getCutPietraforte(colour), ACBlocks.getCutPietraforteWall(colour), recipeConsumer);
+
+            //STONECUTTER RECIPES - COBBLE
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBricks(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietrafortePillar(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getChiseledPietraforte(colour).asItem(), 1, recipeConsumer);
+
+            //STONECUTTER RECIPES - NORMAL
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteBricks(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforte(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getCutPietraforte(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getCutPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getCutPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getCutPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getPietrafortePillar(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforte(colour).asItem(), ACBlocks.getChiseledPietraforte(colour).asItem(), 1, recipeConsumer);
+
+            //STONECUTTER RECIPES - BRICK
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforteBricks(colour).asItem(), ACBlocks.getPietraforteBrickStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforteBricks(colour).asItem(), ACBlocks.getPietraforteBrickSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getPietraforteBricks(colour).asItem(), ACBlocks.getPietraforteBrickWall(colour).asItem(), 1, recipeConsumer);
+
+            //STONECUTTER RECIPES - SMOOTH
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getSmoothPietraforteWall(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getCutPietraforte(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getCutPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getCutPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getSmoothPietraforte(colour).asItem(), ACBlocks.getCutPietraforteWall(colour).asItem(), 1, recipeConsumer);
+
+            //STONECUTTER RECIPES - CUT
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCutPietraforte(colour).asItem(), ACBlocks.getCutPietraforteStairs(colour).asItem(), 1, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCutPietraforte(colour).asItem(), ACBlocks.getCutPietraforteSlab(colour).asItem(), 2, recipeConsumer);
+            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCutPietraforte(colour).asItem(), ACBlocks.getCutPietraforteWall(colour).asItem(), 1, recipeConsumer);
+
+
         }
 
         //DYE BLOCKS
@@ -453,9 +510,10 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
                 .save(recipeConsumer, "arts_and_crafts:" + getItemName(craftingBlock) + "_change_colour" + string);
     }
 
-    protected static void chiseledRecipe(Block craftingBlock, Block resultBlock, String string, Consumer<FinishedRecipe> recipeConsumer) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,1)
-                .pattern("KK")
+    protected static void chiseledOrPillarRecipe(Block craftingBlock, Block resultBlock, int count, String string, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,count)
+                .pattern("K")
+                .pattern("K")
                 .define('K', craftingBlock)
                 .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer, string);
