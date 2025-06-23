@@ -123,9 +123,6 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteStairs(colour).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteSlab(colour).asItem(), 2, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getCobbledPietraforteWall(colour).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteStairs(colour).asItem(), 1, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteSlab(colour).asItem(), 2, recipeConsumer);
-            stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteWall(colour).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBricks(colour).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickStairs(colour).asItem(), 1, recipeConsumer);
             stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getCobbledPietraforte(colour).asItem(), ACBlocks.getPietraforteBrickSlab(colour).asItem(), 2, recipeConsumer);
