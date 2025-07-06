@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.5.1
+- Arts & Crafts Creative Category Tab is now enabled by default
+
+
+
+
 V1.4.3
 • Fixed automatic sherd compat with dyed decorated pots.
 • Fixed mod logger name being grammatically incorrect.

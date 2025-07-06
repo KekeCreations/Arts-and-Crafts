@@ -126,7 +126,7 @@ public class FabricConfig implements CustomPacketPayload {
     }
 
     @Comment("When true adds a new creative mode tab full of Arts & Crafts features!")
-    private boolean enableCreativeModeTab = false;
+    private boolean enableCreativeModeTab = true;
 
     public boolean enableCreativeModeTab() {
         return enableCreativeModeTab;
