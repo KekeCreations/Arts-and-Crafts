@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/lime_chalk",
-    "side": "arts_and_crafts:block/lime_chalk",
-    "top": "arts_and_crafts:block/lime_chalk"
-  }
-}

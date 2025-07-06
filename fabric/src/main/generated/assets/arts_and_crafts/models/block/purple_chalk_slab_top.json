@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "arts_and_crafts:block/purple_chalk",
-    "side": "arts_and_crafts:block/purple_chalk",
-    "top": "arts_and_crafts:block/purple_chalk"
-  }
-}

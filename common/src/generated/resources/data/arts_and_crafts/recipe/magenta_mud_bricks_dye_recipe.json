@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_bricks",
+  "key": {
+    "K": {
+      "item": "minecraft:mud_bricks"
+    },
+    "Q": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "arts_and_crafts:magenta_mud_bricks"
+  }
+}

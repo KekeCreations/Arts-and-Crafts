@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "arts_and_crafts:block/cork_door_bottom",
+    "top": "arts_and_crafts:block/cork_door_top"
+  }
+}

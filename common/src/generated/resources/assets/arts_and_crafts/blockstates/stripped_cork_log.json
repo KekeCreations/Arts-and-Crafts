@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "arts_and_crafts:block/stripped_cork_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "arts_and_crafts:block/stripped_cork_log"
+    },
+    "axis=z": {
+      "model": "arts_and_crafts:block/stripped_cork_log_horizontal",
+      "x": 90
+    }
+  }
+}

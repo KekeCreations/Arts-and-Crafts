@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arts_and_crafts:block/stripped_cork_wood_top",
+    "side": "arts_and_crafts:block/stripped_cork_wood"
+  }
+}

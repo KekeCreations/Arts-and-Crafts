@@ -3,6 +3,9 @@ package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 import com.kekecreations.arts_and_crafts.common.block.ACBedBlock;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
+import com.kekecreations.jinxedlib.JinxedLibNeoForge;
+import com.kekecreations.jinxedlib.core.platform.NeoForgeRegistryHelper;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
@@ -23,8 +26,12 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer
 import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
     private static final Set<Item> EXPLOSION_RESISTANT = Set.of();
@@ -33,14 +40,15 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         super(EXPLOSION_RESISTANT, FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
+    HashSet<Block> knownBlocks = new HashSet<>();
 
-    /*
+
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return NeoForge.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toUnmodifiableList());
+        return knownBlocks;
     }
 
-     */
+
 
     @Override
     public void generate() {
@@ -57,6 +65,16 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
         decoratedPots();
         mudBricks();
         dropOther(ACBlocks.LOTUS_FLOWER.get(), ACItems.LOTUS_PISTILS.get());
+    }
+
+    public void dropSelf(Block block) {
+        knownBlocks.add(block);
+        dropOther(block, block);
+    }
+
+    protected void add(Block block, LootTable.Builder builder) {
+        knownBlocks.add(block);
+        this.map.put(block.getLootTable(), builder);
     }
 
     private void hangingFlowerPots() {

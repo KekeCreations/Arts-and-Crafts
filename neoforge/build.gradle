@@ -24,6 +24,7 @@ neoForge {
         }
         data {
             data()
+            programArguments.addAll '--mod', "arts_and_crafts", '--all', '--output', file('../common/src/generated/resources/').getAbsolutePath(), '--existing', file('../common/src/main/resources/').getAbsolutePath()
         }
         server {
             server()
