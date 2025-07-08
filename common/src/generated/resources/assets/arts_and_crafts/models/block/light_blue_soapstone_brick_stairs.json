@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/light_blue_soapstone_bricks",
-    "side": "arts_and_crafts:block/light_blue_soapstone_bricks",
-    "top": "arts_and_crafts:block/light_blue_soapstone_bricks"
-  }
-}

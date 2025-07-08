@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/gypsum",
-    "side": "arts_and_crafts:block/gypsum",
-    "top": "arts_and_crafts:block/gypsum"
-  }
-}

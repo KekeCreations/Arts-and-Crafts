@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side",
-  "textures": {
-    "wall": "arts_and_crafts:block/cyan_soapstone_bricks"
-  }
-}

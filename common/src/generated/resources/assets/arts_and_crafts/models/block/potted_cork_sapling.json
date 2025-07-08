@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/flower_pot_cross",
-  "textures": {
-    "plant": "arts_and_crafts:block/cork_sapling"
-  }
-}

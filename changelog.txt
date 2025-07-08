@@ -3,6 +3,11 @@ Arts & Crafts Changelog
 ### V1.5.1
 - Arts & Crafts Creative Category Tab is now enabled by default
 - Updated Ari's name in the credits!
+- Fixed Bleached Chalk & Bleached Concrete missing the mineable pickaxe tag
+- Fixed Bleached Concrete Powder missing the mineable shovel tag
+- Fixed Bleached Bed missing the beds tag
+- Fixed Cork Hanging Signs & Signs not having tags
+- Fixed Bleached Bed and wool missing item tags
 
 
 
