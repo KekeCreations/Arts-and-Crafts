@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:chiseled_pietraforte_ochre"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "ochre_pietraforte_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "arts_and_crafts:ochre_pietraforte_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "ochre_pietraforte_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:chiseled_pietraforte_ochre"
+    ]
+  }
+}

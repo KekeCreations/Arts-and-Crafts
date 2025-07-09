@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryUtils;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -136,6 +137,36 @@ public class ACTabs {
                     pOutput.accept(ACBlocks.getDyedMudBrickStairs(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedMudBrickSlab(colour.getId()));
                     pOutput.accept(ACBlocks.getDyedMudBrickWall(colour.getId()));
+                }
+                for (PietraforteColour colour : PietraforteColour.values()) {
+                    pOutput.accept(ACBlocks.getPietraforte(colour));
+                    pOutput.accept(ACBlocks.getPietraforteStairs(colour));
+                    pOutput.accept(ACBlocks.getPietraforteSlab(colour));
+                    pOutput.accept(ACBlocks.getPietraforteWall(colour));
+
+                    pOutput.accept(ACBlocks.getCobbledPietraforte(colour));
+                    pOutput.accept(ACBlocks.getCobbledPietraforteStairs(colour));
+                    pOutput.accept(ACBlocks.getCobbledPietraforteSlab(colour));
+                    pOutput.accept(ACBlocks.getCobbledPietraforteWall(colour));
+
+                    pOutput.accept(ACBlocks.getChiseledPietraforte(colour));
+
+                    pOutput.accept(ACBlocks.getPietraforteBricks(colour));
+                    pOutput.accept(ACBlocks.getPietraforteBrickStairs(colour));
+                    pOutput.accept(ACBlocks.getPietraforteBrickSlab(colour));
+                    pOutput.accept(ACBlocks.getPietraforteBrickWall(colour));
+
+                    pOutput.accept(ACBlocks.getPietrafortePillar(colour));
+
+                    pOutput.accept(ACBlocks.getSmoothPietraforte(colour));
+                    pOutput.accept(ACBlocks.getSmoothPietraforteStairs(colour));
+                    pOutput.accept(ACBlocks.getSmoothPietraforteSlab(colour));
+                    pOutput.accept(ACBlocks.getSmoothPietraforteWall(colour));
+
+                    pOutput.accept(ACBlocks.getCutPietraforte(colour));
+                    pOutput.accept(ACBlocks.getCutPietraforteStairs(colour));
+                    pOutput.accept(ACBlocks.getCutPietraforteSlab(colour));
+                    pOutput.accept(ACBlocks.getCutPietraforteWall(colour));
                 }
             })
             .build()

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cut_ochre_pietraforte": {
+      "conditions": {
+        "items": [
+          {
+            "items": "arts_and_crafts:cut_ochre_pietraforte"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:cut_ochre_pietraforte_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cut_ochre_pietraforte"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:cut_ochre_pietraforte_stairs"
+    ]
+  }
+}

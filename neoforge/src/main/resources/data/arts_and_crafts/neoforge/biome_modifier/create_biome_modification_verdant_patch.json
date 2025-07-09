@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:jungle",
+    "minecraft:forest"
+  ],
+  "features": [
+    "arts_and_crafts:verdant_pietraforte_patch"
+  ],
+  "step": "underground_decoration"
+}

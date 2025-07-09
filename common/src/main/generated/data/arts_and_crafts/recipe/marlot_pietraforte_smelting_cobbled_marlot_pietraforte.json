@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 150,
+  "experience": 5.0,
+  "group": "pietraforte",
+  "ingredient": {
+    "item": "arts_and_crafts:cobbled_marlot_pietraforte"
+  },
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:marlot_pietraforte"
+  }
+}
