@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "biomeswevegone:block/mini_cactus",
+    "flowerpot": "arts_and_crafts:block/brown_flower_pot",
+    "particle": "arts_and_crafts:block/brown_flower_pot"
+  }
+}

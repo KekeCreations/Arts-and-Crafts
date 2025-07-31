@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "biomeswevegone:block/red_birch_sapling",
+    "flowerpot": "arts_and_crafts:block/red_flower_pot",
+    "particle": "arts_and_crafts:block/red_flower_pot"
+  }
+}

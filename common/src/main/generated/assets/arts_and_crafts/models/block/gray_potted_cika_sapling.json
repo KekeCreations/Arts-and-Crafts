@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "biomeswevegone:block/cika/sapling",
+    "flowerpot": "arts_and_crafts:block/gray_flower_pot",
+    "particle": "arts_and_crafts:block/gray_flower_pot"
+  }
+}
