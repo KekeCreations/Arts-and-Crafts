@@ -1,0 +1,21 @@
+{
+    "values": [
+        "suppsquared:sack_white",
+        "suppsquared:sack_light_gray",
+        "suppsquared:sack_gray",
+        "suppsquared:sack_black",
+        "suppsquared:sack_brown",
+        "suppsquared:sack_red",
+        "suppsquared:sack_orange",
+        "suppsquared:sack_yellow",
+        "suppsquared:sack_lime",
+        "suppsquared:sack_green",
+        "suppsquared:sack_cyan",
+        "suppsquared:sack_light_blue",
+        "suppsquared:sack_blue",
+        "suppsquared:sack_purple",
+        "suppsquared:sack_magenta",
+        "suppsquared:sack_pink",
+        "supplementaries:sack"
+    ]
+}

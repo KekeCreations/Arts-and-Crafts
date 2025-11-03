@@ -1,9 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": [
-    "minecraft:beach",
-    "minecraft:desert"
-  ],
+  "biomes": "#arts_and_crafts:ochre_pietraforte_patch",
   "features": [
     "arts_and_crafts:ochre_pietraforte_patch"
   ],
