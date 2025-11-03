@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#arts_and_crafts:verdant_can_generate_in",
+  "biomes": "#arts_and_crafts:verdant_pietraforte_patch",
   "features": [
     "arts_and_crafts:verdant_pietraforte_patch"
   ],
