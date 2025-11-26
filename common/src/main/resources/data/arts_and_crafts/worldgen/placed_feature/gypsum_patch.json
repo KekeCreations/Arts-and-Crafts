@@ -26,7 +26,10 @@
       "max_steps": 8,
       "target_condition": {
         "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:sandstone"
+        "blocks": [
+          "minecraft:sandstone",
+          "minecraft:red_sandstone"
+        ]
       }
     },
     {
