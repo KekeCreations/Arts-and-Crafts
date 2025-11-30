@@ -16,7 +16,7 @@
           "absolute": 0
         },
         "max_inclusive": {
-          "below_top": 64
+          "below_top": 128
         }
       }
     },
