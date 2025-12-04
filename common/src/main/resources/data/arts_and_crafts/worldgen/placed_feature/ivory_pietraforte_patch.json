@@ -25,8 +25,8 @@
       "direction_of_search": "down",
       "max_steps": 18,
       "target_condition": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:stone"
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:base_stone_overworld"
       }
     },
     {

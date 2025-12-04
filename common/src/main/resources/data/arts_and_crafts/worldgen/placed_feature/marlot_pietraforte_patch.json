@@ -13,7 +13,7 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": 64
+          "absolute": 0
         },
         "max_inclusive": {
           "below_top": 256
@@ -25,8 +25,8 @@
       "direction_of_search": "down",
       "max_steps": 18,
       "target_condition": {
-        "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:red_sandstone"
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:terracotta"
       }
     },
     {
