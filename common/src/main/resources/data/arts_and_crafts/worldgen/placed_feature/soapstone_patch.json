@@ -25,6 +25,10 @@
       "direction_of_search": "down",
       "max_steps": 12,
       "target_condition": {
+        "type": "minecraft:has_sturdy_face",
+        "direction": "up"
+      },
+      "allowed_search_condition": {
         "type": "minecraft:matching_blocks",
         "blocks": "minecraft:water"
       }
