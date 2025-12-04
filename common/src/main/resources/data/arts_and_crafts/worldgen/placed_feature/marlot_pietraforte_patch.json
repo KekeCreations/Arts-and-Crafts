@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": 0
+          "absolute": 64
         },
         "max_inclusive": {
-          "below_top": 128
+          "below_top": 256
         }
       }
     },
@@ -25,11 +25,8 @@
       "direction_of_search": "down",
       "max_steps": 18,
       "target_condition": {
-        "type": "minecraft:solid"
-      },
-      "allowed_search_condition": {
-        "type": "minecraft:matching_block_tag",
-        "tag": "minecraft:base_stone_overworld"
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:red_sandstone"
       }
     },
     {
