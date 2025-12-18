@@ -1,6 +1,3 @@
 {
-  "values": [
-    "#minecraft:is_badlands",
-    "#c:is_desert"
-  ]
+  "values": ["#minecraft:is_overworld"]
 }
