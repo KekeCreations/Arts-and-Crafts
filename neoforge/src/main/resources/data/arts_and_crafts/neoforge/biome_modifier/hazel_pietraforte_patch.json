@@ -1,8 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#arts_and_crafts:hazel_pietraforte_patch",
-  "features": [
-    "arts_and_crafts:hazel_pietraforte_patch"
-  ],
-  "step": "underground_decoration"
-}

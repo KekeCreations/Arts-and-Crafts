@@ -90,7 +90,7 @@ public class ArtsAndCraftsBlockLootSubProvider extends BlockLootSubProvider {
             add(ACBlocks.getCobbledPietraforteSlab(colour), createSlabItemTable(ACBlocks.getCobbledPietraforteSlab(colour)));
             dropSelf(ACBlocks.getCobbledPietraforteWall(colour));
 
-            dropOther(ACBlocks.getPietraforte(colour), ACBlocks.getCobbledPietraforte(colour));
+            add(ACBlocks.getPietraforte(colour), createSingleItemTableWithSilkTouch(ACBlocks.getPietraforte(colour), ACBlocks.getCobbledPietraforte(colour)));
             dropSelf(ACBlocks.getPietraforteStairs(colour));
             add(ACBlocks.getPietraforteSlab(colour), createSlabItemTable(ACBlocks.getPietraforteSlab(colour)));
             dropSelf(ACBlocks.getPietraforteWall(colour));

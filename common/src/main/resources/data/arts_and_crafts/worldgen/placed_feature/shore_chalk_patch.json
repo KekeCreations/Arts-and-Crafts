@@ -1,9 +1,9 @@
 {
-  "feature": "arts_and_crafts:beige_pietraforte_patch",
+  "feature": "arts_and_crafts:chalk_patch",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 14
+      "count": 12
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": 0
+          "above_bottom": 48
         },
         "max_inclusive": {
-          "below_top": 256
+          "absolute": 200
         }
       }
     },
@@ -25,8 +25,12 @@
       "direction_of_search": "down",
       "max_steps": 18,
       "target_condition": {
+        "type": "minecraft:has_sturdy_face",
+        "direction": "up"
+      },
+      "allowed_search_condition": {
         "type": "minecraft:matching_block_tag",
-        "tag": "minecraft:terracotta"
+        "tag": "minecraft:base_stone_overworld"
       }
     },
     {

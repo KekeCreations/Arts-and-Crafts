@@ -46,6 +46,29 @@ public class ACTags {
         public static final TagKey<Biome> GYPSUM_CAN_GENERATE_IN
                 = tag("gypsum_can_generate_in");
 
+        public static final TagKey<Biome> VERDANT_PIETRAFORTE_PATCH
+                = tag("verdant_pietraforte_patch");
+
+        public static final TagKey<Biome> CHALK_PATCH
+                = tag("chalk_patch");
+
+        public static final TagKey<Biome> SHORE_CHALK_PATCH
+                = tag("shore_chalk_patch");
+
+        public static final TagKey<Biome> CORK_TREE
+                = tag("cork_tree");
+
+        public static final TagKey<Biome> IVORY_PIETRAFORTE_PATCH
+                = tag("ivory_pietraforte_patch");
+
+        public static final TagKey<Biome> MARLOT_PIETRAFORTE_PATCH
+                = tag("marlot_pietraforte_patch");
+
+        public static final TagKey<Biome> OCHRE_PIETRAFORTE_PATCH
+                = tag("ochre_pietraforte_patch");
+
+
+
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));
         }

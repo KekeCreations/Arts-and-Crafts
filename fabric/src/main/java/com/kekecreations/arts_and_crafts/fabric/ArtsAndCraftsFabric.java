@@ -53,16 +53,16 @@ public class ArtsAndCraftsFabric implements ModInitializer {
     }
 
     public void createBiomeModifications() {
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_SAVANNA), GenerationStep.Decoration.VEGETAL_DECORATION, ACFeatures.PlacedFeatures.CORK_TREE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.CORK_TREE), GenerationStep.Decoration.VEGETAL_DECORATION, ACFeatures.PlacedFeatures.CORK_TREE);
         BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, ACFeatures.PlacedFeatures.SOAPSTONE_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_PEAKS), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_SHORE), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.SHORE_CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.CHALK_PATCH), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.SHORE_CHALK_PATCH), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.SHORE_CHALK_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.GYPSUM_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.FOREST, Biomes.JUNGLE), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.VERDANT_PIETRAFORTE_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.BEACH, Biomes.DESERT), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.OCHRE_PIETRAFORTE_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.JUNGLE, Biomes.BADLANDS), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.MARLOT_PIETRAFORTE_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.STONY_PEAKS), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.IVORY_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.VERDANT_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.VERDANT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.OCHRE_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.OCHRE_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.MARLOT_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.MARLOT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.IVORY_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.IVORY_PIETRAFORTE_PATCH);
     }
 
 

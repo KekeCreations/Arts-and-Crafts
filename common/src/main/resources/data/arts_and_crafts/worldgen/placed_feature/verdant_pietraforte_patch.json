@@ -1,9 +1,9 @@
 {
-  "feature": "arts_and_crafts:hazel_pietraforte_patch",
+  "feature": "arts_and_crafts:verdant_pietraforte_patch",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 14
+      "count": 20
     },
     {
       "type": "minecraft:in_square"
@@ -26,7 +26,7 @@
       "max_steps": 18,
       "target_condition": {
         "type": "minecraft:matching_block_tag",
-        "tag": "minecraft:terracotta"
+        "tag": "minecraft:base_stone_overworld"
       }
     },
     {

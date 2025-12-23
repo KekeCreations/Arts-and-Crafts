@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#arts_and_crafts:gypsum_patch",
+  "biomes": "#arts_and_crafts:gypsum_can_generate_in",
   "features": [
     "arts_and_crafts:gypsum_patch"
   ],

@@ -325,6 +325,9 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
 
         //CORK
         planksFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_PLANKS, recipeConsumer);
+        planksFromLogsRecipe(ACBlocks.CORK_WOOD, ACBlocks.CORK_PLANKS, recipeConsumer);
+        planksFromLogsRecipe(ACBlocks.STRIPPED_CORK_LOG, ACBlocks.CORK_PLANKS, recipeConsumer);
+        planksFromLogsRecipe(ACBlocks.STRIPPED_CORK_WOOD, ACBlocks.CORK_PLANKS, recipeConsumer);
         woodFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_WOOD, recipeConsumer);
         woodFromLogsRecipe(ACBlocks.STRIPPED_CORK_LOG, ACBlocks.STRIPPED_CORK_WOOD, recipeConsumer);
         slabRecipe(ACBlocks.CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), recipeConsumer);
@@ -596,7 +599,7 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
     }
     private static void planksFromLogsRecipe(Supplier<? extends ItemLike> pLogs, Supplier<? extends ItemLike> result, RecipeOutput consumer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get(), 4).requires(pLogs.get())
-                .unlockedBy("has_logs", has(pLogs.get())).save(consumer);
+                .unlockedBy("has_logs", has(pLogs.get())).save(consumer, ArtsAndCrafts.id(getItemName(pLogs.get()) + "_to_" + getItemName(result.get())));
     }
 
     private static void woodFromLogsRecipe(Supplier<? extends ItemLike> pLog, Supplier<? extends ItemLike> result, RecipeOutput consumer) {
