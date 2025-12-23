@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#arts_and_crafts:soapstone_can_generate_in",
+  "biomes": "#arts_and_crafts:soapstone_patch",
   "features": [
     "arts_and_crafts:soapstone_patch"
   ],

@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "above_bottom": 30
+          "above_bottom": 0
         },
         "max_inclusive": {
-          "absolute": 200
+          "absolute": 256
         }
       }
     },
@@ -26,7 +26,10 @@
       "max_steps": 8,
       "target_condition": {
         "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:sandstone"
+        "blocks": [
+          "minecraft:sandstone",
+          "minecraft:red_sandstone"
+        ]
       }
     },
     {
