@@ -329,9 +329,9 @@ public class ACBlocks {
             DYED_FLOWERING_AZALEA_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_flowering_azalea_bush", () -> ACBlocks.flowerPot(Blocks.FLOWERING_AZALEA, colours)));
             DYED_TORCHFLOWER_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_torchflower", () -> ACBlocks.flowerPot(Blocks.TORCHFLOWER, colours)));
 
-
-            //DYED DECORATED POTS
-            DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.ofFullCopy(Blocks.DECORATED_POT))));
+            if (colours.getId() <= 15) {
+                DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.ofFullCopy(Blocks.DECORATED_POT))));
+            }
         }
         for (PietraforteColour colour : PietraforteColour.values()) {
             COBBLED_PIETRAFORTE.put(colour, registerBlockWithItem("cobbled_" + colour + "_pietraforte", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE).mapColor(colour.getMapColor()))));

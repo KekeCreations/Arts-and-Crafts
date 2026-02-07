@@ -49,12 +49,14 @@ public class ClientEvents {
             }
         }, ACItems.BLEACHED_BED.get());
         for (DyeColor colour : DyeColor.values()) {
-            event.registerItem(new IClientItemExtensions() {
-                @Override
-                public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                    return new ArtsAndCraftsBEWLR();
-                }
-            }, ACItems.getDyedDecoratedPotBlockItem(colour));
+            if (colour.getId() <= 15) {
+                event.registerItem(new IClientItemExtensions() {
+                    @Override
+                    public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                        return new ArtsAndCraftsBEWLR();
+                    }
+                }, ACItems.getDyedDecoratedPotBlockItem(colour));
+            }
         }
     }
 

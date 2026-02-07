@@ -1,5 +1,9 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.5.3
+- Fixed a crash where Delicate Dyes & Arts & Crafts would conflict each other
+- Fixed a crash where Dye Depot & Arts & Crafts would conflict each other
+
 ### V1.5.2
 - All Arts & Crafts Worldgen features now use biome tags
 - Gypsum can now generate in Red Sandstone
