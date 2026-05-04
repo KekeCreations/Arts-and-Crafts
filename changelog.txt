@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### V1.5.4
+- Cork leaves now use the leaves model for bushy texture pack compatibility
+
+
+
 ### V1.5.3
 - Fixed a crash where Delicate Dyes & Arts & Crafts would conflict each other
 - Fixed a crash where Dye Depot & Arts & Crafts would conflict each other

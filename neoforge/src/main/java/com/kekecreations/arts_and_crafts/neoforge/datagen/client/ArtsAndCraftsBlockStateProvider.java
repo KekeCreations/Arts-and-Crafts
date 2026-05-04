@@ -111,7 +111,7 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         doorBlock(ACBlocks.CORK_DOOR.get(), "cork", ArtsAndCrafts.id("block/cork_door_bottom"), ArtsAndCrafts.id("block/cork_door_top"));
         cubeAllWithItem(ACBlocks.CORK.get());
         cubeAllWithItem(ACBlocks.SMOOTH_CORK.get());
-        cubeAllWithItem(ACBlocks.CORK_LEAVES.get());
+        leavesWithItem(ACBlocks.CORK_LEAVES.get());
         simpleBlock(ACBlocks.CORK_SAPLING.get(), models().withExistingParent("cork_sapling", "minecraft:block/cross").texture("cross", "block/cork_sapling"));
         cubeAllWithItem(ACBlocks.CORK_PLANKS.get());
         stairsWithItem(ACBlocks.CORK_STAIRS.get(), ACBlocks.CORK_PLANKS.get());
@@ -217,6 +217,15 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
     private void concretePowderWithItem(Block block) {
         concretePowderBlock(block);
         simpleBlockItem(block, cubeAll(block));
+    }
+
+    public ModelFile leaves(Block block) {
+        return this.models().leaves(this.name(block), this.blockTexture(block));
+    }
+
+    private void leavesWithItem(Block block) {
+        simpleBlock(block, leaves(block));
+        simpleBlockItem(block, leaves(block));
     }
 
     private void glazedTerracottaWithItem(Block block, String blockId) {
