@@ -1,9 +1,11 @@
-// 1.21.1	2026-05-05T00:36:21.4628107	Tags for minecraft:block mod id arts_and_crafts
+// 1.21.1	2026-05-05T01:09:21.4764638	Tags for minecraft:block mod id arts_and_crafts
 dffa14780f3e16d168f08ed40a5fbfb25a89cf9b data/arts_and_crafts/tags/block/chalk_dust.json
 49bd0378fdc13eefe0d04d81d937a2b82c0eb8a6 data/minecraft/tags/block/all_hanging_signs.json
 49bd0378fdc13eefe0d04d81d937a2b82c0eb8a6 data/minecraft/tags/block/all_signs.json
 57be96375722dd7870a179744ded50be65d055a8 data/minecraft/tags/block/beds.json
+3958c7688eec8d9f2e523bbdd89f81023c062643 data/minecraft/tags/block/camel_sand_step_sound_blocks.json
 49bd0378fdc13eefe0d04d81d937a2b82c0eb8a6 data/minecraft/tags/block/ceiling_hanging_signs.json
+3958c7688eec8d9f2e523bbdd89f81023c062643 data/minecraft/tags/block/concrete_powder.json
 b9f1f197fae49f0fe3a1a2de261e1cc4c289c480 data/minecraft/tags/block/fence_gates.json
 a3f55f6644890843db9cc26badfb450ba86d8ba0 data/minecraft/tags/block/flower_pots.json
 8f6cfeec6834c527e154824c1a917c27954e2785 data/minecraft/tags/block/hoglin_repellents.json

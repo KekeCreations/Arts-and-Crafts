@@ -52,6 +52,18 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
         appendAllHangingSigns();
         appendHangingSigns();
         appendWallHangingSigns();
+        appendCamelStepSound();
+        appendConcretePowder();
+    }
+
+    private void appendCamelStepSound() {
+        this.tag(BlockTags.CAMEL_SAND_STEP_SOUND_BLOCKS)
+                .add(ACBlocks.BLEACHED_CONCRETE_POWDER.get());
+    }
+
+    private void appendConcretePowder() {
+        this.tag(BlockTags.CONCRETE_POWDER)
+                .add(ACBlocks.BLEACHED_CONCRETE_POWDER.get());
     }
 
     private void appendBeds() {

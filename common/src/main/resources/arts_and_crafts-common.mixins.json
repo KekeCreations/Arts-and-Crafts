@@ -3,7 +3,6 @@
   "package": "com.kekecreations.arts_and_crafts.core.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
-  "refmap": "${mod_id}.refmap.json",
   "mixins": [
     "CreativeModeTabMixin",
     "DecoratedPotBlockEntityAccessor",

@@ -64,12 +64,21 @@ public class ACFlowerPotBlock extends Block {
         return this.content == Blocks.AIR;
     }
 
+    public void addPotManuallyNonStatic(DyeColor colour, Block plantBlockItem, Block pottedBlock) {
+        POTTED_MAPS.get(colour).put(plantBlockItem, pottedBlock);
+    }
+
+    public static void addPotManually(DyeColor colour, Block plantBlockItem, Block pottedBlock) {
+        POTTED_MAPS.get(colour).put(plantBlockItem, pottedBlock);
+    }
+
 
     protected ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         Item item = itemStack.getItem();
         Block block = Blocks.AIR;
+
         if (item instanceof BlockItem) {
-            block = (item instanceof BlockItem ? (Block)POTTED_MAPS.get(this.colour).getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR);
+            block = POTTED_MAPS.get(this.colour).getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR);
         }
         if (!level.isClientSide()) {
             if (itemStack.getItem() instanceof PaintbrushItem) {

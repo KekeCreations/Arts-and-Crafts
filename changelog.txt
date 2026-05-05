@@ -3,6 +3,12 @@ Arts & Crafts Changelog
 
 ### V1.5.4
 - Cork leaves now use the leaves model for bushy texture pack compatibility
+- Bleached Concrete Powder now has the Concrete Powder tag
+- Bleached Concrete Powder now has the Camel Sand Step Sound Blocks tag
+- mixin.jsons for the mod no longer hardcore references a refmap that doesn't exist
+- Optimised Dyed Flower Pot Block code
+- Added 2 methods to make dyed flower pot integration easier/possible on fabric!
+- Fixed Website URL
 
 
 
