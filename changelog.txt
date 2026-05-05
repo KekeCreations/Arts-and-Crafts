@@ -10,6 +10,8 @@ Arts & Crafts Changelog
 - Added 2 methods to make dyed flower pot integration easier/possible on fabric!
 - Fixed Website URL
 
+### Updated license by downloading this mod version you agree to the new licensing which can be found here: https://github.com/KekeCreations/Arts-and-Crafts/blob/1.21x/LICENSE
+
 
 
 ### V1.5.3
