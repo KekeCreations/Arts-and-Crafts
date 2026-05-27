@@ -1,8 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": [
-    "minecraft:stony_peaks"
-  ],
+  "biomes": "#arts_and_crafts:chalk_patch",
   "features": [
     "arts_and_crafts:chalk_patch"
   ],

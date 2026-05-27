@@ -38,7 +38,7 @@ public class ACFeatures {
         public static final ResourceKey<PlacedFeature> VERDANT_PIETRAFORTE_PATCH = createKey("verdant_pietraforte_patch");
         public static final ResourceKey<PlacedFeature> OCHRE_PIETRAFORTE_PATCH = createKey("ochre_pietraforte_patch");
         public static final ResourceKey<PlacedFeature> MARLOT_PIETRAFORTE_PATCH = createKey("marlot_pietraforte_patch");
-        public static final ResourceKey<PlacedFeature> IVORY_PIETRAFORTE_PATCH = createKey("ivory_pietraforte_patch");
+        public static final ResourceKey<PlacedFeature> IVORY_PIETRAFORTE_PATCH = createKey("ivory_pietraforte_patch.json");
 
 
         public static ResourceKey<PlacedFeature> createKey(String name) {
