@@ -23,7 +23,9 @@ public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implemen
     public ArtsAndCraftsBEWLR() {
         super(null, null);
         for (DyeColor colours : DyeColor.values()) {
-            this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, ACBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
+            if (colours.getId() <= 15) {
+                this.dyedDecoratedPot = new DyedDecoratedPotBlockEntity(BlockPos.ZERO, ACBlocks.getDyedDecoratedPot(colours.getId()).defaultBlockState());
+            }
         }
         this.bed = new ACBedBlockEntity(BlockPos.ZERO, ACBlocks.BLEACHED_BED.get().defaultBlockState());
     }
@@ -36,10 +38,12 @@ public class ArtsAndCraftsBEWLR extends BlockEntityWithoutLevelRenderer implemen
             BlockState blockState = block.defaultBlockState();
             Object blockEntity = null;
             for (DyeColor colours : DyeColor.values()) {
-                if (blockState.is(ACBlocks.getDyedDecoratedPot(colours.getId()))) {
-                    this.dyedDecoratedPot.setFromItem(itemStack);
-                    this.dyedDecoratedPot.setDyeColor(colours.getId());
-                    blockEntity = this.dyedDecoratedPot;
+                if (colours.getId() <= 15) {
+                    if (blockState.is(ACBlocks.getDyedDecoratedPot(colours.getId()))) {
+                        this.dyedDecoratedPot.setFromItem(itemStack);
+                        this.dyedDecoratedPot.setDyeColor(colours.getId());
+                        blockEntity = this.dyedDecoratedPot;
+                    }
                 }
             }
             if (blockState.is(ACBlocks.BLEACHED_BED.get())) {

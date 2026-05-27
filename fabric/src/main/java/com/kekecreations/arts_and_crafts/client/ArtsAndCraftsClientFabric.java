@@ -118,7 +118,9 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
         for (DyeColor colours : DyeColor.values()) {
-            BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+            if (colours.getId() <= 15) {
+                BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colours.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+            }
         }
         BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
     }

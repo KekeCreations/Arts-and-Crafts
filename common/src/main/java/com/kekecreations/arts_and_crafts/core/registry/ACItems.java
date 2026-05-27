@@ -44,7 +44,9 @@ public class ACItems {
         CHALK_STICKS.put(-1, BLEACHED_CHALK_STICK);
         for (DyeColor colours : DyeColor.values()) {
             CHALK_STICKS.put(colours.getId(), registerItem(colours + "_chalk_stick", () -> new ChalkStickItem(colours.getId(), new Item.Properties().stacksTo(1).durability(32))));
-            DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(ACBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties().stacksTo(1))));
+            if (colours.getId() <= 15) {
+                DYED_DECORATED_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_decorated_pot", () -> new DyedDecoratedPotBlockItem(ACBlocks.getDyedDecoratedPot(colours.getId()), new Item.Properties().stacksTo(1))));
+            }
             PAINT_BRUSHES.put(colours, registerItem(colours + "_paintbrush", () -> new PaintbrushItem(new Item.Properties().stacksTo(1).durability(48))));
             DYED_FLOWER_POT_BLOCK_ITEMS.put(colours, registerItem(colours + "_flower_pot", () -> new DyedFlowerPotBlockItem(ACBlocks.getDyedFlowerPot(colours.getId()), new Item.Properties())));
         }

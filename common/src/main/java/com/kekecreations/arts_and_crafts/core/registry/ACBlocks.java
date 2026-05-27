@@ -327,7 +327,9 @@ public class ACBlocks {
 
 
             //DYED DECORATED POTS
-            DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
+            if (colours.getId() <= 15) {
+                DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", () -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.copy(Blocks.DECORATED_POT))));
+            }
         }
 
         for (PietraforteColour colour : PietraforteColour.values()) {
