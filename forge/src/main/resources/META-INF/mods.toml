@@ -8,7 +8,7 @@ version = "${version}"
 displayName = "Arts & Crafts"
 issueTrackerURL = "https://github.com/KekeCreations/Arts-and-Crafts/issues"
 updateJSONURL="https://raw.githubusercontent.com/KekeCreations/Arts-and-Crafts/1.20.1x/forge_updates.json"
-displayURL="https://kekecreations.boomla.net/minecraft/java-mods/arts-and-crafts"
+displayURL="https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts"
 authors = "KekeCreations and Stellari!"
 description = '''
 A fabric & forge mod that adds all new decoration features into the game!

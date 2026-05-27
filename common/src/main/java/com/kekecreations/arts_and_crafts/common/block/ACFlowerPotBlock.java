@@ -55,6 +55,14 @@ public class ACFlowerPotBlock extends Block {
         POTTED_MAPS.get(colour).put(block, this);
     }
 
+    public void addPotManuallyNonStatic(DyeColor colour, Block plantBlockItem, Block pottedBlock) {
+        POTTED_MAPS.get(colour).put(plantBlockItem, pottedBlock);
+    }
+
+    public static void addPotManually(DyeColor colour, Block plantBlockItem, Block pottedBlock) {
+        POTTED_MAPS.get(colour).put(plantBlockItem, pottedBlock);
+    }
+
     @Override
     public boolean isEnabled(FeatureFlagSet $$0) {
         return Services.CONFIG.areDyedFlowerPotsEnabled();
@@ -70,7 +78,7 @@ public class ACFlowerPotBlock extends Block {
         boolean bl2;
         ItemStack itemStack = player.getItemInHand(interactionHand);
         Item item = itemStack.getItem();
-        BlockState blockState2 = (item instanceof BlockItem ? (Block)POTTED_MAPS.get(this.colour).getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
+        BlockState blockState2 = (item instanceof BlockItem ? POTTED_MAPS.get(this.colour).getOrDefault(((BlockItem)item).getBlock(), Blocks.AIR) : Blocks.AIR).defaultBlockState();
 
         boolean bl = blockState2.is(Blocks.AIR);
         if (bl != (bl2 = this.isEmpty())) {

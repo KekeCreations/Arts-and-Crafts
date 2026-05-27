@@ -7,11 +7,16 @@ Arts & Crafts Changelog
 - Gypsum can now generate in Red Sandstone
 - All Pietraforte patches size has been increased from 14 to 20
 - Soapstone patches size has been increased from 20 to 24
+- Cork leaves now use the leaves model for bushy texture pack compatibility
+- mixin.jsons for the mod no longer hardcode references a refmap that doesn't exist
+- Added 2 methods to make dyed flower pot integration easier/possible on fabric!
+- Updated license by downloading this mod version you agree to the new licensing which can be found here: https://github.com/KekeCreations/Arts-and-Crafts/blob/1.21x/LICENSE
 
 ------ Bug Fixes ------
 - Cork Planks Recipe Fixed (You can now craft cork planks with cork wood, stripped cork log, stripped cork wood and cork log)
 - Fixed Silk Touch not working on Pietraforte blocks
 - Fixed Dye Mods crashing due to Dyed Decorated Pots!
+- Fixed Website URL
 
 
 

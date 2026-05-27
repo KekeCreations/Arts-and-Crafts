@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "arts_and_crafts:cork_log"
+              "arts_and_crafts:stripped_cork_wood"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "arts_and_crafts:cork_planks"
+        "recipe": "arts_and_crafts:stripped_cork_wood_to_cork_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "arts_and_crafts:cork_planks"
+      "arts_and_crafts:stripped_cork_wood_to_cork_planks"
     ]
   },
   "sends_telemetry_event": false

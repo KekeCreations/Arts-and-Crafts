@@ -597,12 +597,12 @@ public class ArtsAndCraftsRecipeProvider extends RecipeProvider implements ICond
     }
     private static void planksFromLogsRecipe(Supplier<? extends ItemLike> pLogs, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get(), 4).requires(pLogs.get())
-                .unlockedBy("has_logs", has(pLogs.get())).save(consumer);
+                .unlockedBy("has_logs", has(pLogs.get())).save(consumer, ArtsAndCrafts.id(getItemName(pLogs.get()) + "_to_" + getItemName(result.get())));
     }
 
     private static void woodFromLogsRecipe(Supplier<? extends ItemLike> pLog, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, result.get(), 3).define('#', pLog.get()).pattern("##").pattern("##")
-                .unlockedBy("has_log", has(pLog.get())).save(consumer, ArtsAndCrafts.id(getItemName(pLog.get()) + "_to_" + getItemName(result.get())));
+                .unlockedBy("has_log", has(pLog.get())).save(consumer);
     }
 
     private static void fenceRecipe(Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, Consumer<FinishedRecipe> consumer) {
