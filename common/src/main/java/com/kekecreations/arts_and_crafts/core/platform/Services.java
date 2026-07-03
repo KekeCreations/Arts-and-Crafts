@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.core.platform;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.core.platform.services.ConfigHelper;
 import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
@@ -8,6 +9,7 @@ import java.util.ServiceLoader;
 
 public class Services {
 
+    public static final ConfigHelper CONFIG = load(ConfigHelper.class);
 
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
 

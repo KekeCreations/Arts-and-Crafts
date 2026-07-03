@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,5 +13,9 @@ public class ArtsAndCrafts {
 
     public static void init() {
 
+    }
+
+    public static Identifier id(String name) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }
 }
