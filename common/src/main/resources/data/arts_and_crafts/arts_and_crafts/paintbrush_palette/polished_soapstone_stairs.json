@@ -1,0 +1,22 @@
+{
+    "blocks": "#arts_and_crafts:paintable/polished_soapstone_stairs",
+    "mappings": {
+        "arts_and_crafts:white_paintbrush": "arts_and_crafts:white_polished_soapstone_stairs",
+        "arts_and_crafts:light_gray_paintbrush": "arts_and_crafts:light_gray_polished_soapstone_stairs",
+        "arts_and_crafts:gray_paintbrush": "arts_and_crafts:gray_polished_soapstone_stairs",
+        "arts_and_crafts:black_paintbrush": "arts_and_crafts:black_polished_soapstone_stairs",
+        "arts_and_crafts:brown_paintbrush": "arts_and_crafts:brown_polished_soapstone_stairs",
+        "arts_and_crafts:red_paintbrush": "arts_and_crafts:red_polished_soapstone_stairs",
+        "arts_and_crafts:orange_paintbrush": "arts_and_crafts:orange_polished_soapstone_stairs",
+        "arts_and_crafts:yellow_paintbrush": "arts_and_crafts:yellow_polished_soapstone_stairs",
+        "arts_and_crafts:lime_paintbrush": "arts_and_crafts:lime_polished_soapstone_stairs",
+        "arts_and_crafts:green_paintbrush": "arts_and_crafts:green_polished_soapstone_stairs",
+        "arts_and_crafts:cyan_paintbrush": "arts_and_crafts:cyan_polished_soapstone_stairs",
+        "arts_and_crafts:light_blue_paintbrush": "arts_and_crafts:light_blue_polished_soapstone_stairs",
+        "arts_and_crafts:blue_paintbrush": "arts_and_crafts:blue_polished_soapstone_stairs",
+        "arts_and_crafts:purple_paintbrush": "arts_and_crafts:purple_polished_soapstone_stairs",
+        "arts_and_crafts:magenta_paintbrush": "arts_and_crafts:magenta_polished_soapstone_stairs",
+        "arts_and_crafts:pink_paintbrush": "arts_and_crafts:pink_polished_soapstone_stairs",
+        "arts_and_crafts:bleachdew_paintbrush": "arts_and_crafts:polished_soapstone_stairs"
+    }
+}

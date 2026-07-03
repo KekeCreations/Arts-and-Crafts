@@ -1,0 +1,21 @@
+{
+    "values": [
+        "arts_and_crafts:white_mud_brick_wall",
+        "arts_and_crafts:light_gray_mud_brick_wall",
+        "arts_and_crafts:gray_mud_brick_wall",
+        "arts_and_crafts:black_mud_brick_wall",
+        "arts_and_crafts:brown_mud_brick_wall",
+        "arts_and_crafts:red_mud_brick_wall",
+        "arts_and_crafts:orange_mud_brick_wall",
+        "arts_and_crafts:yellow_mud_brick_wall",
+        "arts_and_crafts:lime_mud_brick_wall",
+        "arts_and_crafts:green_mud_brick_wall",
+        "arts_and_crafts:cyan_mud_brick_wall",
+        "arts_and_crafts:light_blue_mud_brick_wall",
+        "arts_and_crafts:blue_mud_brick_wall",
+        "arts_and_crafts:purple_mud_brick_wall",
+        "arts_and_crafts:magenta_mud_brick_wall",
+        "arts_and_crafts:pink_mud_brick_wall",
+        "minecraft:mud_brick_wall"
+    ]
+}

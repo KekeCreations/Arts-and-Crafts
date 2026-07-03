@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "arts_and_crafts:bleachdew_paintbrush"
+    },
+    "title": {
+      "translate": "advancements.adventure.born_to_paint_forced_to_mop.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.born_to_paint_forced_to_mop.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "arts_and_crafts:adventure/craft_paintbrush",
+  "criteria": {
+    "paintbrush": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:bleachdew_paintbrush"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "paintbrush"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

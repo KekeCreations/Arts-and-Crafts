@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "arts_and_crafts:purple_paintbrush"
+    },
+    "title": {
+      "translate": "advancements.adventure.aspiring_davinci.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.aspiring_davinci.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "paintbrush": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#arts_and_crafts:paintbrushes"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "paintbrush"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
