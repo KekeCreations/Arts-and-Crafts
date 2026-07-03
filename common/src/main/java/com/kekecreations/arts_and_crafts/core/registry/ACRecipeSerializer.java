@@ -1,0 +1,36 @@
+package com.kekecreations.arts_and_crafts.core.registry;
+
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.crafting.DecoratedPotRecipe;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+
+import java.util.function.Supplier;
+
+public class ACRecipeSerializer<T extends Recipe<?>> {
+
+
+
+    /*
+    public static final Supplier<RecipeSerializer<DecoratedPotRecipe>> DYED_DECORATED_POT_RECIPE = registerRecipe("crafting_dyed_decorated_pot",  () -> new SimpleCraftingRecipeSerializer<>(DyedDecoratedPotRecipe::new));
+
+    public static final Supplier<RecipeSerializer<BleachBannerPatternsRecipe>> BLEACH_BANNER_PATTERNS_RECIPE = registerRecipe("crafting_bleach_banner_patterns",  () -> new SimpleCraftingRecipeSerializer<>(BleachBannerPatternsRecipe::new));
+
+    public static final Supplier<RecipeSerializer<DecoratedPotRecipe>> BLEACH_DECORATED_POT_RECIPE = registerRecipe("crafting_bleach_decorated_pot",  () -> new SimpleCraftingRecipeSerializer<>(BleachDecoratedPotRecipe::new));
+
+
+    private static <S extends RecipeSerializer<T>, T extends Recipe<?>> Supplier registerRecipe(String string, Supplier<S> recipeSerializer) {
+        return JinxedRegistryHelper.register(BuiltInRegistries.RECIPE_SERIALIZER, ArtsAndCrafts.MOD_ID, string, recipeSerializer);
+    }
+
+     */
+
+
+
+
+
+    public static void register() {
+    }
+}

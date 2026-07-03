@@ -10,7 +10,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -34,8 +34,8 @@ public class FabricConfig implements CustomPacketPayload {
     }
 
     private static final Jankson JANKSON = Jankson.builder()
-            .registerSerializer(ResourceLocation.class, (id, marshaller) -> marshaller.serialize(id.toString()))
-            .registerDeserializer(String.class, ResourceLocation.class, (str, marshaller) -> ResourceLocation.tryParse(str))
+            .registerSerializer(Identifier.class, (id, marshaller) -> marshaller.serialize(id.toString()))
+            .registerDeserializer(String.class, Identifier.class, (str, marshaller) -> Identifier.tryParse(str))
             .build();
 
     public static Component lastError;

@@ -1,5 +1,12 @@
 package com.kekecreations.arts_and_crafts.core.platform.services;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
+
 public interface IPlatformHelper {
 
     /**
@@ -32,5 +39,13 @@ public interface IPlatformHelper {
     default String getEnvironmentName() {
 
         return isDevelopmentEnvironment() ? "development" : "production";
+    }
+
+    <T extends BlockEntity> BlockEntityType<T> createBlockEntity(BlockEntitySupplier<T> blockEntitySupplier, Block... blocks);
+
+
+    @FunctionalInterface
+    interface BlockEntitySupplier<T extends BlockEntity> {
+        @NotNull T create(BlockPos pos, BlockState state);
     }
 }

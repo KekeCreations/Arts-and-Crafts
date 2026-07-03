@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.core.platform;
-
-import com.kekecreations.arts_and_crafts.neoforge.core.config.NeoForgeConfig;
+import com.kekecreations.arts_and_crafts.core.config.NeoForgeConfig;
 import com.kekecreations.arts_and_crafts.core.platform.services.ConfigHelper;
 
 public class NeoForgeConfigHelper implements ConfigHelper {

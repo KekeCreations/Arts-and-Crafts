@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts.core.platform;
 
-import com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric;
+import com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric;
 import com.kekecreations.arts_and_crafts.core.platform.services.ConfigHelper;
 
 public class FabricConfigHelper implements ConfigHelper {

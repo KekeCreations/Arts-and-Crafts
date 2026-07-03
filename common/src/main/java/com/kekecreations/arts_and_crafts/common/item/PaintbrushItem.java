@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts.common.item;
 
-import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.util.PaintbrushUtils;
 import net.minecraft.core.BlockPos;
@@ -83,10 +82,13 @@ public class PaintbrushItem extends Item {
                             }
                         }
                         return InteractionResult.SUCCESS;
-                    } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
+                    }
+                    /*else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                         PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
                     }
+
+                     */
 
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                     return InteractionResult.SUCCESS;

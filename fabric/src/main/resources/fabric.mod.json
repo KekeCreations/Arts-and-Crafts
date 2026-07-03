@@ -7,16 +7,12 @@
     "authors": [
         "${mod_author}"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
     "license": "${license}",
     "icon": "${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric"
         ]
     },
     "mixins": [

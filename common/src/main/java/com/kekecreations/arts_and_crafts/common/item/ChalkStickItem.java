@@ -37,7 +37,7 @@ public class ChalkStickItem extends Item {
     private final Integer dyeColor;
 
     public ChalkStickItem(Integer dyeColor, Properties properties) {
-        super(properties.component(ACDataComponents.CHALK_PATTERN.get(), 0));
+        super(properties/*.component(ACDataComponents.CHALK_PATTERN.get() , 0) */);
         this.dyeColor = dyeColor;
     }
 
@@ -45,6 +45,7 @@ public class ChalkStickItem extends Item {
         return this.dyeColor;
     }
 
+    /*
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, TooltipContext tooltipContext, @NotNull List<Component> toolTipComponents, @NotNull TooltipFlag flag) {
         super.appendHoverText(itemStack, tooltipContext, toolTipComponents, flag);
@@ -52,6 +53,8 @@ public class ChalkStickItem extends Item {
 
         toolTipComponents.add(Component.translatable("tooltip.arts_and_crafts.chalk_pattern_" + itemStack.get(ACDataComponents.CHALK_PATTERN.get())).withStyle(ChatFormatting.GRAY));
     }
+
+     */
 
     @Override
     public boolean isEnabled(FeatureFlagSet $$0) {
@@ -96,7 +99,7 @@ public class ChalkStickItem extends Item {
                         }
                     } else {
                         if (player.isShiftKeyDown()) {
-                            itemStack.set(ACDataComponents.CHALK_PATTERN.get(), ChalkUtils.getChalkPatternFromChalkDust(blockState));
+                           // itemStack.set(ACDataComponents.CHALK_PATTERN.get(), ChalkUtils.getChalkPatternFromChalkDust(blockState));
                             return InteractionResult.SUCCESS;
                         } else if (chalkDustBlock.getDyeColor() == this.getDyeColor()) {
                             ChalkUtils.spawnChalkParticle(level, clickLocation.x(), clickLocation.y() + 0.2D, clickLocation.z(), getDyeColor());
@@ -114,8 +117,8 @@ public class ChalkStickItem extends Item {
 
     public InteractionResult place(BlockPlaceContext blockPlaceContext) {
         Level level = blockPlaceContext.getLevel();
-        if (!blockPlaceContext.canPlace() || blockPlaceContext.getClickedPos().getY() > level.getMaxBuildHeight()) return InteractionResult.FAIL;
         BlockPos pos = blockPlaceContext.getClickedPos();
+        if (!blockPlaceContext.canPlace() || !level.isOutsideBuildHeight(pos)) return InteractionResult.FAIL;
         Player player = blockPlaceContext.getPlayer();
         ItemStack itemStack = blockPlaceContext.getItemInHand();
         if (player != null) {
@@ -126,7 +129,8 @@ public class ChalkStickItem extends Item {
             if (state != null && !(clickedState.getBlock() instanceof ChalkDustBlock)) {
                 RandomSource randomSource = level.getRandom();
 
-                int chalkPattern = itemStack.getOrDefault(ACDataComponents.CHALK_PATTERN.get(), 0);
+                int chalkPattern = 0;
+               // int chalkPattern = itemStack.getOrDefault(ACDataComponents.CHALK_PATTERN.get(), 0);
                 level.setBlockAndUpdate(pos, state.setValue(ACProperties.CHALK_PATTERN, chalkPattern));
                 level.playSound(null, pos, SoundEvents.CALCITE_HIT, SoundSource.BLOCKS, 0.5F, randomSource.nextFloat() * 0.2F + 0.9F);
                 level.gameEvent(GameEvent.BLOCK_PLACE, pos, GameEvent.Context.of(player, clickedState));

@@ -4,10 +4,13 @@
   "package": "com.kekecreations.arts_and_crafts.core.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "DecoratedPotBlockEntityAccessor"
+  ],
   "client": [
   ],
-  "server": [],
+  "server": [
+  ],
   "injectors": {
     "defaultRequire": 1
   }
