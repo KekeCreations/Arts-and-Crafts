@@ -1,13 +1,12 @@
 {
   "required": true,
-  "package": "com.kekecreations.arts_and_crafts.neoforge.core.mixin",
-  "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
+  "package": "com.kekecreations.arts_and_crafts.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
   "client": [
   ],
-  "mixins": [
-    "FlammableRotatedPillarBlockMixin"
-  ],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

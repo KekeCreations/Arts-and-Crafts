@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/cobbled_ivory_pietraforte",
-    "side": "arts_and_crafts:block/cobbled_ivory_pietraforte",
-    "top": "arts_and_crafts:block/cobbled_ivory_pietraforte"
-  }
-}

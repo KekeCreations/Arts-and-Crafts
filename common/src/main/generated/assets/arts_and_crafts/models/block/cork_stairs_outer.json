@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/cork_planks",
-    "side": "arts_and_crafts:block/cork_planks",
-    "top": "arts_and_crafts:block/cork_planks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "arts_and_crafts:block/smooth_beige_pietraforte",
-    "side": "arts_and_crafts:block/smooth_beige_pietraforte",
-    "top": "arts_and_crafts:block/smooth_beige_pietraforte"
-  }
-}

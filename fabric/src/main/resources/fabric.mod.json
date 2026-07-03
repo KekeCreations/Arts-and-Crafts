@@ -1,35 +1,36 @@
 {
-  "schemaVersion": 1,
-  "id": "arts_and_crafts",
-  "version": "${version}",
-  "name": "Arts & Crafts",
-  "description": "A fabric & forge mod that adds all new decoration features into the game!",
-  "authors": [
-    "KekeCreations",
-    "Stellari"
-  ],
-  "contact": {
-    "homepage": "https://kekecreations.boomla.net/mods/minecraft-java-edition/arts-and-crafts",
-    "sources": "https://github.com/KekeCreations/Arts-and-Crafts/issues"
-  },
-  "license": "https://github.com/KekeCreations/Arts-and-Crafts/blob/1.21x/LICENSE",
-  "icon": "arts_and_crafts_icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric"
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
     ],
-    "client": [
-      "com.kekecreations.arts_and_crafts.fabric.client.ArtsAndCraftsClientFabric"
-    ]
-  },
-  "mixins": [
-    "arts_and_crafts.fabric.mixins.json",
-    "arts_and_crafts-common.mixins.json"
-  ],
-  "depends": {
-    "fabric": "*",
-    "minecraft": ">=1.21.1",
-    "jinxedlib": ">=1.0.3"
-  }
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "${license}",
+    "icon": "${mod_id}.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.example.examplemod.ExampleMod"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }
+  

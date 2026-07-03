@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/tinted_flower_pot_cross",
-  "textures": {
-    "flowerpot": "arts_and_crafts:block/light_gray_flower_pot",
-    "particle": "arts_and_crafts:block/light_gray_flower_pot",
-    "plant": "minecraft:block/fern"
-  }
-}

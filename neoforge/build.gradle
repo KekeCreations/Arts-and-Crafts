@@ -8,7 +8,7 @@ neoForge {
     // Automatically enable neoforge AccessTransformers if the file exists
     def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
-        accessTransformers.add(at.absolutePath)
+        accessTransformers.from(at.absolutePath)
     }
     parchment {
         minecraftVersion = parchment_minecraft
@@ -23,8 +23,11 @@ neoForge {
             client()
         }
         data {
-            data()
-            programArguments.addAll '--mod', "arts_and_crafts", '--all', '--output', file('../common/src/main/generated/').getAbsolutePath(), '--existing', file('../common/src/main/resources/').getAbsolutePath()
+            clientData()
+
+            // DataGen can be run by - "./gradlew :neoforge:runData" in Terminal.
+            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
@@ -37,8 +40,23 @@ neoForge {
     }
 }
 
-sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-dependencies {
-    implementation "curse.maven:jinxedlib-1203401:6332450"
+// Implement mcgradleconventions loader attribute
+def loaderAttribute = Attribute.of('io.github.mcgradleconventions.loader', String)
+['apiElements', 'runtimeElements', 'sourcesElements', 'javadocElements'].each { variant ->
+    configurations.named("$variant") {
+        attributes {
+            attribute(loaderAttribute, 'neoforge')
+        }
+    }
+}
+sourceSets.configureEach {
+    [it.compileClasspathConfigurationName, it.runtimeClasspathConfigurationName, it.getTaskName(null, 'jarJar')].each { variant->
+        configurations.named("$variant") {
+            attributes {
+                attribute(loaderAttribute, 'neoforge')
+            }
+        }
+    }
 }

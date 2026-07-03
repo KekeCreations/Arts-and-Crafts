@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "arts_and_crafts:block/smooth_verdant_pietraforte",
-    "side": "arts_and_crafts:block/smooth_verdant_pietraforte",
-    "top": "arts_and_crafts:block/smooth_verdant_pietraforte"
-  }
-}

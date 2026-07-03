@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fence_gate_open",
-  "textures": {
-    "texture": "arts_and_crafts:block/cork_planks"
-  }
-}
