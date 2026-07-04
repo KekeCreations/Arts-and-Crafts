@@ -12,7 +12,10 @@
     },
     "target": {
       "type": "minecraft:matching_blocks",
-      "blocks": "minecraft:sandstone"
+      "blocks": [
+        "minecraft:sandstone",
+        "minecraft:red_sandstone"
+      ]
     },
     "radius": {
       "type": "minecraft:uniform",
