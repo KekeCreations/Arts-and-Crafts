@@ -36,7 +36,21 @@ loom {
             ideConfigGenerated(true)
             runDir('runs/server')
         }
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=arts_and_crafts"
+
+            runDir "build/datagen"
+        }
     }
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from project(":common").sourceSets.main.resources
 }
 
 // Implement mcgradleconventions loader attribute

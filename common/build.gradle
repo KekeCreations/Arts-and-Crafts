@@ -59,3 +59,13 @@ sourceSets.configureEach {
         }
     }
 }
+
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    'src/main/generated'
+            ]
+        }
+    }
+}

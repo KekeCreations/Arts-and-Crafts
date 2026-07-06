@@ -13,6 +13,12 @@
     "entrypoints": {
         "main": [
             "com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric"
+        ],
+        "fabric-datagen": [
+            "com.kekecreations.arts_and_crafts.datagen.ACDataGenerator"
+        ],
+        "client": [
+            "com.kekecreations.arts_and_crafts.client.ArtsAndCraftsFabricClient"
         ]
     },
     "mixins": [

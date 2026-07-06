@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/potted_cactus",
+  "textures": {
+    "flowerpot": "arts_and_crafts:block/brown_flower_pot",
+    "particle": "arts_and_crafts:block/brown_flower_pot"
+  }
+}
