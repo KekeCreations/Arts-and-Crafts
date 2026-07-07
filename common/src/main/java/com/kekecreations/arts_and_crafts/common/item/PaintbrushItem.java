@@ -86,7 +86,7 @@ public class PaintbrushItem extends Item {
                     }
                     else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                         PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                        return InteractionResult.SUCCESS;
+                        return InteractionResult.SUCCESS_SERVER;
                     }
 
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
