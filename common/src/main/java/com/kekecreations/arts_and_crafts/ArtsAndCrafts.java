@@ -18,6 +18,7 @@ public class ArtsAndCrafts {
         ACEntityTypes.register();
         ACTabs.register();
         ACSounds.register();
+        ACDataComponents.register();
     }
 
     public static Identifier id(String name) {

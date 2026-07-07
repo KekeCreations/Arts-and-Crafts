@@ -8,25 +8,19 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.util.ExtraCodecs;
 
 import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
 
 public class ACDataComponents {
 
-    /*
-    public static final Supplier<DataComponentType<Integer>> CHALK_PATTERN = registerDataComponent("chalk_pattern", builder -> {
-        builder.persistent(ExtraCodecs.intRange(0, 99));
-        builder.networkSynchronized(ByteBufCodecs.VAR_INT);
-        return builder;
-    });
 
 
-    private static <T> Supplier<DataComponentType<T>> registerDataComponent(String name, UnaryOperator<DataComponentType.Builder<T>> dataComponent) {
-        return JinxedRegistryHelper.register(BuiltInRegistries.DATA_COMPONENT_TYPE, ArtsAndCrafts.MOD_ID, name, () -> dataComponent.apply(DataComponentType.builder()).build());
-    }
+    public static final Supplier<DataComponentType<?>> CHALK_PATTERN = JinxedRegistryHelper.register(
+            BuiltInRegistries.DATA_COMPONENT_TYPE,
+            ArtsAndCrafts.MOD_ID,
+            "chalk_pattern",
+            () -> DataComponentType.<Integer>builder().persistent(ExtraCodecs.intRange(0, 99)).networkSynchronized(ByteBufCodecs.VAR_INT).build()
+    );
 
-     */
-
-    public static void loadComponents() {
+    public static void register() {
 
     }
 }
