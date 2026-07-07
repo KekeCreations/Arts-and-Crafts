@@ -69,14 +69,12 @@ public class ACEntityTypes {
     );
 
 
-    /*
-    public static final Supplier<BlockEntityType<ACBedBlockEntity>> CUSTOM_BED_BLOCK_ENTITY = registerBlockEntityType("custom_bed_block_entity", () ->
+
+    public static final Supplier<BlockEntityType<?>> CUSTOM_BED_BLOCK_ENTITY = registerBlockEntityType("custom_bed_block_entity", () ->
             createBlockEntity(ACBedBlockEntity::new,
                     ACBlocks.BLEACHED_BED.get()
             )
     );
-
-     */
 
 
     private static Supplier<BlockEntityType<?>> registerBlockEntityType(String name,  Supplier<BlockEntityType<?>> type) {

@@ -8,7 +8,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-/*
+
 public class ACBedBlockEntity extends BlockEntity {
 
     private DyeColor color;
@@ -35,5 +35,3 @@ public class ACBedBlockEntity extends BlockEntity {
         this.color = $$0;
     }
 }
-
- */
