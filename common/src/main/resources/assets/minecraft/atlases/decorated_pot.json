@@ -1,7 +1,7 @@
 {
   "sources": [
     {
-      "type": "minecraft:jinxedlib_paletted_permutations",
+      "type": "jinxedlib:paletted_permutations",
       "sources": [
         {
           "type": "minecraft:directory",
