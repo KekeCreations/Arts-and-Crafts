@@ -1,8 +1,11 @@
 package com.kekecreations.arts_and_crafts;
 
+import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
+import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.event.registry.DynamicRegistries;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -28,6 +31,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
     public void onInitialize() {
         config();
         ArtsAndCrafts.init();
+        DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
     }
 
     public void config() {

@@ -53,7 +53,7 @@ public class PaintbrushItem extends Item {
                         } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
                             newDecoratedPotBlockEntity.setTheItem(potItemStack);
                         }
-                        return InteractionResult.SUCCESS;
+                        return InteractionResult.SUCCESS_SERVER;
                     } else if (blockEntity instanceof DecoratedPotBlockEntity decoratedPotBlockEntity) {
                         ItemStack potItemStack = decoratedPotBlockEntity.getTheItem().copyAndClear();
 
@@ -67,7 +67,7 @@ public class PaintbrushItem extends Item {
                         } else if (newBlockEntity instanceof DecoratedPotBlockEntity newDecoratedPotBlockEntity) {
                             newDecoratedPotBlockEntity.setTheItem(potItemStack);
                         }
-                        return InteractionResult.SUCCESS;
+                        return InteractionResult.SUCCESS_SERVER;
                     } else if (blockEntity instanceof BaseContainerBlockEntity container) {
                         List<ItemStack> itemList = new ArrayList<ItemStack>();
                         for (int i = 0; i < container.getContainerSize(); ++i) {
@@ -81,7 +81,7 @@ public class PaintbrushItem extends Item {
                                 newContainer.setItem(i, itemList.get(i));
                             }
                         }
-                        return InteractionResult.SUCCESS;
+                        return InteractionResult.SUCCESS_SERVER;
                     }
                     /*else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                         PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
@@ -91,7 +91,7 @@ public class PaintbrushItem extends Item {
                      */
 
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
-                    return InteractionResult.SUCCESS;
+                    return InteractionResult.SUCCESS_SERVER;
                 }
             }
         }

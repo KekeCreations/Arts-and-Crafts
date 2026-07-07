@@ -13,12 +13,12 @@ public class ArtsAndCrafts {
     public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
 
     public static void init() {
+        ACDataComponents.register();
         ACBlocks.register();
         ACItems.register();
         ACEntityTypes.register();
         ACTabs.register();
         ACSounds.register();
-        ACDataComponents.register();
     }
 
     public static Identifier id(String name) {
