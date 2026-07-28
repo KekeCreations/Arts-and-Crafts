@@ -7,29 +7,30 @@ import com.kekecreations.arts_and_crafts.core.platform.Services;
 import com.kekecreations.arts_and_crafts.core.platform.services.IPlatformHelper;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ACEntityTypes {
 
-    /*
 
-    public static final Supplier<EntityType<FloatingBlockEntity>> FLOATING_BLOCK = registerEntityType("floating_block", () ->
+
+    public static final Supplier<EntityType<?>> FLOATING_BLOCK = registerEntityType("floating_block", () ->
             EntityType.Builder.of(FloatingBlockEntity::new, MobCategory.MISC)
                     .sized(0.98f, 0.98f)
                     .clientTrackingRange(10)
-                    .build(dataFixer("floating_block")));
+                    .build(key("floating_block")));
 
 
+    /*
 
     public static final Supplier<EntityType<ACBoat>> BOAT = registerEntityType("boat", () ->
             EntityType.Builder.of((EntityType.EntityFactory<ACBoat>) ACBoat::new, MobCategory.MISC)
@@ -38,13 +39,17 @@ public class ACEntityTypes {
                     .build(dataFixer("boat")));
 
 
+
+
     public static final Supplier<EntityType<ACChestBoat>> CHEST_BOAT = registerEntityType("chest_boat", () ->
             EntityType.Builder.of((EntityType.EntityFactory<ACChestBoat>) ACChestBoat::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f)
                     .clientTrackingRange(10)
                     .build(dataFixer("chest_boat")));
 
+
      */
+
 
 
     public static final Supplier<BlockEntityType<?>> CUSTOM_DECORATED_POT_BLOCK_ENTITY = registerBlockEntityType("custom_decorated_pot_block_entity", () ->
@@ -84,12 +89,10 @@ public class ACEntityTypes {
         return Services.PLATFORM.createBlockEntity(blockEntitySupplier, blocks);
     }
 
-    /*
-    private static <T extends EntityType<?>> Supplier<T> registerEntityType(String name, Supplier<T> entityTypeSupplier) {
+
+    private static Supplier<EntityType<?>> registerEntityType(String name, Supplier<EntityType<?>> entityTypeSupplier) {
         return JinxedRegistryHelper.register(BuiltInRegistries.ENTITY_TYPE, ArtsAndCrafts.MOD_ID, name, entityTypeSupplier);
     }
-
-     */
 
 
 
@@ -102,7 +105,7 @@ public class ACEntityTypes {
     public static void createMobAttributes() {
     }
 
-    private static String dataFixer(String mobName) {
-        return ArtsAndCrafts.MOD_ID + ":" + mobName;
+    private static ResourceKey<EntityType<?>> key(String name) {
+        return ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));
     }
 }

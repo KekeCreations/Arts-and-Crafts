@@ -1,16 +1,29 @@
 package com.kekecreations.arts_and_crafts.client;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric;
+import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
+import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
+import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.DyeColor;
 
 public class ArtsAndCraftsFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         registerBlockLayers();
+        registerRenderers();
 
+
+        ClientPlayNetworking.registerGlobalReceiver(FabricConfig.PACKET_ID, (config, context) -> {
+            ArtsAndCraftsFabric.setConfig(config);
+        });
     }
 
     public static void registerBlockLayers() {
@@ -60,5 +73,19 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ACBlocks.LOTUS_FLOWER.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), ChunkSectionLayer.CUTOUT);
         //BlockRenderLayerMap.putBlock(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), ChunkSectionLayer.CUTOUT);
+    }
+
+    public static void registerRenderers() {
+        EntityRendererRegistry.register((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
+        //EntityRendererRegistry.register(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
+        //EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
+        //BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
+        //BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+        for (DyeColor colour : DyeColor.values()) {
+            if (colour.getId() <= 15) {
+                //BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colour.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
+            }
+        }
+        //BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.BLEACHED_BED.get().asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
     }
 }

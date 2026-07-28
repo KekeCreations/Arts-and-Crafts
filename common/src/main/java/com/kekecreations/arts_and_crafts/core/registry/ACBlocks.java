@@ -210,10 +210,8 @@ public class ACBlocks {
     public static final Supplier<Block> CORK_BUTTON = registerBlockWithItem("cork_button", registryName -> new CommonButtonBlock(CORK_SET, 30, BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)).noCollision().strength(0.5f).pushReaction(PushReaction.DESTROY)));
 
     //CORK ETC
-
-    //CHANGE TO FLOATING BLOCK LATER
-    public static final Supplier<Block> CORK = registerBlockWithItem("cork", registryName -> new Block(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)).mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(ACSoundTypes.CORK).instrument(NoteBlockInstrument.BASS)));
-    public static final Supplier<Block> SMOOTH_CORK = registerBlockWithItem("smooth_cork", registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(CORK.get()).setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> CORK = registerBlockWithItem("cork", registryName -> new FloatingBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)).mapColor(MapColor.COLOR_BROWN).strength(2.0F).sound(ACSoundTypes.CORK).instrument(NoteBlockInstrument.BASS)));
+    public static final Supplier<Block> SMOOTH_CORK = registerBlockWithItem("smooth_cork", registryName -> new FloatingBlock(BlockBehaviour.Properties.ofFullCopy(CORK.get()).setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> CORK_SAPLING = registerBlockWithItem("cork_sapling", registryName -> new ACSaplingBlock(ACTreeGrower.CORK, BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)).mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
 

@@ -32,6 +32,8 @@ public class ACModelProvider extends FabricModelProvider {
 
         modelGen.woodProvider(ACBlocks.CORK_LOG.get()).log(ACBlocks.CORK_LOG.get()).wood(ACBlocks.CORK_WOOD.get());
         modelGen.woodProvider(ACBlocks.STRIPPED_CORK_LOG.get()).log(ACBlocks.STRIPPED_CORK_LOG.get()).wood(ACBlocks.STRIPPED_CORK_WOOD.get());
+        modelGen.createTrivialCube(ACBlocks.CORK.get());
+        modelGen.createTrivialCube(ACBlocks.SMOOTH_CORK.get());
 
         for (DyeColor colour : DyeColor.values()) {
             createEmptyFlowerPot(ACBlocks.getDyedFlowerPot(colour.getId()), colour, modelGen);

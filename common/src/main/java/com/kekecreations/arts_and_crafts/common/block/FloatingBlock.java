@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
+import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -7,11 +8,13 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-/*
+
 public class FloatingBlock extends Block implements Floatable {
     public FloatingBlock(Properties properties) {
         super(properties);
@@ -22,10 +25,9 @@ public class FloatingBlock extends Block implements Floatable {
         level.scheduleTick(blockPos, this, this.getDelayAfterPlace());
     }
 
-    @Override
-    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
-        levelAccessor.scheduleTick(blockPos, this, this.getDelayAfterPlace());
-        return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
+    protected BlockState updateShape(BlockState state, LevelReader level, ScheduledTickAccess scheduledTickAccess, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
+        scheduledTickAccess.scheduleTick(pos, this, this.getDelayAfterPlace());
+        return super.updateShape(state, level, scheduledTickAccess, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override
@@ -52,4 +54,4 @@ public class FloatingBlock extends Block implements Floatable {
     }
 }
 
- */
+

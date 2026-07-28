@@ -22,6 +22,8 @@ public class ACLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("tab." + ArtsAndCrafts.MOD_ID + ".configurable_tab", "Arts & Crafts");
+
+        translationBuilder.add("entity.arts_and_crafts.floating_block", "Floating Block");
         for (PietraforteColour colour : PietraforteColour.values()) {
             String stringColour = StringUtils.capitalize(colour.getName());
             translationBuilder.add(ACBlocks.getCobbledPietraforte(colour).asItem(), "Cobbled " + stringColour + " Pietraforte");
