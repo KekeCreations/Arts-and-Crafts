@@ -10,6 +10,7 @@ import java.util.Optional;
 public class ACModelTemplates {
 
     public static final ModelTemplate PLASTER = createPlaster(TextureSlot.PARTICLE, ACTextureSlots.PLASTER);
+    public static final ModelTemplate CHALK_DUST = createChalkDust(TextureSlot.PARTICLE, ACTextureSlots.DUST);
 
 
     public static final ModelTemplate FLOWER_POT = createFlowerPot(TextureSlot.PARTICLE, ACTextureSlots.FLOWER_POT, TextureSlot.PLANT);
@@ -56,6 +57,10 @@ public class ACModelTemplates {
 
     public static ModelTemplate createPlaster(TextureSlot... textureSlots) {
         return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/plaster_model"))), Optional.empty(), textureSlots);
+    }
+
+    public static ModelTemplate createChalkDust(TextureSlot... textureSlots) {
+        return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/chalk_dust"))), Optional.empty(), textureSlots);
     }
 
 }

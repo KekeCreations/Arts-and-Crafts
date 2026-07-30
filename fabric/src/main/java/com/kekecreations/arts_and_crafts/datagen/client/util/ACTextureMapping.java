@@ -1,9 +1,11 @@
 package com.kekecreations.arts_and_crafts.datagen.client.util;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 
 public class ACTextureMapping {
 
@@ -24,6 +26,16 @@ public class ACTextureMapping {
         return (new TextureMapping())
                 .put(TextureSlot.PARTICLE, getPlasterTexture(colour))
                 .put(ACTextureSlots.PLASTER, getPlasterTexture(colour));
+    }
+
+    public static Identifier getChalkPattern(DyeColor colour, String pattern) {
+        return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_" + pattern);
+    }
+
+    public static TextureMapping chalkPatternDefaultMappings(Block block) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, Identifier.parse("arts_and_crafts:block/white_dot"))
+                .put(ACTextureSlots.DUST, Identifier.parse("arts_and_crafts:block/white_dot"));
     }
 
     public static Identifier getPlantTexture(String plant, String modID) {
