@@ -20,11 +20,21 @@ public class ACTextureMapping {
                 .put(ACTextureSlots.FLOWER_POT, getFlowerPotTexture(colour));
     }
 
+    public static TextureMapping plasterMappings(DyeColor colour) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getPlasterTexture(colour))
+                .put(ACTextureSlots.PLASTER, getPlasterTexture(colour));
+    }
+
     public static Identifier getPlantTexture(String plant, String modID) {
         return Identifier.fromNamespaceAndPath(modID, "block/" + plant);
     }
 
     public static Identifier getFlowerPotTexture(DyeColor colour) {
         return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_flower_pot");
+    }
+
+    public static Identifier getPlasterTexture(DyeColor colour) {
+        return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_plaster");
     }
 }

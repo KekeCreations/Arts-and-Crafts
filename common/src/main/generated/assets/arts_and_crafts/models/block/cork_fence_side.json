@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "arts_and_crafts:block/cork_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "arts_and_crafts:block/pink_polished_soapstone"
+  }
+}

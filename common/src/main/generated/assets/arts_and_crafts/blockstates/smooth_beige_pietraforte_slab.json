@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "arts_and_crafts:block/smooth_beige_pietraforte_slab"
+    },
+    "type=double": {
+      "model": "arts_and_crafts:block/smooth_beige_pietraforte"
+    },
+    "type=top": {
+      "model": "arts_and_crafts:block/smooth_beige_pietraforte_slab_top"
+    }
+  }
+}

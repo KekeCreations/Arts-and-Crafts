@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.datagen.client.util;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.resources.Identifier;
@@ -7,6 +8,9 @@ import net.minecraft.resources.Identifier;
 import java.util.Optional;
 
 public class ACModelTemplates {
+
+    public static final ModelTemplate PLASTER = createPlaster(TextureSlot.PARTICLE, ACTextureSlots.PLASTER);
+
 
     public static final ModelTemplate FLOWER_POT = createFlowerPot(TextureSlot.PARTICLE, ACTextureSlots.FLOWER_POT, TextureSlot.PLANT);
     public static final ModelTemplate TINTED_FLOWER_POT = createTintedFlowerPot(TextureSlot.PARTICLE, ACTextureSlots.FLOWER_POT, TextureSlot.PLANT);
@@ -48,6 +52,10 @@ public class ACModelTemplates {
 
     public static ModelTemplate createTintedFlowerPot(TextureSlot... textureSlots) {
         return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath("minecraft", "block/tinted_flower_pot_cross"))), Optional.empty(), textureSlots);
+    }
+
+    public static ModelTemplate createPlaster(TextureSlot... textureSlots) {
+        return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/plaster_model"))), Optional.empty(), textureSlots);
     }
 
 }

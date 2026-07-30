@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "arts_and_crafts:block/smooth_verdant_pietraforte",
+    "side": "arts_and_crafts:block/smooth_verdant_pietraforte",
+    "top": "arts_and_crafts:block/smooth_verdant_pietraforte"
+  }
+}

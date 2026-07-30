@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
+import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.datagen.client.util.ACModelTemplates;
@@ -9,11 +10,17 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import java.util.Objects;
 
@@ -26,16 +33,120 @@ public class ACModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators modelGen) {
 
-        modelGen.createTrivialCube(ACBlocks.GYPSUM.get());
-        modelGen.createTrivialCube(ACBlocks.GYPSUM_BRICKS.get());
-        modelGen.createTrivialCube(ACBlocks.POLISHED_GYPSUM.get());
+        modelGen.family(ACBlocks.GYPSUM.get())
+                .stairs(ACBlocks.GYPSUM_STAIRS.get())
+                .slab(ACBlocks.GYPSUM_SLAB.get())
+                .wall(ACBlocks.GYPSUM_WALL.get());
+
+        modelGen.family(ACBlocks.GYPSUM_BRICKS.get())
+                .stairs(ACBlocks.GYPSUM_BRICK_STAIRS.get())
+                .slab(ACBlocks.GYPSUM_BRICK_SLAB.get())
+                .wall(ACBlocks.GYPSUM_BRICK_WALL.get());
+
+        modelGen.family(ACBlocks.POLISHED_GYPSUM.get())
+                .stairs(ACBlocks.POLISHED_GYPSUM_STAIRS.get())
+                .slab(ACBlocks.POLISHED_GYPSUM_SLAB.get())
+                .wall(ACBlocks.POLISHED_GYPSUM_WALL.get());
 
         modelGen.woodProvider(ACBlocks.CORK_LOG.get()).log(ACBlocks.CORK_LOG.get()).wood(ACBlocks.CORK_WOOD.get());
         modelGen.woodProvider(ACBlocks.STRIPPED_CORK_LOG.get()).log(ACBlocks.STRIPPED_CORK_LOG.get()).wood(ACBlocks.STRIPPED_CORK_WOOD.get());
         modelGen.createTrivialCube(ACBlocks.CORK.get());
         modelGen.createTrivialCube(ACBlocks.SMOOTH_CORK.get());
 
+        modelGen.family(ACBlocks.CORK_PLANKS.get())
+                .stairs(ACBlocks.CORK_STAIRS.get())
+                .slab(ACBlocks.CORK_SLAB.get())
+                .fence(ACBlocks.CORK_FENCE.get())
+                .fenceGate(ACBlocks.CORK_FENCE_GATE.get())
+                .button(ACBlocks.CORK_BUTTON.get())
+                .pressurePlate(ACBlocks.CORK_PRESSURE_PLATE.get());
+
+        //BLEACHED
+        modelGen.createTrivialCube(ACBlocks.BLEACHED_CONCRETE.get());
+        modelGen.createTrivialCube(ACBlocks.BLEACHED_WOOL.get());
+        modelGen.createTrivialCube(ACBlocks.BLEACHED_CHALK.get());
+
+        //SHINGLES
+        modelGen.family(ACBlocks.TERRACOTTA_SHINGLES.get())
+                .stairs(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
+                .slab(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get())
+                .wall(ACBlocks.TERRACOTTA_SHINGLE_WALL.get());
+
+        //SOAPSTONE
+        modelGen.family(ACBlocks.SOAPSTONE.get())
+                .stairs(ACBlocks.SOAPSTONE_STAIRS.get())
+                .slab(ACBlocks.SOAPSTONE_SLAB.get())
+                .wall(ACBlocks.SOAPSTONE_WALL.get());
+
+        modelGen.family(ACBlocks.SOAPSTONE_BRICKS.get())
+                .stairs(ACBlocks.SOAPSTONE_BRICK_STAIRS.get())
+                .slab(ACBlocks.SOAPSTONE_BRICK_SLAB.get())
+                .wall(ACBlocks.SOAPSTONE_BRICK_WALL.get());
+
+        modelGen.family(ACBlocks.POLISHED_SOAPSTONE.get())
+                .stairs(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get())
+                .slab(ACBlocks.POLISHED_SOAPSTONE_SLAB.get())
+                .wall(ACBlocks.POLISHED_SOAPSTONE_WALL.get());
+
+        for (PietraforteColour colour : PietraforteColour.values()) {
+            modelGen.createAxisAlignedPillarBlock(ACBlocks.getPietrafortePillar(colour), TexturedModel.COLUMN);
+            modelGen.createTrivialCube(ACBlocks.getChiseledPietraforte(colour));
+            modelGen.family(ACBlocks.getCobbledPietraforte(colour))
+                    .stairs(ACBlocks.getCobbledPietraforteStairs(colour))
+                    .slab(ACBlocks.getCobbledPietraforteSlab(colour))
+                    .wall(ACBlocks.getCobbledPietraforteWall(colour));
+
+            modelGen.family(ACBlocks.getPietraforte(colour))
+                    .stairs(ACBlocks.getPietraforteStairs(colour))
+                    .slab(ACBlocks.getPietraforteSlab(colour))
+                    .wall(ACBlocks.getPietraforteWall(colour));
+
+            modelGen.family(ACBlocks.getPietraforteBricks(colour))
+                    .stairs(ACBlocks.getPietraforteBrickStairs(colour))
+                    .slab(ACBlocks.getPietraforteBrickSlab(colour))
+                    .wall(ACBlocks.getPietraforteBrickWall(colour));
+
+            modelGen.family(ACBlocks.getCutPietraforte(colour))
+                    .stairs(ACBlocks.getCutPietraforteStairs(colour))
+                    .slab(ACBlocks.getCutPietraforteSlab(colour))
+                    .wall(ACBlocks.getCutPietraforteWall(colour));
+
+            modelGen.family(ACBlocks.getSmoothPietraforte(colour))
+                    .stairs(ACBlocks.getSmoothPietraforteStairs(colour))
+                    .slab(ACBlocks.getSmoothPietraforteSlab(colour))
+                    .wall(ACBlocks.getSmoothPietraforteWall(colour));
+        }
+
         for (DyeColor colour : DyeColor.values()) {
+
+            modelGen.createTrivialCube(ACBlocks.getChalk(colour.getId()));
+            plasterBlock(ACBlocks.getDyedPlaster(colour.getId()), colour, modelGen);
+
+            modelGen.family(ACBlocks.getDyedTerracottaShingles(colour.getId()))
+                    .stairs(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()))
+                    .slab(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()))
+                    .wall(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
+
+            modelGen.family(ACBlocks.getDyedSoapstone(colour.getId()))
+                    .stairs(ACBlocks.getDyedSoapstoneStairs(colour.getId()))
+                    .slab(ACBlocks.getDyedSoapstoneSlab(colour.getId()))
+                    .wall(ACBlocks.getDyedSoapstoneWall(colour.getId()));
+
+            modelGen.family(ACBlocks.getDyedSoapstoneBricks(colour.getId()))
+                    .stairs(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()))
+                    .slab(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()))
+                    .wall(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+
+            modelGen.family(ACBlocks.getDyedPolishedSoapstone(colour.getId()))
+                    .stairs(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()))
+                    .slab(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()))
+                    .wall(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()));
+
+            modelGen.family(ACBlocks.getDyedMudBricks(colour.getId()))
+                    .stairs(ACBlocks.getDyedMudBrickStairs(colour.getId()))
+                    .slab(ACBlocks.getDyedMudBrickSlab(colour.getId()))
+                    .wall(ACBlocks.getDyedMudBrickWall(colour.getId()));
+
             createEmptyFlowerPot(ACBlocks.getDyedFlowerPot(colour.getId()), colour, modelGen);
 
             flowerPotBlock(ACBlocks.getDyedPottedCorkSapling(colour), colour, "cork_sapling", "arts_and_crafts", modelGen);
@@ -106,7 +217,6 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.generateFlatItem(ACItems.LOTUS_PISTILS.get(), ModelTemplates.FLAT_ITEM);
 
         //bedBlockItem(ACItems.BLEACHED_BED.get());
-        //buttonInventory(ACBlocks.CORK_BUTTON.get().asItem(), "cork_planks");
     }
 
 
@@ -127,6 +237,26 @@ public class ACModelProvider extends FabricModelProvider {
     }
 
      */
+
+    public final void plasterBlock(Block plaster, DyeColor colour,  BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = ACTextureMapping.plasterMappings(colour);
+        Identifier resourceLocation = ACModelTemplates.PLASTER.create(plaster, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(createPlasterVariants(plaster, resourceLocation));
+    }
+
+
+    private static BlockModelDefinitionGenerator createPlasterVariants(Block plaster, Identifier identifier) {
+        MultiVariant model = BlockModelGenerators.plainVariant(identifier);
+        return MultiVariantGenerator.dispatch(plaster)
+                .with(PropertyDispatch.initial(BlockStateProperties.FACING)
+                        .select(Direction.NORTH, model.with(BlockModelGenerators.Y_ROT_180))
+                        .select(Direction.EAST, model.with(BlockModelGenerators.Y_ROT_270))
+                        .select(Direction.SOUTH, model)
+                        .select(Direction.WEST, model.with(BlockModelGenerators.Y_ROT_90))
+                        .select(Direction.UP, model.with(BlockModelGenerators.X_ROT_90))
+                        .select(Direction.DOWN, model.with(BlockModelGenerators.X_ROT_270))
+                );
+    }
 
 
     public final void flowerPotBlock(Block flowerPot, DyeColor colour, String plant, String modID,  BlockModelGenerators blockModelGenerators) {
