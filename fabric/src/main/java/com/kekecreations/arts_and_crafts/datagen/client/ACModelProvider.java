@@ -53,6 +53,10 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.woodProvider(ACBlocks.STRIPPED_CORK_LOG.get()).log(ACBlocks.STRIPPED_CORK_LOG.get()).wood(ACBlocks.STRIPPED_CORK_WOOD.get());
         modelGen.createTrivialCube(ACBlocks.CORK.get());
         modelGen.createTrivialCube(ACBlocks.SMOOTH_CORK.get());
+        modelGen.createTrivialCube(ACBlocks.CORK_LEAVES.get());
+        modelGen.createDoor(ACBlocks.CORK_DOOR.get());
+        modelGen.createOrientableTrapdoor(ACBlocks.CORK_TRAPDOOR.get());
+        modelGen.createPlantWithDefaultItem(ACBlocks.CORK_SAPLING.get(), ACBlocks.POTTED_CORK_SAPLING.get(), BlockModelGenerators.PlantType.NOT_TINTED);
 
         modelGen.family(ACBlocks.CORK_PLANKS.get())
                 .stairs(ACBlocks.CORK_STAIRS.get())
@@ -64,8 +68,10 @@ public class ACModelProvider extends FabricModelProvider {
 
         //BLEACHED
         modelGen.createTrivialCube(ACBlocks.BLEACHED_CONCRETE.get());
-        modelGen.createTrivialCube(ACBlocks.BLEACHED_WOOL.get());
         modelGen.createTrivialCube(ACBlocks.BLEACHED_CHALK.get());
+        modelGen.createColoredBlockWithRandomRotations(TexturedModel.CUBE, ACBlocks.BLEACHED_CONCRETE_POWDER.get());
+        modelGen.createFullAndCarpetBlocks(ACBlocks.BLEACHED_WOOL.get(), ACBlocks.BLEACHED_CARPET.get());
+        modelGen.createColoredBlockWithStateRotations(TexturedModel.GLAZED_TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get());
 
         //SHINGLES
         modelGen.family(ACBlocks.TERRACOTTA_SHINGLES.get())
@@ -88,6 +94,8 @@ public class ACModelProvider extends FabricModelProvider {
                 .stairs(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get())
                 .slab(ACBlocks.POLISHED_SOAPSTONE_SLAB.get())
                 .wall(ACBlocks.POLISHED_SOAPSTONE_WALL.get());
+
+
 
         for (PietraforteColour colour : PietraforteColour.values()) {
             modelGen.createAxisAlignedPillarBlock(ACBlocks.getPietrafortePillar(colour), TexturedModel.COLUMN);
@@ -117,6 +125,8 @@ public class ACModelProvider extends FabricModelProvider {
                     .slab(ACBlocks.getSmoothPietraforteSlab(colour))
                     .wall(ACBlocks.getSmoothPietraforteWall(colour));
         }
+
+        basePlasterBlock(ACBlocks.PLASTER.get(), modelGen);
 
         for (DyeColor colour : DyeColor.values()) {
 
@@ -212,8 +222,6 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.generateFlatItem(ACItems.SUS_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.BLEACHDEW_PAINTBRUSH.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         modelGen.generateFlatItem(ACItems.BLEACHDEW.get(), ModelTemplates.FLAT_ITEM);
-        modelGen.generateFlatItem(ACBlocks.CORK_DOOR.get().asItem(), ModelTemplates.FLAT_ITEM);
-        modelGen.generateFlatItem(ACBlocks.CORK_SAPLING.get().asItem(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.CORK_SIGN.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.CORK_HANGING_SIGN.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.LOTUS_PISTILS.get(), ModelTemplates.FLAT_ITEM);
@@ -240,6 +248,12 @@ public class ACModelProvider extends FabricModelProvider {
                         .select(Direction.UP, model.with(BlockModelGenerators.X_ROT_90))
                         .select(Direction.DOWN, model.with(BlockModelGenerators.X_ROT_270))
                 );
+    }
+
+    public final void basePlasterBlock(Block plaster,  BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = ACTextureMapping.plasterMappings();
+        Identifier resourceLocation = ACModelTemplates.PLASTER.create(plaster, textureMapping, blockModelGenerators.modelOutput);
+        blockModelGenerators.blockStateOutput.accept(createPlasterVariants(plaster, resourceLocation));
     }
 
     public static ConditionBuilder condition() {

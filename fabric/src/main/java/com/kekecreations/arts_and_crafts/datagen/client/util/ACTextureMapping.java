@@ -28,6 +28,12 @@ public class ACTextureMapping {
                 .put(ACTextureSlots.PLASTER, getPlasterTexture(colour));
     }
 
+    public static TextureMapping plasterMappings() {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getPlasterTexture())
+                .put(ACTextureSlots.PLASTER, getPlasterTexture());
+    }
+
     public static Identifier getChalkPattern(DyeColor colour, String pattern) {
         return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_" + pattern);
     }
@@ -48,5 +54,9 @@ public class ACTextureMapping {
 
     public static Identifier getPlasterTexture(DyeColor colour) {
         return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_plaster");
+    }
+
+    public static Identifier getPlasterTexture() {
+        return Identifier.parse("arts_and_crafts:block/plaster");
     }
 }

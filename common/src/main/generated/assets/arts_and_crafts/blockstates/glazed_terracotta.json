@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "arts_and_crafts:block/glazed_terracotta",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "arts_and_crafts:block/glazed_terracotta",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "arts_and_crafts:block/glazed_terracotta"
+    },
+    "facing=west": {
+      "model": "arts_and_crafts:block/glazed_terracotta",
+      "y": 90
+    }
+  }
+}
