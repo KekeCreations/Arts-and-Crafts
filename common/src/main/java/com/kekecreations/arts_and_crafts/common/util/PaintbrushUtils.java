@@ -53,7 +53,7 @@ public class PaintbrushUtils {
         PaintbrushPalette palette = optionalPalette.get();
         Holder<Block> holder = palette.mappings().get(stack.getItemHolder());
 
-        if (holder.unwrapKey().isEmpty()) return null;
+        if (holder == null || holder.unwrapKey().isEmpty()) return null;
         
         return access.registryOrThrow(Registries.BLOCK).getOrThrow(holder.unwrapKey().get());
     }
