@@ -93,6 +93,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     protected int getBonemealAgeIncrease(Level $$0) {
         return Mth.nextInt($$0.random, 0, 1);
     }
+
     public void growCrops(Level $$0, BlockPos $$1, BlockState $$2) {
         int $$3 = this.getAge($$2) + this.getBonemealAgeIncrease($$0);
         int $$4 = this.getMaxAge();

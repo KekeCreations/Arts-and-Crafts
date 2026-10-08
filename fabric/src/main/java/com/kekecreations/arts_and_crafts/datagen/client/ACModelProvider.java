@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
+import com.kekecreations.arts_and_crafts.common.block.LotusFlowerBlock;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -35,6 +36,7 @@ public class ACModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators modelGen) {
 
         chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), null, modelGen);
+        lotusFlowerBlock(ACBlocks.LOTUS_FLOWER.get(), modelGen);
 
         modelGen.family(ACBlocks.GYPSUM.get())
                 .stairs(ACBlocks.GYPSUM_STAIRS.get())
@@ -96,7 +98,6 @@ public class ACModelProvider extends FabricModelProvider {
                 .stairs(ACBlocks.POLISHED_SOAPSTONE_STAIRS.get())
                 .slab(ACBlocks.POLISHED_SOAPSTONE_SLAB.get())
                 .wall(ACBlocks.POLISHED_SOAPSTONE_WALL.get());
-
 
 
         for (PietraforteColour colour : PietraforteColour.values()) {
@@ -171,7 +172,7 @@ public class ACModelProvider extends FabricModelProvider {
             flowerPotBlock(ACBlocks.getDyedPottedAcaciaSapling(colour), colour, "acacia_sapling", "minecraft", modelGen);
             flowerPotBlock(ACBlocks.getDyedPottedCherrySapling(colour), colour, "cherry_sapling", "minecraft", modelGen);
             flowerPotBlock(ACBlocks.getDyedPottedDarkOakSapling(colour), colour, "dark_oak_sapling", "minecraft", modelGen);
-            mangrovePropaguleFlowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colour), colour,  modelGen);
+            mangrovePropaguleFlowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colour), colour, modelGen);
 
             flowerPotBlock(ACBlocks.getDyedPottedCrimsonFungus(colour), colour, "crimson_fungus", "minecraft", modelGen);
             flowerPotBlock(ACBlocks.getDyedPottedCrimsonRoots(colour), colour, "crimson_roots_pot", "minecraft", modelGen);
@@ -232,7 +233,7 @@ public class ACModelProvider extends FabricModelProvider {
     }
 
 
-    public final void plasterBlock(Block plaster, DyeColor colour,  BlockModelGenerators blockModelGenerators) {
+    public final void plasterBlock(Block plaster, DyeColor colour, BlockModelGenerators blockModelGenerators) {
         TextureMapping textureMapping = ACTextureMapping.plasterMappings(colour);
         Identifier resourceLocation = ACModelTemplates.PLASTER.create(plaster, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(createPlasterVariants(plaster, resourceLocation));
@@ -252,7 +253,7 @@ public class ACModelProvider extends FabricModelProvider {
                 );
     }
 
-    public final void basePlasterBlock(Block plaster,  BlockModelGenerators blockModelGenerators) {
+    public final void basePlasterBlock(Block plaster, BlockModelGenerators blockModelGenerators) {
         TextureMapping textureMapping = ACTextureMapping.plasterMappings();
         Identifier resourceLocation = ACModelTemplates.PLASTER.create(plaster, textureMapping, blockModelGenerators.modelOutput);
         blockModelGenerators.blockStateOutput.accept(createPlasterVariants(plaster, resourceLocation));
@@ -260,6 +261,61 @@ public class ACModelProvider extends FabricModelProvider {
 
     public static ConditionBuilder condition() {
         return BlockModelGenerators.condition();
+    }
+
+    public final void lotusFlowerBlock(Block flower,  BlockModelGenerators blockModelGenerators) {
+        blockModelGenerators.blockStateOutput.accept(createLotusFlowerVariants(flower, blockModelGenerators));
+    }
+
+    private static BlockModelDefinitionGenerator createLotusFlowerVariants(Block flower, BlockModelGenerators modelGen) {
+        TexturedModel.Provider texturedModel = TexturedModel.createDefault(ACTextureMapping::lotusFlowerDefaultMappings, ACModelTemplates.LOTUS_FLOWER);
+
+        MultiVariant age0 = BlockModelGenerators.plainVariant(texturedModel.get(flower).updateTextures((textureMapping) ->
+                textureMapping.put(TextureSlot.PARTICLE, ACTextureMapping.getLotusFlower(0))
+                        .put(ACTextureSlots.LOTUS, ACTextureMapping.getLotusFlower(0))
+        ).createWithSuffix(flower, "_0", modelGen.modelOutput));
+
+        MultiVariant age1 = BlockModelGenerators.plainVariant(texturedModel.get(flower)
+                .updateTextures((textureMapping) ->
+                        textureMapping.put(TextureSlot.PARTICLE, ACTextureMapping.getLotusFlower(1))
+                                .put(ACTextureSlots.LOTUS, ACTextureMapping.getLotusFlower(1))
+                ).createWithSuffix(flower, "_1", modelGen.modelOutput));
+
+        MultiVariant age2 = BlockModelGenerators.plainVariant(texturedModel.get(flower)
+                .updateTextures((textureMapping) ->
+                        textureMapping.put(TextureSlot.PARTICLE, ACTextureMapping.getLotusFlower(2))
+                                .put(ACTextureSlots.LOTUS, ACTextureMapping.getLotusFlower(2))
+                ).createWithSuffix(flower, "_2", modelGen.modelOutput));
+
+        MultiVariant age3 = BlockModelGenerators.plainVariant(texturedModel.get(flower)
+                .updateTextures((textureMapping) ->
+                        textureMapping.put(TextureSlot.PARTICLE, ACTextureMapping.getLotusFlower(3))
+                                .put(ACTextureSlots.LOTUS, ACTextureMapping.getLotusFlower(3))
+                ).createWithSuffix(flower, "_3", modelGen.modelOutput));
+
+        return MultiVariantGenerator.dispatch(flower)
+                .with(PropertyDispatch.initial(LotusFlowerBlock.AGE, LotusFlowerBlock.FACING)
+                        //0
+                        .select(0, Direction.NORTH, age0.with(BlockModelGenerators.Y_ROT_180))
+                        .select(0, Direction.EAST, age0.with(BlockModelGenerators.Y_ROT_270))
+                        .select(0, Direction.SOUTH, age0)
+                        .select(0, Direction.WEST, age0.with(BlockModelGenerators.Y_ROT_90))
+                        //1
+                        .select(1, Direction.NORTH, age1.with(BlockModelGenerators.Y_ROT_180))
+                        .select(1, Direction.EAST, age1.with(BlockModelGenerators.Y_ROT_270))
+                        .select(1, Direction.SOUTH, age1)
+                        .select(1, Direction.WEST, age1.with(BlockModelGenerators.Y_ROT_90))
+                        //2
+                        .select(2, Direction.NORTH, age2.with(BlockModelGenerators.Y_ROT_180))
+                        .select(2, Direction.EAST, age2.with(BlockModelGenerators.Y_ROT_270))
+                        .select(2, Direction.SOUTH, age2)
+                        .select(2, Direction.WEST, age2.with(BlockModelGenerators.Y_ROT_90))
+                        //3
+                        .select(3, Direction.NORTH, age3.with(BlockModelGenerators.Y_ROT_180))
+                        .select(3, Direction.EAST, age3.with(BlockModelGenerators.Y_ROT_270))
+                        .select(3, Direction.SOUTH, age3)
+                        .select(3, Direction.WEST, age3.with(BlockModelGenerators.Y_ROT_90))
+                );
     }
 
     public final void chalkDustBlock(Block chalkDust, DyeColor colour,  BlockModelGenerators blockModelGenerators) {

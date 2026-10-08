@@ -7,4 +7,5 @@ public class ACTextureSlots {
     public static final TextureSlot FLOWER_POT = TextureSlot.create("flowerpot");
     public static final TextureSlot PLASTER = TextureSlot.create("plaster");
     public static final TextureSlot DUST = TextureSlot.create("dust");
+    public static final TextureSlot LOTUS = TextureSlot.create("lotus");
 }

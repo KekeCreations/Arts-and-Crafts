@@ -47,6 +47,16 @@ public class ACTextureMapping {
                 .put(ACTextureSlots.DUST, Identifier.parse("arts_and_crafts:block/white_dot"));
     }
 
+    public static TextureMapping lotusFlowerDefaultMappings(Block block) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, Identifier.parse("arts_and_crafts:block/lotus_0"))
+                .put(ACTextureSlots.DUST, Identifier.parse("arts_and_crafts:block/lotus_0"));
+    }
+
+    public static Identifier getLotusFlower(int age) {
+        return Identifier.parse("arts_and_crafts:block/lotus_" + age);
+    }
+
     public static Identifier getPlantTexture(String plant, String modID) {
         return Identifier.fromNamespaceAndPath(modID, "block/" + plant);
     }
