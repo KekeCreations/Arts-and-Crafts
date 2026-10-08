@@ -19,6 +19,7 @@ public class ArtsAndCrafts {
         ACEntityTypes.register();
         ACTabs.register();
         ACSounds.register();
+        ACParticles.register();
     }
 
     public static Identifier id(String name) {

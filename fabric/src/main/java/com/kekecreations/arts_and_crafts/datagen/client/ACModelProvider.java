@@ -34,6 +34,8 @@ public class ACModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators modelGen) {
 
+        chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), null, modelGen);
+
         modelGen.family(ACBlocks.GYPSUM.get())
                 .stairs(ACBlocks.GYPSUM_STAIRS.get())
                 .slab(ACBlocks.GYPSUM_SLAB.get())

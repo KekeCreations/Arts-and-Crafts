@@ -14,10 +14,10 @@ public class ChalkUtils {
     }
 
     public static void spawnChalkParticle(Level level, double x, double y, double z, Integer colours) {
-       // level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-        //level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-       // level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
-       // level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
+        level.addParticle(ACParticles.getChalkDrawParticle(colours), x, y, z, 0D, 0D, 0D );
     }
 
     public static BlockState changeChalkDustState(BlockState blockState, Player player, int k) {

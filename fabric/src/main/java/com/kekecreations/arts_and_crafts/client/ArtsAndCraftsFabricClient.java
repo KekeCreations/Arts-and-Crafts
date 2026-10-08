@@ -1,13 +1,16 @@
 package com.kekecreations.arts_and_crafts.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric;
+import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
+import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
@@ -19,12 +22,21 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         registerBlockLayers();
         registerRenderers();
+        registerParticleFactories();
 
 
         ClientPlayNetworking.registerGlobalReceiver(FabricConfig.PACKET_ID, (config, context) -> {
             ArtsAndCraftsFabric.setConfig(config);
         });
     }
+
+    public static void registerParticleFactories() {
+        for (DyeColor colours : DyeColor.values()) {
+            ParticleFactoryRegistry.getInstance().register(ACParticles.getChalkDrawParticle(colours.getId()), ChalkDustParticle.Factory::new);
+        }
+        ParticleFactoryRegistry.getInstance().register(ACParticles.getChalkDrawParticle(-1), ChalkDustParticle.Factory::new);
+    }
+
 
     public static void registerBlockLayers() {
         for (DyeColor colours : DyeColor.values()) {

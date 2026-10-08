@@ -35,6 +35,9 @@ public class ACTextureMapping {
     }
 
     public static Identifier getChalkPattern(DyeColor colour, String pattern) {
+        if (colour == null) {
+            return Identifier.parse("arts_and_crafts:block/bleached_" + pattern);
+        }
         return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_" + pattern);
     }
 
