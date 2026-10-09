@@ -12,7 +12,11 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.vehicle.boat.Boat;
+import net.minecraft.world.entity.vehicle.boat.ChestBoat;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -22,6 +26,14 @@ import java.util.function.Supplier;
 public class ACEntityTypes {
 
 
+    private static EntityType.EntityFactory<Boat> boatFactory(Supplier<Item> boatItemGetter) {
+        return (type, level) -> new Boat(type, level, boatItemGetter);
+    }
+
+    private static EntityType.EntityFactory<ChestBoat> chestBoatFactory(Supplier<Item> boatItemGetter) {
+        return (type, level) -> new ChestBoat(type, level, boatItemGetter);
+    }
+
 
     public static final Supplier<EntityType<?>> FLOATING_BLOCK = registerEntityType("floating_block", () ->
             EntityType.Builder.of(FloatingBlockEntity::new, MobCategory.MISC)
@@ -30,25 +42,21 @@ public class ACEntityTypes {
                     .build(key("floating_block")));
 
 
-    /*
 
-    public static final Supplier<EntityType<ACBoat>> BOAT = registerEntityType("boat", () ->
-            EntityType.Builder.of((EntityType.EntityFactory<ACBoat>) ACBoat::new, MobCategory.MISC)
+    // () -> supplier.get() because fabric throws null item otherwise
+    public static final Supplier<EntityType<?>> CORK_BOAT = registerEntityType("cork_boat", () ->
+            EntityType.Builder.of(boatFactory(() -> ACItems.CORK_BOAT.get()),  MobCategory.MISC)
+                    .noLootTable()
                     .sized(1.375f, 0.5625f)
                     .clientTrackingRange(10)
-                    .build(dataFixer("boat")));
+                    .build(key("cork_boat")));
 
-
-
-
-    public static final Supplier<EntityType<ACChestBoat>> CHEST_BOAT = registerEntityType("chest_boat", () ->
-            EntityType.Builder.of((EntityType.EntityFactory<ACChestBoat>) ACChestBoat::new, MobCategory.MISC)
+    public static final Supplier<EntityType<?>> CORK_CHEST_BOAT = registerEntityType("cork_chest_boat", () ->
+            EntityType.Builder.of(chestBoatFactory(() -> ACItems.CORK_CHEST_BOAT.get()),  MobCategory.MISC)
+                    .noLootTable()
                     .sized(1.375f, 0.5625f)
                     .clientTrackingRange(10)
-                    .build(dataFixer("chest_boat")));
-
-
-     */
+                    .build(key("cork_chest_boat")));
 
 
 

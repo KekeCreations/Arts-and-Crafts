@@ -2,12 +2,13 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.entity.ACBoat;
 import com.kekecreations.arts_and_crafts.common.item.*;
 import com.kekecreations.arts_and_crafts.common.item.april_fools.ACFoolItem;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.vehicle.boat.AbstractBoat;
 import net.minecraft.world.item.*;
 
 import java.util.HashMap;
@@ -33,8 +34,8 @@ public class ACItems {
     public static final Supplier<Item> LOTUS_PISTILS = registerItem("lotus_pistils", registryName -> new LotusPistilItem(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
     public static final Supplier<Item> CORK_SIGN = registerItem("cork_sign", registryName -> new SignItem(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(16), ACBlocks.CORK_SIGN.get(), ACBlocks.CORK_WALL_SIGN.get(), Direction.DOWN));
     public static final Supplier<Item> CORK_HANGING_SIGN = registerItem("cork_hanging_sign", registryName -> new HangingSignItem(ACBlocks.CORK_HANGING_SIGN.get(), ACBlocks.CORK_WALL_HANGING_SIGN.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(16)));
-    public static final Supplier<Item> CORK_BOAT = registerItem("cork_boat", registryName -> new ACBoatItem(false, ACBoat.WoodType.CORK, new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
-    public static final Supplier<Item> CORK_CHEST_BOAT = registerItem("cork_chest_boat", registryName -> new ACBoatItem(true, ACBoat.WoodType.CORK, new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
+    public static final Supplier<Item> CORK_BOAT = registerItem("cork_boat", registryName -> new BoatItem((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_BOAT.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
+    public static final Supplier<Item> CORK_CHEST_BOAT = registerItem("cork_chest_boat", registryName -> new BoatItem((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_CHEST_BOAT.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
 
     public static final Supplier<Item> POTTERY_SHERD = registerItem("pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
     public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));

@@ -20,10 +20,14 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.impl.client.rendering.EntityRendererRegistryImpl;
+import net.minecraft.client.model.object.boat.BoatModel;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.vehicle.boat.Boat;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
@@ -99,21 +103,19 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
     }
 
     public static void registerRenderers() {
-        EntityRendererRegistry.register((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
-        //EntityRendererRegistry.register(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
-        //EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
+        EntityRendererRegistryImpl.register((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         BlockEntityRenderers.register((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRenderers.register((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
-        for (DyeColor colour : DyeColor.values()) {
-            if (colour.getId() <= 15) {
-                //BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colour.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
-            }
-        }
         SpecialModelRenderers.ID_MAPPER.put(ArtsAndCrafts.id("dyed_decorated_pot"), DyedDecoratedPotSpecialRenderer.Unbaked.MAP_CODEC);
+
+        EntityRendererRegistryImpl.register((EntityType<? extends Boat>) ACEntityTypes.CORK_BOAT.get(), ctx -> new BoatRenderer(ctx, ACModelLayers.CORK_BOAT));
+        EntityRendererRegistryImpl.register((EntityType<? extends Boat>) ACEntityTypes.CORK_CHEST_BOAT.get(), ctx -> new BoatRenderer(ctx, ACModelLayers.CORK_CHEST_BOAT));
     }
 
     public static void registerModelLayers() {
         EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.BASE, DyedDecoratedPotBER::createBaseLayer);
         EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.SIDE, DyedDecoratedPotBER::createSidesLayer);
+        EntityModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_BOAT, BoatModel::createBoatModel);
+        EntityModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_CHEST_BOAT, BoatModel::createChestBoatModel);
     }
 }

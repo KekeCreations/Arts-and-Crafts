@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts.datagen.client;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -176,9 +177,9 @@ public class ACLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ACItems.SUS_POTTERY_SHERD.get(), "Sus Pottery Sherd");
 
         //ENTITY TYPES
-        //translationBuilder.add(ACEntityTypes.CHEST_BOAT.get().asItem(), "Boat with Chest");
-       // translationBuilder.add(ACEntityTypes.BOAT.get().asItem(), "Boat");
-        //translationBuilder.add(ACEntityTypes.FLOATING_BLOCK.get().asItem(), "Floating Block");
+        translationBuilder.add(ACEntityTypes.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");
+        translationBuilder.add(ACEntityTypes.CORK_BOAT.get(), "Cork Boat");
+        translationBuilder.add(ACEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
 
 
 

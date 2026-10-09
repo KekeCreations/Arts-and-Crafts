@@ -13,10 +13,13 @@ import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
+import net.minecraft.client.model.object.boat.BoatModel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.vehicle.boat.AbstractBoat;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -37,11 +40,19 @@ public class ClientEvents {
 
 
     @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ACModelLayers.CORK_BOAT, BoatModel::createBoatModel);
+        event.registerLayerDefinition(ACModelLayers.CORK_CHEST_BOAT, BoatModel::createChestBoatModel);
+        event.registerLayerDefinition(DyedDecoratedPotBER.BASE, DyedDecoratedPotBER::createBaseLayer);
+        event.registerLayerDefinition(DyedDecoratedPotBER.SIDE, DyedDecoratedPotBER::createSidesLayer);
+    }
+
+    @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         // Entity Renderers
         event.registerEntityRenderer((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
-        //event.registerEntityRenderer(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
-        //event.registerEntityRenderer(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
+        event.registerEntityRenderer((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_BOAT.get(), context -> new BoatRenderer(context, ACModelLayers.CORK_BOAT));
+        event.registerEntityRenderer((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_CHEST_BOAT.get(), context -> new BoatRenderer(context, ACModelLayers.CORK_CHEST_BOAT));
         event.registerBlockEntityRenderer((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         event.registerBlockEntityRenderer((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
     }
