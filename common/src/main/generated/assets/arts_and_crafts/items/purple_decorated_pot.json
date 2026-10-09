@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "arts_and_crafts:item/purple_decorated_pot",
+    "model": {
+      "type": "arts_and_crafts:dyed_decorated_pot",
+      "colour": "purple"
+    }
+  }
+}

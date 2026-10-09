@@ -9,6 +9,7 @@ import java.util.Optional;
 
 public class ACModelTemplates {
 
+    public static final ModelTemplate DECORATED_POT = createDecoratedPotItem();
     public static final ModelTemplate PLASTER = createPlaster(TextureSlot.PARTICLE, ACTextureSlots.PLASTER);
     public static final ModelTemplate CHALK_DUST = createChalkDust(TextureSlot.PARTICLE, ACTextureSlots.DUST);
     public static final ModelTemplate LOTUS_FLOWER = createLotusFlower(TextureSlot.PARTICLE, ACTextureSlots.LOTUS);
@@ -66,6 +67,10 @@ public class ACModelTemplates {
 
     public static ModelTemplate createLotusFlower(TextureSlot... textureSlots) {
         return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/lotus_flower_model"))), Optional.empty(), textureSlots);
+    }
+
+    public static ModelTemplate createDecoratedPotItem(TextureSlot... textureSlots) {
+        return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath("minecraft", "item/decorated_pot"))), Optional.empty(), textureSlots);
     }
 
 }

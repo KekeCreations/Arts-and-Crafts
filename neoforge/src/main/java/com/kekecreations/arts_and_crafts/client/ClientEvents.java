@@ -4,8 +4,11 @@ package com.kekecreations.arts_and_crafts.client;
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotSpecialRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.ACBedBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
@@ -23,6 +26,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.client.event.RegisterSpecialModelRendererEvent;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -38,8 +42,14 @@ public class ClientEvents {
         event.registerEntityRenderer((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         //event.registerEntityRenderer(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
         //event.registerEntityRenderer(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
-        //event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
+        event.registerBlockEntityRenderer((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         event.registerBlockEntityRenderer((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+    }
+
+    @SubscribeEvent
+    public static void registerSpecialRenderers(RegisterSpecialModelRendererEvent event) {
+        event.register(ArtsAndCrafts.id("dyed_decorated_pot"), DyedDecoratedPotSpecialRenderer.Unbaked.MAP_CODEC
+        );
     }
 
     @SubscribeEvent

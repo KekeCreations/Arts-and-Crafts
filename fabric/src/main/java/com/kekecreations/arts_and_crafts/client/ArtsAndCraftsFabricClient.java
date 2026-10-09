@@ -4,8 +4,11 @@ import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.ArtsAndCraftsFabric;
 import com.kekecreations.arts_and_crafts.client.particle.ChalkDustParticle;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotSpecialRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.ACBedBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
@@ -15,6 +18,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
@@ -29,6 +33,7 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
         registerBlockLayers();
         registerRenderers();
         registerParticleFactories();
+        registerModelLayers();
 
 
         ClientPlayNetworking.registerGlobalReceiver(FabricConfig.PACKET_ID, (config, context) -> {
@@ -97,12 +102,18 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
         EntityRendererRegistry.register((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         //EntityRendererRegistry.register(ACEntityTypes.BOAT.get(), context -> new ACBoatRenderer(context, false));
         //EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
-        //BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
+        BlockEntityRenderers.register((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRenderers.register((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
         for (DyeColor colour : DyeColor.values()) {
             if (colour.getId() <= 15) {
                 //BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colour.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);
             }
         }
+        SpecialModelRenderers.ID_MAPPER.put(ArtsAndCrafts.id("dyed_decorated_pot"), DyedDecoratedPotSpecialRenderer.Unbaked.MAP_CODEC);
+    }
+
+    public static void registerModelLayers() {
+        EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.BASE, DyedDecoratedPotBER::createBaseLayer);
+        EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.SIDE, DyedDecoratedPotBER::createSidesLayer);
     }
 }

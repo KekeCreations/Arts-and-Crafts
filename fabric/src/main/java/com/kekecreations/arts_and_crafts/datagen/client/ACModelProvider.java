@@ -1,8 +1,10 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotSpecialRenderer;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.LotusFlowerBlock;
+import com.kekecreations.arts_and_crafts.common.util.DyedPotUtils;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -134,6 +136,8 @@ public class ACModelProvider extends FabricModelProvider {
 
         for (DyeColor colour : DyeColor.values()) {
 
+            createDecoratedPot(ACBlocks.getDyedDecoratedPot(colour.getId()), colour, DyedPotUtils.getDyedPotParticle(colour), modelGen);
+
             modelGen.createTrivialCube(ACBlocks.getChalk(colour.getId()));
             plasterBlock(ACBlocks.getDyedPlaster(colour.getId()), colour, modelGen);
             chalkDustBlock(ACBlocks.getChalkDust(colour.getId()), colour, modelGen);
@@ -239,6 +243,13 @@ public class ACModelProvider extends FabricModelProvider {
         Item item = block.asItem();
         Identifier identifier = ModelTemplates.BED_INVENTORY.create(ModelLocationUtils.getModelLocation(item), TextureMapping.particle(particleBlock), modelGen.modelOutput);
         modelGen.itemModelOutput.accept(item, ItemModelUtils.specialModel(identifier, new BedSpecialRenderer.Unbaked(ArtsAndCrafts.id("bleached"))));
+    }
+
+    public final void createDecoratedPot(Block block, DyeColor colour, Block particleBlock, BlockModelGenerators modelGen) {
+        modelGen.blockStateOutput.accept(modelGen.createSimpleBlock(block, modelGen.createParticleOnlyBlockModel(block, particleBlock)));
+        Item item = block.asItem();
+        Identifier identifier = ACModelTemplates.DECORATED_POT.create(ModelLocationUtils.getModelLocation(item), TextureMapping.particle(block), modelGen.modelOutput);
+        modelGen.itemModelOutput.accept(item, ItemModelUtils.specialModel(identifier, new DyedDecoratedPotSpecialRenderer.Unbaked(colour)));
     }
 
 
