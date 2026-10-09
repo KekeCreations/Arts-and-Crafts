@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "arts_and_crafts:purple_terracotta_shingles",
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:purple_terracotta_shingle_stairs"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soapstone",
+  "key": {
+    "K": "arts_and_crafts:soapstone",
+    "Q": "minecraft:light_blue_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "arts_and_crafts:light_blue_soapstone"
+  }
+}

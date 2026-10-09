@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smooth_verdant_pietraforte": {
+      "conditions": {
+        "items": [
+          {
+            "items": "arts_and_crafts:smooth_verdant_pietraforte"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:stonecutting/smooth_verdant_pietraforte_slab_from_smooth_verdant_pietraforte_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smooth_verdant_pietraforte"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:stonecutting/smooth_verdant_pietraforte_slab_from_smooth_verdant_pietraforte_stonecutting"
+    ]
+  }
+}

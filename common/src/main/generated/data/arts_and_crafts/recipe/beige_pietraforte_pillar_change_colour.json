@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "arts_and_crafts:ochre_pietraforte_pillar",
+    "X": "minecraft:quartz"
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "arts_and_crafts:beige_pietraforte_pillar"
+  }
+}

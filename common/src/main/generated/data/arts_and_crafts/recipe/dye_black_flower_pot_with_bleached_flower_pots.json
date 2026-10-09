@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "flower_pots",
+  "ingredients": [
+    "minecraft:black_dye",
+    "minecraft:flower_pot"
+  ],
+  "result": {
+    "count": 1,
+    "id": "arts_and_crafts:black_flower_pot"
+  }
+}

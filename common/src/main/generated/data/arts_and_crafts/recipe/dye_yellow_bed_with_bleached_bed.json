@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "bed",
+  "ingredients": [
+    "minecraft:yellow_dye",
+    "arts_and_crafts:bleached_bed"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:yellow_bed"
+  }
+}

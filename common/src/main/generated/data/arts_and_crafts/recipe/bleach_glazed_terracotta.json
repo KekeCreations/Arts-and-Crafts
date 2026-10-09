@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "glazed_terracotta",
+  "key": {
+    "K": [
+      "minecraft:black_glazed_terracotta",
+      "minecraft:blue_glazed_terracotta",
+      "minecraft:brown_glazed_terracotta",
+      "minecraft:cyan_glazed_terracotta",
+      "minecraft:gray_glazed_terracotta",
+      "minecraft:green_glazed_terracotta",
+      "minecraft:light_blue_glazed_terracotta",
+      "minecraft:light_gray_glazed_terracotta",
+      "minecraft:lime_glazed_terracotta",
+      "minecraft:magenta_glazed_terracotta",
+      "minecraft:orange_glazed_terracotta",
+      "minecraft:pink_glazed_terracotta",
+      "minecraft:purple_glazed_terracotta",
+      "minecraft:red_glazed_terracotta",
+      "minecraft:yellow_glazed_terracotta",
+      "minecraft:white_glazed_terracotta"
+    ],
+    "Q": "arts_and_crafts:bleachdew"
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "arts_and_crafts:glazed_terracotta"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "soapstone_brick_stairs",
+  "key": {
+    "K": "arts_and_crafts:soapstone_brick_stairs",
+    "Q": "minecraft:magenta_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "arts_and_crafts:magenta_soapstone_brick_stairs"
+  }
+}

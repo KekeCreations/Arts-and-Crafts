@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_soapstone",
+  "key": {
+    "K": "arts_and_crafts:polished_soapstone",
+    "Q": "minecraft:lime_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "arts_and_crafts:lime_polished_soapstone"
+  }
+}
