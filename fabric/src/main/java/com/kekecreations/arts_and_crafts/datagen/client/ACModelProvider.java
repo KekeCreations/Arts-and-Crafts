@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts.datagen.client;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
 import com.kekecreations.arts_and_crafts.common.block.LotusFlowerBlock;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
@@ -14,13 +15,12 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.*;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.renderer.special.BedSpecialRenderer;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
@@ -37,6 +37,7 @@ public class ACModelProvider extends FabricModelProvider {
 
         chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), null, modelGen);
         lotusFlowerBlock(ACBlocks.LOTUS_FLOWER.get(), modelGen);
+        createBleachedBed(ACBlocks.BLEACHED_BED.get(), ACBlocks.BLEACHED_WOOL.get(), modelGen);
 
         modelGen.family(ACBlocks.GYPSUM.get())
                 .stairs(ACBlocks.GYPSUM_STAIRS.get())
@@ -230,6 +231,14 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.generateFlatItem(ACItems.LOTUS_PISTILS.get(), ModelTemplates.FLAT_ITEM);
 
         //bedBlockItem(ACItems.BLEACHED_BED.get());
+    }
+
+    public final void createBleachedBed(Block block, Block particleBlock, BlockModelGenerators modelGen) {
+        MultiVariant multiVariant = modelGen.plainVariant(ModelLocationUtils.decorateBlockModelLocation("bed"));
+        modelGen.blockStateOutput.accept(modelGen.createSimpleBlock(block, multiVariant));
+        Item item = block.asItem();
+        Identifier identifier = ModelTemplates.BED_INVENTORY.create(ModelLocationUtils.getModelLocation(item), TextureMapping.particle(particleBlock), modelGen.modelOutput);
+        modelGen.itemModelOutput.accept(item, ItemModelUtils.specialModel(identifier, new BedSpecialRenderer.Unbaked(ArtsAndCrafts.id("bleached"))));
     }
 
 

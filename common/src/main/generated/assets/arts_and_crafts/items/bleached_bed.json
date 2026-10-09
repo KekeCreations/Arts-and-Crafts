@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "arts_and_crafts:item/bleached_bed",
+    "model": {
+      "type": "minecraft:bed",
+      "texture": "arts_and_crafts:bleached"
+    }
+  }
+}
