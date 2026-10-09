@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts.datagen;
 
 import com.kekecreations.arts_and_crafts.datagen.client.ACLanguageProvider;
 import com.kekecreations.arts_and_crafts.datagen.client.ACModelProvider;
+import com.kekecreations.arts_and_crafts.datagen.server.ACBlockLootTableProvider;
 import com.kekecreations.arts_and_crafts.datagen.server.ACBlockTagsProvider;
 import com.kekecreations.arts_and_crafts.datagen.server.ACItemTagsProvider;
 import com.kekecreations.arts_and_crafts.datagen.server.ACRecipeProvider;
@@ -18,7 +19,7 @@ public class ACDataGenerator implements DataGeneratorEntrypoint {
         //pack.addProvider(ACCLanguageProvider::new);
         pack.addProvider(ACItemTagsProvider::new);
         pack.addProvider(ACRecipeProvider::new);
-        //pack.addProvider(ACCBlockLootTableProvider::new);
+        pack.addProvider(ACBlockLootTableProvider::new);
 
         // Client Data
         pack.addProvider(ACModelProvider::new);
