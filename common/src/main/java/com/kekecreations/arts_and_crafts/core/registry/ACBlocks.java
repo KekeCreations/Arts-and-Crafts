@@ -145,7 +145,7 @@ public class ACBlocks {
     })));
 
     //BLEACHED
-    public static final Supplier<Block> GLAZED_TERRACOTTA = registerBlockWithItem("glazed_terracotta", registryName -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> GLAZED_TERRACOTTA = registerBlockWithItem("glazed_terracotta", registryName -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).pushReaction(PushReaction.PUSH_ONLY).setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> BLEACHED_CONCRETE = registerBlockWithItem("bleached_concrete", registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE).setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> BLEACHED_CONCRETE_POWDER = registerBlockWithItem("bleached_concrete_powder", registryName -> new ConcretePowderBlock(BLEACHED_CONCRETE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE_POWDER).setId(JinxedRegistryHelper.blockKey(registryName))));

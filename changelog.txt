@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.6.0-beta
+- Fixed Glazed Terracotta sticking to slime and honey
+- Chalk Dust Block no longer crashes the game when the server calls the clone item stack method
+- Ported all features from V1.5.4 to 1.21.11
+
+
 
 ### V1.5.4
 - Cork leaves now use the leaves model for bushy texture pack compatibility
