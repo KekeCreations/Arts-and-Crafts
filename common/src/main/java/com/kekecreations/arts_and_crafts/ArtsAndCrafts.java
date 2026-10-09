@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
+import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import com.kekecreations.arts_and_crafts.core.registry.*;
 import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
@@ -21,6 +22,7 @@ public class ArtsAndCrafts {
         ACSounds.register();
         ACParticles.register();
         ACRecipeSerializer.register();
+        ACDyedBlockLists.registerLists();
     }
 
     public static Identifier id(String name) {

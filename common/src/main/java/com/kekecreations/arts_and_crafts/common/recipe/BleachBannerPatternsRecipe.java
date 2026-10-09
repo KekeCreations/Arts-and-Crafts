@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import org.jetbrains.annotations.NotNull;
 
-/*
+
 public class BleachBannerPatternsRecipe extends CustomRecipe {
     public BleachBannerPatternsRecipe(CraftingBookCategory craftingBookCategory) {
         super(craftingBookCategory);
@@ -30,7 +30,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         for(int k = 0; k < craftingInput.size(); ++k) {
             ItemStack itemStack = craftingInput.getItem(k);
             if (!itemStack.isEmpty()) {
-                if (itemStack.is(ItemTags.BANNERS) && itemStack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY).layers().size() > 0) {
+                if (itemStack.is(ItemTags.BANNERS) && !itemStack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY).layers().isEmpty()) {
                     ++i;
                 } else {
                     if (!(itemStack.is(ACItems.BLEACHDEW.get()))) {
@@ -72,10 +72,8 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         return i * j >= 2;
     }
 
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<? extends CustomRecipe> getSerializer() {
         return ACRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
     }
 
 }
-
- */
