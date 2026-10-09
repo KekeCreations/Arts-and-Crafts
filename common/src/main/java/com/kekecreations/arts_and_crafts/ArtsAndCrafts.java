@@ -20,6 +20,7 @@ public class ArtsAndCrafts {
         ACTabs.register();
         ACSounds.register();
         ACParticles.register();
+        ACRecipeSerializer.register();
     }
 
     public static Identifier id(String name) {
