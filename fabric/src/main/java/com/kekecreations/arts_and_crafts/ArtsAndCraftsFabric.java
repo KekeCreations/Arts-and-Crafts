@@ -7,6 +7,7 @@ import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.init.ACValidSigns;
 import com.kekecreations.arts_and_crafts.core.registry.ACFabricRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.ACFabricTabs;
 import com.kekecreations.arts_and_crafts.core.registry.ACFeatures;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -46,6 +47,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ACFabricRegistries.register();
         ACLootTableEvents.modifyVanillaLootTables();
         createBiomeModifications();
+        ACFabricTabs.register();
     }
 
     public void config() {

@@ -158,7 +158,7 @@ public class DyedDecoratedPotBER implements BlockEntityRenderer<DyedDecoratedPot
 
     public void submit(PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int lightCoords, int overlayCoords, PotDecorations decorations, DyeColor colour, int outlineColor) {
         RenderType renderType = Sheets.DECORATED_POT_BASE.renderType(RenderTypes::entitySolid);
-        TextureAtlasSprite sprite = this.sprites.get(Sheets.DECORATED_POT_BASE);
+        TextureAtlasSprite sprite = this.sprites.get(getBaseMaterial(colour));
         submitNodeCollector.submitModelPart(this.neck, poseStack, renderType, lightCoords, overlayCoords, sprite, false, false, -1, (ModelFeatureRenderer.CrumblingOverlay)null, outlineColor);
         submitNodeCollector.submitModelPart(this.top, poseStack, renderType, lightCoords, overlayCoords, sprite, false, false, -1, (ModelFeatureRenderer.CrumblingOverlay)null, outlineColor);
         submitNodeCollector.submitModelPart(this.bottom, poseStack, renderType, lightCoords, overlayCoords, sprite, false, false, -1, (ModelFeatureRenderer.CrumblingOverlay)null, outlineColor);

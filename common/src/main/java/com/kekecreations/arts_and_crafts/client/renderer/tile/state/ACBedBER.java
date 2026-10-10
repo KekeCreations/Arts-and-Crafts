@@ -104,7 +104,7 @@ public class ACBedBER implements BlockEntityRenderer<ACBedBlockEntity, BedRender
     }
 
     public void submit(BedRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera) {
-        SpriteId sprite = new SpriteId(Sheets.BED_SHEET, ArtsAndCrafts.id("bed/bleached"));
+        SpriteId sprite = new SpriteId(Sheets.BED_SHEET, ArtsAndCrafts.id("entity/bed/bleached"));
         poseStack.pushPose();
         poseStack.mulPose(modelTransform(state.facing));
         this.submitPiece(state.part, sprite, poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, state.breakProgress, 0);
