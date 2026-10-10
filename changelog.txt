@@ -6,7 +6,8 @@ Arts & Crafts Changelog
 - Fixed Cork Boat Translations
 - Removed bleaching sheep from the mod
 - Removed April Fools 2025 features
-- Ported all features from V1.5.4 to 1.21.11
+- Removed Bleaching Banners
+- Ported all features from V1.5.4 to v26.1.2
 
 
 

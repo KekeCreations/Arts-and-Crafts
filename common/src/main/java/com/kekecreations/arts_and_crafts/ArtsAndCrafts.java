@@ -20,7 +20,6 @@ public class ArtsAndCrafts {
         ACEntityTypes.register();
         ACSounds.register();
         ACParticles.register();
-        ACRecipeSerializer.register();
         ACDyedLists.registerLists();
     }
 
