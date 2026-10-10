@@ -41,6 +41,11 @@ public class ACModelProvider extends FabricModelProvider {
         lotusFlowerBlock(ACBlocks.LOTUS_FLOWER.get(), modelGen);
         createBleachedBed(ACBlocks.BLEACHED_BED.get(), ACBlocks.BLEACHED_WOOL.get(), modelGen);
 
+        modelGen.createParticleOnlyBlock(ACBlocks.CORK_SIGN.get(), ACBlocks.CORK_PLANKS.get());
+        modelGen.createParticleOnlyBlock(ACBlocks.CORK_WALL_SIGN.get(), ACBlocks.CORK_PLANKS.get());
+        modelGen.createParticleOnlyBlock(ACBlocks.CORK_HANGING_SIGN.get(), ACBlocks.CORK_PLANKS.get());
+        modelGen.createParticleOnlyBlock(ACBlocks.CORK_WALL_HANGING_SIGN.get(), ACBlocks.CORK_PLANKS.get());
+
         modelGen.family(ACBlocks.GYPSUM.get())
                 .stairs(ACBlocks.GYPSUM_STAIRS.get())
                 .slab(ACBlocks.GYPSUM_SLAB.get())
@@ -216,7 +221,6 @@ public class ACModelProvider extends FabricModelProvider {
         for (DyeColor colour : DyeColor.values()) {
             modelGen.generateFlatItem(ACItems.getChalkStick(colour.getId()).asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
             modelGen.generateFlatItem(ACBlocks.getDyedFlowerPot(colour.getId()).asItem(), ModelTemplates.FLAT_ITEM);
-            //decoratedPotItem(ACItems.getDyedDecoratedPotBlockItem(colours));
             modelGen.generateFlatItem(ACItems.getPaintBrush(colour.getId()).asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
         }
         modelGen.generateFlatItem(ACItems.BLEACHED_CHALK_STICK.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
