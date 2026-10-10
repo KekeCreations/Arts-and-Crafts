@@ -24,7 +24,6 @@ public class ACLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("tab." + ArtsAndCrafts.MOD_ID + ".configurable_tab", "Arts & Crafts");
 
-        translationBuilder.add("entity.arts_and_crafts.floating_block", "Floating Block");
         for (PietraforteColour colour : PietraforteColour.values()) {
             String stringColour = StringUtils.capitalize(colour.getName());
             translationBuilder.add(ACBlocks.getCobbledPietraforte(colour).asItem(), "Cobbled " + stringColour + " Pietraforte");
@@ -172,9 +171,6 @@ public class ACLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ACItems.BLEACHDEW_PAINTBRUSH.get(), "Bleachdew Paintbrush");
         translationBuilder.add(ACItems.LOTUS_PISTILS.get(), "Lotus Pistils");
         translationBuilder.add(ACItems.BLEACHED_CHALK_STICK.get(), "Bleached Chalk Stick");
-
-        //April fools
-        translationBuilder.add(ACItems.SUS_POTTERY_SHERD.get(), "Sus Pottery Sherd");
 
         //ENTITY TYPES
         translationBuilder.add(ACEntityTypes.CORK_CHEST_BOAT.get(), "Cork Boat with Chest");

@@ -61,8 +61,7 @@ public class ACItemTagsProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ACItems.RUINED_POTTERY_SHERD.get())
                 .add(ACItems.FINALE_POTTERY_SHERD.get())
                 .add(ACItems.GATEWAY_POTTERY_SHERD.get())
-                .add(ACItems.POTTERY_SHERD.get())
-                .add(ACItems.SUS_POTTERY_SHERD.get());
+                .add(ACItems.POTTERY_SHERD.get());
     }
 
     private void appendBeds() {

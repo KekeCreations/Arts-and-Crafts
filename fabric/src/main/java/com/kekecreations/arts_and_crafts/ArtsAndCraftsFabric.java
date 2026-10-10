@@ -1,9 +1,17 @@
 package com.kekecreations.arts_and_crafts;
 
+import com.kekecreations.arts_and_crafts.common.event.ACItemGroupEvents;
+import com.kekecreations.arts_and_crafts.common.event.ACLootTableEvents;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
+import com.kekecreations.arts_and_crafts.core.init.ACValidSigns;
+import com.kekecreations.arts_and_crafts.core.registry.ACFabricRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.ACFeatures;
 import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.registry.DynamicRegistries;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
@@ -15,6 +23,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ArtsAndCraftsFabric implements ModInitializer {
 
@@ -32,6 +41,11 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         config();
         ArtsAndCrafts.init();
         DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
+        ACValidSigns.add();
+        ACItemGroupEvents.add();
+        ACFabricRegistries.register();
+        ACLootTableEvents.modifyVanillaLootTables();
+        createBiomeModifications();
     }
 
     public void config() {
@@ -56,5 +70,18 @@ public class ArtsAndCraftsFabric implements ModInitializer {
                         .append(FabricConfig.lastError).withStyle(ChatFormatting.RED), false);
             }
         });
+    }
+
+    public void createBiomeModifications() {
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.CORK_TREE), GenerationStep.Decoration.VEGETAL_DECORATION, ACFeatures.PlacedFeatures.CORK_TREE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.SOAPSTONE_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_ORES, ACFeatures.PlacedFeatures.SOAPSTONE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.CHALK_PATCH), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.SHORE_CHALK_PATCH), GenerationStep.Decoration.TOP_LAYER_MODIFICATION, ACFeatures.PlacedFeatures.SHORE_CHALK_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.GYPSUM_CAN_GENERATE_IN), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.GYPSUM_PATCH);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.VERDANT_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.VERDANT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.OCHRE_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.OCHRE_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.MARLOT_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.MARLOT_PIETRAFORTE_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ACTags.BiomeTags.IVORY_PIETRAFORTE_PATCH), GenerationStep.Decoration.UNDERGROUND_DECORATION, ACFeatures.PlacedFeatures.IVORY_PIETRAFORTE_PATCH);
     }
 }

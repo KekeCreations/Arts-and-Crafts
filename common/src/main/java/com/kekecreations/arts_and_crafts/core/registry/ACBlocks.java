@@ -661,7 +661,7 @@ public class ACBlocks {
     }
 
     private static ACLeavesBlock leaves(BlockBehaviour.Properties properties, SoundType soundType) {
-        return new ACLeavesBlock(0.2F, properties.mapColor(MapColor.PLANT).strength(0.2f).randomTicks().sound(soundType).noOcclusion().isValidSpawn(ACBlocks::ocelotOrParrot).isSuffocating(ACBlocks::never).isViewBlocking(ACBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ACBlocks::never));
+        return new ACLeavesBlock(0.01F, properties.mapColor(MapColor.PLANT).strength(0.2f).randomTicks().sound(soundType).noOcclusion().isValidSpawn(ACBlocks::ocelotOrParrot).isSuffocating(ACBlocks::never).isViewBlocking(ACBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(ACBlocks::never));
     }
 
     private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType) {

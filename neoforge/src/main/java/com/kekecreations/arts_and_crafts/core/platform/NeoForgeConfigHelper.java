@@ -35,20 +35,4 @@ public class NeoForgeConfigHelper implements ConfigHelper {
         }
         return NeoForgeConfig.ENABLE_CREATIVE_MODE_TAB.get();
     }
-
-    @Override
-    public boolean bleachableSheep() {
-        if (!NeoForgeConfig.SPEC.isLoaded()) {
-            return true;
-        }
-        return NeoForgeConfig.BLEACHABLE_SHEEP.get();
-    }
-
-    @Override
-    public boolean aprilFools2025() {
-        if (!NeoForgeConfig.SPEC.isLoaded()) {
-            return true;
-        }
-        return NeoForgeConfig.APRIL_FOOLS_2025.get();
-    }
 }

@@ -227,14 +227,11 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.generateFlatItem(ACItems.RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.FINALE_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
-        modelGen.generateFlatItem(ACItems.SUS_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.BLEACHDEW_PAINTBRUSH.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         modelGen.generateFlatItem(ACItems.BLEACHDEW.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.CORK_SIGN.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.CORK_HANGING_SIGN.get(), ModelTemplates.FLAT_ITEM);
         modelGen.generateFlatItem(ACItems.LOTUS_PISTILS.get(), ModelTemplates.FLAT_ITEM);
-
-        //bedBlockItem(ACItems.BLEACHED_BED.get());
     }
 
     public final void createBleachedBed(Block block, Block particleBlock, BlockModelGenerators modelGen) {

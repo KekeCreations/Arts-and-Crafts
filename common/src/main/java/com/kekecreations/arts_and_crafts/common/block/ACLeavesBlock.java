@@ -20,8 +20,9 @@ public class ACLeavesBlock extends FlammableLeavesBlock {
         super(f, properties);
     }
 
+    @Override
     protected void spawnFallingLeavesParticle(Level level, BlockPos pos, RandomSource random) {
-        ColorParticleOption colorParticleOption = ColorParticleOption.create(ParticleTypes.TINTED_LEAVES, level.getClientLeafTintColor(pos));
+        ColorParticleOption colorParticleOption = ColorParticleOption.create(ParticleTypes.TINTED_LEAVES, 0x5B5A17);
         ParticleUtils.spawnParticleBelow(level, pos, random, colorParticleOption);
     }
 

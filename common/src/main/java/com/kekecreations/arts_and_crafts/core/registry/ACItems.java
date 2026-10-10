@@ -3,7 +3,6 @@ package com.kekecreations.arts_and_crafts.core.registry;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.item.*;
-import com.kekecreations.arts_and_crafts.common.item.april_fools.ACFoolItem;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
@@ -23,11 +22,6 @@ public class ACItems {
     public static final HashMap<DyeColor, Supplier<Item>> DYED_DECORATED_POT_BLOCK_ITEMS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Item>> PAINT_BRUSHES = new HashMap<>();
-
-
-    //April Fools 2025
-    public static final Supplier<Item> SUS_POTTERY_SHERD = registerItem("sus_pottery_sherd", registryName -> new ACFoolItem(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
-    public static final Supplier<Item> VICTORY_POTTERY_SHERD = registerItem("victory_pottery_sherd", registryName -> new ACFoolItem(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
 
 
     public static Supplier<Item> BLEACHED_BED = registerItem("bleached_bed", registryName -> new ACBedBlockItem(ACBlocks.BLEACHED_BED.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));

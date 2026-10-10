@@ -32,12 +32,6 @@ public class DecoratedPotPatternsMixin {
         if (item == ACItems.POTTERY_SHERD.get()) {
             cir.setReturnValue(ACDecoratedPotPatterns.POTTERY_PATTERN);
         }
-        if (item == ACItems.SUS_POTTERY_SHERD.get()) {
-            cir.setReturnValue(ACDecoratedPotPatterns.SUS_POTTERY_PATTERN);
-        }
-        if (item == ACItems.VICTORY_POTTERY_SHERD.get()) {
-            cir.setReturnValue(ACDecoratedPotPatterns.VICTORY_POTTERY_PATTERN);
-        }
     }
 
     @Inject(method = "bootstrap", at = @At("TAIL"))
@@ -48,7 +42,5 @@ public class DecoratedPotPatternsMixin {
         ACDecoratedPotPatterns.register(registry, ACDecoratedPotPatterns.RUINED_POTTERY_PATTERN, "ruined_pottery_pattern");
         ACDecoratedPotPatterns.register(registry, ACDecoratedPotPatterns.FINALE_POTTERY_PATTERN, "finale_pottery_pattern");
         ACDecoratedPotPatterns.register(registry, ACDecoratedPotPatterns.GATEWAY_POTTERY_PATTERN, "gateway_pottery_pattern");
-        ACDecoratedPotPatterns.register(registry, ACDecoratedPotPatterns.SUS_POTTERY_PATTERN, "sus_pottery_pattern");
-        ACDecoratedPotPatterns.register(registry, ACDecoratedPotPatterns.VICTORY_POTTERY_PATTERN, "victory_pottery_pattern");
     }
 }

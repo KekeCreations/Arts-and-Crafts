@@ -10,8 +10,6 @@ public class NeoForgeConfig {
     public static final ModConfigSpec.BooleanValue ENABLE_CHALK_STICKS;
     public static final ModConfigSpec.BooleanValue ENABLE_DYED_DECORATED_POTS;
     public static final ModConfigSpec.BooleanValue ENABLE_CREATIVE_MODE_TAB;
-    public static final ModConfigSpec.BooleanValue BLEACHABLE_SHEEP;
-    public static final ModConfigSpec.BooleanValue APRIL_FOOLS_2025;
 
 
     static {
@@ -36,15 +34,6 @@ public class NeoForgeConfig {
         ENABLE_CREATIVE_MODE_TAB = BUILDER
                 .comment("When true adds a new creative mode tab full of Arts & Crafts features!")
                 .define("enableCreativeModeTab", true);
-
-        BLEACHABLE_SHEEP = BUILDER
-                .comment("Allows the player to bleach sheep  (Yirmiri wanted this really bad for some reason)")
-                .define("bleachableSheep", false);
-
-        BUILDER.push("April Fools Updates");
-        APRIL_FOOLS_2025 = BUILDER
-                .comment("2025 April fools features")
-                .define("aprilFools2025", false);
 
 
         BUILDER.pop();

@@ -9,8 +9,4 @@ public interface ConfigHelper {
     boolean areDyedDecoratedPotsEnabled();
 
     boolean isCreativeModeTabEnabled();
-
-    boolean bleachableSheep();
-
-    boolean aprilFools2025();
 }

@@ -6,7 +6,8 @@
   "compatibilityLevel": "JAVA_18",
   "mixins": [
     "DecoratedPotBlockEntityAccessor",
-    "DecoratedPotPatternsMixin"
+    "DecoratedPotPatternsMixin",
+    "CreativeModeTabMixin"
   ],
   "client": [
   ],
