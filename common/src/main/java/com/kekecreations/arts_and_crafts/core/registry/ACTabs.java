@@ -13,6 +13,7 @@ import java.util.function.Supplier;
 
 public class ACTabs {
 
+    /*
     public static final Supplier<CreativeModeTab> EXAMPLE_TAB = registerTab("configurable_tab", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 5)
             .title(Component.translatable("tab." + ArtsAndCrafts.MOD_ID + ".configurable_tab"))
             .icon(() -> ACItems.getPaintBrush(DyeColor.RED.getId()).getDefaultInstance())
@@ -169,6 +170,8 @@ public class ACTabs {
             })
             .build()
     );
+
+     */
 
     public static Supplier<CreativeModeTab> registerTab(String name, Supplier<CreativeModeTab> supplier) {
         return JinxedRegistryHelper.register(BuiltInRegistries.CREATIVE_MODE_TAB, ArtsAndCrafts.MOD_ID, name, supplier);

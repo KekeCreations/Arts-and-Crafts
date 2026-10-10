@@ -2,11 +2,11 @@ package com.kekecreations.arts_and_crafts.datagen.server;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
-import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedLists;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
@@ -35,7 +35,7 @@ import static net.minecraft.data.recipes.RecipeProvider.*;
 public class ACRecipeProvider extends FabricRecipeProvider {
     private static HolderGetter<Item> items;
 
-    public ACRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ACRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
         try {
             items = registriesFuture.get().lookupOrThrow(Registries.ITEM);
@@ -110,11 +110,11 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                 colourChangeRecipe(ACBlocks.getPietrafortePillar(PietraforteColour.MARLOT), Items.COAL, ACBlocks.getPietrafortePillar(PietraforteColour.UMBER), recipeConsumer);
 
 
-                simpleCookingRecipe("_colour_change", RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, 150, ACBlocks.getPietraforte(PietraforteColour.VERDANT), ACBlocks.getPietraforte(PietraforteColour.OCHRE), 0);
-                simpleCookingRecipe("_colour_change", RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, 150, ACBlocks.getPietraforte(PietraforteColour.OCHRE), ACBlocks.getPietraforte(PietraforteColour.VERDANT), 0);
+                simpleCookingRecipe("_colour_change", BlastingRecipe::new, 150, ACBlocks.getPietraforte(PietraforteColour.VERDANT), ACBlocks.getPietraforte(PietraforteColour.OCHRE), 0);
+                simpleCookingRecipe("_colour_change", BlastingRecipe::new, 150, ACBlocks.getPietraforte(PietraforteColour.OCHRE), ACBlocks.getPietraforte(PietraforteColour.VERDANT), 0);
                 for (PietraforteColour colour : PietraforteColour.values()) {
-                    simpleCookingRecipe("_smelt", RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, 150, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietraforte(colour), 5);
-                    simpleCookingRecipe("_smelt", RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, 150, ACBlocks.getPietraforte(colour), ACBlocks.getSmoothPietraforte(colour), 0.5F);
+                    simpleCookingRecipe("_smelt", SmeltingRecipe::new, 150, ACBlocks.getCobbledPietraforte(colour), ACBlocks.getPietraforte(colour), 5);
+                    simpleCookingRecipe("_smelt", SmeltingRecipe::new, 150, ACBlocks.getPietraforte(colour), ACBlocks.getSmoothPietraforte(colour), 0.5F);
                     //TYPE Recipe
                     typeRecipe(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteBricks(colour), recipeConsumer);
                     typeRecipe(ACBlocks.getSmoothPietraforte(colour), ACBlocks.getCutPietraforte(colour), recipeConsumer);
@@ -431,7 +431,7 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                     paintbrushRecipe(colours, ACItems.getPaintBrush(colours.getId()), recipeConsumer);
 
                     //TERRACOTTA SHINGLES
-                    typeRecipe(ACDyedBlockLists.getDyedTerracotta(colours.getId()), ACBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
+                    typeRecipe(ACDyedLists.getDyedTerracotta(colours.getId()), ACBlocks.getDyedTerracottaShingles(colours.getId()), recipeConsumer);
                     dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLES.get(), colours, ACBlocks.getDyedTerracottaShingles(colours.getId()), "terracotta_shingle", recipeConsumer);
                     dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), colours, ACBlocks.getDyedTerracottaShingleStairs(colours.getId()), "terracotta_shingle_stairs", recipeConsumer);
                     dyeBlockRecipe(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), colours, ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), "terracotta_shingle_slab", recipeConsumer);
@@ -447,7 +447,7 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                     dyeBlockRecipe(ACBlocks.PLASTER.get(), colours, ACBlocks.getDyedPlaster(colours.getId()), "plaster", recipeConsumer);
 
                     //BANNER
-                    bleachBannerRecipe(ACDyedBlockLists.getDyedBanner(colours.getId()), colours, "bleach_banner", recipeConsumer);
+                    bleachBannerRecipe(ACDyedLists.getDyedBanner(colours.getId()), colours, "bleach_banner", recipeConsumer);
                 }
             }
         };
@@ -478,7 +478,7 @@ public class ACRecipeProvider extends FabricRecipeProvider {
         for(DyeColor dyecolor : DyeColor.values()) {
             TransmuteRecipeBuilder.transmute(RecipeCategory.DECORATIONS,
                     ingredient,
-                    Ingredient.of(DyeItem.byColor(dyecolor)),
+                    Ingredient.of(ACDyedLists.DYES.get(dyecolor)),
                     ACBlocks.getDyedDecoratedPot(dyecolor.getId()).asItem())
                     .group("decorated_pot_dye")
                     .unlockedBy("has_decorated_pot", has(ACTags.ItemTags.DECORATED_POTS))
@@ -506,7 +506,7 @@ public class ACRecipeProvider extends FabricRecipeProvider {
     }
 
     protected static void smeltingRecipe(Block craftingBlock, Block resultBlock, RecipeCategory recipeCategory, float experience, RecipeOutput recipeConsumer) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(craftingBlock), recipeCategory, resultBlock , experience, 200)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(craftingBlock), recipeCategory, CookingBookCategory.BLOCKS, resultBlock , experience, 200)
                 .unlockedBy(getHasName(craftingBlock), has(craftingBlock))
                 .save(recipeConsumer);
     }
@@ -526,9 +526,9 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                 .pattern("KQK")
                 .pattern("KKK")
                 .define('K', craftingBlock)
-                .define('Q', DyeItem.byColor(dyeColour))
+                .define('Q', ACDyedLists.DYES.get(dyeColour))
                 .group(group)
-                .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
+                .unlockedBy(getItemName(ACDyedLists.DYES.get(dyeColour)), has(ACDyedLists.DYES.get(dyeColour)))
                 .save(recipeConsumer, "arts_and_crafts:" + dyeColour.getName() + "_" + getItemName(craftingBlock) + "_dye_recipe");
     }
 
@@ -590,10 +590,10 @@ public class ACRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, paintbrushItem,1)
                 .pattern("KK")
                 .pattern("KQ")
-                .define('K', DyeItem.byColor(dyeColour))
+                .define('K', ACDyedLists.DYES.get(dyeColour))
                 .define('Q', Items.BRUSH)
                 .group("paintbrush")
-                .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
+                .unlockedBy(getItemName(ACDyedLists.DYES.get(dyeColour)), has(ACDyedLists.DYES.get(dyeColour)))
                 .save(recipeConsumer);
     }
     protected static void paintbrushRecipe(Item item, Item paintbrushItem, RecipeOutput recipeConsumer) {
@@ -611,19 +611,7 @@ public class ACRecipeProvider extends FabricRecipeProvider {
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.TRANSPORTATION, itemLike).requires(Blocks.CHEST).requires(itemLike2).group("chest_boat").unlockedBy("has_boat", has(ItemTags.BOATS)).save(consumer);
     }
 
-    /*
-    protected static void colorBlockWithDye(RecipeOutput p_289666_, List<Item> p_289675_, List<Item> p_289672_, String p_289641_) {
-        for(int i = 0; i < p_289675_.size(); ++i) {
-            Item item = p_289675_.get(i);
-            Item item1 = p_289672_.get(i);
-            ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, item1).requires(item).requires(Ingredient.of(p_289672_.stream().filter((p_288265_) -> {
-                return !p_288265_.equals(item1);
-            }).map(ItemStack::new))).group(p_289641_).unlockedBy("has_needed_dye", has(item)).save(p_289666_, "arts_and_crafts:" + "dye_" + getItemName(item1));
-        }
 
-    }
-
-     */
     public void colorBlockWithDye(List<Item> dyes, List<Item> dyeableItems, @Nullable Item dye, String group, RecipeCategory category, RecipeOutput output) {
         for(int i = 0; i < dyes.size(); ++i) {
             Item item = (Item)dyes.get(i);
@@ -727,14 +715,5 @@ public class ACRecipeProvider extends FabricRecipeProvider {
     protected static void buttonRecipes(RecipeCategory category, ItemLike ingredient, Supplier<? extends ItemLike> result, RecipeOutput consumer) {
         ShapelessRecipeBuilder.shapeless(items, category, result.get()).requires(ingredient)
                 .unlockedBy(getHasName(ingredient), has(ingredient)).save(consumer);
-    }
-
-    protected static void simpleCookingRecipe(RecipeOutput consumer, RecipeSerializer<? extends AbstractCookingRecipe> recipeSerializer, ItemLike craftingItem, ItemLike p_250066_, RecipeCategory p_251154_, float xp, int time, String p_251450_, String p_249236_) {
-        if (recipeSerializer == RecipeSerializer.SMELTING_RECIPE) {
-            SimpleCookingRecipeBuilder.smelting(Ingredient.of(craftingItem), p_251154_, p_250066_, xp, time).group(p_251450_).unlockedBy(getHasName(craftingItem), has(craftingItem)).save(consumer, "arts_and_crafts:" + getItemName(p_250066_) + p_249236_ + "_" + getItemName(craftingItem));
-        }
-        if (recipeSerializer == RecipeSerializer.BLASTING_RECIPE) {
-            SimpleCookingRecipeBuilder.blasting(Ingredient.of(craftingItem), p_251154_, p_250066_, xp, time).group(p_251450_).unlockedBy(getHasName(craftingItem), has(craftingItem)).save(consumer, "arts_and_crafts:" + getItemName(p_250066_) + p_249236_ + "_" + getItemName(craftingItem));
-        }
     }
 }

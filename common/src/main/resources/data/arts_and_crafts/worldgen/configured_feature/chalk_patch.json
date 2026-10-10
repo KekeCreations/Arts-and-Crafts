@@ -2,13 +2,10 @@
   "type": "minecraft:disk",
   "config": {
     "state_provider": {
-      "fallback": {
         "type": "minecraft:simple_state_provider",
         "state": {
           "Name": "arts_and_crafts:white_chalk"
         }
-      },
-      "rules": []
     },
     "target": {
       "type": "minecraft:matching_blocks",

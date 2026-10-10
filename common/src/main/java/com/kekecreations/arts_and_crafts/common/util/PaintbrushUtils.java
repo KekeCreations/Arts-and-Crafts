@@ -46,12 +46,12 @@ public class PaintbrushUtils {
     @Nullable
     public static Block getFinalBlock(RegistryAccess access, BlockState state, ItemStack stack) {
         Optional<PaintbrushPalette> optionalPalette = access.lookupOrThrow(ACRegistries.PAINTBRUSH_PALETTE).stream().filter(
-                searchPalette -> searchPalette.blocks().contains(state.getBlockHolder())
+                searchPalette -> searchPalette.blocks().contains(state.getBlock().builtInRegistryHolder())
         ).findFirst();
         if (optionalPalette.isEmpty()) return null;
 
         PaintbrushPalette palette = optionalPalette.get();
-        Holder<Block> holder = palette.mappings().get(stack.getItemHolder());
+        Holder<Block> holder = palette.mappings().get(stack.getItem().builtInRegistryHolder());
 
         if (holder.unwrapKey().isEmpty()) return null;
         

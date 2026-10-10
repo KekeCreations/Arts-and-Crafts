@@ -1,16 +1,11 @@
 package com.kekecreations.arts_and_crafts.common.recipe;
 
-import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedLists;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import com.kekecreations.arts_and_crafts.core.registry.ACRecipeSerializer;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
-import net.minecraft.world.item.crafting.CraftingInput;
-import net.minecraft.world.item.crafting.CustomRecipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BannerBlock;
 import net.minecraft.world.level.block.Block;
@@ -20,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class BleachBannerPatternsRecipe extends CustomRecipe {
     public BleachBannerPatternsRecipe(CraftingBookCategory craftingBookCategory) {
-        super(craftingBookCategory);
+        super();
     }
 
     public boolean matches(CraftingInput craftingInput, @NotNull Level level) {
@@ -49,7 +44,8 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         return i == 1 && j == 1;
     }
 
-    public @NotNull ItemStack assemble(CraftingInput craftingInput, @NotNull HolderLookup.Provider provider) {
+
+    public @NotNull ItemStack assemble(CraftingInput craftingInput) {
         ItemStack itemStack = ItemStack.EMPTY;
 
         for(int i = 0; i < craftingInput.size(); ++i) {
@@ -63,7 +59,7 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
         }
 
         if (itemStack.getItem() instanceof BannerItem bannerItem) {
-            return ACDyedBlockLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
+            return ACDyedLists.getDyedBanner(bannerItem.getColor().getId()).asItem().getDefaultInstance();
         }
         return itemStack;
     }
@@ -73,7 +69,8 @@ public class BleachBannerPatternsRecipe extends CustomRecipe {
     }
 
     public RecipeSerializer<? extends CustomRecipe> getSerializer() {
-        return ACRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
+        //return ACRecipeSerializer.BLEACH_BANNER_PATTERNS_RECIPE.get();
+        return null;
     }
 
 }

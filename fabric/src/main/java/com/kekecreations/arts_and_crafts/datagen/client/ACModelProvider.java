@@ -11,26 +11,33 @@ import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts.datagen.client.util.ACModelTemplates;
 import com.kekecreations.arts_and_crafts.datagen.client.util.ACTextureMapping;
 import com.kekecreations.arts_and_crafts.datagen.client.util.ACTextureSlots;
+import com.mojang.math.Transformation;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.*;
 import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.renderer.blockentity.BedRenderer;
+import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.special.BedSpecialRenderer;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import org.joml.Quaternionfc;
+import org.joml.Vector3f;
+import org.joml.Vector3fc;
 
 import java.util.Objects;
 
 public class ACModelProvider extends FabricModelProvider {
 
-    public ACModelProvider(FabricDataOutput output) {
+    public ACModelProvider(FabricPackOutput output) {
         super(output);
     }
 
@@ -238,12 +245,16 @@ public class ACModelProvider extends FabricModelProvider {
         modelGen.generateFlatItem(ACItems.LOTUS_PISTILS.get(), ModelTemplates.FLAT_ITEM);
     }
 
-    public final void createBleachedBed(Block block, Block particleBlock, BlockModelGenerators modelGen) {
-        MultiVariant multiVariant = modelGen.plainVariant(ModelLocationUtils.decorateBlockModelLocation("bed"));
-        modelGen.blockStateOutput.accept(modelGen.createSimpleBlock(block, multiVariant));
-        Item item = block.asItem();
-        Identifier identifier = ModelTemplates.BED_INVENTORY.create(ModelLocationUtils.getModelLocation(item), TextureMapping.particle(particleBlock), modelGen.modelOutput);
-        modelGen.itemModelOutput.accept(item, ItemModelUtils.specialModel(identifier, new BedSpecialRenderer.Unbaked(ArtsAndCrafts.id("bleached"))));
+    public final void createBleachedBed(final Block bed, final Block itemParticle, BlockModelGenerators modelGen) {
+        MultiVariant blockModel = modelGen.plainVariant(ModelLocationUtils.decorateBlockModelLocation("bed"));
+        modelGen.blockStateOutput.accept(modelGen.createSimpleBlock(bed, blockModel));
+        Item bedItem = bed.asItem();
+        Identifier baseModel = ModelTemplates.BED_INVENTORY.create(ModelLocationUtils.getModelLocation(bedItem), TextureMapping.particle(itemParticle), modelGen.modelOutput);
+        Transformation headTransformation = BedRenderer.modelTransform(Direction.SOUTH);
+        ItemModel.Unbaked headPart = ItemModelUtils.specialModel(baseModel, headTransformation, new BedSpecialRenderer.Unbaked(ArtsAndCrafts.id("bleached"), BedPart.HEAD));
+        Transformation footTransformation = (new Transformation(new Vector3f(0.0F, 0.0F, -1.0F), (Quaternionfc)null, (Vector3fc)null, (Quaternionfc)null)).compose(headTransformation);
+        ItemModel.Unbaked footPart = ItemModelUtils.specialModel(baseModel, footTransformation, new BedSpecialRenderer.Unbaked(ArtsAndCrafts.id("bleached"), BedPart.FOOT));
+        modelGen.itemModelOutput.accept(bedItem, ItemModelUtils.composite(new ItemModel.Unbaked[]{headPart, footPart}));
     }
 
     public final void createDecoratedPot(Block block, DyeColor colour, Block particleBlock, BlockModelGenerators modelGen) {

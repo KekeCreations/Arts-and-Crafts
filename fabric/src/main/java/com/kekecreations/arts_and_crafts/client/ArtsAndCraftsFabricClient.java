@@ -16,10 +16,8 @@ import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.fabricmc.fabric.impl.client.rendering.EntityRendererRegistryImpl;
 import net.minecraft.client.model.object.boat.BoatModel;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
@@ -47,13 +45,14 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
 
     public static void registerParticleFactories() {
         for (DyeColor colours : DyeColor.values()) {
-            ParticleFactoryRegistry.getInstance().register(ACParticles.getChalkDrawParticle(colours.getId()), ChalkDustParticle.Factory::new);
+            ParticleProviderRegistry.getInstance().register(ACParticles.getChalkDrawParticle(colours.getId()), ChalkDustParticle.Factory::new);
         }
-        ParticleFactoryRegistry.getInstance().register(ACParticles.getChalkDrawParticle(-1), ChalkDustParticle.Factory::new);
+        ParticleProviderRegistry.getInstance().register(ACParticles.getChalkDrawParticle(-1), ChalkDustParticle.Factory::new);
     }
 
 
     public static void registerBlockLayers() {
+        /*
         for (DyeColor colours : DyeColor.values()) {
             BlockRenderLayerMap.putBlock(ACBlocks.getChalkDust(colours.getId()), ChunkSectionLayer.CUTOUT);
             BlockRenderLayerMap.putBlock(ACBlocks.getDyedPottedCrimsonFungus(colours), ChunkSectionLayer.CUTOUT);
@@ -98,8 +97,11 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ACBlocks.POTTED_CORK_SAPLING.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ACBlocks.PLASTER.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ACBlocks.LOTUS_FLOWER.get(), ChunkSectionLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), ChunkSectionLayer.CUTOUT);
+        ChunkSectionLayerMap.putBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), ChunkSectionLayer.CUTOUT);
+        ChunkSece
         //BlockRenderLayerMap.putBlock(ACBlocks.CRIMSON_HANGING_FLOWER_POT.get(), ChunkSectionLayer.CUTOUT);
+
+         */
     }
 
     public static void registerRenderers() {
@@ -113,9 +115,9 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
     }
 
     public static void registerModelLayers() {
-        EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.BASE, DyedDecoratedPotBER::createBaseLayer);
-        EntityModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.SIDE, DyedDecoratedPotBER::createSidesLayer);
-        EntityModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_BOAT, BoatModel::createBoatModel);
-        EntityModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_CHEST_BOAT, BoatModel::createChestBoatModel);
+        ModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.BASE, DyedDecoratedPotBER::createBaseLayer);
+        ModelLayerRegistry.registerModelLayer(DyedDecoratedPotBER.SIDE, DyedDecoratedPotBER::createSidesLayer);
+        ModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_BOAT, BoatModel::createBoatModel);
+        ModelLayerRegistry.registerModelLayer(ACModelLayers.CORK_CHEST_BOAT, BoatModel::createChestBoatModel);
     }
 }

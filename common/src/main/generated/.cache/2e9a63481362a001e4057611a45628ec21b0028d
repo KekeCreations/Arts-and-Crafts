@@ -1,4 +1,4 @@
-// 1.21.11	-999999999-01-01T00:00:00	Arts And Crafts/Model Definitions
+// 26.1.2	-999999999-01-01T00:00:00	Arts And Crafts/Model Definitions
 a83685764629902ca44cd6d3434f5c8d831f36ec assets/arts_and_crafts/blockstates/beige_pietraforte.json
 e4752367dd2a45c633ac9adbaac65dda48ff8525 assets/arts_and_crafts/blockstates/beige_pietraforte_brick_slab.json
 5ad73047b2a0399fcd9e92b1fbc802cc7f9f7c84 assets/arts_and_crafts/blockstates/beige_pietraforte_brick_stairs.json
@@ -1232,7 +1232,7 @@ fd6290711075d0b82e0e6183b1b0fe35da544930 assets/arts_and_crafts/items/black_soap
 12fe0ef5ee691717a7de1f5ce62190913daff20c assets/arts_and_crafts/items/black_terracotta_shingles.json
 e872a433e25e37f2bd3fcce60299700010fffea1 assets/arts_and_crafts/items/bleachdew.json
 b2cccc9405790de217954ceb157c2c7df64fa305 assets/arts_and_crafts/items/bleachdew_paintbrush.json
-7cfa17975ff320c0f9a430eda8ee70d1ff2baa0b assets/arts_and_crafts/items/bleached_bed.json
+6d8f673c759c3fe8921d47f845d92d469a4a610d assets/arts_and_crafts/items/bleached_bed.json
 a64c3292be25769885f1bff13b38f1077b9e4bc3 assets/arts_and_crafts/items/bleached_carpet.json
 9e6151cd9f217ae5828c923622efe72d3925c377 assets/arts_and_crafts/items/bleached_chalk.json
 60a2e95e01108b90a1a3edc4e8e2f80a187af8d1 assets/arts_and_crafts/items/bleached_chalk_stick.json

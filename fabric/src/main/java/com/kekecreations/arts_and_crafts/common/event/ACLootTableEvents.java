@@ -14,23 +14,23 @@ public class ACLootTableEvents {
         LootTableEvents.MODIFY.register((id, builder, source, provider) -> {
             if (BuiltInLootTables.SNIFFER_DIGGING.equals(id)) {
                 builder.modifyPools(itemEntry -> {
-                    itemEntry.with((LootItem.lootTableItem(ACItems.LOTUS_PISTILS.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))).build()));
+                    itemEntry.add((LootItem.lootTableItem(ACItems.LOTUS_PISTILS.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 2))).build()));
                 });
             }
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON.equals(id)) {
                 builder.modifyPools(itemEntry -> {
-                    itemEntry.with((LootItem.lootTableItem(ACItems.RUINED_POTTERY_SHERD.get()).setWeight(10)).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.POTTERY_SHERD.get()).setWeight(10)).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.BLEACHDEW.get()).setWeight(5)).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.CORK_HANGING_SIGN.get()).setWeight(25)).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.RUINED_POTTERY_SHERD.get()).setWeight(10)).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.POTTERY_SHERD.get()).setWeight(10)).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.BLEACHDEW.get()).setWeight(5)).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.CORK_HANGING_SIGN.get()).setWeight(25)).build());
                 });
             }
             if (BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE.equals(id)) {
                 builder.modifyPools(itemEntry -> {
-                    itemEntry.with((LootItem.lootTableItem(ACItems.RUINED_POTTERY_SHERD.get())).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.ROLL_POTTERY_SHERD.get())).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.FINALE_POTTERY_SHERD.get())).build());
-                    itemEntry.with((LootItem.lootTableItem(ACItems.GATEWAY_POTTERY_SHERD.get())).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.RUINED_POTTERY_SHERD.get())).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.ROLL_POTTERY_SHERD.get())).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.FINALE_POTTERY_SHERD.get())).build());
+                    itemEntry.add((LootItem.lootTableItem(ACItems.GATEWAY_POTTERY_SHERD.get())).build());
                 });
             }
         });

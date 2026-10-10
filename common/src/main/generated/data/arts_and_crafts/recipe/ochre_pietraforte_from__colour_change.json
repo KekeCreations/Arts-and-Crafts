@@ -1,6 +1,6 @@
 {
   "type": "minecraft:blasting",
-  "category": "blocks",
+  "category": "food",
   "cookingtime": 150,
   "experience": 0.0,
   "ingredient": "arts_and_crafts:verdant_pietraforte",

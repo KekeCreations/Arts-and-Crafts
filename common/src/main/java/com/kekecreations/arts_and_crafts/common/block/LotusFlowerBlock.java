@@ -23,7 +23,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.IceBlock;
-import net.minecraft.world.level.block.WaterlilyBlock;
+import net.minecraft.world.level.block.LilyPadBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -41,7 +41,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBlock {
+public class LotusFlowerBlock extends LilyPadBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty SHEARED;
@@ -73,7 +73,7 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
     protected static float getGrowthSpeed(ServerLevel level) {
         float growthSpeed = 0.5F;
 
-        if (level.getDayTime() >= 13000 && level.getDayTime() <= 23000) {
+        if (level.getOverworldClockTime() >= 13000 && level.getOverworldClockTime() <= 23000) {
             growthSpeed = 1.0F;
         }
         return growthSpeed;
@@ -90,8 +90,8 @@ public class LotusFlowerBlock extends WaterlilyBlock implements BonemealableBloc
             }
         }
     }
-    protected int getBonemealAgeIncrease(Level $$0) {
-        return Mth.nextInt($$0.random, 0, 1);
+    protected int getBonemealAgeIncrease(Level lvl) {
+        return Mth.nextInt(lvl.getRandom(), 0, 1);
     }
 
     public void growCrops(Level $$0, BlockPos $$1, BlockState $$2) {

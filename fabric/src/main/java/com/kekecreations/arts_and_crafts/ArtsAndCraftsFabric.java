@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts;
 
-import com.kekecreations.arts_and_crafts.common.event.ACItemGroupEvents;
+import com.kekecreations.arts_and_crafts.common.event.ACCreativeModeTabEvents;
 import com.kekecreations.arts_and_crafts.common.event.ACLootTableEvents;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
@@ -42,14 +42,14 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ArtsAndCrafts.init();
         DynamicRegistries.register(ACRegistries.PAINTBRUSH_PALETTE, PaintbrushPalette.CODEC);
         ACValidSigns.add();
-        ACItemGroupEvents.add();
+        ACCreativeModeTabEvents.add();
         ACFabricRegistries.register();
         ACLootTableEvents.modifyVanillaLootTables();
         createBiomeModifications();
     }
 
     public void config() {
-        PayloadTypeRegistry.playS2C().register(FabricConfig.PACKET_ID, FabricConfig.PACKET_CODEC);
+        PayloadTypeRegistry.clientboundPlay().register(FabricConfig.PACKET_ID, FabricConfig.PACKET_CODEC);
 
         ResourceManagerHelper.get(PackType.SERVER_DATA)
                 .registerReloadListener(new SimpleSynchronousResourceReloadListener() {
@@ -66,7 +66,7 @@ public class ArtsAndCraftsFabric implements ModInitializer {
         ServerLifecycleEvents.SYNC_DATA_PACK_CONTENTS.register((player, joined) -> {
             ServerPlayNetworking.send(player, config);
             if (FabricConfig.lastError != null) {
-                player.displayClientMessage(Component.literal("[Arts & Crafts]: ")
+                player.sendSystemMessage(Component.literal("[Arts & Crafts]: ")
                         .append(FabricConfig.lastError).withStyle(ChatFormatting.RED), false);
             }
         });

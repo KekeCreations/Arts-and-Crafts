@@ -1,22 +1,22 @@
 package com.kekecreations.arts_and_crafts.datagen.server;
 
+import com.kekecreations.arts_and_crafts.core.init.ACDyedLists;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ACItemTagsProvider extends FabricTagProvider.ItemTagProvider {
+public class ACItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
 
 
-    public ACItemTagsProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+    public ACItemTagsProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
@@ -138,9 +138,9 @@ public class ACItemTagsProvider extends FabricTagProvider.ItemTagProvider {
     }
 
     private void appendDyes() {
-        for (DyeColor colours : DyeColor.values()) {
+        for (DyeColor colour : DyeColor.values()) {
             this.valueLookupBuilder(ACTags.ItemTags.DYES)
-                    .add(DyeItem.byColor(colours));
+                    .add(ACDyedLists.DYES.get(colour));
         }
     }
     private void appendChalkSticks() {

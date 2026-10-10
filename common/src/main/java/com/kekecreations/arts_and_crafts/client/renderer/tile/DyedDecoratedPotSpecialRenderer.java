@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.special.SpecialModelRenderer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.PotDecorations;
 import org.joml.Vector3fc;
@@ -32,7 +31,6 @@ public class DyedDecoratedPotSpecialRenderer implements SpecialModelRenderer<Pot
 
     public void submit(
             @Nullable PotDecorations decorations,
-            ItemDisplayContext ctx,
             PoseStack stack,
             SubmitNodeCollector node,
             int light,
@@ -48,19 +46,19 @@ public class DyedDecoratedPotSpecialRenderer implements SpecialModelRenderer<Pot
         this.decoratedPotRenderer.getExtents(consumer);
     }
 
-    public record Unbaked(DyeColor colour) implements SpecialModelRenderer.Unbaked {
-        public static final MapCodec<DyedDecoratedPotSpecialRenderer.Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
+    public static record Unbaked(DyeColor colour) implements SpecialModelRenderer.Unbaked<PotDecorations> {
+        public static final MapCodec<Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(
                 instance -> instance.group(DyeColor.CODEC.fieldOf("colour").forGetter(DyedDecoratedPotSpecialRenderer.Unbaked::colour))
                         .apply(instance, DyedDecoratedPotSpecialRenderer.Unbaked::new)
         );
 
         @Override
-        public MapCodec<DyedDecoratedPotSpecialRenderer.Unbaked> type() {
+        public MapCodec<Unbaked> type() {
             return MAP_CODEC;
         }
 
         @Override
-        public SpecialModelRenderer<?> bake(SpecialModelRenderer.BakingContext ctx) {
+        public @Nullable SpecialModelRenderer<PotDecorations> bake(BakingContext ctx) {
             return new DyedDecoratedPotSpecialRenderer(new DyedDecoratedPotBER(ctx), this.colour);
         }
     }

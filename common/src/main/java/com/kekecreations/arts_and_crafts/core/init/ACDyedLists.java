@@ -2,12 +2,14 @@ package com.kekecreations.arts_and_crafts.core.init;
 
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.HashMap;
 
-public class ACDyedBlockLists {
+public class ACDyedLists {
 
     public static HashMap<StringRepresentable, Block> DYED_TERRACOTTA = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_GLAZED_TERRACOTTA = new HashMap<>();
@@ -21,6 +23,8 @@ public class ACDyedBlockLists {
     public static HashMap<StringRepresentable, Block> DYED_BANNER = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_BED = new HashMap<>();
     public static HashMap<StringRepresentable, Block> DYED_CARPET = new HashMap<>();
+
+    public static HashMap<StringRepresentable, Item> DYES = new HashMap<>();
 
 
 
@@ -37,6 +41,26 @@ public class ACDyedBlockLists {
         bannerList();
         bedList();
         carpetList();
+        dyesList();
+    }
+
+    public static void dyesList() {
+        DYES.put(DyeColor.WHITE, Items.WHITE_DYE);
+        DYES.put(DyeColor.ORANGE, Items.ORANGE_DYE);
+        DYES.put(DyeColor.MAGENTA, Items.MAGENTA_DYE);
+        DYES.put(DyeColor.LIGHT_BLUE, Items.LIGHT_BLUE_DYE);
+        DYES.put(DyeColor.YELLOW, Items.YELLOW_DYE);
+        DYES.put(DyeColor.LIME, Items.LIME_DYE);
+        DYES.put(DyeColor.PINK, Items.PINK_DYE);
+        DYES.put(DyeColor.GRAY, Items.GRAY_DYE);
+        DYES.put(DyeColor.LIGHT_GRAY, Items.LIGHT_GRAY_DYE);
+        DYES.put(DyeColor.CYAN, Items.CYAN_DYE);
+        DYES.put(DyeColor.PURPLE, Items.PURPLE_DYE);
+        DYES.put(DyeColor.BLUE, Items.BLUE_DYE);
+        DYES.put(DyeColor.BROWN, Items.BROWN_DYE);
+        DYES.put(DyeColor.GREEN, Items.GREEN_DYE);
+        DYES.put(DyeColor.RED, Items.RED_DYE);
+        DYES.put(DyeColor.BLACK, Items.BLACK_DYE);
     }
 
     public static void carpetList() {

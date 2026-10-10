@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation "curse.maven:jinxedlib-1203401:8360692"
+    implementation "curse.maven:jinxedlib-1203401:8405540"
 }
 
 neoForge {

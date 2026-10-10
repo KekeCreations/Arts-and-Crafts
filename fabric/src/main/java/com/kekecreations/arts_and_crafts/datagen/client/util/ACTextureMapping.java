@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.datagen.client.util;
 
-import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
@@ -34,42 +34,42 @@ public class ACTextureMapping {
                 .put(ACTextureSlots.PLASTER, getPlasterTexture());
     }
 
-    public static Identifier getChalkPattern(DyeColor colour, String pattern) {
+    public static Material getChalkPattern(DyeColor colour, String pattern) {
         if (colour == null) {
-            return Identifier.parse("arts_and_crafts:block/bleached_" + pattern);
+            return new Material(Identifier.parse("arts_and_crafts:block/bleached_" + pattern));
         }
-        return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_" + pattern);
+        return new Material(Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_" + pattern));
     }
 
     public static TextureMapping chalkPatternDefaultMappings(Block block) {
         return (new TextureMapping())
-                .put(TextureSlot.PARTICLE, Identifier.parse("arts_and_crafts:block/white_dot"))
-                .put(ACTextureSlots.DUST, Identifier.parse("arts_and_crafts:block/white_dot"));
+                .put(TextureSlot.PARTICLE, new Material(Identifier.parse("arts_and_crafts:block/white_dot")))
+                .put(ACTextureSlots.DUST, new Material(Identifier.parse("arts_and_crafts:block/white_dot")));
     }
 
     public static TextureMapping lotusFlowerDefaultMappings(Block block) {
         return (new TextureMapping())
-                .put(TextureSlot.PARTICLE, Identifier.parse("arts_and_crafts:block/lotus_0"))
-                .put(ACTextureSlots.DUST, Identifier.parse("arts_and_crafts:block/lotus_0"));
+                .put(TextureSlot.PARTICLE, new Material(Identifier.parse("arts_and_crafts:block/lotus_0")))
+                .put(ACTextureSlots.DUST, new Material(Identifier.parse("arts_and_crafts:block/lotus_0")));
     }
 
-    public static Identifier getLotusFlower(int age) {
-        return Identifier.parse("arts_and_crafts:block/lotus_" + age);
+    public static Material getLotusFlower(int age) {
+        return new Material(Identifier.parse("arts_and_crafts:block/lotus_" + age));
     }
 
-    public static Identifier getPlantTexture(String plant, String modID) {
-        return Identifier.fromNamespaceAndPath(modID, "block/" + plant);
+    public static Material getPlantTexture(String plant, String modID) {
+        return new Material(Identifier.fromNamespaceAndPath(modID, "block/" + plant));
     }
 
-    public static Identifier getFlowerPotTexture(DyeColor colour) {
-        return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_flower_pot");
+    public static Material getFlowerPotTexture(DyeColor colour) {
+        return new Material(Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_flower_pot"));
     }
 
-    public static Identifier getPlasterTexture(DyeColor colour) {
-        return Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_plaster");
+    public static Material getPlasterTexture(DyeColor colour) {
+        return new Material(Identifier.parse("arts_and_crafts:block/" + colour.getName() + "_plaster"));
     }
 
-    public static Identifier getPlasterTexture() {
-        return Identifier.parse("arts_and_crafts:block/plaster");
+    public static Material getPlasterTexture() {
+        return new Material(Identifier.parse("arts_and_crafts:block/plaster"));
     }
 }
