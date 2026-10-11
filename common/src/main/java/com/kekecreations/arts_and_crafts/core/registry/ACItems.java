@@ -31,11 +31,11 @@ public class ACItems {
     public static final Supplier<Item> CORK_BOAT = registerItem("cork_boat", registryName -> new BoatItem((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_BOAT.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
     public static final Supplier<Item> CORK_CHEST_BOAT = registerItem("cork_chest_boat", registryName -> new BoatItem((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_CHEST_BOAT.get(), new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).stacksTo(1)));
 
-    public static final Supplier<Item> POTTERY_SHERD = registerItem("pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
-    public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
-    public static final Supplier<Item> RUINED_POTTERY_SHERD = registerItem("ruined_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
-    public static final Supplier<Item> FINALE_POTTERY_SHERD = registerItem("finale_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
-    public static final Supplier<Item> GATEWAY_POTTERY_SHERD = registerItem("gateway_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName))));
+    public static final Supplier<Item> POTTERY_SHERD = registerItem("pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).rarity(Rarity.UNCOMMON)));
+    public static final Supplier<Item> ROLL_POTTERY_SHERD = registerItem("roll_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).rarity(Rarity.UNCOMMON)));
+    public static final Supplier<Item> RUINED_POTTERY_SHERD = registerItem("ruined_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).rarity(Rarity.UNCOMMON)));
+    public static final Supplier<Item> FINALE_POTTERY_SHERD = registerItem("finale_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).rarity(Rarity.UNCOMMON)));
+    public static final Supplier<Item> GATEWAY_POTTERY_SHERD = registerItem("gateway_pottery_sherd", registryName -> new Item(new Item.Properties().setId(JinxedRegistryHelper.itemKey(registryName)).rarity(Rarity.UNCOMMON)));
 
 
 

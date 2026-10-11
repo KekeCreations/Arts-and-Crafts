@@ -1,5 +1,11 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.6.0-beta2
+- Fixed sniffer drops on NeoForge (It's now more compatible with other mods)
+- Fixed A&C pottery sherds rarity
+
+
+
 ### V1.6.0-beta
 - Fixed Glazed Terracotta sticking to slime and honey
 - Chalk Dust Block no longer crashes the game when the server calls the clone item stack method
