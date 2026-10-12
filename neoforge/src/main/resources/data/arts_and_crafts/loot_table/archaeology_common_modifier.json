@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:bleachdew"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:cork_hanging_sign"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:ruined_pottery_sherd"
+        }
+      ]
+    }
+  ]
+}

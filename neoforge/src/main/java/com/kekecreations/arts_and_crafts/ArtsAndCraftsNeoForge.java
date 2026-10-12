@@ -5,10 +5,7 @@ import com.kekecreations.arts_and_crafts.common.event.OnWorldLoadEvent;
 import com.kekecreations.arts_and_crafts.common.item.palette.PaintbrushPalette;
 import com.kekecreations.arts_and_crafts.common.util.PietraforteColour;
 import com.kekecreations.arts_and_crafts.core.config.NeoForgeConfig;
-import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import com.kekecreations.arts_and_crafts.core.registry.ACNeoForgeTabs;
-import com.kekecreations.arts_and_crafts.core.registry.ACRegistries;
+import com.kekecreations.arts_and_crafts.core.registry.*;
 import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -27,6 +24,7 @@ public class ArtsAndCraftsNeoForge {
     public ArtsAndCraftsNeoForge(IEventBus eventBus,  ModContainer modContainer) {
         ArtsAndCrafts.init();
         ACNeoForgeTabs.register();
+        ACLootModifiers.register(eventBus);
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
         eventBus.addListener(this::datapackRegistry);
         NeoForge.EVENT_BUS.register(new OnWorldLoadEvent());

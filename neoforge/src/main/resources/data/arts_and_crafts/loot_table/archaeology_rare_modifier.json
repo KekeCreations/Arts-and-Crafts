@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:finale_pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:gateway_pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:roll_pottery_sherd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arts_and_crafts:ruined_pottery_sherd"
+        }
+      ]
+    }
+  ]
+}
