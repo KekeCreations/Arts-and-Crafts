@@ -70,8 +70,14 @@ public class ACNeoForgeTabs {
                     pOutput.accept(ACItems.getChalkStick(colour.getId()));
                 }
                 pOutput.accept(ACBlocks.BLEACHED_CHALK.get());
+                pOutput.accept(ACBlocks.BLEACHED_CHALK_STAIRS.get());
+                pOutput.accept(ACBlocks.BLEACHED_CHALK_SLAB.get());
+                pOutput.accept(ACBlocks.BLEACHED_CHALK_WALL.get());
                 for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrder) {
                     pOutput.accept(ACBlocks.getChalk(colour.getId()));
+                    pOutput.accept(ACBlocks.getChalkStairs(colour.getId()));
+                    pOutput.accept(ACBlocks.getChalkSlab(colour.getId()));
+                    pOutput.accept(ACBlocks.getChalkWall(colour.getId()));
                 }
                 pOutput.accept(ACItems.BLEACHDEW_PAINTBRUSH.get());
                 for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrder) {

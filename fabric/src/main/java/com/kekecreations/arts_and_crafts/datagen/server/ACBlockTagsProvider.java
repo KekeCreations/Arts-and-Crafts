@@ -191,6 +191,7 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
     private void appendWalls() {
         this.valueLookupBuilder(BlockTags.WALLS)
+                .add(ACBlocks.BLEACHED_CHALK_WALL.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_WALL.get())
                 .add(ACBlocks.SOAPSTONE_WALL.get())
                 .add(ACBlocks.SOAPSTONE_BRICK_WALL.get())
@@ -204,7 +205,9 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                     .add(ACBlocks.getDyedSoapstoneWall(colours.getId()))
                     .add(ACBlocks.getDyedSoapstoneBrickWall(colours.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneWall(colours.getId()))
-                    .add(ACBlocks.getDyedMudBrickWall(colours.getId()));
+                    .add(ACBlocks.getDyedMudBrickWall(colours.getId()))
+                    .add(ACBlocks.getChalkWall(colours.getId()))
+            ;
         }
         for (PietraforteColour colour : PietraforteColour.values()) {
             valueLookupBuilder(BlockTags.WALLS)
@@ -219,6 +222,7 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
     private void appendSlabs() {
         this.valueLookupBuilder(BlockTags.SLABS)
+                .add(ACBlocks.BLEACHED_CHALK_SLAB.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_SLAB.get())
                 .add(ACBlocks.SOAPSTONE_SLAB.get())
                 .add(ACBlocks.SOAPSTONE_BRICK_SLAB.get())
@@ -232,7 +236,9 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                     .add(ACBlocks.getDyedSoapstoneSlab(colours.getId()))
                     .add(ACBlocks.getDyedSoapstoneBrickSlab(colours.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneSlab(colours.getId()))
-                    .add(ACBlocks.getDyedMudBrickSlab(colours.getId()));
+                    .add(ACBlocks.getDyedMudBrickSlab(colours.getId()))
+                    .add(ACBlocks.getChalkSlab(colours.getId()))
+            ;
         }
         for (PietraforteColour colour : PietraforteColour.values()) {
             valueLookupBuilder(BlockTags.SLABS)
@@ -247,6 +253,7 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     }
     private void appendStairs() {
         this.valueLookupBuilder(BlockTags.STAIRS)
+                .add(ACBlocks.BLEACHED_CHALK_STAIRS.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get())
                 .add(ACBlocks.SOAPSTONE_STAIRS.get())
                 .add(ACBlocks.SOAPSTONE_BRICK_STAIRS.get())
@@ -260,7 +267,9 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                     .add(ACBlocks.getDyedSoapstoneStairs(colours.getId()))
                     .add(ACBlocks.getDyedSoapstoneBrickStairs(colours.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneStairs(colours.getId()))
-                    .add(ACBlocks.getDyedMudBrickStairs(colours.getId()));
+                    .add(ACBlocks.getDyedMudBrickStairs(colours.getId()))
+                    .add(ACBlocks.getChalkStairs(colours.getId()))
+            ;
         }
         for (PietraforteColour colour : PietraforteColour.values()) {
             valueLookupBuilder(BlockTags.STAIRS)
@@ -282,6 +291,9 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     private void appendPickaxes() {
         this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ACBlocks.BLEACHED_CHALK.get())
+                .add(ACBlocks.BLEACHED_CHALK_STAIRS.get())
+                .add(ACBlocks.BLEACHED_CHALK_SLAB.get())
+                .add(ACBlocks.BLEACHED_CHALK_WALL.get())
                 .add(ACBlocks.BLEACHED_CONCRETE.get())
                 .add(ACBlocks.GLAZED_TERRACOTTA.get())
                 .add(ACBlocks.TERRACOTTA_SHINGLES.get())
@@ -312,7 +324,8 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ACBlocks.POLISHED_GYPSUM.get())
                 .add(ACBlocks.POLISHED_GYPSUM_SLAB.get())
                 .add(ACBlocks.POLISHED_GYPSUM_STAIRS.get())
-                .add(ACBlocks.POLISHED_GYPSUM_WALL.get());
+                .add(ACBlocks.POLISHED_GYPSUM_WALL.get())
+        ;
         for (DyeColor colours : DyeColor.values()) {
             this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(ACBlocks.getDyedTerracottaShingles(colours.getId()))
@@ -341,6 +354,9 @@ public class ACBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                     .add(ACBlocks.getDyedMudBrickWall(colours.getId()))
 
                     .add(ACBlocks.getChalk(colours.getId()))
+                    .add(ACBlocks.getChalkStairs(colours.getId()))
+                    .add(ACBlocks.getChalkSlab(colours.getId()))
+                    .add(ACBlocks.getChalkWall(colours.getId()))
 
                     .add(ACBlocks.getDyedPlaster(colours.getId()));
         }

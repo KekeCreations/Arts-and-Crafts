@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "arts_and_crafts:bleached_chalk",
+  "result": {
+    "id": "arts_and_crafts:bleached_chalk_wall"
+  }
+}

@@ -87,10 +87,13 @@ public class ACModelProvider extends FabricModelProvider {
 
         //BLEACHED
         modelGen.createTrivialCube(ACBlocks.BLEACHED_CONCRETE.get());
-        modelGen.createTrivialCube(ACBlocks.BLEACHED_CHALK.get());
         modelGen.createColoredBlockWithRandomRotations(TexturedModel.CUBE, ACBlocks.BLEACHED_CONCRETE_POWDER.get());
         modelGen.createFullAndCarpetBlocks(ACBlocks.BLEACHED_WOOL.get(), ACBlocks.BLEACHED_CARPET.get());
         modelGen.createColoredBlockWithStateRotations(TexturedModel.GLAZED_TERRACOTTA, ACBlocks.GLAZED_TERRACOTTA.get());
+        modelGen.family(ACBlocks.BLEACHED_CHALK.get())
+                .stairs(ACBlocks.BLEACHED_CHALK_STAIRS.get())
+                .slab(ACBlocks.BLEACHED_CHALK_SLAB.get())
+                .wall(ACBlocks.BLEACHED_CHALK_WALL.get());
 
         //SHINGLES
         modelGen.family(ACBlocks.TERRACOTTA_SHINGLES.get())
@@ -150,7 +153,11 @@ public class ACModelProvider extends FabricModelProvider {
 
             createDecoratedPot(ACBlocks.getDyedDecoratedPot(colour.getId()), colour, DyedPotUtils.getDyedPotParticle(colour), modelGen);
 
-            modelGen.createTrivialCube(ACBlocks.getChalk(colour.getId()));
+            modelGen.family(ACBlocks.getChalk(colour.getId()))
+                    .stairs(ACBlocks.getChalkStairs(colour.getId()))
+                    .slab(ACBlocks.getChalkSlab(colour.getId()))
+                    .wall(ACBlocks.getChalkWall(colour.getId()));
+
             plasterBlock(ACBlocks.getDyedPlaster(colour.getId()), colour, modelGen);
             chalkDustBlock(ACBlocks.getChalkDust(colour.getId()), colour, modelGen);
 

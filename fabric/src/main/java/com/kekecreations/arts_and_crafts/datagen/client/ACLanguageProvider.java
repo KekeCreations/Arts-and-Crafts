@@ -67,6 +67,9 @@ public class ACLanguageProvider extends FabricLanguageProvider {
             translationBuilder.add(ACBlocks.getDyedFlowerPot(colours.getId()).asItem(), stringColour + " Flower Pot");
             translationBuilder.add(ACBlocks.getChalkDust(colours.getId()), stringColour + " Chalk Dust");
             translationBuilder.add(ACBlocks.getChalk(colours.getId()).asItem(), stringColour + " Chalk");
+            translationBuilder.add(ACBlocks.getChalkStairs(colours.getId()).asItem(), stringColour + " Chalk Stairs");
+            translationBuilder.add(ACBlocks.getChalkSlab(colours.getId()).asItem(), stringColour + " Chalk Slab");
+            translationBuilder.add(ACBlocks.getChalkWall(colours.getId()).asItem(), stringColour + " Chalk Wall");
 
             translationBuilder.add(ACBlocks.getDyedTerracottaShingles(colours.getId()).asItem(), stringColour + " Terracotta Shingles");
             translationBuilder.add(ACBlocks.getDyedTerracottaShingleSlab(colours.getId()).asItem(), stringColour + " Terracotta Shingle Slab");
@@ -150,6 +153,9 @@ public class ACLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ACBlocks.BLEACHED_WOOL.get().asItem(), "Bleached Wool");
         translationBuilder.add(ACBlocks.BLEACHED_CARPET.get().asItem(), "Bleached Carpet");
         translationBuilder.add(ACBlocks.BLEACHED_CHALK.get().asItem(), "Bleached Chalk");
+        translationBuilder.add(ACBlocks.BLEACHED_CHALK_STAIRS.get().asItem(), "Bleached Chalk Stairs");
+        translationBuilder.add(ACBlocks.BLEACHED_CHALK_SLAB.get().asItem(), "Bleached Chalk Slab");
+        translationBuilder.add(ACBlocks.BLEACHED_CHALK_WALL.get().asItem(), "Bleached Chalk Wall");
         translationBuilder.add(ACBlocks.GLAZED_TERRACOTTA.get().asItem(), "Glazed Terracotta");
         translationBuilder.add(ACBlocks.BLEACHED_CONCRETE.get().asItem(), "Bleached Concrete");
         translationBuilder.add(ACBlocks.BLEACHED_CONCRETE_POWDER.get().asItem(), "Bleached Concrete Powder");

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "arts_and_crafts:brown_chalk",
+  "result": {
+    "id": "arts_and_crafts:brown_chalk_stairs"
+  }
+}

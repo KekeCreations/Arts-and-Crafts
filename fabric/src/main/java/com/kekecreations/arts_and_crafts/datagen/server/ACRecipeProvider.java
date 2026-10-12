@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import org.jspecify.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -198,10 +199,42 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                 List<Item> chalkList = List.of(ACBlocks.getChalk(DyeColor.BLACK.getId()).asItem(), ACBlocks.getChalk(DyeColor.BLUE.getId()).asItem(), ACBlocks.getChalk(DyeColor.BROWN.getId()).asItem(), ACBlocks.getChalk(DyeColor.CYAN.getId()).asItem(), ACBlocks.getChalk(DyeColor.GRAY.getId()).asItem(), ACBlocks.getChalk(DyeColor.GREEN.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getChalk(DyeColor.LIME.getId()).asItem(), ACBlocks.getChalk(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getChalk(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getChalk(DyeColor.PINK.getId()).asItem(), ACBlocks.getChalk(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getChalk(DyeColor.RED.getId()).asItem(), ACBlocks.getChalk(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getChalk(DyeColor.WHITE.getId()).asItem(), ACBlocks.BLEACHED_CHALK.get().asItem());
                 List<Item> chalkStickList = List.of(ACItems.getChalkStick(DyeColor.BLACK.getId()).asItem(), ACItems.getChalkStick(DyeColor.BLUE.getId()).asItem(), ACItems.getChalkStick(DyeColor.BROWN.getId()).asItem(), ACItems.getChalkStick(DyeColor.CYAN.getId()).asItem(), ACItems.getChalkStick(DyeColor.GRAY.getId()).asItem(), ACItems.getChalkStick(DyeColor.GREEN.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIGHT_BLUE.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIGHT_GRAY.getId()).asItem(), ACItems.getChalkStick(DyeColor.LIME.getId()).asItem(), ACItems.getChalkStick(DyeColor.MAGENTA.getId()).asItem(), ACItems.getChalkStick(DyeColor.ORANGE.getId()).asItem(), ACItems.getChalkStick(DyeColor.PINK.getId()).asItem(), ACItems.getChalkStick(DyeColor.PURPLE.getId()).asItem(), ACItems.getChalkStick(DyeColor.RED.getId()).asItem(), ACItems.getChalkStick(DyeColor.YELLOW.getId()).asItem(), ACItems.getChalkStick(DyeColor.WHITE.getId()).asItem(), ACItems.BLEACHED_CHALK_STICK.get());
                 List<Item> flowerPotList = List.of(ACBlocks.getDyedFlowerPot(DyeColor.BLACK.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.LIME.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.RED.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()).asItem(), ACBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()).asItem());
+                List<Item> chalkStairList = new ArrayList<>();
+                List<Item> chalkSlabList = new ArrayList<>();
+                List<Item> chalkWallList = new ArrayList<>();
+
+                List<Item> chalkNoBleach = new ArrayList<>();
+                List<Item> chalkStickNoBleach = new ArrayList<>();
+                List<Item> chalkStairsNoBleach = new ArrayList<>();
+                List<Item> chalkSlabNoBleach = new ArrayList<>();
+                List<Item> chalkWallNoBleach = new ArrayList<>();
+
+                List<Item> newDyeList = new ArrayList<>();
+                for (DyeColor colour : DyeColor.values()) {
+                    chalkStairList.add(ACBlocks.getChalkStairs(colour.getId()).asItem());
+                    chalkSlabList.add(ACBlocks.getChalkSlab(colour.getId()).asItem());
+                    chalkWallList.add(ACBlocks.getChalkWall(colour.getId()).asItem());
+                    //For bleached recipes
+                    chalkNoBleach.add(ACBlocks.getChalk(colour.getId()).asItem());
+                    chalkStickNoBleach.add(ACItems.getChalkStick(colour.getId()));
+                    chalkStairsNoBleach.add(ACBlocks.getChalkStairs(colour.getId()).asItem());
+                    chalkSlabNoBleach.add(ACBlocks.getChalkSlab(colour.getId()).asItem());
+                    chalkWallNoBleach.add(ACBlocks.getChalkWall(colour.getId()).asItem());
+
+                    newDyeList.add(ACDyedLists.DYES.get(colour));
+                }
+                chalkStairList.add(ACBlocks.BLEACHED_CHALK_STAIRS.get().asItem());
+                chalkSlabList.add(ACBlocks.BLEACHED_CHALK_SLAB.get().asItem());
+                chalkWallList.add(ACBlocks.BLEACHED_CHALK_WALL.get().asItem());
+
                 colorBlockWithDye(dyeList, chalkList, null, "chalk", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
+                colorBlockWithDye(newDyeList, chalkStairList, null, "chalk_stairs", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
+                colorBlockWithDye(newDyeList, chalkSlabList, null, "chalk_slab", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
+                colorBlockWithDye(newDyeList, chalkWallList, null, "chalk_wall", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
                 colorBlockWithDye(dyeList, chalkStickList, null, "chalk_sticks", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
                 colorBlockWithDye(dyeList, flowerPotList, null, "flower_pots", RecipeCategory.BUILDING_BLOCKS, recipeConsumer);
                 colorBleachedBlockWithDye(recipeConsumer, dyeList, flowerPotList, Blocks.FLOWER_POT, "flower_pots");
+                bleachBlock(recipeConsumer, flowerPotList, Blocks.FLOWER_POT, "flower_pots");
 
                 //BLEACHED
                 ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CARPET.get(), 3)
@@ -219,9 +252,12 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                 colorBleachedBlockWithDye(recipeConsumer, dyeList, carpetList, ACBlocks.BLEACHED_CARPET.get(), "carpet");
                 bleachBlock(recipeConsumer, carpetList, ACBlocks.BLEACHED_CARPET.get(), "carpet");
                 //chalk
-                bleachBlock(recipeConsumer, chalkList, ACBlocks.BLEACHED_CHALK.get(), "chalk");
+                bleachBlock(recipeConsumer, chalkNoBleach, ACBlocks.BLEACHED_CHALK.get(), "chalk");
+                bleachBlock(recipeConsumer, chalkStairsNoBleach, ACBlocks.BLEACHED_CHALK_STAIRS.get(), "chalk_stairs");
+                bleachBlock(recipeConsumer, chalkSlabNoBleach, ACBlocks.BLEACHED_CHALK_SLAB.get(), "chalk_slab");
+                bleachBlock(recipeConsumer, chalkWallNoBleach, ACBlocks.BLEACHED_CHALK_WALL.get(), "chalk_wall");
                 //chalk sticks
-                bleachBlock(recipeConsumer, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
+                bleachBlock(recipeConsumer, chalkStickNoBleach, ACItems.BLEACHED_CHALK_STICK.get(), "chalk_sticks");
                 //terracotta
                 List<Item> terracottaList = List.of(Blocks.BLACK_TERRACOTTA.asItem(), Blocks.BLUE_TERRACOTTA.asItem(), Blocks.BROWN_TERRACOTTA.asItem(), Blocks.CYAN_TERRACOTTA.asItem(), Blocks.GRAY_TERRACOTTA.asItem(), Blocks.GREEN_TERRACOTTA.asItem(), Blocks.LIGHT_BLUE_TERRACOTTA.asItem(), Blocks.LIGHT_GRAY_TERRACOTTA.asItem(), Blocks.LIME_TERRACOTTA.asItem(), Blocks.MAGENTA_TERRACOTTA.asItem(), Blocks.ORANGE_TERRACOTTA.asItem(), Blocks.PINK_TERRACOTTA.asItem(), Blocks.PURPLE_TERRACOTTA.asItem(), Blocks.RED_TERRACOTTA.asItem(), Blocks.YELLOW_TERRACOTTA.asItem(), Blocks.WHITE_TERRACOTTA.asItem());
                 bleachBlockAlt(recipeConsumer, terracottaList, Blocks.TERRACOTTA, "terracotta");
@@ -342,7 +378,9 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getItemName(ACBlocks.GYPSUM.get()), has(ACBlocks.GYPSUM.get()))
                         .save(recipeConsumer);
                 stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACItems.BLEACHED_CHALK_STICK.get(), 1, recipeConsumer);
-
+                stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACBlocks.BLEACHED_CHALK_STAIRS.get().asItem(), 1, recipeConsumer);
+                stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACBlocks.BLEACHED_CHALK_SLAB.get().asItem(), 2, recipeConsumer);
+                stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.BLEACHED_CHALK.get().asItem(), ACBlocks.BLEACHED_CHALK_WALL.get().asItem(), 1, recipeConsumer);
                 //CORK
                 planksFromLogsRecipe(ACBlocks.CORK_LOG, ACBlocks.CORK_PLANKS, recipeConsumer);
                 planksFromLogsRecipe(ACBlocks.CORK_WOOD, ACBlocks.CORK_PLANKS, recipeConsumer);
@@ -368,6 +406,9 @@ public class ACRecipeProvider extends FabricRecipeProvider {
                 for (DyeColor colours : DyeColor.values()) {
                     //CHALK
                     stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACItems.getChalkStick(colours.getId()), 1, recipeConsumer);
+                    stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACBlocks.getChalkStairs(colours.getId()).asItem(), 1, recipeConsumer);
+                    stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACBlocks.getChalkSlab(colours.getId()).asItem(), 2, recipeConsumer);
+                    stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getChalk(colours.getId()).asItem(), ACBlocks.getChalkWall(colours.getId()).asItem(), 1, recipeConsumer);
                     //SOAPSTONE
                     stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneStairs(colours.getId()).asItem(), 1, recipeConsumer);
                     stonecutterRecipes(RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedSoapstone(colours.getId()).asItem(), ACBlocks.getDyedSoapstoneSlab(colours.getId()).asItem(), 2, recipeConsumer);

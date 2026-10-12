@@ -128,8 +128,14 @@ public class ACBlockLootTableProvider extends FabricBlockLootSubProvider {
     private void chalk() {
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(ACBlocks.getChalk(colours.getId()));
+            dropSelf(ACBlocks.getChalkStairs(colours.getId()));
+            dropSelf(ACBlocks.getChalkWall(colours.getId()));
+            add(ACBlocks.getChalkSlab(colours.getId()), createSlabItemTable(ACBlocks.getChalkSlab(colours.getId())));
         }
         dropSelf(ACBlocks.BLEACHED_CHALK.get());
+        dropSelf(ACBlocks.BLEACHED_CHALK_STAIRS.get());
+        dropSelf(ACBlocks.BLEACHED_CHALK_WALL.get());
+        add(ACBlocks.BLEACHED_CHALK_SLAB.get(), createSlabItemTable(ACBlocks.BLEACHED_CHALK_SLAB.get()));
     }
 
     private void soapstone() {
