@@ -5,7 +5,7 @@ Arts & Crafts Changelog
 - Fixed A&C pottery sherds rarity
 - Fixed bleach recipes, you can no longer bleach a bleached block with bleachdew.
 - You can now bleach flower pots
-- Fixed custom sherds not generating in suspicious blocks
+- Fixed custom pottery sherds not generating in suspicious blocks
 
 
 

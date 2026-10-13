@@ -7,8 +7,10 @@ import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRen
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotSpecialRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedDecoratedPotBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedFlowerPotBER;
 import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.DyedFlowerPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
@@ -27,6 +29,7 @@ import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.boat.Boat;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class ArtsAndCraftsFabricClient implements ClientModInitializer {
@@ -53,6 +56,7 @@ public class ArtsAndCraftsFabricClient implements ClientModInitializer {
         EntityRendererRegistryImpl.register((EntityType<? extends FloatingBlockEntity>) ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
         BlockEntityRenderers.register((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRenderers.register((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+        BlockEntityRenderers.register((BlockEntityType<? extends DyedFlowerPotBlockEntity>) ACEntityTypes.DYED_FLOWER_POT_BLOCK_ENTITY.get(), DyedFlowerPotBER::new);
         SpecialModelRenderers.ID_MAPPER.put(ArtsAndCrafts.id("dyed_decorated_pot"), DyedDecoratedPotSpecialRenderer.Unbaked.MAP_CODEC);
 
         EntityRendererRegistryImpl.register((EntityType<? extends Boat>) ACEntityTypes.CORK_BOAT.get(), ctx -> new BoatRenderer(ctx, ACModelLayers.CORK_BOAT));

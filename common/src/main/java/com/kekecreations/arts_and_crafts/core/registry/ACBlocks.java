@@ -296,7 +296,7 @@ public class ACBlocks {
             }))));
 
 
-            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.AIR, colours)));
+            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.newFlowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.AIR, colours)));
 
             //DYED SAPLING POTS
             DYED_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oak_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.OAK_SAPLING, colours)));
@@ -707,6 +707,11 @@ public class ACBlocks {
     private static ACFlowerPotBlock flowerPot(BlockBehaviour.Properties properties, Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
         return new ACFlowerPotBlock(block, dyeColor, properties1);
+    }
+
+    private static DyedFlowerPotBlock newFlowerPot(BlockBehaviour.Properties properties, Block block, DyeColor dyeColor) {
+        BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+        return new DyedFlowerPotBlock(properties1);
     }
 
     private static ACBedBlock bed(BlockBehaviour.Properties properties, DyeColor $$0) {
