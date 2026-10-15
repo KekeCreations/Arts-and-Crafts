@@ -147,6 +147,10 @@ public class ACBlocks {
         }
     })));
 
+    //DISABLED BLOCKS
+    public static final Supplier<Block> CRIMSON_ROOTS_PLANT = registerBlock("crimson_roots_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> WARPED_ROOTS_PLANT = registerBlock("warped_roots_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+
     //BLEACHED
     public static final Supplier<Block> GLAZED_TERRACOTTA = registerBlockWithItem("glazed_terracotta", registryName -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).pushReaction(PushReaction.PUSH_ONLY).setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> BLEACHED_WOOL = registerBlockWithItem("bleached_wool", registryName -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).setId(JinxedRegistryHelper.blockKey(registryName))));
@@ -710,7 +714,7 @@ public class ACBlocks {
     }
 
     private static DyedFlowerPotBlock newFlowerPot(BlockBehaviour.Properties properties, Block block, DyeColor dyeColor) {
-        BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+        BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).lightLevel((state) -> 1);
         return new DyedFlowerPotBlock(properties1);
     }
 

@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts.client.renderer.tile.state;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedFlowerPotBlockEntity;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.block.BlockModelRenderState;
 import net.minecraft.client.renderer.block.BlockModelResolver;
@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
@@ -36,7 +35,7 @@ public class DyedFlowerPotBER implements BlockEntityRenderer<DyedFlowerPotBlockE
         poseStack.pushPose();
         BlockModelRenderState modelRenderState = state.displayBlock;
         if (!modelRenderState.isEmpty()) {
-            if (state.storedPlant == Items.CRIMSON_ROOTS) {
+            if (state.storedPlant == Items.CRIMSON_ROOTS || state.storedPlant == Items.WARPED_ROOTS) {
                 poseStack.pushPose();
                 poseStack.translate(0.0F, 0F, 0.0F);
                 modelRenderState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
@@ -61,11 +60,17 @@ public class DyedFlowerPotBER implements BlockEntityRenderer<DyedFlowerPotBlockE
 
         if (state.storedPlant != null) {
             if (state.storedPlant == Items.CRIMSON_ROOTS) {
-                //Create a block that is always disabled with potted crimson roots model without default pot
-                this.blockRenderer.update(state.displayBlock, Blocks.POTTED_CRIMSON_ROOTS.defaultBlockState(), BlockDisplayContext.create());
+                this.blockRenderer.update(state.displayBlock, ACBlocks.CRIMSON_ROOTS_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
+            } else if (state.storedPlant == Items.WARPED_ROOTS) {
+                this.blockRenderer.update(state.displayBlock, ACBlocks.WARPED_ROOTS_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
             } else if (state.storedPlant instanceof BlockItem blockItem) {
                 this.blockRenderer.update(state.displayBlock, blockItem.getBlock().defaultBlockState(), BlockDisplayContext.create());
             }
         }
+    }
+
+    @Override
+    public int getViewDistance() {
+        return 128;
     }
 }

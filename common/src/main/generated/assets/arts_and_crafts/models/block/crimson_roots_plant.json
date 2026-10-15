@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts:block/flower_pot_plant",
+  "textures": {
+    "particle": "minecraft:block/crimson_roots_pot",
+    "plant": "minecraft:block/crimson_roots_pot"
+  }
+}

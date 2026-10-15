@@ -7,8 +7,10 @@ import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRen
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotSpecialRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedDecoratedPotBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.state.DyedFlowerPotBER;
 import com.kekecreations.arts_and_crafts.common.entity.ACBedBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.DyedDecoratedPotBlockEntity;
+import com.kekecreations.arts_and_crafts.common.entity.DyedFlowerPotBlockEntity;
 import com.kekecreations.arts_and_crafts.common.entity.FloatingBlockEntity;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACParticles;
@@ -17,6 +19,7 @@ import net.minecraft.client.renderer.entity.BoatRenderer;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.boat.AbstractBoat;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -49,6 +52,7 @@ public class ClientEvents {
         event.registerEntityRenderer((EntityType<? extends AbstractBoat>) ACEntityTypes.CORK_CHEST_BOAT.get(), context -> new BoatRenderer(context, ACModelLayers.CORK_CHEST_BOAT));
         event.registerBlockEntityRenderer((BlockEntityType<? extends DyedDecoratedPotBlockEntity>) ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         event.registerBlockEntityRenderer((BlockEntityType<? extends ACBedBlockEntity>) ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+        event.registerBlockEntityRenderer((BlockEntityType<? extends DyedFlowerPotBlockEntity>) ACEntityTypes.DYED_FLOWER_POT_BLOCK_ENTITY.get(), DyedFlowerPotBER::new);
     }
 
     @SubscribeEvent
