@@ -10,17 +10,19 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
 public class DyedFlowerPotBlock extends BaseEntityBlock {
+    protected static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
 
     public DyedFlowerPotBlock(Properties properties) {
         super(properties);
@@ -33,6 +35,16 @@ public class DyedFlowerPotBlock extends BaseEntityBlock {
         return CODEC;
     }
 
+    @Override
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+        return SHAPE;
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState blockState) {
+        return RenderShape.MODEL;
+    }
+
 
     @Override
     protected @NonNull InteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
@@ -40,11 +52,8 @@ public class DyedFlowerPotBlock extends BaseEntityBlock {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (item instanceof BlockItem blockItem) {
             if (blockEntity instanceof DyedFlowerPotBlockEntity dyedFlowerPotBlockEntity) {
-                System.out.println("NO STICK");
                 if (dyedFlowerPotBlockEntity.getStoredPlant() == Items.AIR) {
-                    System.out.println("YES STICK");
-                    if (blockItem.getBlock() instanceof SaplingBlock) {
-                        System.out.println("YES SAPLING");
+                    if (blockItem.getBlock() instanceof SaplingBlock || blockItem.getBlock() instanceof FlowerBlock) {
                         itemStack.consume(1, player);
                         dyedFlowerPotBlockEntity.setStoredPlant(blockItem);
                         return InteractionResult.SUCCESS;
