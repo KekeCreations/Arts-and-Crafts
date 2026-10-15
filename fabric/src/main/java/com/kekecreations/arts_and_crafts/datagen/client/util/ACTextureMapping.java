@@ -22,6 +22,20 @@ public class ACTextureMapping {
                 .put(TextureSlot.PLANT, getPlantTexture(plant, modID));
     }
 
+    public static TextureMapping flowerPotCactusTextureMappings(String modID, String plant) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getPlantTexture(plant, modID))
+                .put(TextureSlot.PLANT, getPlantTexture(plant + "_side", modID))
+                .put(TextureSlot.TOP, getPlantTexture(plant + "_top", modID));
+    }
+
+    public static TextureMapping flowerPotBambooTextureMappings(String modID, String plant) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getPlantTexture(plant, modID))
+                .put(TextureSlot.PLANT, getPlantTexture(plant + "_stalk", modID))
+                .put(TextureSlot.TOP, getPlantTexture(plant + "_singleleaf", modID));
+    }
+
     public static TextureMapping emptyFlowerPotTextureMappings(DyeColor colour) {
         return (new TextureMapping())
                 .put(TextureSlot.PARTICLE, getFlowerPotTexture(colour))

@@ -45,7 +45,40 @@ public class ACItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         appendFenceGates();
         appendBeds();
         appendWools();
+        appendCanBePotted();
+    }
 
+    private void appendCanBePotted() {
+        this.valueLookupBuilder(ACTags.ItemTags.CAN_BE_POTTED)
+                .add(Items.TORCHFLOWER)
+                .add(Items.MANGROVE_PROPAGULE)
+                .add(Items.FERN)
+                .add(Items.DANDELION)
+                .add(Items.GOLDEN_DANDELION)
+                .add(Items.POPPY)
+                .add(Items.BLUE_ORCHID)
+                .add(Items.ALLIUM)
+                .add(Items.AZURE_BLUET)
+                .add(Items.RED_TULIP)
+                .add(Items.ORANGE_TULIP)
+                .add(Items.WHITE_TULIP)
+                .add(Items.PINK_TULIP)
+                .add(Items.OXEYE_DAISY)
+                .add(Items.CORNFLOWER)
+                .add(Items.LILY_OF_THE_VALLEY)
+                .add(Items.WITHER_ROSE)
+                .add(Items.RED_MUSHROOM)
+                .add(Items.BROWN_MUSHROOM)
+                .add(Items.DEAD_BUSH)
+                .add(Items.CACTUS)
+                .add(Items.BAMBOO)
+                .add(Items.CRIMSON_FUNGUS)
+                .add(Items.WARPED_FUNGUS)
+                .add(Items.AZALEA)
+                .add(Items.FLOWERING_AZALEA)
+                .add(Items.OPEN_EYEBLOSSOM)
+                .add(Items.CLOSED_EYEBLOSSOM)
+                .addOptional(ACBlocks.CORK_SAPLING.get().asItem());
     }
 
     private void appendDecoratedPots() {

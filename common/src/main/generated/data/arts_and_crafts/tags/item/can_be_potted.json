@@ -1,0 +1,36 @@
+{
+  "values": [
+    "minecraft:torchflower",
+    "minecraft:mangrove_propagule",
+    "minecraft:fern",
+    "minecraft:dandelion",
+    "minecraft:golden_dandelion",
+    "minecraft:poppy",
+    "minecraft:blue_orchid",
+    "minecraft:allium",
+    "minecraft:azure_bluet",
+    "minecraft:red_tulip",
+    "minecraft:orange_tulip",
+    "minecraft:white_tulip",
+    "minecraft:pink_tulip",
+    "minecraft:oxeye_daisy",
+    "minecraft:cornflower",
+    "minecraft:lily_of_the_valley",
+    "minecraft:wither_rose",
+    "minecraft:red_mushroom",
+    "minecraft:brown_mushroom",
+    "minecraft:dead_bush",
+    "minecraft:cactus",
+    "minecraft:bamboo",
+    "minecraft:crimson_fungus",
+    "minecraft:warped_fungus",
+    "minecraft:azalea",
+    "minecraft:flowering_azalea",
+    "minecraft:open_eyeblossom",
+    "minecraft:closed_eyeblossom",
+    {
+      "id": "arts_and_crafts:cork_sapling",
+      "required": false
+    }
+  ]
+}

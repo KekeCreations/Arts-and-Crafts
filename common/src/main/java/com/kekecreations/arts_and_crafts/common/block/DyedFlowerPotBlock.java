@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts.common.block;
 
 import com.kekecreations.arts_and_crafts.common.entity.DyedFlowerPotBlockEntity;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -69,8 +70,7 @@ public class DyedFlowerPotBlock extends BaseEntityBlock {
                             block instanceof FlowerBlock ||
                             block instanceof NetherRootsBlock ||
                             block instanceof MushroomBlock ||
-                            block instanceof TallGrassBlock ||
-                            block instanceof DryVegetationBlock) {
+                            itemStack.is(ACTags.ItemTags.CAN_BE_POTTED)) {
                         itemStack.consume(1, player);
                         dyedFlowerPotBlockEntity.setStoredPlant(blockItem);
                         return InteractionResult.SUCCESS;

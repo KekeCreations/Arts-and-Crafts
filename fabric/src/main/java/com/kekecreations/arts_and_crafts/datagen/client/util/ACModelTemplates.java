@@ -15,6 +15,8 @@ public class ACModelTemplates {
     public static final ModelTemplate LOTUS_FLOWER = createLotusFlower(TextureSlot.PARTICLE, ACTextureSlots.LOTUS);
 
 
+    public static final ModelTemplate FLOWER_POT_PLANT_BAMBOO = createFlowerPotBamboo(TextureSlot.PARTICLE, TextureSlot.PLANT, TextureSlot.TOP);
+    public static final ModelTemplate FLOWER_POT_PLANT_CACTUS = createFlowerPotCactus(TextureSlot.PARTICLE, TextureSlot.PLANT, TextureSlot.TOP);
     public static final ModelTemplate FLOWER_POT_PLANT = createFlowerPotPlant(TextureSlot.PARTICLE, TextureSlot.PLANT);
     public static final ModelTemplate FLOWER_POT = createFlowerPot(TextureSlot.PARTICLE, ACTextureSlots.FLOWER_POT, TextureSlot.PLANT);
     public static final ModelTemplate TINTED_FLOWER_POT = createTintedFlowerPot(TextureSlot.PARTICLE, ACTextureSlots.FLOWER_POT, TextureSlot.PLANT);
@@ -76,6 +78,14 @@ public class ACModelTemplates {
 
     public static ModelTemplate createFlowerPotPlant(TextureSlot... textureSlots) {
         return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/flower_pot_plant"))), Optional.empty(), textureSlots);
+    }
+
+    public static ModelTemplate createFlowerPotCactus(TextureSlot... textureSlots) {
+        return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/flower_pot_cactus"))), Optional.empty(), textureSlots);
+    }
+
+    public static ModelTemplate createFlowerPotBamboo(TextureSlot... textureSlots) {
+        return new ModelTemplate((Optional.of(Identifier.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "block/flower_pot_bamboo"))), Optional.empty(), textureSlots);
     }
 
 }

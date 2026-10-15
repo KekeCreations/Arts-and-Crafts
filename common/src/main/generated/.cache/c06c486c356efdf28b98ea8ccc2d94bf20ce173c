@@ -1,4 +1,5 @@
 // 26.1.2	-999999999-01-01T00:00:00	Arts And Crafts/Tags for minecraft:item
+ec63008c8430a52c01c16d13d028496f8a66e5eb data/arts_and_crafts/tags/item/can_be_potted.json
 600ccf402a38ad9c7f66da9413cdf6c12aa8e707 data/arts_and_crafts/tags/item/chalk_sticks.json
 3eb77ae8624a3cb2a6c8de2163925946edaf5830 data/arts_and_crafts/tags/item/decorated_pots.json
 4ce44c6fc029a87b377f0223f8309a779826ad87 data/arts_and_crafts/tags/item/dyes.json

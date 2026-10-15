@@ -150,6 +150,8 @@ public class ACBlocks {
     //DISABLED BLOCKS
     public static final Supplier<Block> CRIMSON_ROOTS_PLANT = registerBlock("crimson_roots_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> WARPED_ROOTS_PLANT = registerBlock("warped_roots_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> CACTUS_PLANT = registerBlock("cactus_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> BAMBOO_PLANT = registerBlock("bamboo_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
 
     //BLEACHED
     public static final Supplier<Block> GLAZED_TERRACOTTA = registerBlockWithItem("glazed_terracotta", registryName -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).pushReaction(PushReaction.PUSH_ONLY).setId(JinxedRegistryHelper.blockKey(registryName))));
@@ -300,7 +302,7 @@ public class ACBlocks {
             }))));
 
 
-            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.newFlowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.AIR, colours)));
+            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.newFlowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)))));
 
             //DYED SAPLING POTS
             DYED_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oak_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.OAK_SAPLING, colours)));
@@ -713,7 +715,7 @@ public class ACBlocks {
         return new ACFlowerPotBlock(block, dyeColor, properties1);
     }
 
-    private static DyedFlowerPotBlock newFlowerPot(BlockBehaviour.Properties properties, Block block, DyeColor dyeColor) {
+    private static DyedFlowerPotBlock newFlowerPot(BlockBehaviour.Properties properties) {
         BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).lightLevel((state) -> 1);
         return new DyedFlowerPotBlock(properties1);
     }

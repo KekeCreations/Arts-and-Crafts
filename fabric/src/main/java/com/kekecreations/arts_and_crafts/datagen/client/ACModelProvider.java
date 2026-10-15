@@ -27,6 +27,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.joml.Quaternionfc;
@@ -47,6 +48,8 @@ public class ACModelProvider extends FabricModelProvider {
         //DISABLED BLOCKS
         flowerPotPlantBlock(ACBlocks.CRIMSON_ROOTS_PLANT.get(), "crimson_roots_pot", "minecraft", modelGen);
         flowerPotPlantBlock(ACBlocks.WARPED_ROOTS_PLANT.get(), "warped_roots_pot", "minecraft", modelGen);
+        flowerPotCactusBlock(ACBlocks.CACTUS_PLANT.get(), "cactus", "minecraft", modelGen);
+        flowerPotBambooBlock(ACBlocks.BAMBOO_PLANT.get(), "bamboo", "minecraft", modelGen);
 
 
         chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), null, modelGen);
@@ -807,6 +810,20 @@ public class ACModelProvider extends FabricModelProvider {
     public final void flowerPotPlantBlock(Block plant,  String plantString, String modID,  BlockModelGenerators blockModelGenerators) {
         TextureMapping textureMapping = ACTextureMapping.flowerPotPlantTextureMappings(modID, plantString);
         Identifier resourceLocation = ACModelTemplates.FLOWER_POT_PLANT.create(plant, textureMapping, blockModelGenerators.modelOutput);
+        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
+        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(plant, variant));
+    }
+
+    public final void flowerPotCactusBlock(Block plant,  String plantString, String modID,  BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = ACTextureMapping.flowerPotCactusTextureMappings(modID, plantString);
+        Identifier resourceLocation = ACModelTemplates.FLOWER_POT_PLANT_CACTUS.create(plant, textureMapping, blockModelGenerators.modelOutput);
+        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
+        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(plant, variant));
+    }
+
+    public final void flowerPotBambooBlock(Block plant,  String plantString, String modID,  BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = ACTextureMapping.flowerPotBambooTextureMappings(modID, plantString);
+        Identifier resourceLocation = ACModelTemplates.FLOWER_POT_PLANT_BAMBOO.create(plant, textureMapping, blockModelGenerators.modelOutput);
         MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
         blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(plant, variant));
     }
