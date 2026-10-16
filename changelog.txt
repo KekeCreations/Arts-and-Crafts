@@ -12,6 +12,11 @@ Arts & Crafts Changelog
 - Fixed custom pottery sherds not generating in suspicious blocks
 - Fixed License description
 
+## Flower Pot Compat
+- Blocks that extend off the SaplingBlock, FlowerBlock, MushroomBlock and NetherRootBlock classes are automatically added
+- You can add compat by adding to the #arts_and_crafts:can_be_potted item tag!
+- YOU WILL NEED A MIXIN FOR CUSTOM MODELS UNFORTUNATELY
+
 
 
 ### V1.6.0-beta
