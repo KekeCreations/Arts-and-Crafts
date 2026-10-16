@@ -149,7 +149,7 @@ public class ACLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ACBlocks.POLISHED_GYPSUM_SLAB.get().asItem(), "Polished Gypsum Slab");
         translationBuilder.add(ACBlocks.POLISHED_GYPSUM_WALL.get().asItem(), "Polished Gypsum Wall");
         translationBuilder.add(ACBlocks.POLISHED_GYPSUM_STAIRS.get().asItem(), "Polished Gypsum Stairs");
-        translationBuilder.add(ACBlocks.LOTUS_FLOWER.get().asItem(), "Lotus Flower");
+        translationBuilder.add(ACBlocks.LOTUS_FLOWER.get(), "Lotus Flower");
         translationBuilder.add(ACBlocks.BLEACHED_WOOL.get().asItem(), "Bleached Wool");
         translationBuilder.add(ACBlocks.BLEACHED_CARPET.get().asItem(), "Bleached Carpet");
         translationBuilder.add(ACBlocks.BLEACHED_CHALK.get().asItem(), "Bleached Chalk");
