@@ -222,54 +222,10 @@ public class ACBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ACBlocks.POTTED_CORK_SAPLING.get(), (Block block) -> createPotFlowerItemTable(ACBlocks.CORK_SAPLING.get()));
         for (DyeColor colours : DyeColor.values()) {
             dropSelf(ACBlocks.getDyedFlowerPot(colours.getId()));
-            add(ACBlocks.getDyedPottedCorkSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, ACBlocks.CORK_SAPLING.get()));
-            add(ACBlocks.getDyedPottedOakSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.OAK_SAPLING));
-
-            add(ACBlocks.getDyedPottedCrimsonFungus(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.CRIMSON_FUNGUS));
-            add(ACBlocks.getDyedPottedCrimsonRoots(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.CRIMSON_ROOTS));
-            add(ACBlocks.getDyedPottedWarpedFungus(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.WARPED_FUNGUS));
-            add(ACBlocks.getDyedPottedWarpedRoots(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.WARPED_ROOTS));
-            add(ACBlocks.getDyedPottedSpruceSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.SPRUCE_SAPLING));
-            add(ACBlocks.getDyedPottedBirchSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.BIRCH_SAPLING));
-            add(ACBlocks.getDyedPottedJungleSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.JUNGLE_SAPLING));
-            add(ACBlocks.getDyedPottedAcaciaSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.ACACIA_SAPLING));
-            add(ACBlocks.getDyedPottedCherrySapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.CHERRY_SAPLING));
-            add(ACBlocks.getDyedPottedDarkOakSapling(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.DARK_OAK_SAPLING));
-            add(ACBlocks.getDyedPottedMangrovePropagule(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.MANGROVE_PROPAGULE));
-            add(ACBlocks.getDyedPottedFern(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.FERN));
-            add(ACBlocks.getDyedPottedDandelion(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.DANDELION));
-            add(ACBlocks.getDyedPottedPoppy(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.POPPY));
-            add(ACBlocks.getDyedPottedBlueOrchid(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.BLUE_ORCHID));
-            add(ACBlocks.getDyedPottedAllium(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.ALLIUM));
-            add(ACBlocks.getDyedPottedAzureBluet(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.AZURE_BLUET));
-            add(ACBlocks.getDyedPottedRedTulip(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.RED_TULIP));
-            add(ACBlocks.getDyedPottedOrangeTulip(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.ORANGE_TULIP));
-            add(ACBlocks.getDyedPottedWhiteTulip(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.WHITE_TULIP));
-            add(ACBlocks.getDyedPottedPinkTulip(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.PINK_TULIP));
-            add(ACBlocks.getDyedPottedOxeyeDaisy(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.OXEYE_DAISY));
-            add(ACBlocks.getDyedPottedCornflower(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.CORNFLOWER));
-            add(ACBlocks.getDyedPottedLilyOfTheValley(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.LILY_OF_THE_VALLEY));
-            add(ACBlocks.getDyedPottedWitherRose(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.WITHER_ROSE));
-            add(ACBlocks.getDyedPottedRedMushroom(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.RED_MUSHROOM));
-            add(ACBlocks.getDyedPottedBrownMushroom(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.BROWN_MUSHROOM));
-            add(ACBlocks.getDyedPottedDeadBush(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.DEAD_BUSH));
-            add(ACBlocks.getDyedPottedCactus(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.CACTUS));
-            add(ACBlocks.getDyedPottedBamboo(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.BAMBOO));
-            add(ACBlocks.getDyedPottedAzalea(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.AZALEA));
-            add(ACBlocks.getDyedPottedFloweringAzalea(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.FLOWERING_AZALEA));
-            add(ACBlocks.getDyedPottedTorchFlower(colours), (Block block) -> createDyedPotFlowerItemTable(colours, Blocks.TORCHFLOWER));
         }
-    }
-
-    protected LootTable.Builder createDyedPotFlowerItemTable(DyeColor dyeColor, ItemLike p_249395_) {
-        return LootTable.lootTable().withPool(this.applyExplosionCondition(ACBlocks.getDyedFlowerPot(dyeColor.getId()), LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(ACBlocks.getDyedFlowerPot(dyeColor.getId()))))).withPool(this.applyExplosionCondition(p_249395_, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(p_249395_))));
     }
 
     private LootTable.Builder createDecoratedPotTable(Block $$0x) {
         return LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(((LootPoolSingletonContainer.Builder) DynamicLoot.dynamicEntry(DecoratedPotBlock.SHERDS_DYNAMIC_DROP_ID).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties($$0x).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DecoratedPotBlock.CRACKED, true)))).otherwise(LootItem.lootTableItem($$0x).apply(CopyComponentsFunction.copyComponentsFromBlockEntity(LootContextParams.BLOCK_ENTITY).include(DataComponents.POT_DECORATIONS)))));
-    }
-
-    public LootTable.Builder createTwoItemTable(ItemLike p_251912_, ItemLike itemLike2) {
-        return LootTable.lootTable().withPool(this.applyExplosionCondition(p_251912_, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(p_251912_)))).withPool(this.applyExplosionCondition(p_251912_, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(itemLike2))));
     }
 }

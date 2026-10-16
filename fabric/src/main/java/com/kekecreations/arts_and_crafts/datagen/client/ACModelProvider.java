@@ -50,6 +50,8 @@ public class ACModelProvider extends FabricModelProvider {
         flowerPotPlantBlock(ACBlocks.WARPED_ROOTS_PLANT.get(), "warped_roots_pot", "minecraft", modelGen);
         flowerPotCactusBlock(ACBlocks.CACTUS_PLANT.get(), "cactus", "minecraft", modelGen);
         flowerPotBambooBlock(ACBlocks.BAMBOO_PLANT.get(), "bamboo", "minecraft", modelGen);
+        flowerPotAzaleaBlock(ACBlocks.AZALEA_PLANT.get(), "potted_azalea_bush", "minecraft", modelGen);
+        flowerPotAzaleaBlock(ACBlocks.FLOWERING_AZALEA_PLANT.get(), "potted_flowering_azalea_bush", "minecraft", modelGen);
 
 
         chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), null, modelGen);
@@ -195,44 +197,6 @@ public class ACModelProvider extends FabricModelProvider {
                     .wall(ACBlocks.getDyedMudBrickWall(colour.getId()));
 
             createEmptyFlowerPot(ACBlocks.getDyedFlowerPot(colour.getId()), colour, modelGen);
-
-            flowerPotBlock(ACBlocks.getDyedPottedCorkSapling(colour), colour, "cork_sapling", "arts_and_crafts", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedOakSapling(colour), colour, "oak_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedSpruceSapling(colour), colour, "spruce_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedBirchSapling(colour), colour, "birch_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedJungleSapling(colour), colour, "jungle_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedAcaciaSapling(colour), colour, "acacia_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedCherrySapling(colour), colour, "cherry_sapling", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedDarkOakSapling(colour), colour, "dark_oak_sapling", "minecraft", modelGen);
-            mangrovePropaguleFlowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colour), colour, modelGen);
-
-            flowerPotBlock(ACBlocks.getDyedPottedCrimsonFungus(colour), colour, "crimson_fungus", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedCrimsonRoots(colour), colour, "crimson_roots_pot", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedWarpedFungus(colour), colour, "warped_fungus", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedWarpedRoots(colour), colour, "warped_roots_pot", "minecraft", modelGen);
-
-            tintedFlowerPotBlock(ACBlocks.getDyedPottedFern(colour), colour, "fern", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedDandelion(colour), colour, "dandelion", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedPoppy(colour), colour, "poppy", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedBlueOrchid(colour), colour, "blue_orchid", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedAllium(colour), colour, "allium", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedAzureBluet(colour), colour, "azure_bluet", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedRedTulip(colour), colour, "red_tulip", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedOrangeTulip(colour), colour, "orange_tulip", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedWhiteTulip(colour), colour, "white_tulip", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedPinkTulip(colour), colour, "pink_tulip", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedOxeyeDaisy(colour), colour, "oxeye_daisy", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedCornflower(colour), colour, "cornflower", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedLilyOfTheValley(colour), colour, "lily_of_the_valley", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedWitherRose(colour), colour, "wither_rose", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedRedMushroom(colour), colour, "red_mushroom", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedBrownMushroom(colour), colour, "brown_mushroom", "minecraft", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedDeadBush(colour), colour, "dead_bush", "minecraft", modelGen);
-            cactusFlowerPotBlock(ACBlocks.getDyedPottedCactus(colour), colour, modelGen);
-            bambooFlowerPotBlock(ACBlocks.getDyedPottedBamboo(colour), colour, modelGen);
-            azaleaFlowerPotBlock(ACBlocks.getDyedPottedAzalea(colour), colour, "potted_azalea_bush", modelGen);
-            azaleaFlowerPotBlock(ACBlocks.getDyedPottedFloweringAzalea(colour), colour, "potted_flowering_azalea_bush", modelGen);
-            flowerPotBlock(ACBlocks.getDyedPottedTorchFlower(colour), colour, "torchflower", "minecraft", modelGen);
         }
 
     }
@@ -828,51 +792,11 @@ public class ACModelProvider extends FabricModelProvider {
         blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(plant, variant));
     }
 
-    public final void flowerPotBlock(Block flowerPot, DyeColor colour, String plant, String modID,  BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.flowerPotTextureMappings(modID, plant, colour);
-        Identifier resourceLocation = ACModelTemplates.FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
+    public final void flowerPotAzaleaBlock(Block plant,  String plantString, String modID,  BlockModelGenerators blockModelGenerators) {
+        TextureMapping textureMapping = ACTextureMapping.flowerPotAzaleaTextureMappings(modID, plantString);
+        Identifier resourceLocation = ACModelTemplates.FLOWER_POT_PLANT_AZALEA.create(plant, textureMapping, blockModelGenerators.modelOutput);
         MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
-    }
-
-    public final void cactusFlowerPotBlock(Block flowerPot, DyeColor colour, BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.emptyFlowerPotTextureMappings(colour);
-        Identifier resourceLocation = ACModelTemplates.CACTUS_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
-    }
-
-    public final void bambooFlowerPotBlock(Block flowerPot, DyeColor colour, BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.emptyFlowerPotTextureMappings(colour);
-        Identifier resourceLocation = ACModelTemplates.BAMBOO_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
-    }
-
-    public final void mangrovePropaguleFlowerPotBlock(Block flowerPot, DyeColor colour, BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.emptyFlowerPotTextureMappings(colour);
-        Identifier resourceLocation = ACModelTemplates.MANGROVE_PROPAGULE_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
-    }
-
-    public final void azaleaFlowerPotBlock(Block flowerPot, DyeColor colour, String bush, BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.emptyFlowerPotTextureMappings(colour);
-        Identifier resourceLocation = Identifier.parse("ifyouevergetthisihavezerocluewhathappened");
-        if (Objects.equals(bush, "potted_azalea_bush")) {
-            resourceLocation = ACModelTemplates.AZALEA_BUSH_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        } else if (Objects.equals(bush, "potted_flowering_azalea_bush")) {
-            resourceLocation = ACModelTemplates.FLOWERING_AZALEA_BUSH_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        }
-        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
-    }
-
-    public final void tintedFlowerPotBlock(Block flowerPot, DyeColor colour, String plant, String modID,  BlockModelGenerators blockModelGenerators) {
-        TextureMapping textureMapping = ACTextureMapping.flowerPotTextureMappings(modID, plant, colour);
-        Identifier resourceLocation = ACModelTemplates.TINTED_FLOWER_POT.create(flowerPot, textureMapping, blockModelGenerators.modelOutput);
-        MultiVariant variant = BlockModelGenerators.plainVariant(resourceLocation);
-        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(flowerPot, variant));
+        blockModelGenerators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(plant, variant));
     }
 
     public final void createEmptyFlowerPot(Block flowerPot, DyeColor colour, BlockModelGenerators blockModelGenerators) {

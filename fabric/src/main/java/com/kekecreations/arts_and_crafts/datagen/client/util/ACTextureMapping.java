@@ -9,12 +9,6 @@ import net.minecraft.world.level.block.Block;
 
 public class ACTextureMapping {
 
-    public static TextureMapping flowerPotTextureMappings(String modID, String plant, DyeColor colour) {
-        return (new TextureMapping())
-                .put(TextureSlot.PARTICLE, getFlowerPotTexture(colour))
-                .put(ACTextureSlots.FLOWER_POT, getFlowerPotTexture(colour))
-                .put(TextureSlot.PLANT, getPlantTexture(plant, modID));
-    }
 
     public static TextureMapping flowerPotPlantTextureMappings(String modID, String plant) {
         return (new TextureMapping())
@@ -34,6 +28,14 @@ public class ACTextureMapping {
                 .put(TextureSlot.PARTICLE, getPlantTexture(plant, modID))
                 .put(TextureSlot.PLANT, getPlantTexture(plant + "_stalk", modID))
                 .put(TextureSlot.TOP, getPlantTexture(plant + "_singleleaf", modID));
+    }
+
+    public static TextureMapping flowerPotAzaleaTextureMappings(String modID, String plant) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getPlantTexture(plant + "_plant", modID))
+                .put(TextureSlot.PLANT, getPlantTexture(plant + "_plant", modID))
+                .put(TextureSlot.SIDE, getPlantTexture(plant + "_side", modID))
+                .put(TextureSlot.TOP, getPlantTexture(plant + "_top", modID));
     }
 
     public static TextureMapping emptyFlowerPotTextureMappings(DyeColor colour) {

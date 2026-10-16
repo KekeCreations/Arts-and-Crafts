@@ -35,7 +35,9 @@ public class DyedFlowerPotBER implements BlockEntityRenderer<DyedFlowerPotBlockE
         poseStack.pushPose();
         BlockModelRenderState modelRenderState = state.displayBlock;
         if (!modelRenderState.isEmpty()) {
-            if (state.storedPlant == Items.CRIMSON_ROOTS || state.storedPlant == Items.WARPED_ROOTS || state.storedPlant == Items.BAMBOO || state.storedPlant == Items.CACTUS) {
+            if (state.storedPlant == Items.CRIMSON_ROOTS || state.storedPlant == Items.WARPED_ROOTS
+                    || state.storedPlant == Items.BAMBOO || state.storedPlant == Items.CACTUS
+                    || state.storedPlant == Items.AZALEA || state.storedPlant == Items.FLOWERING_AZALEA) {
                 poseStack.pushPose();
                 poseStack.translate(0.0F, 0F, 0.0F);
                 modelRenderState.submit(poseStack, submitNodeCollector, state.lightCoords, OverlayTexture.NO_OVERLAY, 0);
@@ -65,8 +67,12 @@ public class DyedFlowerPotBER implements BlockEntityRenderer<DyedFlowerPotBlockE
                 this.blockRenderer.update(state.displayBlock, ACBlocks.WARPED_ROOTS_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
             } else if (state.storedPlant == Items.BAMBOO) {
                 this.blockRenderer.update(state.displayBlock, ACBlocks.BAMBOO_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
-            }  else if (state.storedPlant == Items.CACTUS) {
+            } else if (state.storedPlant == Items.CACTUS) {
                 this.blockRenderer.update(state.displayBlock, ACBlocks.CACTUS_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
+            } else if (state.storedPlant == Items.AZALEA) {
+                this.blockRenderer.update(state.displayBlock, ACBlocks.AZALEA_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
+            } else if (state.storedPlant == Items.FLOWERING_AZALEA) {
+                this.blockRenderer.update(state.displayBlock, ACBlocks.FLOWERING_AZALEA_PLANT.get().defaultBlockState(), BlockDisplayContext.create());
             } else if (state.storedPlant instanceof BlockItem blockItem) {
                 this.blockRenderer.update(state.displayBlock, blockItem.getBlock().defaultBlockState(), BlockDisplayContext.create());
             }

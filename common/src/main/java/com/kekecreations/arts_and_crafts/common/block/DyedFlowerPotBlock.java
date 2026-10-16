@@ -73,6 +73,7 @@ public class DyedFlowerPotBlock extends BaseEntityBlock {
                             itemStack.is(ACTags.ItemTags.CAN_BE_POTTED)) {
                         itemStack.consume(1, player);
                         dyedFlowerPotBlockEntity.setStoredPlant(blockItem);
+                        dyedFlowerPotBlockEntity.setChanged();
                         return InteractionResult.SUCCESS;
                     }
                 }
@@ -91,6 +92,7 @@ public class DyedFlowerPotBlock extends BaseEntityBlock {
                     player.drop(dyedFlowerPotBlockEntity.getStoredPlant().asItem().getDefaultInstance(), false);
                 }
                 dyedFlowerPotBlockEntity.resetStoredPlant();
+                dyedFlowerPotBlockEntity.setChanged();
 
                 return InteractionResult.SUCCESS;
             }

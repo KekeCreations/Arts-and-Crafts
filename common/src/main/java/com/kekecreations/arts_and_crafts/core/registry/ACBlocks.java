@@ -46,41 +46,6 @@ public class ACBlocks {
 
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CRIMSON_FUNGUS_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CRIMSON_ROOTS_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_WARPED_FUNGUS_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_WARPED_ROOTS_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_OAK_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_SPRUCE_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_BIRCH_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_JUNGLE_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_ACACIA_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CHERRY_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_DARK_OAK_SAPLING_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_MANGROVE_PROPAGULE_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_FERN_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_DANDELION_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_POPPY_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_BLUE_ORCHID_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALLIUM_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_AZURE_BLUET_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_RED_TULIP_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_ORANGE_TULIP_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_WHITE_TULIP_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_PINK_TULIP_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_OXEYE_DAISY_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORNFLOWER_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_LILY_OF_THE_VALLEY_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_WITHER_ROSE_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_RED_MUSHROOM_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_BROWN_MUSHROOM_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_DEAD_BUSH_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CACTUS_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_BAMBOO_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_AZALEA_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_FLOWERING_AZALEA_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_TORCHFLOWER_FLOWER_POTS = new HashMap<>();
-    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORK_SAPLING_FLOWER_POTS = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_SLAB = new HashMap<>();
@@ -152,6 +117,11 @@ public class ACBlocks {
     public static final Supplier<Block> WARPED_ROOTS_PLANT = registerBlock("warped_roots_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> CACTUS_PLANT = registerBlock("cactus_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
     public static final Supplier<Block> BAMBOO_PLANT = registerBlock("bamboo_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> AZALEA_PLANT = registerBlock("azalea_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+    public static final Supplier<Block> FLOWERING_AZALEA_PLANT = registerBlock("flowering_azalea_plant", registryName -> new DisabledBlock(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName))));
+
+
+
 
     //BLEACHED
     public static final Supplier<Block> GLAZED_TERRACOTTA = registerBlockWithItem("glazed_terracotta", registryName -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).pushReaction(PushReaction.PUSH_ONLY).setId(JinxedRegistryHelper.blockKey(registryName))));
@@ -301,53 +271,8 @@ public class ACBlocks {
                 return blockState.getValue(ChalkDustBlock.GLOW);
             }))));
 
-
-            DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.newFlowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)))));
-
-            //DYED SAPLING POTS
-            DYED_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oak_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.OAK_SAPLING, colours)));
-            DYED_SPRUCE_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_spruce_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.SPRUCE_SAPLING, colours)));
-            DYED_BIRCH_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_birch_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.BIRCH_SAPLING, colours)));
-            DYED_JUNGLE_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_jungle_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.JUNGLE_SAPLING, colours)));
-            DYED_ACACIA_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_acacia_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.ACACIA_SAPLING, colours)));
-            DYED_CHERRY_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_cherry_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.CHERRY_SAPLING, colours)));
-            DYED_DARK_OAK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_dark_oak_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.DARK_OAK_SAPLING, colours)));
-            DYED_MANGROVE_PROPAGULE_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_mangrove_propagule", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.MANGROVE_PROPAGULE, colours)));
-            DYED_CORK_SAPLING_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_cork_sapling", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), ACBlocks.CORK_SAPLING.get(), colours)));
-
-            //DYED FUNGUS POTS
-            DYED_CRIMSON_FUNGUS_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_crimson_fungus", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.CRIMSON_FUNGUS, colours)));
-            DYED_WARPED_FUNGUS_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_warped_fungus", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.WARPED_FUNGUS, colours)));
-
-            //DYED ROOTS POTS
-            DYED_CRIMSON_ROOTS_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_crimson_roots", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.CRIMSON_ROOTS, colours)));
-            DYED_WARPED_ROOTS_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_warped_roots", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.WARPED_ROOTS, colours)));
-
-            //DYED FLOWER POTS
-            DYED_FERN_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_fern", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.FERN, colours)));
-            DYED_DANDELION_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_dandelion", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.DANDELION, colours)));
-            DYED_POPPY_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_poppy", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.POPPY, colours)));
-            DYED_BLUE_ORCHID_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_blue_orchid", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.BLUE_ORCHID, colours)));
-            DYED_ALLIUM_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_allium", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.ALLIUM, colours)));
-            DYED_AZURE_BLUET_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_azure_bluet", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.AZURE_BLUET, colours)));
-            DYED_RED_TULIP_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_red_tulip", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.RED_TULIP, colours)));
-            DYED_ORANGE_TULIP_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_orange_tulip", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.ORANGE_TULIP, colours)));
-            DYED_WHITE_TULIP_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_white_tulip", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.WHITE_TULIP, colours)));
-            DYED_PINK_TULIP_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_pink_tulip", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.PINK_TULIP, colours)));
-            DYED_OXEYE_DAISY_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_oxeye_daisy", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.OXEYE_DAISY, colours)));
-            DYED_CORNFLOWER_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_cornflower", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.CORNFLOWER, colours)));
-            DYED_LILY_OF_THE_VALLEY_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_lily_of_the_valley", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.LILY_OF_THE_VALLEY, colours)));
-            DYED_WITHER_ROSE_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_wither_rose", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.WITHER_ROSE, colours)));
-            DYED_RED_MUSHROOM_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_red_mushroom", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.RED_MUSHROOM, colours)));
-            DYED_BROWN_MUSHROOM_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_brown_mushroom", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.BROWN_MUSHROOM, colours)));
-            DYED_DEAD_BUSH_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_dead_bush", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.DEAD_BUSH, colours)));
-            DYED_CACTUS_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_cactus", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.CACTUS, colours)));
-            DYED_BAMBOO_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_bamboo", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.BAMBOO, colours)));
-            DYED_AZALEA_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_azalea_bush", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.AZALEA, colours)));
-            DYED_FLOWERING_AZALEA_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_flowering_azalea_bush", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.FLOWERING_AZALEA, colours)));
-            DYED_TORCHFLOWER_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_torchflower", registryName -> ACBlocks.flowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)), Blocks.TORCHFLOWER, colours)));
-
             if (colours.getId() <= 15) {
+                DYED_FLOWER_POTS.put(colours, registerBlock(colours + "_flower_pot", registryName -> ACBlocks.newFlowerPot(BlockBehaviour.Properties.of().setId(JinxedRegistryHelper.blockKey(registryName)))));
                 DYED_DECORATED_POTS.put(colours, registerBlock(colours + "_decorated_pot", registryName -> new DyedDecoratedPotBlock(colours, BlockBehaviour.Properties.ofFullCopy(Blocks.DECORATED_POT).setId(JinxedRegistryHelper.blockKey(registryName)))));
             }
         }
@@ -525,108 +450,7 @@ public class ACBlocks {
     public static Block getDyedFlowerPot(int colours){
         return DYED_FLOWER_POTS.get(DyeColor.byId(colours)).get();
     }
-    public static Block getDyedPottedCrimsonFungus(DyeColor colours){
-        return DYED_CRIMSON_FUNGUS_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedCrimsonRoots(DyeColor colours){
-        return DYED_CRIMSON_ROOTS_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedWarpedFungus(DyeColor colours){
-        return DYED_WARPED_FUNGUS_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedWarpedRoots(DyeColor colours){
-        return DYED_WARPED_ROOTS_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedOakSapling(DyeColor colours){
-        return DYED_OAK_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedSpruceSapling(DyeColor colours){
-        return DYED_SPRUCE_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedBirchSapling(DyeColor colours){
-        return DYED_BIRCH_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedJungleSapling(DyeColor colours){
-        return DYED_JUNGLE_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedAcaciaSapling(DyeColor colours){
-        return DYED_ACACIA_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedCherrySapling(DyeColor colours){
-        return DYED_CHERRY_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedDarkOakSapling(DyeColor colours){
-        return DYED_DARK_OAK_SAPLING_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedMangrovePropagule(DyeColor colours){
-        return DYED_MANGROVE_PROPAGULE_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedFern(DyeColor colours){
-        return DYED_FERN_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedDandelion(DyeColor colours){
-        return DYED_DANDELION_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedPoppy(DyeColor colours){
-        return DYED_POPPY_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedBlueOrchid(DyeColor colours){
-        return DYED_BLUE_ORCHID_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedAllium(DyeColor colours){
-        return DYED_ALLIUM_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedAzureBluet(DyeColor colours){
-        return DYED_AZURE_BLUET_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedRedTulip(DyeColor colours){
-        return DYED_RED_TULIP_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedOrangeTulip(DyeColor colours){
-        return DYED_ORANGE_TULIP_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedWhiteTulip(DyeColor colours){
-        return DYED_WHITE_TULIP_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedPinkTulip(DyeColor colours){
-        return DYED_PINK_TULIP_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedOxeyeDaisy(DyeColor colours){
-        return DYED_OXEYE_DAISY_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedCornflower(DyeColor colours){
-        return DYED_CORNFLOWER_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedLilyOfTheValley(DyeColor colours){
-        return DYED_LILY_OF_THE_VALLEY_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedWitherRose(DyeColor colours){
-        return DYED_WITHER_ROSE_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedRedMushroom(DyeColor colours){
-        return DYED_RED_MUSHROOM_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedBrownMushroom(DyeColor colours){
-        return DYED_BROWN_MUSHROOM_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedDeadBush(DyeColor colours){
-        return DYED_DEAD_BUSH_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedCactus(DyeColor colours){
-        return DYED_CACTUS_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedBamboo(DyeColor colours){
-        return DYED_BAMBOO_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedAzalea(DyeColor colours){
-        return DYED_AZALEA_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedFloweringAzalea(DyeColor colours){
-        return DYED_FLOWERING_AZALEA_FLOWER_POTS.get(colours).get();
-    }
-    public static Block getDyedPottedTorchFlower(DyeColor colours){
-        return DYED_TORCHFLOWER_FLOWER_POTS.get(colours).get();
-    }
+
     public static Block getDyedSoapstone(int colours){
         return DYED_SOAPSTONE.get(DyeColor.byId(colours)).get();
     }
@@ -664,9 +488,6 @@ public class ACBlocks {
     }
     public static Block getDyedPolishedSoapstoneStairs(int colours){
         return DYED_POLISHED_SOAPSTONE_STAIRS.get(DyeColor.byId(colours)).get();
-    }
-    public static Block getDyedPottedCorkSapling(DyeColor colours){
-        return DYED_CORK_SAPLING_FLOWER_POTS.get(colours).get();
     }
 
     public static Block getDyedDecoratedPot(int colours) {
@@ -708,11 +529,6 @@ public class ACBlocks {
             properties1 = properties1.requiredFeatures(featureFlags);
         }
         return new FlowerPotBlock(block, properties1);
-    }
-
-    private static ACFlowerPotBlock flowerPot(BlockBehaviour.Properties properties, Block block, DyeColor dyeColor) {
-        BlockBehaviour.Properties properties1 = properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        return new ACFlowerPotBlock(block, dyeColor, properties1);
     }
 
     private static DyedFlowerPotBlock newFlowerPot(BlockBehaviour.Properties properties) {
