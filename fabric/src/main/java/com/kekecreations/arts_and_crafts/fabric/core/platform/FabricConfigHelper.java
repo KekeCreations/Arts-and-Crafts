@@ -39,14 +39,6 @@ public class FabricConfigHelper implements ConfigHelper {
     }
 
     @Override
-    public boolean bleachableSheep() {
-        if (ArtsAndCraftsFabric.getConfig() != null) {
-            return ArtsAndCraftsFabric.getConfig().bleachableSheep();
-        }
-        return false;
-    }
-
-    @Override
     public boolean aprilFools2025() {
         if (ArtsAndCraftsFabric.getConfig() != null) {
             return ArtsAndCraftsFabric.getConfig().aprilFools2025();

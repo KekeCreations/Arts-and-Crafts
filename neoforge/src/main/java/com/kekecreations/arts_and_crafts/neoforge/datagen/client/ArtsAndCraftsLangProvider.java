@@ -170,8 +170,8 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(ACItems.SUS_POTTERY_SHERD.get(), "Sus Pottery Sherd");
 
         //ENTITY TYPES
-        add(ACEntityTypes.CHEST_BOAT.get(), "Boat with Chest");
-        add(ACEntityTypes.BOAT.get(), "Boat");
+        add(ACEntityTypes.CHEST_BOAT.get(), "Cork Boat with Chest");
+        add(ACEntityTypes.BOAT.get(), "Cork Boat");
         add(ACEntityTypes.FLOATING_BLOCK.get(), "Floating Block");
 
 

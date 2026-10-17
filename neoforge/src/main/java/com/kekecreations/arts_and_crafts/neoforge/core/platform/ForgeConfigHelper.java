@@ -38,14 +38,6 @@ public class ForgeConfigHelper implements ConfigHelper {
     }
 
     @Override
-    public boolean bleachableSheep() {
-        if (!NeoForgeConfig.SPEC.isLoaded()) {
-            return true;
-        }
-        return NeoForgeConfig.BLEACHABLE_SHEEP.get();
-    }
-
-    @Override
     public boolean aprilFools2025() {
         if (!NeoForgeConfig.SPEC.isLoaded()) {
             return true;

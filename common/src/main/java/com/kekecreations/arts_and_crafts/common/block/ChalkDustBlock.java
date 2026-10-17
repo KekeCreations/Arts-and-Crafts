@@ -101,9 +101,6 @@ public class ChalkDustBlock extends DirectionalBlock {
     @Override
     public @NotNull ItemStack getCloneItemStack(@NotNull LevelReader levelReader, @NotNull BlockPos blockPos, @NotNull BlockState blockState) {
         ItemStack itemStack = new ItemStack(ACItems.getChalkStick(this.dyeColor));
-        if (itemStack.has(ACDataComponents.CHALK_PATTERN.get()) && Screen.hasControlDown()) {
-            itemStack.set(ACDataComponents.CHALK_PATTERN.get(), getChalkDustStates(blockState));
-        }
         return itemStack;
     }
 
