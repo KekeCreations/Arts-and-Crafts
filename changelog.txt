@@ -11,6 +11,7 @@ Arts & Crafts Changelog
 - Removed unneccessary classes
 - Fixed bleach recipes, you can no longer bleach a bleached block with bleachdew.
 - You can now bleach flower pots
+- Updated License
 
 ## Flower Pot Compat
 - Blocks that extend off the SaplingBlock, FlowerBlock, MushroomBlock and RootBlock classes are automatically added
