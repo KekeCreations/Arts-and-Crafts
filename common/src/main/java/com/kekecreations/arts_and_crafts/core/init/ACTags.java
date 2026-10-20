@@ -23,6 +23,10 @@ public class ACTags {
         public static final TagKey<Item> PAINTBRUSHES
                 = tag("paintbrushes");
 
+        public static final TagKey<Item> CAN_BE_POTTED
+                = tag("can_be_potted");
+
+
 
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, name));

@@ -1,0 +1,20 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "#particle",
+    "top": "block/cactus_top",
+    "plant": "block/cactus_side"
+  },
+  "elements": [
+    {   "from": [ 6, 5, 6 ],
+      "to": [ 10, 16, 10  ],
+      "faces": {
+        "up":    { "texture": "#top", "cullface": "up" },
+        "north": { "uv": [ 6, 0, 10, 11 ], "texture": "#plant" },
+        "south": { "uv": [ 6, 0, 10, 11 ], "texture": "#plant" },
+        "west":  { "uv": [ 6, 0, 10, 11 ], "texture": "#plant" },
+        "east":  { "uv": [ 6, 0, 10, 11 ], "texture": "#plant" }
+      }
+    }
+  ]
+}

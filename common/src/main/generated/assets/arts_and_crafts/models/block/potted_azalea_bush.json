@@ -1,0 +1,9 @@
+{
+  "parent": "arts_and_crafts:block/flower_pot_azalea",
+  "textures": {
+    "particle": "minecraft:block/potted_azalea_bush_plant",
+    "plant": "minecraft:block/potted_azalea_bush_plant",
+    "side": "minecraft:block/potted_azalea_bush_side",
+    "top": "minecraft:block/potted_azalea_bush_top"
+  }
+}

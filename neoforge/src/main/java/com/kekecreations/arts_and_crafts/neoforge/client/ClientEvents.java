@@ -8,6 +8,7 @@ import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedFlowerPotBER;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
@@ -69,6 +70,7 @@ public class ClientEvents {
         event.registerEntityRenderer(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
         event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+        event.registerBlockEntityRenderer(ACEntityTypes.CUSTOM_FLOWER_POT_BLOCK_ENTITY.get(), DyedFlowerPotBER::new);
     }
     @SubscribeEvent
     public static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -83,57 +85,11 @@ public class ClientEvents {
         }
         registerParticleProvidersEvent.registerSpriteSet(ACParticles.BLEACHED_CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
     }
-    @SubscribeEvent
-    public static void registerBlockColours(RegisterColorHandlersEvent.Block registerColorHandlersEvent) {
-        for (DyeColor colours : DyeColor.values()) {
-            registerColorHandlersEvent.register((blockState, blockAndTintGetter, blockPos, i) -> {
-                if (blockAndTintGetter == null || blockPos == null) {
-                    return GrassColor.getDefaultColor();
-                }
-                return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
-            }, ACBlocks.getDyedPottedFern(colours));
-        }
-    }
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
         for (DyeColor colours : DyeColor.values()) {
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getChalkDust(colours.getId()), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCrimsonFungus(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCrimsonRoots(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedWarpedFungus(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedWarpedRoots(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedOakSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedSpruceSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedBirchSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedAcaciaSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedJungleSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCherrySapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedDarkOakSapling(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedMangrovePropagule(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedFern(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedDandelion(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedPoppy(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedBlueOrchid(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedAllium(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedAzureBluet(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedRedTulip(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedOrangeTulip(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedWhiteTulip(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedPinkTulip(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedOxeyeDaisy(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCornflower(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedLilyOfTheValley(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedWitherRose(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedRedMushroom(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedBrownMushroom(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedDeadBush(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCactus(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedBamboo(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedAzalea(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedFloweringAzalea(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedTorchFlower(colours), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPottedCorkSapling(colours), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
         }

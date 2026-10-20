@@ -26,7 +26,6 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
         appendWalls();
         appendSlabs();
         appendStairs();
-        appendHoglinRepellents();
         appendFlowerPots();
         appendWoodenDoors();
         appendSaplings();
@@ -123,12 +122,6 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
                 .add(ACBlocks.BLEACHED_CHALK_DUST.get());
     }
 
-    private void appendHoglinRepellents() {
-        for (DyeColor colours : DyeColor.values()) {
-            this.tag(BlockTags.HOGLIN_REPELLENTS)
-                    .add(ACBlocks.getDyedPottedWarpedFungus(colours));
-        }
-    }
     private void appendPlanks() {
         this.tag(BlockTags.PLANKS)
                 .add(ACBlocks.CORK_PLANKS.get());
@@ -381,42 +374,7 @@ public class ArtsAndCraftsBlockTagsProvider extends BlockTagsProvider {
     private void appendFlowerPots() {
         for (DyeColor colours : DyeColor.values()) {
             this.tag(BlockTags.FLOWER_POTS)
-                    .add(ACBlocks.getDyedFlowerPot(colours.getId()))
-                    .add(ACBlocks.getDyedPottedCrimsonFungus(colours))
-                    .add(ACBlocks.getDyedPottedCrimsonRoots(colours))
-                    .add(ACBlocks.getDyedPottedWarpedFungus(colours))
-                    .add(ACBlocks.getDyedPottedWarpedRoots(colours))
-                    .add(ACBlocks.getDyedPottedOakSapling(colours))
-                    .add(ACBlocks.getDyedPottedSpruceSapling(colours))
-                    .add(ACBlocks.getDyedPottedBirchSapling(colours))
-                    .add(ACBlocks.getDyedPottedJungleSapling(colours))
-                    .add(ACBlocks.getDyedPottedAcaciaSapling(colours))
-                    .add(ACBlocks.getDyedPottedCherrySapling(colours))
-                    .add(ACBlocks.getDyedPottedDarkOakSapling(colours))
-                    .add(ACBlocks.getDyedPottedMangrovePropagule(colours))
-                    .add(ACBlocks.getDyedPottedFern(colours))
-                    .add(ACBlocks.getDyedPottedDandelion(colours))
-                    .add(ACBlocks.getDyedPottedPoppy(colours))
-                    .add(ACBlocks.getDyedPottedBlueOrchid(colours))
-                    .add(ACBlocks.getDyedPottedAllium(colours))
-                    .add(ACBlocks.getDyedPottedAzureBluet(colours))
-                    .add(ACBlocks.getDyedPottedRedTulip(colours))
-                    .add(ACBlocks.getDyedPottedOrangeTulip(colours))
-                    .add(ACBlocks.getDyedPottedWhiteTulip(colours))
-                    .add(ACBlocks.getDyedPottedPinkTulip(colours))
-                    .add(ACBlocks.getDyedPottedOxeyeDaisy(colours))
-                    .add(ACBlocks.getDyedPottedCornflower(colours))
-                    .add(ACBlocks.getDyedPottedLilyOfTheValley(colours))
-                    .add(ACBlocks.getDyedPottedWitherRose(colours))
-                    .add(ACBlocks.getDyedPottedRedMushroom(colours))
-                    .add(ACBlocks.getDyedPottedBrownMushroom(colours))
-                    .add(ACBlocks.getDyedPottedDeadBush(colours))
-                    .add(ACBlocks.getDyedPottedCactus(colours))
-                    .add(ACBlocks.getDyedPottedBamboo(colours))
-                    .add(ACBlocks.getDyedPottedAzalea(colours))
-                    .add(ACBlocks.getDyedPottedFloweringAzalea(colours))
-                    .add(ACBlocks.getDyedPottedTorchFlower(colours))
-                    .add(ACBlocks.getDyedPottedCorkSapling(colours));
+                    .add(ACBlocks.getDyedFlowerPot(colours.getId()));
         }
     }
 }

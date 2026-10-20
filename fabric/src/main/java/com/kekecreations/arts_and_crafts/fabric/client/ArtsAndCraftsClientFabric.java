@@ -6,6 +6,7 @@ import com.kekecreations.arts_and_crafts.client.renderer.tile.ACBedBER;
 import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedDecoratedPotBER;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.ACBoatRenderer;
 import com.kekecreations.arts_and_crafts.client.renderer.entity.FloatingBlockRenderer;
+import com.kekecreations.arts_and_crafts.client.renderer.tile.DyedFlowerPotBER;
 import com.kekecreations.arts_and_crafts.fabric.ArtsAndCraftsFabric;
 import com.kekecreations.arts_and_crafts.fabric.core.config.FabricConfig;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
@@ -32,7 +33,6 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
     public void onInitializeClient() {
         registerBlockLayers();
         registerParticleFactories();
-        registerBlockColours();
         registerRenderers();
         registerModelLayers();
 
@@ -46,41 +46,6 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
     public static void registerBlockLayers() {
         for (DyeColor colours : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getChalkDust(colours.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCrimsonFungus(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCrimsonRoots(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedWarpedFungus(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedWarpedRoots(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedOakSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedSpruceSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedBirchSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedAcaciaSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedJungleSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCherrySapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedDarkOakSapling(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedMangrovePropagule(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedFern(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedDandelion(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedPoppy(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedBlueOrchid(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedAllium(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedAzureBluet(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedRedTulip(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedOrangeTulip(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedWhiteTulip(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedPinkTulip(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedOxeyeDaisy(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCornflower(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedLilyOfTheValley(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedWitherRose(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedRedMushroom(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedBrownMushroom(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedDeadBush(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCactus(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedBamboo(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedAzalea(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedFloweringAzalea(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedTorchFlower(colours), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPottedCorkSapling(colours), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
         }
@@ -100,16 +65,6 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ACParticles.BLEACHED_CHALK_DRAW.get(), ChalkDustParticle.Factory::new);
     }
 
-    public static void registerBlockColours() {
-        for (DyeColor colours : DyeColor.values()) {
-            ColorProviderRegistry.BLOCK.register((blockState, blockAndTintGetter, blockPos, i) -> {
-                if (blockAndTintGetter == null || blockPos == null) {
-                    return GrassColor.getDefaultColor();
-                }
-                return BiomeColors.getAverageGrassColor(blockAndTintGetter, blockPos);
-            }, ACBlocks.getDyedPottedFern(colours));
-        }
-    }
     static ArtsAndCraftsBEWLR artsAndCraftsBlockEntityWithoutLevelRenderer = new ArtsAndCraftsBEWLR();
     public static void registerRenderers() {
         EntityRendererRegistry.register(ACEntityTypes.FLOATING_BLOCK.get(), FloatingBlockRenderer::new);
@@ -117,6 +72,7 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         EntityRendererRegistry.register(ACEntityTypes.CHEST_BOAT.get(), context -> new ACBoatRenderer(context, true));
         BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get(), DyedDecoratedPotBER::new);
         BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_BED_BLOCK_ENTITY.get(), ACBedBER::new);
+        BlockEntityRendererRegistry.register(ACEntityTypes.CUSTOM_FLOWER_POT_BLOCK_ENTITY.get(), DyedFlowerPotBER::new);
         for (DyeColor colour : DyeColor.values()) {
             if (colour.getId() <= 15) {
                 BuiltinItemRendererRegistry.INSTANCE.register(ACBlocks.getDyedDecoratedPot(colour.getId()).asItem(), artsAndCraftsBlockEntityWithoutLevelRenderer::renderByItem);

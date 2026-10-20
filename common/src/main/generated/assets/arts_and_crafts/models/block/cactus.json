@@ -1,0 +1,8 @@
+{
+  "parent": "arts_and_crafts:block/flower_pot_cactus",
+  "textures": {
+    "particle": "minecraft:block/cactus_side",
+    "plant": "minecraft:block/cactus_side",
+    "top": "minecraft:block/cactus_top"
+  }
+}

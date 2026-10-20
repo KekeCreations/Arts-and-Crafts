@@ -130,6 +130,14 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
 
         lotusFlowerBlock(ACBlocks.LOTUS_FLOWER.get());
 
+        //Disabled Blocks
+        flowerPotPlant(ACBlocks.CRIMSON_ROOTS_PLANT.get(), "crimson_roots_pot", "minecraft");
+        flowerPotPlant(ACBlocks.WARPED_ROOTS_PLANT.get(), "warped_roots_pot", "minecraft");
+        flowerPotCactusPlant(ACBlocks.CACTUS_PLANT.get(), "cactus", "minecraft");
+        flowerPotBambooPlant(ACBlocks.BAMBOO_PLANT.get(), "bamboo", "minecraft");
+        flowerPotBushPlant(ACBlocks.AZALEA_PLANT.get(), "potted_azalea_bush", "minecraft");
+        flowerPotBushPlant(ACBlocks.FLOWERING_AZALEA_PLANT.get(), "potted_flowering_azalea_bush", "minecraft");
+
         //DYED STUFF
         for (DyeColor colours : DyeColor.values()) {
             plasterWithItem(ACBlocks.getDyedPlaster(colours.getId()), colours);
@@ -163,44 +171,6 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
             wallWithItem(((WallBlock) ACBlocks.getDyedPolishedSoapstoneWall(colours.getId())), ACBlocks.getDyedPolishedSoapstone(colours.getId()));
 
             emptyFlowerPotBlock(ACBlocks.getDyedFlowerPot(colours.getId()), colours);
-
-            flowerPotBlock(ACBlocks.getDyedPottedCorkSapling(colours), colours, "cork_sapling", "arts_and_crafts");
-            flowerPotBlock(ACBlocks.getDyedPottedOakSapling(colours), colours, "oak_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedSpruceSapling(colours), colours, "spruce_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedBirchSapling(colours), colours, "birch_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedJungleSapling(colours), colours, "jungle_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedAcaciaSapling(colours), colours, "acacia_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedCherrySapling(colours), colours, "cherry_sapling", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedDarkOakSapling(colours), colours, "dark_oak_sapling", "minecraft");
-            mangrovePropaguleFlowerPotBlock(ACBlocks.getDyedPottedMangrovePropagule(colours), colours,  "minecraft");
-
-            flowerPotBlock(ACBlocks.getDyedPottedCrimsonFungus(colours), colours, "crimson_fungus", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedCrimsonRoots(colours), colours, "crimson_roots_pot", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedWarpedFungus(colours), colours, "warped_fungus", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedWarpedRoots(colours), colours, "warped_roots_pot", "minecraft");
-
-            tintedFlowerPotBlock(ACBlocks.getDyedPottedFern(colours), colours, "fern", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedDandelion(colours), colours, "dandelion", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedPoppy(colours), colours, "poppy", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedBlueOrchid(colours), colours, "blue_orchid", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedAllium(colours), colours, "allium", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedAzureBluet(colours), colours, "azure_bluet", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedRedTulip(colours), colours, "red_tulip", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedOrangeTulip(colours), colours, "orange_tulip", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedWhiteTulip(colours), colours, "white_tulip", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedPinkTulip(colours), colours, "pink_tulip", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedOxeyeDaisy(colours), colours, "oxeye_daisy", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedCornflower(colours), colours, "cornflower", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedLilyOfTheValley(colours), colours, "lily_of_the_valley", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedWitherRose(colours), colours, "wither_rose", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedRedMushroom(colours), colours, "red_mushroom", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedBrownMushroom(colours), colours, "brown_mushroom", "minecraft");
-            flowerPotBlock(ACBlocks.getDyedPottedDeadBush(colours), colours, "dead_bush", "minecraft");
-            cactusFlowerPotBlock(ACBlocks.getDyedPottedCactus(colours), colours);
-            bambooFlowerPotBlock(ACBlocks.getDyedPottedBamboo(colours), colours);
-            azaleaFlowerPotBlock(ACBlocks.getDyedPottedAzalea(colours), colours, "potted_azalea_bush");
-            azaleaFlowerPotBlock(ACBlocks.getDyedPottedFloweringAzalea(colours), colours, "potted_flowering_azalea_bush");
-            flowerPotBlock(ACBlocks.getDyedPottedTorchFlower(colours), colours, "torchflower", "minecraft");
         }
     }
     private ResourceLocation key(Block block) {
@@ -300,34 +270,41 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
             simpleBlockItem(block, plasterModel(dyeColor.getName() + "_plaster"));
         }
     }
-    public void azaleaFlowerPotBlock(Block block, DyeColor dyeColor, String flower) {
-        if (flower.equals("potted_azalea_bush")) {
-            simpleBlock(block, ConfiguredModel.builder().modelFile(azaleaFlowerPotModel(dyeColor.getName() + "_potted_" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-        }
-        if (flower.equals("potted_flowering_azalea_bush")) {
-            simpleBlock(block, ConfiguredModel.builder().modelFile(floweringAzaleaFlowerPotModel(dyeColor.getName() + "_potted_" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-        }
-    }
-    public void cactusFlowerPotBlock(Block block, DyeColor dyeColor) {
-        simpleBlock(block, ConfiguredModel.builder().modelFile(cactusFlowerPotModel(dyeColor.getName() + "_potted_cactus").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-    }
-    public void bambooFlowerPotBlock(Block block, DyeColor dyeColor) {
-        simpleBlock(block, ConfiguredModel.builder().modelFile(bambooFlowerPotModel(dyeColor.getName() + "_potted_bamboo").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-    }
     public void emptyFlowerPotBlock(Block block, DyeColor dyeColor) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotModel(dyeColor.getName() + "_flower_pot").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
     }
-    public void flowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
-        simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-    }
-    public void mangrovePropaguleFlowerPotBlock(Block block, DyeColor dyeColor, String modId) {
-        simpleBlock(block, ConfiguredModel.builder().modelFile(mangrovePropaguleFlowerPotModel(dyeColor.getName() + "_potted_mangrove_propagule").texture("plant", modId + ":block/mangrove_propagule").texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-    }
-    public void tintedFlowerPotBlock(Block block, DyeColor dyeColor, String flower, String modId) {
-        simpleBlock(block, ConfiguredModel.builder().modelFile(tintedFlowerPotCrossModel(dyeColor.getName() + "_potted_" + flower).texture("plant", modId + ":block/" + flower).texture("particle", "block/" + dyeColor.getName() + "_flower_pot").texture("flowerpot", "block/" + dyeColor.getName() + "_flower_pot")).build());
-    }
+
     public void normalFlowerPotBlock(Block block, String flower, String modId) {
         simpleBlock(block, ConfiguredModel.builder().modelFile(flowerPotCrossModel("potted_" + flower).texture("plant", modId + ":block/" + flower)).build());
+    }
+
+    public void flowerPotPlant(Block block, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(createFlowerPotPlant(flower).texture("plant", modId + ":block/" + flower).texture("particle", modId + ":block/" + flower)).build());
+    }
+
+    public void flowerPotCactusPlant(Block block, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(createFlowerPotCactus(flower)
+                .texture("plant", modId + ":block/" + flower + "_side")
+                        .texture("top", modId + ":block/" + flower + "_top")
+                .texture("particle", modId + ":block/" + flower + "_side")
+                ).build());
+    }
+
+    public void flowerPotBambooPlant(Block block, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(createFlowerPotBamboo(flower)
+                .texture("plant", modId + ":block/" + flower + "_stalk")
+                .texture("top", modId + ":block/" + flower + "_singleleaf")
+                .texture("particle", modId + ":block/" + flower + "_stalk")
+        ).build());
+    }
+
+    public void flowerPotBushPlant(Block block, String flower, String modId) {
+        simpleBlock(block, ConfiguredModel.builder().modelFile(createFlowerPotAzalea(flower)
+                .texture("plant", modId + ":block/" + flower + "_plant")
+                .texture("top", modId + ":block/" + flower + "_top")
+                .texture("side", modId + ":block/" + flower + "_side")
+                .texture("particle", modId + ":block/" + flower + "_plant")
+        ).build());
     }
 
     public void lotusFlowerBlock(Block block) {
@@ -963,5 +940,21 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
 
     public ModelBuilder<?> bedModel(String name) {
         return models().withExistingParent(name, "minecraft:block/bed");
+    }
+
+    public ModelBuilder<?> createFlowerPotPlant(String name) {
+        return models().withExistingParent(name, ArtsAndCrafts.MOD_ID + ":block/flower_pot_plant");
+    }
+
+    public ModelBuilder<?> createFlowerPotCactus(String name) {
+        return models().withExistingParent(name, ArtsAndCrafts.MOD_ID + ":block/flower_pot_cactus");
+    }
+
+    public ModelBuilder<?> createFlowerPotBamboo(String name) {
+        return models().withExistingParent(name, ArtsAndCrafts.MOD_ID + ":block/flower_pot_bamboo");
+    }
+
+    public ModelBuilder<?> createFlowerPotAzalea(String name) {
+        return models().withExistingParent(name, ArtsAndCrafts.MOD_ID + ":block/flower_pot_azalea");
     }
 }

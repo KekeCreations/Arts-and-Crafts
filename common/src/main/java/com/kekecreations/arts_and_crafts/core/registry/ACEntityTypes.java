@@ -67,6 +67,27 @@ public class ACEntityTypes {
             )
     );
 
+    public static final Supplier<BlockEntityType<DyedFlowerPotBlockEntity>> CUSTOM_FLOWER_POT_BLOCK_ENTITY = registerBlockEntityType("flower_pot_block_entity", () ->
+            createBlockEntity(DyedFlowerPotBlockEntity::new,
+                    ACBlocks.getDyedFlowerPot(DyeColor.WHITE.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.ORANGE.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.MAGENTA.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_BLUE.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.YELLOW.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.LIME.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.GRAY.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.LIGHT_GRAY.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.CYAN.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.PURPLE.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.BLUE.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.BROWN.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.GREEN.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.RED.getId()),
+                    ACBlocks.getDyedFlowerPot(DyeColor.BLACK.getId())
+            )
+    );
+
 
     private static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntityType(String name, Supplier<BlockEntityType<T>> type) {
         return JinxedRegistryHelper.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ArtsAndCrafts.MOD_ID, name, type);

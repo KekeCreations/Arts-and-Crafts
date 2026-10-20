@@ -1,11 +1,13 @@
 package com.kekecreations.arts_and_crafts.neoforge.datagen.server;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -47,6 +49,37 @@ public class ArtsAndCraftsItemTagsProvider extends ItemTagsProvider {
         appendFenceGates();
         appendBeds();
         appendWools();
+        appendCanBePotted();
+    }
+
+    private void appendCanBePotted() {
+        this.tag(ACTags.ItemTags.CAN_BE_POTTED)
+                .add(Items.TORCHFLOWER)
+                .add(Items.MANGROVE_PROPAGULE)
+                .add(Items.FERN)
+                .add(Items.DANDELION)
+                .add(Items.POPPY)
+                .add(Items.BLUE_ORCHID)
+                .add(Items.ALLIUM)
+                .add(Items.AZURE_BLUET)
+                .add(Items.RED_TULIP)
+                .add(Items.ORANGE_TULIP)
+                .add(Items.WHITE_TULIP)
+                .add(Items.PINK_TULIP)
+                .add(Items.OXEYE_DAISY)
+                .add(Items.CORNFLOWER)
+                .add(Items.LILY_OF_THE_VALLEY)
+                .add(Items.WITHER_ROSE)
+                .add(Items.RED_MUSHROOM)
+                .add(Items.BROWN_MUSHROOM)
+                .add(Items.DEAD_BUSH)
+                .add(Items.CACTUS)
+                .add(Items.BAMBOO)
+                .add(Items.CRIMSON_FUNGUS)
+                .add(Items.WARPED_FUNGUS)
+                .add(Items.AZALEA)
+                .add(Items.FLOWERING_AZALEA)
+                .addOptional(ResourceLocation.fromNamespaceAndPath(ArtsAndCrafts.MOD_ID, "cork_sapling"));
     }
 
     private void appendBeds() {
