@@ -61,6 +61,9 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
             add(ACBlocks.getDyedFlowerPot(colours.getId()), stringColour + " Flower Pot");
             add(ACBlocks.getChalkDust(colours.getId()), stringColour + " Chalk Dust");
             add(ACBlocks.getChalk(colours.getId()), stringColour + " Chalk");
+            add(ACBlocks.getChalkStairs(colours.getId()), stringColour + " Chalk Stairs");
+            add(ACBlocks.getChalkSlab(colours.getId()), stringColour + " Chalk Slab");
+            add(ACBlocks.getChalkWall(colours.getId()), stringColour + " Chalk Wall");
 
             add(ACBlocks.getDyedTerracottaShingles(colours.getId()), stringColour + " Terracotta Shingles");
             add(ACBlocks.getDyedTerracottaShingleSlab(colours.getId()), stringColour + " Terracotta Shingle Slab");
@@ -144,6 +147,9 @@ public class ArtsAndCraftsLangProvider extends LanguageProvider {
         add(ACBlocks.BLEACHED_WOOL.get(), "Bleached Wool");
         add(ACBlocks.BLEACHED_CARPET.get(), "Bleached Carpet");
         add(ACBlocks.BLEACHED_CHALK.get(), "Bleached Chalk");
+        add(ACBlocks.BLEACHED_CHALK_STAIRS.get(), "Bleached Chalk Stairs");
+        add(ACBlocks.BLEACHED_CHALK_SLAB.get(), "Bleached Chalk Slab");
+        add(ACBlocks.BLEACHED_CHALK_WALL.get(), "Bleached Chalk Wall");
         add(ACBlocks.GLAZED_TERRACOTTA.get(), "Glazed Terracotta");
         add(ACBlocks.BLEACHED_CONCRETE.get(), "Bleached Concrete");
         add(ACBlocks.BLEACHED_CONCRETE_POWDER.get(), "Bleached Concrete Powder");

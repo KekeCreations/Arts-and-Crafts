@@ -47,6 +47,9 @@ public class ACItemGroupEvents {
 
             for (DyeColor colours : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 event.addAfter(Items.PINK_BANNER, ACBlocks.getChalk(colours.getId()));
+                event.addAfter(ACBlocks.getChalk(colours.getId()), ACBlocks.getChalkStairs(colours.getId()));
+                event.addAfter(ACBlocks.getChalkStairs(colours.getId()), ACBlocks.getChalkSlab(colours.getId()));
+                event.addAfter(ACBlocks.getChalkSlab(colours.getId()), ACBlocks.getChalkWall(colours.getId()));
                 event.addAfter(Items.PINK_CANDLE, ACBlocks.getDyedFlowerPot(colours.getId()));
                 event.addAfter(ACBlocks.getDyedFlowerPot(DyeColor.PINK.getId()), ACBlocks.getDyedDecoratedPot(colours.getId()));
 
@@ -78,6 +81,9 @@ public class ACItemGroupEvents {
                 event.addAfter(ACBlocks.PLASTER.get(), ACBlocks.getDyedPlaster(colours.getId()));
             }
             event.addBefore(ACBlocks.getChalk(DyeColor.WHITE.getId()), ACBlocks.BLEACHED_CHALK.get());
+            event.addAfter(ACBlocks.BLEACHED_CHALK.get(), ACBlocks.BLEACHED_CHALK_STAIRS.get());
+            event.addAfter(ACBlocks.BLEACHED_CHALK_STAIRS.get(), ACBlocks.BLEACHED_CHALK_SLAB.get());
+            event.addAfter(ACBlocks.BLEACHED_CHALK_SLAB.get(), ACBlocks.BLEACHED_CHALK_WALL.get());
             for (PietraforteColour colour : PietraforteColour.values()) {
                 event.addAfter(ACBlocks.getDyedMudBrickWall(DyeColor.PINK.getId()), ACBlocks.getPietraforte(colour));
                 event.addAfter(ACBlocks.getPietraforte(colour), ACBlocks.getPietraforteStairs(colour));

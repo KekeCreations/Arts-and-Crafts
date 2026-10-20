@@ -33,6 +33,9 @@ public class ACBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_STAIRS = new HashMap<>();
 
     public static final HashMap<Integer, Supplier<Block>> CHALK = new HashMap<>();
+    public static final HashMap<Integer, Supplier<Block>> CHALK_STAIRS = new HashMap<>();
+    public static final HashMap<Integer, Supplier<Block>> CHALK_SLAB = new HashMap<>();
+    public static final HashMap<Integer, Supplier<Block>> CHALK_WALL = new HashMap<>();
     public static final HashMap<Integer, Supplier<Block>> CHALK_DUST = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICKS = new HashMap<>();
@@ -131,6 +134,10 @@ public class ACBlocks {
         return blockState.getValue(ChalkDustBlock.GLOW);
     })));
     public static final Supplier<Block> BLEACHED_CHALK = registerBlockWithItem("bleached_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f)));
+    public static final Supplier<Block> BLEACHED_CHALK_STAIRS = registerBlockWithItem("bleached_chalk_stairs", () -> new CommonStairBlock(BLEACHED_CHALK.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(BLEACHED_CHALK.get())));
+    public static final Supplier<Block> BLEACHED_CHALK_SLAB = registerBlockWithItem("bleached_chalk_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(BLEACHED_CHALK.get())));
+    public static final Supplier<Block> BLEACHED_CHALK_WALL = registerBlockWithItem("bleached_chalk_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(BLEACHED_CHALK.get())));
+
     public static final Supplier<Block> BLEACHED_BED = registerBlock("bleached_bed", () -> bed(DyeColor.WHITE));
 
 
@@ -246,6 +253,10 @@ public class ACBlocks {
 
             //CHALK
             CHALK.put(colours.getId(), registerBlockWithItem(colours + "_chalk", () -> new Block(BlockBehaviour.Properties.of().mapColor(colours).instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.CALCITE).requiresCorrectToolForDrops().strength(0.9f))));
+            CHALK_STAIRS.put(colours.getId(), registerBlockWithItem(colours + "_chalk_stairs", () -> new CommonStairBlock(getChalk(colours.getId()).defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(getChalk(colours.getId())))));
+            CHALK_SLAB.put(colours.getId(), registerBlockWithItem(colours + "_chalk_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(getChalk(colours.getId())))));
+            CHALK_WALL.put(colours.getId(), registerBlockWithItem(colours + "_chalk_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(getChalk(colours.getId())))));
+
 
             CHALK_DUST.put(colours.getId(), registerBlock(colours + "_chalk_dust", () -> new ChalkDustBlock(colours.getId(), BlockBehaviour.Properties.of().mapColor(colours).sound(SoundType.CALCITE).noCollission().instabreak().lightLevel((block) -> {
                 if (block.getValue(ChalkDustBlock.GLOW)) {
@@ -418,6 +429,16 @@ public class ACBlocks {
     public static Block getChalk(int colours){
         return CHALK.get(colours).get();
     }
+    public static Block getChalkStairs(int colours) {
+        return CHALK_STAIRS.get(colours).get();
+    }
+    public static Block getChalkSlab(int colours) {
+        return CHALK_SLAB.get(colours).get();
+    }
+    public static Block getChalkWall(int colours) {
+        return CHALK_WALL.get(colours).get();
+    }
+
     public static Block getChalkDust(int colours){
         return CHALK_DUST.get(colours).get();
     }

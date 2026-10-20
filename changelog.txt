@@ -3,11 +3,14 @@ Arts & Crafts Changelog
 
 ### V1.6.0
 - Rewrote Dyed Flower Pots to use block entities so compat between other mods is easier!
+- Added Dyed Chalk Stairs, Dyed Chalk Slabs & Dyed Chalk Walls!
 - Chalk Dust Block no longer crashes the game when the server calls the clone item stack method
 - Fixed Glazed Terracotta sticking to slime and honey
 - Fixed Cork Boat Translations
 - Removed bleaching sheep from the mod
 - Removed unneccessary classes
+- Fixed bleach recipes, you can no longer bleach a bleached block with bleachdew.
+- You can now bleach flower pots
 
 ## Flower Pot Compat
 - Blocks that extend off the SaplingBlock, FlowerBlock, MushroomBlock and RootBlock classes are automatically added

@@ -97,6 +97,9 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         carpetWithItem(ACBlocks.BLEACHED_CARPET.get(), ACBlocks.BLEACHED_WOOL.get());
         chalkDustBlock(ACBlocks.BLEACHED_CHALK_DUST.get(), "bleached");
         cubeAllWithItem(ACBlocks.BLEACHED_CHALK.get());
+        stairsWithItem((StairBlock) ACBlocks.BLEACHED_CHALK_STAIRS.get(), ACBlocks.BLEACHED_CHALK.get());
+        slabWithItem((SlabBlock) ACBlocks.BLEACHED_CHALK_SLAB.get(), ACBlocks.BLEACHED_CHALK.get());
+        wallWithItem((WallBlock) ACBlocks.BLEACHED_CHALK_WALL.get(), ACBlocks.BLEACHED_CHALK.get());
         glazedTerracottaWithItem(ACBlocks.GLAZED_TERRACOTTA.get(), "glazed_terracotta");
         concretePowderWithItem(ACBlocks.BLEACHED_CONCRETE_POWDER.get());
         cubeAllWithItem(ACBlocks.BLEACHED_CONCRETE.get());
@@ -142,8 +145,13 @@ public class ArtsAndCraftsBlockStateProvider extends BlockStateProvider {
         for (DyeColor colours : DyeColor.values()) {
             plasterWithItem(ACBlocks.getDyedPlaster(colours.getId()), colours);
             plasterWithItem(ACBlocks.PLASTER.get(), null);
+            //chalk
             chalkDustBlock(ACBlocks.getChalkDust(colours.getId()), colours.getName());
             cubeAllWithItem(ACBlocks.getChalk(colours.getId()));
+            stairsWithItem((StairBlock) ACBlocks.getChalkStairs(colours.getId()), ACBlocks.getChalk(colours.getId()));
+            slabWithItem((SlabBlock) ACBlocks.getChalkSlab(colours.getId()), ACBlocks.getChalk(colours.getId()));
+            wallWithItem((WallBlock) ACBlocks.getChalkWall(colours.getId()), ACBlocks.getChalk(colours.getId()));
+
             //Terracotta Shingles
             cubeAllWithItem(ACBlocks.getDyedTerracottaShingles(colours.getId()));
             stairsWithItem(((StairBlock) ACBlocks.getDyedTerracottaShingleStairs(colours.getId())), ACBlocks.getDyedTerracottaShingles(colours.getId()));

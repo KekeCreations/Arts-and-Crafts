@@ -100,6 +100,9 @@ public class ArtsAndCraftsNeoForge {
 
             for(DyeColor colour : JinxedCreativeCategoryUtils.colourOrderBackToFront) {
                 addAfter(event, Items.PINK_BANNER, ACBlocks.getChalk(colour.getId()));
+                addAfter(event, ACBlocks.getChalk(colour.getId()), ACBlocks.getChalkStairs(colour.getId()));
+                addAfter(event, ACBlocks.getChalkStairs(colour.getId()), ACBlocks.getChalkSlab(colour.getId()));
+                addAfter(event, ACBlocks.getChalkSlab(colour.getId()), ACBlocks.getChalkWall(colour.getId()));
             }
 
             addAfter(event, ACBlocks.getChalk(DyeColor.PINK.getId()), ACBlocks.SOAPSTONE.get());
@@ -158,6 +161,9 @@ public class ArtsAndCraftsNeoForge {
                 addAfter(event, ACBlocks.PLASTER.get(), ACBlocks.getDyedPlaster(colours.getId()));
             }
             addBefore(event, ACBlocks.getChalk(DyeColor.WHITE.getId()), ACBlocks.BLEACHED_CHALK.get());
+            addAfter(event, ACBlocks.BLEACHED_CHALK.get(), ACBlocks.BLEACHED_CHALK_STAIRS.get());
+            addAfter(event, ACBlocks.BLEACHED_CHALK_STAIRS.get(), ACBlocks.BLEACHED_CHALK_SLAB.get());
+            addAfter(event, ACBlocks.BLEACHED_CHALK_SLAB.get(), ACBlocks.BLEACHED_CHALK_WALL.get());
 
             for (PietraforteColour colour : PietraforteColour.values()) {
                 addAfter(event, ACBlocks.getDyedMudBrickWall(DyeColor.PINK.getId()), ACBlocks.getPietraforte(colour));
