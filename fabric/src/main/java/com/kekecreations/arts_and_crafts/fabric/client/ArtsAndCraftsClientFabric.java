@@ -47,7 +47,9 @@ public class ArtsAndCraftsClientFabric implements ClientModInitializer {
         for (DyeColor colours : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getChalkDust(colours.getId()), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
+            if (colours.getId() <= 15) {
+                BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
+            }
         }
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.CORK_SAPLING.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());

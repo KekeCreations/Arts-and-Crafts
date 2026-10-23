@@ -1,5 +1,13 @@
 Arts & Crafts Changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### V1.6.1
+- Fixed crashes with mods that add new dye
+- Paintbrush palettes can no longer throw a null pointer exception
+- Sign data is now copied over when sign blocks are painted!
+- updated pt-br translations
+A massive thank you to Brun333rp & Auroali for their contributions
+
+
 
 ### V1.6.0
 - Rewrote Dyed Flower Pots to use block entities so compat between other mods is easier!

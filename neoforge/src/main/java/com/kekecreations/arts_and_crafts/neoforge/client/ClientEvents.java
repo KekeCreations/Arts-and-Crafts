@@ -91,7 +91,9 @@ public class ClientEvents {
         for (DyeColor colours : DyeColor.values()) {
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getChalkDust(colours.getId()), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedPlaster(colours.getId()), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
+            if (colours.getId() <= 15) {
+                ItemBlockRenderTypes.setRenderLayer(ACBlocks.getDyedFlowerPot(colours.getId()), RenderType.cutout());
+            }
         }
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.CORK_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ACBlocks.POTTED_CORK_SAPLING.get(), RenderType.cutout());
