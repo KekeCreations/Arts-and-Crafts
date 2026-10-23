@@ -86,6 +86,18 @@ public class PaintbrushItem extends Item {
                     } else if (blockEntity instanceof BedBlockEntity || blockEntity instanceof ACBedBlockEntity) {
                         PaintbrushUtils.paintBed(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
                         return InteractionResult.SUCCESS;
+                    } else if (blockEntity instanceof SignBlockEntity signBlockEntity) {
+                        SignText front = signBlockEntity.getFrontText();
+                        SignText back = signBlockEntity.getBackText();
+                        boolean waxed = signBlockEntity.isWaxed();
+                        PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
+                        BlockEntity newBlockEntity = level.getBlockEntity(pos);
+                        if(newBlockEntity instanceof SignBlockEntity newSign) {
+                            newSign.setText(front, true);
+                            newSign.setText(back, false);
+                            newSign.setWaxed(waxed);
+                        }
+                        return InteractionResult.SUCCESS;
                     }
 
                     PaintbrushUtils.paintBlock(level, finalBlock.defaultBlockState(), pos, player, itemStack, hand);
