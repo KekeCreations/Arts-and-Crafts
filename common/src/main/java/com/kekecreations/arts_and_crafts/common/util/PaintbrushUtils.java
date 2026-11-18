@@ -47,6 +47,7 @@ public class PaintbrushUtils {
     public static Block getFinalBlock(RegistryAccess access, BlockState state, ItemStack stack) {
         Optional<PaintbrushPalette> optionalPalette = access.registryOrThrow(ACRegistries.PAINTBRUSH_PALETTE).stream().filter(
                 searchPalette -> searchPalette.blocks().contains(state.getBlockHolder())
+                        && searchPalette.mappings().containsKey(stack.getItemHolder())
         ).findFirst();
         if (optionalPalette.isEmpty()) return null;
 
